@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "schema_version": "1.0",
   "generated_at": "2026-06-09T16:58:48+08:00",
@@ -2457,4 +2458,265 @@
     "price_tracker": [],
     "news": []
   }
+=======
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-09T15:24:30+08:00",
+  "source_query": "mountain bike",
+  "source_url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
+  "fetch_status": {
+    "daraz_bd": "ok"
+  },
+  "bd": {
+    "price_pool": [
+      {
+        "brand": "Generic",
+        "model": "26-Inch 3脳8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All",
+        "platform": "Daraz BD",
+        "price": 14308,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i319543531.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 14,308",
+        "raw_title": "26-Inch 3脳8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels"
+      },
+      {
+        "brand": "Marine",
+        "model": "MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc ",
+        "platform": "Daraz BD",
+        "price": 19000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i323810443.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 19,000",
+        "raw_title": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lock",
+        "platform": "Daraz BD",
+        "price": 15588,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i1581785755.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 15,588",
+        "raw_title": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Tornado 21-Speed Gear Bicycle - Explore The Outdoors With Th",
+        "platform": "Daraz BD",
+        "price": 14899,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-phoenix-tornado-21-speed-gear-bicycle-explore-the-outdoors-with-this-reliable-and-agile-mountain-bike-i197405747.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 14,899",
+        "raw_title": "26\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mounta"
+      },
+      {
+        "brand": "Generic",
+        "model": "銆怋e worth銆?Bike Accessories Bike Mountain Bike Bike Model",
+        "platform": "Daraz BD",
+        "price": 2699,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/be-worth-i1576643329.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 2,699",
+        "raw_title": "銆怋e worth銆?Bike Accessories Bike Mountain Bike Bike Model"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle",
+        "platform": "Daraz BD",
+        "price": 1281,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i1581451115.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 1,281",
+        "raw_title": "Bicycle"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
+        "platform": "Daraz BD",
+        "price": 16999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i574022647.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 16,999",
+        "raw_title": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Stl 1S Angellena Ladies 26 Pink W/Basket 804453",
+        "platform": "Daraz BD",
+        "price": 10314,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/stl-1s-26-w-804453-i111954490.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 10,314",
+        "raw_title": "Duranta Stl 1S Angellena Ladies 26 Pink W/Basket 804453"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Donald 26 inchi 24 Speed Gear Cycle With Suspension Lockout ",
+        "platform": "Daraz BD",
+        "price": 14639,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i474549967.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 14,639",
+        "raw_title": "Phoenix Donald 26 inchi 24 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
+        "platform": "Daraz BD",
+        "price": 14309,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 14,309",
+        "raw_title": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P"
+      },
+      {
+        "brand": "Warrior",
+        "model": "2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26",
+        "platform": "Daraz BD",
+        "price": 14288,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/71-20-21-26-i327937068.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 14,288",
+        "raw_title": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
+        "platform": "Daraz BD",
+        "price": 12999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i563106542.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 12,999",
+        "raw_title": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P"
+      },
+      {
+        "brand": "Generic",
+        "model": "New Aluminum Alloy 36H Spoke Bicycle Hub with Quick Release Disc Brake and Rear ",
+        "platform": "Daraz BD",
+        "price": 1545,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i152418949.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 1,545",
+        "raw_title": "New Aluminum Alloy 36H Spoke Bicycle Hub with Quick Release Disc Brake and Rear Flower Drum Bearing "
+      },
+      {
+        "brand": "Warrior",
+        "model": "2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy",
+        "platform": "Daraz BD",
+        "price": 18999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i295351877.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 18,999",
+        "raw_title": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling"
+      },
+      {
+        "brand": "Generic",
+        "model": "Mini 1:10 Alloy Model Bicycle Diecast Metal Finger Mountain Bike Retro Bike Adul",
+        "platform": "Daraz BD",
+        "price": 1853,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/mini-110-alloy-model-bicycle-diecast-metal-finger-mountain-bike-retro-bike-adult-collectible-children-toystyle-2-black-i1578653111.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 1,853",
+        "raw_title": "Mini 1:10 Alloy Model Bicycle Diecast Metal Finger Mountain Bike Retro Bike Adult Collectible Childr"
+      },
+      {
+        "brand": "Generic",
+        "model": "銆怋e worth銆?Bike Accessories Bike Mountain Bike Bike Model",
+        "platform": "Daraz BD",
+        "price": 1657,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/be-worth-i1576552230.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 1,657",
+        "raw_title": "銆怋e worth銆?Bike Accessories Bike Mountain Bike Bike Model"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
+        "platform": "Daraz BD",
+        "price": 12999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i563101752.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 12,999",
+        "raw_title": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
+        "platform": "Daraz BD",
+        "price": 13333,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i574022648.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 13,333",
+        "raw_title": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P"
+      },
+      {
+        "brand": "Generic",
+        "model": "Mini 1:10 Alloy Model Bicycle Diecast Metal Finger Mountain Bike Retro Bike Adul",
+        "platform": "Daraz BD",
+        "price": 1862,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/mini-110-alloy-model-bicycle-diecast-metal-finger-mountain-bike-retro-bike-adult-collectible-children-toystyle-2-black-i1578637592.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 1,862",
+        "raw_title": "Mini 1:10 Alloy Model Bicycle Diecast Metal Finger Mountain Bike Retro Bike Adult Collectible Childr"
+      },
+      {
+        "brand": "Foxter",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork Hi",
+        "platform": "Daraz BD",
+        "price": 16082,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
+        "is_new": true,
+        "scraped_at": "2026-06-09T15:24:30+08:00",
+        "note": "BDT 16,082",
+        "raw_title": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh"
+      }
+    ],
+    "price_tracker": [],
+    "news": []
+  },
+  "id": {
+    "price_pool": [],
+    "price_tracker": [],
+    "news": []
+  }
+>>>>>>> fedca1b (init: phoenix-live dashboard v1)
 }
