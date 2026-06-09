@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>phoenix-clean</title>
+    <script type="module" crossorigin src="./assets/index-unB8v61V.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D2ARE2Am.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Phoenix-Live 补丁：拦截"市场日报"按钮点击，跳转到独立实时页面
+      (function () {
+        document.addEventListener('click', function (e) {
+          var t = e.target;
+          // 向上找 5 层祖先
+          for (var i = 0; i < 5 && t; i++) {
+            if (t.textContent && t.textContent.trim() === '市场日报') {
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+              window.location.href = './daily-report.html';
+              return;
+            }
+            t = t.parentElement;
+          }
+        }, true); // 捕获阶段，React 之前
+      })();
+    </script>
+  </body>
+</html>
