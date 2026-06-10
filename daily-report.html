@@ -37,6 +37,13 @@
     .card.id .item .price{color:#2e7d32}
     .item .new{background:#c8102e;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
     .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
+    .news-section{margin-top:20px}
+    .news-section h2{font-size:15px;font-weight:700;color:#9c27b0;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .news-section h2 .flag{font-size:18px}
+    .news-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;background:#f9f5ff;border-left:3px solid #9c27b0;border-radius:6px;margin-bottom:6px;font-size:12px;transition:background .15s}
+    .news-item:hover{background:#f3e5f5;text-decoration:none}
+    .news-title{flex:1;min-width:0;color:#4a148c;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .news-source{font-size:10px;background:#e1bee7;color:#6a1b9a;padding:1px 8px;border-radius:8px;font-weight:600;flex-shrink:0}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
     .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
     .refresh-btn:hover{background:#1976d2}
@@ -56,8 +63,8 @@
 
     <div class="status-bar">
       <span id="status-daraz" class="pill pill-fail">⏳ 加载中...</span>
-      <span id="status-shopee" class="pill pill-fail">⏳ shopee</span>
-      <span id="status-tokopedia" class="pill pill-fail">⏳ tokopedia</span>
+      <span id="status-news-bd" class="pill pill-fail">⏳ news_bd</span>
+      <span id="status-news-id" class="pill pill-fail">⏳ news_id</span>
       <span class="last-updated" id="updated">—</span>
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
@@ -70,6 +77,17 @@
       <div class="card id">
         <h2><span class="flag">🇮🇩</span>印尼 MTB 价格池 <small style="color:#999;font-weight:400">（Shopee / Tokopedia 实时）</small></h2>
         <div id="id-prices"></div>
+      </div>
+    </div>
+
+    <div class="grid news-section">
+      <div class="card bd">
+        <h2><span class="flag">🇧🇩</span>孟加拉 MTB 市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索）</small></h2>
+        <div id="bd-news"></div>
+      </div>
+      <div class="card id">
+        <h2><span class="flag">🇮🇩</span>印尼 MTB 市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索）</small></h2>
+        <div id="id-news"></div>
       </div>
     </div>
 
@@ -106,8 +124,8 @@
       el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k + ' 部分' : '✗ ' + k;
     }
     setPill('status-daraz', 'daraz_bd');
-    setPill('status-shopee', 'shopee_id');
-    setPill('status-tokopedia', 'tokopedia');
+    setPill('status-news-bd', 'news_bd');
+    setPill('status-news-id', 'news_id');
 
     // BD 价格
     const bdItems = (data.bd && data.bd.price_pool) || [];
@@ -130,7 +148,7 @@
     const idItems = (data.id && data.id.price_pool) || [];
     const idEl = document.getElementById('id-prices');
     if (idItems.length === 0) {
-      idEl.innerHTML = '<div class="empty">阶段 1 暂未实现（阶段 2 会接 Shopee / Tokopedia）</div>';
+      idEl.innerHTML = '<div class="empty">Shopee ID / Tokopedia 反爬墙拦路（企业级 captcha）<br>已跳过，价格数据留空</div>';
     } else {
       idEl.innerHTML = idItems.map(it => `
         <a class="item" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">
@@ -139,6 +157,34 @@
             <span class="model">${escapeHtml(it.model)}</span>
           </div>
           <div class="price">${escapeHtml(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
+        </a>
+      `).join('');
+    }
+
+    // BD news
+    const bdNews = (data.bd && data.bd.news) || [];
+    const bdNewsEl = document.getElementById('bd-news');
+    if (bdNews.length === 0) {
+      bdNewsEl.innerHTML = '<div class="empty">暂无市场动态（爬虫未跑 / 源不可达）</div>';
+    } else {
+      bdNewsEl.innerHTML = bdNews.map(n => `
+        <a class="news-item" href="${escapeHtml(n.url)}" target="_blank" rel="noopener">
+          <span class="news-title">${escapeHtml(n.title)}</span>
+          <span class="news-source">${escapeHtml(n.source || '?')}</span>
+        </a>
+      `).join('');
+    }
+
+    // ID news
+    const idNews = (data.id && data.id.news) || [];
+    const idNewsEl = document.getElementById('id-news');
+    if (idNews.length === 0) {
+      idNewsEl.innerHTML = '<div class="empty">印尼市场动态：Sogou 搜索结果少（中文引擎对印尼语不友好）<br>尝试用印尼语 query 跑时常 0 条</div>';
+    } else {
+      idNewsEl.innerHTML = idNews.map(n => `
+        <a class="news-item" href="${escapeHtml(n.url)}" target="_blank" rel="noopener">
+          <span class="news-title">${escapeHtml(n.title)}</span>
+          <span class="news-source">${escapeHtml(n.source || '?')}</span>
         </a>
       `).join('');
     }
