@@ -11,22 +11,69 @@
   <body>
     <div id="root"></div>
     <script>
-      // Phoenix-Live 补丁：拦截"市场日报"按钮点击，跳转到独立实时页面
+      // Phoenix-Live 补丁：拦截 tab 按钮 + 顶部日期动态化
       (function () {
+        // Tab 按钮 -> 跳转独立页面的映射
+        var TAB_ROUTES = {
+          '总览':       null,                       // 留在 React
+          '孟加拉':     './bangladesh.html',
+          '印尼':       './indonesia.html',
+          '竞品监控':   './competitive.html',
+          '产品矩阵':   './product-matrix.html',
+          '任务':       null,                       // 留 React
+          'DTC差评':    null,                       // 留 React
+          '市场日报':   './daily-report.html',
+          '策略迭代':   null,                       // 留 React
+        };
+
+        // 拦截 tab 点击
         document.addEventListener('click', function (e) {
           var t = e.target;
-          // 向上找 5 层祖先
           for (var i = 0; i < 5 && t; i++) {
-            if (t.textContent && t.textContent.trim() === '市场日报') {
-              e.preventDefault();
-              e.stopPropagation();
-              e.stopImmediatePropagation();
-              window.location.href = './daily-report.html';
-              return;
+            var txt = t.textContent && t.textContent.trim();
+            if (txt && Object.prototype.hasOwnProperty.call(TAB_ROUTES, txt)) {
+              var route = TAB_ROUTES[txt];
+              if (route) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                window.location.href = route;
+                return;
+              }
+              break;
             }
             t = t.parentElement;
           }
-        }, true); // 捕获阶段，React 之前
+        }, true);
+
+        // 顶部日期动态化：找到 "YYYY年M月D日星期X" 字符串，替换为真实日期
+        function dynamicDate() {
+          var cn = ['日','一','二','三','四','五','六'];
+          var d = new Date();
+          var real = d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日星期' + cn[d.getDay()];
+          // 找所有 textNode，如果匹配 YYYY年M月D日 模式就替换
+          function walk(node) {
+            if (node.nodeType === 3) {
+              var t = node.nodeValue || '';
+              if (/^\d{4}年\d{1,2}月\d{1,2}日星期[一二三四五六日]$/.test(t.trim())) {
+                node.nodeValue = real;
+              }
+            } else if (node.nodeType === 1) {
+              for (var c = node.firstChild; c; c = c.nextSibling) walk(c);
+            }
+          }
+          walk(document.body);
+        }
+        // 等 React 挂载后跑
+        if (document.readyState === 'complete') {
+          setTimeout(dynamicDate, 500);
+          setTimeout(dynamicDate, 1500);
+        } else {
+          window.addEventListener('load', function() {
+            setTimeout(dynamicDate, 500);
+            setTimeout(dynamicDate, 1500);
+          });
+        }
       })();
     </script>
   </body>
