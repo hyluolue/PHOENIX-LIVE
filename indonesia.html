@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>印尼 MTB 作战室 · 实时</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+    h1{font-size:20px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
+    .pill-ok{background:#1b5e20;color:#a5d6a7}
+    .pill-partial{background:#e65100;color:#ffcc80}
+    .pill-fail{background:#b71c1c;color:#ffcdd2}
+    .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section h2{font-size:16px;font-weight:700;color:#2e7d32;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section h2 .flag{font-size:18px}
+    .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .kpi{background:#e8f5e9;border-radius:10px;padding:12px 14px;border-left:3px solid #2e7d32}
+    .kpi-label{font-size:10px;color:#2e7d32;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+    .kpi-value{font-size:13px;font-weight:700;color:#1b5e20;line-height:1.5}
+    .kpi.alert-card{background:#fff3e0;border-left-color:#e65100}
+    .kpi.alert-card .kpi-label{color:#bf360c}
+    .kpi.alert-card .kpi-value{color:#bf360c}
+    .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
+    .price-item{background:#f7f9fc;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #2e7d32;font-size:12px}
+    .price-item .meta{flex:1;min-width:0}
+    .price-item .brand{font-weight:700;color:#1b5e20;display:block}
+    .price-item .model{display:block;color:#555;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .price-item .price{font-weight:800;color:#2e7d32;font-size:14px;white-space:nowrap}
+    .price-item .new{background:#2e7d32;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
+    .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+    .alert{background:#fff3e0;color:#bf360c;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:12px;border-left:3px solid #e65100}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🇮🇩 印尼 MTB 作战室</h1>
+        <div class="subtitle">ID 市场 · 中高端 MTB · <span id="date"></span> · 每日 9:00 自动更新</div>
+      </div>
+      <a class="back-link" href="./index.html">← 返回主面板</a>
+    </div>
+
+    <div class="status-bar">
+      <span id="status-shopee" class="pill pill-fail">⏳ shopee_id</span>
+      <span id="status-tokopedia" class="pill pill-fail">⏳ tokopedia</span>
+      <span id="status-news-id" class="pill pill-fail">⏳ news_id</span>
+      <span class="last-updated" id="updated">—</span>
+      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📊</span>市场基础数据 <small style="color:#999;font-weight:400">（年度报告 · 不会每日变）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">OEC 2024</div>
+          <div class="kpi-value">印尼年进口 $22.4M（#47 全球）<br>均价 $22/台（大幅下降）</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">6Wresearch 2025</div>
+          <div class="kpi-value">印尼自行车 CAGR 11.78%<br>2025-2031 · 增长强劲</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">中高端 MTB 占比</div>
+          <div class="kpi-value">估算 10-15%<br>约 20-45 万台/年（战略主战场）</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">在线渗透率</div>
+          <div class="kpi-value">约 65%（Shopee/Tokopedia）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">⚠️</span>印尼市场剧变 <small style="color:#999;font-weight:400">（实时预警）</small></h2>
+      <div class="alert">🚨 Giant Talon 0 从 Rp 26M 暴跌至 Rp 10.45M（-60%）<br>格局重塑，竞品定价策略正在快速变化</div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">💰</span>中高端 MTB 实时价格 <small style="color:#999;font-weight:400">（Shopee / Tokopedia 实时）</small></h2>
+      <div id="prices" class="price-grid"></div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🎯</span>凤凰定位 & 竞品矩阵 <small style="color:#999;font-weight:400">（战略层）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">凤凰定价区间</div>
+          <div class="kpi-value">Rp 7.8M – 40M</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">主要竞争价位</div>
+          <div class="kpi-value">Rp 1-4M（Element/United/Pacific 大众市场）<br>vs Rp 6-8M（Polygon Xtrada 入门）</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">空位机会</div>
+          <div class="kpi-value">Rp 6-10M 区间无 SGS 认证品牌<br>→ 凤凰 Thunder ID（Rp 9.5M）最佳切入</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">战略聚焦</div>
+          <div class="kpi-value">聚焦中高端 MTB（Rp 6M-20M）<br>童车+淑女车暂不纳入</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📰</span>印尼市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索 · 每日）</small></h2>
+      <div id="news" class="price-grid" style="grid-template-columns:1fr"></div>
+    </div>
+
+    <div class="section static">
+      <h2><span class="flag">🏆</span>UCI 认证价值 <small style="color:#999;font-weight:400">（战略层）</small></h2>
+      <div class="alert">🔥 UCI 认证 = 国际自行车联盟官方认可，可参加 UCI 赛事；印尼公路车消费者极度认可 UCI；凤凰拥有自有 UCI 认证车架，低端品牌绝对壁垒</div>
+    </div>
+
+    <div class="footer">
+      数据来源：OEC 2024 / 6Wresearch 2025 / Tokopedia/Shopee 实时价格 / Sogou 搜索<br />
+      本页面为 Phoenix-Live Tab #3 · 每日 9:00 自动更新
+    </div>
+  </div>
+
+<script>
+  const cn = ['日','一','二','三','四','五','六'];
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  async function load() {
+    let data;
+    try {
+      const r = await fetch('./data/latest.json', {cache: 'no-store'});
+      data = await r.json();
+    } catch (e) {
+      document.getElementById('prices').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
+      return;
+    }
+    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+
+    const s = data.fetch_status || {};
+    function setPill(id, k) {
+      const el = document.getElementById(id);
+      const v = s[k] || 'fail';
+      el.className = 'pill pill-' + v;
+      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k + ' 部分' : '✗ ' + k + '（反爬）';
+    }
+    setPill('status-shopee', 'shopee_id');
+    setPill('status-tokopedia', 'tokopedia');
+    setPill('status-news-id', 'news_id');
+
+    const items = (data.id && data.id.price_pool) || [];
+    const pEl = document.getElementById('prices');
+    if (items.length === 0) {
+      pEl.innerHTML = '<div class="empty">⚠️ Shopee ID / Tokopedia 均为企业级反爬墙（PerimeterX / DataDome）<br>爬虫已尝试 stealth 模式，无效<br>暂以\"市场剧变\"预警 + 凤凰战略定位代替实时价格</div>';
+    } else {
+      pEl.innerHTML = items.map(it => `
+        <a class="price-item" href="${esc(it.url)}" target="_blank" rel="noopener">
+          <div class="meta">
+            <span class="brand">${esc(it.brand)}</span>
+            <span class="model">${esc(it.model)}</span>
+          </div>
+          <div class="price">${esc(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
+        </a>
+      `).join('');
+    }
+
+    const news = (data.id && data.id.news) || [];
+    const nEl = document.getElementById('news');
+    if (news.length === 0) {
+      nEl.innerHTML = '<div class="empty">印尼市场动态：Sogou 对印尼语搜索结果稀少<br>建议改用 Bing News ID 区域 + 英语 query</div>';
+    } else {
+      nEl.innerHTML = news.map(n => `
+        <a class="price-item" href="${esc(n.url)}" target="_blank" rel="noopener">
+          <div class="meta">
+            <span class="brand">${esc(n.title)}</span>
+            <span class="model">来源：${esc(n.source || '?')}</span>
+          </div>
+        </a>
+      `).join('');
+    }
+  }
+
+  load();
+</script>
+</body>
+</html>
