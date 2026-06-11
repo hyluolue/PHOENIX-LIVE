@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "version": "1.0",
+  "last_updated": "2026-06-11",
+  "owner": "PHOENIX 品牌营销经理",
+  "v1_archived": {
+    "source": "原 React bundle 中策略迭代 tab（32 条）",
+    "extracted_at": "2026-06-11",
+    "total_count": 32,
+    "by_region": {
+      "bd": 14,
+      "id": 18
+    }
+  },
+  "frames": {
+    "stp": "Segmentation / Targeting / Positioning - 细分-目标-定位",
+    "4p": "Product / Price / Place / Promotion",
+    "brand_assets": "Brand Identity / Awareness / Loyalty / Association / Perceived Quality",
+    "flywheel": "Growth Flywheel - 自循环增长引擎"
+  },
+  "v2_draft": {
+    "core_narrative": "凤凰让每一程代步，都走得更久更远。",
+    "core_logic": "耐久=心智资产(显性) / 安全认证=产品底线(隐性)。客户买单因为'骑3年不坏想升级'，认证是'不偷工减料'的证明而非营销hook。",
+    "stp": {
+      "segmentation": "基础代步骑行者 / 中端过渡骑行者 / 中高端玩家",
+      "targeting": "主目标=基础→中端过渡人群；次目标=中端→中高端玩家",
+      "positioning": "陪伴升级的耐久品牌 - 区别于Polygon(专业)/Trek(高端)/Dream Cycle(渠道)"
+    },
+    "4p": {
+      "product": "入门=通勤车(8-12K BDT) / 中端=27.5寸MTB(14-22K) / 高端=27.5/29寸UCI公路车(24K+/8-18M IDR)",
+      "price": "入门包拉量 / 中端盈利 / 高端占心智",
+      "place": "基础用户在Daraz(流量) / 中端通过俱乐部+KOL(信任) / 高端在DTC独立站(独家)",
+      "promotion": "入门=日常促销 / 中端=俱乐部赞助+KOL / 高端=UCI赛事+探险故事"
+    },
+    "brand_assets": "核心=耐久=时间见证；不靠认证hook，靠'3年还骑得动'的用户证言",
+    "flywheel": "入门用户→3年口碑证言→俱乐部邀请→升维中端→UCI公路→老用户带新用户"
+  },
+  "notes": [],
+  "open_questions": [
+    "BD母语slogan怎么写？'耐久'在孟加拉语native词是什么？",
+    "ID母语slogan？现有phoenixbikeofficial IG内容的语言风格是不是品牌目标？",
+    "V1的'BD定位=SGS认证' vs V2'BD定位=耐久(认证是底线)' 哪个最终？",
+    "升维过渡人群怎么触达？3年换车周期里凤凰怎么持续触达？",
+    "老用户带新用户的'会员体系'是否要单独成项目？"
+  ]
+}
