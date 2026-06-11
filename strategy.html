@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌战略迭代 · V1→V2 · PHOENIX 全球作战室</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0; min-height: 100vh; padding: 20px;
+}
+header {
+  background: linear-gradient(90deg, #C8102E 0%, #8b0a1f 100%);
+  border-radius: 12px; padding: 20px 28px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+header .title { font-size: 22px; font-weight: 800; color: white; }
+header .subtitle { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+.btn-back {
+  background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 600;
+  text-decoration: none;
+}
+.btn-back:hover { background: rgba(255,255,255,0.25); }
+
+.section {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 20px 22px; margin-bottom: 18px;
+}
+.section h2 {
+  font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section h2 .badge {
+  font-size: 10px; padding: 3px 8px; border-radius: 4px;
+  background: rgba(200,16,46,0.2); color: #ff9cae; font-weight: 600;
+}
+.section h2 .badge.green { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+.section h2 .badge.warn { background: rgba(245,158,11,0.2); color: #fcd34d; }
+
+/* V2 草稿 */
+.v2-card {
+  background: linear-gradient(135deg, rgba(200,16,46,0.08), rgba(200,16,46,0.02));
+  border: 1px solid rgba(200,16,46,0.3); border-left: 4px solid #C8102E;
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 14px;
+}
+.v2-card .core { font-size: 18px; font-weight: 800; color: #ff9cae; margin-bottom: 8px; }
+.v2-card .logic { font-size: 13px; color: #e2e8f0; line-height: 1.7; }
+
+.frame-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;
+  margin-top: 10px;
+}
+.frame-card {
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 14px 16px;
+}
+.frame-card h3 { font-size: 13px; color: #5eead4; margin-bottom: 8px; font-weight: 700; }
+.frame-card .field { font-size: 12px; color: #cbd5e1; margin: 4px 0; line-height: 1.6; }
+.frame-card .field strong { color: #fcd34d; }
+.frame-card .gap { font-size: 11px; color: #fca5a5; margin-top: 8px; font-style: italic; }
+
+/* V1 列表 */
+.quadrant-bar {
+  display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap;
+}
+.quad-btn {
+  padding: 6px 14px; background: rgba(255,255,255,0.06); color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 12px;
+  cursor: pointer;
+}
+.quad-btn.active { background: #C8102E; color: white; border-color: #C8102E; }
+
+.v1-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+.v1-card {
+  background: rgba(0,0,0,0.3); border-radius: 8px; padding: 14px;
+  border-left: 4px solid #475569; transition: all 0.2s;
+}
+.v1-card.bd { border-left-color: #1565C0; }
+.v1-card.id { border-left-color: #2E7D32; }
+.v1-card:hover { transform: translateY(-2px); }
+.v1-card .head {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap;
+}
+.v1-card .reg {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 700;
+  text-transform: uppercase;
+}
+.v1-card.bd .reg { background: rgba(21,101,192,0.2); color: #93c5fd; }
+.v1-card.id .reg { background: rgba(46,125,50,0.2); color: #86efac; }
+.v1-card .pri {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px;
+}
+.v1-card .pri.p3 { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.v1-card .pri.p2 { background: rgba(245,158,11,0.2); color: #fcd34d; }
+.v1-card .pri.p1 { background: rgba(148,163,184,0.15); color: #cbd5e1; }
+.v1-card .fw {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px;
+  background: rgba(94,234,212,0.15); color: #5eead4;
+}
+.v1-card .title { font-size: 13px; font-weight: 700; color: #fff; margin: 6px 0 4px; }
+.v1-card .body { font-size: 12px; color: #cbd5e1; line-height: 1.6; margin-bottom: 6px; }
+.v1-card .kpi { font-size: 11px; color: #5eead4; }
+.v1-card .kpi strong { color: #fcd34d; }
+
+/* 4 框架映射 */
+.framework-card {
+  background: rgba(0,0,0,0.25); border-radius: 10px; padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08); margin-bottom: 12px;
+}
+.framework-card h3 {
+  font-size: 15px; color: #5eead4; margin-bottom: 8px; font-weight: 700;
+}
+.framework-card .item-list { display: flex; flex-direction: column; gap: 4px; }
+.framework-card .item-row {
+  display: flex; align-items: center; gap: 8px; font-size: 12px;
+  padding: 4px 8px; background: rgba(255,255,255,0.03); border-radius: 4px;
+}
+.framework-card .item-row .id-num { color: #fcd34d; font-weight: 700; min-width: 24px; }
+.framework-card .item-row .role { color: #5eead4; min-width: 100px; font-size: 11px; }
+.framework-card .item-row .note { color: #cbd5e1; flex: 1; }
+.framework-card .gap-line {
+  margin-top: 10px; padding: 8px 10px; background: rgba(239,68,68,0.08);
+  border-left: 3px solid #ef4444; border-radius: 4px; font-size: 12px; color: #fca5a5;
+}
+
+/* 新观点 input */
+.note-input {
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 16px;
+}
+.note-input h3 { color: #fcd34d; font-size: 14px; margin-bottom: 10px; }
+.note-input .row { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.note-input select, .note-input input {
+  background: rgba(255,255,255,0.06); color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 6px;
+  padding: 6px 10px; font-size: 12px;
+}
+.note-input textarea {
+  width: 100%; min-height: 80px; background: rgba(255,255,255,0.05);
+  color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px; padding: 10px; font-size: 13px; resize: vertical;
+  font-family: inherit;
+}
+.note-input button {
+  background: #C8102E; color: white; border: none; padding: 8px 18px;
+  border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600;
+}
+.note-input button:hover { background: #8b0a1f; }
+
+.notes-list { margin-top: 16px; }
+.note-item {
+  background: rgba(0,0,0,0.25); border-radius: 8px; padding: 12px 14px;
+  margin-bottom: 8px; border-left: 3px solid #5eead4;
+}
+.note-item .head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.note-item .cat { font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(94,234,212,0.15); color: #5eead4; }
+.note-item .time { font-size: 10px; color: #64748b; }
+.note-item .body { font-size: 12px; color: #e2e8f0; line-height: 1.6; }
+.empty { color: #64748b; font-size: 13px; text-align: center; padding: 20px; }
+
+footer { text-align: center; padding: 30px 0 10px; color: #64748b; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title">🎯 品牌战略迭代 · V1 → V2</div>
+    <div class="subtitle" id="subtitle">凤凰自行车 · 品牌战略工作台 · 理论框架交叉验证</div>
+  </div>
+  <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
+</header>
+
+<!-- V2 草稿 -->
+<div class="section">
+  <h2>🆕 V2 草稿 <span class="badge">DRAFT 2026-06-11</span></h2>
+  <div class="v2-card">
+    <div class="core" id="v2-core">凤凰让每一程代步，都走得更久更远。</div>
+    <div class="logic">核心逻辑：<strong>耐久 = 心智资产（显性）</strong>；<strong>安全认证 = 产品底线（隐性）</strong>。客户买单因为"骑 3 年不坏想升级"，认证是"不偷工减料"的证明而非营销 hook。升维路径是品牌升级的全部内容。</div>
+  </div>
+  <div class="frame-grid" id="v2-frames">
+    <!-- V2 4 框架自动渲染 -->
+  </div>
+  <div style="margin-top: 12px; padding: 12px 14px; background: rgba(94,234,212,0.06); border-left: 3px solid #5eead4; border-radius: 6px; font-size: 12px; color: #cbd5e1; line-height: 1.7;">
+    <strong style="color: #5eead4">🎯 V2 vs V1 关键差异：</strong>
+    <ol style="margin: 6px 0 0 20px; padding: 0; line-height: 1.8">
+      <li>把"耐久"从 V1 的 1 条 KPI 升为<strong>系统核心</strong>；</li>
+      <li>把"认证"从 V1 的 hook 降为<strong>产品底线</strong>；</li>
+      <li>新增"基础→中端"升维路径作为<strong>核心叙事</strong>；</li>
+      <li>STP 显式切出"过渡人群"细分（V1 没有）；</li>
+      <li>飞轮假设从"被内容吸引的新用户"扩到"老用户升维 + 带新用户"。</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 4 框架交叉验证（V1 → V2 gap） -->
+<div class="section">
+  <h2>🔀 4 框架交叉验证 <span class="badge green">STP / 4P / 品牌资产 / 飞轮</span></h2>
+  <div id="frameworks">
+    <!-- 自动渲染 -->
+  </div>
+</div>
+
+<!-- V1 全部 32 条 -->
+<div class="section">
+  <h2>📋 V1 全部 32 条 <span class="badge">原 React bundle 抽出</span></h2>
+  <div class="quadrant-bar" id="quad-bar">
+    <button class="quad-btn active" data-quad="all">全部 (32)</button>
+    <button class="quad-btn" data-quad="A-bd">A 战略 BD (12)</button>
+    <button class="quad-btn" data-quad="A-id">A 战略 ID (4)</button>
+    <button class="quad-btn" data-quad="B-bd">B 执行 BD (8)</button>
+    <button class="quad-btn" data-quad="B-id">B 执行 ID (8)</button>
+  </div>
+  <div class="v1-grid" id="v1-grid">
+    <div class="empty">加载中...</div>
+  </div>
+</div>
+
+<!-- 新观点输入 -->
+<div class="section">
+  <h2>💡 新观点 / 修订 <span class="badge warn">实时沉淀到 V2</span></h2>
+  <div class="note-input">
+    <h3>把你新的洞察写下来，自动归类到 V2 草稿</h3>
+    <div class="row">
+      <select id="note-region">
+        <option value="bd">BD 孟加拉</option>
+        <option value="id">ID 印尼</option>
+        <option value="global">全局通用</option>
+      </select>
+      <select id="note-framework">
+        <option value="stp">STP 细分/目标/定位</option>
+        <option value="4p">4P 产品/价格/渠道/促销</option>
+        <option value="brand_assets">品牌资产</option>
+        <option value="flywheel">飞轮</option>
+        <option value="slogan">Slogan / 主张</option>
+        <option value="insight">洞察/客户语言</option>
+        <option value="other">其他</option>
+      </select>
+      <input type="text" id="note-title" placeholder="一句话标题（可选）" style="flex:1; min-width:200px">
+    </div>
+    <textarea id="note-body" placeholder="详细描述：你想说啥？为啥这么想？反驳哪个 V1 条？或者新发现？"></textarea>
+    <div style="margin-top: 8px;">
+      <button onclick="addNote()">💾 沉淀到 V2 草稿</button>
+      <span style="margin-left: 12px; font-size: 11px; color: #94a3b8;">保存到 data/strategy_notes.json · 每日 9:00 自动备份到 GitHub</span>
+    </div>
+  </div>
+  <div class="notes-list" id="notes-list">
+    <div class="empty">暂无新观点</div>
+  </div>
+</div>
+
+<footer>
+  <div>数据源：React bundle 抽出（V1 32 条）+ V2 草稿 + 你的新观点</div>
+  <div style="margin-top: 4px;">理论框架：STP（细分-目标-定位）/ 4P（产品-价格-渠道-促销）/ 品牌资产 / 增长飞轮</div>
+</footer>
+
+<script src="./data/strategy_v1.js"></script>
+<script>
+const DATA_URL = './data/strategy_notes.json';
+
+let currentQuad = 'all';
+let allNotes = [];
+
+async function loadNotes() {
+  try {
+    const r = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    allNotes = data.notes || [];
+    renderNotes();
+  } catch (e) {
+    document.getElementById('notes-list').innerHTML = '<div class="empty">⚠️ 加载 data/strategy_notes.json 失败：' + e.message + '</div>';
+  }
+}
+
+function renderV2Frames() {
+  const html = [];
+  const frames = V2_DRAFT.four_frames;
+  for (const [k, v] of Object.entries(frames)) {
+    let fields = '';
+    for (const [fk, fv] of Object.entries(v)) {
+      fields += `<div class="field"><strong>${fk}:</strong> ${esc(fv)}</div>`;
+    }
+    html += `<div class="frame-card"><h3>${k.toUpperCase()}</h3>${fields}</div>`;
+  }
+  document.getElementById('v2-frames').innerHTML = html;
+}
+
+function renderFrameworks() {
+  const html = [];
+  for (const [k, frame] of Object.entries(V1_FRAMEWORK_MAP)) {
+    const items = frame.items.map(it =>
+      `<div class="item-row"><span class="id-num">#${it.id}</span><span class="role">${esc(it.role)}</span><span class="note">${esc(it.note)}</span></div>`
+    ).join('');
+    html += `<div class="framework-card">
+      <h3>${esc(frame.name)} <span style="font-size:11px;color:#94a3b8">· ${frame.count} 条</span></h3>
+      <div class="item-list">${items}</div>
+      <div class="gap-line">⚠️ Gap: ${esc(frame.gap)}</div>
+    </div>`;
+  }
+  document.getElementById('frameworks').innerHTML = html;
+}
+
+function renderV1() {
+  let items = V1_STRATEGIES;
+  if (currentQuad !== 'all') {
+    const [q, r] = currentQuad.split('-');
+    items = items.filter(it => it.quadrant === q && it.region === r);
+  }
+  const html = items.map(it => `
+    <div class="v1-card ${it.region}">
+      <div class="head">
+        <span class="reg">${it.region === 'bd' ? 'BD' : 'ID'}</span>
+        <span class="pri p${it.priority}">${'★'.repeat(it.priority)}${'☆'.repeat(3 - it.priority)}</span>
+        <span class="fw">${esc(it.framework)}</span>
+      </div>
+      <div class="title">#${it.id} ${esc(it.title)}</div>
+      <div class="body">${esc(it.body)}</div>
+      <div class="kpi"><strong>KPI:</strong> ${esc(it.kpi)}</div>
+    </div>
+  `).join('');
+  document.getElementById('v1-grid').innerHTML = html || '<div class="empty">无匹配</div>';
+}
+
+function renderNotes() {
+  if (!allNotes.length) {
+    document.getElementById('notes-list').innerHTML = '<div class="empty">暂无新观点（上面输入框写）</div>';
+    return;
+  }
+  const html = allNotes.slice().reverse().map(n => `
+    <div class="note-item">
+      <div class="head">
+        <span class="cat">${esc(n.region)} · ${esc(n.framework)}</span>
+        <span class="time">${esc(n.time)}</span>
+      </div>
+      ${n.title ? `<div style="font-weight:700;color:#fcd34d;font-size:13px;margin:4px 0">${esc(n.title)}</div>` : ''}
+      <div class="body">${esc(n.body)}</div>
+    </div>
+  `).join('');
+  document.getElementById('notes-list').innerHTML = html;
+}
+
+async function addNote() {
+  const region = document.getElementById('note-region').value;
+  const framework = document.getElementById('note-framework').value;
+  const title = document.getElementById('note-title').value.trim();
+  const body = document.getElementById('note-body').value.trim();
+  if (!body) { alert('请写点啥'); return; }
+
+  const note = {
+    id: Date.now(),
+    region, framework, title, body,
+    time: new Date().toISOString().substring(0, 19).replace('T', ' '),
+  };
+
+  // 1) 存到 localStorage（前端即时可见）
+  allNotes.push(note);
+  renderNotes();
+
+  // 2) 清空 input
+  document.getElementById('note-title').value = '';
+  document.getElementById('note-body').value = '';
+
+  // 3) 提示用户后续：导出 JSON 下载
+  // (前端没法直接写 GitHub，但能下载)
+  const fullData = {
+    schema_version: '1.0',
+    version: '2.0-draft',
+    last_updated: new Date().toISOString().substring(0, 10),
+    v1_archived: { source: 'React bundle', extracted_at: '2026-06-11', total_count: 32 },
+    v2_draft: V2_DRAFT,
+    notes: allNotes,
+    open_questions: []
+  };
+  // 让用户用"下载"按钮
+  if (!window._downloadAdded) {
+    const btn = document.createElement('button');
+    btn.textContent = '📥 下载最新 JSON';
+    btn.style.cssText = 'background: rgba(94,234,212,.2); color: #5eead4; border: 1px solid rgba(94,234,212,.3); margin-left: 8px;';
+    btn.onclick = () => downloadJson(fullData);
+    document.querySelector('.note-input button').after(btn);
+    window._downloadAdded = true;
+  }
+}
+
+function downloadJson(data) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'strategy_notes.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function esc(s) {
+  return String(s || '').replace(/[<>&"']/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// quadrant 筛选
+document.querySelectorAll('.quad-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.quad-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentQuad = btn.dataset.quad;
+    renderV1();
+  });
+});
+
+renderV2Frames();
+renderFrameworks();
+renderV1();
+loadNotes();
+</script>
+
+</body>
+</html>
