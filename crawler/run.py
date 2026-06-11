@@ -843,13 +843,17 @@ def main() -> int:
             # price_pool/news: 覆盖（每日是新数据，不是累积）
             data[region][slot] = items
             data["fetch_status"][name] = status
+            data["generated_at"] = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+            data["schema_version"] = "1.0"
             log(f"{name}: {len(items)} items, status={status}")
+            # 增量写盘（让后续 module 能读到 in-memory 写回的数据）
+            if not args.dry_run:
+                (DATA_DIR / "latest.json").write_text(
+                    json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+                )
         except Exception as e:
             log(f"{name} CRASH: {type(e).__name__}: {e}")
             data["fetch_status"][name] = "fail"
-
-    data["generated_at"] = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
-    data["schema_version"] = "1.0"
 
     if args.dry_run:
         print(json.dumps(data, ensure_ascii=False, indent=2))
