@@ -863,10 +863,46 @@ def main() -> int:
     out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     log(f"wrote {out} ({out.stat().st_size} bytes)")
 
+    # 追加今日快照到 history.json（7 日价格趋势用）
+    save_history_snapshot(data)
+
     if not args.no_git:
         git_commit_and_push()
 
     return 0
+
+
+def save_history_snapshot(data: dict) -> None:
+    """每天保留 1 个快照到 data/history.json，7 日价格趋势用。"""
+    history_path = DATA_DIR / "history.json"
+    today = data.get("generated_at", "")[:10]  # YYYY-MM-DD
+    if not today:
+        return
+    # 读现有 history
+    history = {"bd": [], "id": []}
+    if history_path.exists():
+        try:
+            history = json.loads(history_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    # 今日快照（只保留价格）
+    snap_bd = [{"date": today, "prices": [
+        {"brand": p.get("brand"), "model": p.get("model"), "price": p.get("price")}
+        for p in (data.get("bd", {}).get("price_pool") or [])
+    ]}]
+    snap_id = [{"date": today, "prices": [
+        {"brand": p.get("brand"), "model": p.get("model"), "price": p.get("price")}
+        for p in (data.get("id", {}).get("price_pool") or [])
+    ]}]
+    # BD: 替换今日
+    history["bd"] = [s for s in history.get("bd", []) if s.get("date") != today] + snap_bd
+    history["id"] = [s for s in history.get("id", []) if s.get("date") != today] + snap_id
+    # 保留最近 7 天
+    history["bd"] = history["bd"][-7:]
+    history["id"] = history["id"][-7:]
+    history["last_updated"] = today
+    history_path.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+    log(f"history snapshot saved: {today} (bd={len(history['bd'])}d, id={len(history['id'])}d)")
 
 
 if __name__ == "__main__":
