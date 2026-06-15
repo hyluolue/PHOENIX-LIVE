@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T10:00:00+08:00",
+  "generated_at": "2026-06-15T10:15:00+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -10,7 +10,7 @@
     "daraz_bd_reviews": "ok",
     "dreamcycle": "fail",
     "apify_social": "ok",
-    "dreamcycle_vpn": "ok"
+    "dreamcycle_vpn": "ok (20 products, 3 with price)"
   },
   "bd": {
     "price_pool": [
@@ -830,58 +830,223 @@
       },
       {
         "brand": "Polloux",
-        "model": "polloux 20 inch cycle",
+        "model": "polloux 20 size cycle",
         "platform": "dreamcycle.store",
         "price": 9800,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
         "is_new": true,
-        "scraped_at": "2026-06-15T10:00:00+08:00",
-        "note": "BDT 9,800 (dreamcycle.store)"
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BDT 9,800 (dreamcycle.store - VPN 验证)"
       },
       {
         "brand": "Duranta",
-        "model": "Duranta Knight",
+        "model": "Duranta cycle",
         "platform": "dreamcycle.store",
         "price": 11700,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/duranta-knight/",
         "is_new": true,
-        "scraped_at": "2026-06-15T10:00:00+08:00",
-        "note": "BDT 11,700 (dreamcycle.store)"
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BDT 11,700 (dreamcycle.store - VPN 验证)"
       },
       {
         "brand": "Hero",
-        "model": "Hero Road bike (Non gear)",
+        "model": "Hero road bike",
         "platform": "dreamcycle.store",
         "price": 12000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
         "is_new": true,
-        "scraped_at": "2026-06-15T10:00:00+08:00",
-        "note": "BDT 12,000 (dreamcycle.store) - OUT OF STOCK"
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BDT 12,000 (dreamcycle.store - VPN 验证)"
       },
       {
         "brand": "Uctocifu",
-        "model": "Uctocifu (Non gear)",
+        "model": "Uctocifu cycle",
         "platform": "dreamcycle.store",
         "price": 0,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
         "is_new": true,
-        "scraped_at": "2026-06-15T10:00:00+08:00",
-        "note": "BD 待查 (dreamcycle.store)"
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
       },
       {
         "brand": "Veloce",
-        "model": "Veloce Junior (Non gear)",
+        "model": "Veloce junior non gear",
         "platform": "dreamcycle.store",
         "price": 0,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
         "is_new": true,
-        "scraped_at": "2026-06-15T10:00:00+08:00",
-        "note": "BD 待查 (dreamcycle.store)"
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Core",
+        "model": "Core Gio-100 Non Gear",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-gio-100/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Donald",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "Uplayed 20 inch boy",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Marine",
+        "model": "Marine 20 inch",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Hero",
+        "model": "Hero 20 inch",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix miracle",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Avon",
+        "model": "Avon chairman",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Buzz-1 Non Gear",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Non gear (Donald 2)",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Python",
+        "model": "Python MTB",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/python/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Buzz-1 2026",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Tornado 24 inch",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "71 Warrior",
+        "model": "seventy one warrior 1.0",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-1-0/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "Rockrider M8 Folding",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-m8-folding/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
+      },
+      {
+        "brand": "Duronto",
+        "model": "Duronto sturn",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/duronto-sturn/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:15:00+08:00",
+        "note": "BD 待查详情页 (dreamcycle.store)"
       }
     ],
     "price_tracker": [],
