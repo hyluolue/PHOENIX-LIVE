@@ -1,80 +1,340 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>phoenix-clean</title>
-    <script type="module" crossorigin src="./assets/index-unB8v61V.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D2ARE2Am.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      // Phoenix-Live 补丁：拦截 tab 按钮 + 顶部日期动态化
-      (function () {
-        // Tab 按钮 -> 跳转独立页面的映射
-        var TAB_ROUTES = {
-          '总览':       null,                       // 留在 React
-          '孟加拉':     './bangladesh.html',
-          '印尼':       './indonesia.html',
-          '竞品监控':   './competitive.html',
-          '产品矩阵':   './competitive.html',
-          '任务':       null,                       // 留 React
-          'DTC差评':    './dtc.html',
-          '市场日报':   './daily-report.html',
-          '策略迭代':   './strategy.html',
-        };
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>phoenix-live · 总览</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
+    h1{font-size:22px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
+    .pill-ok{background:#1b5e20;color:#a5d6a7}
+    .pill-partial{background:#e65100;color:#ffcc80}
+    .pill-fail{background:#b71c1c;color:#ffcdd2}
+    .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section h2 .flag{font-size:18px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
+    .section.dark h2{color:#c8102e}
+    .section.dark .kpi{background:rgba(255,255,255,.05);color:#fff;border-left-color:#5eead4}
+    .section.dark .kpi-label{color:#5eead4}
+    .section.dark .kpi-value{color:#fff}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
+    .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+    .kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
+    .kpi.dynamic{border-left-color:#2e7d32;background:#e8f5e9}
+    .kpi.dynamic .kpi-label{color:#2e7d32}
+    .kpi.dynamic .kpi-value{color:#1b5e20}
+    .kpi.gap{background:#fff3e0;border-left-color:#e65100}
+    .kpi.gap .kpi-label{color:#e65100}
+    .kpi.gap .kpi-value{color:#bf360c}
+    .kpi.accent{background:rgba(200,16,46,.08);border-left-color:#c8102e}
+    .kpi.accent .kpi-label{color:#c8102e}
+    .kpi.accent .kpi-value{color:#c8102e}
+    .kpi-value small{font-weight:400;color:#888;display:block;margin-top:2px}
+    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
+    .insight b{color:#5eead4}
+    .insight .gap{color:#ffc107}
+    .insight .hl{color:#c8102e}
+    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🚲 Phoenix-Live · 全球作战室总览</h1>
+        <div class="subtitle">BD 孟加拉 + ID 印尼 + 全球数据 · <span id="date"></span> · 每日 9:00 自动更新</div>
+      </div>
+      <div class="nav">
+        <a href="./bangladesh.html">🇧🇩 孟加拉</a>
+        <a href="./indonesia.html">🇮🇩 印尼</a>
+        <a href="./competitive.html">📈 竞品监控</a>
+        <a href="./dtc.html">🛒 DTC 差评</a>
+        <a href="./daily-report.html">📊 市场日报</a>
+        <a href="./strategy.html">🎯 策略迭代</a>
+      </div>
+    </div>
 
-        // 拦截 tab 点击
-        document.addEventListener('click', function (e) {
-          var t = e.target;
-          for (var i = 0; i < 5 && t; i++) {
-            var txt = t.textContent && t.textContent.trim();
-            if (txt && Object.prototype.hasOwnProperty.call(TAB_ROUTES, txt)) {
-              var route = TAB_ROUTES[txt];
-              if (route) {
-                e.preventDefault();
-                e.stopPropagation();
-                e.stopImmediatePropagation();
-                window.location.href = route;
-                return;
-              }
-              break;
-            }
-            t = t.parentElement;
-          }
-        }, true);
+    <div class="status-bar">
+      <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
+      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
+      <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
+      <span id="status-apify" class="pill pill-fail">⏳ apify_social</span>
+      <span class="last-updated" id="updated">—</span>
+      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+    </div>
 
-        // 顶部日期动态化：找到 "YYYY年M月D日星期X" 字符串，替换为真实日期
-        function dynamicDate() {
-          var cn = ['日','一','二','三','四','五','六'];
-          var d = new Date();
-          var real = d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日星期' + cn[d.getDay()];
-          // 找所有 textNode，如果匹配 YYYY年M月D日 模式就替换
-          function walk(node) {
-            if (node.nodeType === 3) {
-              var t = node.nodeValue || '';
-              if (/^\d{4}年\d{1,2}月\d{1,2}日星期[一二三四五六日]$/.test(t.trim())) {
-                node.nodeValue = real;
-              }
-            } else if (node.nodeType === 1) {
-              for (var c = node.firstChild; c; c = c.nextSibling) walk(c);
-            }
-          }
-          walk(document.body);
-        }
-        // 等 React 挂载后跑
-        if (document.readyState === 'complete') {
-          setTimeout(dynamicDate, 500);
-          setTimeout(dynamicDate, 1500);
-        } else {
-          window.addEventListener('load', function() {
-            setTimeout(dynamicDate, 500);
-            setTimeout(dynamicDate, 1500);
-          });
-        }
-      })();
-    </script>
-  </body>
+    <div class="section">
+      <h2><span class="flag">🌍</span>全球自行车市场 2025 全年数据 <small style="color:#999;font-weight:400">（中摩商会 + 海关总署 2026-02）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi dynamic">
+          <div class="kpi-label">2025 全球两轮车出口</div>
+          <div class="kpi-value">4,503 万辆 · USD 182.9 亿<br><small>同比 +20% · 创历史新高</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">电动自行车</div>
+          <div class="kpi-value">2,680 万辆 · USD 69 亿<br><small>均价 USD 257/辆 · 同比 +17%</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">燃油摩托车</div>
+          <div class="kpi-value">1,473 万辆 · USD 85.9 亿<br><small>均价 USD 583/辆 · 同比 +26%</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">电动摩托车</div>
+          <div class="kpi-value">350 万辆 · USD 28 亿<br><small>均价 USD 800/辆 · 同比 +22%</small></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">区域结构（2025）</div>
+          <div class="kpi-value">拉美 36.7% · 非洲 32.7%<br>亚洲 17.1% · 欧美承压<br><small>非洲增速 +59% 第一引擎</small></div>
+        </div>
+        <div class="kpi accent">
+          <div class="kpi-label">中国出口结构</div>
+          <div class="kpi-value">电动化占比 67%+<br>锂电化率 85%+<br><small>均价 USD 257 vs 燃油 USD 583</small></div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🎯 全球趋势核心洞察：</b>
+        <ul class="tight">
+          <li><b>电动化加速</b>：电摩+电自出口 3,030 万辆，占两轮车总出口 67%，已成为第一增长引擎</li>
+          <li><b>南强北弱</b>：非洲 +59% YoY 增速第一（尼日利亚/肯尼亚/卢旺达），拉美 36.7% 占比第一，欧美 -9%~-21% 承压但高端化突破</li>
+          <li><b>价值驱动</b>：2025 出口额 +30.67% &gt; 出口量 +25.77%，<span class="hl">均价上行</span>，从规模扩张转向价值提升</li>
+          <li><b>凤凰位置</b>：中国出口全球占比 60%+，Phoenix 跟 Hero/Trek/Giant/Accell 同属第二梯队 = <b>品牌力够，缺价格锚点</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🇧🇩</span>孟加拉 BD 市场 <small style="color:#999;font-weight:400">（2025-2026 报告）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi dynamic">
+          <div class="kpi-label">BD GDP 2025 Q4</div>
+          <div class="kpi-value">+9.17% YoY<br><small>Bangladesh Bureau of Statistics 2025-12</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">FY2024-25 出口</div>
+          <div class="kpi-value">USD 117M · +41% YoY<br><small>bike-eu Aug 2025</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">进口基准（WBIA 2022）</div>
+          <div class="kpi-value">60.2 万台 · $46/台<br><small>$12.6M 进口总额</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">BD 摩托车 CAGR 2024-2028</div>
+          <div class="kpi-value">+0.64% · 2028 达 $1.98B<br><small>9th Dhaka Bike Show 2025</small></div>
+        </div>
+        <div class="kpi accent">
+          <div class="kpi-label">BD 自行车门户</div>
+          <div class="kpi-value">bicyclebd.com<br><small>200+ 品牌 · 2013 创立</small></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">Phoenix BD 真实价位</div>
+          <div class="kpi-value">7,999-14,999 BDT<br><small>14 SKU 全在 &lt; 15K 段</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🇮🇩</span>印尼 ID 市场 <small style="color:#999;font-weight:400">（2024-2025 报告）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi dynamic">
+          <div class="kpi-label">ID 自行车电商 2024</div>
+          <div class="kpi-value">USD 1.182 亿<br><small>占 ID 个人体育电商 21.5%</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">CAGR 2024-2028</div>
+          <div class="kpi-value">+7.9% YoY<br><small>中体协 2025</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">6Wresearch 2025</div>
+          <div class="kpi-value">CAGR 11.78%<br><small>2025-2031 · 增长强劲</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">OEC 2024 进口</div>
+          <div class="kpi-value">$22.4M · #47 全球<br><small>均价 $22/台</small></div>
+        </div>
+        <div class="kpi accent">
+          <div class="kpi-label">ID 体育电商 TOP 5（2023）</div>
+          <div class="kpi-value">blibli $16.5M · gramedia $14.1M<br>shopee $13.2M · <b>serbasepeda</b> · planetsports</div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">Phoenix ID 真实入场</div>
+          <div class="kpi-value">phoenixbikeofficial IG<br><small>2705/2706 型号在售</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section dark">
+      <h2><span class="flag" style="color:#c8102e">🔥</span>关键价格段真空（从 latest.json 56 SKU 真实数据归纳）</h2>
+      <div class="kpi-grid">
+        <div class="kpi gap">
+          <div class="kpi-label">BD 15K-25K BDT</div>
+          <div class="kpi-value">16 SKU · 5 品牌<br><small>Marine/Veloce/Duranta/Foxter/Warrior</small></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">BD &gt; 25K BDT</div>
+          <div class="kpi-value">1 SKU · Duranta 电动 43,500<br><small>⚠ 真实真空市场</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">BD Phoenix 真实覆盖</div>
+          <div class="kpi-value">14 SKU 全 &lt; 15K BDT<br><small>其中 12 个 ≤ 10K（儿童车）</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">ID Rp 7-15M 中高端</div>
+          <div class="kpi-value">ELEMENT FRC 38 砾石<br>UNITED STERLING R1 700C<br><small>本土 4 大品牌主导</small></div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🚀 战略级价格洞察：</b>
+        <ul class="tight">
+          <li><b>BD 中端红海</b>：10K-15K BDT 27 SKU 15 品牌混战，Phoenix 需靠 SGS 认证/三标跳出价格战</li>
+          <li><b>BD 中高端真空</b>：15K-25K 段 Phoenix 完全缺席，<span class="gap">真实可入</span>（V2 战略大单品 = 这个价位带）</li>
+          <li><b>BD 高端真空</b>：&gt; 25K 仅 Duranta 1 款电动 43,500，<span class="hl">Phoenix 迈巴赫式价值锚点机会</span></li>
+          <li><b>ID 中端空白</b>：Rp 6-10M 区间无 SGS 认证品牌，Thunder ID Rp 9.5M 最佳切入</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🏪</span>本土独立站档案</h2>
+      <div class="kpi-grid">
+        <div class="kpi dynamic">
+          <div class="kpi-label">🇧🇩 Dream Cycle (BD)</div>
+          <div class="kpi-value">dreamcycle.store ✓ 真实<br><small>20 SKU 已抓全 · 4 真品牌入驻 Phoenix</small></div>
+        </div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">🇮🇩 SerbaSepeda (ID)</div>
+          <div class="kpi-value">serbasepeda.com ✓ 真实<br><small>首页 16 SKU 已抓 · 4 大本土品牌 dealer</small></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">失效域名</div>
+          <div class="kpi-value">dreamcycle.com（停放）<br>71warrior.com.bd（DNS 不存在）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📈</span>品牌监控汇总 <small style="color:#999;font-weight:400">（抓取 56 真品牌 SKU · 17 真品牌）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi accent">
+          <div class="kpi-label">Phoenix</div>
+          <div class="kpi-value">14 SKU · 价段 7,999-14,999<br><small>BD 第一真品牌（按 SKU 数）</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Foxter</div>
+          <div class="kpi-value">9 SKU · 100-16,999<br><small>BD 第二</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Duranta</div>
+          <div class="kpi-value">8 SKU · 8,748-43,500<br><small>含 1 个 43,500 电动（高端唯一）</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Marine</div>
+          <div class="kpi-value">5 SKU · 12,500-19,000<br><small>中端 MTB</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Veloce</div>
+          <div class="kpi-value">4 SKU · 942-18,999</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">其他 12 真品牌</div>
+          <div class="kpi-value">16 SKU · Warrior / Hero / Polloux<br>Uctocifu / Core / Uplayed 等</div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">Daraz 白牌 (Generic)</div>
+          <div class="kpi-value">38 SKU · 99-212,547<br><small>未声明品牌/周边，标白牌不计入</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🎯</span>Tab 路由快速跳转</h2>
+      <div class="kpi-grid">
+        <a class="kpi" href="./bangladesh.html" style="text-decoration:none">
+          <div class="kpi-label">🇧🇩 Tab #2</div>
+          <div class="kpi-value" style="color:#1565c0">孟加拉 MTB 作战室 →</div>
+        </a>
+        <a class="kpi" href="./indonesia.html" style="text-decoration:none">
+          <div class="kpi-label">🇮🇩 Tab #3</div>
+          <div class="kpi-value" style="color:#2e7d32">印尼 MTB 作战室 →</div>
+        </a>
+        <a class="kpi" href="./competitive.html" style="text-decoration:none">
+          <div class="kpi-label">📈 Tab #4</div>
+          <div class="kpi-value" style="color:#c8102e">竞品监控 + 品牌矩阵 →</div>
+        </a>
+        <a class="kpi" href="./dtc.html" style="text-decoration:none">
+          <div class="kpi-label">🛒 Tab #7</div>
+          <div class="kpi-value" style="color:#5eead4">DTC 差评 + 社媒 →</div>
+        </a>
+        <a class="kpi" href="./daily-report.html" style="text-decoration:none">
+          <div class="kpi-label">📊 Tab #5</div>
+          <div class="kpi-value" style="color:#e65100">市场日报 7 板块 →</div>
+        </a>
+        <a class="kpi" href="./strategy.html" style="text-decoration:none">
+          <div class="kpi-label">🎯 Tab #8</div>
+          <div class="kpi-value" style="color:#9c27b0">战略迭代 V1/V2 →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      数据来源：Daraz BD / dreamcycle.store / serbasepeda.com / Apify 4 平台 / 中摩商会 2025 报告 / 海关总署 2026-02 / BBS BD 2025-12 / 中体协 2025<br />
+      本页面为 Phoenix-Live Tab #1（静态总览，可直接编辑 HTML 迭代）· 每日 9:00 自动更新
+    </div>
+  </div>
+
+<script>
+  const cn = ['日','一','二','三','四','五','六'];
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  async function load() {
+    let data;
+    try {
+      const r = await fetch('./data/latest.json', {cache: 'no-store'});
+      data = await r.json();
+    } catch (e) {
+      return;
+    }
+    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+
+    const s = data.fetch_status || {};
+    function setPill(id, k) {
+      const el = document.getElementById(id);
+      const v = s[k] || 'fail';
+      el.className = 'pill pill-' + v;
+      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k : '✗ ' + k + '（反爬）';
+    }
+    setPill('status-daraz', 'daraz_bd');
+    setPill('status-dreamcycle', 'dreamcycle');
+    setPill('status-serbasepeda', 'serbasepeda');
+    setPill('status-apify', 'apify_social');
+  }
+
+  load();
+</script>
+</body>
 </html>
