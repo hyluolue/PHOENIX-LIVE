@@ -257,7 +257,7 @@ function render() {
 
   // status bar
   const fs = DATA.fetch_status || {};
-  const pills = ['daraz_bd','news_bd','news_id','shopee_id','tokopedia','daraz_bd_reviews','apify_social']
+  const pills = ['daraz_bd','dreamcycle','shopee_id','tokopedia','serbasepeda','news_bd','news_id','daraz_bd_reviews','apify_social']
     .map(k => {
       const s = fs[k] || 'pending';
       const label = k.replace(/_/g,' ').toUpperCase();
