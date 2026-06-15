@@ -85,6 +85,7 @@
         </select>
         <input type="text" id="search" placeholder="🔍 搜品牌或型号..." />
       </div>
+      <div id="tier-grid" class="tier-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px"></div>
       <div id="brand-grid" class="brand-grid"></div>
     </div>
 
@@ -202,6 +203,37 @@
       `共抓取 <strong>${totalItems}</strong> 条真品牌商品 · <strong>${priced}</strong> 条有价格 · <strong>${totalBrands}</strong> 个真品牌` +
       (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 条 Daraz 白牌 Generic）</span>` : '') +
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`);
+
+    // 价格段品牌矩阵 (仅在 BD 区域或全部 + 有价格时显示)
+    if (region === 'all' || region === 'bd') {
+      const bdItems = items.filter(it => it._region === 'BD' && it.price > 0 && (it.brand || '').toLowerCase() !== 'generic');
+      const tierBands = [
+        { name: '< 10K BDT', lo: 0, hi: 10000, color: '#90a4ae' },
+        { name: '10K-15K', lo: 10000, hi: 15000, color: '#1565c0' },
+        { name: '15K-25K', lo: 15000, hi: 25000, color: '#e65100' },
+        { name: '> 25K', lo: 25000, hi: 1e9, color: '#c8102e' },
+      ];
+      const tierGrid = document.getElementById('tier-grid');
+      tierGrid.innerHTML = tierBands.map(t => {
+        const inTier = bdItems.filter(it => it.price >= t.lo && it.price < t.hi);
+        const phx = inTier.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+        const brands = [...new Set(inTier.map(it => it.brand))].sort();
+        const isGap = inTier.length === 0;
+        return `
+          <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
+              <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
+              <span style="font-size:10px;color:#94a3b8;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
+            </div>
+            <div style="font-size:11px;color:#666;line-height:1.5">
+              ${isGap ? '<span style="color:#c8102e;font-weight:700">⚠ 真实真空</span>' : brands.length <= 3 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 3).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 3) + '</span>'}
+            </div>
+          </div>
+        `;
+      }).join('');
+    } else {
+      document.getElementById('tier-grid').innerHTML = '';
+    }
 
     // 渲染品牌卡
     const grid = document.getElementById('brand-grid');
