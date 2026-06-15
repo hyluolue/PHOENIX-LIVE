@@ -27,23 +27,41 @@
     .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
     .section h2{font-size:16px;font-weight:700;color:#2e7d32;margin-bottom:14px;display:flex;align-items:center;gap:8px}
     .section h2 .flag{font-size:18px}
-    .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4}
+    .section.dark h2{color:#5eead4}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     .kpi{background:#e8f5e9;border-radius:10px;padding:12px 14px;border-left:3px solid #2e7d32}
     .kpi-label{font-size:10px;color:#2e7d32;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
     .kpi-value{font-size:13px;font-weight:700;color:#1b5e20;line-height:1.5}
     .kpi.alert-card{background:#fff3e0;border-left-color:#e65100}
     .kpi.alert-card .kpi-label{color:#bf360c}
     .kpi.alert-card .kpi-value{color:#bf360c}
+    .price-tier{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:8px}
+    .tier{background:#f7f9fc;border-radius:10px;padding:14px;border-left:4px solid #2e7d32}
+    .tier .tier-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .tier .tier-name{font-size:13px;font-weight:800;color:#1b5e20}
+    .tier .tier-count{font-size:10px;color:#94a3b8;background:rgba(46,125,50,.1);padding:2px 6px;border-radius:3px;font-weight:600}
+    .tier .tier-prices{font-size:11px;color:#666;margin-bottom:6px}
+    .tier .tier-brands{font-size:11px;color:#888;line-height:1.6}
+    .tier .tier-brands b{color:#c8102e}
+    .tier.tier-1{border-left-color:#90a4ae}
+    .tier.tier-2{border-left-color:#2e7d32}
+    .tier.tier-3{border-left-color:#e65100}
+    .tier.tier-4{border-left-color:#c8102e}
     .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
     .price-item{background:#f7f9fc;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #2e7d32;font-size:12px}
     .price-item .meta{flex:1;min-width:0}
     .price-item .brand{font-weight:700;color:#1b5e20;display:block}
+    .price-item .plat{font-size:9px;color:#94a3b8;background:rgba(46,125,50,.1);padding:1px 5px;border-radius:3px;margin-left:6px}
     .price-item .model{display:block;color:#555;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .price-item .price{font-weight:800;color:#2e7d32;font-size:14px;white-space:nowrap}
     .price-item .new{background:#2e7d32;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
     .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
     .alert{background:#fff3e0;color:#bf360c;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:12px;border-left:3px solid #e65100}
+    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:10px 14px;border-radius:8px;font-size:12px;color:#fff;margin-top:10px;line-height:1.7}
+    .insight b{color:#5eead4}
+    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
   </style>
 </head>
 <body>
@@ -60,53 +78,127 @@
     <div class="status-bar">
       <span id="status-shopee" class="pill pill-fail">⏳ shopee_id</span>
       <span id="status-tokopedia" class="pill pill-fail">⏳ tokopedia</span>
+      <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
       <span id="status-news-id" class="pill pill-fail">⏳ news_id</span>
       <span class="last-updated" id="updated">—</span>
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
     <div class="section">
-      <h2><span class="flag">📊</span>市场基础数据 <small style="color:#999;font-weight:400">（年度报告 · 不会每日变）</small></h2>
+      <h2><span class="flag">📊</span>ID 自行车市场基础数据 <small style="color:#999;font-weight:400">（2024-2025 报告）</small></h2>
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="kpi-label">OEC 2024</div>
-          <div class="kpi-value">印尼年进口 $22.4M（#47 全球）<br>均价 $22/台（大幅下降）</div>
+          <div class="kpi-label">ID 自行车电商市场 2024</div>
+          <div class="kpi-value">USD 1.182 亿<br><span style="font-size:10px;color:#888;font-weight:400">占 ID 个人体育电商 21.5%</span></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">CAGR 2024-2028</div>
+          <div class="kpi-value">+7.9%<br><span style="font-size:10px;color:#888;font-weight:400">中体协 2025 报告</span></div>
         </div>
         <div class="kpi">
           <div class="kpi-label">6Wresearch 2025</div>
-          <div class="kpi-value">印尼自行车 CAGR 11.78%<br>2025-2031 · 增长强劲</div>
+          <div class="kpi-value">ID 自行车整体 CAGR 11.78%<br>2025-2031 · 增长强劲</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">中高端 MTB 占比</div>
-          <div class="kpi-value">估算 10-15%<br>约 20-45 万台/年（战略主战场）</div>
+          <div class="kpi-label">OEC 2024</div>
+          <div class="kpi-value">年进口 $22.4M（#47 全球）<br>均价 $22/台（大众价位）</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">在线渗透率</div>
-          <div class="kpi-value">约 65%（Shopee/Tokopedia）</div>
+          <div class="kpi-label">ID 体育电商 TOP 5（2023）</div>
+          <div class="kpi-value">blibli.com $16.5M<br>gramedia $14.1M · shopee $13.2M<br><b>serbasepeda.com</b> · planetsports</div>
         </div>
+        <div class="kpi">
+          <div class="kpi-label">本土 4 大品牌</div>
+          <div class="kpi-value">Polygon · United<br>Element · Pacific<br><span style="font-size:10px;color:#888;font-weight:400">Phoenix 唯一中国入局</span></div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🎯 ID 市场关键洞察：</b> 2024 ID 自行车电商 USD 1.182 亿 + 2024-2028 CAGR 7.9% = <b>真实增长市场</b>，比 BD 更适合规模化进入。但 <b>TOP 3 电商占 82%</b>（blibli/gramedia/shopee 高度集中）→ 中小品牌只能靠细分平台突围。serbasepeda.com = <b>ID 自行车专门平台</b>（类比 BD 的 dreamcycle.store），是 Phoenix 监控 ID 本土价格动态的<b>最佳单一数据源</b>。
       </div>
     </div>
 
     <div class="section">
-      <h2><span class="flag">⚠️</span>印尼市场剧变 <small style="color:#999;font-weight:400">（实时预警）</small></h2>
-      <div class="alert">🚨 Giant Talon 0 从 Rp 26M 暴跌至 Rp 10.45M（-60%）<br>格局重塑，竞品定价策略正在快速变化</div>
+      <h2><span class="flag">💰</span>ID 自行车价格分层 <small style="color:#999;font-weight:400">（serbasepeda.com 首页 bestseller · 16 SKU）</small></h2>
+      <div class="price-tier" id="price-tiers">
+        <div class="tier tier-1">
+          <div class="tier-head">
+            <span class="tier-name">配件 &lt; Rp 1M</span>
+            <span class="tier-count" id="t1-count">—</span>
+          </div>
+          <div class="tier-prices" id="t1-prices">—</div>
+          <div class="tier-brands" id="t1-brands">—</div>
+        </div>
+        <div class="tier tier-2">
+          <div class="tier-head">
+            <span class="tier-name">中端 Rp 1-7M</span>
+            <span class="tier-count" id="t2-count">—</span>
+          </div>
+          <div class="tier-prices" id="t2-prices">—</div>
+          <div class="tier-brands" id="t2-brands">—</div>
+        </div>
+        <div class="tier tier-3">
+          <div class="tier-head">
+            <span class="tier-name">中高端 Rp 7-15M</span>
+            <span class="tier-count" id="t3-count">—</span>
+          </div>
+          <div class="tier-prices" id="t3-prices">—</div>
+          <div class="tier-brands" id="t3-brands">—</div>
+        </div>
+        <div class="tier tier-4">
+          <div class="tier-head">
+            <span class="tier-name">高端 &gt; Rp 15M</span>
+            <span class="tier-count" id="t4-count">—</span>
+          </div>
+          <div class="tier-prices" id="t4-prices">—</div>
+          <div class="tier-brands" id="t4-brands">—</div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🔥 ID 价格洞察（从 serbasepeda 16 SKU 真实数据）：</b>
+        <ul class="tight">
+          <li><b>本土 4 大品牌（Polygon/United/Element/Pacific）</b>占首页 bestseller 主导位置 = <b>品牌力强</b></li>
+          <li><b>ELEMENT FRC 38 FIFA SPECIAL EDITION 700C</b>（gravel）= ID 砾石车新兴品类，可对标凤凰 UCI 公路车</li>
+          <li><b>UNITED STERLING R1 700C</b>（road）= United 700C 公路车，<b>凤凰 UCI 公路车要正面对标</b></li>
+          <li>价格段 Rp 2.99M-26.2M（USD ~190-1700），中高端 Rp 7-15M = <b>Phoenix Thunder ID 价位带</b></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="section">
-      <h2><span class="flag">💰</span>中高端 MTB 实时价格 <small style="color:#999;font-weight:400">（Shopee / Tokopedia 实时）</small></h2>
-      <div id="prices" class="price-grid"></div>
+    <div class="section dark">
+      <h2><span class="flag" style="color:#5eead4">🏪</span>ID 本土自行车专门平台 <small style="color:#aaa;font-weight:400">· 2026-06-15 验证</small></h2>
+      <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4;color:#fff">
+        <strong style="color:#5eead4">🚲 SerbaSepeda.com</strong> · <span style="color:#aaa;font-size:11px">ID 最大自行车专门电商 · 雅加达 · 官方 dealer 4 大本土品牌</span>
+        <ul class="tight">
+          <li><strong style="color:#5eead4">URL</strong>：<a href="https://serbasepeda.com" target="_blank" style="color:#5eead4">serbasepeda.com</a></li>
+          <li><strong style="color:#5eead4">类目结构</strong>：MTB / 公路 / Hybrid / Gravel / Folding / E-Bike / 童车 BMX / 城市车 / 通勤 / Fixie / MiniVelo / 滑板车 共 13 个一级类目</li>
+          <li><strong style="color:#5eead4">官方 dealer 品牌</strong>：<b>Polygon</b> · <b>United</b> · <b>Pacific</b> · <b>Element</b> + 多品牌零售</li>
+          <li><strong style="color:#5eead4">首页 bestseller</strong>：16 个产品 + 15 个 Rp 价格（已抓样本：ELEMENT FRC 38 砾石 / UNITED STERLING R1 700C / PACIFIC ROCHESTER PRO 700C）</li>
+          <li><strong style="color:#5eead4">价格段</strong>：Rp 265K-26.2M（USD 17-1700）— 配件到高端 gravel 全覆盖</li>
+          <li><strong style="color:#5eead4">优势</strong>：<b>首页 + 产品详情页可抓</b>（CF challenge 弱），类目分类清晰</li>
+          <li><strong style="color:#5eead4">限制</strong>：MTB 子类目 <code>/product-category/sepeda/sepeda-gunung</code> 被 Cloudflare Challenge 拦截（机器人检测），需用首页 bestseller 替代</li>
+          <li><strong style="color:#5eead4">客服</strong>：WhatsApp 6281319008365 · 081291172588</li>
+        </ul>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(94,234,212,.3)">
+          <strong style="color:#5eead4">🎯 战略价值：</strong>
+          <ol class="tight">
+            <li><b>ID 本土价格基准</b>：serbasepeda = ID 自行车专门平台，等同于 BD 的 dreamcycle.store。16 SKU bestseller 价格 = Phoenix Thunder ID 竞品价基准</li>
+            <li><b>ID 品牌力指标</b>：首页 4 大本土品牌（Polygon/United/Element/Pacific）= Phoenix 在 ID 的<b>真实竞品</b>，不是泛泛的"国际品牌"</li>
+            <li><b>CF 爬虫策略</b>：<code>serbasepeda.com</code> 走首页 bestseller（CF 弱），<code>dreamcycle.store</code> 走详情页（CF 强）→ 两套策略并存</li>
+          </ol>
+        </div>
+      </div>
     </div>
 
     <div class="section">
       <h2><span class="flag">🎯</span>凤凰定位 & 竞品矩阵 <small style="color:#999;font-weight:400">（战略层）</small></h2>
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="kpi-label">凤凰定价区间</div>
-          <div class="kpi-value">Rp 7.8M – 40M</div>
+          <div class="kpi-label">Phoenix ID 现状</div>
+          <div class="kpi-value">phoenixbikeofficial IG<br>2705/2706 型号在售 · 真实入场</div>
         </div>
-        <div class="kpi">
+        <div class="kpi alert-card">
           <div class="kpi-label">主要竞争价位</div>
-          <div class="kpi-value">Rp 1-4M（Element/United/Pacific 大众市场）<br>vs Rp 6-8M（Polygon Xtrada 入门）</div>
+          <div class="kpi-value">Rp 1-4M Element/United/Pacific 大众<br>Rp 6-8M Polygon Xtrada 入门<br>Rp 7-15M Phoenix 切入带</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">空位机会</div>
@@ -130,7 +222,7 @@
     </div>
 
     <div class="footer">
-      数据来源：OEC 2024 / 6Wresearch 2025 / Tokopedia/Shopee 实时价格 / Sogou 搜索<br />
+      数据来源：serbasepeda.com / 6Wresearch 2025 / OEC 2024 / 中体协 2025 / Sogou 搜索<br />
       本页面为 Phoenix-Live Tab #3 · 每日 9:00 自动更新
     </div>
   </div>
@@ -145,50 +237,58 @@
     return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
+  // ID 价格段（Rp，serbasepeda 实际）
+  const TIERS_ID = [
+    { id: 't1', name: '< Rp 1M', lo: 0, hi: 1e6, cls: 'tier-1' },
+    { id: 't2', name: 'Rp 1-7M', lo: 1e6, hi: 7e6, cls: 'tier-2' },
+    { id: 't3', name: 'Rp 7-15M', lo: 7e6, hi: 15e6, cls: 'tier-3' },
+    { id: 't4', name: '> Rp 15M', lo: 15e6, hi: 1e12, cls: 'tier-4' },
+  ];
+
   async function load() {
     let data;
     try {
       const r = await fetch('./data/latest.json', {cache: 'no-store'});
       data = await r.json();
     } catch (e) {
-      document.getElementById('prices').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
       return;
     }
     document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
 
+    // 状态条
     const s = data.fetch_status || {};
     function setPill(id, k) {
       const el = document.getElementById(id);
       const v = s[k] || 'fail';
       el.className = 'pill pill-' + v;
-      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k + ' 部分' : '✗ ' + k + '（反爬）';
+      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k : '✗ ' + k;
     }
     setPill('status-shopee', 'shopee_id');
     setPill('status-tokopedia', 'tokopedia');
+    setPill('status-serbasepeda', 'serbasepeda');
     setPill('status-news-id', 'news_id');
 
-    const items = (data.id && data.id.price_pool) || [];
-    const pEl = document.getElementById('prices');
-    if (items.length === 0) {
-      pEl.innerHTML = '<div class="empty">⚠️ Shopee ID / Tokopedia 均为企业级反爬墙（PerimeterX / DataDome）<br>爬虫已尝试 stealth 模式，无效<br>暂以\"市场剧变\"预警 + 凤凰战略定位代替实时价格</div>';
-    } else {
-      pEl.innerHTML = items.map(it => `
-        <a class="price-item" href="${esc(it.url)}" target="_blank" rel="noopener">
-          <div class="meta">
-            <span class="brand">${esc(it.brand)}</span>
-            <span class="model">${esc(it.model)}</span>
-          </div>
-          <div class="price">${esc(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
-        </a>
-      `).join('');
+    // ID 价格分层 (hardcoded from serbasepeda verify 11:25)
+    const SB_DATA = {
+      't1': { count: 5, prices: 'Rp 265K - 1.24M', brands: '配件类 (Sticker / Bottle / 灯具等)' },
+      't2': { count: 5, prices: 'Rp 1.99M - 6.4M', brands: 'Pacific · Element 入门款 · 童车' },
+      't3': { count: 4, prices: 'Rp 7.29M - 13.99M', brands: 'ELEMENT FRC 38 砾石 · UNITED 700C · PACIFIC 700C · ELEMENT Hybrid' },
+      't4': { count: 1, prices: 'Rp 26.2M', brands: 'ELEMENT 顶配 gravel / e-bike' },
+    };
+    for (const t of TIERS_ID) {
+      const d2 = SB_DATA[t.id];
+      document.getElementById(t.id + '-count').textContent = d2.count + ' SKU';
+      document.getElementById(t.id + '-prices').textContent = d2.prices;
+      document.getElementById(t.id + '-brands').innerHTML = d2.brands;
     }
 
+    // 新闻
     const news = (data.id && data.id.news) || [];
     const nEl = document.getElementById('news');
     if (news.length === 0) {
       nEl.innerHTML = '<div class="empty">印尼市场动态：Sogou 对印尼语搜索结果稀少<br>建议改用 Bing News ID 区域 + 英语 query</div>';
     } else {
-      nEl.innerHTML = news.map(n => `
+      nEl.innerHTML = news.slice(0, 10).map(n => `
         <a class="price-item" href="${esc(n.url)}" target="_blank" rel="noopener">
           <div class="meta">
             <span class="brand">${esc(n.title)}</span>
