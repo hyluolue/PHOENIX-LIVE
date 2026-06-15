@@ -265,8 +265,26 @@ function render() {
     }).join(' ');
   document.getElementById('status-bar').innerHTML = pills;
 
-  const bd = (DATA.bd && DATA.bd.price_pool) || [];
+  let bd = (DATA.bd && DATA.bd.price_pool) || [];
   let id = (DATA.id && DATA.id.price_pool) || [];
+
+  // 中高端整车筛选：BD 5K-30K BDT / ID Rp 1M-30M，排除白牌/童车/折叠/BMX/头盔/灯/瓶架等周边
+  const EXCLUDED = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack'];
+  function isMidHighAdult(it) {
+    if ((it.brand || '').toLowerCase() === 'generic') return false;
+    const p = it.price || 0;
+    // ID hardcoded backup 已用 IDR；判断用 currency 字段
+    if (it.currency === 'IDR' || it._region === 'ID') {
+      if (p < 1e6 || p > 3e7) return false;
+    } else {
+      // BD 默认
+      if (p < 5000 || p > 30000) return false;
+    }
+    const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
+    return !EXCLUDED.some(kw => m.includes(kw));
+  }
+  bd = bd.filter(isMidHighAdult);  // 中高端整车 BD
+  // id 已是 hardcoded 8 成人整车，不重复过滤
   const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
   const social = ((DATA.global && DATA.global.dtc_social) || []);
 
