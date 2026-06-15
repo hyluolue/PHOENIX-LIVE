@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>任务 · Phoenix-Live</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+    h1{font-size:20px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
+    .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section.dark h2{color:#c8102e}
+    .urgent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:8px}
+    .urgent{background:#fff3e0;border-left:4px solid #e53935;padding:10px 12px;border-radius:8px;color:#bf360c}
+    .urgent .pill{background:#e53935;color:#fff;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700;margin-left:6px}
+    .urgent .region{font-size:10px;color:#888;margin-top:4px;display:inline-block;background:rgba(229,57,53,.1);padding:1px 5px;border-radius:3px;margin-right:4px}
+    .urgent .when{font-size:10px;color:#888}
+    .normal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:8px}
+    .normal{background:#e8f5e9;border-left:4px solid #2e7d32;padding:10px 12px;border-radius:8px;color:#1b5e20}
+    .normal .pill{background:#2e7d32;color:#fff;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700;margin-left:6px}
+    .normal .region{font-size:10px;color:#888;margin-top:4px;display:inline-block;background:rgba(46,125,50,.1);padding:1px 5px;border-radius:3px;margin-right:4px}
+    .normal .when{font-size:10px;color:#888}
+    .strategy-card{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:10px 14px;border-radius:8px;font-size:12px;color:#fff;margin-top:8px;line-height:1.7}
+    .strategy-card b{color:#5eead4}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>📋 任务清单 · Phoenix-Live</h1>
+        <div class="subtitle">月度战略任务 · 从 React bundle 2026-06-09 提取 · BD/ID 双场</div>
+      </div>
+      <a class="back-link" href="./index.html">← 返回总览</a>
+    </div>
+
+    <div class="section" style="border-left:4px solid #e53935">
+      <h2><span class="flag">🔴</span>紧急任务 Month 1 <small style="color:#999;font-weight:400">（红色 · 立即执行）</small></h2>
+      <div class="urgent-grid">
+        <div class="urgent">
+          <div>🇮🇩 推动 SGS 资质强制认证（MTB/公路/童车）<span class="pill">URGENT</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 1 · 认证法规</div>
+        </div>
+        <div class="urgent">
+          <div>🇮🇩 确认凤凰 Thunder ID 中高端 MTB 上市参数<span class="pill">URGENT</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 1 · 产品</div>
+        </div>
+        <div class="urgent">
+          <div>🇮🇩 Shopee Indonesia 官方店申请（MTB 类目）<span class="pill">URGENT</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 1 · 渠道开发</div>
+        </div>
+        <div class="urgent">
+          <div>🇮🇩 联系 Polygon MTB 用户社群（Strava Indonesia）<span class="pill">URGENT</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 1 · 用户运营</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="border-left:4px solid #1565c0">
+      <h2><span class="flag">🇧🇩</span>BD 月度任务 <small style="color:#999;font-weight:400">（绿色 · 正常节奏）</small></h2>
+      <div class="normal-grid">
+        <div class="normal">
+          <div>孟加拉国 MTB 中高端市场拓展<span class="pill">NORMAL</span></div>
+          <div class="region">BD</div>
+          <div class="when">Month 5 · 产品矩阵</div>
+        </div>
+        <div class="normal">
+          <div>孟加拉国竞赛 MTB 全球战略室产品<span class="pill">NORMAL</span></div>
+          <div class="region">BD</div>
+          <div class="when">Month 6 · 品牌矩阵</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="border-left:4px solid #2e7d32">
+      <h2><span class="flag">🇮🇩</span>ID 月度任务 <small style="color:#999;font-weight:400">（绿色 · 正常节奏）</small></h2>
+      <div class="normal-grid">
+        <div class="normal">
+          <div>印尼砾石公路车战略推进<span class="pill">NORMAL</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 6 · 产品矩阵</div>
+        </div>
+        <div class="normal">
+          <div>印尼自行车市场拓展（IIBS 展展销渠道）<span class="pill">NORMAL</span></div>
+          <div class="region">ID</div>
+          <div class="when">Month 8 · 品牌矩阵</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section dark">
+      <h2><span class="flag" style="color:#c8102e">🎯</span>战略路径（来自 React bundle）</h2>
+      <div class="strategy-card">
+        <b>空位增长策略（Vacancy Growth Strategy）</b><br>
+        孟加拉 MTB 市场发现 3 个未占据战略空位：
+        <ol style="margin:6px 0 0 18px;line-height:1.7">
+          <li><b>安全认证空位</b>：任何品类均可使用 SGS 认证抢占中高端品质空位（Veloce/Core 占中端但无认证；Trek/Giant 占高端但价格高 5-10 倍）</li>
+          <li><b>认证品质高端空位</b>：定 BDT 16,500 价位的 Thunder 嵌入中端认证空白（Veloce/Core 弱点）</li>
+          <li><b>女性 MTB 社群绑定</b>：凤凰 MTB 女性骑行社群运营（无品牌在做）</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="footer">
+      数据来源：React bundle `assets/index-unB8v61V.js` 2026-06-09 提取<br />
+      本页面为 Phoenix-Live Tab #6（任务 · 静态重建）· 每次战略迭代手动更新
+    </div>
+  </div>
+</body>
+</html>
