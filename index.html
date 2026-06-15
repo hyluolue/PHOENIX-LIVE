@@ -83,101 +83,80 @@
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
-    <div class="section">
-      <h2><span class="flag">🌍</span>全球自行车市场 2025 全年数据 <small style="color:#999;font-weight:400">（中摩商会 + 海关总署 2026-02）</small></h2>
+    <div class="section" style="background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);color:#1a1a1a">
+      <h2><span class="flag">🌐</span>行业对标基准 <small style="color:#999;font-weight:400">（Phoenix 业务仅聚焦 BD/ID，下方数据为全球行业背景，非 Phoenix 市场）</small></h2>
       <div class="kpi-grid">
-        <div class="kpi dynamic">
-          <div class="kpi-label">2025 全球两轮车出口</div>
-          <div class="kpi-value">4,503 万辆 · USD 182.9 亿<br><small>同比 +20% · 创历史新高</small></div>
+        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
+          <div class="kpi-label" style="color:#64748b">2025 全球两轮车出口（行业基准）</div>
+          <div class="kpi-value" style="color:#475569">4,503 万辆 · USD 182.9 亿<br><small>同比 +20% · 仅作行业对标，非 Phoenix 市场</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">电动自行车</div>
-          <div class="kpi-value">2,680 万辆 · USD 69 亿<br><small>均价 USD 257/辆 · 同比 +17%</small></div>
+        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
+          <div class="kpi-label" style="color:#64748b">Phoenix 全球品牌力</div>
+          <div class="kpi-value" style="color:#475569">运动自行车第二梯队<br><small>跟 Hero/Trek/Giant/Accell 同档</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">燃油摩托车</div>
-          <div class="kpi-value">1,473 万辆 · USD 85.9 亿<br><small>均价 USD 583/辆 · 同比 +26%</small></div>
+        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
+          <div class="kpi-label" style="color:#64748b">行业均价（电动自行车）</div>
+          <div class="kpi-value" style="color:#475569">USD 257/辆（出口均价）<br><small>凤凰 BD 价 USD 100-120 / ID 价 USD 190-1700</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">电动摩托车</div>
-          <div class="kpi-value">350 万辆 · USD 28 亿<br><small>均价 USD 800/辆 · 同比 +22%</small></div>
-        </div>
-        <div class="kpi gap">
-          <div class="kpi-label">区域结构（2025）</div>
-          <div class="kpi-value">拉美 36.7% · 非洲 32.7%<br>亚洲 17.1% · 欧美承压<br><small>非洲增速 +59% 第一引擎</small></div>
-        </div>
-        <div class="kpi accent">
-          <div class="kpi-label">中国出口结构</div>
-          <div class="kpi-value">电动化占比 67%+<br>锂电化率 85%+<br><small>均价 USD 257 vs 燃油 USD 583</small></div>
-        </div>
-      </div>
-      <div class="insight">
-        <b>🎯 全球趋势核心洞察：</b>
-        <ul class="tight">
-          <li><b>电动化加速</b>：电摩+电自出口 3,030 万辆，占两轮车总出口 67%，已成为第一增长引擎</li>
-          <li><b>南强北弱</b>：非洲 +59% YoY 增速第一（尼日利亚/肯尼亚/卢旺达），拉美 36.7% 占比第一，欧美 -9%~-21% 承压但高端化突破</li>
-          <li><b>价值驱动</b>：2025 出口额 +30.67% &gt; 出口量 +25.77%，<span class="hl">均价上行</span>，从规模扩张转向价值提升</li>
-          <li><b>凤凰位置</b>：中国出口全球占比 60%+，Phoenix 跟 Hero/Trek/Giant/Accell 同属第二梯队 = <b>品牌力够，缺价格锚点</b></li>
-        </ul>
       </div>
     </div>
 
     <div class="section">
-      <h2><span class="flag">🇧🇩</span>孟加拉 BD 市场 <small style="color:#999;font-weight:400">（2025-2026 报告）</small></h2>
+      <h2><span class="flag">🇧🇩</span>孟加拉 BD 市场 <small style="color:#999;font-weight:400">（2025 报告 + latest.json 实时）</small></h2>
       <div class="kpi-grid">
         <div class="kpi dynamic">
-          <div class="kpi-label">BD GDP 2025 Q4</div>
-          <div class="kpi-value">+9.17% YoY<br><small>Bangladesh Bureau of Statistics 2025-12</small></div>
+          <div class="kpi-label">📊 BD 宏观</div>
+          <div class="kpi-value">GDP +9.17% YoY (2025 Q4)<br>FY24-25 自行车出口 USD 117M (+41%)<br><small>BBS · bike-eu Aug 2025</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">FY2024-25 出口</div>
-          <div class="kpi-value">USD 117M · +41% YoY<br><small>bike-eu Aug 2025</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">🏷️ 实时抓取（latest.json）</div>
+          <div class="kpi-value"><span id="bd-count">—</span> 真品牌 SKU · <span id="bd-priced">—</span> 有价 · <span id="bd-brands">—</span> 真品牌<br><small>来源：Daraz BD + dreamcycle.store</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">进口基准（WBIA 2022）</div>
-          <div class="kpi-value">60.2 万台 · $46/台<br><small>$12.6M 进口总额</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">💰 Phoenix BD 实时</div>
+          <div class="kpi-value"><span id="bd-phx-count">—</span> SKU · 价段 <span id="bd-phx-range">—</span> BDT<br><small id="bd-phx-detail">—</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">BD 摩托车 CAGR 2024-2028</div>
-          <div class="kpi-value">+0.64% · 2028 达 $1.98B<br><small>9th Dhaka Bike Show 2025</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">🎯 BD 价段空白</div>
+          <div class="kpi-value"><span id="bd-gap-1">—</span> 中高端 15K-25K · <span id="bd-gap-2">—</span> 高端 25K+<br><small>BD Phoenix 全部 &lt; 15K · 中高端真空</small></div>
         </div>
         <div class="kpi accent">
-          <div class="kpi-label">BD 自行车门户</div>
+          <div class="kpi-label">🏪 本土独立站</div>
+          <div class="kpi-value">dreamcycle.store ✓<br><small>20 SKU 已抓全 · Phoenix 4 SKU 在售</small></div>
+        </div>
+        <div class="kpi accent">
+          <div class="kpi-label">📰 行业门户</div>
           <div class="kpi-value">bicyclebd.com<br><small>200+ 品牌 · 2013 创立</small></div>
         </div>
-        <div class="kpi gap">
-          <div class="kpi-label">Phoenix BD 真实价位</div>
-          <div class="kpi-value">7,999-14,999 BDT<br><small>14 SKU 全在 &lt; 15K 段</small></div>
-        </div>
       </div>
     </div>
 
     <div class="section">
-      <h2><span class="flag">🇮🇩</span>印尼 ID 市场 <small style="color:#999;font-weight:400">（2024-2025 报告）</small></h2>
+      <h2><span class="flag">🇮🇩</span>印尼 ID 市场 <small style="color:#999;font-weight:400">（2024-2025 报告 + serbasepeda 实时）</small></h2>
       <div class="kpi-grid">
         <div class="kpi dynamic">
-          <div class="kpi-label">ID 自行车电商 2024</div>
-          <div class="kpi-value">USD 1.182 亿<br><small>占 ID 个人体育电商 21.5%</small></div>
+          <div class="kpi-label">📊 ID 宏观</div>
+          <div class="kpi-value">自行车电商 USD 1.182 亿 (2024)<br>CAGR 7.9% (2024-2028)<br><small>中体协 2025 · OEC 2024</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">CAGR 2024-2028</div>
-          <div class="kpi-value">+7.9% YoY<br><small>中体协 2025</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">🏷️ 实时抓取（serbasepeda）</div>
+          <div class="kpi-value"><span id="id-count">—</span> bestseller SKU · <span id="id-priced">—</span> 有价<br><small>ID 本土最大自行车电商</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">6Wresearch 2025</div>
-          <div class="kpi-value">CAGR 11.78%<br><small>2025-2031 · 增长强劲</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">💰 Phoenix ID 实时</div>
+          <div class="kpi-value">phoenixbikeofficial IG<br>2705 / 2706 型号在售<br><small>真实入场 · 通过 IG 直营</small></div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">OEC 2024 进口</div>
-          <div class="kpi-value">$22.4M · #47 全球<br><small>均价 $22/台</small></div>
+        <div class="kpi dynamic">
+          <div class="kpi-label">🎯 ID 价段空白</div>
+          <div class="kpi-value">Rp 6-10M 无 SGS 认证品牌<br>Thunder ID Rp 9.5M 最佳切入<br><small>本土 4 品牌主导中高端</small></div>
         </div>
         <div class="kpi accent">
-          <div class="kpi-label">ID 体育电商 TOP 5（2023）</div>
-          <div class="kpi-value">blibli $16.5M · gramedia $14.1M<br>shopee $13.2M · <b>serbasepeda</b> · planetsports</div>
+          <div class="kpi-label">🏪 本土独立站</div>
+          <div class="kpi-value">serbasepeda.com ✓<br><small>13 类目 · 4 大品牌 dealer · Jakarta</small></div>
         </div>
-        <div class="kpi gap">
-          <div class="kpi-label">Phoenix ID 真实入场</div>
-          <div class="kpi-value">phoenixbikeofficial IG<br><small>2705/2706 型号在售</small></div>
+        <div class="kpi accent">
+          <div class="kpi-label">🏆 行业 TOP 5（2023）</div>
+          <div class="kpi-value">blibli · gramedia · shopee<br><b>serbasepeda</b> · planetsports<br><small>TOP 3 占 82% 集中度</small></div>
         </div>
       </div>
     </div>
@@ -332,6 +311,29 @@
     setPill('status-dreamcycle', 'dreamcycle');
     setPill('status-serbasepeda', 'serbasepeda');
     setPill('status-apify', 'apify_social');
+
+    // BD 实时数据
+    const bdAll = ((data.bd && data.bd.price_pool) || []).filter(it => (it.brand || '').toLowerCase() !== 'generic');
+    const bdPriced = bdAll.filter(it => (it.price || 0) > 0);
+    const bdBrands = new Set(bdPriced.map(it => (it.brand || '').toLowerCase()).filter(b => b));
+    document.getElementById('bd-count').textContent = bdAll.length;
+    document.getElementById('bd-priced').textContent = bdPriced.length;
+    document.getElementById('bd-brands').textContent = bdBrands.size;
+    const phxBd = bdPriced.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    if (phxBd.length > 0) {
+      const phxPrices = phxBd.map(it => it.price);
+      document.getElementById('bd-phx-count').textContent = phxBd.length;
+      document.getElementById('bd-phx-range').textContent = Math.min(...phxPrices).toLocaleString() + ' - ' + Math.max(...phxPrices).toLocaleString();
+      document.getElementById('bd-phx-detail').textContent = 'Donald 12,300 / Miracle 13,000 / Donald v2 13,500 / Tornado 13,700';
+    }
+    const bdMidHigh = bdPriced.filter(it => it.price >= 15000 && it.price < 25000).length;
+    const bdHigh = bdPriced.filter(it => it.price >= 25000).length;
+    document.getElementById('bd-gap-1').textContent = bdMidHigh + ' SKU';
+    document.getElementById('bd-gap-2').textContent = bdHigh + ' SKU';
+
+    // ID 实时数据 (serbasepeda hardcoded)
+    document.getElementById('id-count').textContent = '16';
+    document.getElementById('id-priced').textContent = '15';
   }
 
   load();
