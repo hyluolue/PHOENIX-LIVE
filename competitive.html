@@ -181,11 +181,24 @@
       return b;
     }
 
-    // 按品牌聚合（排除 Generic = Daraz 白牌）
+    // 中高端整车筛选：BD 5K-30K BDT / ID Rp 1M-30M
+    // 排除童车/折叠/BMX/头盔/灯/瓶架/挡泥板等周边
+    const EXCLUDED_KW = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', 'helmet', 'lamp', 'light', 'bracket', 'fender', 'bell', 'lock', 'bottle', 'bag', 'carrier', 'pump', 'seat post', 'chain', 'pedal', 'grip', 'saddle', 'tire', 'tyre', 'tube', 'spoke', 'handle', 'bar end', 'glove', '眼镜', '护具', 'wear', 'jacket', 'sticker', 'bell', 'mirror', 'pannier', 'rack'];
+    function isMidHighAdultBike(it) {
+      const p = it.price || 0;
+      if (it._region === 'BD' && (p < 5000 || p > 30000)) return false;
+      if (it._region === 'ID' && (p < 1e6 || p > 3e7)) return false;
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      if (EXCLUDED_KW.some(kw => m.includes(kw))) return false;
+      return true;
+    }
+
+    // 按品牌聚合（排除 Generic = Daraz 白牌 + 限定中高端整车）
     const byBrand = {};
     const genericCount = items.filter(it => (it.brand || '').toLowerCase() === 'generic').length;
     for (const it of items) {
       if ((it.brand || '').toLowerCase() === 'generic') continue;
+      if (!isMidHighAdultBike(it)) continue;  // 中高端整车筛选
       if (search) {
         const s = (it.brand + ' ' + (it.model || '')).toLowerCase();
         if (!s.includes(search)) continue;
@@ -200,8 +213,8 @@
     const totalItems = items.length - genericCount;
     const priced = items.filter(i => i.price > 0 && (i.brand || '').toLowerCase() !== 'generic').length;
     document.getElementById('summary').innerHTML =
-      `共抓取 <strong>${totalItems}</strong> 条真品牌商品 · <strong>${priced}</strong> 条有价格 · <strong>${totalBrands}</strong> 个真品牌` +
-      (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 条 Daraz 白牌 Generic）</span>` : '') +
+      `中高端整车 <strong>${totalItems}</strong> 条 · <strong>${priced}</strong> 条有价 · <strong>${totalBrands}</strong> 品牌（TOP 10 已截取）` +
+      (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`);
 
     // 价格段品牌矩阵 (仅在 BD 区域或全部 + 有价格时显示)
@@ -241,12 +254,14 @@
       grid.innerHTML = '<div class="empty">无匹配数据</div>';
       return;
     }
-    // 排序：Phoenix 排第一，其他按字母
-    const order = Object.keys(byBrand).sort((a, b) => {
-      if (a === 'Phoenix') return -1;
-      if (b === 'Phoenix') return 1;
-      return a.localeCompare(b);
-    });
+    // 排序：Phoenix 排第一 + 按 SKU 数倒序，取 TOP 10
+    const order = Object.keys(byBrand)
+      .sort((a, b) => {
+        if (a === 'Phoenix') return -1;
+        if (b === 'Phoenix') return 1;
+        return byBrand[b].length - byBrand[a].length;  // 按 SKU 数倒序
+      })
+      .slice(0, 10);  // TOP 10 中高端品牌
 
     grid.innerHTML = order.map(brand => {
       const cardItems = byBrand[brand].slice(0, 5); // 每个品牌最多显示 5 条
