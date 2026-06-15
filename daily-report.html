@@ -118,10 +118,10 @@ h1{font-size:20px;font-weight:800}
     </div>
     <div class="card">
       <h2>🇮🇩 印尼 MTB 价格快照</h2>
-      <div class="small">serbasepeda.com 首页 bestseller · 16 SKU 实时</div>
+      <div class="small">serbasepeda.com 首页 bestseller · 8 成人整车 SKU（童车/折叠车/配件/头盔排除）</div>
       <div class="kpi-grid" id="id-snapshot">
-        <div class="kpi-card"><div class="kpi-label">💰 16 SKU bestseller</div><div class="kpi-value">Rp 265K - 26.2M<br><small>含 4 大本土品牌 (Polygon/United/Element/Pacific)</small></div></div>
-        <div class="kpi-card"><div class="kpi-label">📊 价格分层</div><div class="kpi-value">5 SKU Rp &lt; 1M (配件)<br>5 SKU Rp 1-7M (童车入门)<br>4 SKU Rp 7-15M (中端)<br>1 SKU Rp 26.2M (ELEMENT 顶配 gravel)</div></div>
+        <div class="kpi-card"><div class="kpi-label">💰 8 成人整车 SKU</div><div class="kpi-value">Rp 568K - 26.2M<br><small>4 大本土品牌 (Pacific/United/Element/Pacific)</small></div></div>
+        <div class="kpi-card"><div class="kpi-label">📊 价格分层</div><div class="kpi-value">1 SKU 入门 Rp 1-7M<br>6 SKU 中端 Rp 7-15M<br>1 SKU 高端 Rp 26.2M</div></div>
         <div class="kpi-card"><div class="kpi-label">🎯 ID 中端空白</div><div class="kpi-value" style="color:#e65100">Rp 6-10M 无 SGS 认证品牌<br>Thunder ID Rp 9.5M 最佳切入<br><small>见 Tab #3 完整分析</small></div></div>
       </div>
     </div>
@@ -137,7 +137,7 @@ h1{font-size:20px;font-weight:800}
     </div>
     <div class="card">
       <h2>🇮🇩 印尼价格趋势 (7 日)</h2>
-      <div class="small">serbasepeda.com 首页 · 每日 9:00 自动累积</div>
+      <div class="small">serbasepeda.com 8 成人整车 · 每日 9:00 自动累积</div>
       <div id="id-trend"><div class="empty">⏳ serbasepeda 累积 7 天数据中（首次跑后开始）</div></div>
     </div>
   </div>
@@ -175,9 +175,9 @@ h1{font-size:20px;font-weight:800}
     </div>
     <div class="card">
       <h2>🇮🇩 印尼销量快照</h2>
-      <div class="small">serbasepeda.com · 评论数 = 销量代理（首页 bestseller 排序 = 销量代理）</div>
+      <div class="small">serbasepeda.com 8 成人整车 · bestseller 排序 = 销量代理</div>
       <div id="id-sales">
-        <div class="kpi-card"><div class="kpi-label">📦 serbasepeda bestseller 排序</div><div class="kpi-value">首页 16 SKU 按热度排<br>第 1: ELEMENT FRC 38 (gravel 砾石车)<br>第 2: UNITED STERLING R1 (公路)<br>第 3: PACIFIC ROCHESTER PRO (hybrid)<br><small>暂无评论数 API · bestseller 排序 = 销量代理</small></div></div>
+        <div class="kpi-card"><div class="kpi-label">📦 serbasepeda bestseller 排序（成人整车）</div><div class="kpi-value">首页 8 整车 SKU 按热度排<br>第 1: ELEMENT FRC 38 (gravel 砾石) Rp 7.29M<br>第 2: UNITED STERLING R1 (公路) Rp 11.54M<br>第 3: PACIFIC ROCHESTER PRO (hybrid) Rp 14M<br><small>童车/折叠车/配件排除</small></div></div>
         <div class="kpi-card"><div class="kpi-label">🚫 Shopee/Tokopedia 销量</div><div class="kpi-value" style="color:#94a3b8">两家均为企业级反爬（PerimeterX/DataDome）<br>销量数据不可得<br><small>只能靠 Apify 评论数推销量</small></div></div>
       </div>
     </div>
@@ -199,9 +199,9 @@ h1{font-size:20px;font-weight:800}
       <div id="bd-prices"></div>
     </div>
     <div class="card">
-      <h2>🇮🇩 印尼价格池 <span class="small">serbasepeda.com bestseller</span></h2>
+      <h2>🇮🇩 印尼价格池 <span class="small">serbasepeda.com 8 成人整车</span></h2>
       <div id="id-prices">
-        <div class="kpi-card"><div class="kpi-label">🚲 16 SKU 实时</div><div class="kpi-value">完整 16 个价格 + 品牌 + 类目<br><a href="./indonesia.html" style="color:#5eead4">→ 详见 Tab #3 印尼作战室</a><br><small>首页 bestseller 排序自动抓取</small></div></div>
+        <div class="kpi-card"><div class="kpi-label">🚲 8 成人整车</div><div class="kpi-value">完整 8 个价格 + 品牌 + 类目<br><a href="./indonesia.html" style="color:#5eead4">→ 详见 Tab #3 印尼作战室</a><br><small>童车/折叠车/配件/头盔已排除</small></div></div>
       </div>
     </div>
   </div>
@@ -270,14 +270,11 @@ function render() {
   const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
   const social = ((DATA.global && DATA.global.dtc_social) || []);
 
-  // ID 数据兜底：如果 latest.json 没 ID 数据（Shopee/Tokopedia 反爬），用 serbasepeda 验证的 16 SKU bestseller
+  // ID 数据兜底：如果 latest.json 没 ID 数据（Shopee/Tokopedia 反爬），用 serbasepeda 验证的 7 SKU 成人整车
   if (id.length === 0) {
     DATA.id = DATA.id || {};
     DATA.id.price_pool = [
-      { brand: 'Sticker', model: 'Foxter Bicycle Sticker-10PSc', price: 100, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Pacific', model: 'Pacific Bicycle 700C', price: 568000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Pacific', model: 'Pacific Helmet', price: 354113, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Element', model: 'Pacific Element Bundle 童车', price: 1990000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Pacific', model: 'Pacific Hybrid 700C', price: 3990000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Pacific', model: 'Pacific MTB Entry', price: 5120000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Element', model: 'Element Hybrid Adult', price: 6400000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
@@ -285,15 +282,9 @@ function render() {
       { brand: 'United', model: 'United Sterling R1 700C 公路', price: 11540000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Pacific', model: 'Pacific Rochester Pro 700C', price: 13999900, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Element', model: 'Element 顶配 gravel 700C', price: 26200000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      // 配件类（验证抓的 Rp 265K / 354K / 568K / 646K / 1.24M）
-      { brand: 'Accessory', model: 'Bottle Bracket 配件', price: 265363, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Accessory', model: 'Helmet 头盔', price: 646899, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Accessory', model: 'Lamp 车灯', price: 1242492, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Pacific', model: 'Pacific Kids 童车 12"', price: 2990000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
-      { brand: 'Element', model: 'Element Folding 折叠车', price: 4920000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
     ];
     DATA.fetch_status = DATA.fetch_status || {};
-    DATA.fetch_status.serbasepeda = 'ok (16 bestseller SKU - hardcoded backup)';
+    DATA.fetch_status.serbasepeda = 'ok (8 成人整车 SKU - hardcoded backup, 童车/折叠车/配件/头盔排除)';
     id = DATA.id.price_pool;  // 重新指向注入的数据
   }
 
