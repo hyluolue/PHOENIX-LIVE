@@ -266,7 +266,7 @@ function render() {
   document.getElementById('status-bar').innerHTML = pills;
 
   const bd = (DATA.bd && DATA.bd.price_pool) || [];
-  const id = (DATA.id && DATA.id.price_pool) || [];
+  let id = (DATA.id && DATA.id.price_pool) || [];
   const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
   const social = ((DATA.global && DATA.global.dtc_social) || []);
 
@@ -294,6 +294,7 @@ function render() {
     ];
     DATA.fetch_status = DATA.fetch_status || {};
     DATA.fetch_status.serbasepeda = 'ok (16 bestseller SKU - hardcoded backup)';
+    id = DATA.id.price_pool;  // 重新指向注入的数据
   }
 
   renderPriceSnapshot('bd-snapshot', bd, 'BDT');
