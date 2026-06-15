@@ -1,201 +1,498 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>凤凰 MTB 市场日报 · 实时数据</title>
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
-    a{color:#9ec5fe;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1200px;margin:0 auto}
-    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-    .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
-    h1{font-size:20px;font-weight:800}
-    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
-    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
-    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px}
-    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
-    .pill-ok{background:#1b5e20;color:#a5d6a7}
-    .pill-partial{background:#e65100;color:#ffcc80}
-    .pill-fail{background:#b71c1c;color:#ffcdd2}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:#fff;color:#1a1a1a;border-radius:16px;padding:18px 20px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
-    .card h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-    .card h2 .flag{font-size:18px}
-    .card.id h2{color:#2e7d32}
-    .item{background:#f7f9fc;border-radius:8px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #1565c0;font-size:12px}
-    .card.id .item{border-left-color:#2e7d32}
-    .item .meta{flex:1;min-width:0}
-    .item .brand{font-weight:700;color:#0d47a1}
-    .card.id .item .brand{color:#1b5e20}
-    .item .model{display:block;color:#555;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .item .price{font-weight:800;color:#c8102e;font-size:14px;white-space:nowrap}
-    .card.id .item .price{color:#2e7d32}
-    .item .new{background:#c8102e;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
-    .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
-    .news-section{margin-top:20px}
-    .news-section h2{font-size:15px;font-weight:700;color:#9c27b0;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-    .news-section h2 .flag{font-size:18px}
-    .news-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;background:#f9f5ff;border-left:3px solid #9c27b0;border-radius:6px;margin-bottom:6px;font-size:12px;transition:background .15s}
-    .news-item:hover{background:#f3e5f5;text-decoration:none}
-    .news-title{flex:1;min-width:0;color:#4a148c;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .news-source{font-size:10px;background:#e1bee7;color:#6a1b9a;padding:1px 8px;border-radius:8px;font-weight:600;flex-shrink:0}
-    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
-    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
-    .refresh-btn:hover{background:#1976d2}
-    .last-updated{font-size:11px;color:rgba(255,255,255,.5)}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市场日报 · 凤凰自行车中高端MTB全球作战室</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+a{color:#9ec5fe;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1400px;margin:0 auto}
+.header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.logo{width:44px;height:44px;background:#4a148c;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+h1{font-size:20px;font-weight:800}
+.subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+.back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+.status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+.pill{padding:4px 10px;border-radius:999px;font-weight:600}
+.pill.ok{background:rgba(16,185,129,.2);color:#6ee7b7}
+.pill.fail{background:rgba(239,68,68,.2);color:#fca5a5}
+.pill.partial{background:rgba(245,158,11,.2);color:#fcd34d}
+.pill.info{background:rgba(94,234,212,.2);color:#5eead4}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px}
+.dot.ok{background:#10b981}
+.dot.fail{background:#ef4444}
+.dot.partial{background:#f59e0b}
+
+/* Grid layout */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px;margin-bottom:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 20px}
+.card h2{font-size:16px;font-weight:700;color:#c8102e;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h2 .flag{font-size:18px}
+.card .small{font-size:11px;color:#94a3b8;font-weight:400;margin-left:6px}
+
+/* Price snapshot KPI grid */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
+.kpi{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;text-align:center}
+.kpi .label{font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.kpi .value{font-size:22px;font-weight:800;color:#fff;margin-top:4px}
+.kpi.green .value{color:#6ee7b7}
+.kpi.red .value{color:#fca5a5}
+.kpi.yellow .value{color:#fcd34d}
+.kpi.cyan .value{color:#5eead4}
+
+/* Price pool list */
+.price-item{padding:8px 10px;background:rgba(0,0,0,.2);border-radius:6px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.price-item .brand{font-weight:700;color:#5eead4}
+.price-item .model{color:#cbd5e1;flex:1;margin:0 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.price-item .price{color:#fcd34d;font-weight:700}
+.price-item .platform{font-size:9px;color:#94a3b8;background:rgba(255,255,255,.05);padding:2px 6px;border-radius:3px}
+
+/* Trend mini chart */
+.trend-row{display:flex;align-items:center;gap:10px;padding:6px 0;font-size:12px;border-bottom:1px dashed rgba(255,255,255,.05)}
+.trend-row .label{width:100px;color:#cbd5e1}
+.trend-row .bar{flex:1;height:20px;background:rgba(94,234,212,.1);border-radius:4px;position:relative;overflow:hidden}
+.trend-row .bar-fill{height:100%;background:linear-gradient(90deg,#5eead4,#0d9488);transition:width .5s}
+.trend-row .count{width:50px;text-align:right;color:#fcd34d;font-weight:700}
+.trend-row .pct{width:60px;text-align:right;color:#94a3b8;font-size:11px}
+
+/* Social posts */
+.social-row{padding:8px 10px;background:rgba(0,0,0,.2);border-radius:6px;margin-bottom:6px;font-size:12px}
+.social-row .head{display:flex;align-items:center;gap:6px;margin-bottom:4px}
+.social-row .plat{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700}
+.plat.tiktok{background:rgba(255,0,80,.2);color:#ff77a1}
+.plat.instagram{background:rgba(225,48,108,.2);color:#ff77a1}
+.plat.facebook{background:rgba(24,119,242,.2);color:#93c5fd}
+.plat.reels{background:rgba(255,133,0,.2);color:#fdba74}
+.social-row .author{color:#cbd5e1;font-weight:600;font-size:11px}
+.social-row .cap{color:#e2e8f0;line-height:1.5;font-size:11px}
+.social-row .stats{color:#94a3b8;font-size:10px;margin-top:4px}
+
+/* Opportunity */
+.opp{padding:10px 12px;background:rgba(94,234,212,.05);border-left:3px solid #5eead4;border-radius:6px;margin-bottom:8px;font-size:12px}
+.opp.warn{border-left-color:#fcd34d;background:rgba(245,158,11,.05)}
+.opp strong{color:#5eead4}
+.opp.warn strong{color:#fcd34d}
+
+/* News */
+.news-item{padding:8px 10px;background:rgba(0,0,0,.2);border-radius:6px;margin-bottom:6px;font-size:12px;line-height:1.5}
+.news-item .title{color:#e2e8f0;font-weight:600}
+.news-item .meta{color:#94a3b8;font-size:10px;margin-top:2px}
+
+.empty{color:#64748b;font-size:13px;text-align:center;padding:20px}
+.section-title{font-size:14px;font-weight:700;color:#5eead4;margin:24px 0 12px;padding-bottom:6px;border-bottom:2px solid rgba(94,234,212,.2)}
+.footer{text-align:center;padding:30px 0 10px;color:#64748b;font-size:11px}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo">P</div>
-      <div>
-        <h1>凤凰 MTB 市场日报</h1>
-        <div class="subtitle">孟加拉 + 印尼 双市场 · <span id="date"></span> · 每日自动爬取</div>
-      </div>
-      <a class="back-link" href="./index.html">← 返回主面板</a>
-    </div>
 
-    <div class="status-bar">
-      <span id="status-daraz" class="pill pill-fail">⏳ 加载中...</span>
-      <span id="status-news-bd" class="pill pill-fail">⏳ news_bd</span>
-      <span id="status-news-id" class="pill pill-fail">⏳ news_id</span>
-      <span class="last-updated" id="updated">—</span>
-      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+<div class="container">
+  <div class="header">
+    <div class="logo">P</div>
+    <div>
+      <h1>📊 市场日报</h1>
+      <div class="subtitle">孟加拉 + 印尼 双市场 · <span id="date"></span> · 每日 9:00 自动抓取</div>
     </div>
+    <a href="https://phoenix-live.pages.dev/" class="back-link">← 返回总览</a>
+  </div>
 
-    <div class="grid">
-      <div class="card bd">
-        <h2><span class="flag">🇧🇩</span>孟加拉 MTB 价格池 <small style="color:#999;font-weight:400">（Daraz BD 实时）</small></h2>
-        <div id="bd-prices"></div>
-      </div>
-      <div class="card id">
-        <h2><span class="flag">🇮🇩</span>印尼 MTB 价格池 <small style="color:#999;font-weight:400">（Shopee / Tokopedia 实时）</small></h2>
-        <div id="id-prices"></div>
+  <div class="status-bar" id="status-bar">
+    <span class="pill info">⏳ 加载中...</span>
+  </div>
+
+  <!-- ===== 板块 1: 价格快照 ===== -->
+  <div class="section-title">📈 价格快照 (KPI 矩阵)</div>
+  <div class="grid-2" id="price-snapshots">
+    <div class="card">
+      <h2>🇧🇩 孟加拉 MTB 价格快照</h2>
+      <div class="small">Daraz BD · 实时</div>
+      <div class="kpi-grid" id="bd-snapshot">
+        <div class="empty">加载中...</div>
       </div>
     </div>
-
-    <div class="grid news-section">
-      <div class="card bd">
-        <h2><span class="flag">🇧🇩</span>孟加拉 MTB 市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索）</small></h2>
-        <div id="bd-news"></div>
+    <div class="card">
+      <h2>🇮🇩 印尼 MTB 价格快照</h2>
+      <div class="small">Shopee / Tokopedia · 实时</div>
+      <div class="kpi-grid" id="id-snapshot">
+        <div class="empty">暂无数据 (Shopee/Tokopedia 拦截)</div>
       </div>
-      <div class="card id">
-        <h2><span class="flag">🇮🇩</span>印尼 MTB 市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索）</small></h2>
-        <div id="id-news"></div>
-      </div>
-    </div>
-
-    <div class="footer">
-      数据来源：Daraz BD / Shopee ID / Tokopedia / Google News RSS<br />
-      本页面为 Phoenix-Live 阶段 1 演示 · 每日 9:00 自动更新
     </div>
   </div>
 
+  <!-- ===== 板块 2: 7 日价格趋势 ===== -->
+  <div class="section-title">📅 7 日价格趋势</div>
+  <div class="grid-2" id="trend-section">
+    <div class="card">
+      <h2>🇧🇩 孟加拉价格趋势 (7 日)</h2>
+      <div class="small">基于每日历史快照 · 计算均价</div>
+      <div id="bd-trend"><div class="empty">⏳ 累积 7 天数据中（首次跑后开始）</div></div>
+    </div>
+    <div class="card">
+      <h2>🇮🇩 印尼价格趋势 (7 日)</h2>
+      <div class="small">基于每日历史快照 · 计算均价</div>
+      <div id="id-trend"><div class="empty">⏳ 累积 7 天数据中（首次跑后开始）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 板块 3: 价格分层 ===== -->
+  <div class="section-title">💰 价格分层 (按价位段分桶)</div>
+  <div class="grid-2">
+    <div class="card">
+      <h2>🇧🇩 孟加拉价格分层</h2>
+      <div class="small">按 BDT 价位段分桶（5K-10K / 10K-22K / 22K+）</div>
+      <div id="bd-buckets"></div>
+    </div>
+    <div class="card">
+      <h2>🇮🇩 印尼价格分层</h2>
+      <div class="small">按 IDR 价位段分桶（5K-10K / 10K-22K / 22K+）</div>
+      <div id="id-buckets"></div>
+    </div>
+  </div>
+
+  <!-- ===== 板块 4: 市场机会摘要 ===== -->
+  <div class="section-title">🎯 市场机会摘要 (缺口价位 + 空白品牌)</div>
+  <div class="card">
+    <h2>💡 智能洞察</h2>
+    <div class="small">基于价格分层 + 竞品监控</div>
+    <div id="opportunity-summary"></div>
+  </div>
+
+  <!-- ===== 板块 5: 销量快照 + 销量洞察 ===== -->
+  <div class="section-title">📦 销量快照 + 销量洞察 (用评论数推销量)</div>
+  <div class="grid-2">
+    <div class="card">
+      <h2>🇧🇩 孟加拉销量快照</h2>
+      <div class="small">评论数 = 销量代理指标（Daraz 公开）</div>
+      <div id="bd-sales"></div>
+    </div>
+    <div class="card">
+      <h2>🇮🇩 印尼销量快照</h2>
+      <div class="small">评论数 = 销量代理指标（Shopee/Tokopedia 公开）</div>
+      <div id="id-sales"><div class="empty">暂无数据</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 板块 6: 竞品营销动态 ===== -->
+  <div class="section-title">📱 竞品营销动态 (社媒监测)</div>
+  <div class="card">
+    <h2>🔥 4 平台社媒帖子 (TK + Reels + IG + FB)</h2>
+    <div class="small">Apify 实时抓取 · 品牌提及 · 按互动量排序</div>
+    <div id="social-feed"></div>
+  </div>
+
+  <!-- ===== 板块 7: 实时价格池 (原有) ===== -->
+  <div class="section-title">💵 实时价格池</div>
+  <div class="grid">
+    <div class="card">
+      <h2>🇧🇩 孟加拉价格池 <span class="small">Daraz BD</span></h2>
+      <div id="bd-prices"></div>
+    </div>
+    <div class="card">
+      <h2>🇮🇩 印尼价格池 <span class="small">Shopee + Tokopedia</span></h2>
+      <div id="id-prices"><div class="empty">拦截中 (详见 Tab #3)</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 板块 8: 市场新闻 ===== -->
+  <div class="section-title">📰 市场新闻 (BD + ID)</div>
+  <div class="grid">
+    <div class="card">
+      <h2>🇧🇩 孟加拉新闻</h2>
+      <div id="bd-news"></div>
+    </div>
+    <div class="card">
+      <h2>🇮🇩 印尼新闻</h2>
+      <div id="id-news"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    数据源：Daraz BD / Sogou News / Apify 4 平台<br>
+    本页面为 Phoenix-Live Tab #5 · 每日 9:00 自动更新（受电源/锁屏影响）
+  </div>
+</div>
+
 <script>
-  // 顶部日期
-  const d = new Date();
+const DATA_URL = './data/latest.json';
+const HISTORY_URL = './data/history.json';
+
+function esc(s) { return String(s || '').replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c])); }
+
+let DATA = null;
+let HISTORY = null;
+
+async function loadAll() {
+  try {
+    const [r1, r2] = await Promise.all([
+      fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' }),
+      fetch(HISTORY_URL + '?t=' + Date.now(), { cache: 'no-store' }).catch(() => null),
+    ]);
+    DATA = await r1.json();
+    if (r2 && r2.ok) HISTORY = await r2.json();
+  } catch (e) {
+    document.getElementById('status-bar').innerHTML = '<span class="pill fail">⚠️ 加载失败: ' + e.message + '</span>';
+    return;
+  }
+  render();
+}
+
+function render() {
+  // 日期
   const cn = ['日','一','二','三','四','五','六'];
-  document.getElementById('date').textContent = `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日星期${cn[d.getDay()]}`;
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
 
-  // 拉取数据
-  async function load() {
-    let data;
-    try {
-      const r = await fetch('./data/latest.json', {cache: 'no-store'});
-      data = await r.json();
-    } catch (e) {
-      document.getElementById('bd-prices').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
-      return;
-    }
-    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+  // status bar
+  const fs = DATA.fetch_status || {};
+  const pills = ['daraz_bd','news_bd','news_id','shopee_id','tokopedia','daraz_bd_reviews','apify_social']
+    .map(k => {
+      const s = fs[k] || 'pending';
+      const label = k.replace(/_/g,' ').toUpperCase();
+      return `<span class="pill ${s}">${s === 'ok' ? '✓' : s === 'fail' ? '✗' : '⏳'} ${label}: ${s}</span>`;
+    }).join(' ');
+  document.getElementById('status-bar').innerHTML = pills;
 
-    // 状态条
-    const s = data.fetch_status || {};
-    function setPill(id, k) {
-      const el = document.getElementById(id);
-      const v = s[k] || 'fail';
-      el.className = 'pill pill-' + v;
-      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k + ' 部分' : '✗ ' + k;
-    }
-    setPill('status-daraz', 'daraz_bd');
-    setPill('status-news-bd', 'news_bd');
-    setPill('status-news-id', 'news_id');
+  const bd = (DATA.bd && DATA.bd.price_pool) || [];
+  const id = (DATA.id && DATA.id.price_pool) || [];
+  const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
+  const social = ((DATA.global && DATA.global.dtc_social) || []);
 
-    // BD 价格
-    const bdItems = (data.bd && data.bd.price_pool) || [];
-    const bdEl = document.getElementById('bd-prices');
-    if (bdItems.length === 0) {
-      bdEl.innerHTML = '<div class="empty">暂无数据（爬虫未跑 / 源不可达）</div>';
+  renderPriceSnapshot('bd-snapshot', bd, 'BDT');
+  renderPriceSnapshot('id-snapshot', id, 'IDR');
+  renderTrend('bd-trend', bd, 'BDT', 'bd');
+  renderTrend('id-trend', id, 'IDR', 'id');
+  renderBuckets('bd-buckets', bd, 'BDT', 'BD');
+  renderBuckets('id-buckets', id, 'IDR', 'ID');
+  renderOpportunities(bd, id, reviews, social);
+  renderSales('bd-sales', reviews, 'BD');
+  renderSales('id-sales', [], 'ID');
+  renderSocial(social);
+  renderPricePool('bd-prices', bd);
+  renderPricePool('id-prices', id);
+  renderNews('bd-news', (DATA.bd && DATA.bd.news) || []);
+  renderNews('id-news', (DATA.id && DATA.id.news) || []);
+}
+
+function fmtK(n, cur) {
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K ' + cur;
+  return n.toFixed(0) + ' ' + cur;
+}
+
+function renderPriceSnapshot(elId, prices, cur) {
+  if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无数据</div>'; return; }
+  const ps = prices.map(p => p.price).filter(x => x > 0);
+  if (!ps.length) { document.getElementById(elId).innerHTML = '<div class="empty">无价格数据</div>'; return; }
+  const min = Math.min(...ps), max = Math.max(...ps);
+  const avg = ps.reduce((a,b) => a+b, 0) / ps.length;
+  const med = [...ps].sort((a,b) => a-b)[Math.floor(ps.length/2)];
+  const html = `
+    <div class="kpi"><div class="label">商品数</div><div class="value">${prices.length}</div></div>
+    <div class="kpi"><div class="label">平均价</div><div class="value cyan">${fmtK(avg, cur)}</div></div>
+    <div class="kpi"><div class="label">中位数</div><div class="value yellow">${fmtK(med, cur)}</div></div>
+    <div class="kpi"><div class="label">最低</div><div class="value green">${fmtK(min, cur)}</div></div>
+    <div class="kpi green"><div class="label">最高</div><div class="value">${fmtK(max, cur)}</div></div>
+    <div class="kpi"><div class="label">价差</div><div class="value red">${fmtK(max - min, cur)}</div></div>
+    <div class="kpi"><div class="label">品牌数</div><div class="value cyan">${[...new Set(prices.map(p => p.brand))].length}</div></div>
+    <div class="kpi"><div class="label">来源</div><div class="value" style="font-size:14px">${[...new Set(prices.map(p => p.platform))].length} 平台</div></div>
+  `;
+  document.getElementById(elId).innerHTML = html;
+}
+
+function renderTrend(elId, prices, cur, region) {
+  const el = document.getElementById(elId);
+  if (!HISTORY || !HISTORY[region] || HISTORY[region].length < 2) {
+    el.innerHTML = `<div class="empty">⏳ 累积历史数据中（已记录 ${HISTORY && HISTORY[region] ? HISTORY[region].length : 0} 天 · 需要 7 天）</div>`;
+    return;
+  }
+  const days = HISTORY[region];
+  const html = days.map(d => {
+    const ps = (d.prices || []).map(x => x.price).filter(x => x > 0);
+    if (!ps.length) return `<div class="trend-row"><div class="label">${d.date}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
+    const avg = ps.reduce((a,b) => a+b, 0) / ps.length;
+    const max = Math.max(...ps);
+    const pct = (avg / max * 100).toFixed(0);
+    return `<div class="trend-row">
+      <div class="label">${d.date}</div>
+      <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+      <div class="count">${fmtK(avg, cur)}</div>
+      <div class="pct">${ps.length} SKU</div>
+    </div>`;
+  }).join('');
+  // 算 7 日均价变化
+  const avgs = days.map(d => (d.prices || []).map(x => x.price).filter(x => x > 0)).filter(p => p.length).map(p => p.reduce((a,b) => a+b, 0) / p.length);
+  let trend = '';
+  if (avgs.length >= 2) {
+    const delta = ((avgs[avgs.length-1] - avgs[0]) / avgs[0] * 100);
+    const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '→';
+    const color = delta > 0 ? '#fca5a5' : delta < 0 ? '#6ee7b7' : '#94a3b8';
+    trend = `<div style="margin-top:8px;font-size:11px;color:#94a3b8">7 日均价变化: <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
+  }
+  el.innerHTML = html + trend;
+}
+
+function renderBuckets(elId, prices, cur, regionName) {
+  if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无数据</div>'; return; }
+  let buckets;
+  if (cur === 'BDT') {
+    buckets = [
+      { name: '入门 5K-10K', lo: 5000, hi: 10000 },
+      { name: '中端 10K-22K', lo: 10000, hi: 22000 },
+      { name: '高端 22K-40K', lo: 22000, hi: 40000 },
+      { name: '超高端 40K+', lo: 40000, hi: 9999999 },
+    ];
+  } else {
+    // IDR (印尼盾) 5K-10K IDR = 微, 10K-22K = 中, 22K+ = 高
+    buckets = [
+      { name: '入门 5K-10K IDR', lo: 5000, hi: 10000 },
+      { name: '中端 10K-22K IDR', lo: 10000, hi: 22000 },
+      { name: '高端 22K-40K IDR', lo: 22000, hi: 40000 },
+      { name: '超高端 40K+ IDR', lo: 40000, hi: 9999999 },
+    ];
+  }
+  const html = buckets.map(b => {
+    const inB = prices.filter(p => p.price >= b.lo && p.price < b.hi);
+    const brands = [...new Set(inB.map(p => p.brand))];
+    if (!inB.length) return `<div class="trend-row"><div class="label">${b.name}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
+    const ps = inB.map(p => p.price);
+    const avg = ps.reduce((a,b)=>a+b,0)/ps.length;
+    const maxP = Math.max(...ps);
+    const pct = (avg / maxP * 100).toFixed(0);
+    return `<div class="trend-row">
+      <div class="label">${b.name}</div>
+      <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+      <div class="count">${inB.length} SKU</div>
+      <div class="pct">${brands.length} 品牌</div>
+    </div>`;
+  }).join('') + `<div style="margin-top:10px;font-size:11px;color:#94a3b8">${prices.length} 商品 · ${[...new Set(prices.map(p=>p.brand))].length} 品牌 · ${cur}</div>`;
+  document.getElementById(elId).innerHTML = html;
+}
+
+function renderOpportunities(bd, id, reviews, social) {
+  const html = [];
+  // BD 缺口价位
+  const bdPrices = bd.map(p => p.price).filter(x => x > 0);
+  if (bdPrices.length) {
+    const minB = Math.min(...bdPrices), maxB = Math.max(...bdPrices);
+    const buckets = { '入门 (5-10K)': bd.filter(p => p.price >= 5000 && p.price < 10000).length,
+                     '中端 (10-22K)': bd.filter(p => p.price >= 10000 && p.price < 22000).length,
+                     '高端 (22-40K)': bd.filter(p => p.price >= 22000 && p.price < 40000).length,
+                     '超高端 (40K+)': bd.filter(p => p.price >= 40000).length };
+    const empty = Object.entries(buckets).filter(([k,v]) => v === 0).map(([k]) => k);
+    if (empty.length) {
+      html.push(`<div class="opp warn"><strong>BD 缺口价位段：</strong>${empty.join('、')} 无竞品 SKU。凤凰可考虑卡位。</div>`);
     } else {
-      bdEl.innerHTML = bdItems.map(it => `
-        <a class="item" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">
-          <div class="meta">
-            <span class="brand">${escapeHtml(it.brand)}</span>
-            <span class="model">${escapeHtml(it.model)}</span>
-          </div>
-          <div class="price">${escapeHtml(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
-        </a>
-      `).join('');
-    }
-
-    // ID 价格
-    const idItems = (data.id && data.id.price_pool) || [];
-    const idEl = document.getElementById('id-prices');
-    if (idItems.length === 0) {
-      idEl.innerHTML = '<div class="empty">Shopee ID / Tokopedia 反爬墙拦路（企业级 captcha）<br>已跳过，价格数据留空</div>';
-    } else {
-      idEl.innerHTML = idItems.map(it => `
-        <a class="item" href="${escapeHtml(it.url)}" target="_blank" rel="noopener">
-          <div class="meta">
-            <span class="brand">${escapeHtml(it.brand)}</span>
-            <span class="model">${escapeHtml(it.model)}</span>
-          </div>
-          <div class="price">${escapeHtml(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
-        </a>
-      `).join('');
-    }
-
-    // BD news
-    const bdNews = (data.bd && data.bd.news) || [];
-    const bdNewsEl = document.getElementById('bd-news');
-    if (bdNews.length === 0) {
-      bdNewsEl.innerHTML = '<div class="empty">暂无市场动态（爬虫未跑 / 源不可达）</div>';
-    } else {
-      bdNewsEl.innerHTML = bdNews.map(n => `
-        <a class="news-item" href="${escapeHtml(n.url)}" target="_blank" rel="noopener">
-          <span class="news-title">${escapeHtml(n.title)}</span>
-          <span class="news-source">${escapeHtml(n.source || '?')}</span>
-        </a>
-      `).join('');
-    }
-
-    // ID news
-    const idNews = (data.id && data.id.news) || [];
-    const idNewsEl = document.getElementById('id-news');
-    if (idNews.length === 0) {
-      idNewsEl.innerHTML = '<div class="empty">印尼市场动态：Sogou 搜索结果少（中文引擎对印尼语不友好）<br>尝试用印尼语 query 跑时常 0 条</div>';
-    } else {
-      idNewsEl.innerHTML = idNews.map(n => `
-        <a class="news-item" href="${escapeHtml(n.url)}" target="_blank" rel="noopener">
-          <span class="news-title">${escapeHtml(n.title)}</span>
-          <span class="news-source">${escapeHtml(n.source || '?')}</span>
-        </a>
-      `).join('');
+      const densest = Object.entries(buckets).sort((a,b) => b[1] - a[1])[0];
+      html.push(`<div class="opp"><strong>BD 红海价位：</strong>${densest[0]} 有 ${densest[1]} SKU，竞品最密集。凤凰需差异化避免价格战。</div>`);
     }
   }
-
-  function escapeHtml(s) {
-    if (s == null) return '';
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // BD 缺品牌
+  const bdBrands = new Set(bd.map(p => p.brand));
+  const knownBrands = ['Phoenix','Marine','Foxter','Giant','Veloce','Pacific','Duranta','Warrior','Thorne','Be worth','Polygon','Trek','Specialized'];
+  const missing = knownBrands.filter(b => !bdBrands.has(b));
+  if (missing.length) {
+    html.push(`<div class="opp warn"><strong>BD 未监测到品牌：</strong>${missing.join('、')}。可能市场份额小或不在 Daraz。</div>`);
   }
+  // 销量 - 评分配比
+  if (reviews.length) {
+    const badRate = (reviews.filter(r => r.rating <= 2).length / reviews.length * 100).toFixed(1);
+    const goodRate = (reviews.filter(r => r.rating === 5).length / reviews.length * 100).toFixed(1);
+    if (badRate > 20) {
+      html.push(`<div class="opp warn"><strong>竞品差评率高：</strong>BD 行业平均差评率 ${badRate}%（行业警戒线 20%）。凤凰用此数据反衬自身品质 = 营销机会。</div>`);
+    } else {
+      html.push(`<div class="opp"><strong>竞品差评率：</strong>BD 行业 ${badRate}% 差评 / ${goodRate}% 好评。</div>`);
+    }
+  }
+  // 社媒声量
+  if (social.length) {
+    const platformCount = {};
+    social.forEach(s => { platformCount[s.platform] = (platformCount[s.platform]||0) + 1; });
+    const top = Object.entries(platformCount).sort((a,b) => b[1]-a[1])[0];
+    if (top) html.push(`<div class="opp"><strong>竞品社媒声量：</strong>主要在 ${top[0]}（${top[1]} 帖子）。凤凰可错位主攻 Reels 视频 + 短叙事的差异化平台。</div>`);
+  }
+  document.getElementById('opportunity-summary').innerHTML = html.join('') || '<div class="empty">暂无洞察</div>';
+}
 
-  load();
+function renderSales(elId, reviews, region) {
+  if (!reviews.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无销量数据</div>'; return; }
+  // 按 item 聚合评论数 = 销量代理
+  const itemMap = {};
+  reviews.forEach(r => {
+    const k = r.item_id + '|' + (r.brand || 'Unknown');
+    if (!itemMap[k]) itemMap[k] = { item_id: r.item_id, brand: r.brand, title: r.item_title, reviews: 0, bad: 0, good: 0, total_rating: 0, url: r.item_url };
+    itemMap[k].reviews += 1;
+    itemMap[k].total_rating += r.rating;
+    if (r.rating <= 2) itemMap[k].bad += 1;
+    if (r.rating === 5) itemMap[k].good += 1;
+  });
+  const list = Object.values(itemMap).sort((a, b) => b.reviews - a.reviews).slice(0, 10);
+  // KPI 顶部
+  const totalReviews = reviews.length;
+  const avgRating = (reviews.reduce((s, r) => s + r.rating, 0) / totalReviews).toFixed(2);
+  const kpi = `<div class="kpi-grid" style="margin-bottom:10px">
+    <div class="kpi"><div class="label">评论总数</div><div class="value cyan">${totalReviews}</div></div>
+    <div class="kpi"><div class="label">平均评分</div><div class="value yellow">${avgRating}</div></div>
+    <div class="kpi"><div class="label">商品数</div><div class="value">${list.length}</div></div>
+    <div class="kpi"><div class="label">好评率 5★</div><div class="value green">${(reviews.filter(r=>r.rating===5).length/totalReviews*100).toFixed(0)}%</div></div>
+  </div>`;
+  const html = kpi + list.map(it => `<div class="trend-row">
+    <div class="label">${esc(it.brand)}</div>
+    <div class="bar"><div class="bar-fill" style="width:${(it.reviews / list[0].reviews * 100).toFixed(0)}%"></div></div>
+    <div class="count">${it.reviews} 评论</div>
+    <div class="pct">★${(it.total_rating/it.reviews).toFixed(1)}</div>
+  </div>`).join('') + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">评论数 = 销量代理（Daraz 公开 · 推算 ≠ 真实销量）</div>`;
+  document.getElementById(elId).innerHTML = html;
+}
+
+function renderSocial(posts) {
+  if (!posts.length) { document.getElementById('social-feed').innerHTML = '<div class="empty">暂无社媒数据（需 PHOENIX_APIFY_TOKEN）</div>'; return; }
+  const top = posts.sort((a, b) => (b.likes + b.comments*2 + b.views*0.01) - (a.likes + a.comments*2 + a.views*0.01)).slice(0, 12);
+  const html = top.map(s => {
+    const stats = [];
+    if (s.likes) stats.push('❤️ ' + s.likes);
+    if (s.comments) stats.push('💬 ' + s.comments);
+    if (s.views) stats.push('▶ ' + s.views);
+    return `<div class="social-row">
+      <div class="head">
+        <span class="plat ${s.platform}">${esc(s.platform)}</span>
+        <span class="author">@${esc(s.author || 'anon')}</span>
+      </div>
+      <div class="cap">${esc((s.caption || '').substring(0, 200))}</div>
+      <div class="stats">${stats.join(' · ')} · ${esc(s.keyword || '')}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('social-feed').innerHTML = html;
+}
+
+function renderPricePool(elId, prices) {
+  if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无价格</div>'; return; }
+  const sorted = [...prices].sort((a, b) => a.price - b.price);
+  const html = sorted.slice(0, 20).map(p => `<div class="price-item">
+    <span class="brand">${esc(p.brand)}</span>
+    <span class="model" title="${esc(p.model)}">${esc(p.model)}</span>
+    <span class="price">${esc((p.price || 0).toLocaleString())}</span>
+    <span class="platform">${esc(p.platform)}</span>
+  </div>`).join('');
+  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">显示 ${Math.min(20, sorted.length)} / ${sorted.length} 商品</div>`;
+}
+
+function renderNews(elId, news) {
+  if (!news.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无新闻</div>'; return; }
+  const html = news.slice(0, 10).map(n => `<div class="news-item">
+    <div class="title">${esc(n.title || n.summary || '')}</div>
+    <div class="meta">${esc(n.source || '')} · ${esc(n.published_at || '')}</div>
+  </div>`).join('');
+  document.getElementById(elId).innerHTML = html;
+}
+
+loadAll();
+setInterval(loadAll, 60_000);
 </script>
+
 </body>
 </html>
