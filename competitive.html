@@ -201,9 +201,11 @@
       return b;
     }
 
-    // 按品牌聚合
+    // 按品牌聚合（排除 Generic = Daraz 白牌）
     const byBrand = {};
+    const genericCount = items.filter(it => (it.brand || '').toLowerCase() === 'generic').length;
     for (const it of items) {
+      if ((it.brand || '').toLowerCase() === 'generic') continue;
       if (search) {
         const s = (it.brand + ' ' + (it.model || '')).toLowerCase();
         if (!s.includes(search)) continue;
@@ -215,10 +217,11 @@
 
     // 统计
     const totalBrands = Object.keys(byBrand).length;
-    const totalItems = items.length;
-    const priced = items.filter(i => i.price > 0).length;
+    const totalItems = items.length - genericCount;
+    const priced = items.filter(i => i.price > 0 && (i.brand || '').toLowerCase() !== 'generic').length;
     document.getElementById('summary').innerHTML =
-      `共抓取 <strong>${totalItems}</strong> 条商品 · <strong>${priced}</strong> 条有价格 · 分布在 <strong>${totalBrands}</strong> 个品牌` +
+      `共抓取 <strong>${totalItems}</strong> 条真品牌商品 · <strong>${priced}</strong> 条有价格 · <strong>${totalBrands}</strong> 个真品牌` +
+      (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 条 Daraz 白牌 Generic）</span>` : '') +
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`);
 
     // 渲染品牌卡
