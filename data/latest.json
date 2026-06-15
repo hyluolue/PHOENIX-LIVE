@@ -23,7 +23,8 @@
         "url": "https://www.daraz.com.bd/products/be-worth-i1576643329.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 2,699"
+        "note": "BDT 2,699",
+        "brand_type": "other"
       },
       {
         "brand": "Duranta",
@@ -34,7 +35,8 @@
         "url": "https://www.daraz.com.bd/products/stl-1s-26-w-804453-i111954490.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 11,865"
+        "note": "BDT 11,865",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -45,7 +47,8 @@
         "url": "https://www.daraz.com.bd/products/mini-110-alloy-model-bicycle-diecast-metal-finger-mountain-bike-retro-bike-adult-collectible-children-toystyle-2-black-i1578637592.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 1,926"
+        "note": "BDT 1,926 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -56,7 +59,8 @@
         "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 150"
+        "note": "BDT 150 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -67,7 +71,8 @@
         "url": "https://www.daraz.com.bd/products/-i1578244997.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 1,353"
+        "note": "BDT 1,353 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -78,7 +83,8 @@
         "url": "https://www.daraz.com.bd/products/mini-110-alloy-model-bicycle-diecast-metal-finger-mountain-bike-retro-bike-adult-collectible-children-toystyle-2-black-i1578653111.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 1,926"
+        "note": "BDT 1,926 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -89,7 +95,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i574022647.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 16,999"
+        "note": "BDT 16,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -100,7 +107,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i567821619.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:17+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Phoenix",
@@ -111,7 +119,8 @@
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 9,999"
+        "note": "BDT 9,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -122,7 +131,8 @@
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202143847.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 9,799"
+        "note": "BDT 9,799",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -133,7 +143,8 @@
         "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 10,000"
+        "note": "BDT 10,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -144,7 +155,8 @@
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150327.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 9,799"
+        "note": "BDT 9,799",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -155,7 +167,8 @@
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 9,999"
+        "note": "BDT 9,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -166,7 +179,8 @@
         "url": "https://www.daraz.com.bd/products/20-phoenix-disc-brake-cycle-enjoy-smooth-and-reliable-braking-performance-with-the-20-phoenix-disc-brake-cycle-i294304675.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 11,499"
+        "note": "BDT 11,499",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -177,7 +191,8 @@
         "url": "https://www.daraz.com.bd/products/16-i323337459.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 7,999"
+        "note": "BDT 7,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -188,7 +203,8 @@
         "url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:20+08:00",
-        "note": "BDT 9,799"
+        "note": "BDT 9,799",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Marine",
@@ -199,7 +215,8 @@
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 19,000"
+        "note": "BDT 19,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Marine",
@@ -210,7 +227,8 @@
         "url": "https://www.daraz.com.bd/products/-i561273686.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 17,000"
+        "note": "BDT 17,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -221,7 +239,8 @@
         "url": "https://www.daraz.com.bd/products/-i245555067.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 1,737"
+        "note": "BDT 1,737 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -232,7 +251,8 @@
         "url": "https://www.daraz.com.bd/products/hero-hunk-150r-xtec-i538776254.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 212,547"
+        "note": "BDT 212,547 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -243,7 +263,8 @@
         "url": "https://www.daraz.com.bd/products/0-4-i448794896.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 3,999"
+        "note": "BDT 3,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -254,7 +275,8 @@
         "url": "https://www.daraz.com.bd/products/-i374762389.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 2,999"
+        "note": "BDT 2,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -265,7 +287,8 @@
         "url": "https://www.daraz.com.bd/products/-i183972095.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 1,350"
+        "note": "BDT 1,350 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -276,7 +299,8 @@
         "url": "https://www.daraz.com.bd/products/jim-jolly-road-master-tricycle-white-cyan-blue-fun-ride-for-kids-model-891390-easy-to-use-and-maintain-i240846410.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:23+08:00",
-        "note": "BDT 1,539"
+        "note": "BDT 1,539 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -287,7 +311,8 @@
         "url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 11,499"
+        "note": "BDT 11,499 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -298,7 +323,8 @@
         "url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 308"
+        "note": "BDT 308 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -309,7 +335,8 @@
         "url": "https://www.daraz.com.bd/products/-i1581451115.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 1,350"
+        "note": "BDT 1,350 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Duranta",
@@ -320,7 +347,8 @@
         "url": "https://www.daraz.com.bd/products/101-21-767050-i557131926.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 43,500"
+        "note": "BDT 43,500",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -331,7 +359,8 @@
         "url": "https://www.daraz.com.bd/products/-i245555067.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 1,737"
+        "note": "BDT 1,737 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Foxter",
@@ -342,7 +371,8 @@
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 15,999"
+        "note": "BDT 15,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -353,7 +383,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -364,7 +395,8 @@
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:26+08:00",
-        "note": "BDT 13,934"
+        "note": "BDT 13,934 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -375,7 +407,8 @@
         "url": "https://www.daraz.com.bd/products/160mm-i543907570.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 199"
+        "note": "BDT 199 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -386,7 +419,8 @@
         "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 150"
+        "note": "BDT 150 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Marine",
@@ -397,7 +431,8 @@
         "url": "https://www.daraz.com.bd/products/-i561273686.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 17,000"
+        "note": "BDT 17,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -408,7 +443,8 @@
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 13,934"
+        "note": "BDT 13,934 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -419,7 +455,8 @@
         "url": "https://www.daraz.com.bd/products/121620-i474643113.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 7,999"
+        "note": "BDT 7,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -430,7 +467,8 @@
         "url": "https://www.daraz.com.bd/products/-i537789533.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 749"
+        "note": "BDT 749 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -441,7 +479,8 @@
         "url": "https://www.daraz.com.bd/products/3c-victoryegle-i343001972.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 1,888"
+        "note": "BDT 1,888 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -452,7 +491,8 @@
         "url": "https://www.daraz.com.bd/products/914748-i333848375.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:29+08:00",
-        "note": "BDT 5,300"
+        "note": "BDT 5,300 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Veloce",
@@ -463,7 +503,8 @@
         "url": "https://www.daraz.com.bd/products/26-veloce-slayer-10-6061-light-weight-alloy-i325128602.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 18,999"
+        "note": "BDT 18,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Warrior",
@@ -474,7 +515,8 @@
         "url": "https://www.daraz.com.bd/products/-i295351877.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 18,999"
+        "note": "BDT 18,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Foxter",
@@ -485,7 +527,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 16,999"
+        "note": "BDT 16,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Veloce",
@@ -496,7 +539,8 @@
         "url": "https://www.daraz.com.bd/products/5-vt-l200-i169204627.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 942"
+        "note": "BDT 942",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Veloce",
@@ -507,7 +551,8 @@
         "url": "https://www.daraz.com.bd/products/20-i295351092.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 11,000"
+        "note": "BDT 11,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -518,7 +563,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -529,7 +575,8 @@
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 13,934"
+        "note": "BDT 13,934 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -540,7 +587,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i574022647.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:32+08:00",
-        "note": "BDT 16,999"
+        "note": "BDT 16,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Pacific",
@@ -551,7 +599,8 @@
         "url": "https://www.daraz.com.bd/products/36-mtb-1-i276720408.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:34+08:00",
-        "note": "BDT 1,300"
+        "note": "BDT 1,300",
+        "brand_type": "other"
       },
       {
         "brand": "Generic",
@@ -562,7 +611,8 @@
         "url": "https://www.daraz.com.bd/products/helmet-and-bicycle-lock-fixed-password-steel-cable-anti-theft-security-lock-i328369971.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:34+08:00",
-        "note": "BDT 230"
+        "note": "BDT 230 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Duranta",
@@ -573,7 +623,8 @@
         "url": "https://www.daraz.com.bd/products/stl-1s-26-w-804453-i111954490.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 11,865"
+        "note": "BDT 11,865",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Duranta",
@@ -584,7 +635,8 @@
         "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 8,748"
+        "note": "BDT 8,748",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -595,7 +647,8 @@
         "url": "https://www.daraz.com.bd/products/-i474549967.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -606,7 +659,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Duranta",
@@ -617,7 +671,8 @@
         "url": "https://www.daraz.com.bd/products/-i543258436.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 15,465"
+        "note": "BDT 15,465",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Duranta",
@@ -628,7 +683,8 @@
         "url": "https://www.daraz.com.bd/products/26-i531253446.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 15,500"
+        "note": "BDT 15,500",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Foxter",
@@ -639,7 +695,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 16,999"
+        "note": "BDT 16,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Duranta",
@@ -650,7 +707,8 @@
         "url": "https://www.daraz.com.bd/products/21-spd-x-800-26-i529798528.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:37+08:00",
-        "note": "BDT 16,320"
+        "note": "BDT 16,320",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Foxter",
@@ -661,7 +719,8 @@
         "url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 100"
+        "note": "BDT 100",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Foxter",
@@ -672,7 +731,8 @@
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 15,999"
+        "note": "BDT 15,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -683,7 +743,8 @@
         "url": "https://www.daraz.com.bd/products/bicycle-footpegs-aluminum-alloy-axles-bmx-mtb-pedal-bicycle-stunt-foot-pegs-made-in-taiwan-bicycle-accessories-2-pcs-i543741681.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 99"
+        "note": "BDT 99 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -694,7 +755,8 @@
         "url": "https://www.daraz.com.bd/products/2pcs-bike-bicycle-mtb-led-frog-head-front-lamp-warning-rear-flash-light-cycle-accessories-cycle-accessories-i124362308.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 130"
+        "note": "BDT 130 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -705,7 +767,8 @@
         "url": "https://www.daraz.com.bd/products/tesno-2-8501700-160-i547878376.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 659"
+        "note": "BDT 659 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -716,7 +779,8 @@
         "url": "https://www.daraz.com.bd/products/-i562329124.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 599"
+        "note": "BDT 599 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -727,7 +791,8 @@
         "url": "https://www.daraz.com.bd/products/1-i1582682835.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 99"
+        "note": "BDT 99 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Foxter",
@@ -738,7 +803,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:40+08:00",
-        "note": "BDT 16,999"
+        "note": "BDT 16,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Warrior",
@@ -749,7 +815,8 @@
         "url": "https://www.daraz.com.bd/products/-i295351877.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 18,999"
+        "note": "BDT 18,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Warrior",
@@ -760,7 +827,8 @@
         "url": "https://www.daraz.com.bd/products/71-20-21-26-i327937068.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -771,7 +839,8 @@
         "url": "https://www.daraz.com.bd/products/rfl-i1574328968.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 1,687"
+        "note": "BDT 1,687 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Phoenix",
@@ -782,7 +851,8 @@
         "url": "https://www.daraz.com.bd/products/-i474549967.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Generic",
@@ -793,7 +863,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 14,999"
+        "note": "BDT 14,999 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Generic",
@@ -804,7 +875,8 @@
         "url": "https://www.daraz.com.bd/products/26-21-i563106540.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 25,555"
+        "note": "BDT 25,555 | ⚠️ Generic = Daraz 卖家未声明品牌",
+        "brand_type": "generic_unbranded"
       },
       {
         "brand": "Foxter",
@@ -815,7 +887,8 @@
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 15,999"
+        "note": "BDT 15,999",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Marine",
@@ -826,7 +899,8 @@
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
-        "note": "BDT 19,000"
+        "note": "BDT 19,000",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Polloux",
@@ -837,7 +911,8 @@
         "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BDT 9,800 (dreamcycle.store - VPN 验证)"
+        "note": "BDT 9,800 (dreamcycle.store - VPN 验证)",
+        "brand_type": "dreamcycle_own"
       },
       {
         "brand": "Duranta",
@@ -848,7 +923,8 @@
         "url": "https://www.dreamcycle.store/shop/duranta-knight/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BDT 11,700 (dreamcycle.store - VPN 验证)"
+        "note": "BDT 11,700 (dreamcycle.store - VPN 验证)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Hero",
@@ -859,7 +935,8 @@
         "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BDT 12,000 (dreamcycle.store - VPN 验证)"
+        "note": "BDT 12,000 (dreamcycle.store - VPN 验证)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Uctocifu",
@@ -870,7 +947,8 @@
         "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "dreamcycle_own"
       },
       {
         "brand": "Veloce",
@@ -881,7 +959,8 @@
         "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Core",
@@ -892,7 +971,8 @@
         "url": "https://www.dreamcycle.store/shop/core-gio-100/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "dreamcycle_own"
       },
       {
         "brand": "Phoenix",
@@ -903,7 +983,8 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Uplayed",
@@ -914,7 +995,8 @@
         "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "dreamcycle_own"
       },
       {
         "brand": "Marine",
@@ -925,7 +1007,8 @@
         "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Hero",
@@ -936,7 +1019,8 @@
         "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -947,7 +1031,8 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Avon",
@@ -958,7 +1043,8 @@
         "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Foxter",
@@ -969,7 +1055,8 @@
         "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -980,7 +1067,8 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Python",
@@ -991,7 +1079,8 @@
         "url": "https://www.dreamcycle.store/shop/python/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "other"
       },
       {
         "brand": "Foxter",
@@ -1002,7 +1091,8 @@
         "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "Phoenix",
@@ -1013,7 +1103,8 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "real_brand"
       },
       {
         "brand": "71 Warrior",
@@ -1024,7 +1115,8 @@
         "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-1-0/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "dreamcycle_own"
       },
       {
         "brand": "Rockrider",
@@ -1035,7 +1127,8 @@
         "url": "https://www.dreamcycle.store/shop/rockrider-m8-folding/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "other"
       },
       {
         "brand": "Duronto",
@@ -1046,7 +1139,8 @@
         "url": "https://www.dreamcycle.store/shop/duronto-sturn/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:15:00+08:00",
-        "note": "BD 待查详情页 (dreamcycle.store)"
+        "note": "BD 待查详情页 (dreamcycle.store)",
+        "brand_type": "dreamcycle_own"
       }
     ],
     "price_tracker": [],
