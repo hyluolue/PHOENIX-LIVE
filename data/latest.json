@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T10:15:00+08:00",
+  "generated_at": "2026-06-15T11:00:47+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -911,9 +911,9 @@
         "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 9,800 (orig 33,000) - dreamcycle.store (Playwright rendered, polloux 20 inch cycle) - inStock",
+        "note": "BDT 9,800 (orig 10,000) - dreamcycle.store (Playwright rendered, polloux 20 inch cycle) - inStock",
         "brand_type": "dreamcycle_own",
-        "orig_price": 33000,
+        "orig_price": 10000,
         "in_stock": true
       },
       {
@@ -925,9 +925,9 @@
         "url": "https://www.dreamcycle.store/shop/duranta-knight/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 11,700 (orig 25,000) - dreamcycle.store (Playwright rendered, Duranta Knight) - inStock",
+        "note": "BDT 11,700 (orig 12,500) - dreamcycle.store (Playwright rendered, Duranta Knight) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 25000,
+        "orig_price": 12500,
         "in_stock": true
       },
       {
@@ -939,37 +939,37 @@
         "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,000 (orig 23,000) - dreamcycle.store (Playwright rendered, Hero Road bike(Non gear)) - OOS",
+        "note": "BDT 12,000 (orig 12,500) - dreamcycle.store (Playwright rendered, Hero Road bike(Non gear)) - OOS",
         "brand_type": "real_brand",
-        "orig_price": 23000,
+        "orig_price": 12500,
         "in_stock": false
       },
       {
         "brand": "Uctocifu",
         "model": "Uctocifu cycle",
         "platform": "dreamcycle.store",
-        "price": 19000,
+        "price": 12000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 19,000 (orig 25,000) - dreamcycle.store (Playwright rendered, Uctocifu(Non gear)) - inStock",
+        "note": "BDT 12,000 (orig 12,000) - dreamcycle.store (Playwright rendered, Uctocifu(Non gear)) - inStock",
         "brand_type": "dreamcycle_own",
-        "orig_price": 25000,
+        "orig_price": 12000,
         "in_stock": true
       },
       {
         "brand": "Veloce",
         "model": "Veloce junior non gear",
         "platform": "dreamcycle.store",
-        "price": 14000,
+        "price": 12000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 14,000 (orig 41,000) - dreamcycle.store (Playwright rendered, Veloce Junior (Non gear)) - inStock",
+        "note": "BDT 12,000 (orig 12,000) - dreamcycle.store (Playwright rendered, Veloce Junior (Non gear)) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 41000,
+        "orig_price": 12000,
         "in_stock": true
       },
       {
@@ -981,9 +981,9 @@
         "url": "https://www.dreamcycle.store/shop/core-gio-100/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,300 (orig 45,000) - dreamcycle.store (Playwright rendered, Core Gio-100) - inStock",
+        "note": "BDT 12,300 (orig 12,500) - dreamcycle.store (Playwright rendered, Core Gio-100) - inStock",
         "brand_type": "dreamcycle_own",
-        "orig_price": 45000,
+        "orig_price": 12500,
         "in_stock": true
       },
       {
@@ -995,9 +995,9 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,300 (orig 23,000) - dreamcycle.store (Playwright rendered, Phoenix Donald (Non gear)) - inStock",
+        "note": "BDT 12,300 (orig 13,000) - dreamcycle.store (Playwright rendered, Phoenix Donald (Non gear)) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 23000,
+        "orig_price": 13000,
         "in_stock": true
       },
       {
@@ -1009,9 +1009,9 @@
         "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,500 (orig 25,000) - dreamcycle.store (Playwright rendered, Uplayed 20 inch) - inStock",
+        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright rendered, Uplayed 20 inch) - inStock",
         "brand_type": "dreamcycle_own",
-        "orig_price": 25000,
+        "orig_price": 13000,
         "in_stock": true
       },
       {
@@ -1023,9 +1023,9 @@
         "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,500 (orig 41,000) - dreamcycle.store (Playwright rendered, Marine PAGE 20 inch) - inStock",
+        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright rendered, Marine PAGE 20 inch) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 41000,
+        "orig_price": 13000,
         "in_stock": true
       },
       {
@@ -1037,9 +1037,9 @@
         "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,500 (orig 40,000) - dreamcycle.store (Playwright rendered, Hero MTB 20 inch) - inStock",
+        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright rendered, Hero MTB 20 inch) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 40000,
+        "orig_price": 13000,
         "in_stock": true
       },
       {
@@ -1051,23 +1051,23 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 13,000 (orig 41,000) - dreamcycle.store (Playwright rendered, Phoenix miracle) - OOS",
+        "note": "BDT 13,000 (orig 13,500) - dreamcycle.store (Playwright rendered, Phoenix miracle) - OOS",
         "brand_type": "real_brand",
-        "orig_price": 41000,
+        "orig_price": 13500,
         "in_stock": false
       },
       {
         "brand": "Avon",
         "model": "Avon chairman",
         "platform": "dreamcycle.store",
-        "price": 20000,
+        "price": 13000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 20,000 (orig 25,000) - dreamcycle.store (Playwright rendered, Avon (Non gear)) - inStock",
+        "note": "BDT 13,000 (orig 13,000) - dreamcycle.store (Playwright rendered, Avon (Non gear)) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 25000,
+        "orig_price": 13000,
         "in_stock": true
       },
       {
@@ -1079,23 +1079,23 @@
         "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 13,300 (orig 45,000) - dreamcycle.store (Playwright rendered, Foxter Buzz-1 (Non Gear)) - OOS",
+        "note": "BDT 13,300 (orig 13,500) - dreamcycle.store (Playwright rendered, Foxter Buzz-1 (Non Gear)) - OOS",
         "brand_type": "real_brand",
-        "orig_price": 45000,
+        "orig_price": 13500,
         "in_stock": false
       },
       {
         "brand": "Phoenix",
         "model": "Phoenix Non gear (Donald 2)",
         "platform": "dreamcycle.store",
-        "price": 13300,
+        "price": 13500,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 13,300 (orig 24,000) - dreamcycle.store (Playwright rendered, Phoenix Donald (Non Gear)) - inStock",
+        "note": "BDT 13,500 (orig 13,500) - dreamcycle.store (Playwright rendered, Phoenix Donald (Non Gear)) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 24000,
+        "orig_price": 13500,
         "in_stock": true
       },
       {
@@ -1107,23 +1107,23 @@
         "url": "https://www.dreamcycle.store/shop/python/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 13,500 (orig 41,000) - dreamcycle.store (Playwright rendered, PYTHON) - OOS",
+        "note": "BDT 13,500 (orig 13,800) - dreamcycle.store (Playwright rendered, PYTHON) - OOS",
         "brand_type": "other",
-        "orig_price": 41000,
+        "orig_price": 13800,
         "in_stock": false
       },
       {
         "brand": "Foxter",
         "model": "Foxter Buzz-1 2026",
         "platform": "dreamcycle.store",
-        "price": 12300,
+        "price": 13500,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 12,300 (orig 15,500) - dreamcycle.store (Playwright rendered, Foxter Buzz-1(Non gear)2026) - inStock",
+        "note": "BDT 13,500 (orig 13,500) - dreamcycle.store (Playwright rendered, Foxter Buzz-1(Non gear)2026) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 15500,
+        "orig_price": 13500,
         "in_stock": true
       },
       {
@@ -1135,23 +1135,23 @@
         "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 13,700 (orig 41,000) - dreamcycle.store (Playwright rendered, Phoenix Tornado 24 inch) - inStock",
+        "note": "BDT 13,700 (orig 14,000) - dreamcycle.store (Playwright rendered, Phoenix Tornado 24 inch) - inStock",
         "brand_type": "real_brand",
-        "orig_price": 41000,
+        "orig_price": 14000,
         "in_stock": true
       },
       {
         "brand": "71 Warrior",
         "model": "seventy one warrior 1.0",
         "platform": "dreamcycle.store",
-        "price": 16500,
+        "price": 14000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-1-0/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 16,500 (orig 30,000) - dreamcycle.store (Playwright rendered, Seventy one Warrior 1.0) - OOS",
+        "note": "BDT 14,000 (orig 14,000) - dreamcycle.store (Playwright rendered, Seventy one Warrior 1.0) - OOS",
         "brand_type": "dreamcycle_own",
-        "orig_price": 30000,
+        "orig_price": 14000,
         "in_stock": false
       },
       {
@@ -1163,23 +1163,23 @@
         "url": "https://www.dreamcycle.store/shop/rockrider-m8-folding/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 14,000 (orig 41,000) - dreamcycle.store (Playwright rendered, ROCKRIDER M8 (Folding)) - OOS",
+        "note": "BDT 14,000 (orig 14,500) - dreamcycle.store (Playwright rendered, ROCKRIDER M8 (Folding)) - OOS",
         "brand_type": "other",
-        "orig_price": 41000,
+        "orig_price": 14500,
         "in_stock": false
       },
       {
         "brand": "Duronto",
         "model": "Duronto sturn",
         "platform": "dreamcycle.store",
-        "price": 16500,
+        "price": 14000,
         "currency": "BDT",
         "url": "https://www.dreamcycle.store/shop/duronto-sturn/",
         "is_new": true,
         "scraped_at": "2026-06-15T10:43:00+08:00",
-        "note": "BDT 16,500 (orig 33,500) - dreamcycle.store (Playwright rendered, Duronto Sturn) - inStock",
+        "note": "BDT 14,000 (orig 14,000) - dreamcycle.store (Playwright rendered, Duronto Sturn) - inStock",
         "brand_type": "dreamcycle_own",
-        "orig_price": 33500,
+        "orig_price": 14000,
         "in_stock": true
       }
     ],
@@ -3248,5 +3248,5 @@
       }
     ]
   },
-  "gen_at": "2026-06-15T10:43:00+08:00"
+  "gen_at": "2026-06-15T11:00:47+08:00"
 }
