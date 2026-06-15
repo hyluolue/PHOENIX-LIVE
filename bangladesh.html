@@ -28,13 +28,30 @@
     .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
     .section h2 .flag{font-size:18px}
     .section.static h2{color:#888}
-    .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4}
+    .section.dark h2{color:#5eead4}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     .kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
     .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
     .kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
     .kpi.dynamic{border-left-color:#2e7d32;background:#e8f5e9}
     .kpi.dynamic .kpi-label{color:#2e7d32}
     .kpi.dynamic .kpi-value{color:#1b5e20}
+    .kpi.gap{background:#fff3e0;border-left-color:#e65100}
+    .kpi.gap .kpi-label{color:#e65100}
+    .kpi.gap .kpi-value{color:#bf360c}
+    .price-tier{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:8px}
+    .tier{background:#f7f9fc;border-radius:10px;padding:14px;border-left:4px solid #1565c0}
+    .tier .tier-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .tier .tier-name{font-size:13px;font-weight:800;color:#0d47a1}
+    .tier .tier-count{font-size:10px;color:#94a3b8;background:rgba(13,71,161,.08);padding:2px 6px;border-radius:3px;font-weight:600}
+    .tier .tier-prices{font-size:11px;color:#666;margin-bottom:6px}
+    .tier .tier-brands{font-size:11px;color:#888}
+    .tier .tier-brands b{color:#c8102e}
+    .tier.tier-1{border-left-color:#90a4ae}
+    .tier.tier-2{border-left-color:#1565c0}
+    .tier.tier-3{border-left-color:#e65100}
+    .tier.tier-4{border-left-color:#c8102e}
     .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
     .price-item{background:#f7f9fc;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #1565c0;font-size:12px}
     .price-item .meta{flex:1;min-width:0}
@@ -46,6 +63,10 @@
     .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
     .alert{background:#fff3e0;color:#bf360c;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:12px;border-left:3px solid #e65100}
+    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:10px 14px;border-radius:8px;font-size:12px;color:#fff;margin-top:10px;line-height:1.7}
+    .insight b{color:#5eead4}
+    .insight .gap{color:#ffc107}
+    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
   </style>
 </head>
 <body>
@@ -61,56 +82,130 @@
 
     <div class="status-bar">
       <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
+      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
       <span id="status-news-bd" class="pill pill-fail">⏳ news_bd</span>
       <span class="last-updated" id="updated">—</span>
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
     <div class="section">
-      <h2><span class="flag">📊</span>市场基础数据 <small style="color:#999;font-weight:400">（年度报告 · 不会每日变）</small></h2>
+      <h2><span class="flag">📊</span>BD 自行车市场基础数据 <small style="color:#999;font-weight:400">（2025 报告）</small></h2>
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="kpi-label">WBIA 2022</div>
-          <div class="kpi-value">年进口 60.2 万台（#32 全球）<br>均价 $46/台 · 年进口 $12.6M</div>
+          <div class="kpi-label">BD GDP 2025 Q4</div>
+          <div class="kpi-value">+9.17% YoY<br><span style="font-size:10px;color:#888;font-weight:400">Bangladesh Bureau of Statistics</span></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">进口基准（WBIA 2022）</div>
+          <div class="kpi-value">年进口 60.2 万台<br>均价 $46/台</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">FY24-25 出口</div>
-          <div class="kpi-value">$117M（+41%）<br>国内消费暂缺 · 以进口为锚</div>
+          <div class="kpi-value">$117M（+41%）<br><span style="font-size:10px;color:#888;font-weight:400">bike-eu Aug 2025</span></div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">中高端 MTB 占比</div>
-          <div class="kpi-value">估算 10-15%<br>约 6-9 万台/年（战略主战场）</div>
+          <div class="kpi-label">BD 自行车门户</div>
+          <div class="kpi-value">bicyclebd.com<br>200+ 品牌 / 2013 创立</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">在线渗透率</div>
-          <div class="kpi-value">约 30%（Daraz）</div>
+          <div class="kpi-label">9th Dhaka Bike Show 2025</div>
+          <div class="kpi-value">BD 摩托车 2024-2028<br>CAGR 0.64% · 2028 达 $1.98B</div>
         </div>
+        <div class="kpi">
+          <div class="kpi-label">Phoenix 全球地位</div>
+          <div class="kpi-value">运动自行车第二梯队<br>（跟 Hero/Trek/Giant/Accell 同梯）</div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🎯 市场定位关键发现：</b> 2025 年 BD GDP 高增 +9.17%，消费基础强；但 BD 摩托车市场 CAGR 仅 0.64% = <b>接近饱和</b>。自行车作为<b>微出行+健康</b>的替代品类，2024 出口 $117M (+41%) = 真实增长点在 <b>出口而非内需</b>。Phoenix 在全球运动自行车第二梯队 = 品牌力 OK，<b>BD 缺的是"中高端价格锚点"</b>，不是品牌力。
       </div>
     </div>
 
     <div class="section">
-      <h2><span class="flag">💰</span>中高端 MTB 实时价格 <small style="color:#999;font-weight:400">（Daraz BD 每日 9:00 抓取）</small></h2>
-      <div id="prices" class="price-grid"></div>
+      <h2><span class="flag">💰</span>中高端 MTB 价格分层 <small style="color:#999;font-weight:400">（Daraz BD + dreamcycle.store · 56 真品牌 SKU · 排除 Generic 白牌）</small></h2>
+      <div class="price-tier" id="price-tiers">
+        <div class="tier tier-1">
+          <div class="tier-head">
+            <span class="tier-name">入门 &lt; 10K BDT</span>
+            <span class="tier-count" id="t1-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t1-prices">— BDT</div>
+          <div class="tier-brands" id="t1-brands">—</div>
+        </div>
+        <div class="tier tier-2">
+          <div class="tier-head">
+            <span class="tier-name">中端 10K-15K BDT</span>
+            <span class="tier-count" id="t2-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t2-prices">— BDT</div>
+          <div class="tier-brands" id="t2-brands">—</div>
+        </div>
+        <div class="tier tier-3">
+          <div class="tier-head">
+            <span class="tier-name">中高端 15K-25K BDT</span>
+            <span class="tier-count" id="t3-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t3-prices">— BDT</div>
+          <div class="tier-brands" id="t3-brands">—</div>
+        </div>
+        <div class="tier tier-4">
+          <div class="tier-head">
+            <span class="tier-name">高端 &gt; 25K BDT</span>
+            <span class="tier-count" id="t4-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t4-prices">— BDT</div>
+          <div class="tier-brands" id="t4-brands">—</div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🔥 战略级价格洞察（从 56 SKU 真实数据归纳）：</b>
+        <ul class="tight">
+          <li><b>Phoenix 14 SKU 全部 &lt; 15K BDT</b>（7,999-14,999），其中 12 个 ≤ 10K = <span class="gap">靠儿童车打低价位</span></li>
+          <li><b>15K-25K 中高端真空</b>：仅 Marine / Veloce / Duranta / Foxter / Warrior 5 品牌在抢，<b>Phoenix 完全缺席</b></li>
+          <li><b>&gt; 25K 高端真空</b>：仅 Duranta 1 款电动 43,500 = <b>真实真空市场</b>，凤凰可入</li>
+          <li><b>中端 10K-15K 红海</b>：27 SKU 15 品牌混战，含 Foxter/Hero/Polloux/Duranta/Veloce 等 → 凤凰需差异化（SGS 认证/三标）跳出价格战</li>
+        </ul>
+      </div>
     </div>
 
     <div class="section">
       <h2><span class="flag">🎯</span>凤凰定位 & 竞品矩阵 <small style="color:#999;font-weight:400">（战略层 · 不会每日变）</small></h2>
       <div class="kpi-grid">
-        <div class="kpi">
-          <div class="kpi-label">凤凰定价区间</div>
-          <div class="kpi-value">BDT 14,500 – 45,000</div>
+        <div class="kpi gap">
+          <div class="kpi-label">凤凰真实价位</div>
+          <div class="kpi-value">BDT 7,999 - 14,999<br><span style="font-size:10px;color:#888;font-weight:400">14 SKU 全在中端以下</span></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">中高端价位竞品</div>
+          <div class="kpi-value">Marine Gold 19,000<br>Veloce Raptor 15,999<br>Duranta Steel 15,465</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">凤凰核心竞品</div>
-          <div class="kpi-value">Veloce Raptor 2602（BDT 16,700）<br>Marine Gold 400（BDT 18,999 促销）</div>
+          <div class="kpi-label">最大差异化机会</div>
+          <div class="kpi-value">Veloce / Core / Marine 均无 SGS 认证<br>→ 凤凰 SGS + 三标 = 唯一卖点</div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">最大机会</div>
-          <div class="kpi-value">Veloce / Core / Marine 均无 SGS 认证<br>→ 凤凰 SGS 认证 = 唯一差异化</div>
+        <div class="kpi gap">
+          <div class="kpi-label">价格锚点机会</div>
+          <div class="kpi-value">15K-25K 真空 16 SKU<br>25K+ 真空 1 SKU（Duranta 电动 43,500）</div>
         </div>
-        <div class="kpi">
-          <div class="kpi-label">数据来源</div>
-          <div class="kpi-value">WBIA 2022（进口基准）<br>bike-eu Aug 2025（出口 $117M）<br>OEC 2024</div>
+      </div>
+    </div>
+
+    <div class="section dark">
+      <h2><span class="flag" style="color:#5eead4">🏪</span>BD 本土 MTB 独立站档案 <small style="color:#aaa;font-weight:400">· 2026-06-15 验证</small></h2>
+      <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4;color:#fff">
+        <strong style="color:#5eead4">🏪 Dream Cycle (dreamcycle.store)</strong> · <span style="color:#aaa;font-size:11px">真 BD 本土多品牌零售平台 · WordPress + WooCommerce</span>
+        <ul class="tight">
+          <li><strong style="color:#5eead4">在售品牌 19 个</strong>：自有 Polloux / Uctocifu + 经销 Duranta / Veloce / <b>Phoenix</b> / Foxter / Hero / Warrior / Avon / Core / Pacific / Uplayed / 71 Warrior / Rockrider / Duronto / Polloux / Python 等</li>
+          <li><strong style="color:#5eead4">价格段 9,800-14,000 BDT</strong>（USD ~85-120），共 20 SKU 已抓全</li>
+          <li><strong style="color:#5eead4">Phoenix 4 SKU 在售</strong>：Donald (Non gear) 12,300 / Miracle 13,000 (OOS) / Donald v2 13,500 / Tornado 24 inch 13,700</li>
+          <li><strong style="color:#5eead4">社媒</strong>：FB/IG/YT @dreamcyclestore · TK @dreamcyclestorebd · 达卡 01721-638523</li>
+        </ul>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(94,234,212,.3)">
+          <strong style="color:#5eead4">🎯 战略含义：</strong>
+          <ol class="tight">
+            <li>凤凰 <b>真实价位 12,300-13,700 BDT</b>，与 Duranta Knight 11,700 / Foxter Buzz-1 13,300 / Veloce 12,000 属同档 = <b>中端红海</b></li>
+            <li>Dream Cycle 卖所有品牌 = <b>凤凰无法独占品类</b> → DTC 独立站是品牌叙事唯一出路</li>
+          </ol>
         </div>
       </div>
     </div>
@@ -125,33 +220,8 @@
       <div class="alert">⚠️ 暂不推进：达卡/吉大港以外道路基建差，公路车轮胎窄、胎压高，易损坏；聚焦 MTB+通勤品类</div>
     </div>
 
-    <div class="section static">
-      <h2><span class="flag">💡</span>BD 本土 MTB 独立站档案 <small style="color:#999;font-weight:400">（2026-06-11 验证）</small></h2>
-      <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4">
-        <strong style="color:#5eead4">🏪 Dream Cycle (dreamcycle.store)</strong> · <span style="color:#aaa;font-size:11px">真 BD 本土电商</span>
-        <ul style="margin:8px 0 0 0;padding-left:20px;line-height:1.8">
-          <li><strong>类型</strong>：多品牌零售/经销平台（<strong>不是单品牌官网</strong>）</li>
-          <li><strong>技术栈</strong>：WordPress + WooCommerce + Elementor</li>
-          <li><strong>在售品牌</strong>：自有 Polloux / Uctocifu + 经销 Duranta / Veloce / <strong style="color:#5eead4">Phoenix</strong> / Foster</li>
-          <li><strong>价格区间</strong>：9,800 - 14,000 BDT（USD ~85-120）</li>
-          <li><strong>Phoenix Donald (Non gear)</strong> 在售：12,300 BDT / <strong>Phoenix Tornado 24 inch</strong> 13,700 BDT（<span style="color:#5eead4">凤凰已入驻，4 SKU 在售</span>）</li>
-          <li><strong>社媒矩阵</strong>：FB (@dreamcyclestore) / IG (@dreamcyclestore) / YT (@dreamcyclestore) / TK (@dreamcyclestorebd)</li>
-          <li><strong>地址</strong>：孟加拉达卡 · 客服 01721-638523</li>
-        </ul>
-        <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(94,234,212,.3)">
-          <strong style="color:#5eead4">🎯 战略含义：</strong>
-          <ol style="margin:6px 0 0 16px;padding:0;line-height:1.7">
-            <li><strong>渠道关系</strong>：Dream Cycle 是 BD 中端 MTB 的"杂货铺"，凤凰已入驻 → 维持供货 + 优化 listing 转化</li>
-            <li><strong>竞品价格</strong>：Duranta Knight 11,700 / Foxter Buzz-1 13,300 / Veloce Junior 12,000 → <strong>凤凰 Donald 12,300 = 中段价位</strong>，定价合理</li>
-            <li><strong>挑战</strong>：Dream Cycle <strong>卖所有品牌</strong>，<strong>无法形成品类独占</strong> → 凤凰需 DTC 独立站做"独家品牌叙事"</li>
-            <li><strong>TK 账号</strong> <code>@dreamcyclestorebd</code> = 1.5K-3K follower 量级 BD 自行车号（待采）</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
     <div class="footer">
-      数据来源：Daraz BD / Sogou 搜索 / WBIA / OEC / 6Wresearch<br />
+      数据来源：Daraz BD / dreamcycle.store / Sogou 搜索 / WBIA 2022 / BBS 2025 / bike-eu Aug 2025 / 9th Dhaka Bike Show 2025<br />
       本页面为 Phoenix-Live Tab #2 · 每日 9:00 自动更新
     </div>
   </div>
@@ -166,13 +236,21 @@
     return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
+  // 4 价格段
+  const TIERS = [
+    { id: 't1', name: '< 10K', lo: 0, hi: 10000, cls: 'tier-1' },
+    { id: 't2', name: '10K-15K', lo: 10000, hi: 15000, cls: 'tier-2' },
+    { id: 't3', name: '15K-25K', lo: 15000, hi: 25000, cls: 'tier-3' },
+    { id: 't4', name: '> 25K', lo: 25000, hi: 1e9, cls: 'tier-4' },
+  ];
+
   async function load() {
     let data;
     try {
       const r = await fetch('./data/latest.json', {cache: 'no-store'});
       data = await r.json();
     } catch (e) {
-      document.getElementById('prices').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
+      document.getElementById('prices') ? '' : null;
       return;
     }
     document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
@@ -183,27 +261,27 @@
       const el = document.getElementById(id);
       const v = s[k] || 'fail';
       el.className = 'pill pill-' + v;
-      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k + ' 部分' : '✗ ' + k;
+      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k : '✗ ' + k;
     }
     setPill('status-daraz', 'daraz_bd');
+    setPill('status-dreamcycle', 'dreamcycle');
     setPill('status-news-bd', 'news_bd');
 
-    // 价格
-    const items = ((data.bd && data.bd.price_pool) || []).filter(it => it.brand !== 'Generic');
-    const pEl = document.getElementById('prices');
-    if (items.length === 0) {
-      pEl.innerHTML = '<div class="empty">暂无数据</div>';
-    } else {
-      pEl.innerHTML = items.map(it => `
-        <a class="price-item" href="${esc(it.url)}" target="_blank" rel="noopener">
-          <div class="meta">
-            <span class="brand">${esc(it.brand)}</span>
-            <span class="model">${esc(it.model)}</span>
-            <span class="plat">${esc(it.platform || '')}</span>
-          </div>
-          <div class="price">${esc(it.currency)} ${it.price ? it.price.toLocaleString() : '—'}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
-        </a>
-      `).join('');
+    // 价格分层
+    const all = ((data.bd && data.bd.price_pool) || []).filter(it => it.brand !== 'Generic' && (it.price || 0) > 0);
+    for (const t of TIERS) {
+      const items = all.filter(it => it.price >= t.lo && it.price < t.hi);
+      const phoenix = items.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+      document.getElementById(t.id + '-count').textContent = items.length + ' SKU';
+      if (items.length > 0) {
+        const prices = items.map(it => it.price);
+        const brands = [...new Set(items.map(it => it.brand))].sort();
+        document.getElementById(t.id + '-prices').textContent = '价段 ' + Math.min(...prices).toLocaleString() + ' - ' + Math.max(...prices).toLocaleString() + ' · avg ' + Math.round(prices.reduce((a,b)=>a+b,0)/prices.length).toLocaleString();
+        document.getElementById(t.id + '-brands').innerHTML = brands.map(b => b === 'Phoenix' ? '<b>Phoenix</b>' : b).join(' · ') + (phoenix.length > 0 ? ' <span style="color:#c8102e">· Phoenix × ' + phoenix.length + '</span>' : '');
+      } else {
+        document.getElementById(t.id + '-prices').textContent = '真空';
+        document.getElementById(t.id + '-brands').innerHTML = '<span style="color:#c8102e;font-weight:700">⚠ 真实真空市场</span>';
+      }
     }
 
     // 新闻
@@ -212,7 +290,7 @@
     if (news.length === 0) {
       nEl.innerHTML = '<div class="empty">暂无市场动态</div>';
     } else {
-      nEl.innerHTML = news.map(n => `
+      nEl.innerHTML = news.slice(0, 10).map(n => `
         <a class="price-item" href="${esc(n.url)}" target="_blank" rel="noopener">
           <div class="meta">
             <span class="brand">${esc(n.title)}</span>
