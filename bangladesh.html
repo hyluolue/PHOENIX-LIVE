@@ -39,6 +39,7 @@
     .price-item{background:#f7f9fc;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #1565c0;font-size:12px}
     .price-item .meta{flex:1;min-width:0}
     .price-item .brand{font-weight:700;color:#0d47a1;display:block}
+    .price-item .plat{font-size:9px;color:#94a3b8;background:rgba(13,71,161,.08);padding:1px 5px;border-radius:3px;margin-left:6px}
     .price-item .model{display:block;color:#555;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .price-item .price{font-weight:800;color:#c8102e;font-size:14px;white-space:nowrap}
     .price-item .new{background:#c8102e;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
@@ -196,7 +197,7 @@
     setPill('status-news-bd', 'news_bd');
 
     // 价格
-    const items = (data.bd && data.bd.price_pool) || [];
+    const items = ((data.bd && data.bd.price_pool) || []).filter(it => it.brand !== 'Generic');
     const pEl = document.getElementById('prices');
     if (items.length === 0) {
       pEl.innerHTML = '<div class="empty">暂无数据</div>';
@@ -206,8 +207,9 @@
           <div class="meta">
             <span class="brand">${esc(it.brand)}</span>
             <span class="model">${esc(it.model)}</span>
+            <span class="plat">${esc(it.platform || '')}</span>
           </div>
-          <div class="price">${esc(it.currency)} ${it.price.toLocaleString()}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
+          <div class="price">${esc(it.currency)} ${it.price ? it.price.toLocaleString() : '—'}${it.is_new ? '<span class="new">NEW</span>' : ''}</div>
         </a>
       `).join('');
     }
