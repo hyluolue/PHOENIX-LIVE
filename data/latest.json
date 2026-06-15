@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-15T09:54:45+08:00",
+  "generated_at": "2026-06-15T10:00:00+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -9,7 +9,8 @@
     "tokopedia": "fail",
     "daraz_bd_reviews": "ok",
     "dreamcycle": "fail",
-    "apify_social": "ok"
+    "apify_social": "ok",
+    "dreamcycle_vpn": "ok"
   },
   "bd": {
     "price_pool": [
@@ -826,6 +827,61 @@
         "is_new": true,
         "scraped_at": "2026-06-15T09:54:43+08:00",
         "note": "BDT 19,000"
+      },
+      {
+        "brand": "Polloux",
+        "model": "polloux 20 inch cycle",
+        "platform": "dreamcycle.store",
+        "price": 9800,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:00:00+08:00",
+        "note": "BDT 9,800 (dreamcycle.store)"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Knight",
+        "platform": "dreamcycle.store",
+        "price": 11700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/duranta-knight/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:00:00+08:00",
+        "note": "BDT 11,700 (dreamcycle.store)"
+      },
+      {
+        "brand": "Hero",
+        "model": "Hero Road bike (Non gear)",
+        "platform": "dreamcycle.store",
+        "price": 12000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:00:00+08:00",
+        "note": "BDT 12,000 (dreamcycle.store) - OUT OF STOCK"
+      },
+      {
+        "brand": "Uctocifu",
+        "model": "Uctocifu (Non gear)",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:00:00+08:00",
+        "note": "BD 待查 (dreamcycle.store)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "Veloce Junior (Non gear)",
+        "platform": "dreamcycle.store",
+        "price": 0,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
+        "is_new": true,
+        "scraped_at": "2026-06-15T10:00:00+08:00",
+        "note": "BD 待查 (dreamcycle.store)"
       }
     ],
     "price_tracker": [],
