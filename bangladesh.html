@@ -122,7 +122,7 @@
     </div>
 
     <div class="section">
-      <h2><span class="flag">💰</span>中高端 MTB 价格分层 <small style="color:#999;font-weight:400">（Daraz BD + dreamcycle.store · 56 真品牌 SKU · 排除 Generic 白牌）</small></h2>
+      <h2><span class="flag">💰</span>中高端 MTB 价格分层 <small style="color:#999;font-weight:400">（BD 5K-30K BDT 中高端整车 · TOP 10 品牌 · 排除白牌/童车/折叠/配件）</small></h2>
       <div class="price-tier" id="price-tiers">
         <div class="tier tier-1">
           <div class="tier-head">
@@ -267,17 +267,33 @@
     setPill('status-dreamcycle', 'dreamcycle');
     setPill('status-news-bd', 'news_bd');
 
-    // 价格分层
-    const all = ((data.bd && data.bd.price_pool) || []).filter(it => it.brand !== 'Generic' && (it.price || 0) > 0);
+    // 价格分层 - 中高端整车筛选（5K-30K BDT + 排除童车/折叠/配件）
+    const EXCLUDED_BD = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', 'helmet', 'lamp', 'light', 'bracket', 'fender', 'bell', 'lock', 'bottle', 'bag', 'carrier', 'pump', 'sticker'];
+    const all = ((data.bd && data.bd.price_pool) || []).filter(it => {
+      if (it.brand === 'Generic') return false;
+      if ((it.price || 0) <= 0) return false;
+      if (it.price < 5000 || it.price > 30000) return false;
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      return !EXCLUDED_BD.some(kw => m.includes(kw));
+    });
     for (const t of TIERS) {
       const items = all.filter(it => it.price >= t.lo && it.price < t.hi);
       const phoenix = items.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
       document.getElementById(t.id + '-count').textContent = items.length + ' SKU';
       if (items.length > 0) {
         const prices = items.map(it => it.price);
-        const brands = [...new Set(items.map(it => it.brand))].sort();
+        // TOP 10 中高端品牌（按 SKU 数倒序，Phoenix 优先）
+        const brandCount = {};
+        items.forEach(it => { brandCount[it.brand] = (brandCount[it.brand] || 0) + 1; });
+        const topBrands = Object.entries(brandCount)
+          .sort((a, b) => {
+            if (a[0] === 'Phoenix') return -1;
+            if (b[0] === 'Phoenix') return 1;
+            return b[1] - a[1];
+          })
+          .slice(0, 10);
         document.getElementById(t.id + '-prices').textContent = '价段 ' + Math.min(...prices).toLocaleString() + ' - ' + Math.max(...prices).toLocaleString() + ' · avg ' + Math.round(prices.reduce((a,b)=>a+b,0)/prices.length).toLocaleString();
-        document.getElementById(t.id + '-brands').innerHTML = brands.map(b => b === 'Phoenix' ? '<b>Phoenix</b>' : b).join(' · ') + (phoenix.length > 0 ? ' <span style="color:#c8102e">· Phoenix × ' + phoenix.length + '</span>' : '');
+        document.getElementById(t.id + '-brands').innerHTML = topBrands.map(([b, n]) => b === 'Phoenix' ? '<b>Phoenix</b> ×' + n : b + ' ×' + n).join(' · ') + (phoenix.length > 0 ? ' <span style="color:#c8102e">· Phoenix × ' + phoenix.length + '</span>' : '');
       } else {
         document.getElementById(t.id + '-prices').textContent = '真空';
         document.getElementById(t.id + '-brands').innerHTML = '<span style="color:#c8102e;font-weight:700">⚠ 真实真空市场</span>';
