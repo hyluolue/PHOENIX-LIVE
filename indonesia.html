@@ -255,13 +255,17 @@
     }
     document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
 
-    // 状态条
+    // 状态条 - startsWith 模式（支持 "ok (...)" 带后缀）
     const s = data.fetch_status || {};
     function setPill(id, k) {
       const el = document.getElementById(id);
-      const v = s[k] || 'fail';
-      el.className = 'pill pill-' + v;
-      el.textContent = v === 'ok' ? '✓ ' + k : v === 'partial' ? '⚠ ' + k : '✗ ' + k;
+      const v = (s[k] || 'pending').toString();
+      const isOk = v.startsWith('ok');
+      const isFail = v.startsWith('fail');
+      const isPartial = v.startsWith('partial');
+      el.className = 'pill ' + (isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending');
+      el.textContent = (isOk ? '✓ ' : isFail ? '✗ ' : isPartial ? '⚠ ' : '⏳ ') + k;
+      el.title = v;  // 鼠标 hover 显示完整状态
     }
     setPill('status-shopee', 'shopee_id');
     setPill('status-tokopedia', 'tokopedia');
