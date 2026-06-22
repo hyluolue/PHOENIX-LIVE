@@ -38,12 +38,19 @@
     .heat-cell .lbl{font-size:9px;opacity:0.85;display:block;margin-top:2px}
     .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
     .insight b{color:#5eead4}
-    .insight .gap{color:#ffc107}
-    .insight .hl{color:#c8102e}
+    .insight .gap{color:#5eead4}
+    .insight .hl{color:#ff8a80}
     ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
-    .gap-card{background:rgba(255,193,7,.1);border-left:4px solid #ffc107;padding:14px;border-radius:8px;margin-top:8px}
-    .gap-card h3{font-size:14px;color:#e65100;margin-bottom:6px;font-weight:800}
-    .gap-card p{font-size:12px;color:#1a1a1a;line-height:1.6}
+    /* gap-card 强制浅色背景 + 深色字（dark section 里也清晰可读）*/
+    .gap-card{background:rgba(255,247,230,.95)!important;border:1px solid #ffc107;border-left:4px solid #ffc107;padding:14px;border-radius:8px;margin-top:8px;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+    .gap-card h3{font-size:14px;color:#e65100!important;margin-bottom:6px;font-weight:800}
+    .gap-card p{font-size:12px;color:#1a1a1a!important;line-height:1.7}
+    .gap-card b{color:#c8102e!important}
+    /* insight（dark section 内的浅色提示卡）*/
+    .insight{background:rgba(255,255,255,.95)!important;border:1px solid #5eead4;border-left:4px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#1a1a1a!important;margin-top:14px;line-height:1.8;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+    .insight b{color:#1565c0!important}
+    .insight .gap{color:#e65100!important}
+    .insight .hl{color:#c8102e!important}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
     .legend{display:flex;gap:8px;margin-top:8px;font-size:10px;color:#666;flex-wrap:wrap}
     .legend span{padding:2px 6px;border-radius:3px;color:#fff;font-weight:600}
