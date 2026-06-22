@@ -34,6 +34,16 @@
     .section.dark .kpi{background:rgba(255,255,255,.05);color:#fff;border-left-color:#5eead4}
     .section.dark .kpi-label{color:#5eead4}
     .section.dark .kpi-value{color:#fff}
+    /* dark section 内的 gap/accent kpi 改深色背景 + 浅色字（避免黑底黑字）*/
+    .section.dark .kpi.gap{background:rgba(230,81,0,.15);border-left-color:#ff9800;color:#fff}
+    .section.dark .kpi.gap .kpi-label{color:#ffb74d}
+    .section.dark .kpi.gap .kpi-value{color:#ffcc80}
+    .section.dark .kpi.accent{background:rgba(200,16,46,.2);border-left-color:#ff5252;color:#fff}
+    .section.dark .kpi.accent .kpi-label{color:#ff8a80}
+    .section.dark .kpi.accent .kpi-value{color:#ffcdd2}
+    .section.dark .kpi.dynamic{background:rgba(46,125,50,.2);border-left-color:#66bb6a;color:#fff}
+    .section.dark .kpi.dynamic .kpi-label{color:#a5d6a7}
+    .section.dark .kpi.dynamic .kpi-value{color:#c8e6c9}
     .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     .kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
     .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
@@ -50,7 +60,7 @@
     .kpi-value small{font-weight:400;color:#888;display:block;margin-top:2px}
     .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
     .insight b{color:#5eead4}
-    .insight .gap{color:#ffc107}
+    .insight .gap{color:#5eead4}
     .insight .hl{color:#c8102e}
     ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
