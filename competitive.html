@@ -69,6 +69,8 @@
 
     <div class="status-bar">
       <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
+      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
+      <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
       <span class="last-updated" id="updated">—</span>
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
@@ -137,10 +139,20 @@
     document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
 
     const s = data.fetch_status || {};
-    const el = document.getElementById('status-daraz');
-    const v = s['daraz_bd'] || 'fail';
-    el.className = 'pill pill-' + v;
-    el.textContent = v === 'ok' ? '✓ daraz_bd' : v === 'partial' ? '⚠ daraz_bd' : '✗ daraz_bd';
+    function setPill(elId, k) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      const v = (s[k] || 'pending').toString();
+      const isOk = v.startsWith('ok');
+      const isFail = v.startsWith('fail');
+      const isPartial = v.startsWith('partial');
+      el.className = 'pill ' + (isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending');
+      el.textContent = (isOk ? '✓ ' : isFail ? '✗ ' : isPartial ? '⚠ ' : '⏳ ') + k.replace(/_/g, ' ');
+      el.title = v;
+    }
+    setPill('status-daraz', 'daraz_bd');
+    setPill('status-dreamcycle', 'dreamcycle');
+    setPill('status-serbasepeda', 'serbasepeda');
 
     render();
   }
