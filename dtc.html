@@ -249,12 +249,14 @@ function updateHeader(data) {
   const gen = data.generated_at || '-';
   document.getElementById('subtitle').textContent = `最后更新：${gen} · 自动每日 9:00 刷新`;
   const fs = data.fetch_status || {};
-  const daraz = fs.daraz_bd_reviews || 'pending';
-  const apify = fs.apify_social || 'pending';
-  const darazDot = daraz === 'ok' ? 'ok' : 'fail';
-  const apifyDot = apify === 'ok' ? 'ok' : (apify === 'skipped' ? 'skipped' : 'fail');
+  const daraz = (fs.daraz_bd_reviews || 'pending').toString();
+  const apify = (fs.apify_social || 'pending').toString();
+  const darazOk = daraz.startsWith('ok');
+  const apifyOk = apify.startsWith('ok');
+  const darazDot = darazOk ? 'ok' : 'fail';
+  const apifyDot = apifyOk ? 'ok' : (apify.startsWith('skipped') ? 'skipped' : 'fail');
   document.getElementById('status-info').innerHTML =
-    `<span class="dot ${darazDot}"></span>Daraz评论:${daraz} · <span class="dot ${apifyDot}"></span>Apify社媒:${apify}`;
+    `<span class="dot ${darazDot}" title="${daraz}"></span>Daraz评论:${darazOk?'ok':daraz.startsWith('fail')?'fail':'pending'} · <span class="dot ${apifyDot}" title="${apify}"></span>Apify社媒:${apifyOk?'ok':apify.startsWith('skipped')?'skipped':'fail'}`;
 }
 
 function updateSummary() {
