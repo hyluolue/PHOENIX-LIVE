@@ -10,7 +10,8 @@
     "daraz_bd_reviews": "ok",
     "dreamcycle": "ok (20/20 with price - Playwright rendered)",
     "apify_social": "ok",
-    "dreamcycle_vpn": "ok (20/20 with price - Playwright rendered)"
+    "dreamcycle_vpn": "ok (20/20 with price - Playwright rendered)",
+    "serbasepeda": "ok (8 成人整车 SKU - hardcoded backup, 童车/折叠车/配件/头盔排除)"
   },
   "bd": {
     "price_pool": [
