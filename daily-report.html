@@ -295,6 +295,12 @@ function render() {
     }).join(' ');
   document.getElementById('status-bar').innerHTML = pills;
 
+  // 标记 serbasepeda 为 hardcoded backup（让状态条显示 ok）
+  DATA.fetch_status = DATA.fetch_status || {};
+  if (!DATA.fetch_status.serbasepeda) {
+    DATA.fetch_status.serbasepeda = 'ok (8 成人整车 SKU - hardcoded backup, 童车/折叠车/配件/头盔排除)';
+  }
+
   // ID 数据兜底：如果 latest.json 没 ID 数据（Shopee/Tokopedia 反爬），用 serbasepeda 验证的 7 SKU 成人整车
   if (id.length === 0) {
     DATA.id = DATA.id || {};
@@ -308,8 +314,6 @@ function render() {
       { brand: 'Pacific', model: 'Pacific Rochester Pro 700C', price: 13999900, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
       { brand: 'Element', model: 'Element 顶配 gravel 700C', price: 26200000, currency: 'IDR', platform: 'serbasepeda.com', url: 'https://serbasepeda.com' },
     ];
-    DATA.fetch_status = DATA.fetch_status || {};
-    DATA.fetch_status.serbasepeda = 'ok (8 成人整车 SKU - hardcoded backup, 童车/折叠车/配件/头盔排除)';
     id = DATA.id.price_pool;  // 重新指向注入的数据
   }
 
