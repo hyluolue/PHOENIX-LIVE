@@ -255,23 +255,6 @@ function render() {
   const d = new Date();
   document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
 
-  // status bar - 状态判定：以 "ok" 开头（支持 "ok (...)" 带后缀）+ "fail" 开头（"fail (...)"）+ "partial" + "skipped"
-  const fs = DATA.fetch_status || {};
-  const pills = ['daraz_bd','dreamcycle','shopee_id','tokopedia','serbasepeda','news_bd','news_id','daraz_bd_reviews','apify_social']
-    .map(k => {
-      const s = (fs[k] || 'pending').toString();
-      const isOk = s.startsWith('ok');
-      const isFail = s.startsWith('fail');
-      const isPartial = s.startsWith('partial');
-      const cls = isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending';
-      const icon = isOk ? '✓' : isFail ? '✗' : isPartial ? '⚠' : '⏳';
-      const label = k.replace(/_/g,' ').toUpperCase();
-      // 显示简短描述（去掉 "ok (xxx)" 的括号内容，保留短状态）
-      const short = isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending';
-      return `<span class="pill ${cls}" title="${s}">${icon} ${label}: ${short}</span>`;
-    }).join(' ');
-  document.getElementById('status-bar').innerHTML = pills;
-
   let bd = (DATA.bd && DATA.bd.price_pool) || [];
   let id = (DATA.id && DATA.id.price_pool) || [];
 
@@ -294,6 +277,23 @@ function render() {
   // id 已是 hardcoded 8 成人整车，不重复过滤
   const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
   const social = ((DATA.global && DATA.global.dtc_social) || []);
+
+  // status bar - 状态判定：以 "ok" 开头（支持 "ok (...)" 带后缀）+ "fail" 开头（"fail (...)"）+ "partial" + "skipped"
+  const fs = DATA.fetch_status || {};
+  const pills = ['daraz_bd','dreamcycle','shopee_id','tokopedia','serbasepeda','news_bd','news_id','daraz_bd_reviews','apify_social']
+    .map(k => {
+      const s = (fs[k] || 'pending').toString();
+      const isOk = s.startsWith('ok');
+      const isFail = s.startsWith('fail');
+      const isPartial = s.startsWith('partial');
+      const cls = isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending';
+      const icon = isOk ? '✓' : isFail ? '✗' : isPartial ? '⚠' : '⏳';
+      const label = k.replace(/_/g,' ').toUpperCase();
+      // 显示简短描述（去掉 "ok (xxx)" 的括号内容，保留短状态）
+      const short = isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending';
+      return `<span class="pill ${cls}" title="${s}">${icon} ${label}: ${short}</span>`;
+    }).join(' ');
+  document.getElementById('status-bar').innerHTML = pills;
 
   // ID 数据兜底：如果 latest.json 没 ID 数据（Shopee/Tokopedia 反爬），用 serbasepeda 验证的 7 SKU 成人整车
   if (id.length === 0) {
