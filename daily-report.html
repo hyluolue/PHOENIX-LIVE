@@ -455,12 +455,40 @@ function renderOpportunities(bd, id, reviews, social) {
                      '中高端 (15-25K)': bd.filter(p => p.price >= 15000 && p.price < 25000).length,
                      '高端 (25-40K)': bd.filter(p => p.price >= 25000 && p.price < 40000).length,
                      '超高端 (40K+)': bd.filter(p => p.price >= 40000).length };
+    const densest = Object.entries(buckets).sort((a,b) => b[1] - a[1])[0];
+    const densestRatio = densest[1] / bdPrices.length;
+    // 红海提示（>30% SKU 集中在某价位）
+    if (densestRatio > 0.3) {
+      html.push(`<div class="opp"><strong>🔴 BD 红海价位：</strong>${densest[0]} 有 ${densest[1]} SKU（占总数 ${(densestRatio*100).toFixed(0)}%），竞品最密集。凤凰需差异化避免价格战。</div>`);
+    }
+    // 蓝海提示：低密度高价位（每价位带 <红海 1/4 = 蓝海机会）
+    const blueOcean = [];
+    Object.entries(buckets).forEach(([band, count]) => {
+      // 25K 以上 = 战略蓝海（高端切入）
+      if ((band.includes('40K') || band.includes('25-40K')) && count > 0 && count < densest[1] / 4) {
+        const items = bd.filter(p => {
+          const p = p.price || 0;
+          if (band.includes('40K')) return p >= 40000;
+          if (band.includes('25-40K')) return p >= 25000 && p < 40000;
+          return false;
+        });
+        const brands = [...new Set(items.map(p => p.brand))];
+        const maxP = items.reduce((max, p) => Math.max(max, p.price || 0), 0);
+        blueOcean.push({band, count, brands, maxPrice: maxP, ratio: ((count/bdPrices.length)*100).toFixed(1)});
+      }
+    });
+    if (blueOcean.length > 0) {
+      // 列出所有蓝海价位带
+      const boHtml = blueOcean.sort((a, b) => b.count - a.count).map(bo => {
+        const brandsList = bo.brands.slice(0, 5).join(' / ');
+        return `<b>${bo.band}</b> = ${bo.count} SKU · ${bo.brands.length} 品牌（${brandsList}）· 顶价 ${bo.maxPrice.toLocaleString()} BDT`;
+      }).join('；');
+      html.push(`<div class="opp" style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 BD 蓝海价位：</strong>${boHtml} = <b>凤凰可抢占 = 价值锚点 + 迈巴赫式品牌叙事</b></div>`);
+    }
+    // 真空提示（如果某价位真是 0 SKU）
     const empty = Object.entries(buckets).filter(([k,v]) => v === 0).map(([k]) => k);
     if (empty.length) {
-      html.push(`<div class="opp warn"><strong>BD 缺口价位段：</strong>${empty.join('、')} 无竞品 SKU。凤凰可考虑卡位。</div>`);
-    } else {
-      const densest = Object.entries(buckets).sort((a,b) => b[1] - a[1])[0];
-      html.push(`<div class="opp"><strong>BD 红海价位：</strong>${densest[0]} 有 ${densest[1]} SKU，竞品最密集。凤凰需差异化避免价格战。</div>`);
+      html.push(`<div class="opp warn"><strong>BD 真空价位段：</strong>${empty.join('、')} 无任何竞品 SKU。凤凰可考虑卡位。</div>`);
     }
   }
   // BD 缺品牌
