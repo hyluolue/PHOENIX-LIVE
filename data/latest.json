@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T11:47:05+08:00",
+  "generated_at": "2026-06-23T15:48:24+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -4157,6 +4157,128 @@
         "published_at": "",
         "is_new": true
       }
+    ],
+    "brand_pool": [
+      {
+        "brand": "Polygon",
+        "rank": 1,
+        "advantage": "印尼最具国际知名度本土品牌 · 东爪哇总部 · 远销欧美 · 赞助多支国际山地车职业车队",
+        "price_range": "Rp 5M-30M+",
+        "categories": "MTB / 公路 / 电助力",
+        "phx_strategy": "国际化对标 · 避开中端 (Rp 5-10M) 红海",
+        "roda_link": true
+      },
+      {
+        "brand": "United Bike",
+        "rank": 2,
+        "advantage": "印尼最大自行车制造企业 · 注重创新与高科技 · 全车型覆盖",
+        "price_range": "Rp 5M-15M",
+        "categories": "城市通勤 / MTB / 公路",
+        "phx_strategy": "印尼市占率第一 = 凤凰避其锋芒",
+        "roda_link": true
+      },
+      {
+        "brand": "Pacific",
+        "rank": 3,
+        "advantage": "高性价比 · 印尼本土极高市占率 · 极佳口碑 · 通勤/入门首选",
+        "price_range": "Rp 2M-10M",
+        "categories": "通勤 / 入门级",
+        "phx_strategy": "低端不竞争 · Phoenix 跳过入门价位",
+        "roda_link": true
+      },
+      {
+        "brand": "Wimcycle",
+        "rank": 4,
+        "advantage": "印尼家喻户晓传奇老牌 · 产品耐用设计经典",
+        "price_range": "Rp 3M-12M",
+        "categories": "MTB / 儿童车",
+        "phx_strategy": "老品牌忠诚度高 · Phoenix 难切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Element",
+        "rank": 5,
+        "advantage": "印尼年轻群体火爆 · 时尚折叠车和城市休闲车代表",
+        "price_range": "Rp 5M-26M",
+        "categories": "折叠 / 城市休闲 / 砾石",
+        "phx_strategy": "折叠车子品类 Phoenix 可切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Thrill Bicycle",
+        "rank": 6,
+        "advantage": "专注 MTB / 越野赛车 · 车架坚固 · 极限运动/山地爱好者喜爱",
+        "price_range": "Rp 5M-15M",
+        "categories": "MTB / 越野",
+        "phx_strategy": "V2 MTB 大单品直接对标",
+        "roda_link": true
+      },
+      {
+        "brand": "Genio Bike",
+        "rank": 7,
+        "advantage": "价格亲民设计现代 · 儿童与成人自行车 · 推广全民骑行",
+        "price_range": "Rp 2M-8M",
+        "categories": "儿童 / 成人入门",
+        "phx_strategy": "低价位不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Patrol",
+        "rank": 8,
+        "advantage": "高端 MTB · 优越几何设计与避震系统 · 专业越野/速降声誉",
+        "price_range": "Rp 8M-30M+",
+        "categories": "高端 MTB / 速降",
+        "phx_strategy": "V2 高端 MTB 战略对标 (=25K+ 蓝海真竞品)",
+        "roda_link": false
+      },
+      {
+        "brand": "Atlantis",
+        "rank": 9,
+        "advantage": "入门级市场强势 · 短途通勤/校园学生青睐",
+        "price_range": "Rp 1.5M-4M",
+        "categories": "入门 / 通勤",
+        "phx_strategy": "极低价不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Tabibitho",
+        "rank": 10,
+        "advantage": "轻量化与骑行体验 · 城市休闲/轻量 MTB · 年轻化现代设计",
+        "price_range": "Rp 4M-12M",
+        "categories": "城市休闲 / 轻量 MTB",
+        "phx_strategy": "城市休闲子品类可考虑",
+        "roda_link": true
+      }
+    ],
+    "channels": [
+      {
+        "name": "Rodalink",
+        "type": "官方经销商",
+        "coverage": "印尼全国",
+        "note": "Polygon / United / Pacific / Element / Wimcycle / Thrill / Genio / Atlantis / Tabibitho 9 品牌官方 dealer",
+        "url": "https://www.rodalink.com/"
+      },
+      {
+        "name": "serbasepeda.com",
+        "type": "专门零售",
+        "coverage": "印尼 (13 类目)",
+        "note": "首页 bestseller 8 整车 SKU (CF 拦截详情页)",
+        "url": "https://serbasepeda.com/"
+      },
+      {
+        "name": "Shopee ID",
+        "type": "电商",
+        "coverage": "印尼 1.5 亿月活",
+        "note": "反爬挡 (PerimeterX) = 仅 bestseller 可见",
+        "url": "https://shopee.co.id/"
+      },
+      {
+        "name": "Tokopedia",
+        "type": "电商",
+        "coverage": "印尼第二大电商",
+        "note": "反爬挡 (DataDome) = 仅 bestseller 可见",
+        "url": "https://www.tokopedia.com/"
+      }
     ]
   },
   "global": {
@@ -4569,7 +4691,7 @@
       }
     ]
   },
-  "gen_at": "2026-06-23T11:47:05+08:00",
+  "gen_at": "2026-06-23T15:48:24+08:00",
   "brand_metrics": {
     "computed_at": "2026-06-23T11:46:44+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4891,7 +5013,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-06-23T11:47:05+08:00",
+    "computed_at": "2026-06-23T15:48:24+08:00",
     "totals": {
       "bd_pool_total": 187,
       "bd_pool_priced": 187,
@@ -5063,10 +5185,149 @@
       "count": 4,
       "brands": [
         "Element",
-        "United",
-        "Pacific"
+        "Pacific",
+        "United"
       ]
     },
+    "id_top10_brands": [
+      {
+        "brand": "Polygon",
+        "rank": 1,
+        "advantage": "印尼最具国际知名度本土品牌 · 东爪哇总部 · 远销欧美 · 赞助多支国际山地车职业车队",
+        "price_range": "Rp 5M-30M+",
+        "categories": "MTB / 公路 / 电助力",
+        "phx_strategy": "国际化对标 · 避开中端 (Rp 5-10M) 红海",
+        "roda_link": true
+      },
+      {
+        "brand": "United Bike",
+        "rank": 2,
+        "advantage": "印尼最大自行车制造企业 · 注重创新与高科技 · 全车型覆盖",
+        "price_range": "Rp 5M-15M",
+        "categories": "城市通勤 / MTB / 公路",
+        "phx_strategy": "印尼市占率第一 = 凤凰避其锋芒",
+        "roda_link": true
+      },
+      {
+        "brand": "Pacific",
+        "rank": 3,
+        "advantage": "高性价比 · 印尼本土极高市占率 · 极佳口碑 · 通勤/入门首选",
+        "price_range": "Rp 2M-10M",
+        "categories": "通勤 / 入门级",
+        "phx_strategy": "低端不竞争 · Phoenix 跳过入门价位",
+        "roda_link": true
+      },
+      {
+        "brand": "Wimcycle",
+        "rank": 4,
+        "advantage": "印尼家喻户晓传奇老牌 · 产品耐用设计经典",
+        "price_range": "Rp 3M-12M",
+        "categories": "MTB / 儿童车",
+        "phx_strategy": "老品牌忠诚度高 · Phoenix 难切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Element",
+        "rank": 5,
+        "advantage": "印尼年轻群体火爆 · 时尚折叠车和城市休闲车代表",
+        "price_range": "Rp 5M-26M",
+        "categories": "折叠 / 城市休闲 / 砾石",
+        "phx_strategy": "折叠车子品类 Phoenix 可切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Thrill Bicycle",
+        "rank": 6,
+        "advantage": "专注 MTB / 越野赛车 · 车架坚固 · 极限运动/山地爱好者喜爱",
+        "price_range": "Rp 5M-15M",
+        "categories": "MTB / 越野",
+        "phx_strategy": "V2 MTB 大单品直接对标",
+        "roda_link": true
+      },
+      {
+        "brand": "Genio Bike",
+        "rank": 7,
+        "advantage": "价格亲民设计现代 · 儿童与成人自行车 · 推广全民骑行",
+        "price_range": "Rp 2M-8M",
+        "categories": "儿童 / 成人入门",
+        "phx_strategy": "低价位不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Patrol",
+        "rank": 8,
+        "advantage": "高端 MTB · 优越几何设计与避震系统 · 专业越野/速降声誉",
+        "price_range": "Rp 8M-30M+",
+        "categories": "高端 MTB / 速降",
+        "phx_strategy": "V2 高端 MTB 战略对标 (=25K+ 蓝海真竞品)",
+        "roda_link": false
+      },
+      {
+        "brand": "Atlantis",
+        "rank": 9,
+        "advantage": "入门级市场强势 · 短途通勤/校园学生青睐",
+        "price_range": "Rp 1.5M-4M",
+        "categories": "入门 / 通勤",
+        "phx_strategy": "极低价不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Tabibitho",
+        "rank": 10,
+        "advantage": "轻量化与骑行体验 · 城市休闲/轻量 MTB · 年轻化现代设计",
+        "price_range": "Rp 4M-12M",
+        "categories": "城市休闲 / 轻量 MTB",
+        "phx_strategy": "城市休闲子品类可考虑",
+        "roda_link": true
+      }
+    ],
+    "id_channels": [
+      {
+        "name": "Rodalink",
+        "type": "官方经销商",
+        "coverage": "印尼全国",
+        "note": "Polygon / United / Pacific / Element / Wimcycle / Thrill / Genio / Atlantis / Tabibitho 9 品牌官方 dealer",
+        "url": "https://www.rodalink.com/"
+      },
+      {
+        "name": "serbasepeda.com",
+        "type": "专门零售",
+        "coverage": "印尼 (13 类目)",
+        "note": "首页 bestseller 8 整车 SKU (CF 拦截详情页)",
+        "url": "https://serbasepeda.com/"
+      },
+      {
+        "name": "Shopee ID",
+        "type": "电商",
+        "coverage": "印尼 1.5 亿月活",
+        "note": "反爬挡 (PerimeterX) = 仅 bestseller 可见",
+        "url": "https://shopee.co.id/"
+      },
+      {
+        "name": "Tokopedia",
+        "type": "电商",
+        "coverage": "印尼第二大电商",
+        "note": "反爬挡 (DataDome) = 仅 bestseller 可见",
+        "url": "https://www.tokopedia.com/"
+      }
+    ],
+    "id_high_end_competitors": [
+      {
+        "brand": "Patrol",
+        "note": "高端 MTB · 8M-30M+ · V2 25K+ 真竞品",
+        "roda_link": false
+      },
+      {
+        "brand": "Polygon",
+        "note": "国际品牌 · 5M-30M+ · MTB/公路/电助力全覆盖",
+        "roda_link": true
+      },
+      {
+        "brand": "Element",
+        "note": "折叠/城市休闲/砾石 · 5M-26M · 折叠子品类可切入",
+        "roda_link": true
+      }
+    ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
         "rationale": "BD 15-25K 57 SKU 16 品牌，Phoenix 缺席；> 25K 31 SKU 7 品牌 = Rockrider/Veloce/Core 主导",
@@ -5104,8 +5365,8 @@
         "target_price": "Rp 9.5M",
         "id_competitors": [
           "Element",
-          "United",
-          "Pacific"
+          "Pacific",
+          "United"
         ]
       },
       "bd_road_bike": {
