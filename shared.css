@@ -1,0 +1,70 @@
+/* Phoenix-Live Shared Visual System v2.1
+   提取自 index.html 总览的视觉 token，统一全 9 Tab
+   2026-06-23 设计系统统一 */
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px;margin:0}
+a{color:#9ec5fe;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1200px;margin:0 auto}
+.header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
+h1{font-size:22px;font-weight:800}
+.subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+.nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+.nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+/* status-bar + pill 系统 */
+.status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+.pill{padding:4px 10px;border-radius:999px;font-weight:600}
+.pill-ok{background:#1b5e20;color:#a5d6a7}
+.pill-partial{background:#e65100;color:#ffcc80}
+.pill-fail{background:#b71c1c;color:#ffcdd2}
+.last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+.refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+.refresh-btn:hover{background:#1976d2}
+/* section 系统（白底 + dark 变体）*/
+.section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+.section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.section h2 .flag{font-size:18px}
+/* dark section（总览 V2 视觉关键）*/
+.section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
+.section.dark h2{color:#c8102e}
+.section.dark .kpi{background:rgba(255,255,255,.05);color:#fff;border-left-color:#5eead4}
+.section.dark .kpi-label{color:#5eead4}
+.section.dark .kpi-value{color:#fff}
+/* dark section 内 kpi 变体（避免黑底黑字）*/
+.section.dark .kpi.gap{background:rgba(230,81,0,.15);border-left-color:#ff9800;color:#fff}
+.section.dark .kpi.gap .kpi-label{color:#ffb74d}
+.section.dark .kpi.gap .kpi-value{color:#ffcc80}
+.section.dark .kpi.accent{background:rgba(200,16,46,.2);border-left-color:#ff5252;color:#fff}
+.section.dark .kpi.accent .kpi-label{color:#ff8a80}
+.section.dark .kpi.accent .kpi-value{color:#ffcdd2}
+.section.dark .kpi.dynamic{background:rgba(46,125,50,.2);border-left-color:#66bb6a;color:#fff}
+.section.dark .kpi.dynamic .kpi-label{color:#a5d6a7}
+.section.dark .kpi.dynamic .kpi-value{color:#c8e6c9}
+/* kpi 网格 + 单卡系统 */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
+.kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
+.kpi.dynamic{border-left-color:#2e7d32;background:#e8f5e9}
+.kpi.dynamic .kpi-label{color:#2e7d32}
+.kpi.dynamic .kpi-value{color:#1b5e20}
+.kpi.gap{background:#fff3e0;border-left-color:#e65100}
+.kpi.gap .kpi-label{color:#e65100}
+.kpi.gap .kpi-value{color:#bf360c}
+.kpi.accent{background:rgba(200,16,46,.08);border-left-color:#c8102e}
+.kpi.accent .kpi-label{color:#c8102e}
+.kpi.accent .kpi-value{color:#c8102e}
+.kpi-value small{font-weight:400;color:#888;display:block;margin-top:2px}
+/* insight 系统（暗色 block 上的浅色洞察）*/
+.insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
+.insight b{color:#5eead4}
+.insight .gap{color:#5eead4}
+.insight .hl{color:#c8102e}
+ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
+.footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+/* V2.1 补充：badge 系统（strategy/task 用）*/
+.badge{display:inline-block;padding:2px 8px;background:#5eead4;color:#1a1a2e;border-radius:6px;font-size:10px;font-weight:700;margin-left:6px}
+/* V2.1 补充：hl 高亮 + delta 数值标签（用于 KPI 数字下小字）*/
+.delta{display:inline-block;padding:1px 6px;background:#fff3e0;color:#e65100;border-radius:4px;font-size:10px;font-weight:700;margin-left:4px}
+.hl{background:rgba(200,16,46,.1);color:#c8102e;padding:1px 4px;border-radius:3px;font-weight:700}
