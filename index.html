@@ -205,52 +205,12 @@
     </div>
 
     <div class="section">
-      <h2><span class="flag">📈</span>品牌监控汇总 - TOP 10 中高端 <small style="color:#999;font-weight:400">（BD 5K-30K BDT 中高端整车 · 排除白牌/童车/折叠/电动/配件）</small></h2>
-      <div class="kpi-grid">
-        <div class="kpi accent">
-          <div class="kpi-label">Phoenix</div>
-          <div class="kpi-value">14 SKU · 7,999-14,999<br><small>BD 中高端第一真品牌</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Foxter</div>
-          <div class="kpi-value">8 SKU · 13,300-16,999<br><small>BD 第二</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Duranta</div>
-          <div class="kpi-value">7 SKU · 8,748-16,320<br><small>BD 第三</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Marine</div>
-          <div class="kpi-value">5 SKU · 12,500-19,000<br><small>中端 MTB</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Veloce</div>
-          <div class="kpi-value">3 SKU · 11,000-18,999</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Warrior</div>
-          <div class="kpi-value">3 SKU · 14,999-18,999<br><small>中高端</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Hero</div>
-          <div class="kpi-value">2 SKU · 12,000-12,500</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Polloux</div>
-          <div class="kpi-value">1 SKU · 9,800<br><small>dreamcycle 自有</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Uctocifu</div>
-          <div class="kpi-value">1 SKU · 12,000<br><small>dreamcycle 自有</small></div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Core</div>
-          <div class="kpi-value">1 SKU · 12,300</div>
-        </div>
-        <div class="kpi gap" style="grid-column: span 2">
-          <div class="kpi-label">🚫 排除项 (抓取但未计入中高端)</div>
-          <div class="kpi-value" style="color:#94a3b8">38 SKU 周边 (Daraz 白牌 Generic) · 4 SKU 童车 · 2 SKU 折叠 · 1 SKU 电动 43,500 · 5 SKU ≤ 5K / ≥ 30K 价格外围</div>
-        </div>
+      <h2><span class="flag">📈</span>品牌监控汇总 - TOP 10 中高端 <small style="color:#999;font-weight:400">（BD 5K-30K BDT · 排除白牌/童车/折叠/电动/配件 · 加权得分：SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10%）</small></h2>
+      <div class="kpi-grid" id="brand-monitor-grid">
+        <div class="kpi"><div class="kpi-label">⏳ 加载中…</div><div class="kpi-value">从 latest.json#brand_metrics 读</div></div>
+      </div>
+      <div class="insight" style="margin-top:14px">
+        <b>📊 评分方法论：</b>SKU 数仅占 20% 权重，<b>真正的"中高端第一" = ASP 30% + 高端占比 20% + 顶价 20%</b>——这意味着"少而精"的高价品牌（Kiesel 1 SKU 27K = 68 分）能超过"多而中"的中端品牌（Phoenix 8 SKU 14.4K ASP = 38 分）。<b>Tab #1 与 Tab #5 共享同一份 brand_metrics</b>，互为验证。
       </div>
     </div>
 
@@ -352,6 +312,30 @@
     const bdHigh = bdPriced.filter(it => it.price >= 25000).length;
     document.getElementById('bd-gap-1').textContent = bdMidHigh + ' SKU';
     document.getElementById('bd-gap-2').textContent = bdHigh + ' SKU';
+
+    // 品牌监控：走 brand_metrics.rankings 前 10（与 Tab #5 product-matrix 共享）
+    const brandGrid = document.getElementById('brand-monitor-grid');
+    const rankings = (data.brand_metrics && data.brand_metrics.rankings) || [];
+    if (rankings.length > 0) {
+      let html = '';
+      rankings.slice(0, 10).forEach((m, i) => {
+        const isPhx = m.brand.toLowerCase() === 'phoenix';
+        const kpiClass = isPhx ? 'kpi accent' : 'kpi';
+        const rank = i + 1;
+        const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '·';
+        const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix 实际定位中端</small>' : '';
+        html += `<div class="${kpiClass}">
+          <div class="kpi-label">${rankEmoji} ${esc(m.brand)} (${m.score} 分)</div>
+          <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K) · ${m.in_stock_rate}% 有货</small>${tag}</div>
+        </div>`;
+      });
+      // 排除项 KPI
+      html += `<div class="kpi gap" style="grid-column: span 2">
+        <div class="kpi-label">🚫 排除项（抓取但未计入中高端）</div>
+        <div class="kpi-value" style="color:#94a3b8">38 SKU 周边 (Daraz 白牌 Generic) · 4 SKU 童车 · 2 SKU 折叠 · 1 SKU 电动 43,500 · 5 SKU ≤ 5K / ≥ 30K 价格外围</div>
+      </div>`;
+      brandGrid.innerHTML = html;
+    }
 
     // ID 实时数据 (serbasepeda hardcoded)
     document.getElementById('id-count').textContent = '16';
