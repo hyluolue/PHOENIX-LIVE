@@ -186,6 +186,13 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
   <a href="./index.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏠 总览</a>
 </div>
 
+<!-- V2 战略完成度跟踪（自动从 dashboard_metrics 计算） -->
+<div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,rgba(200,16,46,.05),transparent)">
+  <h2>📊 V2 战略完成度跟踪 <span class="badge">实时 · dashboard_metrics 驱动</span></h2>
+  <div id="v2-progress" style="font-size:12px;color:#e2e8f0;line-height:1.8">⏳ 加载中…</div>
+  <div style="margin-top:10px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
+</div>
+
 <!-- V2 草稿 -->
 <div class="section">
   <h2>🆕 V2 草稿 <span class="badge">DRAFT 2026-06-11</span></h2>
@@ -272,9 +279,63 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
 <script src="./data/strategy_v1.js"></script>
 <script>
 const DATA_URL = './data/strategy_notes.json';
+const LATEST_URL = './data/latest.json';
 
 let currentQuad = 'all';
 let allNotes = [];
+
+// V2 战略完成度跟踪（自动从 dashboard_metrics 计算）
+async function loadV2Progress() {
+  const el = document.getElementById('v2-progress');
+  try {
+    const r = await fetch(LATEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    const dm = data.dashboard_metrics || {};
+    const totals = dm.totals || {};
+    const phxGap = dm.phx_gap || {};
+    const id715 = dm.id_7_15m || {};
+    // V2 KR 进度计算
+    const phxSku = totals.phx_bd_mid_high || 0;
+    const skuPct = Math.min((phxSku / 20) * 100, 100);
+    const phxMax = phxGap.phx_max_price || 0;
+    const maxPct = Math.min((phxMax / 40000) * 100, 100);
+    const phxAsp = totals.phx_bd_asp || 0;
+    const aspPct = Math.min((phxAsp / 22000) * 100, 100);
+    const idSku = id715.count || 0;
+    const idPct = Math.min((idSku / 5) * 100, 100);
+    const overall = (skuPct + maxPct + aspPct + idPct) / 4;
+    el.innerHTML = `
+      <div style="margin-bottom:10px">
+        <b style="color:#ff9cae">🎯 V2 整体完成度：${overall.toFixed(0)}%</b>
+        <div style="background:rgba(255,255,255,.1);border-radius:6px;height:8px;margin-top:4px;overflow:hidden">
+          <div style="background:linear-gradient(90deg,#c8102e,#ff9cae);height:8px;width:${overall.toFixed(0)}%;transition:width .5s"></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.2 SKU 数量 <span style="color:#5eead4">${phxSku}/20</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${skuPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.3 顶价 <span style="color:#5eead4">${phxMax.toLocaleString()}/40K</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${maxPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.4 ASP <span style="color:#5eead4">${phxAsp.toLocaleString()}/22K</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${aspPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR2.4 ID SKU <span style="color:#5eead4">${idSku}/5</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${idPct.toFixed(0)}%"></div></div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:#cbd5e1">勾连：每条 KR → Tab #3 product-matrix 蓝海 + Tab #6 task OKR 行动 + Tab #7 dtc 差评</div>
+    `;
+  } catch (e) {
+    el.innerHTML = '<div style="color:#94a3b8">⚠ 加载 latest.json 失败：' + e.message + '</div>';
+  }
+}
 
 async function loadNotes() {
   try {
@@ -425,6 +486,7 @@ renderV2Frames();
 renderFrameworks();
 renderV1();
 loadNotes();
+loadV2Progress();
 </script>
 
 </body>
