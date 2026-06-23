@@ -305,38 +305,36 @@
       document.getElementById('bd-phx-range').textContent = Math.min(...phxPrices).toLocaleString() + ' - ' + Math.max(...phxPrices).toLocaleString();
       document.getElementById('bd-phx-detail').textContent = 'Donald 12,300 / Miracle 13,000 / Donald v2 13,500 / Tornado 13,700';
     }
-    const bdMidHigh = bdPriced.filter(it => it.price >= 15000 && it.price < 25000).length;
-    const bdHigh = bdPriced.filter(it => it.price >= 25000).length;
-    document.getElementById('bd-gap-1').textContent = bdMidHigh + ' SKU';
-    document.getElementById('bd-gap-2').textContent = bdHigh + ' SKU';
+    const dm = data.dashboard_metrics || {};
+    const totals = dm.totals || {};
+    const phxGap = dm.phx_gap || {};
+    const bands = dm.bands || {};
+    const gt25 = dm.gt_25k_brands || {};
+    const id715 = dm.id_7_15m || {};
 
-    // 关键价格段洞察：BD 15-25K / 25K+ / Phoenix 覆盖 / ID 7-15M（与 Tab #2 #5 共享同一份数据）
-    const bdMidHighItems = bdPriced.filter(it => it.price >= 15000 && it.price < 25000);
-    const bdHighItems = bdPriced.filter(it => it.price >= 25000);
-    // BD 15-25K 品牌
-    const midHighBrands = [...new Set(bdMidHighItems.map(it => it.brand))];
-    document.getElementById('bd-band-midhigh').innerHTML = `${bdMidHighItems.length} SKU · ${midHighBrands.length} 品牌<br><small>${midHighBrands.slice(0, 5).join(' / ')}</small>`;
-    // BD > 25K 品牌
-    const highBrands = [...new Set(bdHighItems.map(it => it.brand))];
-    const highNoElec = bdHighItems.filter(it => !((it.model || '').toLowerCase().includes('electric') || (it.brand || '').toLowerCase().includes('electric')));
-    document.getElementById('bd-band-high').innerHTML = `${bdHighItems.length} SKU · ${highBrands.length} 品牌<br><small>${highBrands.slice(0, 5).join(' / ')} ${highNoElec.length < bdHighItems.length ? '<br><span style="color:#94a3b8">含 1 SKU 电动 (43.5K)</span>' : ''}</small>`;
-    // Phoenix 真实覆盖
-    const phxItems = bdPriced.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
-    const phxMid = phxItems.filter(it => it.price >= 15000).length;
-    const phxHigh = phxItems.filter(it => it.price >= 25000).length;
-    document.getElementById('bd-phx-band').innerHTML = `${phxItems.length} SKU · ${phxItems.length > 0 ? Math.min(...phxItems.map(it => it.price)).toLocaleString() : '-'} - ${phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)).toLocaleString() : '-'} BDT<br><small>${phxMid} 中高端 + ${phxHigh} 高端 · Phoenix 顶价仅 ${phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)).toLocaleString() : '-'} (远低于 Core 32K / Veloce 36K)</small>`;
-    // ID 7-15M
-    const idItems = ((data.id && data.id.price_pool) || []);
-    const idMidHigh = idItems.filter(it => it.price >= 7e6 && it.price < 15e6);
-    const idBrands = [...new Set(idMidHigh.map(it => it.brand))];
-    document.getElementById('id-band').innerHTML = `${idMidHigh.length} SKU · ${idBrands.length} 品牌<br><small>${idBrands.join(' / ')}</small>`;
-    // 战略洞察列表
-    const phxMax = phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)) : 0;
+    // 顶 KPI（同步 Tab #1 顶部）
+    document.getElementById('bd-gap-1').textContent = (bands.bd_15_25k ? bands.bd_15_25k.count : 0) + ' SKU';
+    document.getElementById('bd-gap-2').textContent = (bands.bd_gt_25k ? bands.bd_gt_25k.count : 0) + ' SKU';
+
+    // 关键价格段洞察（统一从 dashboard_metrics 读）
+    if (bands.bd_15_25k) {
+      document.getElementById('bd-band-midhigh').innerHTML = `${bands.bd_15_25k.count} SKU · ${bands.bd_15_25k.brands_count} 品牌<br><small>${bands.bd_15_25k.top_5_brands.join(' / ')}</small>`;
+    }
+    if (bands.bd_gt_25k) {
+      document.getElementById('bd-band-high').innerHTML = `${bands.bd_gt_25k.count} SKU · ${bands.bd_gt_25k.brands_count} 品牌<br><small>${bands.bd_gt_25k.top_5_brands.join(' / ')}${phxGap.gt_25k_brands.length > bands.bd_gt_25k.top_5_brands.length ? ' +' + (phxGap.gt_25k_brands.length - bands.bd_gt_25k.top_5_brands.length) : ''}</small>`;
+    }
+    if (totals.phx_bd_mid_high !== undefined) {
+      document.getElementById('bd-phx-band').innerHTML = `${totals.phx_bd_mid_high} SKU · ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT<br><small>ASP ${totals.phx_bd_asp.toLocaleString()} · 顶价远低行业 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</small>`;
+    }
+    if (id715.count !== undefined) {
+      document.getElementById('id-band').innerHTML = `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`;
+    }
+    // 战略洞察列表（统一从 dashboard_metrics 读）
     const strategyHtml = [
-      `<li><b>BD 15-25K 中高端</b>：${bdMidHighItems.length} SKU · ${midHighBrands.length} 品牌（${midHighBrands.slice(0, 4).join('/')}) = <span class="hl">Phoenix 仍缺席</span>，V2 战略大单品切入点</li>`,
-      `<li><b>BD &gt; 25K 高端</b>：${bdHighItems.length} SKU · ${highBrands.length} 品牌（${highBrands.slice(0, 4).join('/')})，<span class="hl">Phoenix 仍缺席</span>（Phoenix 顶价 ${phxMax.toLocaleString()} vs 行业顶价 65,000 Rockrider XC 404）</li>`,
-      `<li><b>BD 中端红海</b>：10-15K BDT 31 SKU 8 品牌（Phoenix 占 5 SKU）= Phoenix 实际战场，需 SGS 认证跳出价格战</li>`,
-      `<li><b>ID 7-15M</b>：${idMidHigh.length} SKU ${idBrands.join('/')} = 无 SGS 中国品牌真空，Thunder ID 切入点</li>`,
+      `<li><b>BD 15-25K 中高端</b>：${phxGap.gt_15_25k_count} SKU · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌（${bands.bd_15_25k ? bands.bd_15_25k.top_5_brands.slice(0, 4).join('/') : ''}）= <span class="hl">Phoenix 仍缺席</span>，V2 战略大单品切入点</li>`,
+      `<li><b>BD &gt; 25K 高端</b>：${phxGap.gt_25k_count} SKU · ${phxGap.gt_25k_brand_count} 品牌（${phxGap.gt_25k_brands.slice(0, 4).join('/')}），<span class="hl">Phoenix 顶价仅 ${totals.phx_bd_max.toLocaleString()}（行业 ${phxGap.industry_max_brand} ${phxGap.industry_max_price.toLocaleString()}）</span></li>`,
+      `<li><b>BD 中端红海</b>：10-15K BDT ${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌（Phoenix ${(data.bd.price_pool || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU）= 实际战场，需 SGS 跳出价格战</li>`,
+      `<li><b>ID 7-15M</b>：${id715.count} SKU ${id715.brands.join('/')} = 无 SGS 中国品牌真空，Thunder ID 切入点</li>`,
     ].join('');
     document.getElementById('bd-strategy-list').innerHTML = strategyHtml;
 
