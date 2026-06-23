@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>品牌战略迭代 · V1→V2 · PHOENIX 全球作战室</title>
+  <link rel="stylesheet" href="./shared.css">
 <style>
+
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -171,7 +178,18 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
     <div class="title">🎯 品牌战略迭代 · V1 → V2</div>
     <div class="subtitle" id="subtitle">凤凰自行车 · 品牌战略工作台 · 理论框架交叉验证</div>
   </div>
-  <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
+  <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily-report.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./product-matrix.html">💎 产品矩阵</a>
+      <a href="./bangladesh.html">🇧🇩 孟加拉</a>
+      <a href="./indonesia.html">🇮🇩 印尼</a>
+      <a href="./task.html">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html" class="active">🧠 策略迭代</a>
+    </div>
+    <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
 </header>
 
 <div class="phoenix-nav" style="display:flex;flex-wrap:wrap;gap:6px;padding:0 24px 12px;font-size:12px">
