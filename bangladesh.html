@@ -301,23 +301,20 @@
       }
     }
 
-    // 战略洞察 + 价格锚点机会（动态计算）
-    const t3Items = all.filter(it => it.price >= 15000 && it.price < 25000);
-    const t4Items = all.filter(it => it.price >= 25000);
-    const t3Brands = [...new Set(t3Items.map(it => it.brand))];
-    const t4Brands = [...new Set(t4Items.map(it => it.brand))];
-    const phxItems = all.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
-    const phxMax = phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)) : 0;
-    const phxMid = phxItems.filter(it => it.price >= 15000).length;
-    const phxHigh = phxItems.filter(it => it.price >= 25000).length;
+    // 战略洞察 + 价格锚点机会（统一从 dashboard_metrics 读）
+    const dm = data.dashboard_metrics || {};
+    const phxGap = dm.phx_gap || {};
+    const totals = dm.totals || {};
+    const bands = dm.bands || {};
+    const id715 = dm.id_7_15m || {};
     const strategyHtml = [
-      `<li><b>Phoenix ${phxItems.length} SKU 真实价位 ${phxItems.length > 0 ? Math.min(...phxItems.map(it=>it.price)).toLocaleString() : '-'} - ${phxMax.toLocaleString()} BDT</b>（含 ${phxMid} 中高端 + ${phxHigh} 高端）= <span class="gap">远低于行业顶价 65,000 (Rockrider XC 404)</span></li>`,
-      `<li><b>15K-25K 中高端 ${t3Items.length} SKU</b> · ${t3Brands.length} 品牌（${t3Brands.slice(0,5).join('/')}）= <b>Phoenix 仍缺席</b>，V2 战略大单品切入点</li>`,
-      `<li><b>&gt; 25K 高端 ${t4Items.length} SKU</b> · ${t4Brands.length} 品牌（${t4Brands.slice(0,5).join('/')}），<b>Phoenix 顶价仅 ${phxMax.toLocaleString()} = 缺席</b></li>`,
-      `<li><b>中端 10K-15K 红海</b>：Phoenix ${phxItems.filter(it => it.price >= 10000 && it.price < 15000).length} SKU 在此价位，与 Duranta/Veloce/Foxter/Warrior/Hero 8 品牌混战 → 需 SGS 认证跳出价格战</li>`,
+      `<li><b>Phoenix ${totals.phx_bd_mid_high} SKU 真实价位 ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT</b>（ASP ${totals.phx_bd_asp.toLocaleString()}）= <span class="gap">远低于行业顶价 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</span></li>`,
+      `<li><b>15K-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌（${bands.bd_15_25k ? bands.bd_15_25k.top_5_brands.slice(0, 5).join('/') : ''}）= <b>Phoenix 仍缺席</b>，V2 战略大单品切入点</li>`,
+      `<li><b>&gt; 25K 高端 ${phxGap.gt_25k_count} SKU</b> · ${phxGap.gt_25k_brand_count} 品牌（${phxGap.gt_25k_brands.slice(0, 5).join('/')}），<b>Phoenix 顶价仅 ${totals.phx_bd_max.toLocaleString()} = 缺席</b></li>`,
+      `<li><b>中端 10K-15K 红海</b>：${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌混战（Phoenix ${(all || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU） → 需 SGS 认证跳出价格战</li>`,
     ].join('');
     document.getElementById('bd-tier-strategy').innerHTML = strategyHtml;
-    document.getElementById('bd-anchor').innerHTML = `15K-25K ${t3Items.length} SKU (${t3Brands.length} 品牌)<br>&gt; 25K ${t4Items.length} SKU (${t4Brands.length} 品牌)<br><small>Phoenix 仍缺席，可入</small>`;
+    document.getElementById('bd-anchor').innerHTML = `15K-25K ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU (${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌)<br>&gt; 25K ${phxGap.gt_25k_count} SKU (${phxGap.gt_25k_brand_count} 品牌)<br><small>Phoenix 仍缺席，可入</small>`;
 
     // 新闻
     const news = (data.bd && data.bd.news) || [];
