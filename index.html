@@ -331,8 +331,10 @@
     }
     // 战略洞察列表（统一从 dashboard_metrics 读）
     const strategyHtml = [
-      `<li><b>BD 15-25K 中高端</b>：${phxGap.gt_15_25k_count} SKU · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌（${bands.bd_15_25k ? bands.bd_15_25k.top_5_brands.slice(0, 4).join('/') : ''}）= <span class="hl">Phoenix 仍缺席</span>，V2 战略大单品切入点</li>`,
-      `<li><b>BD &gt; 25K 高端</b>：${phxGap.gt_25k_count} SKU · ${phxGap.gt_25k_brand_count} 品牌（${phxGap.gt_25k_brands.slice(0, 4).join('/')}），<span class="hl">Phoenix 顶价仅 ${totals.phx_bd_max.toLocaleString()}（行业 ${phxGap.industry_max_brand} ${phxGap.industry_max_price.toLocaleString()}）</span></li>`,
+      `<li><b style="color:#c8102e">🚫 25-40K 红海（避开）：</b>25 SKU 7 品牌（Rockrider 8/Veloce 7/Core 5/Ceres 2/Magpy 2/Kiesel 1）= Phoenix 进去就是价格战</li>`,
+      `<li><b style="color:#2e7d32">💎 40-60K 真空（V2.1 切入）：</b>仅 5 SKU 5 品牌（Rockrider XC 越野 4 + Duranta 电动 1）= Phoenix UCI 公路车 = 避开竞争 + 抢占蓝海</li>`,
+      `<li><b>65K+ 顶价：</b>Rockrider XC 404 = 65,000 = 行业天花板 = <b>Phoenix 公路车价值锚点</b></li>`,
+      `<li><b>BD 15-25K 中高端</b>：${phxGap.gt_15_25k_count} SKU · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌（${bands.bd_15_25k ? bands.bd_15_25k.top_5_brands.slice(0, 4).join('/') : ''}）= Phoenix 仍缺席，<b>可入但不首选</b>（先做 40-60K 公路车）</li>`,
       `<li><b>BD 中端红海</b>：10-15K BDT ${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌（Phoenix ${(data.bd.price_pool || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU）= 实际战场，需 SGS 跳出价格战</li>`,
       `<li><b>ID 7-15M</b>：${id715.count} SKU ${id715.brands.join('/')} = 无 SGS 中国品牌真空，Thunder ID 切入点</li>`,
     ].join('');
