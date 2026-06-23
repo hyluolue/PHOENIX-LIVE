@@ -236,10 +236,16 @@
     const totalBrands = Object.keys(byBrand).length;
     const totalItems = items.length - genericCount;
     const priced = items.filter(i => i.price > 0 && (i.brand || '').toLowerCase() !== 'generic').length;
+    // 顶部 summary 同步 dashboard_metrics（与 Tab #1 #5 共享）
+    const dm = allData.dashboard_metrics || {};
+    const phxGap = dm.phx_gap || {};
+    const phxBm = (allData.brand_metrics && allData.brand_metrics.rankings || []).find(r => r.brand.toLowerCase() === 'phoenix');
+    const phxPos = phxBm ? (allData.brand_metrics.rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix') + 1) : '?';
     document.getElementById('summary').innerHTML =
       `中高端整车 <strong>${totalItems}</strong> 条 · <strong>${priced}</strong> 条有价 · <strong>${totalBrands}</strong> 品牌（TOP 10 已截取）` +
       (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
-      (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`);
+      (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
+      ` · <span style="color:#c8102e">Phoenix 排名 #${phxPos}（${phxBm ? phxBm.score : '-'} 分）· 顶价 ${phxGap.phx_max_price ? phxGap.phx_max_price.toLocaleString() : '?'} vs 行业 ${phxGap.industry_max_price ? phxGap.industry_max_price.toLocaleString() : '?'} (${phxGap.industry_max_brand || '?'})</span>`;
 
     // 价格段品牌矩阵（按区域分别显示）
     const tierGrid = document.getElementById('tier-grid');
@@ -309,22 +315,27 @@
       grid.innerHTML = '<div class="empty">无匹配数据</div>';
       return;
     }
-    // 排序：Phoenix 排第一 + 按 SKU 数倒序，取 TOP 10
-    const order = Object.keys(byBrand)
-      .sort((a, b) => {
-        if (a === 'Phoenix') return -1;
-        if (b === 'Phoenix') return 1;
-        return byBrand[b].length - byBrand[a].length;  // 按 SKU 数倒序
-      })
-      .slice(0, 10);  // TOP 10 中高端品牌
+    // 排序：走 brand_metrics.rankings（与 Tab #1 #5 共享，按加权得分倒序）
+    // Phoenix 不再硬排第一 —— 真实位置由评分决定（当前 #14）
+    const rankings = (allData.brand_metrics && allData.brand_metrics.rankings) || [];
+    const rankedBrands = new Set(rankings.map(r => r.brand));
+    const order = [
+      // 1. brand_metrics 排过序的（前 10 已经在 rankings.slice(0,10)）
+      ...rankings.slice(0, 10).map(r => r.brand).filter(b => byBrand[b]),
+      // 2. brand_metrics 没用但 byBrand 有的（兜底）
+      ...Object.keys(byBrand).filter(b => !rankedBrands.has(b)).sort((a, b) => byBrand[b].length - byBrand[a].length),
+    ].slice(0, 10);
 
     grid.innerHTML = order.map(brand => {
       const cardItems = byBrand[brand].slice(0, 5); // 每个品牌最多显示 5 条
       const more = byBrand[brand].length - cardItems.length;
       const cls = brand.toLowerCase();
+      // 找 brand_metrics 里的得分
+      const bm = rankings.find(r => r.brand === brand);
+      const scoreTag = bm ? ` <span style="color:#c8102e;font-weight:700">${bm.score} 分</span>` : '';
       return `
         <div class="brand-card ${cls}">
-          <div class="brand-name">${esc(brand)} <span style="color:#999;font-weight:400;font-size:11px">· ${byBrand[brand].length} 条</span></div>
+          <div class="brand-name">${esc(brand)} <span style="color:#999;font-weight:400;font-size:11px">· ${byBrand[brand].length} 条</span>${scoreTag}</div>
           ${cardItems.map(it => {
             // 价格格式：IDR → Rp X.XM；BDT → 原样
             const priceStr = it.currency === 'IDR' ? 'Rp ' + (it.price / 1e6).toFixed(2) + 'M' : (it.currency || 'BDT') + ' ' + it.price.toLocaleString();
