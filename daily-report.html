@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>市场日报 · 凤凰自行车中高端MTB全球作战室</title>
+<link rel="stylesheet" href="./shared.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
@@ -11,10 +12,13 @@ a{color:#9ec5fe;text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1400px;margin:0 auto}
 .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-.logo{width:44px;height:44px;background:#4a148c;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
-h1{font-size:20px;font-weight:800}
+.logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
+h1{font-size:22px;font-weight:800}
 .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
 .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+.nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+.nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
 .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
 .pill{padding:4px 10px;border-radius:999px;font-weight:600}
 .pill.ok{background:rgba(16,185,129,.2);color:#6ee7b7}
@@ -25,6 +29,8 @@ h1{font-size:20px;font-weight:800}
 .dot.ok{background:#10b981}
 .dot.fail{background:#ef4444}
 .dot.partial{background:#f59e0b}
+.refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+.refresh-btn:hover{background:#1976d2}
 
 /* Grid layout */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px;margin-bottom:18px}
@@ -99,8 +105,9 @@ h1{font-size:20px;font-weight:800}
       <h1>📊 市场日报</h1>
       <div class="subtitle">孟加拉 + 印尼 双市场 · <span id="date"></span> · 每日 9:00 自动抓取</div>
     </div>
-    <a href="https://phoenix-live.pages.dev/" <div class="nav">
-      <a href="./daily-report.html">📅 市场日报</a>
+    <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily-report.html" class="active">📅 市场日报</a>
       <a href="./competitive.html">🏆 竞品监控</a>
       <a href="./product-matrix.html">💎 产品矩阵</a>
       <a href="./bangladesh.html">🇧🇩 孟加拉</a>
@@ -109,7 +116,7 @@ h1{font-size:20px;font-weight:800}
       <a href="./dtc.html">💬 DTC 差评</a>
       <a href="./strategy.html">🧠 策略迭代</a>
     </div>
-    <a class="back-link">← 返回总览</a>
+    <a class="back-link" href="./index.html">← 返回总览</a>
   </div>
 
   <div class="status-bar" id="status-bar">
