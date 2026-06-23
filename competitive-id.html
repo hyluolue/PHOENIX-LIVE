@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>印尼竞品监控 · 实时</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1400px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+    h1{font-size:20px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
+    .pill-ok{background:#1b5e20;color:#a5d6a7}
+    .pill-partial{background:#e65100;color:#ffcc80}
+    .pill-fail{background:#b71c1c;color:#ffcdd2}
+    .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section h2{font-size:16px;font-weight:700;color:#c8102e;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section h2 .flag{font-size:18px}
+    .filter-bar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+    .filter-bar label{font-size:12px;color:#666;margin-right:4px}
+    .filter-bar select,.filter-bar input{padding:5px 10px;border:1px solid #ddd;border-radius:6px;font-size:12px;background:#fff;color:#333}
+    .filter-bar input{min-width:200px}
+    .brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+    .brand-card{background:#fafafa;border-radius:10px;padding:12px 14px;border-left:4px solid #c8102e;transition:transform .15s}
+    .brand-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    .brand-card.phoenix{border-left-color:#c8102e;background:#fff5f6}
+    .brand-card.marine{border-left-color:#1565c0;background:#e3f2fd}
+    .brand-card.giant{border-left-color:#2e7d32;background:#e8f5e9}
+    .brand-card.foxter{border-left-color:#9c27b0;background:#f3e5f5}
+    .brand-card.pacific{border-left-color:#ff6f00;background:#fff3e0}
+    .brand-card.warrior{border-left-color:#5d4037;background:#efebe9}
+    .brand-card.thorne{border-left-color:#00838f;background:#e0f7fa}
+    .brand-card.duranta{border-left-color:#c2185b;background:#fce4ec}
+    .brand-card.veloce{border-left-color:#558b2f;background:#f1f8e9}
+    .brand-card.pentane{border-left-color:#0277bd;background:#e1f5fe}
+    .brand-name{font-size:14px;font-weight:800;color:#0d47a1;margin-bottom:6px;text-transform:uppercase}
+    .brand-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.05);font-size:11px}
+    .brand-item:last-child{border-bottom:none}
+    .brand-item .model{color:#555;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:8px}
+    .brand-item .price{color:#c8102e;font-weight:700;white-space:nowrap}
+    .brand-item a{color:inherit}
+    .summary{background:#e3f2fd;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:14px;color:#0d47a1}
+    .summary strong{color:#c8102e}
+    .empty{padding:40px 20px;text-align:center;color:#999;font-size:13px;font-style:italic}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🇮🇩 印尼竞品监控 · 实时价格</h1>
+        <div class="subtitle">ID MTB 中高端市场（Rp 1M-30M IDR）· <span id="date"></span> · 每日 9:00 自动更新</div>
+      </div>
+    <div class="nav">
+      <a href="./daily-report.html">📅 市场日报</a>
+      <a href="./competitive-bd.html">🇧🇩 BD 竞品</a>
+      <a href="./competitive-id.html">🇮🇩 ID 竞品</a>
+      <a href="./product-matrix.html">💎 产品矩阵</a>
+      <a href="./bangladesh.html">🇧🇩 孟加拉</a>
+      <a href="./indonesia.html">🇮🇩 印尼</a>
+      <a href="./task.html">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html">🧠 策略迭代</a>
+    </div>
+    <a class="back-link" href="./index.html">← 返回主面板</a>
+    </div>
+
+    <div class="status-bar">
+      <span id="status-shopee" class="pill pill-fail">⏳ shopee_id</span>
+      <span id="status-tokopedia" class="pill pill-fail">⏳ tokopedia</span>
+      <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
+      <span class="last-updated" id="updated">—</span>
+      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📈</span>品牌价格矩阵 <small style="color:#999;font-weight:400">（按品牌聚合）</small></h2>
+      <div class="summary" id="summary">加载中...</div>
+      <div class="filter-bar">
+        <label>筛选：</label>
+        <select id="region-filter">
+          <option value="all">全部地区</option>
+          <option value="bd">🇧🇩 孟加拉</option>
+          <option value="id">🇮🇩 印尼</option>
+        </select>
+        <input type="text" id="search" placeholder="🔍 搜品牌或型号..." />
+      </div>
+      <div id="tier-grid" class="tier-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px"></div>
+      <div id="brand-grid" class="brand-grid"></div>
+    </div>
+
+    <div class="section" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4">
+      <h2 style="color:#5eead4"><span class="flag">🏪</span>ID 本土平台档案 <small style="color:#999;font-weight:400">· 2026-06-15 验证</small></h2>
+      <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-top:8px">
+        <div style="background:rgba(94,234,212,.12);border-left:3px solid #5eead4;padding:12px;border-radius:6px">
+          <div style="font-size:11px;color:#5eead4;font-weight:700;text-transform:uppercase">🇮🇩 serbasepeda.com ✓ 真实（部分）</div>
+          <div style="font-size:12px;color:#fff;margin-top:6px;line-height:1.6">
+            <strong>类型</strong>：ID 自行车专门零售平台<br>
+            <strong>技术</strong>：CF challenge + 详情页不渲染<br>
+            <strong>在售品牌</strong>：Pacific / United / Element / Polygon / 13 类目 dealer<br>
+            <strong>SKU</strong>：8 成人整车（CF 拦截详情页，仅首页 bestseller 16 SKU 快照）<br>
+            <strong>价格</strong>：Rp 5.12M - 26.2M<br>
+            <strong>价值</strong>：<span style="color:#5eead4">Phoenix ID 渠道真空</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
+        <div style="background:rgba(94,234,212,.08);border-left:3px solid #94a3b8;padding:12px;border-radius:6px">
+          <div style="font-size:11px;color:#94a3b8;font-weight:700;text-transform:uppercase">🇮🇩 Shopee ID ✗ 反爬</div>
+          <div style="font-size:12px;color:#fff;margin-top:6px;line-height:1.6">
+            <strong>类型</strong>：ID 最大电商平台<br>
+            <strong>技术</strong>：PerimeterX 反爬墙<br>
+            <strong>SKU</strong>：未抓取（需 App + 滑块）<br>
+            <strong>价值</strong>：<span style="color:#94a3b8">待破</span>
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.08);border-left:3px solid #94a3b8;padding:12px;border-radius:6px">
+          <div style="font-size:11px;color:#94a3b8;font-weight:700;text-transform:uppercase">🇮🇩 Tokopedia ✗ 反爬</div>
+          <div style="font-size:12px;color:#fff;margin-top:6px;line-height:1.6">
+            <strong>类型</strong>：ID 第二大电商<br>
+            <strong>技术</strong>：DataDome 反爬墙<br>
+            <strong>SKU</strong>：未抓取<br>
+            <strong>价值</strong>：<span style="color:#94a3b8">待破</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      数据来源：serbasepeda.com (8 ID 整车 SKU - hardcoded backup) / 6Wresearch 2025 / OEC 2024 / Sogou<br />
+      本页面为 Phoenix-Live Tab #2b · 印尼竞品监控 · 每日 9:00 自动更新
+    </div>
+  </div>
+
+<script>
+  const cn = ['日','一','二','三','四','五','六'];
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  let allData = null;
+
+  async function load() {
+    let data;
+    try {
+      const r = await fetch('./data/latest.json', {cache: 'no-store'});
+      data = await r.json();
+    } catch (e) {
+      document.getElementById('brand-grid').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
+      return;
+    }
+    allData = data;
+    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+
+    const s = data.fetch_status || {};
+    function setPill(elId, k) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      const v = (s[k] || 'pending').toString();
+      const isOk = v.startsWith('ok');
+      const isFail = v.startsWith('fail');
+      const isPartial = v.startsWith('partial');
+      el.className = 'pill ' + (isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending');
+      el.textContent = (isOk ? '✓ ' : isFail ? '✗ ' : isPartial ? '⚠ ' : '⏳ ') + k.replace(/_/g, ' ');
+      el.title = v;
+    }
+    setPill('status-shopee', 'shopee_id');
+    setPill('status-tokopedia', 'tokopedia');
+    setPill('status-serbasepeda', 'serbasepeda');
+
+    render();
+  }
+
+  function render() {
+    if (!allData) return;
+    const region = 'id';  // 锁定 ID 区域（ID 独立 Tab）
+    const search = document.getElementById('search').value.toLowerCase();
+
+    // 收集价格项
+    const items = [];
+    if (region === 'all' || region === 'bd') {
+      for (const it of (allData.bd?.price_pool || [])) {
+        items.push({...it, _region: 'BD'});
+      }
+    }
+    if (region === 'all' || region === 'id') {
+      for (const it of (allData.id?.price_pool || [])) {
+        items.push({...it, _region: 'ID'});
+      }
+    }
+
+    // 品牌名归一化（处理首字母大写差异）
+    function brandKey(b) {
+      if (!b) return 'Generic';
+      const lower = b.toLowerCase();
+      if (lower.includes('phoenix')) return 'Phoenix';
+      if (lower.includes('marine')) return 'Marine';
+      if (lower.includes('giant')) return 'Giant';
+      if (lower.includes('foxter')) return 'Foxter';
+      if (lower.includes('pacific')) return 'Pacific';
+      if (lower.includes('warrior')) return 'Warrior';
+      if (lower.includes('thorne')) return 'Thorne';
+      if (lower.includes('duranta')) return 'Duranta';
+      if (lower.includes('veloce')) return 'Veloce';
+      if (lower.includes('be worth') || lower.includes('beworth')) return 'Be worth';
+      if (lower.includes('polygon')) return 'Polygon';
+      return b;
+    }
+
+    // 中高端整车筛选：BD 5K-30K BDT / ID Rp 1M-30M
+    // 排除童车/折叠/BMX/头盔/灯/瓶架/挡泥板等周边
+    const EXCLUDED_KW = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', 'helmet', 'lamp', 'light', 'bracket', 'fender', 'bell', 'lock', 'bottle', 'bag', 'carrier', 'pump', 'seat post', 'chain', 'pedal', 'grip', 'saddle', 'tire', 'tyre', 'tube', 'spoke', 'handle', 'bar end', 'glove', '眼镜', '护具', 'wear', 'jacket', 'sticker', 'bell', 'mirror', 'pannier', 'rack'];
+    function isMidHighAdultBike(it) {
+      const p = it.price || 0;
+      if (it._region === 'BD' && (p < 5000 || p > 30000)) return false;
+      if (it._region === 'ID' && (p < 1e6 || p > 3e7)) return false;
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      if (EXCLUDED_KW.some(kw => m.includes(kw))) return false;
+      return true;
+    }
+
+    // 按品牌聚合（排除 Generic = Daraz 白牌 + 限定中高端整车）
+    const byBrand = {};
+    const genericCount = items.filter(it => (it.brand || '').toLowerCase() === 'generic').length;
+    for (const it of items) {
+      if ((it.brand || '').toLowerCase() === 'generic') continue;
+      if (!isMidHighAdultBike(it)) continue;  // 中高端整车筛选
+      if (search) {
+        const s = (it.brand + ' ' + (it.model || '')).toLowerCase();
+        if (!s.includes(search)) continue;
+      }
+      const k = brandKey(it.brand);
+      if (!byBrand[k]) byBrand[k] = [];
+      byBrand[k].push(it);
+    }
+
+    // 统计
+    const totalBrands = Object.keys(byBrand).length;
+    const totalItems = items.length - genericCount;
+    const priced = items.filter(i => i.price > 0 && (i.brand || '').toLowerCase() !== 'generic').length;
+    // 顶部 summary 同步 dashboard_metrics（与 Tab #1 #5 共享）
+    const dm = allData.dashboard_metrics || {};
+    const phxGap = dm.phx_gap || {};
+    const phxBm = (allData.brand_metrics && allData.brand_metrics.rankings || []).find(r => r.brand.toLowerCase() === 'phoenix');
+    const phxPos = phxBm ? (allData.brand_metrics.rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix') + 1) : '?';
+    document.getElementById('summary').innerHTML =
+      `中高端整车 <strong>${totalItems}</strong> 条 · <strong>${priced}</strong> 条有价 · <strong>${totalBrands}</strong> 品牌（TOP 10 已截取）` +
+      (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
+      (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
+      ` · <span style="color:#c8102e">Phoenix 排名 #${phxPos}（${phxBm ? phxBm.score : '-'} 分）· 顶价 ${phxGap.phx_max_price ? phxGap.phx_max_price.toLocaleString() : '?'} vs 行业 ${phxGap.industry_max_price ? phxGap.industry_max_price.toLocaleString() : '?'} (${phxGap.industry_max_brand || '?'})</span>`;
+
+    // 价格段品牌矩阵（按区域分别显示）
+    const tierGrid = document.getElementById('tier-grid');
+    let tierHtml = '';
+
+    if (region === 'all' || region === 'bd') {
+      const bdItems = items.filter(it => it._region === 'BD' && it.price > 0 && (it.brand || '').toLowerCase() !== 'generic');
+      const tierBands = [
+        { name: 'BD < 10K', lo: 0, hi: 10000, color: '#90a4ae' },
+        { name: 'BD 10K-15K', lo: 10000, hi: 15000, color: '#1565c0' },
+        { name: 'BD 15K-25K', lo: 15000, hi: 25000, color: '#e65100' },
+        { name: 'BD > 25K', lo: 25000, hi: 1e9, color: '#c8102e' },
+      ];
+      tierHtml += '<div style="grid-column: 1/-1;font-size:12px;font-weight:800;color:#0d47a1;margin-top:4px">🇧🇩 孟加拉 BDT 价段</div>';
+      tierHtml += tierBands.map(t => {
+        const inTier = bdItems.filter(it => it.price >= t.lo && it.price < t.hi);
+        const phx = inTier.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+        const brands = [...new Set(inTier.map(it => it.brand))].sort();
+        const isGap = inTier.length === 0;
+        return `
+          <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
+              <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
+              <span style="font-size:10px;color:#94a3b8;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
+            </div>
+            <div style="font-size:11px;color:#666;line-height:1.5">
+              ${isGap ? '<span style="color:#c8102e;font-weight:700">⚠ 真实真空</span>' : brands.length <= 3 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 3).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 3) + '</span>'}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    if (region === 'all' || region === 'id') {
+      const idItems = items.filter(it => it._region === 'ID' && it.price > 0);
+      const tierBandsId = [
+        { name: 'ID < Rp 1M', lo: 0, hi: 1e6, color: '#90a4ae' },
+        { name: 'ID Rp 1-7M', lo: 1e6, hi: 7e6, color: '#1565c0' },
+        { name: 'ID Rp 7-15M', lo: 7e6, hi: 15e6, color: '#e65100' },
+        { name: 'ID > Rp 15M', lo: 15e6, hi: 1e12, color: '#c8102e' },
+      ];
+      tierHtml += '<div style="grid-column: 1/-1;font-size:12px;font-weight:800;color:#0d47a1;margin-top:8px">🇮🇩 印尼 IDR 价段</div>';
+      tierHtml += tierBandsId.map(t => {
+        const inTier = idItems.filter(it => it.price >= t.lo && it.price < t.hi);
+        const phx = inTier.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+        const brands = [...new Set(inTier.map(it => it.brand))].sort();
+        const isGap = inTier.length === 0;
+        return `
+          <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
+              <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
+              <span style="font-size:10px;color:#94a3b8;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
+            </div>
+            <div style="font-size:11px;color:#666;line-height:1.5">
+              ${isGap ? '<span style="color:#94a3b8">· 真空（无数据）</span>' : brands.length <= 4 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 4).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 4) + '</span>'}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    tierGrid.innerHTML = tierHtml || '';
+
+    // 渲染品牌卡
+    const grid = document.getElementById('brand-grid');
+    if (totalBrands === 0) {
+      grid.innerHTML = '<div class="empty">无匹配数据</div>';
+      return;
+    }
+    // 排序：走 brand_metrics.rankings（与 Tab #1 #5 共享，按加权得分倒序）
+    // Phoenix 不再硬排第一 —— 真实位置由评分决定（当前 #14）
+    const rankings = (allData.brand_metrics && allData.brand_metrics.rankings) || [];
+    const rankedBrands = new Set(rankings.map(r => r.brand));
+    const order = [
+      // 1. brand_metrics 排过序的（前 10 已经在 rankings.slice(0,10)）
+      ...rankings.slice(0, 10).map(r => r.brand).filter(b => byBrand[b]),
+      // 2. brand_metrics 没用但 byBrand 有的（兜底）
+      ...Object.keys(byBrand).filter(b => !rankedBrands.has(b)).sort((a, b) => byBrand[b].length - byBrand[a].length),
+    ].slice(0, 10);
+
+    grid.innerHTML = order.map(brand => {
+      const cardItems = byBrand[brand].slice(0, 5); // 每个品牌最多显示 5 条
+      const more = byBrand[brand].length - cardItems.length;
+      const cls = brand.toLowerCase();
+      // 找 brand_metrics 里的得分
+      const bm = rankings.find(r => r.brand === brand);
+      const scoreTag = bm ? ` <span style="color:#c8102e;font-weight:700">${bm.score} 分</span>` : '';
+      return `
+        <div class="brand-card ${cls}">
+          <div class="brand-name">${esc(brand)} <span style="color:#999;font-weight:400;font-size:11px">· ${byBrand[brand].length} 条</span>${scoreTag}</div>
+          ${cardItems.map(it => {
+            // 价格格式：IDR → Rp X.XM；BDT → 原样
+            const priceStr = it.currency === 'IDR' ? 'Rp ' + (it.price / 1e6).toFixed(2) + 'M' : (it.currency || 'BDT') + ' ' + it.price.toLocaleString();
+            return `
+            <a class="brand-item" href="${esc(it.url)}" target="_blank" rel="noopener">
+              <span class="model">${esc(it.model)} <span style="color:#888">(${esc(it.platform)})</span></span>
+              <span class="price">${priceStr}</span>
+            </a>
+          `;}).join('')}
+          ${more > 0 ? `<div style="font-size:10px;color:#999;padding:4px 0;text-align:right">+${more} more</div>` : ''}
+        </div>
+      `;
+    }).join('');
+  }
+
+  // 移除 region-filter（ID 独立 Tab 锁定 ID）
+  document.getElementById('search').addEventListener('input', render);
+
+  load();
+</script>
+</body>
+</html>
