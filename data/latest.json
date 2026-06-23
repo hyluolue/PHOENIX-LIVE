@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-23T09:47:18+08:00",
+  "generated_at": "2026-06-23T10:23:46+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -4569,9 +4569,9 @@
       }
     ]
   },
-  "gen_at": "2026-06-23T09:47:18+08:00",
+  "gen_at": "2026-06-23T10:23:46+08:00",
   "brand_metrics": {
-    "computed_at": "2026-06-23T09:47:18+08:00",
+    "computed_at": "2026-06-23T10:23:30+08:00",
     "method": "score = (sku*0.2) + (asp/30K*100*0.3) + (high_tier_pct*100*0.2) + (max/50K*100*0.2) + (in_stock_rate*100*0.1)",
     "excluded_keywords": [
       "kid",
@@ -4611,8 +4611,38 @@
       "rack"
     ],
     "price_range": "BD 5K-30K BDT",
-    "total_brands": 23,
+    "total_brands": 25,
     "rankings": [
+      {
+        "brand": "Rockrider",
+        "sku_count": 15,
+        "asp": 33467,
+        "max_price": 65000,
+        "high_tier_count": 15,
+        "high_tier_pct": 100,
+        "in_stock_rate": 20,
+        "score": 84.5
+      },
+      {
+        "brand": "Magpy",
+        "sku_count": 2,
+        "asp": 38000,
+        "max_price": 38000,
+        "high_tier_count": 2,
+        "high_tier_pct": 100,
+        "in_stock_rate": 100,
+        "score": 83.6
+      },
+      {
+        "brand": "Ceres",
+        "sku_count": 2,
+        "asp": 34500,
+        "max_price": 37000,
+        "high_tier_count": 2,
+        "high_tier_pct": 100,
+        "in_stock_rate": 50,
+        "score": 74.7
+      },
       {
         "brand": "Kiesel",
         "sku_count": 1,
@@ -4622,6 +4652,16 @@
         "high_tier_pct": 100,
         "in_stock_rate": 100,
         "score": 68.0
+      },
+      {
+        "brand": "Veloce",
+        "sku_count": 18,
+        "asp": 22022,
+        "max_price": 36000,
+        "high_tier_count": 16,
+        "high_tier_pct": 89,
+        "in_stock_rate": 72,
+        "score": 65.0
       },
       {
         "brand": "Mustang",
@@ -4635,33 +4675,13 @@
       },
       {
         "brand": "Core",
-        "sku_count": 15,
-        "asp": 19607,
-        "max_price": 30000,
-        "high_tier_count": 13,
-        "high_tier_pct": 87,
-        "in_stock_rate": 73,
-        "score": 59.3
-      },
-      {
-        "brand": "Veloce",
-        "sku_count": 15,
-        "asp": 19527,
-        "max_price": 30000,
-        "high_tier_count": 13,
-        "high_tier_pct": 87,
-        "in_stock_rate": 73,
-        "score": 59.2
-      },
-      {
-        "brand": "Rockrider",
-        "sku_count": 8,
-        "asp": 25000,
-        "max_price": 28000,
-        "high_tier_count": 8,
-        "high_tier_pct": 100,
-        "in_stock_rate": 0,
-        "score": 57.8
+        "sku_count": 16,
+        "asp": 20381,
+        "max_price": 32000,
+        "high_tier_count": 14,
+        "high_tier_pct": 88,
+        "in_stock_rate": 75,
+        "score": 61.4
       },
       {
         "brand": "Falcon",
@@ -4734,6 +4754,16 @@
         "score": 47.8
       },
       {
+        "brand": "Duranta",
+        "sku_count": 8,
+        "asp": 16870,
+        "max_price": 43500,
+        "high_tier_count": 4,
+        "high_tier_pct": 50,
+        "in_stock_rate": 12,
+        "score": 47.1
+      },
+      {
         "brand": "Ghost",
         "sku_count": 2,
         "asp": 17100,
@@ -4772,16 +4802,6 @@
         "high_tier_pct": 25,
         "in_stock_rate": 75,
         "score": 32.8
-      },
-      {
-        "brand": "Duranta",
-        "sku_count": 7,
-        "asp": 13066,
-        "max_price": 16320,
-        "high_tier_count": 3,
-        "high_tier_pct": 43,
-        "in_stock_rate": 14,
-        "score": 31.0
       },
       {
         "brand": "Adder",
@@ -4846,11 +4866,11 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-06-23T09:47:18+08:00",
+    "computed_at": "2026-06-23T10:23:46+08:00",
     "totals": {
       "bd_pool_total": 187,
       "bd_pool_priced": 187,
-      "bd_pool_mid_high": 104,
+      "bd_pool_mid_high": 120,
       "bd_pool_brands": 27,
       "id_pool_total": 8,
       "id_pool_brands": 4,
@@ -5017,9 +5037,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Element",
         "Pacific",
-        "United"
+        "United",
+        "Element"
       ]
     },
     "strategy_v2": {
@@ -5058,9 +5078,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Element",
           "Pacific",
-          "United"
+          "United",
+          "Element"
         ]
       },
       "bd_road_bike": {
