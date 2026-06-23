@@ -174,32 +174,29 @@
     </div>
 
     <div class="section dark">
-      <h2><span class="flag" style="color:#c8102e">🔥</span>关键价格段真空（从 latest.json 56 SKU 真实数据归纳）</h2>
+      <h2><span class="flag" style="color:#c8102e">🔥</span>关键价格段洞察（从 latest.json 187 SKU 真实数据归纳）</h2>
       <div class="kpi-grid">
         <div class="kpi gap">
-          <div class="kpi-label">BD 15K-25K BDT</div>
-          <div class="kpi-value">16 SKU · 5 品牌<br><small>Marine/Veloce/Duranta/Foxter/Warrior</small></div>
+          <div class="kpi-label">BD 15K-25K BDT 中高端</div>
+          <div class="kpi-value" id="bd-band-midhigh">⏳ 加载中…</div>
         </div>
         <div class="kpi gap">
-          <div class="kpi-label">BD &gt; 25K BDT</div>
-          <div class="kpi-value">0 SKU · 真实真空<br><small>（Duranta 43,500 为电动，非传统自行车）</small></div>
+          <div class="kpi-label">BD &gt; 25K BDT 高端</div>
+          <div class="kpi-value" id="bd-band-high">⏳ 加载中…</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">BD Phoenix 真实覆盖</div>
-          <div class="kpi-value">14 SKU 全 &lt; 15K BDT<br><small>其中 12 个 ≤ 10K（儿童车）</small></div>
+          <div class="kpi-value" id="bd-phx-band">⏳ 加载中…</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">ID Rp 7-15M 中高端</div>
-          <div class="kpi-value">ELEMENT FRC 38 砾石<br>UNITED STERLING R1 700C<br><small>本土 4 大品牌主导</small></div>
+          <div class="kpi-value" id="id-band">⏳ 加载中…</div>
         </div>
       </div>
       <div class="insight">
         <b>🚀 战略级价格洞察：</b>
-        <ul class="tight">
-          <li><b>BD 中端红海</b>：10K-15K BDT 27 SKU 15 品牌混战，Phoenix 需靠 SGS 认证/三标跳出价格战</li>
-          <li><b>BD 中高端真空</b>：15K-25K 段 Phoenix 完全缺席，<span class="gap">真实可入</span>（V2 战略大单品 = 这个价位带）</li>
-          <li><b>BD 高端真空（仅传统自行车）</b>：&gt; 25K BDT 段 = <span class="hl">0 个真品牌 SKU</span>，Phoenix 迈巴赫式价值锚点机会</li>
-          <li><b>ID 中端空白</b>：Rp 6-10M 区间无 SGS 认证品牌，Thunder ID Rp 9.5M 最佳切入</li>
+        <ul class="tight" id="bd-strategy-list">
+          <li>⏳ 加载中…</li>
         </ul>
       </div>
     </div>
@@ -312,6 +309,36 @@
     const bdHigh = bdPriced.filter(it => it.price >= 25000).length;
     document.getElementById('bd-gap-1').textContent = bdMidHigh + ' SKU';
     document.getElementById('bd-gap-2').textContent = bdHigh + ' SKU';
+
+    // 关键价格段洞察：BD 15-25K / 25K+ / Phoenix 覆盖 / ID 7-15M（与 Tab #2 #5 共享同一份数据）
+    const bdMidHighItems = bdPriced.filter(it => it.price >= 15000 && it.price < 25000);
+    const bdHighItems = bdPriced.filter(it => it.price >= 25000);
+    // BD 15-25K 品牌
+    const midHighBrands = [...new Set(bdMidHighItems.map(it => it.brand))];
+    document.getElementById('bd-band-midhigh').innerHTML = `${bdMidHighItems.length} SKU · ${midHighBrands.length} 品牌<br><small>${midHighBrands.slice(0, 5).join(' / ')}</small>`;
+    // BD > 25K 品牌
+    const highBrands = [...new Set(bdHighItems.map(it => it.brand))];
+    const highNoElec = bdHighItems.filter(it => !((it.model || '').toLowerCase().includes('electric') || (it.brand || '').toLowerCase().includes('electric')));
+    document.getElementById('bd-band-high').innerHTML = `${bdHighItems.length} SKU · ${highBrands.length} 品牌<br><small>${highBrands.slice(0, 5).join(' / ')} ${highNoElec.length < bdHighItems.length ? '<br><span style="color:#94a3b8">含 1 SKU 电动 (43.5K)</span>' : ''}</small>`;
+    // Phoenix 真实覆盖
+    const phxItems = bdPriced.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    const phxMid = phxItems.filter(it => it.price >= 15000).length;
+    const phxHigh = phxItems.filter(it => it.price >= 25000).length;
+    document.getElementById('bd-phx-band').innerHTML = `${phxItems.length} SKU · ${phxItems.length > 0 ? Math.min(...phxItems.map(it => it.price)).toLocaleString() : '-'} - ${phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)).toLocaleString() : '-'} BDT<br><small>${phxMid} 中高端 + ${phxHigh} 高端 · Phoenix 顶价仅 ${phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)).toLocaleString() : '-'} (远低于 Core 32K / Veloce 36K)</small>`;
+    // ID 7-15M
+    const idItems = ((data.id && data.id.price_pool) || []);
+    const idMidHigh = idItems.filter(it => it.price >= 7e6 && it.price < 15e6);
+    const idBrands = [...new Set(idMidHigh.map(it => it.brand))];
+    document.getElementById('id-band').innerHTML = `${idMidHigh.length} SKU · ${idBrands.length} 品牌<br><small>${idBrands.join(' / ')}</small>`;
+    // 战略洞察列表
+    const phxMax = phxItems.length > 0 ? Math.max(...phxItems.map(it => it.price)) : 0;
+    const strategyHtml = [
+      `<li><b>BD 15-25K 中高端</b>：${bdMidHighItems.length} SKU · ${midHighBrands.length} 品牌（${midHighBrands.slice(0, 4).join('/')}) = <span class="hl">Phoenix 仍缺席</span>，V2 战略大单品切入点</li>`,
+      `<li><b>BD &gt; 25K 高端</b>：${bdHighItems.length} SKU · ${highBrands.length} 品牌（${highBrands.slice(0, 4).join('/')})，<span class="hl">Phoenix 仍缺席</span>（Phoenix 顶价 ${phxMax.toLocaleString()} vs 行业顶价 65,000 Rockrider XC 404）</li>`,
+      `<li><b>BD 中端红海</b>：10-15K BDT 31 SKU 8 品牌（Phoenix 占 5 SKU）= Phoenix 实际战场，需 SGS 认证跳出价格战</li>`,
+      `<li><b>ID 7-15M</b>：${idMidHigh.length} SKU ${idBrands.join('/')} = 无 SGS 中国品牌真空，Thunder ID 切入点</li>`,
+    ].join('');
+    document.getElementById('bd-strategy-list').innerHTML = strategyHtml;
 
     // 品牌监控：走 brand_metrics.rankings 前 10（与 Tab #5 product-matrix 共享）
     const brandGrid = document.getElementById('brand-monitor-grid');
