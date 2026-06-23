@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>竞品监控 · 实时</title>
+  <title>孟加拉竞品监控 · 实时</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -61,8 +61,8 @@
     <div class="header">
       <div class="logo">P</div>
       <div>
-        <h1>🎯 竞品监控 · 实时价格</h1>
-        <div class="subtitle">MTB 全球市场 · <span id="date"></span> · 每日 9:00 自动更新</div>
+        <h1>🏆 竞品监控 · 实时价格</h1>
+        <div class="subtitle">🇧🇩 BD / 🇮🇩 ID 双市场切换 · <span id="date"></span> · 每日 9:00 自动更新</div>
       </div>
       <a <div class="nav">
       <a href="./daily-report.html">📅 市场日报</a>
@@ -89,20 +89,19 @@
       <h2><span class="flag">📈</span>品牌价格矩阵 <small style="color:#999;font-weight:400">（按品牌聚合）</small></h2>
       <div class="summary" id="summary">加载中...</div>
       <div class="filter-bar">
-        <label>筛选：</label>
-        <select id="region-filter">
-          <option value="all">全部地区</option>
-          <option value="bd">🇧🇩 孟加拉</option>
-          <option value="id">🇮🇩 印尼</option>
-        </select>
-        <input type="text" id="search" placeholder="🔍 搜品牌或型号..." />
+        <label>市场：</label>
+        <div class="region-tabs" style="display:inline-flex;gap:0;background:rgba(0,0,0,.05);border-radius:8px;padding:3px;margin-right:8px">
+          <button class="region-tab active" data-region="bd" style="padding:5px 14px;border:none;background:#1565c0;color:#fff;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇧🇩 孟加拉</button>
+          <button class="region-tab" data-region="id" style="padding:5px 14px;border:none;background:transparent;color:#1565c0;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇮🇩 印尼</button>
+        </div>
+        <input type="text" id="search" placeholder="🔍 搜品牌或型号..." style="flex:1" />
       </div>
       <div id="tier-grid" class="tier-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px"></div>
       <div id="brand-grid" class="brand-grid"></div>
     </div>
 
     <div class="section" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4">
-      <h2 style="color:#5eead4"><span class="flag">🏪</span>本土独立站档案 <small style="color:#999;font-weight:400">· 2026-06-15 验证</small></h2>
+      <h2 style="color:#5eead4"><span class="flag">🏪</span>本土独立站 / 平台档案 <small style="color:#999;font-weight:400">· 2026-06-15 验证</small></h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
         <div style="background:rgba(94,234,212,.12);border-left:3px solid #5eead4;padding:12px;border-radius:6px">
           <div style="font-size:11px;color:#5eead4;font-weight:700;text-transform:uppercase">🇧🇩 dreamcycle.store ✓ 真实</div>
@@ -111,7 +110,7 @@
             <strong>技术</strong>：WordPress + WooCommerce<br>
             <strong>在售品牌</strong>：Duranta / Veloce / Core / Rockrider / <strong style="color:#5eead4">Phoenix</strong> / Foxter / Marine / Warrior / Avon / 25+<br>
             <strong>SKU</strong>：113 真实整车（6 页 × 20 SKU）<br>
-            <strong>价格</strong>：8,750-40,000 BDT<br>
+            <strong>价格</strong>：8,750-65,000 BDT（行业顶价 Rockrider XC 404）<br>
             <strong>TK</strong>：@dreamcyclestorebd<br>
             <strong>价值</strong>：<span style="color:#5eead4">凤凰已入驻渠道</span>
           </div>
@@ -131,8 +130,8 @@
     </div>
 
     <div class="footer">
-      数据来源：Daraz BD / dreamcycle.store (113 SKU) / serbasepeda.com (8 ID 整车) / Sogou / OEC<br />
-      本页面为 Phoenix-Live Tab #4 · 区域筛选 🇧🇩 BD / 🇮🇩 ID · 每日 9:00 自动更新
+      数据来源：Daraz BD (74 SKU) / dreamcycle.store (113 SKU) / serbasepeda.com (8 ID 整车) / Sogou / OEC<br />
+      本页面为 Phoenix-Live Tab #2 · 竞品监控（🇧🇩 BD / 🇮🇩 ID 切换）· 每日 9:00 自动更新
     </div>
   </div>
 
@@ -176,12 +175,13 @@
     setPill('status-dreamcycle', 'dreamcycle');
     setPill('status-serbasepeda', 'serbasepeda');
 
+
     render();
   }
 
   function render() {
     if (!allData) return;
-    const region = document.getElementById('region-filter').value;
+    const region = window._currentRegion || 'bd';  // 由 tab 控制
     const search = document.getElementById('search').value.toLowerCase();
 
     // 收集价格项
@@ -361,7 +361,21 @@
     }).join('');
   }
 
-  document.getElementById('region-filter').addEventListener('change', render);
+  // region tab 切换
+  document.querySelectorAll('.region-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.region-tab').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'transparent';
+        b.style.color = '#1565c0';
+      });
+      btn.classList.add('active');
+      btn.style.background = btn.dataset.region === 'bd' ? '#1565c0' : '#2e7d32';
+      btn.style.color = '#fff';
+      window._currentRegion = btn.dataset.region;
+      render();
+    });
+  });
   document.getElementById('search').addEventListener('input', render);
 
   load();
