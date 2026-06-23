@@ -329,11 +329,6 @@
           <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K) · ${m.in_stock_rate}% 有货</small>${tag}</div>
         </div>`;
       });
-      // 排除项 KPI
-      html += `<div class="kpi gap" style="grid-column: span 2">
-        <div class="kpi-label">🚫 排除项（抓取但未计入中高端）</div>
-        <div class="kpi-value" style="color:#94a3b8">38 SKU 周边 (Daraz 白牌 Generic) · 4 SKU 童车 · 2 SKU 折叠 · 1 SKU 电动 43,500 · 5 SKU ≤ 5K / ≥ 30K 价格外围</div>
-      </div>`;
       brandGrid.innerHTML = html;
     }
 
