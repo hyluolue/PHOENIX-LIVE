@@ -188,6 +188,13 @@ footer {
   <div class="stat"><div class="label">社媒帖子</div><div class="value" id="stat-social">-</div><div class="delta" id="stat-social-delta">-</div></div>
 </div>
 
+<!-- 数据驱动的产品研发方向（自动从 dtc_reviews 差评关键词提取）-->
+<div style="background:linear-gradient(135deg,rgba(200,16,46,.1),rgba(255,255,255,.02));border:1px solid rgba(200,16,46,.3);border-left:4px solid #c8102e;border-radius:10px;padding:14px 18px;margin-bottom:20px">
+  <div style="font-size:12px;color:#c8102e;font-weight:700;margin-bottom:8px">💡 数据驱动的产品研发方向（自动从差评文本提取）</div>
+  <div id="rd-direction" style="font-size:12px;color:#e2e8f0;line-height:1.7">⏳ 加载中…</div>
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #5 蓝海机会 = 差评高频词 → 新产品研发方向</div>
+</div>
+
 <div style="background:linear-gradient(135deg,rgba(94,234,212,.12),rgba(94,234,212,.04));border:1px solid rgba(94,234,212,.3);border-left:4px solid #5eead4;border-radius:10px;padding:14px 18px;margin-bottom:20px">
   <div style="font-size:12px;color:#5eead4;font-weight:700;margin-bottom:6px">🏪 BD 渠道图谱（2026-06-11 验证）</div>
   <div style="font-size:13px;color:#e2e8f0;line-height:1.7">
@@ -245,9 +252,11 @@ async function loadData() {
 
     allReviews = (data.bd && data.bd.dtc_reviews) || [];
     allSocial = (data.global && data.global.dtc_social) || [];
+    window.DM_CACHE = data.dashboard_metrics || {};  // 给 renderRDDirection 用
 
     updateHeader(data);
     updateSummary();
+    renderRDDirection();
     renderReviews();
     renderSocial();
   } catch (e) {
@@ -293,6 +302,53 @@ function updateSummary() {
   } else {
     document.getElementById('stat-social-delta').textContent = '需 Apify';
   }
+}
+
+// 数据驱动的产品研发方向：从差评关键词提取 + 与 dashboard_metrics 蓝海勾连
+function renderRDDirection() {
+  const el = document.getElementById('rd-direction');
+  if (!allReviews.length) { el.innerHTML = '<div style="color:#94a3b8">⏳ 差评数据未抓到（daraz_bd_reviews 模块）· 等 9:00 计划任务跑完</div>'; return; }
+  // 差评关键词
+  const bad = allReviews.filter(r => (r.rating || 0) <= 2);
+  const text = bad.map(r => (r.text || r.title || '')).join(' ').toLowerCase();
+  // 预定义关键词（含中英文）
+  const KW = [
+    {kw: ['color','colour','রঙ','wrong color','color difference','colour difference'], tag: '颜色错发', color: '#e53935'},
+    {kw: ['size','wrong size','আকার'], tag: '尺寸不符', color: '#e65100'},
+    {kw: ['brand','fake','not original','not original','নকল'], tag: '品牌造假', color: '#9c27b0'},
+    {kw: ['quality','poor','cheap','flimsy','খারাপ'], tag: '品质差', color: '#bf360c'},
+    {kw: ['shipping','late','delay','ডেলিভারি'], tag: '物流慢', color: '#1565c0'},
+    {kw: ['damage','broken','damaged','ভাঙা'], tag: '运输损坏', color: '#c62828'},
+    {kw: ['missing','incomplete','parts missing'], tag: '配件缺失', color: '#6a1b9a'},
+    {kw: ['wrong item','different','মিলে না'], tag: '商品错发', color: '#d84315'},
+  ];
+  const hits = KW.map(k => ({tag: k.tag, color: k.color, count: k.kw.reduce((sum, w) => sum + (text.split(w).length - 1), 0)})).filter(h => h.count > 0).sort((a, b) => b.count - a.count);
+  if (hits.length === 0) {
+    el.innerHTML = `<div style="color:#94a3b8">差评 ${bad.length} 条但未匹配关键词（可能评论文本非英语/孟语）</div>`;
+    return;
+  }
+  // 与 dashboard_metrics 蓝海勾连
+  const dm = (window.DM_CACHE || {});
+  const totalBad = bad.length;
+  const totalGood = allReviews.length - bad.length;
+  const badRate = totalReviews ? ((totalBad/totalReviews)*100).toFixed(1) : 0;
+  const elTop = hits[0];
+  const html = `
+    <div style="margin-bottom:10px"><b>📊 差评总览：</b>${allReviews.length} 条评论中 <b style="color:#c8102e">${totalBad} 条差评（${badRate}%）</b>，${totalGood} 条好评</div>
+    <div style="margin-bottom:10px"><b>🔍 差评关键词 TOP ${hits.length}：</b></div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+      ${hits.map(h => `<span style="padding:4px 10px;background:${h.color}22;border:1px solid ${h.color};color:${h.color};border-radius:14px;font-size:11px;font-weight:700">${h.tag} × ${h.count}</span>`).join('')}
+    </div>
+    <div style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;padding:8px 12px;border-radius:6px;margin-top:8px">
+      <b style="color:#2e7d32">💎 研发方向（基于差评 + dashboard_metrics 蓝海）：</b>
+      <ul style="margin:4px 0 0 18px;line-height:1.7;color:#cbd5e1">
+        ${hits[0] ? `<li>TOP 1 差评"<b style="color:#c8102e">${elTop.tag}</b>"(${elTop.count} 次)= Phoenix V2 大单品应<b>重点规避</b></li>` : ''}
+        ${dm.gt_25k_count ? `<li>BD 25K+ 蓝海 ${dm.gt_25k_count} SKU = 可推"高端品控承诺"差异化（每台 SGS 三检 + 颜色尺寸双保险）</li>` : ''}
+        ${dm.phx_bd_max ? `<li>Phoenix 顶价 ${dm.phx_bd_max.toLocaleString()} → 25K+ 大单品 = 拿品质溢价对冲差评</li>` : ''}
+      </ul>
+    </div>
+  `;
+  el.innerHTML = html;
 }
 
 function renderReviews() {
