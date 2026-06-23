@@ -4,35 +4,56 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>任务 · Phoenix-Live</title>
+  <title>OKR 战略规划 · Phoenix-Live</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
     a{color:#9ec5fe;text-decoration:none}
-    a:hover{text-decoration:underline}
     .container{max-width:1200px;margin:0 auto}
     .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
     .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
-    h1{font-size:20px;font-weight:800}
+    h1{font-size:22px;font-weight:800}
     .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
     .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
     .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
     .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
     .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
     .section.dark h2{color:#c8102e}
-    .urgent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:8px}
-    .urgent{background:#fff3e0;border-left:4px solid #e53935;padding:10px 12px;border-radius:8px;color:#bf360c}
-    .urgent .pill{background:#e53935;color:#fff;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700;margin-left:6px}
-    .urgent .region{font-size:10px;color:#888;margin-top:4px;display:inline-block;background:rgba(229,57,53,.1);padding:1px 5px;border-radius:3px;margin-right:4px}
-    .urgent .when{font-size:10px;color:#888}
-    .normal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:8px}
-    .normal{background:#e8f5e9;border-left:4px solid #2e7d32;padding:10px 12px;border-radius:8px;color:#1b5e20}
-    .normal .pill{background:#2e7d32;color:#fff;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:700;margin-left:6px}
-    .normal .region{font-size:10px;color:#888;margin-top:4px;display:inline-block;background:rgba(46,125,50,.1);padding:1px 5px;border-radius:3px;margin-right:4px}
-    .normal .when{font-size:10px;color:#888}
-    .strategy-card{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:10px 14px;border-radius:8px;font-size:12px;color:#fff;margin-top:8px;line-height:1.7}
-    .strategy-card b{color:#5eead4}
+    .section .small{font-size:11px;color:#999;font-weight:400;margin-left:6px}
+
+    /* OKR 卡片 */
+    .okr-card{background:#f8fafc;border-radius:12px;padding:16px 18px;margin-bottom:12px;border-left:4px solid #c8102e;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+    .okr-card .o-id{font-size:10px;color:#c8102e;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .okr-card .o-title{font-size:15px;font-weight:800;color:#0d47a1;margin:4px 0 8px}
+    .okr-card .o-period{font-size:11px;color:#666;margin-bottom:10px;font-style:italic}
+    .okr-card .krs{margin-top:8px}
+    .okr-card .kr{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:12px;line-height:1.6;border-bottom:1px dashed rgba(0,0,0,.06)}
+    .okr-card .kr:last-child{border-bottom:none}
+    .okr-card .kr .kr-icon{color:#2e7d32;font-weight:800;flex-shrink:0}
+    .okr-card .kr b{color:#0d47a1}
+    .okr-card .kr .delta{color:#666;font-size:10px;margin-left:4px}
+
+    /* 行动卡片 */
+    .initiative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:10px}
+    .initiative{background:#fff3e0;border-left:4px solid #e65100;padding:12px 14px;border-radius:8px;color:#bf360c;font-size:12px;line-height:1.6}
+    .initiative.bd{border-left-color:#1565c0;background:#e3f2fd;color:#0d47a1}
+    .initiative.id{border-left-color:#2e7d32;background:#e8f5e9;color:#1b5e20}
+    .initiative .init-id{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.6;margin-bottom:4px}
+    .initiative .init-title{font-size:13px;font-weight:800;margin-bottom:4px}
+    .initiative .init-detail{font-size:11px;line-height:1.6;opacity:.85}
+    .initiative .init-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;margin-top:6px;background:rgba(0,0,0,.1)}
+
+    /* 月份时间线 */
+    .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}
+    .month{background:rgba(255,255,255,.05);border-radius:8px;padding:8px 10px;font-size:11px;border-left:3px solid #5eead4}
+    .month.now{border-left-color:#e53935;background:rgba(229,57,53,.15);font-weight:700}
+    .month .m-label{font-size:10px;color:#5eead4;font-weight:800;margin-bottom:4px;letter-spacing:.5px}
+    .month.now .m-label{color:#ff8a80}
+    .month .m-item{font-size:10px;color:#cbd5e1;line-height:1.5;margin-bottom:3px}
+    .month .m-item b{color:#fff}
+
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+    .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;background:rgba(200,16,46,.15);color:#ff8a80;margin-left:6px}
   </style>
 </head>
 <body>
@@ -40,86 +61,260 @@
     <div class="header">
       <div class="logo">P</div>
       <div>
-        <h1>📋 任务清单 · Phoenix-Live</h1>
-        <div class="subtitle">月度战略任务 · 从 React bundle 2026-06-09 提取 · BD/ID 双场</div>
+        <h1>🎯 战略 OKR <span class="badge">V2 · 2026-2028</span></h1>
+        <div class="subtitle">基于 dashboard_metrics 真实数据 · V2 钻井型战略 · 1-2 战略大单品 + 10 倍升级 + 价值锚点</div>
       </div>
       <a class="back-link" href="./index.html">← 返回总览</a>
     </div>
 
+    <!-- 真实数据基线（dashboard_metrics 互验） -->
+    <div class="section dark" style="border-left-color:#5eead4">
+      <h2 style="color:#5eead4"><span class="flag">📊</span>真实基线 <span class="small" style="color:#aaa">2026-06-23 · latest.json</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">Phoenix BD</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            <b>排名 #14 / 25</b> 品牌 · 44.5 分<br>
+            <b>8 SKU</b> · ASP 14,425 · 顶价 18,000<br>
+            远低行业顶价 <b>65,000</b> (Rockrider)
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">BD 行业</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            27 真品牌 · 187 SKU · 113 dreamcycle<br>
+            <b>15-25K: 57 SKU 16 品牌</b><br>
+            <b>&gt; 25K: 31 SKU 7 品牌</b> (Rockrider 13)
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">ID 行业</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            8 整车 SKU (serbasepeda CF 拦截)<br>
+            <b>7-15M: 4 SKU</b> (Element/United/Pacific)<br>
+            无 SGS 中国品牌 = 真空
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">V2 战略</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            取一舍九 + 钻井型<br>
+            <b>1-2 战略大单品</b><br>
+            10 倍升级 · 价值锚点
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 三年愿景 + 三大 OKR -->
+    <div class="section">
+      <h2><span class="flag">🎯</span>三年愿景 <span class="small">2026-2028 · 从中端品牌到中高端第一</span></h2>
+
+      <div class="okr-card">
+        <div class="o-id">O1</div>
+        <div class="o-title">Phoenix 成为 BD 中高端市场第一品牌（与 Rockrider/Veloce/Core 同台）</div>
+        <div class="o-period">时间窗：2026-2028 · 区域：🇧🇩 Bangladesh</div>
+        <div class="krs">
+          <div class="kr"><span class="kr-icon">KR1.1</span><span><b>评分 Top 3</b>：当前 #14 (44.5) → 目标 #3 (75+)<span class="delta">需 +30 分</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.2</span><span><b>SKU 数量</b>：当前 8 → 目标 <b>20+</b>（覆盖度门槛）<span class="delta">+12 SKU</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.3</span><span><b>价格天花板</b>：当前 18K → 目标 <b>40K+</b>（价值锚点 = Rockrider XC 401 级别）<span class="delta">2.2x</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.4</span><span><b>ASP</b>：当前 14.4K → 目标 22K+（品牌力升级）</span></div>
+        </div>
+      </div>
+
+      <div class="okr-card" style="border-left-color:#2e7d32">
+        <div class="o-id" style="color:#2e7d32">O2</div>
+        <div class="o-title">Phoenix 打开印尼中高端市场（从 0 到 1 的破冰）</div>
+        <div class="o-period">时间窗：2026-2028 · 区域：🇮🇩 Indonesia</div>
+        <div class="krs">
+          <div class="kr"><span class="kr-icon">KR2.1</span><span><b>Thunder ID 700C MTB 上线</b>：Rp 9.5M（USD 600）填补 SGS 中国品牌真空</span></div>
+          <div class="kr"><span class="kr-icon">KR2.2</span><span><b>Shopee ID 官方店</b>：月销 50+ → 200+ 台（爬虫数据反推市场容量）</span></div>
+          <div class="kr"><span class="kr-icon">KR2.3</span><span><b>渠道铺设</b>：Polygon MTB 用户社群 + IIBS 展 + Strava Indonesia</span></div>
+          <div class="kr"><span class="kr-icon">KR2.4</span><span><b>SKU</b>：从 0 → 5 个 ID 整车（Rp 5M-15M 价位带覆盖）</span></div>
+        </div>
+      </div>
+
+      <div class="okr-card" style="border-left-color:#9c27b0">
+        <div class="o-id" style="color:#9c27b0">O3</div>
+        <div class="o-title">Phoenix 建立 DTC 独立站 + 品牌叙事体系（区别于渠道方）</div>
+        <div class="o-period">时间窗：2026-2027 · 全区域</div>
+        <div class="krs">
+          <div class="kr"><span class="kr-icon">KR3.1</span><span><b>Phoenix 独立站上线</b>（phoenixbike.bd / phoenixbike.id）—— 品牌叙事唯一出口</span></div>
+          <div class="kr"><span class="kr-icon">KR3.2</span><span><b>社媒粉丝</b>：IG + FB + TK 合计 0 → 10K+（BD 8M / ID 27M 自行车潜在用户）</span></div>
+          <div class="kr"><span class="kr-icon">KR3.3</span><span><b>品牌叙事资产</b>：SGS 认证 + 三标 + 凤凰品牌故事 = DTC 溢价基础</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2026 H2 行动 = 当前最紧要 -->
     <div class="section" style="border-left:4px solid #e53935">
-      <h2><span class="flag">🔴</span>紧急任务 Month 1 <small style="color:#999;font-weight:400">（红色 · 立即执行）</small></h2>
-      <div class="urgent-grid">
-        <div class="urgent">
-          <div>🇮🇩 推动 SGS 资质强制认证（MTB/公路/童车）<span class="pill">URGENT</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 1 · 认证法规</div>
+      <h2 style="color:#e53935"><span class="flag">🔥</span>2026 H2 最紧要行动 <span class="small">7-12 月 · 关键里程碑</span></h2>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:8px 0">🇧🇩 BD 行动（3 个）</h3>
+      <div class="initiative-grid">
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-01 · 紧迫</div>
+          <div class="init-title">推 SGS 资质认证（MTB + 公路）</div>
+          <div class="init-detail">关键路径：Veloce/Core/Marine 无认证 → Phoenix 抢先获 SGS + 三标 = 中端红海差异化 = 价格战突破口</div>
+          <span class="init-tag">Jul-Aug 2026</span>
         </div>
-        <div class="urgent">
-          <div>🇮🇩 确认凤凰 Thunder ID 中高端 MTB 上市参数<span class="pill">URGENT</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 1 · 产品</div>
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-02 · 关键</div>
+          <div class="init-title">BD 22K+ UCI MTB 大单品立项</div>
+          <div class="init-detail">SGS 认证 + 24"/26" + BDT 22-25K（USD 155-180）= 正面对标 Rockrider XC 401 25K / Pro Gen2 28K = 价值锚点</div>
+          <span class="init-tag">Aug-Sep 2026</span>
         </div>
-        <div class="urgent">
-          <div>🇮🇩 Shopee Indonesia 官方店申请（MTB 类目）<span class="pill">URGENT</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 1 · 渠道开发</div>
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-03 · 关键</div>
+          <div class="init-title">BD 公路车品类补强立项</div>
+          <div class="init-detail">17 品牌公路车仅 Hero 1 SKU = 完全真空。Phoenix 公路车（700C 铝合金，BDT 13-15K）= 抢占第二品类</div>
+          <span class="init-tag">Sep-Oct 2026</span>
         </div>
-        <div class="urgent">
-          <div>🇮🇩 联系 Polygon MTB 用户社群（Strava Indonesia）<span class="pill">URGENT</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 1 · 用户运营</div>
+      </div>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🇮🇩 ID 行动（3 个）</h3>
+      <div class="initiative-grid">
+        <div class="initiative id">
+          <div class="init-id">ID-H2-01 · 关键</div>
+          <div class="init-title">Thunder ID 700C MTB 上市</div>
+          <div class="init-detail">Rp 9.5M（USD 600）+ SGS = 无 SGS 中国品牌 7-15M 真空切入点。开发周期 4-6 月</div>
+          <span class="init-tag">Jul-Oct 2026</span>
+        </div>
+        <div class="initiative id">
+          <div class="init-id">ID-H2-02 · 关键</div>
+          <div class="init-title">Shopee ID 官方店申请（MTB 类目）</div>
+          <div class="init-detail">Shopee 印尼月活 1.5 亿 + 自行车类目容量 100K+ 销量/月。官方店 = 渠道破冰 + 销量数据基线</div>
+          <span class="init-tag">Aug 2026</span>
+        </div>
+        <div class="initiative id">
+          <div class="init-id">ID-H2-03 · 紧迫</div>
+          <div class="init-title">印尼 SGS 资质强制认证法规跟进</div>
+          <div class="init-detail">印尼 SGS 2024 法规升级 → 2026 H2 可能强制。所有 ID SKU 上市前必须有 SGS</div>
+          <span class="init-tag">Jul 2026 · 持续监控</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🌐 全局 / DTC 行动（3 个）</h3>
+      <div class="initiative-grid">
+        <div class="initiative">
+          <div class="init-id">GL-H2-01 · 关键</div>
+          <div class="init-title">Phoenix 独立站选型 + 域名 + 设计</div>
+          <div class="init-detail">Shopify/WooCommerce 评估 + 域名 phoenixbike.bd / phoenixbike.id + 品牌叙事页面设计</div>
+          <span class="init-tag">Aug-Oct 2026</span>
+        </div>
+        <div class="initiative">
+          <div class="init-id">GL-H2-02 · 长期</div>
+          <div class="init-title">Phoenix 品牌叙事资产沉淀（4 季度）</div>
+          <div class="init-detail">凤凰故事 + SGS 认证故事 + 用户社群故事 + 大单品故事 = DTC 转化基础</div>
+          <span class="init-tag">Q3-Q4 2026</span>
+        </div>
+        <div class="initiative">
+          <div class="init-id">GL-H2-03 · 关键</div>
+          <div class="init-title">社媒矩阵搭建（IG + FB + TK）</div>
+          <div class="init-detail">BD/ID 同步 + 内容运营 + KOL 合作 = 2027 流量基础（目标：年底前 5K 粉）</div>
+          <span class="init-tag">Aug-Dec 2026</span>
         </div>
       </div>
     </div>
 
-    <div class="section" style="border-left:4px solid #1565c0">
-      <h2><span class="flag">🇧🇩</span>BD 月度任务 <small style="color:#999;font-weight:400">（绿色 · 正常节奏）</small></h2>
-      <div class="normal-grid">
-        <div class="normal">
-          <div>孟加拉国 MTB 中高端市场拓展<span class="pill">NORMAL</span></div>
-          <div class="region">BD</div>
-          <div class="when">Month 5 · 产品矩阵</div>
-        </div>
-        <div class="normal">
-          <div>孟加拉国竞赛 MTB 全球战略室产品<span class="pill">NORMAL</span></div>
-          <div class="region">BD</div>
-          <div class="when">Month 6 · 品牌矩阵</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" style="border-left:4px solid #2e7d32">
-      <h2><span class="flag">🇮🇩</span>ID 月度任务 <small style="color:#999;font-weight:400">（绿色 · 正常节奏）</small></h2>
-      <div class="normal-grid">
-        <div class="normal">
-          <div>印尼砾石公路车战略推进<span class="pill">NORMAL</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 6 · 产品矩阵</div>
-        </div>
-        <div class="normal">
-          <div>印尼自行车市场拓展（IIBS 展展销渠道）<span class="pill">NORMAL</span></div>
-          <div class="region">ID</div>
-          <div class="when">Month 8 · 品牌矩阵</div>
-        </div>
-      </div>
-    </div>
-
+    <!-- 12 月时间线 -->
     <div class="section dark">
-      <h2><span class="flag" style="color:#c8102e">🎯</span>战略路径（来自 React bundle）</h2>
-      <div class="strategy-card">
-        <b>空位增长策略（Vacancy Growth Strategy）</b><br>
-        孟加拉 MTB 市场发现 3 个未占据战略空位：
-        <ol style="margin:6px 0 0 18px;line-height:1.7">
-          <li><b>安全认证空位</b>：任何品类均可使用 SGS 认证抢占中高端品质空位（Veloce/Core 占中端但无认证；Trek/Giant 占高端但价格高 5-10 倍）</li>
-          <li><b>认证品质高端空位</b>：定 BDT 16,500 价位的 Thunder 嵌入中端认证空白（Veloce/Core 弱点）</li>
-          <li><b>女性 MTB 社群绑定</b>：凤凰 MTB 女性骑行社群运营（无品牌在做）</li>
-        </ol>
+      <h2><span class="flag" style="color:#5eead4">📅</span>2026 H2 时间线 <span class="small" style="color:#aaa">6 月已过 · 当前进度</span></h2>
+      <div class="timeline">
+        <div class="month now">
+          <div class="m-label">7 月（当前）</div>
+          <div class="m-item">· 启动 <b>SGS 认证</b></div>
+          <div class="m-item">· 立项 BD 22K+ UCI MTB</div>
+          <div class="m-item">· 跟进 ID SGS 法规</div>
+          <div class="m-item">· 启动 Thunder ID 700C 开发</div>
+        </div>
+        <div class="month">
+          <div class="m-label">8 月</div>
+          <div class="m-item">· <b>BD 22K+ UCI MTB 设计冻结</b></div>
+          <div class="m-item">· Shopee ID 官方店申请</div>
+          <div class="m-item">· 独立站域名 + Shopify 选型</div>
+          <div class="m-item">· 社媒矩阵注册</div>
+        </div>
+        <div class="month">
+          <div class="m-label">9 月</div>
+          <div class="m-item">· <b>BD 22K+ UCI MTB 打样</b></div>
+          <div class="m-item">· BD 公路车立项启动</div>
+          <div class="m-item">· 独立站页面 v1 上线</div>
+          <div class="m-item">· 社媒 1000 粉</div>
+        </div>
+        <div class="month">
+          <div class="m-label">10 月</div>
+          <div class="m-item">· <b>Thunder ID 700C 打样</b></div>
+          <div class="m-item">· BD 大单品 SGS 申请</div>
+          <div class="m-item">· BD 公路车定价</div>
+          <div class="m-item">· 社媒 3K 粉</div>
+        </div>
+        <div class="month">
+          <div class="m-label">11 月</div>
+          <div class="m-item">· <b>BD 22K+ UCI MTB 小批量</b></div>
+          <div class="m-item">· 独立站预热 + 公测</div>
+          <div class="m-item">· KOL 合作 2-3 个</div>
+          <div class="m-item">· 2027 战略规划</div>
+        </div>
+        <div class="month">
+          <div class="m-label">12 月</div>
+          <div class="m-item">· <b>BD 大单品首发（圣诞档）</b></div>
+          <div class="m-item">· <b>独立站正式上线</b></div>
+          <div class="m-item">· 社媒 5K 粉</div>
+          <div class="m-item">· H2 OKR 复盘 + 2027 OKR</div>
+        </div>
+      </div>
+
+      <div class="strategy-card" style="background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.7">
+        <b>🎯 2026 H2 关键里程碑（KPI）：</b>
+        <ul style="margin:6px 0 0 18px;line-height:1.7">
+          <li><b>BD</b>：大单品 1 款 22K+ 上市 + 公路车 1 款 13-15K 上市 = BD SKU 8 → 12-15</li>
+          <li><b>ID</b>：Thunder ID 700C 打样完成 + Shopee 官方店上线 = ID SKU 0 → 2</li>
+          <li><b>品牌</b>：独立站上线 + 社媒 5K 粉 + 品牌叙事资产 4 篇</li>
+          <li><b>数据</b>：BD 评分从 #14 → 目标 #10-12（升至中端第一 = 战略大单品真生效）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2027-2028 远景 -->
+    <div class="section" style="border-left:4px solid #9c27b0">
+      <h2 style="color:#9c27b0"><span class="flag">🚀</span>2027-2028 远景 <span class="small">3-5 年路径</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
+          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2027</div>
+          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">BD 中高端 Top 3 + ID 月销 200+</div>
+          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
+            <li>· BD SKU 12-15 → 20+（Top 3 门槛）</li>
+            <li>· ID 月销 200 台（Shopee 主渠道）</li>
+            <li>· 独立站 BD 月访 50K + ID 月访 20K</li>
+            <li>· 社媒 30K 粉（BD 15K + ID 15K）</li>
+          </ul>
+        </div>
+        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
+          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2028</div>
+          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">Phoenix = 区域中高端第一品牌</div>
+          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
+            <li>· BD 评分 #3（与 Rockrider/Veloce 同台）</li>
+            <li>· ID 评分 Top 5（与 Polygon/Element 同台）</li>
+            <li>· 顶价 40K+（价值锚点稳定）</li>
+            <li>· 准备进入第三市场（尼泊尔/斯里兰卡）</li>
+          </ul>
+        </div>
+        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
+          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2029-2030</div>
+          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">南亚 + 东南亚区域品牌</div>
+          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
+            <li>· 第三市场破冰（尼泊尔/斯里兰卡/越南）</li>
+            <li>· 区域年销 5W+ 台</li>
+            <li>· 上市准备 / 战略融资 / 全球品牌叙事</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="footer">
-      数据来源：React bundle `assets/index-unB8v61V.js` 2026-06-09 提取<br />
-      本页面为 Phoenix-Live Tab #6（任务 · 静态重建）· 每次战略迭代手动更新
+      数据来源：dashboard_metrics (latest.json) · 战略框架 V2 钻井型 · 三年愿景<br />
+      本页面为 Phoenix-Live Tab #6 (OKR 战略) · 每季度 OKR 复盘 + 每月 initiative 进度
     </div>
   </div>
 </body>
