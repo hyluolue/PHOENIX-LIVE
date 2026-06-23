@@ -131,7 +131,7 @@
       <div class="gap-card" style="background:rgba(200,16,46,.08);border-left-color:#c8102e;margin-top:12px">
         <h3 style="color:#c8102e">🔥 推荐 1: BD 22K+ UCI MTB 战略大单品</h3>
         <p>
-          <b>真空数据支撑：</b>BD 15K-25K 仅 3 品牌（Duranta/Marine/Warrior）9 SKU，&gt;25K 0 SKU。<br>
+          <b>数据支撑：</b>BD 15-25K 8 品牌 57 SKU，&gt;25K 5 品牌 31 SKU（Rockrider 11 + Veloce 6 + Core 5 + Ceres 2 + Magpy 2 + Kiesel 1 + Duranta 1），Phoenix 仍缺席<br>
           <b>产品方向：</b>UCI 认证 MTB（24"/26"），SGS 三标，BDT 22K-25K（USD 155-180）。<br>
           <b>战略意义：</b>占位中高端价格锚点 = 凤凰从"中端 11.5K-13.7K"升级到"中高端 22K+" = 真实品牌力跃迁。<br>
           <b>对标基准：</b>Marine 19,000 顶配 / Warrior 18,999 / Duranta 16,320 顶配 — 凤凰直接定 22K+ = 跳出这 3 家红海。
@@ -241,8 +241,10 @@ async function load() {
   // BD 15K-25K
   const bd1525 = all.filter(it => it.price >= 15000 && it.price < 25000);
   const bd25 = all.filter(it => it.price >= 25000);
-  document.getElementById('gap-15-25').innerHTML = '<b>' + bd1525.length + ' SKU · ' + [...new Set(bd1525.map(it=>it.brand))].length + ' 品牌</b><br>仅 ' + [...new Set(bd1525.map(it=>it.brand))].join(' / ') + ' — Phoenix 完全缺席<br>✅ <b>真实真空</b>，可做 22K+ UCI MTB 战略大单品';
-  document.getElementById('gap-25-plus').innerHTML = bd25.length === 0 ? '<b>0 SKU</b><br>仅 Duranta 1 款电动 43,500（非传统 MTB，<b>不计入</b>）<br>✅ <b>完全真空</b>，凤凰迈巴赫式价值锚点机会' : '<b>' + bd25.length + ' SKU</b>';
+  const bd25Brands = [...new Set(bd25.map(it=>it.brand))];
+  const bd25Top = bd25.sort((a,b)=>b.price-a.price).slice(0,3);
+  document.getElementById('gap-15-25').innerHTML = '<b>' + bd1525.length + ' SKU · ' + [...new Set(bd1525.map(it=>it.brand))].length + ' 品牌</b><br>· ' + [...new Set(bd1525.map(it=>it.brand))].slice(0,5).join(' / ') + ' = <span style="color:#c8102e;font-weight:700">Phoenix 仍缺席</span><br>→ <b>V2 切入点：22K+ UCI MTB 战略大单品</b>';
+  document.getElementById('gap-25-plus').innerHTML = bd25.length === 0 ? '<b>0 SKU · 真实真空</b><br>Duranta 1 电动 43,500 非传统 MTB<br>→ <b>完全空白</b>，迈巴赫式价值锚点机会' : '<b>' + bd25.length + ' SKU · ' + bd25Brands.length + ' 品牌</b><br>· ' + bd25Brands.slice(0,5).join(' / ') + '<br>顶价：' + bd25Top.map(it => it.brand + ' ' + (it.price/1000).toFixed(0) + 'K').join(' / ') + '<br>→ <b>Phoenix 仍缺席</b>，核心顶价 Rockrider 65K / Core 32K / Veloce 36K = 真正迈巴赫价位带真空';
 
   // ID Rp 6-10M（hardcoded 推论）
   document.getElementById('gap-id-6-10').innerHTML = '<b>无 SGS 认证中国品牌</b><br>serbasepeda 8 整车中 Rp 1-15M 全是 Pacific/Element/United 本土品牌<br>✅ <b>中国品牌真空</b>，Thunder ID Rp 9.5M 真实机会';
