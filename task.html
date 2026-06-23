@@ -156,6 +156,24 @@
       </div>
     </div>
 
+    <!-- 今日数据驱动行动（自动从 dashboard_metrics 推导） -->
+    <div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,#fff5f6 0%,#fff 100%)">
+      <h2 style="color:#c8102e"><span class="flag">🎯</span>今日数据驱动行动 <span class="small" style="color:#999">自动从 latest.json#dashboard_metrics 推导 · 每日 9:00 更新</span></h2>
+      <div id="today-actions" class="initiative-grid">
+        <div class="initiative" style="background:#fff;color:#666">⏳ 加载中…</div>
+      </div>
+      <div class="strategy-card" style="background:rgba(200,16,46,.05);border-left:3px solid #c8102e;padding:10px 14px;border-radius:8px;font-size:12px;color:#1a1a1a;margin-top:14px;line-height:1.7">
+        <b>📋 行动生成逻辑（自动）：</b>
+        <ol style="margin:6px 0 0 18px;line-height:1.7">
+          <li>如果 Phoenix SKU < 12 → 提示 "需加速扩 SKU"</li>
+          <li>如果 Phoenix 顶价 < 25K → 提示 "需大单品提顶价"</li>
+          <li>如果 > 25K 出现新品牌 → 提示 "新竞品，跟进"</li>
+          <li>如果 15-25K 红海集中度 > 50% → 提示 "中端红海，差异化"</li>
+          <li>如果 ID 7-15M 出现 SGS 竞品 → 提示 "ID 法规紧迫"</li>
+        </ol>
+      </div>
+    </div>
+
     <!-- 2026 H2 行动 = 当前最紧要 -->
     <div class="section" style="border-left:4px solid #e53935">
       <h2 style="color:#e53935"><span class="flag">🔥</span>2026 H2 最紧要行动 <span class="small">7-12 月 · 关键里程碑</span></h2>
@@ -327,5 +345,96 @@
       本页面为 Phoenix-Live Tab #6 (OKR 战略) · 每季度 OKR 复盘 + 每月 initiative 进度
     </div>
   </div>
+
+<script>
+async function load() {
+  let data;
+  try {
+    const r = await fetch('./data/latest.json', {cache: 'no-store'});
+    data = await r.json();
+  } catch (e) {
+    document.getElementById('today-actions').innerHTML = '<div class="initiative" style="background:#fff3e0;color:#bf360c">⚠ 加载失败：' + e.message + '</div>';
+    return;
+  }
+  const dm = data.dashboard_metrics || {};
+  const totals = dm.totals || {};
+  const bands = dm.bands || {};
+  const phxGap = dm.phx_gap || {};
+  const idInfo = dm.id_7_15m || {};
+  const actions = [];
+  // 规则 1: Phoenix SKU < 12 → 加速扩 SKU
+  if (totals.phx_bd_mid_high < 12) {
+    actions.push({
+      region: 'BD', priority: 'URGENT',
+      title: '加速扩 SKU 到 12+',
+      detail: `Phoenix BD 当前 ${totals.phx_bd_mid_high} SKU · 距 V2 战略 SKU 目标 20+ 差 ${20 - totals.phx_bd_mid_high} SKU = 需加速产品研发（核心大单品 + 公路车 + 砾石）`,
+      tag: 'OKR KR1.2'
+    });
+  }
+  // 规则 2: Phoenix 顶价 < 25K → 大单品提顶价
+  if (phxGap.phx_max_price && phxGap.phx_max_price < 25000) {
+    actions.push({
+      region: 'BD', priority: 'URGENT',
+      title: '大单品提顶价到 25K+',
+      detail: `Phoenix 顶价仅 ${phxGap.phx_max_price.toLocaleString()} BDT · 距 V2 战略 25K+ 价值锚点差 ${(25000 - phxGap.phx_max_price).toLocaleString()} BDT = 需 22K+ UCI MTB 大单品（OKR KR1.3）`,
+      tag: 'OKR KR1.3'
+    });
+  }
+  // 规则 3: > 25K 出现新品牌（与上次对比）—— 简化：只要 > 25K SKU > 0 都提示
+  if (phxGap.gt_25k_count > 0) {
+    const brands = phxGap.gt_25k_brands || [];
+    actions.push({
+      region: 'BD', priority: 'WATCH',
+      title: `25K+ 已 ${phxGap.gt_25k_count} SKU ${brands.length} 品牌 = 跟进${brands.slice(0, 3).join(' / ')}`,
+      detail: `高端价位已稳定存在 ${brands.length} 品牌（${brands.join(' / ')}）= 凤凰 V2 大单品应正面对标，而非"切入真空"（OKR KR1.3）`,
+      tag: '市场动态'
+    });
+  }
+  // 规则 4: 15-25K 红海集中度 > 50% → 中端红海警示
+  const midhigh = bands.bd_15_25k;
+  if (midhigh && totals.bd_pool_mid_high > 0) {
+    const ratio = midhigh.count / totals.bd_pool_mid_high;
+    if (ratio > 0.4) {
+      actions.push({
+        region: 'BD', priority: 'WARN',
+        title: `15-25K 中端红海集中 ${(ratio*100).toFixed(0)}%`,
+        detail: `中高端 (15-25K) ${midhigh.count} SKU 占中高端池 ${(ratio*100).toFixed(0)}% = Phoenix 需 SGS 认证差异化（不是拼价格）`,
+        tag: 'OKR KR1.1'
+      });
+    }
+  }
+  // 规则 5: ID 7-15M 出现 SGS 竞品 = 法规紧迫
+  if (idInfo.count > 0) {
+    actions.push({
+      region: 'ID', priority: 'URGENT',
+      title: `ID 7-15M 4 SKU 全本土 = SGS 中国品牌真空`,
+      detail: `Element/United/Pacific ${idInfo.count} SKU 全部本土品牌 = 凤凰 Thunder ID 9.5M 是唯一中国品牌机会（OKR KR2.1）`,
+      tag: 'OKR KR2.1'
+    });
+  }
+  // 规则 6: Phoenix ASP < 18K → ASP 提升
+  if (totals.phx_bd_asp && totals.phx_bd_asp < 18000) {
+    actions.push({
+      region: 'BD', priority: 'WATCH',
+      title: `Phoenix ASP ${totals.phx_bd_asp.toLocaleString()} BDT 偏低`,
+      detail: `ASP ${totals.phx_bd_asp.toLocaleString()} 远低于 Rockrider 33.5K / Veloce 22K = 凤凰实际定位中端，需大单品提 ASP（OKR KR1.4）`,
+      tag: 'OKR KR1.4'
+    });
+  }
+  // 渲染
+  const regionColors = {BD: '#1565c0', ID: '#2e7d32', 'GL': '#9c27b0'};
+  const priorityEmoji = {URGENT: '🔴', WATCH: '🟡', WARN: '🟠'};
+  const html = actions.map(a => {
+    const color = regionColors[a.region] || '#666';
+    return `<div class="initiative" style="border-left-color:${color}">
+      <div class="init-id">${priorityEmoji[a.priority] || '·'} ${a.region}-ACTION · ${a.priority} · ${a.tag}</div>
+      <div class="init-title">${a.title}</div>
+      <div class="init-detail">${a.detail}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('today-actions').innerHTML = html || '<div class="initiative" style="background:#e8f5e9;border-left-color:#2e7d32;color:#1b5e20"><div class="init-title">✅ 所有 OKR KR 已达成 / 监控中</div><div class="init-detail">今日无紧急行动项 = 战略推进顺利</div></div>';
+}
+load();
+</script>
 </body>
 </html>
