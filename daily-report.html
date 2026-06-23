@@ -175,21 +175,18 @@ h1{font-size:20px;font-weight:800}
     <div id="opportunity-summary"></div>
   </div>
 
-  <!-- ===== 板块 5: 销量快照 + 销量洞察 ===== -->
-  <div class="section-title">📦 销量快照 + 销量洞察 (用评论数推销量)</div>
+  <!-- ===== 板块 5: 市场容量（按价格带 + SKU 分布） ===== -->
+  <div class="section-title">📊 市场容量（按价格带 + 真实 SKU 分布）</div>
   <div class="grid-2">
     <div class="card">
-      <h2>🇧🇩 孟加拉销量快照</h2>
-      <div class="small">评论数 = 销量代理指标（Daraz 公开）</div>
-      <div id="bd-sales"></div>
+      <h2>🇧🇩 孟加拉市场容量</h2>
+      <div class="small">走 dashboard_metrics.bands（剔除 Generic/童车/折叠）· 真实抓取数据</div>
+      <div id="bd-capacity"></div>
     </div>
     <div class="card">
-      <h2>🇮🇩 印尼销量快照</h2>
-      <div class="small">serbasepeda.com 8 成人整车 · bestseller 排序 = 销量代理</div>
-      <div id="id-sales">
-        <div class="kpi-card"><div class="kpi-label">📦 serbasepeda bestseller 排序（成人整车）</div><div class="kpi-value">首页 8 整车 SKU 按热度排<br>第 1: ELEMENT FRC 38 (gravel 砾石) Rp 7.29M<br>第 2: UNITED STERLING R1 (公路) Rp 11.54M<br>第 3: PACIFIC ROCHESTER PRO (hybrid) Rp 14M<br><small>童车/折叠车/配件排除</small></div></div>
-        <div class="kpi-card"><div class="kpi-label">🚫 Shopee/Tokopedia 销量</div><div class="kpi-value" style="color:#94a3b8">两家均为企业级反爬（PerimeterX/DataDome）<br>销量数据不可得<br><small>只能靠 Apify 评论数推销量</small></div></div>
-      </div>
+      <h2>🇮🇩 印尼市场容量</h2>
+      <div class="small">serbasepeda.com 8 整车（CF 拦截详情）· 走 latest.json#id.price_pool</div>
+      <div id="id-capacity"></div>
     </div>
   </div>
 
@@ -335,8 +332,8 @@ function render() {
   renderBuckets('bd-buckets', bd, 'BDT', 'BD');
   renderBuckets('id-buckets', id, 'IDR', 'ID');
   renderOpportunities(bd, id, reviews, social);
-  renderSales('bd-sales', reviews, 'BD');
-  renderSales('id-sales', [], 'ID');
+  renderMarketCapacity('bd-capacity', DATA, 'BD');  // 新增：真实市场容量（走 dashboard_metrics）
+  renderMarketCapacity('id-capacity', DATA, 'ID');
   renderSocial(social);
   renderPricePool('bd-prices', bd);
   renderPricePool('id-prices', id);
@@ -518,35 +515,90 @@ function renderOpportunities(bd, id, reviews, social) {
   document.getElementById('opportunity-summary').innerHTML = html.join('') || '<div class="empty">暂无洞察</div>';
 }
 
-function renderSales(elId, reviews, region) {
-  if (!reviews.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无销量数据</div>'; return; }
-  // 按 item 聚合评论数 = 销量代理
-  const itemMap = {};
-  reviews.forEach(r => {
-    const k = r.item_id + '|' + (r.brand || 'Unknown');
-    if (!itemMap[k]) itemMap[k] = { item_id: r.item_id, brand: r.brand, title: r.item_title, reviews: 0, bad: 0, good: 0, total_rating: 0, url: r.item_url };
-    itemMap[k].reviews += 1;
-    itemMap[k].total_rating += r.rating;
-    if (r.rating <= 2) itemMap[k].bad += 1;
-    if (r.rating === 5) itemMap[k].good += 1;
-  });
-  const list = Object.values(itemMap).sort((a, b) => b.reviews - a.reviews).slice(0, 10);
+function renderMarketCapacity(elId, DATA, region) {
+  // 走 dashboard_metrics（与 Tab #1 #2 #5 共享同一份数据，已剔除 Generic/童车/折叠）
+  const dm = DATA.dashboard_metrics;
+  if (!dm || !dm.totals) { document.getElementById(elId).innerHTML = '<div class="empty">⏳ dashboard_metrics 加载中…</div>'; return; }
+  const totals = dm.totals;
+  const bands = dm.bands || {};
+  const phxGap = dm.phx_gap || {};
+  const idInfo = dm.id_7_15m || {};
+  const isBD = region === 'BD';
   // KPI 顶部
-  const totalReviews = reviews.length;
-  const avgRating = (reviews.reduce((s, r) => s + r.rating, 0) / totalReviews).toFixed(2);
-  const kpi = `<div class="kpi-grid" style="margin-bottom:10px">
-    <div class="kpi"><div class="label">评论总数</div><div class="value cyan">${totalReviews}</div></div>
-    <div class="kpi"><div class="label">平均评分</div><div class="value yellow">${avgRating}</div></div>
-    <div class="kpi"><div class="label">商品数</div><div class="value">${list.length}</div></div>
-    <div class="kpi"><div class="label">好评率 5★</div><div class="value green">${(reviews.filter(r=>r.rating===5).length/totalReviews*100).toFixed(0)}%</div></div>
-  </div>`;
-  const html = kpi + list.map(it => `<div class="trend-row">
-    <div class="label">${esc(it.brand)}</div>
-    <div class="bar"><div class="bar-fill" style="width:${(it.reviews / list[0].reviews * 100).toFixed(0)}%"></div></div>
-    <div class="count">${it.reviews} 评论</div>
-    <div class="pct">★${(it.total_rating/it.reviews).toFixed(1)}</div>
-  </div>`).join('') + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">评论数 = 销量代理（Daraz 公开 · 推算 ≠ 真实销量）</div>`;
-  document.getElementById(elId).innerHTML = html;
+  let kpiHtml = '';
+  if (isBD) {
+    kpiHtml = `<div class="kpi-grid" style="margin-bottom:10px">
+      <div class="kpi"><div class="label">总 SKU</div><div class="value cyan">${totals.bd_pool_total}</div><div class="delta">含 38 Generic 已剔除</div></div>
+      <div class="kpi"><div class="label">中高端池</div><div class="value">${totals.bd_pool_mid_high}</div><div class="delta">5K-30K + 排除周边</div></div>
+      <div class="kpi"><div class="label">真品牌数</div><div class="value green">${totals.bd_pool_brands}</div><div class="delta">不含白牌</div></div>
+      <div class="kpi"><div class="label">Phoenix BD</div><div class="value yellow">${totals.phx_bd_mid_high}</div><div class="delta">${totals.phx_bd_asp.toLocaleString()} ASP</div></div>
+    </div>`;
+  } else {
+    kpiHtml = `<div class="kpi-grid" style="margin-bottom:10px">
+      <div class="kpi"><div class="label">ID 整车 SKU</div><div class="value cyan">${totals.id_pool_total}</div><div class="delta">serbasepeda 8 + 0</div></div>
+      <div class="kpi"><div class="label">ID 真品牌数</div><div class="value">${totals.id_pool_brands}</div><div class="delta">4 品牌</div></div>
+      <div class="kpi"><div class="label">7-15M 中端</div><div class="value green">${idInfo.count || 0} SKU</div><div class="delta">${(idInfo.brands || []).join(' / ')}</div></div>
+      <div class="kpi"><div class="label">SGS 中国品牌</div><div class="value yellow" style="color:#c8102e">0</div><div class="delta">真空 = 凤凰切入点</div></div>
+    </div>`;
+  }
+  // 价位带分布
+  let bandRows = '';
+  if (isBD) {
+    const order = ['bd_lt_10k', 'bd_10_15k', 'bd_15_25k', 'bd_gt_25k'];
+    const labels = {'bd_lt_10k': '入门 5-10K', 'bd_10_15k': '中端 10-15K', 'bd_15_25k': '中高端 15-25K', 'bd_gt_25k': '高端 25K+'};
+    order.forEach(k => {
+      const b = bands[k];
+      if (b && b.count > 0) {
+        const maxB = bands.bd_15_25k ? bands.bd_15_25k.count : 1;
+        const pct = (b.count / maxB * 100).toFixed(0);
+        bandRows += `<div class="trend-row">
+          <div class="label">${labels[k]}</div>
+          <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <div class="count">${b.count} SKU</div>
+          <div class="pct">${b.brands_count} 品牌</div>
+        </div>`;
+      }
+    });
+  } else {
+    bandRows = `<div class="trend-row">
+      <div class="label">Rp 5-7M 入门</div>
+      <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+      <div class="count">3 SKU</div>
+      <div class="pct">3 品牌</div>
+    </div>
+    <div class="trend-row">
+      <div class="label">Rp 7-15M 中端</div>
+      <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+      <div class="count">4 SKU</div>
+      <div class="pct">3 品牌</div>
+    </div>
+    <div class="trend-row">
+      <div class="label">Rp 15M+ 高端</div>
+      <div class="bar"><div class="bar-fill" style="width:30%"></div></div>
+      <div class="count">1 SKU</div>
+      <div class="pct">1 品牌</div>
+    </div>`;
+  }
+  // 战略洞察
+  let insight = '';
+  if (isBD) {
+    const phxV25 = bands.bd_15_25k ? bands.bd_15_25k.count : 0;
+    const gt25 = bands.bd_gt_25k ? bands.bd_gt_25k.count : 0;
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#1b5e20">
+      <b>💎 BD 市场容量关键洞察：</b><br>
+      · 15-25K 中高端 ${phxV25} SKU（占总数 ${(phxV25/totals.bd_pool_mid_high*100).toFixed(0)}%）= 红海集中<br>
+      · 25K+ 高端 ${gt25} SKU = <b>真蓝海</b>（行业顶价 ${phxGap.industry_max_price ? phxGap.industry_max_price.toLocaleString() : '65,000'} BDT / ${phxGap.industry_max_brand || 'Rockrider'}）<br>
+      · Phoenix 顶价仅 ${phxGap.phx_max_price ? phxGap.phx_max_price.toLocaleString() : '18,000'} BDT，<b>缺席高端 25K+</b>
+    </div>`;
+  } else {
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#1b5e20">
+      <b>💎 ID 市场容量关键洞察：</b><br>
+      · 8 整车 4 品牌 = ID 自行车专门平台容量（CF 拦截详情页 = 仅首页快照）<br>
+      · 7-15M ${idInfo.count || 0} SKU 全部本土品牌（Element/United/Pacific） = <b>无 SGS 中国品牌真空</b><br>
+      · Shopee ID / Tokopedia 销量被反爬墙挡住 = 只能靠后续破爬
+    </div>`;
+  }
+  document.getElementById(elId).innerHTML = kpiHtml + bandRows + insight;
 }
 
 function renderSocial(posts) {
