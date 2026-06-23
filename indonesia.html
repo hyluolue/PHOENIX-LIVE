@@ -177,10 +177,22 @@
           <li>价格段 Rp 2.99M-26.2M（USD ~190-1700），中高端 Rp 7-15M = <b>Phoenix Thunder ID 价位带</b></li>
         </ul>
       </div>
+
+      <div style="margin-top:14px">
+        <b>🇮🇩 印尼本土 Top 10 自行车品牌（2026-06-23 用户情报 · 自动从 latest.json#id.brand_pool 渲染）：</b>
+        <div id="id-top10-brands" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;margin-top:8px"></div>
+        <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #2 ID 区域切换 → 品牌排行 / Tab #6 OKR ID-H2 行动 = V2 战略大单品对标</div>
+      </div>
     </div>
 
     <div class="section dark">
-      <h2><span class="flag" style="color:#5eead4">🏪</span>ID 本土自行车专门平台 <small style="color:#aaa;font-weight:400">· 2026-06-15 验证</small></h2>
+      <h2><span class="flag" style="color:#5eead4">🏪</span>ID 本土自行车专门平台 <small style="color:#aaa;font-weight:400">· 2026-06-23 验证（含 Rodalink 渠道）</small></h2>
+      <div id="id-channels" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:8px"></div>
+      <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #2 ID 区域切换 / 渠道选择 = 后续数据源扩展方向</div>
+    </div>
+
+    <div class="section dark" style="display:none">
+      <h2><span class="flag" style="color:#5eead4">🏪</span>ID 本土自行车专门平台 (旧版本)</h2>
       <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4;color:#fff">
         <strong style="color:#5eead4">🚲 SerbaSepeda.com</strong> · <span style="color:#aaa;font-size:11px">ID 最大自行车专门电商 · 雅加达 · 官方 dealer 4 大本土品牌</span>
         <ul class="tight">
@@ -315,6 +327,39 @@
           </div>
         </a>
       `).join('');
+    }
+
+    // ID Top 10 品牌 + 渠道
+    const idBrandPool = (data.dashboard_metrics && data.dashboard_metrics.id_top10_brands) || [];
+    const idChannels = (data.dashboard_metrics && data.dashboard_metrics.id_channels) || [];
+    const tEl = document.getElementById('id-top10-brands');
+    if (tEl && idBrandPool.length > 0) {
+      const rankEmoji = ['🥇','🥈','🥉'];
+      tEl.innerHTML = idBrandPool.map((b, i) => {
+        const rank = b.rank || (i+1);
+        const rEmoji = rankEmoji[rank-1] || '·';
+        const phxColor = b.phx_strategy.includes('切入') || b.phx_strategy.includes('对标') ? '#2e7d32' : '#94a3b8';
+        return `<div style="background:#f8fafc;border-radius:8px;padding:10px 12px;border-left:3px solid #2e7d32">
+          <div style="font-size:10px;color:#2e7d32;font-weight:800;letter-spacing:.5px">${rEmoji} #${rank} ${esc(b.brand)} ${b.roda_link ? '<span style="background:#5eead4;color:#000;padding:1px 4px;border-radius:3px;font-size:8px;margin-left:4px">Rodalink</span>' : '<span style="background:#c8102e;color:#fff;padding:1px 4px;border-radius:3px;font-size:8px;margin-left:4px">非 Rodalink</span>'}</div>
+          <div style="font-size:11px;color:#0d47a1;font-weight:700;margin-top:4px">${esc(b.price_range)} · ${esc(b.categories)}</div>
+          <div style="font-size:10px;color:#666;line-height:1.5;margin-top:3px">${esc(b.advantage)}</div>
+          <div style="font-size:10px;color:${phxColor};font-weight:600;margin-top:3px">🎯 ${esc(b.phx_strategy)}</div>
+        </div>`;
+      }).join('');
+    }
+
+    // ID 渠道渲染
+    const cEl = document.getElementById('id-channels');
+    if (cEl && idChannels.length > 0) {
+      const typeColor = {'官方经销商': '#5eead4', '专门零售': '#c8102e', '电商': '#94a3b8'};
+      cEl.innerHTML = idChannels.map(c => {
+        const color = typeColor[c.type] || '#94a3b8';
+        return `<div style="background:rgba(255,255,255,.05);border-left:3px solid ${color};padding:10px 12px;border-radius:6px">
+          <div style="font-size:11px;color:${color};font-weight:800;text-transform:uppercase">${esc(c.type)} · ${esc(c.name)}</div>
+          <div style="font-size:11px;color:#e2e8f0;margin-top:4px;line-height:1.6">${esc(c.note)}<br><span style="color:#94a3b8">${esc(c.coverage)}</span></div>
+          <div style="margin-top:4px"><a href="${esc(c.url)}" target="_blank" style="color:${color};font-size:10px">${esc(c.url)}</a></div>
+        </div>`;
+      }).join('');
     }
   }
 
