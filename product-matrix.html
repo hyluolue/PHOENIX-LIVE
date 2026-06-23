@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>产品矩阵 · Phoenix-Live</title>
-  <style>
+<title>产品矩阵 · Phoenix-Live</title>
+  <link rel="stylesheet" href="./shared.css">
+<style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
     a{color:#9ec5fe;text-decoration:none}
     a:hover{text-decoration:underline}
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
     .container{max-width:1200px;margin:0 auto}
     .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
     .logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
@@ -65,6 +71,17 @@
         <div class="subtitle">基于竞品数据 → 蓝海识别 → 凤凰研发建议 · <span id="date"></span></div>
       </div>
       <a class="back-link" href="./index.html">← 返回总览</a>
+      <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily-report.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./product-matrix.html" class="active">💎 产品矩阵</a>
+      <a href="./bangladesh.html">🇧🇩 孟加拉</a>
+      <a href="./indonesia.html">🇮🇩 印尼</a>
+      <a href="./task.html">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html">🧠 策略迭代</a>
+    </div>
     </div>
 
     <div class="nav">
