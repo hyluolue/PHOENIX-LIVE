@@ -263,20 +263,30 @@ async function load() {
   const phxAvg = phxPrice.length ? Math.round(phxPrice.reduce((a,b)=>a+b,0)/phxPrice.length) : 0;
   const phxCat = {road:0,hybrid:0,gravel:0,mtb:0};
   phx.forEach(it => phxCat[catOf(it)]++);
+
+  // 走 brand_metrics 找 Phoenix 实际排名（与 Tab #1 共享）
+  const rankings = (data.brand_metrics && data.brand_metrics.rankings) || [];
+  const phxRank = rankings.findIndex(m => m.brand.toLowerCase() === 'phoenix');
+  const phxM = phxRank >= 0 ? rankings[phxRank] : null;
+  const phxPos = phxRank >= 0 ? (phxRank + 1) : '?';
+  const phxTotal = rankings.length;
+
   let diag = '<div class="kpi-grid">';
-  diag += '<div class="kpi"><div class="kpi-label">Phoenix SKU 数</div><div class="kpi-value">' + phx.length + ' SKU<br><small>BD 中高端 TOP 2</small></div></div>';
+  diag += '<div class="kpi"><div class="kpi-label">Phoenix SKU 数</div><div class="kpi-value">' + phx.length + ' SKU<br><small>SKU 排序 #' + (rankings.filter(m=>m.sku_count > phx.length).length + 1) + ' · 加权得分 #' + phxPos + '/' + phxTotal + '</small></div></div>';
   diag += '<div class="kpi"><div class="kpi-label">价段</div><div class="kpi-value">' + (phxPrice.length?Math.min(...phxPrice).toLocaleString() + ' - ' + Math.max(...phxPrice).toLocaleString():'-') + ' BDT<br><small>均价 ' + phxAvg.toLocaleString() + ' BDT</small></div></div>';
   diag += '<div class="kpi"><div class="kpi-label">品类分布</div><div class="kpi-value">⛰️ MTB × ' + phxCat.mtb + ' · 🚲 Hybrid × ' + phxCat.hybrid + '<br>🚴 公路 × ' + phxCat.road + ' · 🛤️ Gravel × ' + phxCat.gravel + '</div></div>';
-  diag += '<div class="kpi"><div class="kpi-label">对标基准</div><div class="kpi-value">Duranta 7 SKU · 8,748-16,320<br>Marine 5 SKU · 12,500-19,000<br><small>中端红海 Phoenix vs 7 家同档</small></div></div>';
+  if (phxM) {
+    diag += '<div class="kpi gap"><div class="kpi-label">加权得分</div><div class="kpi-value">' + phxM.score + ' 分<br><small>' + phxM.high_tier_pct + '% 高端 · ' + phxM.in_stock_rate + '% 有货</small></div></div>';
+  }
   diag += '</div>';
   // 关键诊断
   diag += '<div class="insight" style="background:rgba(255,193,7,.1);border-left-color:#ffc107;color:#1a1a1a;margin-top:10px">';
-  diag += '<b style="color:#e65100">⚠️ 关键诊断：</b>';
+  diag += '<b style="color:#e65100">⚠️ 关键诊断（Phoenix 加权排名 #' + phxPos + '）：</b>';
   diag += '<ul class="tight" style="color:#1a1a1a">';
-  diag += '<li>Phoenix 5 SKU <b>全部在 11.5K-13.7K 中端红海</b>，被 Duranta 7 SKU / Marine 5 SKU 围剿</li>';
-  diag += '<li><b>缺席品类：</b>公路 0 SKU（BD 唯一空白品类）、Gravel 0 SKU</li>';
-  diag += '<li><b>缺席价位：</b>15K-25K（0 SKU）/ 25K+（0 SKU）= 真实价格真空</li>';
-  diag += '<li><b>品牌力诊断：</b>Phoenix 跟 Duranta/Marine/Warrior 同一档（11K-19K），未实现"中高端价格锚点" = V2 战略"钻井型"目标未达成</li>';
+  diag += '<li><b>仅按 SKU 数量看，Phoenix 看似前列（' + phx.length + ' SKU）；但加权得分只排第 ' + phxPos + '</b>——ASP 14.4K + 顶价 18K = 真实定位中端</li>';
+  diag += '<li>真"中高端第一"是 <b>Core 15 SKU (ASP 19.6K, 顶价 30K, 87% 高端, 得分 59.3)</b>——少 SKU 但价格高度足够</li>';
+  diag += '<li><b>V2 战略含义：</b>Phoenix 的"钻井型"方向对了，但当前 ASP 14.4K 还在中端——需 22K+ UCI MTB 战略大单品提 ASP 至 20K+</li>';
+  diag += '<li>📊 <b>数据互验：</b>Tab #1 与 Tab #5 共享 brand_metrics.rankings，数据完全一致</li>';
   diag += '</ul></div>';
   document.getElementById('phoenix-diag').innerHTML = diag;
 }
