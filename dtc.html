@@ -207,10 +207,28 @@ footer {
 </div>
 
 <!-- 数据驱动的产品研发方向（自动从 dtc_reviews 差评关键词提取）-->
-<div style="background:linear-gradient(135deg,rgba(200,16,46,.1),rgba(255,255,255,.02));border:1px solid rgba(200,16,46,.3);border-left:4px solid #c8102e;border-radius:10px;padding:14px 18px;margin-bottom:20px">
-  <div style="font-size:12px;color:#c8102e;font-weight:700;margin-bottom:8px">💡 数据驱动的产品研发方向（自动从差评文本提取）</div>
+<div class="section dark" style="border-left:4px solid #c8102e">
+  <h2>💡 数据驱动的产品研发方向 <span class="badge" style="background:#c8102e;color:#fff">auto · 差评关键词</span></h2>
+  <div class="kpi-grid" style="margin-bottom:14px">
+    <div class="kpi accent">
+      <div class="kpi-label">🔧 质量类差评</div>
+      <div class="kpi-value" id="kp-quality">⏳ 加载中…</div>
+    </div>
+    <div class="kpi gap">
+      <div class="kpi-label">📦 物流/包装差评</div>
+      <div class="kpi-value" id="kp-shipping">⏳ 加载中…</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">💰 价格/规格差评</div>
+      <div class="kpi-value" id="kp-price-spec">⏳ 加载中…</div>
+    </div>
+    <div class="kpi dynamic">
+      <div class="kpi-label">🎯 V2.1 新品类方向</div>
+      <div class="kpi-value" id="kp-newcat">⏳ 加载中…</div>
+    </div>
+  </div>
   <div id="rd-direction" style="font-size:12px;color:#e2e8f0;line-height:1.7">⏳ 加载中…</div>
-  <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #5 蓝海机会 + <b style="color:#2e7d32">V2.1 40-60K 公路车新品类方向</b> = 差评高频词 → 新产品研发方向</div>
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #5 蓝海机会 + <b style="color:#a5d6a7">V2.1 40-60K 公路车新品类方向</b> = 差评高频词 → 新产品研发方向</div>
 </div>
 
 <div style="background:linear-gradient(135deg,rgba(94,234,212,.12),rgba(94,234,212,.04));border:1px solid rgba(94,234,212,.3);border-left:4px solid #5eead4;border-radius:10px;padding:14px 18px;margin-bottom:20px">
@@ -351,6 +369,22 @@ function renderRDDirection() {
   const totalGood = allReviews.length - bad.length;
   const badRate = totalReviews ? ((totalBad/totalReviews)*100).toFixed(1) : 0;
   const elTop = hits[0];
+  // 4 个 KPI 分类汇总
+  const qualityKws = ['品质差', '品牌造假', '配件缺失'];
+  const shipKws = ['物流慢', '运输损坏'];
+  const priceSpecKws = ['颜色错发', '尺寸不符', '商品错发'];
+  const qualityHits = hits.filter(h => qualityKws.includes(h.tag));
+  const shipHits = hits.filter(h => shipKws.includes(h.tag));
+  const priceSpecHits = hits.filter(h => priceSpecKws.includes(h.tag));
+  const sumCount = arr => arr.reduce((s, h) => s + h.count, 0);
+  const elKq = document.getElementById('kp-quality');
+  if (elKq) elKq.innerHTML = `<b style="color:#ffcdd2">${sumCount(qualityHits)} 次</b><br><small>${qualityHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKs = document.getElementById('kp-shipping');
+  if (elKs) elKs.innerHTML = `<b style="color:#ffcc80">${sumCount(shipHits)} 次</b><br><small>${shipHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKp = document.getElementById('kp-price-spec');
+  if (elKp) elKp.innerHTML = `<b>${sumCount(priceSpecHits)} 次</b><br><small>${priceSpecHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKnc = document.getElementById('kp-newcat');
+  if (elKnc) elKnc.innerHTML = `<b style="color:#c8e6c9">40-60K 公路车</b><br><small>V2.1 真空蓝海 · 品质差异化</small>`;
   const html = `
     <div style="margin-bottom:10px"><b>📊 差评总览：</b>${allReviews.length} 条评论中 <b style="color:#c8102e">${totalBad} 条差评（${badRate}%）</b>，${totalGood} 条好评</div>
     <div style="margin-bottom:10px"><b>🔍 差评关键词 TOP ${hits.length}：</b></div>
