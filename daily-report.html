@@ -269,7 +269,8 @@ function render() {
   let bd = (DATA.bd && DATA.bd.price_pool) || [];
   let id = (DATA.id && DATA.id.price_pool) || [];
 
-  // 中高端整车筛选：BD 5K-30K BDT / ID Rp 1M-30M，排除白牌/童车/折叠/BMX/头盔/灯/瓶架等周边
+  // 中高端整车筛选：BD ≥ 5K BDT / ID Rp 1M-30M，排除白牌/童车/折叠/BMX/头盔/灯/瓶架等周边
+  // 注意：BD 不限 30K 上限 —— 真实顶价（Rockrider 65K / Magpy 38K）需要保留
   const EXCLUDED = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack'];
   function isMidHighAdult(it) {
     if ((it.brand || '').toLowerCase() === 'generic') return false;
@@ -278,8 +279,8 @@ function render() {
     if (it.currency === 'IDR' || it._region === 'ID') {
       if (p < 1e6 || p > 3e7) return false;
     } else {
-      // BD 默认
-      if (p < 5000 || p > 30000) return false;
+      // BD ≥ 5K（不限上限，看真实顶价）
+      if (p < 5000) return false;
     }
     const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
     return !EXCLUDED.some(kw => m.includes(kw));
