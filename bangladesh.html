@@ -324,12 +324,14 @@
     const id715 = dm.id_7_15m || {};
     const strategyHtml = [
       `<li><b>Phoenix ${totals.phx_bd_mid_high} SKU 真实价位 ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT</b>（ASP ${totals.phx_bd_asp.toLocaleString()}）= <span class="gap">远低于行业顶价 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</span></li>`,
-      `<li><b>15K-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌（${bands.bd_15_25k ? bands.bd_15_25k.top_5_brands.slice(0, 5).join('/') : ''}）= <b>Phoenix 仍缺席</b>，V2 战略大单品切入点</li>`,
-      `<li><b>&gt; 25K 高端 ${phxGap.gt_25k_count} SKU</b> · ${phxGap.gt_25k_brand_count} 品牌（${phxGap.gt_25k_brands.slice(0, 5).join('/')}），<b>Phoenix 顶价仅 ${totals.phx_bd_max.toLocaleString()} = 缺席</b></li>`,
+      `<li><b style="color:#c8102e">🚫 25-40K 红海（避开）：</b>25 SKU 7 品牌（Rockrider 8 / Veloce 7 / Core 5 / Ceres 2 / Magpy 2 / Kiesel 1）= <b>Phoenix 进去就是价格战</b></li>`,
+      `<li><b style="color:#2e7d32">💎 40-60K 真空蓝海（V2.1 切入）：</b>仅 5 SKU 5 品牌（Rockrider XC 越野 4 + Duranta 电动 1）= <b>Phoenix UCI 公路车 = 避开竞争 + 抢占蓝海</b></li>`,
+      `<li><b>65K+ 顶价：</b>Rockrider XC 404 = 65,000 = 行业天花板 = <b>Phoenix 公路车价值锚点</b></li>`,
+      `<li><b>15-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌 = Phoenix 仍缺席，<b>可入但不首选</b>（先做 40-60K 公路车）</li>`,
       `<li><b>中端 10K-15K 红海</b>：${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌混战（Phoenix ${(all || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU） → 需 SGS 认证跳出价格战</li>`,
     ].join('');
     document.getElementById('bd-tier-strategy').innerHTML = strategyHtml;
-    document.getElementById('bd-anchor').innerHTML = `15K-25K ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU (${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌)<br>&gt; 25K ${phxGap.gt_25k_count} SKU (${phxGap.gt_25k_brand_count} 品牌)<br><small>Phoenix 仍缺席，可入</small>`;
+    document.getElementById('bd-anchor').innerHTML = `🚫 25-40K 红海 25 SKU（避开）<br>💎 40-60K 真空 5 SKU（切入）<br><small>行业顶价 65K Rockrider XC 404 = 价值锚点</small>`;
 
     // 新闻
     const news = (data.bd && data.bd.news) || [];
