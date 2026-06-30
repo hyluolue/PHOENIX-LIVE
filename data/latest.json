@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-30T17:48:34+08:00",
+  "generated_at": "2026-06-30T17:51:32+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "fail",
@@ -3935,9 +3935,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-06-30T17:48:34+08:00",
+  "gen_at": "2026-06-30T17:51:32+08:00",
   "brand_metrics": {
-    "computed_at": "2026-06-30T17:48:34+08:00",
+    "computed_at": "2026-06-30T17:51:32+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -4257,7 +4257,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-06-30T17:48:34+08:00",
+    "computed_at": "2026-06-30T17:51:32+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
@@ -4427,9 +4427,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "United",
+        "Pacific",
         "Element",
-        "Pacific"
+        "United"
       ]
     },
     "id_top10_brands": [
@@ -4607,9 +4607,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "United",
+          "Pacific",
           "Element",
-          "Pacific"
+          "United"
         ]
       },
       "bd_road_bike": {
