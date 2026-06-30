@@ -205,8 +205,26 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
 </div>
 
 <!-- V2 战略完成度跟踪（自动从 dashboard_metrics 计算） -->
-<div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,rgba(200,16,46,.05),transparent)">
+<div class="section dark" style="border-left:4px solid #c8102e">
   <h2>📊 V2 战略完成度跟踪 <span class="badge">实时 · dashboard_metrics 驱动</span></h2>
+  <div class="kpi-grid" style="margin-bottom:14px">
+    <div class="kpi dynamic">
+      <div class="kpi-label">🎯 V2 战略大单品</div>
+      <div class="kpi-value" id="kp-v2-product">⏳ 加载中…</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">📈 BD 评分排名</div>
+      <div class="kpi-value" id="kp-v2-rank">⏳ 加载中…</div>
+    </div>
+    <div class="kpi accent">
+      <div class="kpi-label">🚫 红海/💎 蓝海</div>
+      <div class="kpi-value" id="kp-v2-redblue">⏳ 加载中…</div>
+    </div>
+    <div class="kpi gap">
+      <div class="kpi-label">⚠️ 顶价差距</div>
+      <div class="kpi-value" id="kp-v2-gap">⏳ 加载中…</div>
+    </div>
+  </div>
   <div id="v2-progress" style="font-size:12px;color:#e2e8f0;line-height:1.8">⏳ 加载中…</div>
   <div style="margin-top:10px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
 </div>
@@ -350,6 +368,15 @@ async function loadV2Progress() {
     const idSku = id715.count || 0;
     const idPct = Math.min((idSku / 5) * 100, 100);
     const overall = (skuPct + maxPct + aspPct + idPct) / 4;
+    // 4 个 KPI 卡片（V2 战略大单品 + 排名 + 红蓝海 + 顶价差距）
+    const elKpProduct = document.getElementById('kp-v2-product');
+    if (elKpProduct) elKpProduct.innerHTML = `<b style="color:#c8e6c9">${phxSku}/20 SKU</b><br><small>公路车 5 SKU + ID 折叠 3 SKU</small>`;
+    const elKpRank = document.getElementById('kp-v2-rank');
+    if (elKpRank) elKpRank.innerHTML = `<b>#14 / 27 品牌</b><br><small>当前 44.5 分 · 目标 Top 3 (75+)</small>`;
+    const elKpRedBlue = document.getElementById('kp-v2-redblue');
+    if (elKpRedBlue) elKpRedBlue.innerHTML = `<b>🚫 25-40K 红海 25 SKU</b><br><b style="color:#c8e6c9">💎 40-60K 真空 5 SKU</b>`;
+    const elKpGap = document.getElementById('kp-v2-gap');
+    if (elKpGap) elKpGap.innerHTML = `<b>${phxMax.toLocaleString()} / 65,000 BDT</b><br><small>行业顶价 ${(phxGap.industry_max_brand||'')} ${(phxGap.industry_max_price||0).toLocaleString()}</small>`;
     el.innerHTML = `
       <div style="margin-bottom:10px">
         <b style="color:#ff9cae">🎯 V2 整体完成度：${overall.toFixed(0)}%</b>
