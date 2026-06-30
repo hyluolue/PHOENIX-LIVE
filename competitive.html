@@ -91,6 +91,30 @@
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
+    <!-- V2.1 战略关键数字面板（与总览同步） -->
+    <div class="section dark" style="border-left:4px solid #2e7d32">
+      <h2>💎 V2.1 蓝海切入点 = 40-60K 真空 <span class="badge" style="background:#2e7d32">2026-06-23 客户修订</span></h2>
+      <div class="kpi-grid" style="margin-bottom:14px">
+        <div class="kpi gap">
+          <div class="kpi-label">🚫 25-40K 红海</div>
+          <div class="kpi-value" id="cmp-redsea">⏳ 加载中…</div>
+        </div>
+        <div class="kpi dynamic" style="border:2px solid #66bb6a">
+          <div class="kpi-label">💎 40-60K 真空</div>
+          <div class="kpi-value" id="cmp-blueocean">⏳ 加载中…</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">📌 65K+ 顶价</div>
+          <div class="kpi-value" id="cmp-top">⏳ 加载中…</div>
+        </div>
+        <div class="kpi accent">
+          <div class="kpi-label">🎯 Phoenix 切入</div>
+          <div class="kpi-value" id="cmp-phx">⏳ 加载中…</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:#94a3b8">勾连：Tab #1 总览 + Tab #3 产品矩阵 + Tab #6 OKR KR1.Pr2 + dashboard_metrics 实时</div>
+    </div>
+
     <div class="section">
       <h2><span class="flag">📈</span>品牌价格矩阵 <small style="color:#999;font-weight:400">（按品牌聚合）</small></h2>
       <div class="summary" id="summary">加载中...</div>
@@ -262,6 +286,28 @@
       (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
       ` · <span style="color:#c8102e">Phoenix 排名 #${phxPos}（${phxBm ? phxBm.score : '-'} 分）· 顶价 ${phxGap.phx_max_price ? phxGap.phx_max_price.toLocaleString() : '?'} vs 行业 ${phxGap.industry_max_price ? phxGap.industry_max_price.toLocaleString() : '?'} (${phxGap.industry_max_brand || '?'})</span>`;
+
+    // V2.1 蓝海 4 个 KPI 卡片
+    const elRed = document.getElementById('cmp-redsea');
+    const elBlue = document.getElementById('cmp-blueocean');
+    const elTop = document.getElementById('cmp-top');
+    const elPhx = document.getElementById('cmp-phx');
+    if (elRed) {
+      const redCount = (dm.bands && dm.bands.bd_25_40k) ? dm.bands.bd_25_40k.count : 25;
+      const redBrands = (dm.bands && dm.bands.bd_25_40k) ? dm.bands.bd_25_40k.brands_count : 7;
+      elRed.innerHTML = `<b>${redCount} SKU · ${redBrands} 品牌</b><br><small>Rockrider 8 / Veloce 7 / Core 5<br>= Phoenix 进去 = 价格战</small>`;
+    }
+    if (elBlue) {
+      const blueCount = (dm.bands && dm.bands.bd_40_60k) ? dm.bands.bd_40_60k.count : 5;
+      const blueBrands = (dm.bands && dm.bands.bd_40_60k) ? dm.bands.bd_40_60k.brands_count : 5;
+      elBlue.innerHTML = `<b style="color:#c8e6c9">${blueCount} SKU · ${blueBrands} 品牌</b><br><small>Rockrider XC 越野 4 + Duranta 电动 1<br>= Phoenix 公路车 = 品类蓝海</small>`;
+    }
+    if (elTop) {
+      elTop.innerHTML = `<b>${(phxGap.industry_max_price || 65000).toLocaleString()} BDT</b><br><small>${phxGap.industry_max_brand || 'Rockrider'} XC 404<br>= 行业天花板</small>`;
+    }
+    if (elPhx) {
+      elPhx.innerHTML = `<b style="color:#ffcdd2">45K 公路车</b><br><small>UCI 认证 + 沃尔玛规模<br>+ ID 订单 + 返单</small>`;
+    }
 
     // 价格段品牌矩阵（按区域分别显示）
     const tierGrid = document.getElementById('tier-grid');
