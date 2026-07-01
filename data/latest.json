@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-01T09:53:00+08:00",
+  "generated_at": "2026-07-01T10:08:37+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "fail",
@@ -8,7 +8,7 @@
     "shopee_id": "fail",
     "tokopedia": "fail",
     "daraz_bd_reviews": "ok",
-    "dreamcycle": "ok",
+    "dreamcycle": "fail",
     "apify_social": "fail",
     "dreamcycle_vpn": "ok (113/113 with price - Playwright rendered)",
     "serbasepeda": "ok"
@@ -3574,7 +3574,104 @@
     ]
   },
   "id": {
-    "price_pool": [],
+    "price_pool": [
+      {
+        "brand": "Pacific",
+        "model": "Mountain Bike Entry 26",
+        "price": 5120000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "FRC 38 Gravel 700C",
+        "price": 7290000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "United",
+        "model": "Sterling R1 700C",
+        "price": 8990000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Pacific",
+        "model": "700C Road Bike",
+        "price": 9500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "Hybrid City 700C",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "Gravel Top Spec 700C",
+        "price": 26200000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Xtrada 5 700C",
+        "price": 6500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "United",
+        "model": "Mountain 27.5",
+        "price": 7800000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T10:08:37+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup"
+      }
+    ],
     "price_tracker": [],
     "news": [],
     "brand_pool": [
@@ -3703,9 +3800,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-01T09:53:00+08:00",
+  "gen_at": "2026-07-01T10:08:37+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-01T09:53:00+08:00",
+    "computed_at": "2026-07-01T10:08:37+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -4025,14 +4122,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-01T09:53:00+08:00",
+    "computed_at": "2026-07-01T10:08:37+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 130,
       "bd_pool_brands": 26,
-      "id_pool_total": 0,
-      "id_pool_brands": 0,
+      "id_pool_total": 8,
+      "id_pool_brands": 4,
       "phx_bd_total": 21,
       "phx_bd_mid_high": 11,
       "phx_bd_asp": 12556,
@@ -4193,8 +4290,12 @@
       "gt_15_25k_phx_present": true
     },
     "id_7_15m": {
-      "count": 0,
-      "brands": []
+      "count": 4,
+      "brands": [
+        "Pacific",
+        "Element",
+        "United"
+      ]
     },
     "id_top10_brands": [
       {
@@ -4368,9 +4469,13 @@
         ]
       },
       "id_thunder_id_mtb": {
-        "rationale": "ID 7-15M 0 SKU 品牌 []，无 SGS 中国品牌",
+        "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
-        "id_competitors": []
+        "id_competitors": [
+          "Pacific",
+          "Element",
+          "United"
+        ]
       },
       "bd_road_bike": {
         "rationale": "BD 17 品牌 公路车品类仅 Hero 1 SKU = 真空",
