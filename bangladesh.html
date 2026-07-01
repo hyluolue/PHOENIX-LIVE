@@ -330,14 +330,15 @@
     const id715 = dm.id_7_15m || {};
     const strategyHtml = [
       `<li><b>Phoenix ${totals.phx_bd_mid_high} SKU 真实价位 ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT</b>（ASP ${totals.phx_bd_asp.toLocaleString()}）= <span class="gap">远低于行业顶价 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</span></li>`,
-      `<li><b style="color:#c8102e">🚫 25-40K 红海（避开）：</b>25 SKU 7 品牌（Rockrider 8 / Veloce 7 / Core 5 / Ceres 2 / Magpy 2 / Kiesel 1）= <b>Phoenix 进去就是价格战</b></li>`,
-      `<li><b style="color:#2e7d32">💎 40-60K 真空蓝海（V2.1 切入）：</b>仅 5 SKU 5 品牌（Rockrider XC 越野 4 + Duranta 电动 1）= <b>Phoenix UCI 公路车 = 避开竞争 + 抢占蓝海</b></li>`,
+      `<li><b style="color:#e65100">🔥 15-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU (V2.1 🆕 必入)</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌 (Marine 15 / Veloce 15 / Core 9) = <b style="color:#c8102e">Phoenix 当前 0 SKU 不能缺席 = 用品质标准抢份额</b></li>`,
+      `<li><b style="color:#c8102e">🚫 25-40K 红海（避开）：</b>26 SKU 6 品牌（Rockrider 9 / Veloce 7 / Core 5 / Ceres 2 / Magpy 2 / Kiesel 1）= <b>Phoenix 进去就是价格战</b></li>`,
+      `<li><b style="color:#2e7d32">💎 40-60K 真空蓝海（V2.1 切入）：</b>仅 4 SKU（Rockrider Duke 25K + Pro 45K + XC 403 40K + XC 402 32K）= <b>Phoenix UCI 公路车 = 避开红海</b></li>`,
       `<li><b>65K+ 顶价：</b>Rockrider XC 404 = 65,000 = 行业天花板 = <b>Phoenix 公路车价值锚点</b></li>`,
-      `<li><b>15-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌 = Phoenix 仍缺席，<b>可入但不首选</b>（先做 40-60K 公路车）</li>`,
-      `<li><b>中端 10K-15K 红海</b>：${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌混战（Phoenix ${(all || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU） → 需 SGS 认证跳出价格战</li>`,
+      `<li><b style="color:#c8102e">🎯 真正差异化 = 品质标准</b>（其他品牌偷工减料 vs 凤凰符合品质标准 = 真实可持续护城河 ≠ SGS 认证）</li>`,
+      `<li><b>中端 10K-15K 红海</b>：${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌混战（Phoenix ${(all || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU）</li>`,
     ].join('');
     document.getElementById('bd-tier-strategy').innerHTML = strategyHtml;
-    document.getElementById('bd-anchor').innerHTML = `🚫 25-40K 红海 25 SKU（避开）<br>💎 40-60K 真空 5 SKU（切入）<br><small>行业顶价 65K Rockrider XC 404 = 价值锚点</small>`;
+    document.getElementById('bd-anchor').innerHTML = `🔥 15-25K 中高端必入 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU<br>🚫 25-40K 红海 26 SKU（避开）<br>💎 40-60K 真空 4 SKU（切入）<br><small>行业顶价 65K Rockrider XC 404 = 价值锚点</small>`;
 
     // 新闻
     const news = (data.bd && data.bd.news) || [];
