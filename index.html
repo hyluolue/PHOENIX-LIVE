@@ -350,7 +350,7 @@
         const kpiClass = isPhx ? 'kpi accent' : 'kpi';
         const rank = i + 1;
         const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '·';
-        const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix 实际定位中端</small>' : '';
+        const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix #13→V2.3.1 目标 #6 (44.7→72 分 = 完成 5 SKU @ 25-40K)</small>' : '';
         html += `<div class="${kpiClass}">
           <div class="kpi-label">${rankEmoji} ${esc(m.brand)} (${m.score} 分)</div>
           <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K) · ${m.in_stock_rate}% 有货</small>${tag}</div>
