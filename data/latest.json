@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-01T11:06:34+08:00",
+  "generated_at": "2026-07-01T11:53:53+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "fail",
@@ -1856,7 +1856,104 @@
     ]
   },
   "id": {
-    "price_pool": [],
+    "price_pool": [
+      {
+        "brand": "Pacific",
+        "model": "Mountain Bike Entry 26",
+        "price": 5120000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "FRC 38 Gravel 700C",
+        "price": 7290000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "United",
+        "model": "Sterling R1 700C",
+        "price": 8990000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Pacific",
+        "model": "700C Road Bike",
+        "price": 9500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "Hybrid City 700C",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Element",
+        "model": "Gravel Top Spec 700C",
+        "price": 26200000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Xtrada 5 700C",
+        "price": 6500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup"
+      },
+      {
+        "brand": "United",
+        "model": "Mountain 27.5",
+        "price": 7800000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-01T11:53:53+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup"
+      }
+    ],
     "price_tracker": [],
     "news": [],
     "brand_pool": [
@@ -1985,9 +2082,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-01T11:02:03+08:00",
+  "gen_at": "2026-07-01T11:53:53+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-01T11:02:03+08:00",
+    "computed_at": "2026-07-01T11:53:53+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -2027,7 +2124,7 @@
       "rack"
     ],
     "price_range": "BD 5K-30K BDT",
-    "total_brands": 6,
+    "total_brands": 5,
     "rankings": [
       {
         "brand": "Marine",
@@ -2041,28 +2138,6 @@
         "score": 49.2
       },
       {
-        "brand": "Rockrider",
-        "sku_count": 1,
-        "asp": 26999,
-        "max_price": 26999,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 0,
-        "sku_score": 1.8,
-        "score": 47.3
-      },
-      {
-        "brand": "Duranta",
-        "sku_count": 10,
-        "asp": 11561,
-        "max_price": 15600,
-        "high_tier_count": 3,
-        "high_tier_pct": 30,
-        "in_stock_rate": 0,
-        "sku_score": 17.5,
-        "score": 36.3
-      },
-      {
         "brand": "Warrior",
         "sku_count": 3,
         "asp": 17666,
@@ -2074,15 +2149,26 @@
         "score": 35.7
       },
       {
+        "brand": "Duranta",
+        "sku_count": 9,
+        "asp": 12047,
+        "max_price": 15600,
+        "high_tier_count": 3,
+        "high_tier_pct": 33,
+        "in_stock_rate": 0,
+        "sku_score": 15.7,
+        "score": 35.5
+      },
+      {
         "brand": "Phoenix",
-        "sku_count": 5,
-        "asp": 9146,
-        "max_price": 11520,
+        "sku_count": 4,
+        "asp": 8553,
+        "max_price": 9404,
         "high_tier_count": 0,
         "high_tier_pct": 0,
         "in_stock_rate": 0,
-        "sku_score": 8.8,
-        "score": 19.8
+        "sku_score": 7.0,
+        "score": 16.9
       },
       {
         "brand": "Veloce",
@@ -2098,27 +2184,27 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-01T11:02:03+08:00",
+    "computed_at": "2026-07-01T11:53:53+08:00",
     "totals": {
       "bd_pool_total": 74,
       "bd_pool_priced": 74,
-      "bd_pool_mid_high": 27,
+      "bd_pool_mid_high": 24,
       "bd_pool_brands": 9,
       "id_pool_total": 8,
       "id_pool_brands": 4,
-      "phx_bd_total": 15,
-      "phx_bd_mid_high": 5,
-      "phx_bd_asp": 9146,
-      "phx_bd_max": 11520,
+      "phx_bd_total": 13,
+      "phx_bd_mid_high": 4,
+      "phx_bd_asp": 8553,
+      "phx_bd_max": 9404,
       "phx_bd_min": 6000
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 8,
+        "count": 7,
         "brands_count": 2,
         "brands": {
           "Phoenix": 4,
-          "Duranta": 4
+          "Duranta": 3
         },
         "top_5_brands": [
           "Phoenix",
@@ -2126,17 +2212,15 @@
         ]
       },
       "bd_10_15k": {
-        "count": 6,
-        "brands_count": 4,
+        "count": 5,
+        "brands_count": 3,
         "brands": {
           "Duranta": 3,
-          "Phoenix": 1,
           "Veloce": 1,
           "Warrior": 1
         },
         "top_5_brands": [
           "Duranta",
-          "Phoenix",
           "Veloce",
           "Warrior"
         ]
@@ -2156,10 +2240,10 @@
         ]
       },
       "bd_gt_25k": {
-        "count": 2,
+        "count": 1,
         "brands_count": 1,
         "brands": {
-          "Rockrider": 2
+          "Rockrider": 1
         },
         "top_5_brands": [
           "Rockrider"
@@ -2167,14 +2251,9 @@
       }
     },
     "gt_25k_brands": {
-      "Rockrider": 2
+      "Rockrider": 1
     },
     "gt_25k_top5": [
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-        "price": 26999
-      },
       {
         "brand": "Rockrider",
         "model": "ROCKRIDER STUNT SEEKER Frame: 26\", 6061 Light weight alloy with Internal Cable Routing.",
@@ -2182,17 +2261,17 @@
       }
     ],
     "phx_gap": {
-      "phx_max_price": 11520,
+      "phx_max_price": 9404,
       "phx_min_price": 6000,
-      "phx_asp": 9146,
-      "phx_count": 5,
+      "phx_asp": 8553,
+      "phx_count": 4,
       "phx_in_15_25": 0,
       "phx_in_gt_25": 0,
-      "industry_max_price": 26999,
+      "industry_max_price": 25500,
       "industry_max_brand": "Rockrider",
-      "industry_max_model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-      "phx_vs_industry_ratio": 2.3,
-      "gt_25k_count": 2,
+      "industry_max_model": "ROCKRIDER STUNT SEEKER Frame: 26\", 6061 Light weight alloy with Internal Cable Routing.",
+      "phx_vs_industry_ratio": 2.7,
+      "gt_25k_count": 1,
       "gt_25k_brand_count": 1,
       "gt_25k_brands": [
         "Rockrider"
@@ -2204,8 +2283,8 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "United",
         "Pacific",
+        "United",
         "Element"
       ]
     },
@@ -2350,14 +2429,9 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 12 SKU 3 品牌，Phoenix 缺席；> 25K 2 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 12 SKU 3 品牌，Phoenix 缺席；> 25K 1 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
         "top_competitors_gt_25k": [
-          {
-            "brand": "Rockrider",
-            "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-            "price": 26999
-          },
           {
             "brand": "Rockrider",
             "model": "ROCKRIDER STUNT SEEKER Frame: 26\", 6061 Light weight alloy with Internal Cable Routing.",
@@ -2369,8 +2443,8 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "United",
           "Pacific",
+          "United",
           "Element"
         ]
       },
