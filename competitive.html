@@ -430,7 +430,9 @@
   });
   document.getElementById('search').addEventListener('input', render);
 
-  load();
+  // V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
+  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
 </script>
+<script src="./render_quality_gate.js"></script>
 </body>
 </html>
