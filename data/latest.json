@@ -2665,7 +2665,7 @@
   "data_quality": {
     "level": "red",
     "emoji": "🔴",
-    "evaluated_at": "2026-07-06T14:14:36",
+    "evaluated_at": "2026-07-06T14:16:27",
     "reasons": [
       "VPN 依赖模块失败: dreamcycle_vpn",
       "BD 池 74 SKU（中等，建议 ≥ 150）",
