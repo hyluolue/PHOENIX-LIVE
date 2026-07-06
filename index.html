@@ -113,7 +113,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="bd-market-overview">
       <h2><span class="flag">🇧🇩</span>孟加拉 BD 市场 <small style="color:#999;font-weight:400">（2025 报告 + latest.json 实时）</small></h2>
       <div class="kpi-grid">
         <div class="kpi dynamic">
@@ -143,7 +143,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="id-vacuum-analysis">
       <h2><span class="flag">🇮🇩</span>印尼 ID 市场 <small style="color:#999;font-weight:400">（2024-2025 报告 + serbasepeda 实时）</small></h2>
       <div class="kpi-grid">
         <div class="kpi dynamic">
@@ -201,7 +201,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="competitive-rankings">
       <h2><span class="flag">📈</span>品牌监控汇总 - TOP 10 中高端 <small style="color:#999;font-weight:400">（BD 5K-30K BDT · 排除白牌/童车/折叠/电动/配件 · 加权得分：SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10%）</small></h2>
       <div class="kpi-grid" id="brand-monitor-grid">
         <div class="kpi"><div class="kpi-label">⏳ 加载中…</div><div class="kpi-value">从 latest.json#brand_metrics 读</div></div>
@@ -362,9 +362,15 @@
     // ID 实时数据 (serbasepeda hardcoded)
     document.getElementById('id-count').textContent = '16';
     document.getElementById('id-priced').textContent = '15';
+
+    // V2.7 数据质量门 — 顶部 VPN 信号灯 + 数据失真模块遮罩
+    if (typeof renderQualityGate === 'function') {
+      renderQualityGate(data);
+    }
   }
 
   load();
 </script>
+<script src="./render_quality_gate.js"></script>
 </body>
 </html>
