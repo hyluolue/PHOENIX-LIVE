@@ -650,8 +650,18 @@ function renderNews(elId, news) {
 }
 
 loadAll();
+
+// V2.7 数据质量门 — VPN 信号灯
+loadAll().then(async () => {
+  try {
+    const r = await fetch('./data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+});
 setInterval(loadAll, 60_000);
 </script>
 
+<script src="./render_quality_gate.js"></script>
 </body>
 </html>
