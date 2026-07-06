@@ -583,7 +583,9 @@ async function load() {
   }).join('');
   document.getElementById('today-actions').innerHTML = html || '<div class="initiative" style="background:#e8f5e9;border-left-color:#2e7d32;color:#1b5e20"><div class="init-title">✅ 所有 OKR KR 已达成 / 监控中</div><div class="init-detail">今日无紧急行动项 = 战略推进顺利</div></div>';
 }
-load();
+// V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
+  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
 </script>
+<script src="./render_quality_gate.js"></script>
 </body>
 </html>
