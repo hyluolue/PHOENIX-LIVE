@@ -486,7 +486,24 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 loadData();
 setInterval(loadData, 60_000);  // 每分钟刷新
+
+// V2.7 数据质量门 — VPN 信号灯（每分钟跟随刷新）
+setInterval(async () => {
+  try {
+    const r = await fetch('./data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+}, 60_000);
+loadData().then(async () => {
+  try {
+    const r = await fetch('./data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+});
 </script>
 
+<script src="./render_quality_gate.js"></script>
 </body>
 </html>
