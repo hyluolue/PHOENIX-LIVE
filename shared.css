@@ -67,4 +67,20 @@ ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
 .badge{display:inline-block;padding:2px 8px;background:#5eead4;color:#1a1a2e;border-radius:6px;font-size:10px;font-weight:700;margin-left:6px}
 /* V2.1 补充：hl 高亮 + delta 数值标签（用于 KPI 数字下小字）*/
 .delta{display:inline-block;padding:1px 6px;background:#fff3e0;color:#e65100;border-radius:4px;font-size:10px;font-weight:700;margin-left:4px}
-.hl{background:rgba(200,16,46,.1);color:#c8102e;padding:1px 4px;border-radius:3px;font-weight:700}
+.hl{background:rgba(200,16,46,.1);color:#c8102e;padding:1px 4px;border-radius:3px;font-weight:700}/* ===== V2.7 数据质量门 / VPN 信号灯 ===== */
+.quality-gate{position:sticky;top:0;z-index:1000;margin:-10px -10px 14px;padding:10px 14px;border-radius:8px;font-weight:600;font-size:13px;line-height:1.6;display:flex;align-items:center;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.quality-gate .qg-emoji{font-size:22px;flex-shrink:0}
+.quality-gate .qg-text{flex:1}
+.quality-gate .qg-text small{font-weight:400;opacity:.85;display:block;margin-top:2px}
+.quality-gate .qg-detail{display:none;margin-top:6px;padding:8px 10px;background:rgba(255,255,255,.5);border-radius:6px;font-size:11.5px;font-weight:400;line-height:1.7}
+.quality-gate .qg-detail.open{display:block}
+.quality-gate .qg-toggle{cursor:pointer;font-size:11px;padding:2px 8px;background:rgba(0,0,0,.1);border-radius:4px;font-weight:600}
+.quality-gate.green{background:#e8f5e9;border:2px solid #2e7d32;color:#1b5e20}
+.quality-gate.yellow{background:#fff8e1;border:2px solid #f57f17;color:#e65100}
+.quality-gate.red{background:#ffebee;border:3px solid #c8102e;color:#b71c1c;animation:pulse-red 2s infinite}
+@keyframes pulse-red{0%,100%{box-shadow:0 2px 8px rgba(200,16,46,.2)}50%{box-shadow:0 2px 16px rgba(200,16,46,.5)}}
+.quality-gate.red .qg-emoji{animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
+/* 数据失真模块遮罩 */
+.dq-degraded{position:relative;opacity:.6;pointer-events:none}
+.dq-degraded::after{content:"⚠️ 数据失真 — 等 VPN 开启";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#c8102e;color:#fff;padding:8px 16px;border-radius:6px;font-size:13px;font-weight:700;z-index:10;pointer-events:auto;cursor:help}
