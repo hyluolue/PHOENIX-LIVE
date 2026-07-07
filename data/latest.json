@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T13:36:53+08:00",
+  "generated_at": "2026-07-07T14:21:23+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -4386,6 +4386,366 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 760,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Roadbike Element FRC 50 2026 EVO Alloy 2x9sp 700C",
+        "price": 4099000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Element-FRC-50-2026-EVO-Alloy-2x9sp-700C-i.608468643.26578273647?extraParams=%7B%22display_model_id%22%3A292046608733%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=418d81ae-90f6-4b91-9e86-bb7b24b0dd24&amp;xptdk=418d81ae-90f6-4b91-9e86-bb7b24b0dd24",
+        "shop": "608468643",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 4,099,000"
+      },
+      {
+        "brand": "Pinarello",
+        "model": "Pinarello Dogma F DISC E128 Sonic Green Shimano DURA ACE DI2 Road Bike 2024",
+        "price": 139000000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Pinarello-Dogma-F-DISC-E128-Sonic-Green-Shimano-DURA-ACE-DI2-Road-Bike-2024-i.212095467.44252395765?extraParams=%7B%22display_model_id%22%3A305196462383%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3e4f65bd-4fc1-4561-a31d-856e21447834&amp;xptdk=3e4f65bd-4fc1-4561-a31d-856e21447834",
+        "shop": "212095467",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 139,000,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Roadbike Custom Model Pinarelo Dogma ~ Warna Bisa Request",
+        "price": 4850000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Custom-Model-Pinarelo-Dogma-~-Warna-Bisa-Request-i.242300410.41581003297?extraParams=%7B%22display_model_id%22%3A410940983742%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=117e813f-6b58-4119-a987-3ec90193e614&amp;xptdk=117e813f-6b58-4119-a987-3ec90193e614",
+        "shop": "242300410",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 4,850,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Roadbike CAMP SR5 Sport Tiagra PRO 105 UCI Invisible Welding",
+        "price": 13990000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-CAMP-SR5-Sport-Tiagra-PRO-105-UCI-Invisible-Welding-i.608468643.28071229010?extraParams=%7B%22display_model_id%22%3A237176134113%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=2537749c-894f-4a65-810a-10b783ebb487&amp;xptdk=2537749c-894f-4a65-810a-10b783ebb487",
+        "shop": "608468643",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 13,990,000"
+      },
+      {
+        "brand": "Trek",
+        "model": "Trek Madone SLR 7 Gen 7 Matte Black Road Bike",
+        "price": 100000000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Trek-Madone-SLR-7-Gen-7-Matte-Black-Road-Bike-i.1466694867.27229900649?extraParams=%7B%22display_model_id%22%3A410457762536%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=ddb3bb0b-b710-4ac2-ab75-85ff7af08f48&amp;xptdk=ddb3bb0b-b710-4ac2-ab75-85ff7af08f48",
+        "shop": "1466694867",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 100,000,000"
+      },
+      {
+        "brand": "Road",
+        "model": "Road bike BXT Merah",
+        "price": 4300000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Road-bike-BXT-Merah-i.1361653308.52662496369?extraParams=%7B%22display_model_id%22%3A287712638723%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fddc67d6-17b4-4052-8f9c-22268c904209&amp;xptdk=fddc67d6-17b4-4052-8f9c-22268c904209",
+        "shop": "1361653308",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 4,300,000"
+      },
+      {
+        "brand": "PINARELLO",
+        "model": "PINARELLO X1 105 D162 DISC PEARL WHITE Road Bike",
+        "price": 44330000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/PINARELLO-X1-105-D162-DISC-PEARL-WHITE-Road-Bike-i.212095467.56762024202?extraParams=%7B%22display_model_id%22%3A331045933433%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0e95dbf-b843-412a-9a72-7ff2a315e86f&amp;xptdk=f0e95dbf-b843-412a-9a72-7ff2a315e86f",
+        "shop": "212095467",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 44,330,000"
+      },
+      {
+        "brand": "CAMP",
+        "model": "CAMP ROADBIKE ACE 2 105 CARBON DISC BRAKE (WHITE) SIZE 52",
+        "price": 40458000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/CAMP-ROADBIKE-ACE-2-105-CARBON-DISC-BRAKE-(WHITE)-SIZE-52-i.394605891.51005058912?extraParams=%7B%22display_model_id%22%3A370466000750%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=02f1c088-19b4-4c1c-8925-40334bbcde29&amp;xptdk=02f1c088-19b4-4c1c-8925-40334bbcde29",
+        "shop": "394605891",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 40,458,000"
+      },
+      {
+        "brand": "Twitter",
+        "model": "Twitter Cyclone Pro WHEELTOP WIRELESS 24 Speed FULL HYDRAULIC Roadbike",
+        "price": 17500000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Twitter-Cyclone-Pro-WHEELTOP-WIRELESS-24-Speed-FULL-HYDRAULIC-Roadbike-i.287301743.29015583557?extraParams=%7B%22display_model_id%22%3A223379345214%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=cefe47c1-9ec6-49c1-bf69-301b5485d107&amp;xptdk=cefe47c1-9ec6-49c1-bf69-301b5485d107",
+        "shop": "287301743",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 17,500,000"
+      },
+      {
+        "brand": "sepeda",
+        "model": "sepeda roadbike Java siluro 2",
+        "price": 4950000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/sepeda-roadbike-Java-siluro-2-i.1690474252.44028717817?extraParams=%7B%22display_model_id%22%3A350554962838%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=061dfedb-749e-41b9-a426-5afcb291c39b&amp;xptdk=061dfedb-749e-41b9-a426-5afcb291c39b",
+        "shop": "1690474252",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 4,950,000"
+      },
+      {
+        "brand": "Roadbike",
+        "model": "Roadbike S Works SL7 Spesial Edision Aero Carbon",
+        "price": 37600000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Roadbike-S-Works-SL7-Spesial-Edision-Aero-Carbon-i.773028270.20585011448?extraParams=%7B%22display_model_id%22%3A225715266090%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bd70e156-5669-41e1-8b8a-c7b4b06184a3&amp;xptdk=bd70e156-5669-41e1-8b8a-c7b4b06184a3",
+        "shop": "773028270",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 37,600,000"
+      },
+      {
+        "brand": "Twitter",
+        "model": "Twitter R10 ET Wheeltop Wireless 24 Speed Roadbike",
+        "price": 16500000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Twitter-R10-ET-Wheeltop-Wireless-24-Speed-Roadbike-i.287301743.25287622560?extraParams=%7B%22display_model_id%22%3A233379024871%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7d733e97-ba7c-4cca-8a4c-67c9d1044ed7&amp;xptdk=7d733e97-ba7c-4cca-8a4c-67c9d1044ed7",
+        "shop": "287301743",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 16,500,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Roadbike Balap Element Police Toronto 7speed BAN 700c",
+        "price": 2070000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-Balap-Element-Police-Toronto-7speed-BAN-700c-i.19737296.41263794819?extraParams=%7B%22display_model_id%22%3A167381978275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=c2fadd9f-cb1c-470f-a3f5-dc87fa190884&amp;xptdk=c2fadd9f-cb1c-470f-a3f5-dc87fa190884",
+        "shop": "19737296",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 2,070,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Polygon Helios A9 Carbon Duraace DI2 With Power Meter",
+        "price": 93300000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Polygon-Helios-A9-Carbon-Duraace-DI2-With-Power-Meter-i.1399960534.43326241631?extraParams=%7B%22display_model_id%22%3A287137549133%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=80dd4acc-4cf3-4c3f-842a-9aa8c131fdd4&amp;xptdk=80dd4acc-4cf3-4c3f-842a-9aa8c131fdd4",
+        "shop": "1399960534",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 93,300,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Roadbike Camp SR3 Si Clean Look 2x9sp Shimano Sora Hydraulic!",
+        "price": 9600000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Camp-SR3-Si-Clean-Look-2x9sp-Shimano-Sora-Hydraulic!-i.608468643.15721009258?extraParams=%7B%22display_model_id%22%3A325403009802%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=78e38869-9a52-433d-9e65-995583d8c3e8&amp;xptdk=78e38869-9a52-433d-9e65-995583d8c3e8",
+        "shop": "608468643",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 9,600,000"
+      },
+      {
+        "brand": "PINARELLO",
+        "model": "PINARELLO F1 105 H240 DISC CARBON RED MATT Road Bike Full Bike",
+        "price": 64440000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/PINARELLO-F1-105-H240-DISC-CARBON-RED-MATT-Road-Bike-Full-Bike-i.212095467.49262099655?extraParams=%7B%22display_model_id%22%3A341049649895%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5076d40f-5adb-4938-a1c9-9b601c00be12&amp;xptdk=5076d40f-5adb-4938-a1c9-9b601c00be12",
+        "shop": "212095467",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 64,440,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Roadbike 700C ELEMENT POLICE TORONTO 7 Speed NEW",
+        "price": 2250000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-700C-ELEMENT-POLICE-TORONTO-7-Speed-NEW-i.344778854.46562275963?extraParams=%7B%22display_model_id%22%3A361062961463%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5bcfac5d-d180-4434-a169-c53103b24dcd&amp;xptdk=5bcfac5d-d180-4434-a169-c53103b24dcd",
+        "shop": "344778854",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 2,250,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Element roadbike frc 50 SB 2x8 SP Sepeda Roadbike Element Frc 50 SB",
+        "price": 4093000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Element-roadbike-frc-50-SB-2x8-SP-Sepeda-Roadbike-Element-Frc-50-SB-i.552002197.40831802864?extraParams=%7B%22display_model_id%22%3A321074906500%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=039157f4-5ca9-46a7-bfca-0642cf4f9ef3&amp;xptdk=039157f4-5ca9-46a7-bfca-0642cf4f9ef3",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 4,093,000"
+      },
+      {
+        "brand": "Police",
+        "model": "Police Toronto EFG 700C Shimano 2x7 Speed Steel",
+        "price": 2145000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Police-Toronto-EFG-700C-Shimano-2x7-Speed-Steel-i.340563993.40825822098?extraParams=%7B%22display_model_id%22%3A345017801024%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0abf394-d30c-4781-86fe-afc90ef13d5c&amp;xptdk=f0abf394-d30c-4781-86fe-afc90ef13d5c",
+        "shop": "340563993",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 2,145,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+        "price": 1427000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/SEPEDA-BALAP-ROADBIKE-PARAGON-R600-BRIFTER-ELEMENT-POLICE-TORONTO-EFG-SHIMANO-EXOTIC-2708-GR-BY-PACIFIC-700c-ET-2708-FS-1.0-BESI-SL-2.0-ALLOY-FIXIE-2708-GR-700C-BY-PACIFIC-HUNTER-PARAGON-REM-TORPEDO-R3-L-two-GRAVEL-SENSAH-MAINAN-OLAHRAGA-IBU-i.7586374.8112803798?extraParams=%7B%22display_model_id%22%3A247101891082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8adaacdd-c90e-4e49-9788-349059c2913d&amp;xptdk=8adaacdd-c90e-4e49-9788-349059c2913d",
+        "shop": "7586374",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 1,427,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
+        "price": 1930000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a1f937da-fa08-42c1-8043-229450412238&amp;xptdk=a1f937da-fa08-42c1-8043-229450412238",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 1,930,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap RoadBike ODESSY 700C 1010S 1011 EVERGREEN GRAVEL JAZZ EVERGREEN GRAVEL BOSTON Rem Cakram Shimano Roadbike G",
+        "price": 1895900,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-RoadBike-ODESSY-700C-1010S-1011-EVERGREEN-GRAVEL-JAZZ-EVERGREEN-GRAVEL-BOSTON-Rem-Cakram-Shimano-Roadbike-Gravel-Forward-FWD-Murah-BDG-i.56230724.26460022460?extraParams=%7B%22display_model_id%22%3A310983243163%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52609d93-4563-4858-ab71-c92ffefc3f42&amp;xptdk=52609d93-4563-4858-ab71-c92ffefc3f42",
+        "shop": "56230724",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 1,895,900"
+      },
+      {
+        "brand": "Evergreen",
+        "model": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+        "price": 1935000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Evergreen-Jazz-Gravel-700C-3x7-Speed-Disk-Brake-i.31188778.25933366401?extraParams=%7B%22display_model_id%22%3A345586826469%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=818d0a65-3e56-4259-bd45-57afee48eb7a&amp;xptdk=818d0a65-3e56-4259-bd45-57afee48eb7a",
+        "shop": "31188778",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 1,935,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap Element Roadbike Fixie Police Toronto FX AR CST Pandora AR 700C FIXIE ALTON MISTIQUE 24 FIXIE TORY FX",
+        "price": 1810000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-Element-Roadbike-Fixie-Police-Toronto-FX-AR-CST-Pandora-AR-700C-FIXIE-ALTON-MISTIQUE-24-FIXIE-TORY-FX-i.56230724.28423880074?extraParams=%7B%22display_model_id%22%3A370927940181%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=37003399-e7e8-4735-b7e6-3ccc40b34137&amp;xptdk=37003399-e7e8-4735-b7e6-3ccc40b34137",
+        "shop": "56230724",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 1,810,000"
+      },
+      {
+        "brand": "Element",
+        "model": "Element Roadbike 700C FRC50 480 500 520 Disc Brake",
+        "price": 3670100,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Element-Roadbike-700C-FRC50-480-500-520-Disc-Brake-i.56230724.55303199901?extraParams=%7B%22display_model_id%22%3A350436499847%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9beb172d-3b99-4d91-9f48-6fc003602712&amp;xptdk=9beb172d-3b99-4d91-9f48-6fc003602712",
+        "shop": "56230724",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 3,670,100"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Roadbike Element FRC 50 Alloy 16 Speed",
+        "price": 3950000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-Element-FRC-50-Alloy-16-Speed-i.11988256.8164658661?extraParams=%7B%22display_model_id%22%3A198808694442%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=63515e64-efdf-44cf-96a5-d618dc314f86&amp;xptdk=63515e64-efdf-44cf-96a5-d618dc314f86",
+        "shop": "11988256",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 3,950,000"
+      },
+      {
+        "brand": "Police",
+        "model": "Police Roadbike Toronto EFG 700c 7x2 Sp",
+        "price": 2225000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Police-Roadbike-Toronto-EFG-700c-7x2-Sp-i.26865232.57202518824?extraParams=%7B%22display_model_id%22%3A262224316183%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de&amp;xptdk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de",
+        "shop": "26865232",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 2,225,000"
+      },
+      {
+        "brand": "Sale",
+        "model": "Sale 2024 SLR 9 Gen7 Red Carbon Complete Bike Road Full Bicycle 50 52 54 56 58cm",
+        "price": 142778108,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sale-2024-SLR-9-Gen7-Red-Carbon-Complete-Bike-Road-Full-Bicycle-50-52-54-56-58cm-i.1641428207.40876334787?extraParams=%7B%22display_model_id%22%3A445112198945%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52378386-956a-40e9-954f-7a88c31cc58d&amp;xptdk=52378386-956a-40e9-954f-7a88c31cc58d",
+        "shop": "1641428207",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 142,778,108"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap 700c Roadbike Model Look Warna Hijau Tosca Murah Meriah Siap Pakai",
+        "price": 3900000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-700c-Roadbike-Model-Look-Warna-Hijau-Tosca-Murah-Meriah-Siap-Pakai-i.1077524497.29774768192?extraParams=%7B%22display_model_id%22%3A238228795082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52cc1548-f3e4-4646-8bab-42db23c3109b&amp;xptdk=52cc1548-f3e4-4646-8bab-42db23c3109b",
+        "shop": "1077524497",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 3,900,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balap 700C ODESSY 1011 Roadbike RB Murah",
+        "price": 2000000,
+        "currency": "IDR",
+        "platform": "Shopee ID (roadbike)",
+        "url": "https://shopee.co.id/Sepeda-Balap-700C-ODESSY-1011-Roadbike-RB-Murah-i.37864667.27520313367?extraParams=%7B%22display_model_id%22%3A242226270067%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5693d286-001e-49b3-aad1-6dbead258ec0&amp;xptdk=5693d286-001e-49b3-aad1-6dbead258ec0",
+        "shop": "37864667",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:20:00+08:00",
+        "note": "Rp 2,000,000"
       }
     ],
     "price_tracker": [],
@@ -4539,12 +4899,13 @@
     ],
     "tokopedia_count": 39,
     "shopee_id_count": 34,
-    "serbasepeda_count": 47
+    "serbasepeda_count": 47,
+    "shopee_roadbike_count": 30
   },
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T13:36:53+08:00",
+  "gen_at": "2026-07-07T14:21:23+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4877,14 +5238,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T13:36:53+08:00",
+    "computed_at": "2026-07-07T14:21:23+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 74,
-      "id_pool_brands": 47,
+      "id_pool_total": 104,
+      "id_pool_brands": 58,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
@@ -5047,8 +5408,10 @@
       "gt_15_25k_phx_present": true
     },
     "id_7_15m": {
-      "count": 0,
-      "brands": []
+      "count": 2,
+      "brands": [
+        "Sepeda"
+      ]
     },
     "id_top10_brands": [
       {
@@ -5222,9 +5585,11 @@
         ]
       },
       "id_thunder_id_mtb": {
-        "rationale": "ID 7-15M 0 SKU 品牌 []，无 SGS 中国品牌",
+        "rationale": "ID 7-15M 2 SKU 品牌 ['Sepeda', 'Sepeda']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
-        "id_competitors": []
+        "id_competitors": [
+          "Sepeda"
+        ]
       },
       "bd_road_bike": {
         "rationale": "BD 17 品牌 公路车品类仅 Hero 1 SKU = 真空",
@@ -6104,6 +6469,331 @@
         "title": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
         "price_idr": 760000,
         "scraped_at": "2026-07-07"
+      }
+    ]
+  },
+  "shopee_roadbike": {
+    "source": "user saved HTML (2 pages)",
+    "platform": "Shopee ID",
+    "query": "roadbike",
+    "scraped_at": "2026-07-07",
+    "pages": 2,
+    "products_total": 33,
+    "products_with_price": 33,
+    "bicycles_with_price": 30,
+    "price_range": {
+      "min": 1427000,
+      "max": 142778108
+    },
+    "price_buckets": {
+      "< 1M": 0,
+      "1-2M": 5,
+      "2-3M": 5,
+      "3-5M": 8,
+      "5-7M": 0,
+      "7-10M": 1,
+      "10-15M": 1,
+      "15-25M": 2,
+      "25M+": 8
+    },
+    "mid_high_12_15m_count": 1,
+    "products": [
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1243380955",
+        "item_id": "41831088750",
+        "url": "https://shopee.co.id/TAKEY-Sepeda-Statis-Magnetik-Senyap-Spinning-Bike-K7-JC302-Detak-Jantung-Olahraga-Gym-Alat-Fitness-Sepeda-Roadbike-i.1243380955.41831088750?extraParams=%7B%22display_model_id%22%3A390954964533%2C%22model_selection_logic%22%3A3%7D",
+        "title": "TAKEY Sepeda Statis Magnetik Senyap Spinning Bike K7 JC302 Detak Jantung Olahraga Gym Alat Fitness Sepeda Roadbike",
+        "price_idr": 2175000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1243380955",
+        "item_id": "28212423427",
+        "url": "https://shopee.co.id/MY-HI-Treadmill-Portable-T3-B40-Walking-Pad-Running-Mat-Lipat-Treadmill-Electrik-Low-Watt-Alat-olahraga-di-rumah-TAKEY-MALL-i.1243380955.28212423427?extraParams=%7B%22display_model_id%22%3A218030866883%2C%22model_selection_logic%22%3A3%7D",
+        "title": "MY HI Treadmill Portable T3 B40 Walking Pad Running Mat Lipat Treadmill Electrik Low Watt Alat olahraga di rumah TAKEY M",
+        "price_idr": 1410700,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1243380955",
+        "item_id": "28923571343",
+        "url": "https://shopee.co.id/TAKEY-Treadmill-Elektrik-Lipat-3.5HP-Portable-i.1243380955.28923571343?extraParams=%7B%22display_model_id%22%3A280250933870%2C%22model_selection_logic%22%3A3%7D",
+        "title": "TAKEY Treadmill Elektrik Lipat 3.5HP Portable",
+        "price_idr": 2390800,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "608468643",
+        "item_id": "26578273647",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Element-FRC-50-2026-EVO-Alloy-2x9sp-700C-i.608468643.26578273647?extraParams=%7B%22display_model_id%22%3A292046608733%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=418d81ae-90f6-4b91-9e86-bb7b24b0dd24&amp;xptdk=418d81ae-90f6-4b91-9e86-bb7b24b0dd24",
+        "title": "Sepeda Balap Roadbike Element FRC 50 2026 EVO Alloy 2x9sp 700C",
+        "price_idr": 4099000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "212095467",
+        "item_id": "44252395765",
+        "url": "https://shopee.co.id/Pinarello-Dogma-F-DISC-E128-Sonic-Green-Shimano-DURA-ACE-DI2-Road-Bike-2024-i.212095467.44252395765?extraParams=%7B%22display_model_id%22%3A305196462383%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3e4f65bd-4fc1-4561-a31d-856e21447834&amp;xptdk=3e4f65bd-4fc1-4561-a31d-856e21447834",
+        "title": "Pinarello Dogma F DISC E128 Sonic Green Shimano DURA ACE DI2 Road Bike 2024",
+        "price_idr": 139000000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "242300410",
+        "item_id": "41581003297",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Custom-Model-Pinarelo-Dogma-~-Warna-Bisa-Request-i.242300410.41581003297?extraParams=%7B%22display_model_id%22%3A410940983742%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=117e813f-6b58-4119-a987-3ec90193e614&amp;xptdk=117e813f-6b58-4119-a987-3ec90193e614",
+        "title": "Sepeda Balap Roadbike Custom Model Pinarelo Dogma ~ Warna Bisa Request",
+        "price_idr": 4850000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "608468643",
+        "item_id": "28071229010",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-CAMP-SR5-Sport-Tiagra-PRO-105-UCI-Invisible-Welding-i.608468643.28071229010?extraParams=%7B%22display_model_id%22%3A237176134113%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=2537749c-894f-4a65-810a-10b783ebb487&amp;xptdk=2537749c-894f-4a65-810a-10b783ebb487",
+        "title": "Sepeda Balap Roadbike CAMP SR5 Sport Tiagra PRO 105 UCI Invisible Welding",
+        "price_idr": 13990000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1466694867",
+        "item_id": "27229900649",
+        "url": "https://shopee.co.id/Trek-Madone-SLR-7-Gen-7-Matte-Black-Road-Bike-i.1466694867.27229900649?extraParams=%7B%22display_model_id%22%3A410457762536%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=ddb3bb0b-b710-4ac2-ab75-85ff7af08f48&amp;xptdk=ddb3bb0b-b710-4ac2-ab75-85ff7af08f48",
+        "title": "Trek Madone SLR 7 Gen 7 Matte Black Road Bike",
+        "price_idr": 100000000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1361653308",
+        "item_id": "52662496369",
+        "url": "https://shopee.co.id/Road-bike-BXT-Merah-i.1361653308.52662496369?extraParams=%7B%22display_model_id%22%3A287712638723%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fddc67d6-17b4-4052-8f9c-22268c904209&amp;xptdk=fddc67d6-17b4-4052-8f9c-22268c904209",
+        "title": "Road bike BXT Merah",
+        "price_idr": 4300000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "212095467",
+        "item_id": "56762024202",
+        "url": "https://shopee.co.id/PINARELLO-X1-105-D162-DISC-PEARL-WHITE-Road-Bike-i.212095467.56762024202?extraParams=%7B%22display_model_id%22%3A331045933433%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0e95dbf-b843-412a-9a72-7ff2a315e86f&amp;xptdk=f0e95dbf-b843-412a-9a72-7ff2a315e86f",
+        "title": "PINARELLO X1 105 D162 DISC PEARL WHITE Road Bike",
+        "price_idr": 44330000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "394605891",
+        "item_id": "51005058912",
+        "url": "https://shopee.co.id/CAMP-ROADBIKE-ACE-2-105-CARBON-DISC-BRAKE-(WHITE)-SIZE-52-i.394605891.51005058912?extraParams=%7B%22display_model_id%22%3A370466000750%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=02f1c088-19b4-4c1c-8925-40334bbcde29&amp;xptdk=02f1c088-19b4-4c1c-8925-40334bbcde29",
+        "title": "CAMP ROADBIKE ACE 2 105 CARBON DISC BRAKE (WHITE) SIZE 52",
+        "price_idr": 40458000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "287301743",
+        "item_id": "29015583557",
+        "url": "https://shopee.co.id/Twitter-Cyclone-Pro-WHEELTOP-WIRELESS-24-Speed-FULL-HYDRAULIC-Roadbike-i.287301743.29015583557?extraParams=%7B%22display_model_id%22%3A223379345214%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=cefe47c1-9ec6-49c1-bf69-301b5485d107&amp;xptdk=cefe47c1-9ec6-49c1-bf69-301b5485d107",
+        "title": "Twitter Cyclone Pro WHEELTOP WIRELESS 24 Speed FULL HYDRAULIC Roadbike",
+        "price_idr": 17500000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1690474252",
+        "item_id": "44028717817",
+        "url": "https://shopee.co.id/sepeda-roadbike-Java-siluro-2-i.1690474252.44028717817?extraParams=%7B%22display_model_id%22%3A350554962838%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=061dfedb-749e-41b9-a426-5afcb291c39b&amp;xptdk=061dfedb-749e-41b9-a426-5afcb291c39b",
+        "title": "sepeda roadbike Java siluro 2",
+        "price_idr": 4950000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "773028270",
+        "item_id": "20585011448",
+        "url": "https://shopee.co.id/Roadbike-S-Works-SL7-Spesial-Edision-Aero-Carbon-i.773028270.20585011448?extraParams=%7B%22display_model_id%22%3A225715266090%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bd70e156-5669-41e1-8b8a-c7b4b06184a3&amp;xptdk=bd70e156-5669-41e1-8b8a-c7b4b06184a3",
+        "title": "Roadbike S Works SL7 Spesial Edision Aero Carbon",
+        "price_idr": 37600000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "287301743",
+        "item_id": "25287622560",
+        "url": "https://shopee.co.id/Twitter-R10-ET-Wheeltop-Wireless-24-Speed-Roadbike-i.287301743.25287622560?extraParams=%7B%22display_model_id%22%3A233379024871%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7d733e97-ba7c-4cca-8a4c-67c9d1044ed7&amp;xptdk=7d733e97-ba7c-4cca-8a4c-67c9d1044ed7",
+        "title": "Twitter R10 ET Wheeltop Wireless 24 Speed Roadbike",
+        "price_idr": 16500000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "19737296",
+        "item_id": "41263794819",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-Balap-Element-Police-Toronto-7speed-BAN-700c-i.19737296.41263794819?extraParams=%7B%22display_model_id%22%3A167381978275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=c2fadd9f-cb1c-470f-a3f5-dc87fa190884&amp;xptdk=c2fadd9f-cb1c-470f-a3f5-dc87fa190884",
+        "title": "Sepeda Roadbike Balap Element Police Toronto 7speed BAN 700c",
+        "price_idr": 2070000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1399960534",
+        "item_id": "43326241631",
+        "url": "https://shopee.co.id/Sepeda-Balap-Polygon-Helios-A9-Carbon-Duraace-DI2-With-Power-Meter-i.1399960534.43326241631?extraParams=%7B%22display_model_id%22%3A287137549133%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=80dd4acc-4cf3-4c3f-842a-9aa8c131fdd4&amp;xptdk=80dd4acc-4cf3-4c3f-842a-9aa8c131fdd4",
+        "title": "Sepeda Balap Polygon Helios A9 Carbon Duraace DI2 With Power Meter",
+        "price_idr": 93300000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "608468643",
+        "item_id": "15721009258",
+        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Camp-SR3-Si-Clean-Look-2x9sp-Shimano-Sora-Hydraulic!-i.608468643.15721009258?extraParams=%7B%22display_model_id%22%3A325403009802%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=78e38869-9a52-433d-9e65-995583d8c3e8&amp;xptdk=78e38869-9a52-433d-9e65-995583d8c3e8",
+        "title": "Sepeda Balap Roadbike Camp SR3 Si Clean Look 2x9sp Shimano Sora Hydraulic!",
+        "price_idr": 9600000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "212095467",
+        "item_id": "49262099655",
+        "url": "https://shopee.co.id/PINARELLO-F1-105-H240-DISC-CARBON-RED-MATT-Road-Bike-Full-Bike-i.212095467.49262099655?extraParams=%7B%22display_model_id%22%3A341049649895%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5076d40f-5adb-4938-a1c9-9b601c00be12&amp;xptdk=5076d40f-5adb-4938-a1c9-9b601c00be12",
+        "title": "PINARELLO F1 105 H240 DISC CARBON RED MATT Road Bike Full Bike",
+        "price_idr": 64440000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "344778854",
+        "item_id": "46562275963",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-700C-ELEMENT-POLICE-TORONTO-7-Speed-NEW-i.344778854.46562275963?extraParams=%7B%22display_model_id%22%3A361062961463%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5bcfac5d-d180-4434-a169-c53103b24dcd&amp;xptdk=5bcfac5d-d180-4434-a169-c53103b24dcd",
+        "title": "Sepeda Roadbike 700C ELEMENT POLICE TORONTO 7 Speed NEW",
+        "price_idr": 2250000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "552002197",
+        "item_id": "40831802864",
+        "url": "https://shopee.co.id/Sepeda-Balap-Element-roadbike-frc-50-SB-2x8-SP-Sepeda-Roadbike-Element-Frc-50-SB-i.552002197.40831802864?extraParams=%7B%22display_model_id%22%3A321074906500%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=039157f4-5ca9-46a7-bfca-0642cf4f9ef3&amp;xptdk=039157f4-5ca9-46a7-bfca-0642cf4f9ef3",
+        "title": "Sepeda Balap Element roadbike frc 50 SB 2x8 SP Sepeda Roadbike Element Frc 50 SB",
+        "price_idr": 4093000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "340563993",
+        "item_id": "40825822098",
+        "url": "https://shopee.co.id/Police-Toronto-EFG-700C-Shimano-2x7-Speed-Steel-i.340563993.40825822098?extraParams=%7B%22display_model_id%22%3A345017801024%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0abf394-d30c-4781-86fe-afc90ef13d5c&amp;xptdk=f0abf394-d30c-4781-86fe-afc90ef13d5c",
+        "title": "Police Toronto EFG 700C Shimano 2x7 Speed Steel",
+        "price_idr": 2145000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "7586374",
+        "item_id": "8112803798",
+        "url": "https://shopee.co.id/SEPEDA-BALAP-ROADBIKE-PARAGON-R600-BRIFTER-ELEMENT-POLICE-TORONTO-EFG-SHIMANO-EXOTIC-2708-GR-BY-PACIFIC-700c-ET-2708-FS-1.0-BESI-SL-2.0-ALLOY-FIXIE-2708-GR-700C-BY-PACIFIC-HUNTER-PARAGON-REM-TORPEDO-R3-L-two-GRAVEL-SENSAH-MAINAN-OLAHRAGA-IBU-i.7586374.8112803798?extraParams=%7B%22display_model_id%22%3A247101891082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8adaacdd-c90e-4e49-9788-349059c2913d&amp;xptdk=8adaacdd-c90e-4e49-9788-349059c2913d",
+        "title": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+        "price_idr": 1427000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "552002197",
+        "item_id": "54112421351",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a1f937da-fa08-42c1-8043-229450412238&amp;xptdk=a1f937da-fa08-42c1-8043-229450412238",
+        "title": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
+        "price_idr": 1930000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "56230724",
+        "item_id": "26460022460",
+        "url": "https://shopee.co.id/Sepeda-Balap-RoadBike-ODESSY-700C-1010S-1011-EVERGREEN-GRAVEL-JAZZ-EVERGREEN-GRAVEL-BOSTON-Rem-Cakram-Shimano-Roadbike-Gravel-Forward-FWD-Murah-BDG-i.56230724.26460022460?extraParams=%7B%22display_model_id%22%3A310983243163%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52609d93-4563-4858-ab71-c92ffefc3f42&amp;xptdk=52609d93-4563-4858-ab71-c92ffefc3f42",
+        "title": "Sepeda Balap RoadBike ODESSY 700C 1010S 1011 EVERGREEN GRAVEL JAZZ EVERGREEN GRAVEL BOSTON Rem Cakram Shimano Roadbike G",
+        "price_idr": 1895900,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "31188778",
+        "item_id": "25933366401",
+        "url": "https://shopee.co.id/Evergreen-Jazz-Gravel-700C-3x7-Speed-Disk-Brake-i.31188778.25933366401?extraParams=%7B%22display_model_id%22%3A345586826469%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=818d0a65-3e56-4259-bd45-57afee48eb7a&amp;xptdk=818d0a65-3e56-4259-bd45-57afee48eb7a",
+        "title": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+        "price_idr": 1935000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "56230724",
+        "item_id": "28423880074",
+        "url": "https://shopee.co.id/Sepeda-Balap-Element-Roadbike-Fixie-Police-Toronto-FX-AR-CST-Pandora-AR-700C-FIXIE-ALTON-MISTIQUE-24-FIXIE-TORY-FX-i.56230724.28423880074?extraParams=%7B%22display_model_id%22%3A370927940181%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=37003399-e7e8-4735-b7e6-3ccc40b34137&amp;xptdk=37003399-e7e8-4735-b7e6-3ccc40b34137",
+        "title": "Sepeda Balap Element Roadbike Fixie Police Toronto FX AR CST Pandora AR 700C FIXIE ALTON MISTIQUE 24 FIXIE TORY FX",
+        "price_idr": 1810000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "56230724",
+        "item_id": "55303199901",
+        "url": "https://shopee.co.id/Element-Roadbike-700C-FRC50-480-500-520-Disc-Brake-i.56230724.55303199901?extraParams=%7B%22display_model_id%22%3A350436499847%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9beb172d-3b99-4d91-9f48-6fc003602712&amp;xptdk=9beb172d-3b99-4d91-9f48-6fc003602712",
+        "title": "Element Roadbike 700C FRC50 480 500 520 Disc Brake",
+        "price_idr": 3670100,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "11988256",
+        "item_id": "8164658661",
+        "url": "https://shopee.co.id/Sepeda-Roadbike-Element-FRC-50-Alloy-16-Speed-i.11988256.8164658661?extraParams=%7B%22display_model_id%22%3A198808694442%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=63515e64-efdf-44cf-96a5-d618dc314f86&amp;xptdk=63515e64-efdf-44cf-96a5-d618dc314f86",
+        "title": "Sepeda Roadbike Element FRC 50 Alloy 16 Speed",
+        "price_idr": 3950000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "26865232",
+        "item_id": "57202518824",
+        "url": "https://shopee.co.id/Police-Roadbike-Toronto-EFG-700c-7x2-Sp-i.26865232.57202518824?extraParams=%7B%22display_model_id%22%3A262224316183%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de&amp;xptdk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de",
+        "title": "Police Roadbike Toronto EFG 700c 7x2 Sp",
+        "price_idr": 2225000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1641428207",
+        "item_id": "40876334787",
+        "url": "https://shopee.co.id/Sale-2024-SLR-9-Gen7-Red-Carbon-Complete-Bike-Road-Full-Bicycle-50-52-54-56-58cm-i.1641428207.40876334787?extraParams=%7B%22display_model_id%22%3A445112198945%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52378386-956a-40e9-954f-7a88c31cc58d&amp;xptdk=52378386-956a-40e9-954f-7a88c31cc58d",
+        "title": "Sale 2024 SLR 9 Gen7 Red Carbon Complete Bike Road Full Bicycle 50 52 54 56 58cm",
+        "price_idr": 142778108,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "1077524497",
+        "item_id": "29774768192",
+        "url": "https://shopee.co.id/Sepeda-Balap-700c-Roadbike-Model-Look-Warna-Hijau-Tosca-Murah-Meriah-Siap-Pakai-i.1077524497.29774768192?extraParams=%7B%22display_model_id%22%3A238228795082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52cc1548-f3e4-4646-8bab-42db23c3109b&amp;xptdk=52cc1548-f3e4-4646-8bab-42db23c3109b",
+        "title": "Sepeda Balap 700c Roadbike Model Look Warna Hijau Tosca Murah Meriah Siap Pakai",
+        "price_idr": 3900000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
+      },
+      {
+        "platform": "Shopee ID",
+        "shop_id": "37864667",
+        "item_id": "27520313367",
+        "url": "https://shopee.co.id/Sepeda-Balap-700C-ODESSY-1011-Roadbike-RB-Murah-i.37864667.27520313367?extraParams=%7B%22display_model_id%22%3A242226270067%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5693d286-001e-49b3-aad1-6dbead258ec0&amp;xptdk=5693d286-001e-49b3-aad1-6dbead258ec0",
+        "title": "Sepeda Balap 700C ODESSY 1011 Roadbike RB Murah",
+        "price_idr": 2000000,
+        "page_source": "roadbike - Prices and Deals - Jul 2026 _ Shopee Indonesia 1.html"
       }
     ]
   }
