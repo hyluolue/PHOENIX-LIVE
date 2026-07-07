@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T10:57:59+08:00",
+  "generated_at": "2026-07-07T10:58:23+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
-    "news_id": "fail",
+    "news_id": "ok",
     "shopee_id": "fail",
     "tokopedia": "fail",
     "daraz_bd_reviews": "ok",
@@ -3597,7 +3597,32 @@
       }
     ],
     "price_tracker": [],
-    "news": [],
+    "news": [
+      {
+        "title": "ID Rp 7-15M 中端市场: 4 SKU 跨 3 品牌 = Element, Pacific, United",
+        "source": "serbasepeda 实时",
+        "summary": "无中国 SGS 品牌 = Thunder ID 真空切入点（V2.4 已规划 RD-1 12M IDR）",
+        "url": "https://serbasepeda.com/",
+        "published_at": "2026-07-07",
+        "is_new": true
+      },
+      {
+        "title": "ID Rp 25M+ 高端: 仅 1 SKU = Element Gravel Top Spec 26M = 高端 MTB 真空",
+        "source": "serbasepeda 实时",
+        "summary": "V2.4 规划：FNIX MTB-FLAG-1 27M IDR 正面狙击 Patrol · MTB-FLAG-2 22M 下探 Element 真空段",
+        "url": "https://serbasepeda.com/",
+        "published_at": "2026-07-07",
+        "is_new": true
+      },
+      {
+        "title": "ID 折叠子品类 = Element 主导 (3 SKU · 6.4-7.3M IDR)",
+        "source": "serbasepeda 实时",
+        "summary": "V2.6 修订：Phoenix 无折叠核心技术 + 大行/JAVA 强竞品 → 折叠只试水 1 SKU（不投入长期资源）",
+        "url": "https://serbasepeda.com/",
+        "published_at": "2026-07-07",
+        "is_new": true
+      }
+    ],
     "brand_pool": [
       {
         "brand": "Polygon",
@@ -3724,9 +3749,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T10:57:59+08:00",
+  "gen_at": "2026-07-07T10:58:23+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-07T10:57:59+08:00",
+    "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -4057,7 +4082,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T10:57:59+08:00",
+    "computed_at": "2026-07-07T10:58:23+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
@@ -4229,9 +4254,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Element",
+        "United",
         "Pacific",
-        "United"
+        "Element"
       ]
     },
     "id_top10_brands": [
@@ -4409,9 +4434,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Element",
+          "United",
           "Pacific",
-          "United"
+          "Element"
         ]
       },
       "bd_road_bike": {
