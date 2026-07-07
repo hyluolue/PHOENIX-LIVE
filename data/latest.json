@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T08:49:43+08:00",
+  "generated_at": "2026-07-07T10:03:57+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -8,9 +8,9 @@
     "shopee_id": "fail",
     "tokopedia": "fail",
     "daraz_bd_reviews": "ok",
-    "dreamcycle": "fail",
+    "dreamcycle": "ok (20 from HTML snapshot, scraped 2026-07-07)",
     "apify_social": "fail",
-    "dreamcycle_vpn": "fail",
+    "dreamcycle_vpn": "ok (20 from HTML snapshot, manual save, scraped 2026-07-07)",
     "serbasepeda": "ok (8 ID 整车 SKU - hardcoded backup from 2026-06-15 11:25)"
   },
   "bd": {
@@ -828,6 +828,246 @@
         "is_new": true,
         "scraped_at": "2026-07-06T14:04:25+08:00",
         "note": "BDT 1,286"
+      },
+      {
+        "brand": "Polloux",
+        "model": "polloux 20 inch cycle",
+        "price": 9800,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
+        "note": "BDT 9,800 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Knight",
+        "price": 11700,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/duranta-knight/",
+        "note": "BDT 11,700 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Hero",
+        "model": "Hero Road bike(Non gear)",
+        "price": 12000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
+        "note": "BDT 12,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Uctocifu",
+        "model": "Uctocifu(Non gear)",
+        "price": 12000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
+        "note": "BDT 12,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "Veloce Junior (Non gear)",
+        "price": 12000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
+        "note": "BDT 12,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "Veloce Junior 16″",
+        "price": 12000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-16/",
+        "note": "BDT 12,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "Veloce Junior 20 inch",
+        "price": 12300,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-20-inch/",
+        "note": "BDT 12,300 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "Uplayed 20 inch",
+        "price": 12500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
+        "note": "BDT 12,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Marine",
+        "model": "Marine PAGE 20 inch",
+        "price": 12500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
+        "note": "BDT 12,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Hero",
+        "model": "Hero MTB 20 inch",
+        "price": 12500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
+        "note": "BDT 12,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix miracle",
+        "price": 13000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
+        "note": "BDT 13,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Avon",
+        "model": "Avon (Non gear)",
+        "price": 13000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
+        "note": "BDT 13,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Core",
+        "model": "Core Gio-100",
+        "price": 13000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/core-gio-100/",
+        "note": "BDT 13,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Donald (Non gear)",
+        "price": 13000,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear/",
+        "note": "BDT 13,000 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Buzz-1 (Non Gear)",
+        "price": 13300,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
+        "note": "BDT 13,300 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Donald (Non Gear)",
+        "price": 13500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
+        "note": "BDT 13,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Python",
+        "model": "PYTHON",
+        "price": 13500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/python/",
+        "note": "BDT 13,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Buzz-1(Non gear)2026",
+        "price": 13500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
+        "note": "BDT 13,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "Veloce Junior 24 inch",
+        "price": 13500,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-24-inch/",
+        "note": "BDT 13,500 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Tornado 24 inch",
+        "price": 13700,
+        "currency": "BDT",
+        "platform": "dreamcycle.store",
+        "in_stock": true,
+        "is_new": false,
+        "scraped_at": "2026-07-07T10:01:28+08:00",
+        "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
+        "note": "BDT 13,700 - dreamcycle.store HTML parsed (Chrome saved 2026-07-07)"
       }
     ],
     "price_tracker": [],
@@ -2332,9 +2572,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T08:49:43+08:00",
+  "gen_at": "2026-07-07T10:03:57+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-06T13:59:48+08:00",
+    "computed_at": "2026-07-07T10:03:36+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -2374,18 +2614,18 @@
       "rack"
     ],
     "price_range": "BD 5K-30K BDT",
-    "total_brands": 6,
+    "total_brands": 14,
     "rankings": [
       {
         "brand": "Marine",
         "sku_count": 7,
-        "asp": 18730,
+        "asp": 18087,
         "max_price": 21111,
-        "high_tier_count": 7,
-        "high_tier_pct": 100,
-        "in_stock_rate": 0,
+        "high_tier_count": 6,
+        "high_tier_pct": 86,
+        "in_stock_rate": 14,
         "sku_score": 12.2,
-        "score": 49.2
+        "score": 47.9
       },
       {
         "brand": "Rockrider",
@@ -2401,91 +2641,190 @@
       {
         "brand": "Duranta",
         "sku_count": 14,
-        "asp": 11839,
+        "asp": 11561,
         "max_price": 15600,
-        "high_tier_count": 5,
-        "high_tier_pct": 36,
-        "in_stock_rate": 0,
+        "high_tier_count": 4,
+        "high_tier_pct": 29,
+        "in_stock_rate": 7,
         "sku_score": 24.5,
-        "score": 44.4
-      },
-      {
-        "brand": "Warrior",
-        "sku_count": 3,
-        "asp": 17666,
-        "max_price": 18999,
-        "high_tier_count": 2,
-        "high_tier_pct": 67,
-        "in_stock_rate": 0,
-        "sku_score": 5.2,
-        "score": 35.7
+        "score": 43.8
       },
       {
         "brand": "Phoenix",
-        "sku_count": 2,
-        "asp": 8760,
-        "max_price": 11520,
+        "sku_count": 9,
+        "asp": 10992,
+        "max_price": 13700,
         "high_tier_count": 0,
         "high_tier_pct": 0,
-        "in_stock_rate": 0,
-        "sku_score": 3.5,
-        "score": 14.3
+        "in_stock_rate": 44,
+        "sku_score": 15.7,
+        "score": 33.5
       },
       {
         "brand": "Veloce",
-        "sku_count": 1,
-        "asp": 11000,
-        "max_price": 11000,
+        "sku_count": 5,
+        "asp": 12160,
+        "max_price": 13500,
         "high_tier_count": 0,
         "high_tier_pct": 0,
+        "in_stock_rate": 80,
+        "sku_score": 8.8,
+        "score": 30.9
+      },
+      {
+        "brand": "Warrior",
+        "sku_count": 2,
+        "asp": 16999,
+        "max_price": 18999,
+        "high_tier_count": 1,
+        "high_tier_pct": 50,
         "in_stock_rate": 0,
+        "sku_score": 3.5,
+        "score": 30.9
+      },
+      {
+        "brand": "Foxter",
+        "sku_count": 2,
+        "asp": 13400,
+        "max_price": 13500,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 3.5,
+        "score": 28.7
+      },
+      {
+        "brand": "Hero",
+        "sku_count": 2,
+        "asp": 12250,
+        "max_price": 12500,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 3.5,
+        "score": 27.5
+      },
+      {
+        "brand": "Python",
+        "sku_count": 1,
+        "asp": 13500,
+        "max_price": 13500,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
         "sku_score": 1.8,
-        "score": 14.2
+        "score": 27.1
+      },
+      {
+        "brand": "Avon",
+        "sku_count": 1,
+        "asp": 13000,
+        "max_price": 13000,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 1.8,
+        "score": 26.5
+      },
+      {
+        "brand": "Core",
+        "sku_count": 1,
+        "asp": 13000,
+        "max_price": 13000,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 1.8,
+        "score": 26.5
+      },
+      {
+        "brand": "Uplayed",
+        "sku_count": 1,
+        "asp": 12500,
+        "max_price": 12500,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 1.8,
+        "score": 25.9
+      },
+      {
+        "brand": "Uctocifu",
+        "sku_count": 1,
+        "asp": 12000,
+        "max_price": 12000,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 1.8,
+        "score": 25.4
+      },
+      {
+        "brand": "Polloux",
+        "sku_count": 1,
+        "asp": 9800,
+        "max_price": 9800,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 100,
+        "sku_score": 1.8,
+        "score": 22.9
       }
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T08:49:43+08:00",
+    "computed_at": "2026-07-07T10:03:57+08:00",
     "totals": {
-      "bd_pool_total": 74,
-      "bd_pool_priced": 74,
-      "bd_pool_mid_high": 28,
-      "bd_pool_brands": 9,
+      "bd_pool_total": 94,
+      "bd_pool_priced": 94,
+      "bd_pool_mid_high": 48,
+      "bd_pool_brands": 16,
       "id_pool_total": 8,
       "id_pool_brands": 4,
-      "phx_bd_total": 13,
-      "phx_bd_mid_high": 5,
-      "phx_bd_asp": 9146,
-      "phx_bd_max": 11520,
+      "phx_bd_total": 17,
+      "phx_bd_mid_high": 9,
+      "phx_bd_asp": 10992,
+      "phx_bd_max": 13700,
       "phx_bd_min": 6000
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 9,
-        "brands_count": 2,
+        "count": 10,
+        "brands_count": 3,
         "brands": {
           "Duranta": 5,
-          "Phoenix": 4
+          "Phoenix": 4,
+          "Polloux": 1
         },
         "top_5_brands": [
           "Duranta",
-          "Phoenix"
+          "Phoenix",
+          "Polloux"
         ]
       },
       "bd_10_15k": {
-        "count": 7,
-        "brands_count": 4,
+        "count": 26,
+        "brands_count": 12,
         "brands": {
-          "Duranta": 4,
-          "Phoenix": 1,
-          "Veloce": 1,
-          "Warrior": 1
+          "Duranta": 5,
+          "Phoenix": 5,
+          "Veloce": 5,
+          "Hero": 2,
+          "Foxter": 2,
+          "Warrior": 1,
+          "Uctocifu": 1,
+          "Uplayed": 1,
+          "Marine": 1,
+          "Avon": 1,
+          "Core": 1,
+          "Python": 1
         },
         "top_5_brands": [
           "Duranta",
           "Phoenix",
           "Veloce",
-          "Warrior"
+          "Hero",
+          "Foxter"
         ]
       },
       "bd_15_25k": {
@@ -2524,16 +2863,16 @@
       }
     ],
     "phx_gap": {
-      "phx_max_price": 11520,
+      "phx_max_price": 13700,
       "phx_min_price": 6000,
-      "phx_asp": 9146,
-      "phx_count": 5,
+      "phx_asp": 10992,
+      "phx_count": 9,
       "phx_in_15_25": 0,
       "phx_in_gt_25": 0,
       "industry_max_price": 26999,
       "industry_max_brand": "Rockrider",
       "industry_max_model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-      "phx_vs_industry_ratio": 2.3,
+      "phx_vs_industry_ratio": 2.0,
       "gt_25k_count": 1,
       "gt_25k_brand_count": 1,
       "gt_25k_brands": [
@@ -2546,9 +2885,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
+        "Element",
         "United",
-        "Pacific",
-        "Element"
+        "Pacific"
       ]
     },
     "id_top10_brands": [
@@ -2706,9 +3045,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
+          "Element",
           "United",
-          "Pacific",
-          "Element"
+          "Pacific"
         ]
       },
       "bd_road_bike": {
@@ -2762,13 +3101,12 @@
   "data_quality": {
     "level": "yellow",
     "emoji": "🟡",
-    "evaluated_at": "2026-07-07T09:07:57",
+    "evaluated_at": "2026-07-07T10:03:58",
     "reasons": [
-      "⚠️ 高级模块失败: dreamcycle_vpn — BD 高端品牌（Rockrider/Veloce/Core/Ceres/Magpy 等）· 需 VPN",
       "⚠️ 高级模块失败: apify_social — 社媒数据（FB/IG 竞品）· 偶发 5xx",
       "⚠️ 高级模块失败: news_id — ID 市场动态（Sogou news ID）· 偶发失败",
-      "BD 池 74 SKU（缺 dreamcycle，建议 ≥ 150）",
-      "Phoenix SKU 2（dreamcycle 没抓到 = 高端品牌不可见）"
+      "BD 池 94 SKU（缺 dreamcycle，建议 ≥ 150）",
+      "Phoenix SKU 9（建议 ≥ 15）"
     ],
     "recommendations": [],
     "stats": {
@@ -2779,19 +3117,18 @@
         "daraz_bd_reviews": true
       },
       "premium_modules": {
-        "dreamcycle_vpn": false,
+        "dreamcycle_vpn": true,
         "apify_social": false,
         "news_id": false
       },
       "core_failed": [],
       "premium_failed": [
-        "dreamcycle_vpn",
         "apify_social",
         "news_id"
       ],
-      "bd_count": 74,
+      "bd_count": 94,
       "id_count": 8,
-      "phoenix_sku": 2,
+      "phoenix_sku": 9,
       "gt_25k_total": 1
     },
     "thresholds": {
