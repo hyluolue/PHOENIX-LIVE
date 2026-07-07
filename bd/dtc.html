@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTC 差评与社媒监测 — 凤凰自行车中高端MTB全球作战室</title>
+  <link rel="stylesheet" href="../shared.css">
+<style>
+
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 20px;
+}
+header {
+  background: linear-gradient(90deg, #00838F 0%, #006064 100%);
+  border-radius: 12px;
+  padding: 20px 28px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+header .title { font-size: 22px; font-weight: 700; color: white; }
+header .subtitle { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+header .meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.85); }
+header .meta .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+header .meta .dot.ok { background: #10b981; box-shadow: 0 0 6px #10b981; }
+header .meta .dot.fail { background: #ef4444; }
+header .meta .dot.skipped { background: #94a3b8; }
+.btn-back {
+  background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s;
+}
+.btn-back:hover { background: rgba(255,255,255,0.25); }
+
+.summary {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+  margin-bottom: 20px;
+}
+.stat {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 16px;
+}
+.stat .label { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat .value { font-size: 28px; font-weight: 700; color: white; margin-top: 6px; }
+.stat .delta { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+.stat.bad .value { color: #fca5a5; }
+.stat.good .value { color: #6ee7b7; }
+.stat.warn .value { color: #fcd34d; }
+
+.section {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 20px;
+}
+.section h2 {
+  font-size: 16px; font-weight: 700; color: #e2e8f0; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section h2 .badge {
+  font-size: 10px; padding: 3px 8px; border-radius: 4px;
+  background: rgba(0,131,143,0.2); color: #5eead4; font-weight: 600;
+}
+.section h2 .badge.warn { background: rgba(220,38,38,0.2); color: #fca5a5; }
+.section h2 .badge.muted { background: rgba(148,163,184,0.2); color: #cbd5e1; }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.filter-btn {
+  background: rgba(255,255,255,0.06); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;
+}
+.filter-btn.active { background: #00838F; color: white; border-color: #00838F; }
+.filter-btn:hover:not(.active) { background: rgba(255,255,255,0.12); }
+
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+.review-card {
+  background: rgba(0,0,0,0.25); border-radius: 8px; padding: 14px;
+  border-left: 4px solid #475569; transition: all 0.2s;
+}
+.review-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
+.review-card.r1 { border-left-color: #ef4444; }
+.review-card.r2 { border-left-color: #f97316; }
+.review-card.r3 { border-left-color: #f59e0b; }
+.review-card.r4 { border-left-color: #10b981; }
+.review-card.r5 { border-left-color: #00838F; }
+
+.review-card .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.review-card .stars { color: #fbbf24; font-size: 14px; letter-spacing: 1px; }
+.review-card .meta { font-size: 11px; color: #94a3b8; }
+.review-card .brand {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 10px; font-weight: 700; background: rgba(0,131,143,0.25); color: #5eead4;
+  margin-bottom: 8px;
+}
+.review-card .brand.other { background: rgba(148,163,184,0.2); color: #cbd5e1; }
+.review-card .text {
+  font-size: 13px; color: #e2e8f0; line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.review-card .text.empty { color:#94a3b8; font-style: italic; }
+.review-card .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 11px; color:#94a3b8;
+}
+.review-card .footer a { color: #5eead4; text-decoration: none; }
+.review-card .footer a:hover { text-decoration: underline; }
+
+.social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.social-card {
+  background: rgba(0,0,0,0.25); border-radius: 8px; padding: 14px;
+  border-left: 4px solid #475569; transition: all 0.2s;
+}
+.social-card:hover { transform: translateY(-2px); }
+.social-card.tiktok { border-left-color: #ff0050; }
+.social-card.instagram { border-left-color: #e1306c; }
+.social-card.facebook { border-left-color: #1877f2; }
+.social-card.reels { border-left-color: #ff8500; }
+
+.social-card .head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.social-card .platform {
+  font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;
+}
+.social-card.tiktok .platform { background: rgba(255,0,80,0.2); color: #ff77a1; }
+.social-card.instagram .platform { background: rgba(225,48,108,0.2); color: #ff77a1; }
+.social-card.facebook .platform { background: rgba(24,119,242,0.2); color: #93c5fd; }
+.social-card.reels .platform { background: rgba(255,133,0,0.2); color: #fdba74; }
+.social-card .author { font-size: 12px; color: #cbd5e1; font-weight: 600; }
+.social-card .caption { font-size: 13px; color: #e2e8f0; line-height: 1.5; margin-bottom: 8px; }
+.social-card .stats { display: flex; gap: 12px; font-size: 11px; color: #94a3b8; }
+.social-card .stats span { display: flex; align-items: center; gap: 3px; }
+
+.empty-state {
+  text-align: center; padding: 60px 20px; color:#94a3b8;
+}
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }
+.empty-state .title { font-size: 16px; margin-bottom: 6px; color: #94a3b8; }
+.empty-state .desc { font-size: 13px; }
+
+.loading { text-align: center; padding: 40px; color: #5eead4; font-size: 14px; }
+
+.source-tag {
+  display: inline-block; padding: 2px 6px; border-radius: 3px;
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  background: rgba(94,234,212,0.15); color: #5eead4;
+  margin-left: 8px;
+}
+
+footer {
+  text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title">🔥 DTC 差评与社媒监测 <span class="source-tag" id="src-tag">data/latest.json</span></div>
+    <div class="subtitle" id="subtitle">加载中...</div>
+  </div>
+  <div class="meta">
+    <span id="status-info">检测中...</span>
+    <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./matrix.html">💎 产品矩阵</a>
+      <a href="./market.html">🇧🇩 孟加拉</a>
+      <a href="./market.html">🇮🇩 印尼</a>
+      <a href="./tasks.html">🎯 任务 OKR</a>
+      <a href="./dtc.html" class="active">💬 DTC 差评</a>
+      <a href="./strategy.html">🧠 策略迭代</a>
+    </div>
+    <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
+  </div>
+</header>
+
+<div class="phoenix-nav" style="display:flex;flex-wrap:wrap;gap:6px;padding:0 24px 12px;font-size:12px">
+  <a href="./daily.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">📅 市场日报</a>
+  <a href="./competitive.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏆 竞品监控</a>
+  <a href="./competitive-id.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏆 竞品监控</a>
+  <a href="./matrix.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">💎 产品矩阵</a>
+  <a href="./market.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🇧🇩 孟加拉</a>
+  <a href="./market.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🇮🇩 印尼</a>
+  <a href="./tasks.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🎯 任务 OKR</a>
+  <a href="./strategy.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🧠 策略迭代</a>
+  <a href="./index.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏠 总览</a>
+</div>
+
+<div class="summary" id="summary">
+  <div class="stat"><div class="label">总评论数</div><div class="value" id="stat-total">-</div><div class="delta" id="stat-total-delta">Daraz BD</div></div>
+  <div class="stat bad"><div class="label">差评 (1-2★)</div><div class="value" id="stat-bad">-</div><div class="delta" id="stat-bad-delta">占比</div></div>
+  <div class="stat good"><div class="label">好评 (5★)</div><div class="value" id="stat-good">-</div><div class="delta" id="stat-good-delta">占比</div></div>
+  <div class="stat warn"><div class="label">平均分</div><div class="value" id="stat-avg">-</div><div class="delta" id="stat-avg-delta">满分 5</div></div>
+  <div class="stat"><div class="label">社媒帖子</div><div class="value" id="stat-social">-</div><div class="delta" id="stat-social-delta">-</div></div>
+</div>
+
+<!-- 数据驱动的产品研发方向（自动从 dtc_reviews 差评关键词提取）-->
+<div class="section dark" style="border-left:4px solid #c8102e">
+  <h2>💡 数据驱动的产品研发方向 <span class="badge" style="background:#c8102e;color:#fff">auto · 差评关键词</span></h2>
+  <div class="kpi-grid" style="margin-bottom:14px">
+    <div class="kpi accent">
+      <div class="kpi-label">🔧 质量类差评</div>
+      <div class="kpi-value" id="kp-quality">⏳ 加载中…</div>
+    </div>
+    <div class="kpi gap">
+      <div class="kpi-label">📦 物流/包装差评</div>
+      <div class="kpi-value" id="kp-shipping">⏳ 加载中…</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">💰 价格/规格差评</div>
+      <div class="kpi-value" id="kp-price-spec">⏳ 加载中…</div>
+    </div>
+    <div class="kpi dynamic">
+      <div class="kpi-label">🎯 V2.1 新品类方向</div>
+      <div class="kpi-value" id="kp-newcat">⏳ 加载中…</div>
+    </div>
+  </div>
+  <div id="rd-direction" style="font-size:12px;color:#e2e8f0;line-height:1.7">⏳ 加载中…</div>
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #5 蓝海机会 + <b style="color:#a5d6a7">V2.1 40-60K 公路车新品类方向</b> = 差评高频词 → 新产品研发方向</div>
+</div>
+
+<div style="background:linear-gradient(135deg,rgba(94,234,212,.12),rgba(94,234,212,.04));border:1px solid rgba(94,234,212,.3);border-left:4px solid #5eead4;border-radius:10px;padding:14px 18px;margin-bottom:20px">
+  <div style="font-size:12px;color:#5eead4;font-weight:700;margin-bottom:6px">🏪 BD 渠道图谱（2026-06-11 验证）</div>
+  <div style="font-size:13px;color:#e2e8f0;line-height:1.7">
+    BD 中高端 MTB 玩家盘点：
+    <ul style="margin:6px 0 0 16px;padding:0;line-height:1.8">
+      <li><strong style="color:#5eead4">Dream Cycle (dreamcycle.store)</strong> = 真 BD 多品牌零售平台（WordPress），卖 Duranta / Veloce / <strong>Phoenix</strong> / Foxter 等 19 品牌，价格 9,800-14,000 BDT。Phoenix 4 SKU 已入驻（Donald/Miracle/Donald v2/Tornado），<strong style="color:#5eead4">重要渠道</strong>。</li>
+      <li>Daraz 仍是 BD MTB 主导平台（74 条商品 / 9 品牌）</li>
+      <li><strong style="color:#ffc107">凤凰 DTC 机会</strong>：Dream Cycle 卖所有品牌无法独占品类 → 凤凰独立站=独家品牌叙事 + 复购闭环</li>
+      <li>Daraz 差评主因：商品错发 / 颜色不符 / 品牌混淆（见下方）→ 独立站可彻底规避</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📦 Daraz BD 评论 <span class="badge" id="badge-reviews">DTC 差评</span></h2>
+  <div class="filters" id="review-filters">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="bad">差评 1-2★</button>
+    <button class="filter-btn" data-filter="neutral">3★</button>
+    <button class="filter-btn" data-filter="good">4-5★</button>
+    <button class="filter-btn" data-filter="phoenix">仅 Phoenix</button>
+  </div>
+  <div id="reviews-grid" class="review-grid">
+    <div class="loading">正在加载 Daraz BD 评论...</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📱 社媒提及 <span class="badge muted" id="badge-social">PENDING APIFY</span></h2>
+  <div id="social-grid" class="social-grid">
+    <div class="empty-state">
+      <div class="icon">🔒</div>
+      <div class="title">社媒监测待 Apify token 接入</div>
+      <div class="desc">购买 Apify 订阅后（约 $5/月 免费额度），即可解锁 TikTok / Reels / Facebook / Instagram 4 平台的品牌提及抓取</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>数据源：data/latest.json#bd.dtc_reviews（每日 9:00 计划任务更新）</div>
+  <div style="margin-top: 4px;">页面上点击卡片查看原文 · 颜色编码：🔴 1-2★差评 · 🟠 3★中性 · 🟢 4-5★好评</div>
+</footer>
+
+<script>
+const DATA_URL = 'https://phoenix-live.pages.dev/data/latest.json';
+let allReviews = [];
+let allSocial = [];
+let currentFilter = 'all';
+
+async function loadData() {
+  try {
+    const r = await fetch(DATA_URL, { cache: 'no-cache' });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const data = await r.json();
+
+    allReviews = (data.bd && data.bd.dtc_reviews) || [];
+    allSocial = (data.global && data.global.dtc_social) || [];
+    window.DM_CACHE = data.dashboard_metrics || {};  // 给 renderRDDirection 用
+
+    updateHeader(data);
+    updateSummary();
+    renderRDDirection();
+    renderReviews();
+    renderSocial();
+  } catch (e) {
+    document.getElementById('subtitle').textContent = '加载失败：' + e.message;
+    document.getElementById('status-info').innerHTML = '<span class="dot fail"></span> 离线';
+    document.getElementById('reviews-grid').innerHTML = '<div class="empty-state"><div class="icon">⚠️</div><div class="title">数据源未就绪</div><div class="desc">data/latest.json 加载失败，请等待 9:00 计划任务跑完后刷新</div></div>';
+  }
+}
+
+function updateHeader(data) {
+  const gen = data.generated_at || '-';
+  document.getElementById('subtitle').textContent = `最后更新：${gen} · 自动每日 9:00 刷新`;
+  const fs = data.fetch_status || {};
+  const daraz = (fs.daraz_bd_reviews || 'pending').toString();
+  const apify = (fs.apify_social || 'pending').toString();
+  const darazOk = daraz.startsWith('ok');
+  const apifyOk = apify.startsWith('ok');
+  const darazDot = darazOk ? 'ok' : 'fail';
+  const apifyDot = apifyOk ? 'ok' : (apify.startsWith('skipped') ? 'skipped' : 'fail');
+  document.getElementById('status-info').innerHTML =
+    `<span class="dot ${darazDot}" title="${daraz}"></span>Daraz评论:${darazOk?'ok':daraz.startsWith('fail')?'fail':'pending'} · <span class="dot ${apifyDot}" title="${apify}"></span>Apify社媒:${apifyOk?'ok':apify.startsWith('skipped')?'skipped':'fail'}`;
+}
+
+function updateSummary() {
+  const total = allReviews.length;
+  const bad = allReviews.filter(r => r.rating <= 2).length;
+  const good = allReviews.filter(r => r.rating === 5).length;
+  const avg = total ? (allReviews.reduce((s, r) => s + r.rating, 0) / total).toFixed(2) : '-';
+  const social = allSocial.length;
+
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-bad').textContent = bad;
+  document.getElementById('stat-good').textContent = good;
+  document.getElementById('stat-avg').textContent = avg;
+  document.getElementById('stat-social').textContent = social;
+
+  if (total) {
+    document.getElementById('stat-bad-delta').textContent = `占比 ${(100*bad/total).toFixed(1)}%`;
+    document.getElementById('stat-good-delta').textContent = `占比 ${(100*good/total).toFixed(1)}%`;
+  }
+  if (social) {
+    document.getElementById('stat-social-delta').textContent = `4 平台聚合`;
+  } else {
+    document.getElementById('stat-social-delta').textContent = '需 Apify';
+  }
+}
+
+// 数据驱动的产品研发方向：从差评关键词提取 + 与 dashboard_metrics 蓝海勾连
+function renderRDDirection() {
+  const el = document.getElementById('rd-direction');
+  if (!allReviews.length) { el.innerHTML = '<div style="color:#94a3b8">⏳ 差评数据未抓到（daraz_bd_reviews 模块）· 等 9:00 计划任务跑完</div>'; return; }
+  // 差评关键词
+  const bad = allReviews.filter(r => (r.rating || 0) <= 2);
+  const text = bad.map(r => (r.text || r.title || '')).join(' ').toLowerCase();
+  // 预定义关键词（含中英文）
+  const KW = [
+    {kw: ['color','colour','রঙ','wrong color','color difference','colour difference'], tag: '颜色错发', color: '#e53935'},
+    {kw: ['size','wrong size','আকার'], tag: '尺寸不符', color: '#e65100'},
+    {kw: ['brand','fake','not original','not original','নকল'], tag: '品牌造假', color: '#9c27b0'},
+    {kw: ['quality','poor','cheap','flimsy','খারাপ'], tag: '品质差', color: '#bf360c'},
+    {kw: ['shipping','late','delay','ডেলিভারি'], tag: '物流慢', color: '#1565c0'},
+    {kw: ['damage','broken','damaged','ভাঙা'], tag: '运输损坏', color: '#c62828'},
+    {kw: ['missing','incomplete','parts missing'], tag: '配件缺失', color: '#6a1b9a'},
+    {kw: ['wrong item','different','মিলে না'], tag: '商品错发', color: '#d84315'},
+  ];
+  const hits = KW.map(k => ({tag: k.tag, color: k.color, count: k.kw.reduce((sum, w) => sum + (text.split(w).length - 1), 0)})).filter(h => h.count > 0).sort((a, b) => b.count - a.count);
+  if (hits.length === 0) {
+    el.innerHTML = `<div style="color:#94a3b8">差评 ${bad.length} 条但未匹配关键词（可能评论文本非英语/孟语）</div>`;
+    return;
+  }
+  // 与 dashboard_metrics 蓝海勾连
+  const dm = (window.DM_CACHE || {});
+  const totalBad = bad.length;
+  const totalGood = allReviews.length - bad.length;
+  const badRate = totalReviews ? ((totalBad/totalReviews)*100).toFixed(1) : 0;
+  const elTop = hits[0];
+  // 4 个 KPI 分类汇总
+  const qualityKws = ['品质差', '品牌造假', '配件缺失'];
+  const shipKws = ['物流慢', '运输损坏'];
+  const priceSpecKws = ['颜色错发', '尺寸不符', '商品错发'];
+  const qualityHits = hits.filter(h => qualityKws.includes(h.tag));
+  const shipHits = hits.filter(h => shipKws.includes(h.tag));
+  const priceSpecHits = hits.filter(h => priceSpecKws.includes(h.tag));
+  const sumCount = arr => arr.reduce((s, h) => s + h.count, 0);
+  const elKq = document.getElementById('kp-quality');
+  if (elKq) elKq.innerHTML = `<b style="color:#ffcdd2">${sumCount(qualityHits)} 次</b><br><small>${qualityHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKs = document.getElementById('kp-shipping');
+  if (elKs) elKs.innerHTML = `<b style="color:#ffcc80">${sumCount(shipHits)} 次</b><br><small>${shipHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKp = document.getElementById('kp-price-spec');
+  if (elKp) elKp.innerHTML = `<b>${sumCount(priceSpecHits)} 次</b><br><small>${priceSpecHits.map(h => h.tag).join(' / ') || '无'}</small>`;
+  const elKnc = document.getElementById('kp-newcat');
+  if (elKnc) elKnc.innerHTML = `<b style="color:#c8e6c9">40-60K 公路车</b><br><small>V2.1 真空蓝海 · 品质差异化</small>`;
+  const html = `
+    <div style="margin-bottom:10px"><b>📊 差评总览：</b>${allReviews.length} 条评论中 <b style="color:#c8102e">${totalBad} 条差评（${badRate}%）</b>，${totalGood} 条好评</div>
+    <div style="margin-bottom:10px"><b>🔍 差评关键词 TOP ${hits.length}：</b></div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+      ${hits.map(h => `<span style="padding:4px 10px;background:${h.color}22;border:1px solid ${h.color};color:${h.color};border-radius:14px;font-size:11px;font-weight:700">${h.tag} × ${h.count}</span>`).join('')}
+    </div>
+    <div style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;padding:8px 12px;border-radius:6px;margin-top:8px">
+      <b style="color:#2e7d32">💎 研发方向（基于差评 + dashboard_metrics 蓝海）：</b>
+      <ul style="margin:4px 0 0 18px;line-height:1.7;color:#cbd5e1">
+        ${hits[0] ? `<li>TOP 1 差评"<b style="color:#c8102e">${elTop.tag}</b>"(${elTop.count} 次)= Phoenix V2 大单品应<b>重点规避</b></li>` : ''}
+        ${dm.gt_25k_count ? `<li>BD 25K+ 蓝海 ${dm.gt_25k_count} SKU = 可推"高端品控承诺"差异化（每台 SGS 三检 + 颜色尺寸双保险）</li>` : ''}
+        ${dm.phx_bd_max ? `<li>Phoenix 顶价 ${dm.phx_bd_max.toLocaleString()} → 25K+ 大单品 = 拿品质溢价对冲差评</li>` : ''}
+      </ul>
+    </div>
+  `;
+  el.innerHTML = html;
+}
+
+function renderReviews() {
+  const grid = document.getElementById('reviews-grid');
+  let filtered = [...allReviews];
+
+  if (currentFilter === 'bad') filtered = filtered.filter(r => r.rating <= 2);
+  else if (currentFilter === 'neutral') filtered = filtered.filter(r => r.rating === 3);
+  else if (currentFilter === 'good') filtered = filtered.filter(r => r.rating >= 4);
+  else if (currentFilter === 'phoenix') filtered = filtered.filter(r => (r.brand || '').toLowerCase() === 'phoenix');
+
+  filtered.sort((a, b) => a.rating - b.rating);  // 差评在前
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><div class="icon">🔍</div><div class="title">无符合条件评论</div><div class="desc">尝试切换筛选条件</div></div>';
+    return;
+  }
+
+  document.getElementById('badge-reviews').textContent = `DTC 差评 · ${filtered.length} 条`;
+
+  grid.innerHTML = filtered.map(r => {
+    const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+    const isPhx = (r.brand || '').toLowerCase() === 'phoenix';
+    const text = r.review_text || '(无文字评论)';
+    return `
+      <div class="review-card r${r.rating}">
+        <div class="head">
+          <span class="brand ${isPhx ? '' : 'other'}">${escape(r.brand || 'Other')}</span>
+          <span class="meta">${escape(r.review_time || '')}</span>
+        </div>
+        <div class="stars">${stars}</div>
+        <div class="text ${text === '(无文字评论)' ? 'empty' : ''}">${escape(text)}</div>
+        <div class="footer">
+          <span>👤 ${escape(r.buyer_name || 'Anon')}</span>
+          <a href="${escape(r.item_url || '#')}" target="_blank">查看商品 →</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderSocial() {
+  const grid = document.getElementById('social-grid');
+  if (allSocial.length === 0) return;  // 保持默认 placeholder
+
+  document.getElementById('badge-social').textContent = `ACTIVE · ${allSocial.length} 帖子`;
+
+  grid.innerHTML = allSocial.map(s => {
+    const stats = [];
+    if (s.likes) stats.push(`❤️ ${s.likes}`);
+    if (s.comments) stats.push(`💬 ${s.comments}`);
+    if (s.shares) stats.push(`↗ ${s.shares}`);
+    if (s.plays) stats.push(`▶ ${s.plays}`);
+    return `
+      <div class="social-card ${s.platform}">
+        <div class="head">
+          <span class="platform">${escape(s.platform)}</span>
+          <span class="author">@${escape(s.author || 'anon')}</span>
+        </div>
+        <div class="caption">${escape(s.caption || '(无文字)')}</div>
+        <div class="stats">${stats.map(x => `<span>${x}</span>`).join('')}</div>
+        <div class="footer" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
+          <a href="${escape(s.url || '#')}" target="_blank" style="color: #5eead4; text-decoration: none; font-size: 11px;">查看原帖 →</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function escape(s) {
+  return String(s || '').replace(/[<>&"']/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// 筛选按钮
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderReviews();
+  });
+});
+
+loadData();
+setInterval(loadData, 60_000);  // 每分钟刷新
+
+// V2.7 数据质量门 — VPN 信号灯（每分钟跟随刷新）
+setInterval(async () => {
+  try {
+    const r = await fetch('../data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+}, 60_000);
+loadData().then(async () => {
+  try {
+    const r = await fetch('../data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+});
+</script>
+
+<script src="../render_quality_gate.js"></script>
+</body>
+</html>
