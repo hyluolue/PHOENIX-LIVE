@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>孟加拉 MTB 作战室 · 实时</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
+    h1{font-size:22px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
+    .pill-ok{background:#1b5e20;color:#a5d6a7}
+    .pill-partial{background:#e65100;color:#ffcc80}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .pill-fail{background:#b71c1c;color:#ffcdd2}
+    .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section h2 .flag{font-size:18px}
+    .section.static h2{color:#888}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4}
+    .section.dark h2{color:#5eead4}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
+    .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+    .kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
+    .kpi.dynamic{border-left-color:#2e7d32;background:#e8f5e9}
+    .kpi.dynamic .kpi-label{color:#2e7d32}
+    .kpi.dynamic .kpi-value{color:#1b5e20}
+    .kpi.gap{background:#fff3e0;border-left-color:#e65100}
+    .kpi.gap .kpi-label{color:#e65100}
+    .kpi.gap .kpi-value{color:#bf360c}
+    .price-tier{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:8px}
+    .tier{background:#f7f9fc;border-radius:10px;padding:14px;border-left:4px solid #1565c0}
+    .tier .tier-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .tier .tier-name{font-size:13px;font-weight:800;color:#0d47a1}
+    .tier .tier-count{font-size:10px;color:#94a3b8;background:rgba(13,71,161,.08);padding:2px 6px;border-radius:3px;font-weight:600}
+    .tier .tier-prices{font-size:11px;color:#666;margin-bottom:6px}
+    .tier .tier-brands{font-size:11px;color:#888}
+    .tier .tier-brands b{color:#c8102e}
+    .tier.tier-1{border-left-color:#90a4ae}
+    .tier.tier-2{border-left-color:#1565c0}
+    .tier.tier-3{border-left-color:#e65100}
+    .tier.tier-4{border-left-color:#c8102e}
+    .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
+    .price-item{background:#f7f9fc;border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-left:3px solid #1565c0;font-size:12px}
+    .price-item .meta{flex:1;min-width:0}
+    .price-item .brand{font-weight:700;color:#0d47a1;display:block}
+    .price-item .plat{font-size:9px;color:#94a3b8;background:rgba(13,71,161,.08);padding:1px 5px;border-radius:3px;margin-left:6px}
+    .price-item .model{display:block;color:#555;font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .price-item .price{font-weight:800;color:#c8102e;font-size:14px;white-space:nowrap}
+    .price-item .new{background:#c8102e;color:#fff;font-size:9px;padding:1px 6px;border-radius:6px;margin-left:4px;font-weight:700}
+    .empty{padding:20px;text-align:center;color:#999;font-size:12px;font-style:italic}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+    .alert{background:#fff3e0;color:#bf360c;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:12px;border-left:3px solid #e65100}
+    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:10px 14px;border-radius:8px;font-size:12px;color:#fff;margin-top:10px;line-height:1.7}
+    .insight b{color:#5eead4}
+    .insight .gap{color:#5eead4}
+    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🇧🇩 孟加拉 MTB 作战室</h1>
+        <div class="subtitle">BD 市场 · 中高端 MTB · <span id="date"></span> · 每日 9:00 自动更新</div>
+      </div>
+      <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./matrix.html">💎 产品矩阵</a>
+      <a href="./market.html" class="active">🇧🇩 孟加拉</a>
+      <a href="./market.html">🇮🇩 印尼</a>
+      <a href="./tasks.html">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html">🧠 策略迭代</a>
+    </div>
+    <a class="back-link" href="./index.html">← 返回总览</a>
+
+    <div class="status-bar">
+      <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
+      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
+      <span id="status-news-bd" class="pill pill-fail">⏳ news_bd</span>
+      <span class="last-updated" id="updated">—</span>
+      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📊</span>BD 自行车市场基础数据 <small style="color:#999;font-weight:400">（2025 报告）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">BD GDP 2025 Q4</div>
+          <div class="kpi-value">+9.17% YoY<br><span style="font-size:10px;color:#888;font-weight:400">Bangladesh Bureau of Statistics</span></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">中国自行车出口 2025</div>
+          <div class="kpi-value">4,893.9 万辆 · +2.4% YoY<br><small>中国自行车协会 2026-05-08</small></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">FY24-25 出口</div>
+          <div class="kpi-value">$117M（+41%）<br><span style="font-size:10px;color:#888;font-weight:400">bike-eu Aug 2025</span></div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">BD 自行车门户</div>
+          <div class="kpi-value">bicyclebd.com<br>200+ 品牌 / 2013 创立</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">9th Dhaka Bike Show 2025</div>
+          <div class="kpi-value">BD 摩托车 2024-2028<br>CAGR 0.64% · 2028 达 $1.98B</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Phoenix 全球地位</div>
+          <div class="kpi-value">运动自行车第二梯队<br>（跟 Hero/Trek/Giant/Accell 同梯）</div>
+        </div>
+      </div>
+      <div class="insight">
+        <b>🎯 市场定位关键发现：</b> 2025 年 BD GDP 高增 +9.17%，消费基础强；但 BD 摩托车市场 CAGR 仅 0.64% = <b>接近饱和</b>。自行车作为<b>微出行+健康</b>的替代品类，2024 出口 $117M (+41%) = 真实增长点在 <b>出口而非内需</b>。Phoenix 在全球运动自行车第二梯队 = 品牌力 OK，<b>BD 缺的是"中高端价格锚点"</b>，不是品牌力。
+      </div>
+      <div class="insight" style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;margin-top:8px">
+        <b>🚴 BD 公路车品类关键情报（2026-06-23）：</b> BD <b>公路车 / 平把公路车</b>热度快速上升，客户不惜代价采购 <b>SUNSPEED / CAMP</b>公路车 = 客户愿意为品质付溢价。热力图 17 品牌 × 公路品类 = <b>仅 Hero 1 SKU</b> = 真空品类。<br>
+        <b>凤凰 4 大优势：</b>① 沃尔玛规模优势 ② UCI 认证公路车车架 ③ ID 1月公路车/平把公路/砾石订单已下 ④ 返单中 = 客户验证品质<br>
+        <b>结论：</b><span style="color:#c8102e;font-weight:700">V2 战略大单品 = BD 公路车品类（优先于 22K+ UCI MTB）</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">💰</span>中高端 MTB 价格分层 <small style="color:#999;font-weight:400">（BD 5K-30K BDT 中高端整车 · TOP 10 品牌 · 排除白牌/童车/折叠/配件）</small></h2>
+      <div class="price-tier" id="price-tiers">
+        <div class="tier tier-1">
+          <div class="tier-head">
+            <span class="tier-name">入门 &lt; 10K BDT</span>
+            <span class="tier-count" id="t1-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t1-prices">— BDT</div>
+          <div class="tier-brands" id="t1-brands">—</div>
+        </div>
+        <div class="tier tier-2">
+          <div class="tier-head">
+            <span class="tier-name">中端 10K-15K BDT</span>
+            <span class="tier-count" id="t2-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t2-prices">— BDT</div>
+          <div class="tier-brands" id="t2-brands">—</div>
+        </div>
+        <div class="tier tier-3">
+          <div class="tier-head">
+            <span class="tier-name">中高端 15K-25K BDT</span>
+            <span class="tier-count" id="t3-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t3-prices">— BDT</div>
+          <div class="tier-brands" id="t3-brands">—</div>
+        </div>
+        <div class="tier tier-4">
+          <div class="tier-head">
+            <span class="tier-name">高端 &gt; 25K BDT</span>
+            <span class="tier-count" id="t4-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t4-prices">— BDT</div>
+          <div class="tier-brands" id="t4-brands">—</div>
+        </div>
+      </div>
+      <div class="insight" id="bd-tier-insight">
+        <b>🔥 战略级价格洞察（从 latest.json <span id="bd-pool-total-2">190</span> SKU 真实数据归纳）：</b>
+        <ul class="tight" id="bd-tier-strategy">
+          <li>⏳ 加载中…</li>
+        </ul>
+      </div>
+      <!-- V2.3.1 主战场分析（自动从 latest.json 计算） -->
+      <div class="insight" style="margin-top:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32" id="v231-battlefield">
+        <b>🥇 V2.3.1 BD 25-40K 高端主战场实战分析（自动）：</b>
+        <div id="v231-battlefield-body" style="font-size:11.5px;line-height:1.6;margin-top:6px">⏳ 加载中…</div>
+      </div>
+
+    <div class="section">
+      <h2><span class="flag">🎯</span>凤凰定位 & 竞品矩阵 <small style="color:#999;font-weight:400">（战略层 · 不会每日变）</small></h2>
+      <div class="kpi-grid">
+        <div class="kpi gap">
+          <div class="kpi-label">凤凰真实价位</div>
+          <div class="kpi-value">BDT 7,999 - 14,999<br><span style="font-size:10px;color:#888;font-weight:400">14 SKU 全在中端以下</span></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">中高端价位竞品</div>
+          <div class="kpi-value">Marine Gold 19,000<br>Veloce Raptor 15,999<br>Duranta Steel 15,465</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">最大差异化机会</div>
+          <div class="kpi-value">Veloce / Core / Marine 均无 SGS 认证<br>→ 凤凰 SGS + 三标 = 唯一卖点</div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">价格锚点机会</div>
+          <div class="kpi-value" id="bd-anchor">⏳ 加载中…</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section dark">
+      <h2><span class="flag" style="color:#5eead4">🏪</span>BD 本土 MTB 独立站档案 <small style="color:#aaa;font-weight:400">· 2026-06-15 验证</small></h2>
+      <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4;color:#fff">
+        <strong style="color:#5eead4">🏪 Dream Cycle (dreamcycle.store)</strong> · <span style="color:#aaa;font-size:11px">真 BD 本土多品牌零售平台 · WordPress + WooCommerce</span>
+        <ul class="tight">
+          <li><strong style="color:#5eead4">在售品牌 19 个</strong>：自有 Polloux / Uctocifu + 经销 Duranta / Veloce / <b>Phoenix</b> / Foxter / Hero / Warrior / Avon / Core / Pacific / Uplayed / 71 Warrior / Rockrider / Duronto / Polloux / Python 等</li>
+          <li><strong style="color:#5eead4">价格段 9,800-14,000 BDT</strong>（USD ~85-120），共 20 SKU 已抓全</li>
+          <li><strong style="color:#5eead4">Phoenix 4 SKU 在售</strong>：Donald (Non gear) 12,300 / Miracle 13,000 (OOS) / Donald v2 13,500 / Tornado 24 inch 13,700</li>
+          <li><strong style="color:#5eead4">社媒</strong>：FB/IG/YT @dreamcyclestore · TK @dreamcyclestorebd · 达卡 01721-638523</li>
+        </ul>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(94,234,212,.3)">
+          <strong style="color:#5eead4">🎯 战略含义：</strong>
+          <ol class="tight">
+            <li>凤凰 <b>真实价位 12,300-13,700 BDT</b>，与 Duranta Knight 11,700 / Foxter Buzz-1 13,300 / Veloce 12,000 属同档 = <b>中端红海</b></li>
+            <li>Dream Cycle 卖所有品牌 = <b>凤凰无法独占品类</b> → DTC 独立站是品牌叙事唯一出路</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">📰</span>孟加拉市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索 · 每日）</small></h2>
+      <div id="news" class="price-grid" style="grid-template-columns:1fr"></div>
+    </div>
+
+    <div class="section static">
+      <h2><span class="flag">🚫</span>孟加拉公路车说明 <small style="color:#999;font-weight:400">（战略层）</small></h2>
+      <div class="alert">⚠️ 暂不推进：达卡/吉大港以外道路基建差，公路车轮胎窄、胎压高，易损坏；聚焦 MTB+通勤品类</div>
+    </div>
+
+    <div class="footer">
+      数据来源：Daraz BD / dreamcycle.store / Sogou 搜索 / 中国自行车协会 2025 / BBS 2025 / bike-eu Aug 2025 / 9th Dhaka Bike Show 2025<br />
+      本页面为 Phoenix-Live Tab #2 · 每日 9:00 自动更新
+    </div>
+  </div>
+
+<script>
+  const cn = ['日','一','二','三','四','五','六'];
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  // 4 价格段
+  const TIERS = [
+    { id: 't1', name: '< 10K', lo: 0, hi: 10000, cls: 'tier-1' },
+    { id: 't2', name: '10K-15K', lo: 10000, hi: 15000, cls: 'tier-2' },
+    { id: 't3', name: '15K-25K', lo: 15000, hi: 25000, cls: 'tier-3' },
+    { id: 't4', name: '> 25K', lo: 25000, hi: 1e9, cls: 'tier-4' },
+  ];
+
+  async function load() {
+    let data;
+    try {
+      const r = await fetch('../data/latest.json', {cache: 'no-store'});
+      data = await r.json();
+    } catch (e) {
+      document.getElementById('prices') ? '' : null;
+      return;
+    }
+    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+
+    // 状态条
+    const s = data.fetch_status || {};
+    function setPill(id, k) {
+      const el = document.getElementById(id);
+      const v = (s[k] || 'pending').toString();
+      const isOk = v.startsWith('ok');
+      const isFail = v.startsWith('fail');
+      const isPartial = v.startsWith('partial');
+      el.className = 'pill ' + (isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending');
+      el.textContent = (isOk ? '✓ ' : isFail ? '✗ ' : isPartial ? '⚠ ' : '⏳ ') + k;
+      el.title = v;  // 鼠标 hover 显示完整状态
+    }
+    setPill('status-daraz', 'daraz_bd');
+    setPill('status-dreamcycle', 'dreamcycle');
+    setPill('status-news-bd', 'news_bd');
+
+    // 价格分层 - 中高端整车筛选（5K-30K BDT + 排除童车/折叠/配件）
+    const EXCLUDED_BD = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', 'helmet', 'lamp', 'light', 'bracket', 'fender', 'bell', 'lock', 'bottle', 'bag', 'carrier', 'pump', 'sticker'];
+    const all = ((data.bd && data.bd.price_pool) || []).filter(it => {
+      if (it.brand === 'Generic') return false;
+      if ((it.price || 0) <= 0) return false;
+      if (it.price < 5000 || it.price > 30000) return false;
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      return !EXCLUDED_BD.some(kw => m.includes(kw));
+    });
+    for (const t of TIERS) {
+      const items = all.filter(it => it.price >= t.lo && it.price < t.hi);
+      const phoenix = items.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+      document.getElementById(t.id + '-count').textContent = items.length + ' SKU';
+      if (items.length > 0) {
+        const prices = items.map(it => it.price);
+        // TOP 10 中高端品牌（按 SKU 数倒序，Phoenix 优先）
+        const brandCount = {};
+        items.forEach(it => { brandCount[it.brand] = (brandCount[it.brand] || 0) + 1; });
+        const topBrands = Object.entries(brandCount)
+          .sort((a, b) => {
+            if (a[0] === 'Phoenix') return -1;
+            if (b[0] === 'Phoenix') return 1;
+            return b[1] - a[1];
+          })
+          .slice(0, 10);
+        document.getElementById(t.id + '-prices').textContent = '价段 ' + Math.min(...prices).toLocaleString() + ' - ' + Math.max(...prices).toLocaleString() + ' · avg ' + Math.round(prices.reduce((a,b)=>a+b,0)/prices.length).toLocaleString();
+        document.getElementById(t.id + '-brands').innerHTML = topBrands.map(([b, n]) => b === 'Phoenix' ? '<b>Phoenix</b> ×' + n : b + ' ×' + n).join(' · ') + (phoenix.length > 0 ? ' <span style="color:#c8102e">· Phoenix × ' + phoenix.length + '</span>' : '');
+      } else {
+        document.getElementById(t.id + '-prices').textContent = '真空';
+        document.getElementById(t.id + '-brands').innerHTML = '<span style="color:#c8102e;font-weight:700">⚠ 真实真空市场</span>';
+      }
+    }
+
+    // 战略洞察 + 价格锚点机会（统一从 dashboard_metrics 读）
+    const dm = data.dashboard_metrics || {};
+    const phxGap = dm.phx_gap || {};
+    const totals = dm.totals || {};
+    const bands = dm.bands || {};
+    const id715 = dm.id_7_15m || {};
+    const strategyHtml = [
+      `<li><b>Phoenix ${totals.phx_bd_mid_high} SKU 真实价位 ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT</b>（ASP ${totals.phx_bd_asp.toLocaleString()}）= <span class="gap">远低于行业顶价 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</span></li>`,
+      `<li><b style="color:#2e7d32">🥇 25-40K 高端 26 SKU (V2.3 🆕 主战场)</b> · 6 品牌 (Rockrider 9 / Veloce 7 / Core 5 / Ceres 2 / Magpy 2 / Kiesel 1) = <b style="color:#2e7d32">Phoenix 顶价从 18K 跃升到 25-40K = 真实品牌价值段</b></li>`,
+      `<li><b style="color:#e65100">🥈 15-25K 中高端 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU (销量基础 · Phoenix 已 3 SKU 入门)</b> · ${bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0} 品牌 (Marine 15 / Veloce 15 / Core 9) = <b style="color:#e65100">Phoenix 已 3 SKU (Duster-A 15.7K / Duster-C 17K / Harod01 18K) 还需 5+ SKU 抢份额</b></li>`,
+      `<li><b style="color:#9c27b0">🥉 40-60K 锚点（部署但接受没销量）：</b>仅 4 SKU（Rockrider Duke 25K + Pro 45K + XC 403 40K + XC 402 32K）= <b>品牌价值锚点 + ASP 拉升工具</b></li>`,
+      `<li><b style="color:#6a1b9a">📌 65K+ 顶价（形象产品·不指望成交）：</b>Rockrider XC 404 = 65,000 = "65K 我可以买摩托车" = <b>脱离购买力仅形象</b></li>`,
+      `<li><b style="color:#c8102e">🎯 真正差异化 = 品质标准</b>（其他品牌偷工减料 vs 凤凰符合品质标准 = 真实可持续护城河 ≠ SGS 认证）</li>`,
+      `<li><b>中端 10-15K 红海</b>：${bands.bd_10_15k ? bands.bd_10_15k.count : 0} SKU · ${bands.bd_10_15k ? bands.bd_10_15k.brands_count : 0} 品牌混战（Phoenix ${(all || []).filter(it => (it.brand||'').toLowerCase()==='phoenix' && it.price >= 10000 && it.price < 15000).length} SKU）</li>`,
+    ].join('');
+    document.getElementById('bd-tier-strategy').innerHTML = strategyHtml;
+    document.getElementById('bd-anchor').innerHTML = `🥇 25-40K 高端 26 SKU（主战场）<br>🥈 15-25K 销量 ${bands.bd_15_25k ? bands.bd_15_25k.count : 0} SKU<br>🥉 40-60K 锚点 4 SKU（不指望销量）<br><small>65K+ 形象产品（不指望成交）</small>`;
+
+    // === V2.3.1 主战场 25-40K 实战分析 ===
+    const battleEl = document.getElementById('v231-battlefield-body');
+    if (battleEl) {
+      const battleItems = (all || []).filter(it => {
+        const p = it.price || 0;
+        const b = (it.brand || '').toLowerCase();
+        return p >= 25000 && p < 40000 && b && b !== 'generic';
+      });
+      const battleByBrand = {};
+      battleItems.forEach(it => {
+        const b = it.brand || 'Unknown';
+        if (!battleByBrand[b]) battleByBrand[b] = [];
+        battleByBrand[b].push(it);
+      });
+      const brandRows = Object.keys(battleByBrand).sort((a,b) => battleByBrand[b].length - battleByBrand[a].length).map(b => {
+        const items = battleByBrand[b].sort((x,y) => (y.price||0) - (x.price||0));
+        const tops = items.slice(0, 3).map(i => `${i.price.toLocaleString()}`).join('/');
+        return `<tr><td><b>${b}</b></td><td>${items.length}</td><td style="font-size:10px">${tops}</td></tr>`;
+      }).join('');
+      battleEl.innerHTML = `
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <b style="color:#2e7d32">📊 BD 25-40K 真品牌分布</b>
+            <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:4px">
+              <thead><tr style="background:rgba(0,0,0,.05)"><th style="padding:3px;text-align:left">品牌</th><th style="padding:3px;text-align:right">SKU</th><th style="padding:3px;text-align:left">价位</th></tr></thead>
+              <tbody>${brandRows}</tbody>
+            </table>
+          </div>
+          <div>
+            <b style="color:#2e7d32">🎯 Phoenix V2.3.1 5 SKU 模拟上市</b>
+            <table style="width:100%;border-collapse:collapse;font-size:10.5px;margin-top:4px">
+              <thead><tr style="background:rgba(46,125,50,.15)"><th style="padding:2px">Phoenix 型号</th><th style="padding:2px;text-align:right">售价</th><th style="padding:2px;text-align:right">状态</th></tr></thead>
+              <tbody style="font-size:10px">
+                <tr><td>XC Entry 2800</td><td>27,999</td><td style="color:#2e7d32">⏳ 打样</td></tr>
+                <tr><td>XC Standard 3000</td><td>29,999</td><td style="color:#2e7d32">⏳ 打样</td></tr>
+                <tr style="background:rgba(46,125,50,.1)"><td>⭐ XC Pro 3200</td><td>32,999</td><td style="color:#2e7d32">⏳ 打样</td></tr>
+                <tr><td>XC Elite 3500</td><td>35,999</td><td style="color:#2e7d32">⏳ 待产</td></tr>
+                <tr><td>🎖️ XC Race 3800</td><td>38,999</td><td style="color:#2e7d32">⏳ 待产</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:8px;font-size:11px;line-height:1.7">
+          💎 <b>差异化锚点（4 大）</b>：①UCI <b>金属激光刻印</b>（竞品贴纸） ②Shimano <b>整套</b>（竞品 Microshift） ③油压碟刹（竞品机械） ④<b>24-36 月质保</b>（竞品 3-6 月）<br>
+          📎 完整配置：<a href="./phoenix-product-config.html" target="_blank" style="color:#1565c0">phoenix-product-config.html</a> · 生产简报：<a href="./phoenix-brief-prod.html" target="_blank" style="color:#1565c0">A4 横版 PDF</a> · 销售工具：<a href="./phoenix-brief-sales.html" target="_blank" style="color:#1565c0">A4 竖版</a>
+        </div>
+      `;
+    }
+
+    // 新闻
+    const news = (data.bd && data.bd.news) || [];
+    const nEl = document.getElementById('news');
+    if (news.length === 0) {
+      nEl.innerHTML = '<div class="empty">暂无市场动态</div>';
+    } else {
+      nEl.innerHTML = news.slice(0, 10).map(n => `
+        <a class="price-item" href="${esc(n.url)}" target="_blank" rel="noopener">
+          <div class="meta">
+            <span class="brand">${esc(n.title)}</span>
+            <span class="model">来源：${esc(n.source || '?')}</span>
+          </div>
+        </a>
+      `).join('');
+    }
+  }
+
+  // V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
+  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
+</script>
+<script src="../render_quality_gate.js"></script>
+</body>
+</html>
