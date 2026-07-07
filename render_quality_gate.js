@@ -1,21 +1,17 @@
-// Phoenix V2.7 数据质量门渲染器（共享 JS · 所有 9 Tab 引用）
+// Phoenix V2.7.3 数据质量指示器（紧凑版 · 只显示小图标）
 // 依赖：latest.json#data_quality 块（由 crawler/data_quality_gate.py 写入）
 //
 // 使用：
 //   <script src="./render_quality_gate.js"></script>
-//   <script>renderQualityGate(data);</script>  // data 是 latest.json 解析后对象
+//   <script>renderQualityGate(data);</script>
+//
+// V2.7.3 修订：只显示一个右上角小圆点 + tooltip，hover 才看详情（不占空间）
 
 (function() {
   const GATE_LEVEL = {
-    green:  { emoji: '🟢', label: '数据完整 · 可信',        color: '#2e7d32', bg: '#e8f5e9' },
-    yellow: { emoji: '🟡', label: '数据部分 · 部分降级',    color: '#e65100', bg: '#fff8e1' },
-    red:    { emoji: '🔴', label: '数据失真 · 不可信',      color: '#c8102e', bg: '#ffebee' }
-  };
-
-  const SAFE_TIPS = {
-    green:  '所有 VPN 依赖模块已通 · 数据规模达预期 · 可放心基于 dashboard 决策',
-    yellow: '部分数据失真 · 数据驱动模块已降级显示 · 建议打开 VPN 后刷新',
-    red:    'VPN 未开或核心模块失败 · BD pool/ID pool/Phoenix SKU 严重残缺 · 不要基于此 dashboard 做营销判断'
+    green:  { dot: '🟢', label: '数据完整 · 可信',  color: '#2e7d32' },
+    yellow: { dot: '🟡', label: '数据部分 · 降级',  color: '#e65100' },
+    red:    { dot: '🔴', label: '数据失真 · 不可信', color: '#c8102e' }
   };
 
   function render(data) {
@@ -32,61 +28,49 @@
     const stats = dq.stats || {};
     const evaluatedAt = dq.evaluated_at || '';
 
-    // === 信号灯 banner ===
-    const banner = document.createElement('div');
-    banner.className = 'quality-gate ' + level;
-    banner.id = 'quality-gate-' + level;
-    banner.setAttribute('data-quality-level', level);
-    banner.innerHTML = `
-      <div class="qg-emoji">${cfg.emoji}</div>
-      <div class="qg-text">
-        <strong>数据质量门: ${cfg.label}</strong> · ${SAFE_TIPS[level]}
-        <small>评估时间: ${evaluatedAt}</small>
-        <div class="qg-detail" id="qg-detail-${level}">
-          <b>📊 当前数据规模:</b>
-          · BD pool: ${stats.bd_count || 0} SKU
-          · ID pool: ${stats.id_count || 0} SKU
-          · Phoenix: ${stats.phoenix_sku || 0} SKU
-          · 25K+ 高端: ${stats.gt_25k_total || 0} SKU
-          · VPN 模块: dreamcycle_vpn=${stats.vpn_modules?.dreamcycle_vpn ? '✅' : '❌'}, serbasepeda=${stats.vpn_modules?.serbasepeda ? '✅' : '❌'}
-          ${reasons.length ? '<br><b>❌ 问题:</b><br>' + reasons.map(r => '· ' + esc(r)).join('<br>') : ''}
-          ${recommendations.length ? '<br><b>💡 建议:</b><br>' + recommendations.map(r => '· ' + esc(r)).join('<br>') : ''}
+    // === 紧凑指示器（右上角悬浮小圆点 + tooltip）===
+    const indicator = document.createElement('div');
+    indicator.className = 'quality-indicator ' + level;
+    indicator.id = 'quality-indicator';
+    indicator.setAttribute('data-quality-level', level);
+    indicator.innerHTML = `
+      <span class="qi-dot">${cfg.dot}</span>
+      <span class="qi-label">${cfg.label}</span>
+      <div class="qi-tooltip">
+        <div class="qi-tip-header">
+          <b>${cfg.dot} ${cfg.label}</b>
+          <small>${evaluatedAt}</small>
+        </div>
+        <div class="qi-tip-body">
+          <b>📊 数据规模:</b>
+          · BD ${stats.bd_count || 0} / ID ${stats.id_count || 0} / Phoenix ${stats.phoenix_sku || 0} / 25K+ ${stats.gt_25k_total || 0}
+          ${stats.core_failed && stats.core_failed.length ? '<br><b>❌ 核心模块失败:</b><br>' + stats.core_failed.map(k => '· ' + k).join('<br>') : ''}
+          ${stats.premium_failed && stats.premium_failed.length ? '<br><b>⚠️ 高级模块失败:</b><br>' + stats.premium_failed.map(k => '· ' + k).join('<br>') : ''}
+          ${reasons.length ? '<br><b>问题详情:</b><br>' + reasons.slice(0, 5).map(r => '· ' + esc(r)).join('<br>') : ''}
+          ${recommendations.length ? '<br><b>💡 建议:</b><br>' + recommendations.slice(0, 3).map(r => '· ' + esc(r)).join('<br>') : ''}
         </div>
       </div>
-      <span class="qg-toggle" onclick="document.getElementById('qg-detail-${level}').classList.toggle('open')">详情 ▾</span>
     `;
 
-    // 插到 body 最前面（每个 Tab 顶部都看得到）
-    document.body.insertBefore(banner, document.body.firstChild);
+    // 插到 body（绝对定位右上角，不占文档流）
+    document.body.appendChild(indicator);
 
-    // === 数据失真模块降级处理 ===
-    if (level === 'red' || level === 'yellow') {
-      // 1. 标记关键数据驱动模块降级
-      const degrades = [
-        'dashboard-totals',        // BD pool 总量
-        'gt-25k-top5',              // 25K+ 高端榜
-        'phx-gap-analysis',         // Phoenix 差距分析
-        'competitive-rankings',     // 竞品品牌排行
-        'id-vacuum-analysis',       // ID 真空分析
-      ];
+    // === 数据失真模块降级处理（仅 RED 时启用）===
+    if (level === 'red') {
+      const degrades = ['dashboard-totals', 'gt-25k-top5', 'phx-gap-analysis', 'competitive-rankings', 'id-vacuum-analysis'];
       degrades.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.add('dq-degraded');
       });
 
-      // 2. 弹一次性警告（仅 RED 时弹，yellow 不弹）
-      if (level === 'red' && !window.sessionStorage.getItem('dq-warn-shown')) {
+      // 一次性警告弹窗
+      if (!window.sessionStorage.getItem('dq-warn-shown')) {
         const warn = document.createElement('div');
-        warn.style.cssText = 'position:fixed;top:60px;right:20px;background:#c8102e;color:#fff;padding:14px 18px;border-radius:8px;z-index:9999;max-width:320px;font-size:13px;box-shadow:0 4px 12px rgba(0,0,0,.3);line-height:1.6';
-        warn.innerHTML = `
-          <b>🚨 数据失真警告</b><br>
-          当前数据严重残缺（VPN 未开）<br>
-          <span style="font-size:11.5px;opacity:.9">已为数据驱动模块加红框蒙版 · 不要基于此 dashboard 做营销判断 · 打开 VPN 后重启跑</span>
-          <div style="text-align:right;margin-top:6px"><a href="#" onclick="this.parentNode.parentNode.remove();return false" style="color:#fff;text-decoration:underline;font-size:12px">知道了</a></div>
-        `;
+        warn.style.cssText = 'position:fixed;top:50px;right:20px;background:#c8102e;color:#fff;padding:10px 14px;border-radius:6px;z-index:9999;max-width:280px;font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);line-height:1.5';
+        warn.innerHTML = `<b>🚨 数据失真</b> · 核心模块挂了<br><span style="opacity:.9">别用此 dashboard 做营销判断 · 修好核心模块后刷新</span><div style="text-align:right;margin-top:4px"><a href="#" onclick="this.parentNode.parentNode.remove();return false" style="color:#fff;font-size:11px">×</a></div>`;
         document.body.appendChild(warn);
         window.sessionStorage.setItem('dq-warn-shown', '1');
-        setTimeout(() => warn.remove(), 12000);
+        setTimeout(() => warn.remove(), 8000);
       }
     }
   }
