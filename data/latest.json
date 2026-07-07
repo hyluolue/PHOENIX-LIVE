@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T16:53:04+08:00",
+  "generated_at": "2026-07-07T16:56:57+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -8,7 +8,7 @@
     "shopee_id": "fail",
     "tokopedia": "fail",
     "daraz_bd_reviews": "ok",
-    "dreamcycle": "ok",
+    "dreamcycle": "fail",
     "apify_social": "fail",
     "dreamcycle_vpn": "ok (116 from HTML snapshot, manual save, scraped 2026-07-07)",
     "serbasepeda": "ok"
@@ -828,1540 +828,32 @@
         "is_new": true,
         "scraped_at": "2026-07-07T16:45:19+08:00",
         "note": "BDT 150"
-      },
-      {
-        "brand": "Hero",
-        "model": "Hero Tokyo",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/2854/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Hero Tokyo) - inStock"
-      },
-      {
-        "brand": "Adder",
-        "model": "Adder Perfect",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/adder-perfect/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Adder Perfect) - inStock"
-      },
-      {
-        "brand": "Avon",
-        "model": "Avon (Non gear)",
-        "platform": "dreamcycle.store",
-        "price": 13000,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
-        "note": "BDT 13,000 (orig 13,000) - dreamcycle.store (Playwright, Avon (Non gear)) - inStock"
-      },
-      {
-        "brand": "Avon",
-        "model": "Avon XT 26",
-        "platform": "dreamcycle.store",
-        "price": 19000,
-        "orig_price": 19000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/avon-xt-26/",
-        "note": "BDT 19,000 (orig 19,000) - dreamcycle.store (Playwright, Avon XT 26) - inStock"
-      },
-      {
-        "brand": "Avon",
-        "model": "Avon XT 27.5",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/avon-xt-27-5/",
-        "note": "BDT 20,000 (orig 20,500) - dreamcycle.store (Playwright, Avon XT 27.5) - inStock"
-      },
-      {
-        "brand": "Ceres",
-        "model": "CERES HT2 (Hybrid)",
-        "platform": "dreamcycle.store",
-        "price": 37000,
-        "orig_price": 40000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/ceres-ht2-hybrid/",
-        "note": "BDT 37,000 (orig 40,000) - dreamcycle.store (Playwright, CERES HT2 (Hybrid)) - OOS"
-      },
-      {
-        "brand": "Ceres",
-        "model": "CERES SUV-2",
-        "platform": "dreamcycle.store",
-        "price": 32000,
-        "orig_price": 33000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/ceres-suv-2/",
-        "note": "BDT 32,000 (orig 33,000) - dreamcycle.store (Playwright, CERES SUV-2) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Gio-100",
-        "platform": "dreamcycle.store",
-        "price": 13000,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-gio-100/",
-        "note": "BDT 13,000 (orig 13,000) - dreamcycle.store (Playwright, Core Gio-100) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Gio 300",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-gio-300/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Core Gio 300) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Lanster",
-        "platform": "dreamcycle.store",
-        "price": 27700,
-        "orig_price": 30000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-lanster/",
-        "note": "BDT 27,700 (orig 30,000) - dreamcycle.store (Playwright, Core Lanster) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Mention 4x",
-        "platform": "dreamcycle.store",
-        "price": 30000,
-        "orig_price": 30000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-mention-4x/",
-        "note": "BDT 30,000 (orig 30,000) - dreamcycle.store (Playwright, Core Mention 4x) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 100",
-        "platform": "dreamcycle.store",
-        "price": 15000,
-        "orig_price": 15400,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-100/",
-        "note": "BDT 15,000 (orig 15,400) - dreamcycle.store (Playwright, Core Nio 100) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio-200",
-        "platform": "dreamcycle.store",
-        "price": 15500,
-        "orig_price": 16000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-200-2/",
-        "note": "BDT 15,500 (orig 16,000) - dreamcycle.store (Playwright, Core Nio-200) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio-200 Plus",
-        "platform": "dreamcycle.store",
-        "price": 17700,
-        "orig_price": 18500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-200-plus/",
-        "note": "BDT 17,700 (orig 18,500) - dreamcycle.store (Playwright, Core Nio-200 Plus) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 300(2025)",
-        "platform": "dreamcycle.store",
-        "price": 17000,
-        "orig_price": 17000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-300/",
-        "note": "BDT 17,000 (orig 17,000) - dreamcycle.store (Playwright, Core Nio 300(2025)) - OOS"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio-300(2026)",
-        "platform": "dreamcycle.store",
-        "price": 17700,
-        "orig_price": 17700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-300-2/",
-        "note": "BDT 17,700 (orig 17,700) - dreamcycle.store (Playwright, Core Nio-300(2026)) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 400",
-        "platform": "dreamcycle.store",
-        "price": 15500,
-        "orig_price": 16500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-400/",
-        "note": "BDT 15,500 (orig 16,500) - dreamcycle.store (Playwright, Core Nio 400) - OOS"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 500",
-        "platform": "dreamcycle.store",
-        "price": 16500,
-        "orig_price": 17500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-500-price-in-bangladesh/",
-        "note": "BDT 16,500 (orig 17,500) - dreamcycle.store (Playwright, Core Nio 500) - OOS"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 600 A",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-600-a/",
-        "note": "BDT 20,000 (orig 20,000) - dreamcycle.store (Playwright, Core Nio 600 A) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 600-B",
-        "platform": "dreamcycle.store",
-        "price": 21000,
-        "orig_price": 21000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-600-price-in-bd/",
-        "note": "BDT 21,000 (orig 21,000) - dreamcycle.store (Playwright, Core Nio 600-B) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 700",
-        "platform": "dreamcycle.store",
-        "price": 27000,
-        "orig_price": 28000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-700/",
-        "note": "BDT 27,000 (orig 28,000) - dreamcycle.store (Playwright, Core Nio 700) - OOS"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Nio 800",
-        "platform": "dreamcycle.store",
-        "price": 32000,
-        "orig_price": 37000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-nio-800/",
-        "note": "BDT 32,000 (orig 37,000) - dreamcycle.store (Playwright, Core Nio 800) - inStock"
-      },
-      {
-        "brand": "Core",
-        "model": "Core Project 3.0",
-        "platform": "dreamcycle.store",
-        "price": 28500,
-        "orig_price": 30000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/core-project-3-0/",
-        "note": "BDT 28,500 (orig 30,000) - dreamcycle.store (Playwright, Core Project 3.0) - inStock"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Duranta Knight",
-        "platform": "dreamcycle.store",
-        "price": 11700,
-        "orig_price": 12500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/duranta-knight/",
-        "note": "BDT 11,700 (orig 12,500) - dreamcycle.store (Playwright, Duranta Knight) - inStock"
-      },
-      {
-        "brand": "Duronto",
-        "model": "Duronto Sturn",
-        "platform": "dreamcycle.store",
-        "price": 14000,
-        "orig_price": 14000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/duronto-sturn/",
-        "note": "BDT 14,000 (orig 14,000) - dreamcycle.store (Playwright, Duronto Sturn) - inStock"
-      },
-      {
-        "brand": "Falcon",
-        "model": "FALCON THUNDERBIRD (2025)",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/falcon-thunderbird-27-5/",
-        "note": "BDT 20,000 (orig 20,500) - dreamcycle.store (Playwright, FALCON THUNDERBIRD (2025)) - OOS"
-      },
-      {
-        "brand": "Falcon",
-        "model": "Falcon Thunderbird(2026)",
-        "platform": "dreamcycle.store",
-        "price": 21000,
-        "orig_price": 21000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/falcon-thunderbird2026/",
-        "note": "BDT 21,000 (orig 21,000) - dreamcycle.store (Playwright, Falcon Thunderbird(2026)) - inStock"
-      },
-      {
-        "brand": "Forever",
-        "model": "Forever Pearl",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 22000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/forever-pearl/",
-        "note": "BDT 20,000 (orig 22,000) - dreamcycle.store (Playwright, Forever Pearl) - OOS"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Buzz-1 (Non Gear)",
-        "platform": "dreamcycle.store",
-        "price": 13300,
-        "orig_price": 13500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
-        "note": "BDT 13,300 (orig 13,500) - dreamcycle.store (Playwright, Foxter Buzz-1 (Non Gear)) - OOS"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Buzz-1(Non gear)2026",
-        "platform": "dreamcycle.store",
-        "price": 13500,
-        "orig_price": 13500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
-        "note": "BDT 13,500 (orig 13,500) - dreamcycle.store (Playwright, Foxter Buzz-1(Non gear)2026) - inStock"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Buzz-3",
-        "platform": "dreamcycle.store",
-        "price": 14700,
-        "orig_price": 14700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-buzz-3/",
-        "note": "BDT 14,700 (orig 14,700) - dreamcycle.store (Playwright, Foxter Buzz-3) - inStock"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Oscar-2",
-        "platform": "dreamcycle.store",
-        "price": 16000,
-        "orig_price": 16000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-oscar-2/",
-        "note": "BDT 16,000 (orig 16,000) - dreamcycle.store (Playwright, Foxter Oscar-2) - inStock"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Oscar-3",
-        "platform": "dreamcycle.store",
-        "price": 19700,
-        "orig_price": 19700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-oscar-3/",
-        "note": "BDT 19,700 (orig 19,700) - dreamcycle.store (Playwright, Foxter Oscar-3) - inStock"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Oscar-4",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-oscar-4/",
-        "note": "BDT 20,000 (orig 20,000) - dreamcycle.store (Playwright, Foxter Oscar-4) - inStock"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Oscar-5",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 25000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/foxter-oscar-5/",
-        "note": "BDT 23,000 (orig 25,000) - dreamcycle.store (Playwright, Foxter Oscar-5) - inStock"
-      },
-      {
-        "brand": "Ghost",
-        "model": "Ghost ASX-5900",
-        "platform": "dreamcycle.store",
-        "price": 19700,
-        "orig_price": 23500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/ghost-asx-5900/",
-        "note": "BDT 19,700 (orig 23,500) - dreamcycle.store (Playwright, Ghost ASX-5900) - inStock"
-      },
-      {
-        "brand": "Ghost",
-        "model": "Ghost Pro",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/ghost-pro/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Ghost Pro) - inStock"
-      },
-      {
-        "brand": "Hero",
-        "model": "Hero Hunk 999",
-        "platform": "dreamcycle.store",
-        "price": 15000,
-        "orig_price": 15000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/hero-hunk-999/",
-        "note": "BDT 15,000 (orig 15,000) - dreamcycle.store (Playwright, Hero Hunk 999) - inStock"
-      },
-      {
-        "brand": "Hero",
-        "model": "Hero MTB 20 inch",
-        "platform": "dreamcycle.store",
-        "price": 12500,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
-        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright, Hero MTB 20 inch) - inStock"
-      },
-      {
-        "brand": "Hero",
-        "model": "Hero Road bike(Non gear)",
-        "platform": "dreamcycle.store",
-        "price": 12000,
-        "orig_price": 12500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
-        "note": "BDT 12,000 (orig 12,500) - dreamcycle.store (Playwright, Hero Road bike(Non gear)) - OOS"
-      },
-      {
-        "brand": "Kiesel",
-        "model": "Kiesel Naxos 10",
-        "platform": "dreamcycle.store",
-        "price": 27000,
-        "orig_price": 27000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/kiesel-naxos-10/",
-        "note": "BDT 27,000 (orig 27,000) - dreamcycle.store (Playwright, Kiesel Naxos 10) - inStock"
-      },
-      {
-        "brand": "Magpy",
-        "model": "MAGPY DTR",
-        "platform": "dreamcycle.store",
-        "price": 38000,
-        "orig_price": 38000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/magpy-dtr/",
-        "note": "BDT 38,000 (orig 38,000) - dreamcycle.store (Playwright, MAGPY DTR) - inStock"
-      },
-      {
-        "brand": "Magpy",
-        "model": "MAGPY DTR",
-        "platform": "dreamcycle.store",
-        "price": 38000,
-        "orig_price": 40000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/magpy-stunt-cycle/",
-        "note": "BDT 38,000 (orig 40,000) - dreamcycle.store (Playwright, MAGPY DTR) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Fire eagle",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-fire-eagle/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Marine Fire eagle) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Gold",
-        "platform": "dreamcycle.store",
-        "price": 15800,
-        "orig_price": 15800,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-gold/",
-        "note": "BDT 15,800 (orig 15,800) - dreamcycle.store (Playwright, Marine Gold) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Gold-100",
-        "platform": "dreamcycle.store",
-        "price": 17700,
-        "orig_price": 17700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-gold-100/",
-        "note": "BDT 17,700 (orig 17,700) - dreamcycle.store (Playwright, Marine Gold-100) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Gold 400",
-        "platform": "dreamcycle.store",
-        "price": 19000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-gold-400/",
-        "note": "BDT 19,000 (orig 20,000) - dreamcycle.store (Playwright, Marine Gold 400) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Gold-600",
-        "platform": "dreamcycle.store",
-        "price": 19500,
-        "orig_price": 19500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-gold-600/",
-        "note": "BDT 19,500 (orig 19,500) - dreamcycle.store (Playwright, Marine Gold-600) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Nuclear-400",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-nuclear-400/",
-        "note": "BDT 20,000 (orig 20,000) - dreamcycle.store (Playwright, Marine Nuclear-400) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine PAGE 20 inch",
-        "platform": "dreamcycle.store",
-        "price": 12500,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
-        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright, Marine PAGE 20 inch) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Platinum 200",
-        "platform": "dreamcycle.store",
-        "price": 23700,
-        "orig_price": 23700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-platinum-200/",
-        "note": "BDT 23,700 (orig 23,700) - dreamcycle.store (Playwright, Marine Platinum 200) - inStock"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine Stunt machine",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 23500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/marine-stunt-machine/",
-        "note": "BDT 23,000 (orig 23,500) - dreamcycle.store (Playwright, Marine Stunt machine) - inStock"
-      },
-      {
-        "brand": "MEZAROTTI",
-        "model": "MEZAROTTI 29 inch Cycle",
-        "platform": "dreamcycle.store",
-        "price": 22000,
-        "orig_price": 23000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/mezarott-29-inch-cycle/",
-        "note": "BDT 22,000 (orig 23,000) - dreamcycle.store (Playwright, MEZAROTTI 29 inch Cycle) - OOS"
-      },
-      {
-        "brand": "Mustang",
-        "model": "Mustang 1700",
-        "platform": "dreamcycle.store",
-        "price": 24000,
-        "orig_price": 25000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/mustang-1700/",
-        "note": "BDT 24,000 (orig 25,000) - dreamcycle.store (Playwright, Mustang 1700) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Donald (Non gear)",
-        "platform": "dreamcycle.store",
-        "price": 13000,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear/",
-        "note": "BDT 13,000 (orig 13,000) - dreamcycle.store (Playwright, Phoenix Donald (Non gear)) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Donald (Non Gear)",
-        "platform": "dreamcycle.store",
-        "price": 13500,
-        "orig_price": 13500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
-        "note": "BDT 13,500 (orig 13,500) - dreamcycle.store (Playwright, Phoenix Donald (Non Gear)) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Duster-A",
-        "platform": "dreamcycle.store",
-        "price": 15700,
-        "orig_price": 15700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-duster-a/",
-        "note": "BDT 15,700 (orig 15,700) - dreamcycle.store (Playwright, Phoenix Duster-A) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Duster-C",
-        "platform": "dreamcycle.store",
-        "price": 17000,
-        "orig_price": 17500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-duster-c/",
-        "note": "BDT 17,000 (orig 17,500) - dreamcycle.store (Playwright, Phoenix Duster-C) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Harod01",
-        "platform": "dreamcycle.store",
-        "price": 18000,
-        "orig_price": 19500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-harod01/",
-        "note": "BDT 18,000 (orig 19,500) - dreamcycle.store (Playwright, Phoenix Harod01) - inStock"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix miracle",
-        "platform": "dreamcycle.store",
-        "price": 13000,
-        "orig_price": 13500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
-        "note": "BDT 13,000 (orig 13,500) - dreamcycle.store (Playwright, Phoenix miracle) - OOS"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix Tornado 24 inch",
-        "platform": "dreamcycle.store",
-        "price": 13700,
-        "orig_price": 14000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
-        "note": "BDT 13,700 (orig 14,000) - dreamcycle.store (Playwright, Phoenix Tornado 24 inch) - inStock"
-      },
-      {
-        "brand": "Polloux",
-        "model": "polloux 20 inch cycle",
-        "platform": "dreamcycle.store",
-        "price": 9800,
-        "orig_price": 10000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
-        "note": "BDT 9,800 (orig 10,000) - dreamcycle.store (Playwright, polloux 20 inch cycle) - inStock"
-      },
-      {
-        "brand": "Pollux",
-        "model": "Pollux 24 inch",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/pollux-24-inch/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Pollux 24 inch) - inStock"
-      },
-      {
-        "brand": "Python",
-        "model": "PYTHON",
-        "platform": "dreamcycle.store",
-        "price": 13500,
-        "orig_price": 13800,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/python/",
-        "note": "BDT 13,500 (orig 13,800) - dreamcycle.store (Playwright, PYTHON) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Xc402",
-        "platform": "dreamcycle.store",
-        "price": 32000,
-        "orig_price": 33000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-%e0%a6%ae%e0%a6%be%e0%a6%89%e0%a6%a8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%a8-%e0%a6%ac%e0%a6%be%e0%a6%87%e0%a6%95-%e0%a6%b6%e0%a6%95%e0%a7%8d%e0%a6%a4%e0%a6%bf%e0%a6%b6%e0%a6%be/",
-        "note": "BDT 32,000 (orig 33,000) - dreamcycle.store (Playwright, Rockrider Xc402) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER DUKE (2024)",
-        "platform": "dreamcycle.store",
-        "price": 25000,
-        "orig_price": 25500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-duke-2024/",
-        "note": "BDT 25,000 (orig 25,500) - dreamcycle.store (Playwright, ROCKRIDER DUKE (2024)) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER DUKE (2025)",
-        "platform": "dreamcycle.store",
-        "price": 26000,
-        "orig_price": 27000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-duke-2025/",
-        "note": "BDT 26,000 (orig 27,000) - dreamcycle.store (Playwright, ROCKRIDER DUKE (2025)) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Duke-2026",
-        "platform": "dreamcycle.store",
-        "price": 26000,
-        "orig_price": 28000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-duke-2026/",
-        "note": "BDT 26,000 (orig 28,000) - dreamcycle.store (Playwright, Rockrider Duke-2026) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER DUKE PRO",
-        "platform": "dreamcycle.store",
-        "price": 27000,
-        "orig_price": 28500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-duke-pro/",
-        "note": "BDT 27,000 (orig 28,500) - dreamcycle.store (Playwright, ROCKRIDER DUKE PRO) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER M8 (Folding)",
-        "platform": "dreamcycle.store",
-        "price": 14000,
-        "orig_price": 14500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-m8-folding/",
-        "note": "BDT 14,000 (orig 14,500) - dreamcycle.store (Playwright, ROCKRIDER M8 (Folding)) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Pro Gen 4 (2026)",
-        "platform": "dreamcycle.store",
-        "price": 45000,
-        "orig_price": 45000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen-4-2026/",
-        "note": "BDT 45,000 (orig 45,000) - dreamcycle.store (Playwright, Rockrider Pro Gen 4 (2026)) - inStock"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER PRO Gen2",
-        "platform": "dreamcycle.store",
-        "price": 28000,
-        "orig_price": 30000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen2/",
-        "note": "BDT 28,000 (orig 30,000) - dreamcycle.store (Playwright, ROCKRIDER PRO Gen2) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER PRO GEN3",
-        "platform": "dreamcycle.store",
-        "price": 38000,
-        "orig_price": 40000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen3-2025/",
-        "note": "BDT 38,000 (orig 40,000) - dreamcycle.store (Playwright, ROCKRIDER PRO GEN3) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Ride Seeker H3",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 25000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-ride-seeker-h3/",
-        "note": "BDT 23,000 (orig 25,000) - dreamcycle.store (Playwright, Rockrider Ride Seeker H3) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Stunt Seeker",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 24000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-stunt-seeker/",
-        "note": "BDT 23,000 (orig 24,000) - dreamcycle.store (Playwright, Rockrider Stunt Seeker) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER STUNT SEEKER (2023)",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-stunt-seeker-2023/",
-        "note": "BDT 20,000 (orig 20,500) - dreamcycle.store (Playwright, ROCKRIDER STUNT SEEKER (2023)) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER THRUSTER V1",
-        "platform": "dreamcycle.store",
-        "price": 20000,
-        "orig_price": 20500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-thruster-v1/",
-        "note": "BDT 20,000 (orig 20,500) - dreamcycle.store (Playwright, ROCKRIDER THRUSTER V1) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 401",
-        "platform": "dreamcycle.store",
-        "price": 25000,
-        "orig_price": 26000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-xc-401-price/",
-        "note": "BDT 25,000 (orig 26,000) - dreamcycle.store (Playwright, ROCKRIDER XC 401) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 403 (2023)",
-        "platform": "dreamcycle.store",
-        "price": 40000,
-        "orig_price": 40500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-xc-403-2023/",
-        "note": "BDT 40,000 (orig 40,500) - dreamcycle.store (Playwright, ROCKRIDER XC 403 (2023)) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 403",
-        "platform": "dreamcycle.store",
-        "price": 40000,
-        "orig_price": 41000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-xc-403-price/",
-        "note": "BDT 40,000 (orig 41,000) - dreamcycle.store (Playwright, ROCKRIDER XC 403) - OOS"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider XC 404",
-        "platform": "dreamcycle.store",
-        "price": 65000,
-        "orig_price": 67000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-xc-404-price/",
-        "note": "BDT 65,000 (orig 67,000) - dreamcycle.store (Playwright, Rockrider XC 404) - inStock"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Xc501",
-        "platform": "dreamcycle.store",
-        "price": 42000,
-        "orig_price": 45000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/rockrider-xc501/",
-        "note": "BDT 42,000 (orig 45,000) - dreamcycle.store (Playwright, Rockrider Xc501) - inStock"
-      },
-      {
-        "brand": "Warrior",
-        "model": "Seventy one Warrior 1.0",
-        "platform": "dreamcycle.store",
-        "price": 14000,
-        "orig_price": 14000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-1-0/",
-        "note": "BDT 14,000 (orig 14,000) - dreamcycle.store (Playwright, Seventy one Warrior 1.0) - OOS"
-      },
-      {
-        "brand": "Warrior",
-        "model": "Seventy one Warrior 2.0",
-        "platform": "dreamcycle.store",
-        "price": 14500,
-        "orig_price": 14500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-2-0/",
-        "note": "BDT 14,500 (orig 14,500) - dreamcycle.store (Playwright, Seventy one Warrior 2.0) - OOS"
-      },
-      {
-        "brand": "Warrior",
-        "model": "Seventy One Warrior 3.0",
-        "platform": "dreamcycle.store",
-        "price": 18500,
-        "orig_price": 19500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-3-0/",
-        "note": "BDT 18,500 (orig 19,500) - dreamcycle.store (Playwright, Seventy One Warrior 3.0) - inStock"
-      },
-      {
-        "brand": "Uctocifu",
-        "model": "Uctocifu(Non gear)",
-        "platform": "dreamcycle.store",
-        "price": 12000,
-        "orig_price": 12000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
-        "note": "BDT 12,000 (orig 12,000) - dreamcycle.store (Playwright, Uctocifu(Non gear)) - inStock"
-      },
-      {
-        "brand": "Uplayed",
-        "model": "Uplayed 20 inch",
-        "platform": "dreamcycle.store",
-        "price": 12500,
-        "orig_price": 13000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
-        "note": "BDT 12,500 (orig 13,000) - dreamcycle.store (Playwright, Uplayed 20 inch) - inStock"
-      },
-      {
-        "brand": "Uplayed",
-        "model": "Uplayed Jordan",
-        "platform": "dreamcycle.store",
-        "price": 19000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/uplayed-jordan/",
-        "note": "BDT 19,000 (orig 20,000) - dreamcycle.store (Playwright, Uplayed Jordan) - inStock"
-      },
-      {
-        "brand": "Uplayed",
-        "model": "Uplayed Pro",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 23500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/uplayed-pro/",
-        "note": "BDT 23,000 (orig 23,500) - dreamcycle.store (Playwright, Uplayed Pro) - OOS"
-      },
-      {
-        "brand": "Uplayed",
-        "model": "Uplayed Race 3.0",
-        "platform": "dreamcycle.store",
-        "price": 16700,
-        "orig_price": 16700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/uplayed-race-3-0/",
-        "note": "BDT 16,700 (orig 16,700) - dreamcycle.store (Playwright, Uplayed Race 3.0) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Junior 16″",
-        "platform": "dreamcycle.store",
-        "price": 12300,
-        "orig_price": 12300,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-junior-16/",
-        "note": "BDT 12,300 (orig 12,300) - dreamcycle.store (Playwright, Veloce Junior 16″) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Junior 20 inch",
-        "platform": "dreamcycle.store",
-        "price": 12500,
-        "orig_price": 12500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-junior-20-inch/",
-        "note": "BDT 12,500 (orig 12,500) - dreamcycle.store (Playwright, Veloce Junior 20 inch) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Junior 24 inch",
-        "platform": "dreamcycle.store",
-        "price": 13500,
-        "orig_price": 13500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-junior-24-inch/",
-        "note": "BDT 13,500 (orig 13,500) - dreamcycle.store (Playwright, Veloce Junior 24 inch) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Junior (Non gear)",
-        "platform": "dreamcycle.store",
-        "price": 12000,
-        "orig_price": 12000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
-        "note": "BDT 12,000 (orig 12,000) - dreamcycle.store (Playwright, Veloce Junior (Non gear)) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Legacy",
-        "platform": "dreamcycle.store",
-        "price": 32500,
-        "orig_price": 33500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-legacy/",
-        "note": "BDT 32,500 (orig 33,500) - dreamcycle.store (Playwright, Veloce Legacy) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Legion 10",
-        "platform": "dreamcycle.store",
-        "price": 18000,
-        "orig_price": 18500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-legion-10/",
-        "note": "BDT 18,000 (orig 18,500) - dreamcycle.store (Playwright, Veloce Legion 10) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Legion 20",
-        "platform": "dreamcycle.store",
-        "price": 20500,
-        "orig_price": 21500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-legion-20-2/",
-        "note": "BDT 20,500 (orig 21,500) - dreamcycle.store (Playwright, Veloce Legion 20) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Legion 30",
-        "platform": "dreamcycle.store",
-        "price": 23000,
-        "orig_price": 23500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-legion-30-2/",
-        "note": "BDT 23,000 (orig 23,500) - dreamcycle.store (Playwright, Veloce Legion 30) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 2601L",
-        "platform": "dreamcycle.store",
-        "price": 15100,
-        "orig_price": 15500,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2601l/",
-        "note": "BDT 15,100 (orig 15,500) - dreamcycle.store (Playwright, Veloce Raptor Sport 2601L) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 2602",
-        "platform": "dreamcycle.store",
-        "price": 18000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2602/",
-        "note": "BDT 18,000 (orig 20,000) - dreamcycle.store (Playwright, Veloce Raptor Sport 2602) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 2602L",
-        "platform": "dreamcycle.store",
-        "price": 17300,
-        "orig_price": 18000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2602l/",
-        "note": "BDT 17,300 (orig 18,000) - dreamcycle.store (Playwright, Veloce Raptor Sport 2602L) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 2603",
-        "platform": "dreamcycle.store",
-        "price": 24000,
-        "orig_price": 25000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2603/",
-        "note": "BDT 24,000 (orig 25,000) - dreamcycle.store (Playwright, Veloce Raptor Sport 2603) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 6501",
-        "platform": "dreamcycle.store",
-        "price": 15300,
-        "orig_price": 15300,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-6501/",
-        "note": "BDT 15,300 (orig 15,300) - dreamcycle.store (Playwright, Veloce Raptor Sport 6501) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 6502",
-        "platform": "dreamcycle.store",
-        "price": 18000,
-        "orig_price": 20000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-6502/",
-        "note": "BDT 18,000 (orig 20,000) - dreamcycle.store (Playwright, Veloce Raptor Sport 6502) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Raptor Sport 6503",
-        "platform": "dreamcycle.store",
-        "price": 25500,
-        "orig_price": 26000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-6503/",
-        "note": "BDT 25,500 (orig 26,000) - dreamcycle.store (Playwright, Veloce Raptor Sport 6503) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Shadow Pro 2601",
-        "platform": "dreamcycle.store",
-        "price": 28500,
-        "orig_price": 30000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-2601/",
-        "note": "BDT 28,500 (orig 30,000) - dreamcycle.store (Playwright, Veloce Shadow Pro 2601) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Shadow Pro 2602",
-        "platform": "dreamcycle.store",
-        "price": 35000,
-        "orig_price": 35000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-2602/",
-        "note": "BDT 35,000 (orig 35,000) - dreamcycle.store (Playwright, Veloce Shadow Pro 2602) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Shadow Pro 6501",
-        "platform": "dreamcycle.store",
-        "price": 30000,
-        "orig_price": 30000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-6501/",
-        "note": "BDT 30,000 (orig 30,000) - dreamcycle.store (Playwright, Veloce Shadow Pro 6501) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Shadow Pro 6502",
-        "platform": "dreamcycle.store",
-        "price": 36000,
-        "orig_price": 36000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-6502/",
-        "note": "BDT 36,000 (orig 36,000) - dreamcycle.store (Playwright, Veloce Shadow Pro 6502) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Slayer 1.0",
-        "platform": "dreamcycle.store",
-        "price": 16700,
-        "orig_price": 16700,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-slayer-1-0-2023/",
-        "note": "BDT 16,700 (orig 16,700) - dreamcycle.store (Playwright, Veloce Slayer 1.0) - inStock"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Stunt Elite",
-        "platform": "dreamcycle.store",
-        "price": 24500,
-        "orig_price": 25000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-stunt-elite-2/",
-        "note": "BDT 24,500 (orig 25,000) - dreamcycle.store (Playwright, Veloce Stunt Elite) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Stunt Master",
-        "platform": "dreamcycle.store",
-        "price": 19500,
-        "orig_price": 20000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-stunt-master/",
-        "note": "BDT 19,500 (orig 20,000) - dreamcycle.store (Playwright, Veloce Stunt Master) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Stunt Master",
-        "platform": "dreamcycle.store",
-        "price": 19500,
-        "orig_price": 20000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-stunt-prodigy/",
-        "note": "BDT 19,500 (orig 20,000) - dreamcycle.store (Playwright, Veloce Stunt Master) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Stunt Prodigy",
-        "platform": "dreamcycle.store",
-        "price": 16000,
-        "orig_price": 16500,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-stunt-prodigy-2/",
-        "note": "BDT 16,000 (orig 16,500) - dreamcycle.store (Playwright, Veloce Stunt Prodigy) - OOS"
-      },
-      {
-        "brand": "Veloce",
-        "model": "Veloce Stunt Ultimate",
-        "platform": "dreamcycle.store",
-        "price": 30500,
-        "orig_price": 31000,
-        "in_stock": false,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/veloce-stunt-ultimate-2/",
-        "note": "BDT 30,500 (orig 31,000) - dreamcycle.store (Playwright, Veloce Stunt Ultimate) - OOS"
-      },
-      {
-        "brand": "Warrior",
-        "model": "Warrior 2.0",
-        "platform": "dreamcycle.store",
-        "price": 17700,
-        "orig_price": 18000,
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
-        "currency": "BDT",
-        "url": "https://www.dreamcycle.store/shop/warrior-2-0/",
-        "note": "BDT 17,700 (orig 18,000) - dreamcycle.store (Playwright, Warrior 2.0) - inStock"
       }
     ],
     "price_tracker": [],
     "news": [
       {
-        "title": "Bangladesh Bicycle-Bangladesh Bicycle Manufacturers, Suppliers and ...",
-        "source": "Sogou",
-        "summary": "",
-        "url": "/link?url=hedJjaC291OES8n0HpZOQFL0N_lk9fm1TkYMiPfhhLtpuVb_h0tBTTaNnJLBZsp1OjN-Ct0S1tekpqVxh3ZnHqSmpXGHdmcepKalcYd2Zx4AVl6TigR4nK4to0wa_Tif",
-        "published_at": "",
+        "title": "BD 25K+ BDT 高端市场: 1 SKU 跨 1 品牌 = Rockrider",
+        "source": "Daraz BD 实时",
+        "summary": "顶价 26,999 BDT（Rockrider）· Phoenix 当前无 25K+ SKU",
+        "url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
+        "published_at": "2026-07-07",
         "is_new": true
       },
       {
-        "title": "ReviewofChinaCycle2026",
-        "source": "Sogou",
-        "summary": "",
-        "url": "http://mp.weixin.qq.com/s?src=11&amp;timestamp=1783413869&amp;ver=6827&amp;signature=GrC*8olhpJf0PXzBA-YERTFq4W4f8jwoAqXKYqSu1leYvow3KlaLCa9rcrk9Zrs-z46iRQTZv8rEEnCf-SRvhSRvwWA0qWoud2RcVr-fKEkh2MSh*pvUBegEIGVlmCTx&amp;new=1",
-        "published_at": "",
+        "title": "BD 15-25K BDT 中高端: 15 SKU · 龙头 = Marine (7 SKU)",
+        "source": "Daraz BD 实时",
+        "summary": "Phoenix 在 15-25K 缺席（红海）：Marine 7 / Duranta 1 / Warrior 2 SKU",
+        "url": "https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle",
+        "published_at": "2026-07-07",
         "is_new": true
       },
       {
-        "title": "The story of Bangladesh becoming a major bicycle exporter | The ...",
-        "source": "Sogou",
-        "summary": "",
-        "url": "/link?url=hedJjaC291NxgdvzecbFhEbyd2TcYOqHtyiEr2IBmDS2qz0EKYVgILvexqkYRxciSx4ucpSg2c9-tVh7QeHopE67Sn-hWP7Pemfyvil9vThHs9VlkutFPxgzQhiEtUZfreaVHN88tHY.",
-        "published_at": "",
+        "title": "Phoenix BD 实时: 10 SKU · ASP 9,359 BDT · 顶价 10,000",
+        "source": "Daraz BD 实时",
+        "summary": "Phoenix BD 真实排名 = #14 · 评分 46.4 · 与 Rockrider(16 SKU · ASP 33K · score 92.4) 差距 3.5x",
+        "url": "https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle",
+        "published_at": "2026-07-07",
         "is_new": true
       }
     ],
@@ -2379,7 +871,7 @@
         "review_text": "Unboxing and assemble video on my youtube channel -(STP Straight to the Point)\nReally fast delevery got in 5 days.\nno camplains about the product.eveything is ok. tools were given in the box to setup the bicycle.",
         "review_time": "21 Jul 2020",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:39+08:00"
+        "scraped_at": "2026-07-07T16:48:17+08:00"
       },
       {
         "item_id": "117316491",
@@ -2394,7 +886,7 @@
         "review_text": "অনেক ভালো সেলার, সঠিক পন্য পেয়েছি, দারজ এর প্রতি বিশ্বাস আরো বেড়ে, ধন্যবাদ দারাজ",
         "review_time": "15 Jan 2021",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:39+08:00"
+        "scraped_at": "2026-07-07T16:48:17+08:00"
       },
       {
         "item_id": "235440894",
@@ -2409,7 +901,7 @@
         "review_text": "প্রথমত সাইকেল সেটিং করা ছিল না, অধিকাংশ স্ক্রু মিসিং, সাইকেলের স্ক্রু'র সেটিংসের জন্য প্রয়োজনীয় টুলস দেয়া হয়, কিচ্ছু ছিল না। ১০০০ টাকা খরচ করে সেট করতে হয়েছে। RFL - এর কর্মচারীরা যেহেতু বিক্রয়ের কাজ করে সুতরাং ক্রেতা সেবা তাদের জন্য গুরুত্বপূর্ণ কিছু না। ক্রেতাকে যেনতেনভাবে গছাতে পারলেই হলো",
         "review_time": "06 Feb 2024",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:40+08:00"
+        "scraped_at": "2026-07-07T16:48:18+08:00"
       },
       {
         "item_id": "323810443",
@@ -2424,7 +916,7 @@
         "review_text": "batpar onek kisu dey nai kew order diben na kindly",
         "review_time": "16 Apr 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:41+08:00"
+        "scraped_at": "2026-07-07T16:48:19+08:00"
       },
       {
         "item_id": "349283645",
@@ -2439,187 +931,7 @@
         "review_text": "দাম অনুযায়ী মোটামুটি",
         "review_time": "22 Sep 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:42+08:00"
-      },
-      {
-        "item_id": "323337459",
-        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-        "item_url": "https://www.daraz.com.bd/products/16-i323337459.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 1,
-        "review_text": "আমি যে বাইসাইকেলটি  অর্ডার করেছি উনি সেই বাইসাইকেলটি  দেন নাই। আবার যেটি  দিয়েছেন সেটা পুরাতন। উপরে স্টিকার দিয়ে ঢেকে ভিতরে মরিচাওয়ালা সাইকেল দিয়েছেন। আমি অর্ডার করেছি ফনিক্স ব্যান্ড উনি আমাকে দিয়েছে এডিনা ব্যান্ড। কালারও অন্যটি দিয়েছেন। প্রোডাক্ট খুবই বাজে। ভুল করেও এই এই সেলার থেকে কেউ কোনদিন একটি প্রোডাক্ট কিনবেন না। নিশ্চিত ভাবে ধরা খাবেন। পুরাই বাটপার। বাটপার বাটপার বাটপার । দারাজ অ্যাপ থেকে ওরা রিটার্ন অপশন বন্ধ করে দিয়ে রাখছে।",
-        "review_time": "27 Nov 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:43+08:00"
-      },
-      {
-        "item_id": "323337459",
-        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-        "item_url": "https://www.daraz.com.bd/products/16-i323337459.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 1,
-        "review_text": "Free Shipping but seller delivery time extra money",
-        "review_time": "09 Mar 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:43+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "My Kids are so Happy.... Thanks for sending such a Nice Bicycle.",
-        "review_time": "14 Jun 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:44+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "প্রথম অনেক ভয়ে ছিলাম  সেলার কেমন হবে হাতে পাওয়ার পরে দেক্লাম অনেক সুন্দর sealer অনেক ভালো মানুষ",
-        "review_time": "21 Dec 2022",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:44+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "সাইকেলটি ভালো আছি চাইলে যে কেউ নিতে পারেন।",
-        "review_time": "15 Oct 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:44+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "100% original.. khub valo ekti cycle \njemon dekhechi temoni peyechi",
-        "review_time": "08 Nov 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:44+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Seems good so far",
-        "review_time": "17 Mar 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:44+08:00"
-      },
-      {
-        "item_id": "425174012",
-        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "সাইকেল টি   ভালই পাইছি সবকিছু ওকে ছিল। তবে কেনার আগে ডেলিভারি সিস্টেমটি ক্লিয়ার করে নেবেন। আমার অতিরিক্ত ২০০ টাকা লাগছে।",
-        "review_time": "01 Dec 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
-      },
-      {
-        "item_id": "425174012",
-        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 1,
-        "review_text": "Why did you deliver a wrong item which is not match with the picture as I order …!!!\n\n\nYou should not play with the mind of a little child!!",
-        "review_time": "09 May 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
-      },
-      {
-        "item_id": "425174012",
-        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 1,
-        "review_text": "দেখেন আপনারা কেউ এই পন্যটি কিনবেন না,আমি পতারিত হয়েছি এইটার দাম ৮০০০টাকা সেলার তার নিজের ফেজবুক পেজে বিক্রি করছে আর এখানে লিখে রেখেছে ১০০০০টাকা আমার কাছ থেকে ২০০০টাকা বেশি রেখেছে এরা বাটপার আর এসএমএস করলে কনো উওর দেই না কেনার আগে সাবধান",
-        "review_time": "29 Mar 2026",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
-      },
-      {
-        "item_id": "425174012",
-        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "আমার শিপিং ডেলিভারি ফি ছিল।আমরা বুঝের কেহ বাসায় ছিলাম না,কিন্ত ডেলিভারি মেন ৩০০ টাকা নিয়েছে কেন???",
-        "review_time": "19 Aug 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
-      },
-      {
-        "item_id": "425174012",
-        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "",
-        "review_time": "13 Nov 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
+        "scraped_at": "2026-07-07T16:48:19+08:00"
       },
       {
         "item_id": "202155027",
@@ -2634,7 +946,157 @@
         "review_text": "The cycle was not properly put together. The basket was completely crooked. All the nuts were loose which can cause a serious accident. I had to take the bicycle to a bicycle shop to fix it. Careless seller.",
         "review_time": "20 May 2024",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:45+08:00"
+        "scraped_at": "2026-07-07T16:48:21+08:00"
+      },
+      {
+        "item_id": "323337459",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
+        "item_url": "https://www.daraz.com.bd/products/16-i323337459.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "আমি যে বাইসাইকেলটি  অর্ডার করেছি উনি সেই বাইসাইকেলটি  দেন নাই। আবার যেটি  দিয়েছেন সেটা পুরাতন। উপরে স্টিকার দিয়ে ঢেকে ভিতরে মরিচাওয়ালা সাইকেল দিয়েছেন। আমি অর্ডার করেছি ফনিক্স ব্যান্ড উনি আমাকে দিয়েছে এডিনা ব্যান্ড। কালারও অন্যটি দিয়েছেন। প্রোডাক্ট খুবই বাজে। ভুল করেও এই এই সেলার থেকে কেউ কোনদিন একটি প্রোডাক্ট কিনবেন না। নিশ্চিত ভাবে ধরা খাবেন। পুরাই বাটপার। বাটপার বাটপার বাটপার । দারাজ অ্যাপ থেকে ওরা রিটার্ন অপশন বন্ধ করে দিয়ে রাখছে।",
+        "review_time": "27 Nov 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:21+08:00"
+      },
+      {
+        "item_id": "323337459",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
+        "item_url": "https://www.daraz.com.bd/products/16-i323337459.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "Free Shipping but seller delivery time extra money",
+        "review_time": "09 Mar 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:21+08:00"
+      },
+      {
+        "item_id": "425174012",
+        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "সাইকেল টি   ভালই পাইছি সবকিছু ওকে ছিল। তবে কেনার আগে ডেলিভারি সিস্টেমটি ক্লিয়ার করে নেবেন। আমার অতিরিক্ত ২০০ টাকা লাগছে।",
+        "review_time": "01 Dec 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:22+08:00"
+      },
+      {
+        "item_id": "425174012",
+        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "Why did you deliver a wrong item which is not match with the picture as I order …!!!\n\n\nYou should not play with the mind of a little child!!",
+        "review_time": "09 May 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:22+08:00"
+      },
+      {
+        "item_id": "425174012",
+        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "দেখেন আপনারা কেউ এই পন্যটি কিনবেন না,আমি পতারিত হয়েছি এইটার দাম ৮০০০টাকা সেলার তার নিজের ফেজবুক পেজে বিক্রি করছে আর এখানে লিখে রেখেছে ১০০০০টাকা আমার কাছ থেকে ২০০০টাকা বেশি রেখেছে এরা বাটপার আর এসএমএস করলে কনো উওর দেই না কেনার আগে সাবধান",
+        "review_time": "29 Mar 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:22+08:00"
+      },
+      {
+        "item_id": "425174012",
+        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "আমার শিপিং ডেলিভারি ফি ছিল।আমরা বুঝের কেহ বাসায় ছিলাম না,কিন্ত ডেলিভারি মেন ৩০০ টাকা নিয়েছে কেন???",
+        "review_time": "19 Aug 2025",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:22+08:00"
+      },
+      {
+        "item_id": "425174012",
+        "item_title": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "",
+        "review_time": "13 Nov 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:22+08:00"
+      },
+      {
+        "item_id": "202142950",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 3,
+        "review_text": "Sorry can't give 5 star. Finishing quality is poor. Rust on bell. some dent. Tyres air pressure not full.",
+        "review_time": "18 Nov 2021",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:23+08:00"
+      },
+      {
+        "item_id": "202142950",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "আলহামদুলিল্লাহ সাইকেল  টা ভালো। সুন্দর হয়েছে",
+        "review_time": "07 Apr 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:23+08:00"
+      },
+      {
+        "item_id": "202142950",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "গুড",
+        "review_time": "03 Feb 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:23+08:00"
       },
       {
         "item_id": "202143847",
@@ -2649,7 +1111,7 @@
         "review_text": "when order we saw PHOENIX brand that's why we ordered  but got KIESEL brand\nI think it totally unexpected \ncommittment should kept 100% accuracy",
         "review_time": "08 Mar 2025",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:46+08:00"
+        "scraped_at": "2026-07-07T16:48:24+08:00"
       },
       {
         "item_id": "202143847",
@@ -2664,7 +1126,7 @@
         "review_text": "This is unfortunate,  the  selected color was blue but delivered orange..so the rider is ♥ broken.",
         "review_time": "15 Nov 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:46+08:00"
+        "scraped_at": "2026-07-07T16:48:24+08:00"
       },
       {
         "item_id": "202143847",
@@ -2679,37 +1141,97 @@
         "review_text": "it's ok as per price....rider samiul is very very good.",
         "review_time": "22 Jun 2022",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:46+08:00"
+        "scraped_at": "2026-07-07T16:48:24+08:00"
       },
       {
-        "item_id": "369749026",
-        "item_title": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-        "item_url": "https://www.daraz.com.bd/products/20-20-i369749026.html",
+        "item_id": "202150683",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "খুবই অসাধারণ একটি সাইকেল দিয়েছে ১০০% অরিজিনাল ফনিক্স পেয়েছি, ধন্যবাদ এতো অল্প টাকায় এতো সুন্দর একটি সাইকেল ডেলিভারি করার জন্য, ডেলিভারি ম্যান কে খুসি হয়ে ১০০ টাকা বকশিস দিয়েছি, আমার ছেলে অনেক খুসি সাইকেল পেয়ে, তবে মাটগাট দেয় নি🥲 মাটগাট আশা করেছিলাম আর বেল",
-        "review_time": "03 Jun 2024",
+        "review_text": "My Kids are so Happy.... Thanks for sending such a Nice Bicycle.",
+        "review_time": "14 Jun 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:47+08:00"
+        "scraped_at": "2026-07-07T16:48:25+08:00"
       },
       {
-        "item_id": "369749026",
-        "item_title": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-        "item_url": "https://www.daraz.com.bd/products/20-20-i369749026.html",
+        "item_id": "202150683",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "This is the Best Authentic Phoenix Bicycle 🚲 \nThis is Second purchase from the same Seller. \nEveryone can buy from TwoWheeler BD without any doubt.  Thanks a lot to the dear Seller 💚🩵🩷",
-        "review_time": "08 Jul 2025",
+        "review_text": "প্রথম অনেক ভয়ে ছিলাম  সেলার কেমন হবে হাতে পাওয়ার পরে দেক্লাম অনেক সুন্দর sealer অনেক ভালো মানুষ",
+        "review_time": "21 Dec 2022",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:47+08:00"
+        "scraped_at": "2026-07-07T16:48:25+08:00"
+      },
+      {
+        "item_id": "202150683",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "সাইকেলটি ভালো আছি চাইলে যে কেউ নিতে পারেন।",
+        "review_time": "15 Oct 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:25+08:00"
+      },
+      {
+        "item_id": "202150683",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "100% original.. khub valo ekti cycle \njemon dekhechi temoni peyechi",
+        "review_time": "08 Nov 2025",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:25+08:00"
+      },
+      {
+        "item_id": "202150683",
+        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Seems good so far",
+        "review_time": "17 Mar 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:25+08:00"
+      },
+      {
+        "item_id": "202147734",
+        "item_title": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle ,",
+        "item_url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-i202147734.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 3,
+        "review_text": "পিছনের চাকায় হাওয়া ছিল না, যেটা অনেক ভুগিয়েছে। এছাড়া সব ঠিক ছিল। সাইকেল প্যাকেজিং সুন্দর হয়েছে। ডেলিভারি অনেক দেরী হয়েছে।",
+        "review_time": "28 Apr 2022",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:26+08:00"
       },
       {
         "item_id": "349289200",
@@ -2724,7 +1246,7 @@
         "review_text": "অর্ডার যা ছিল সেই সাইকেল পাঠায় নাই। একদম বাজে কোয়ালিটির, বাজে কালার এর সাইকেল পাঠাইসে।",
         "review_time": "19 Aug 2025",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:49+08:00"
+        "scraped_at": "2026-07-07T16:48:27+08:00"
       },
       {
         "item_id": "245555067",
@@ -2739,7 +1261,7 @@
         "review_text": "দাম অনুযায়ী সুন্দর ও মজবুত পেয়েছি।\nতবে ৪ বছরের বাচ্চার জন্য ছোট হবে।\n\nযেমন চেয়েছি তেমন দিয়েছে।\nধব্যবাদ সেইলর ও দারাজ কে।\n\nডেলিভারী ম্যান ও যতেষ্ট ভালো ছিল।",
         "review_time": "14 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:50+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "245555067",
@@ -2754,7 +1276,7 @@
         "review_text": "This was  a pretty good item for toddler also have music and light. My nephew love this one.",
         "review_time": "06 Jun 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:50+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "245555067",
@@ -2769,7 +1291,7 @@
         "review_text": "Choto meyer jonno newa but Boro meye dhokol Kore niche",
         "review_time": "16 Sep 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:50+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "245555067",
@@ -2784,7 +1306,7 @@
         "review_text": "প্রোডাক্ট ভালো আছে, ডেলিভারিতে সময় বেশি লাগছে।",
         "review_time": "03 May 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:50+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "245555067",
@@ -2799,7 +1321,7 @@
         "review_text": "kom price ar modda valoi lagca,Music hoi",
         "review_time": "16 Jan 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:50+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "240846393",
@@ -2814,7 +1336,7 @@
         "review_text": "Ordered red, got blue. Product's build quality is not up to the mark. Its shaky and not safe for kids. Kids may fall off from it easily.",
         "review_time": "17 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:51+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "240846393",
@@ -2829,7 +1351,7 @@
         "review_text": "ভালো তবে হেন্ডেলটা খুব শক্ত গুরাতে কষ্ট হয়",
         "review_time": "17 Jan 2024",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:51+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "240846393",
@@ -2844,7 +1366,7 @@
         "review_text": "Satisfied with happiness 😊",
         "review_time": "14 Nov 2023",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:51+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "240846393",
@@ -2859,7 +1381,7 @@
         "review_text": "কম দামে ভালো পন্য",
         "review_time": "02 Dec 2023",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:51+08:00"
+        "scraped_at": "2026-07-07T16:48:28+08:00"
       },
       {
         "item_id": "240846410",
@@ -2874,337 +1396,112 @@
         "review_text": "গাড়ির হাতল নেই ,আসন তথা বসার স্থান ভাঙ্গা ফাটা। আজকে অর্ডার দিয়েছিলাম দুপুরে এখন হাতে পেয়েছি কিন্তু এ সমস্যাগুলো পেয়েছি তাই এখনই ফেরত দিতে চাই",
         "review_time": "28 Jul 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:52+08:00"
+        "scraped_at": "2026-07-07T16:48:29+08:00"
       },
       {
-        "item_id": "571898655",
-        "item_title": "Motorcycle Or Bicycle Chain Clean Brush Gear Grunge Brush Cleaner-1 Piece | Multicolor",
-        "item_url": "https://www.daraz.com.bd/products/motorcycle-or-bicycle-chain-clean-brush-gear-grunge-brush-cleaner-1-piece-multicolor-i571898655.html",
+        "item_id": "369353830",
+        "item_title": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
+        "item_url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
         "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "একটি কাজের জিনিস পেলাম খুব ভালো আপনার নিতে পারেন ধন্যবাদ দারাজ কে 🎉😊",
-        "review_time": "3 days ago",
+        "review_text": "খুবই সুন্দর একটা সাইকেল আমার বাচ্চা খুব পছন্দ করেছে টায়ার গুলা অনেক সুন্দর সেম সাইকেল দোকানে ১৩ হাজার টাকা চেয়েছে দারাজে অনেক কমে পেয়েছি ধন্যবাদ দারাজ ভালো প্রোডাক্ট দেওয়ার জন্য❤️",
+        "review_time": "03 Jun 2024",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:53+08:00"
+        "scraped_at": "2026-07-07T16:48:31+08:00"
       },
       {
-        "item_id": "571898655",
-        "item_title": "Motorcycle Or Bicycle Chain Clean Brush Gear Grunge Brush Cleaner-1 Piece | Multicolor",
-        "item_url": "https://www.daraz.com.bd/products/motorcycle-or-bicycle-chain-clean-brush-gear-grunge-brush-cleaner-1-piece-multicolor-i571898655.html",
+        "item_id": "354403223",
+        "item_title": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids",
+        "item_url": "https://www.daraz.com.bd/products/-i354403223.html",
         "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "It's quality was completely good 👌👌 Recommended ✅",
-        "review_time": "27 Mar 2026",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:53+08:00"
+        "review_text": "বাইকটা সুন্দর। কয়েকদিন ব্যাবহারের পর রিভিউ দিচ্ছি। মিউজিক আরো কয়েকটা থাকলে, রিমোটে ডানে বামের কন্ট্রোল থাকলে আরও ভালো হত। কিন্তু যা আছে ভালো।",
+        "review_time": "13 May 2024",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:33+08:00"
       },
       {
-        "item_id": "571898655",
-        "item_title": "Motorcycle Or Bicycle Chain Clean Brush Gear Grunge Brush Cleaner-1 Piece | Multicolor",
-        "item_url": "https://www.daraz.com.bd/products/motorcycle-or-bicycle-chain-clean-brush-gear-grunge-brush-cleaner-1-piece-multicolor-i571898655.html",
+        "item_id": "167216989",
+        "item_title": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "item_url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 4,
+        "review_text": "packet quality 2/10\nmodel quality 10/10\nextra wheels 5/10\n\nover all  7.6/10 \naffordable and good",
+        "review_time": "12 Jan 2026",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:35+08:00"
+      },
+      {
+        "item_id": "167216989",
+        "item_title": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "item_url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "Authentic product, well packed, fast delivered.",
-        "review_time": "1 week ago",
+        "review_text": "ভালো কোয়ালিটি আমি আরো তিনটা ওদের দিয়েছ 💯💯👌👌",
+        "review_time": "04 Feb 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:53+08:00"
+        "scraped_at": "2026-07-07T16:48:35+08:00"
       },
       {
-        "item_id": "571898655",
-        "item_title": "Motorcycle Or Bicycle Chain Clean Brush Gear Grunge Brush Cleaner-1 Piece | Multicolor",
-        "item_url": "https://www.daraz.com.bd/products/motorcycle-or-bicycle-chain-clean-brush-gear-grunge-brush-cleaner-1-piece-multicolor-i571898655.html",
+        "item_id": "167216989",
+        "item_title": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "item_url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "very good, recommend for all , fast delivery",
-        "review_time": "1 week ago",
+        "review_text": "owaooooooooo......so cute",
+        "review_time": "26 Oct 2024",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:53+08:00"
+        "scraped_at": "2026-07-07T16:48:35+08:00"
       },
       {
-        "item_id": "571898655",
-        "item_title": "Motorcycle Or Bicycle Chain Clean Brush Gear Grunge Brush Cleaner-1 Piece | Multicolor",
-        "item_url": "https://www.daraz.com.bd/products/motorcycle-or-bicycle-chain-clean-brush-gear-grunge-brush-cleaner-1-piece-multicolor-i571898655.html",
+        "item_id": "167216989",
+        "item_title": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "item_url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "Brush er quality price onujayi thiki ase recommend",
-        "review_time": "4 weeks ago",
+        "review_text": "same as shown .cute .bt price is high",
+        "review_time": "29 Apr 2024",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:53+08:00"
+        "scraped_at": "2026-07-07T16:48:35+08:00"
       },
       {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "ছবির মতই পেয়েছি। এর মানও যথেষ্ট ভালো",
-        "review_time": "15 Dec 2024",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:54+08:00"
-      },
-      {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "দারাজকে ধন্যবাদ একটা ভালো সেলারকে রাখার জন্য,দ্রত সময়ে প্রোডাক্ট হাতে পেয়েছি ,ব্যবহার করে ভালো লাগছে,",
-        "review_time": "30 Nov 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:54+08:00"
-      },
-      {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "soft and origin product thanks",
-        "review_time": "25 Jun 2021",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:54+08:00"
-      },
-      {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "medium",
-        "review_time": "24 Apr 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:54+08:00"
-      },
-      {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good product",
-        "review_time": "19 Feb 2021",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:54+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "alhamdulillah original product peyechi😊",
-        "review_time": "19 Jun 2021",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Quality of the item found very good. Satisfactory.",
-        "review_time": "08 Apr 2021",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 2,
-        "review_text": "Not adjustable with the seat. It moves when you are sitting on it during the riding",
-        "review_time": "23 Apr 2021",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 3,
-        "review_text": "I received  phonex seatcover?",
-        "review_time": "03 Jul 2021",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good enough, I am satisfied",
-        "review_time": "17 Feb 2022",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "143588760",
-        "item_title": "Bike Gloves Original Giant Half Fingerless  Cycling Gloves",
-        "item_url": "https://www.daraz.com.bd/products/-i143588760.html",
-        "brand": "Giant",
+        "item_id": "167216989",
+        "item_title": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "item_url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
+        "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 1,
-        "review_text": "not the same and they are scammer",
-        "review_time": "6 days ago",
+        "review_text": "ভাংঙ্গা সাইকেলটা দিলেন, মোটেও ভালো করেননি,বাচ্চার জন্যে কেনা হয়েছিলো । যাক এই শপ থেকে আর কোনো দিন কেনা হবেনা ইনশাল্লাহ্।",
+        "review_time": "16 Aug 2022",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "143588760",
-        "item_title": "Bike Gloves Original Giant Half Fingerless  Cycling Gloves",
-        "item_url": "https://www.daraz.com.bd/products/-i143588760.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "good",
-        "review_time": "03 May 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:55+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "আলহামদুলিল্লাহ। ভালোই জিনিস পেলাম।আপনারা নিশ্চিতে নিতে পারেন।",
-        "review_time": "16 Jul 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:44:57+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "যত আশা করছি এতো ভালো না।মোটামোটি চলে।",
-        "review_time": "15 Nov 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:57+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "কোয়ালিটি মোটামুটি",
-        "review_time": "1 week ago",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:57+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good quality.",
-        "review_time": "21 Mar 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:57+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "খুব ভালো ❤️",
-        "review_time": "04 Jan 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:44:57+08:00"
+        "scraped_at": "2026-07-07T16:48:35+08:00"
       },
       {
         "item_id": "545826841",
@@ -3219,7 +1516,7 @@
         "review_text": "amazing quality and has a metal body with working dual suspension and the chain works too .",
         "review_time": "03 Sep 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:59+08:00"
+        "scraped_at": "2026-07-07T16:48:38+08:00"
       },
       {
         "item_id": "545826841",
@@ -3234,7 +1531,7 @@
         "review_text": "Exactly as the image. Really cool gift idea and I hope the person loves it!",
         "review_time": "03 Sep 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:59+08:00"
+        "scraped_at": "2026-07-07T16:48:38+08:00"
       },
       {
         "item_id": "545826841",
@@ -3249,7 +1546,7 @@
         "review_text": "receive item arrived as expected and very good condition",
         "review_time": "23 Dec 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:59+08:00"
+        "scraped_at": "2026-07-07T16:48:38+08:00"
       },
       {
         "item_id": "545826841",
@@ -3264,7 +1561,7 @@
         "review_text": "receive item arrived as expected and very good condition",
         "review_time": "03 Dec 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:59+08:00"
+        "scraped_at": "2026-07-07T16:48:38+08:00"
       },
       {
         "item_id": "545826841",
@@ -3279,7 +1576,7 @@
         "review_text": "receive item arrived as expected and very good condition",
         "review_time": "10 Dec 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:44:59+08:00"
+        "scraped_at": "2026-07-07T16:48:38+08:00"
       },
       {
         "item_id": "319543531",
@@ -3294,37 +1591,7 @@
         "review_text": "cycle ta onk valo overall 🤲\n\njust non-gear cycle",
         "review_time": "10 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:03+08:00"
-      },
-      {
-        "item_id": "546379650",
-        "item_title": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-        "item_url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Very bad experience, items is not good, price is high, deliver time was too long",
-        "review_time": "5 days ago",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:45:04+08:00"
-      },
-      {
-        "item_id": "546379650",
-        "item_title": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-        "item_url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 3,
-        "review_text": "Not worth the money.",
-        "review_time": "26 Jan 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:45:04+08:00"
+        "scraped_at": "2026-07-07T16:48:39+08:00"
       },
       {
         "item_id": "325128602",
@@ -3339,7 +1606,37 @@
         "review_text": "প্যাকেজ লুজ। কিন্তু মালামাল বুঝে পেয়েছি।",
         "review_time": "24 Oct 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:05+08:00"
+        "scraped_at": "2026-07-07T16:48:40+08:00"
+      },
+      {
+        "item_id": "546379650",
+        "item_title": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+        "item_url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Very bad experience, items is not good, price is high, deliver time was too long",
+        "review_time": "5 days ago",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:41+08:00"
+      },
+      {
+        "item_id": "546379650",
+        "item_title": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+        "item_url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 3,
+        "review_text": "Not worth the money.",
+        "review_time": "26 Jan 2026",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:41+08:00"
       },
       {
         "item_id": "295351877",
@@ -3354,7 +1651,7 @@
         "review_text": "Meet my cutie new partner ❤️ \nReceived at best price..\nSatisfied.\nRecommended..",
         "review_time": "09 Jun 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:05+08:00"
+        "scraped_at": "2026-07-07T16:48:42+08:00"
       },
       {
         "item_id": "295351877",
@@ -3369,7 +1666,7 @@
         "review_text": "Overall good, shudhu 🔔 broken chilo",
         "review_time": "15 Apr 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:05+08:00"
+        "scraped_at": "2026-07-07T16:48:42+08:00"
       },
       {
         "item_id": "295351877",
@@ -3384,7 +1681,7 @@
         "review_text": "Everything was good. But the price is just a bit high. But still, all was good.",
         "review_time": "18 Mar 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:05+08:00"
+        "scraped_at": "2026-07-07T16:48:42+08:00"
       },
       {
         "item_id": "169204627",
@@ -3399,7 +1696,7 @@
         "review_text": "khub valo laglo ....\neta veloce er 100% authentic product .sob kichu thik thak packaging onek valo chilo .ar seller vai onek responsive chilen.Apnara cycle er perfect security r jonno eta nissondhehe nite paren.Thank you DARAZ,🥰🥰🥰",
         "review_time": "28 Aug 2021",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:06+08:00"
+        "scraped_at": "2026-07-07T16:48:43+08:00"
       },
       {
         "item_id": "169204627",
@@ -3414,7 +1711,7 @@
         "review_text": "খুব ভালো প্রডাক্ট , প্রডাক্ট এ কোন ত্রুটি নেই । কেউ চাইলে নিতে পারেন, কিন্তু ডেলিভারি পেতে অনেক দেরি হয়েছে, তাই আমি একটু রাগান্বিত হয়ে ছিলাম, কিন্তু প্রোডাক্টের কোন ত্রুটি নেই তাই বলে এখন খুব খুশি 😀☺️",
         "review_time": "29 Jun 2021",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:06+08:00"
+        "scraped_at": "2026-07-07T16:48:43+08:00"
       },
       {
         "item_id": "169204627",
@@ -3429,7 +1726,7 @@
         "review_text": "Great product and great behaviour. Delivery was pretty late but it was within the given time so that’s okay. You can trust this shop!",
         "review_time": "23 Apr 2021",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:06+08:00"
+        "scraped_at": "2026-07-07T16:48:43+08:00"
       },
       {
         "item_id": "169204627",
@@ -3444,7 +1741,7 @@
         "review_text": "Delivery is late",
         "review_time": "02 May 2021",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:06+08:00"
+        "scraped_at": "2026-07-07T16:48:43+08:00"
       },
       {
         "item_id": "540122760",
@@ -3459,7 +1756,7 @@
         "review_text": "আলহামদুলিল্লাহ্ প্রোডাক্ট এর কোয়ালিটি যথেষ্ট ভালো। এটা সেলার ডেলিভারি ছিল দিনে দিনে আমার বাসায় এসে ফিটিং করে সব কিছু বুজিয়ে দিয়ে গেসে। তাদের ব্যাবহার আমার খুব ভালো লেগেছে। \nপ্রোডাক্ট এর অ্যামাজন এ রিভিও দেখছিলাম অর্ডার এর আগে সেখানে ৫ স্টার রিভিও ছিল। এখন পর্যন্ত সব কিছু আলহামদুল্লাহ ...।।\nধন্যবাদ দারাজ, ধন্যবাদ সেলার...",
         "review_time": "29 Jul 2025",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:07+08:00"
+        "scraped_at": "2026-07-07T16:48:44+08:00"
       },
       {
         "item_id": "540122760",
@@ -3474,7 +1771,7 @@
         "review_text": "Overall it's a good build quality product, super steady and strong. Got delivery very fast within same day. Good seller, recommended. 👍",
         "review_time": "27 Aug 2025",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:07+08:00"
+        "scraped_at": "2026-07-07T16:48:44+08:00"
       },
       {
         "item_id": "276720408",
@@ -3489,7 +1786,7 @@
         "review_text": "মোটামুটি ভালো লাগছে। ওটার উপর হালকা হালকা spot আছে।তাতে চলে।",
         "review_time": "05 Apr 2023",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:09+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "328369971",
@@ -3504,7 +1801,7 @@
         "review_text": "দাম অনুযায়ী ভালো চাইলে আপনারা নিতে পারেন",
         "review_time": "25 Mar 2024",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:10+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "328369971",
@@ -3519,7 +1816,7 @@
         "review_text": "Very good product, password not changable",
         "review_time": "23 May 2025",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:10+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "328369971",
@@ -3534,7 +1831,7 @@
         "review_text": "jkjik(ijkxuukj Ohio hooky kill Ohio hookooy kill kill kubo points ijkkollijkkolloikmkikiiikii kk",
         "review_time": "03 Nov 2025",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:10+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "328369971",
@@ -3549,7 +1846,7 @@
         "review_text": "Good",
         "review_time": "14 Jun 2024",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:10+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "328369971",
@@ -3564,7 +1861,7 @@
         "review_text": "",
         "review_time": "11 Feb 2024",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:10+08:00"
+        "scraped_at": "2026-07-07T16:48:45+08:00"
       },
       {
         "item_id": "212409846",
@@ -3579,82 +1876,7 @@
         "review_text": "মোটামুটি",
         "review_time": "29 Mar 2023",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:12+08:00"
-      },
-      {
-        "item_id": "187586424",
-        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 4,
-        "review_text": "ভালো",
-        "review_time": "23 Mar 2024",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:45:13+08:00"
-      },
-      {
-        "item_id": "187586424",
-        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "সব ঠিকঠাক ছিল।",
-        "review_time": "07 Jan 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-07T16:45:13+08:00"
-      },
-      {
-        "item_id": "187586424",
-        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "good",
-        "review_time": "07 May 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:45:13+08:00"
-      },
-      {
-        "item_id": "187586424",
-        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 1,
-        "review_text": "jeta chaisi oita paini.,😞😞😞",
-        "review_time": "13 Jul 2022",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:45:13+08:00"
-      },
-      {
-        "item_id": "187586424",
-        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "it is very good I recommend",
-        "review_time": "19 Jun 2022",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:45:13+08:00"
+        "scraped_at": "2026-07-07T16:48:48+08:00"
       },
       {
         "item_id": "222437136",
@@ -3669,7 +1891,7 @@
         "review_text": "দাম অনুযায়ী ভালো জিনিস। তবে সাইকেলে ফিট হয়নি। ভুল সাইজ অর্ডার করার কারণে। তাই রিটার্ন করে সঠিক সাইজ অর্ডার দিয়েছি।",
         "review_time": "15 Jul 2022",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:14+08:00"
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       },
       {
         "item_id": "222437136",
@@ -3684,7 +1906,7 @@
         "review_text": "sige not match",
         "review_time": "07 Jul 2022",
         "has_image": true,
-        "scraped_at": "2026-07-07T16:45:14+08:00"
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       },
       {
         "item_id": "222437136",
@@ -3699,7 +1921,7 @@
         "review_text": "বেশ ভাল",
         "review_time": "22 Jun 2022",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:14+08:00"
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       },
       {
         "item_id": "222437136",
@@ -3714,37 +1936,82 @@
         "review_text": "Ok",
         "review_time": "30 Jan 2023",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:14+08:00"
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       },
       {
-        "item_id": "563102742",
-        "item_title": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
-        "item_url": "https://www.daraz.com.bd/products/24-1-i563102742.html",
-        "brand": "Generic",
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 4,
+        "review_text": "ভালো",
+        "review_time": "23 Mar 2024",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:49+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "আমি সাইকেল অর্ডার করেছিলাম দেছেন একটা সিট কাবার আমি কি ১৩০০০ টাকা দিয়ে সিট নিব",
-        "review_time": "18 May 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-07T16:45:15+08:00"
+        "review_text": "সব ঠিকঠাক ছিল।",
+        "review_time": "07 Jan 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       },
       {
-        "item_id": "317370993",
-        "item_title": "Nice Bicycle toy for kids",
-        "item_url": "https://www.daraz.com.bd/products/-i317370993.html",
-        "brand": "Generic",
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "good",
+        "review_time": "07 May 2026",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:49+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 1,
-        "review_text": "Faltu Vanga akta gari daya hoyase.Taka ki gase dhore?",
-        "review_time": "22 Dec 2023",
+        "review_text": "jeta chaisi oita paini.,😞😞😞",
+        "review_time": "13 Jul 2022",
         "has_image": false,
-        "scraped_at": "2026-07-07T16:45:16+08:00"
+        "scraped_at": "2026-07-07T16:48:49+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "it is very good I recommend",
+        "review_time": "19 Jun 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-07T16:48:49+08:00"
       }
     ]
   },
@@ -3758,7 +2025,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup"
       },
@@ -3770,7 +2037,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup"
       },
@@ -3782,7 +2049,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup"
       },
@@ -3794,7 +2061,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup"
       },
@@ -3806,7 +2073,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup"
       },
@@ -3818,7 +2085,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup"
       },
@@ -3830,7 +2097,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup"
       },
@@ -3842,7 +2109,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-07T16:53:04+08:00",
+        "scraped_at": "2026-07-07T16:56:57+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup"
       }
@@ -4455,9 +2722,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T16:53:04+08:00",
+  "gen_at": "2026-07-07T16:56:57+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-07T16:53:04+08:00",
+    "computed_at": "2026-07-07T16:56:57+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -4497,459 +2764,179 @@
       "rack"
     ],
     "price_range": "BD 5K-30K BDT",
-    "total_brands": 25,
+    "total_brands": 6,
     "rankings": [
       {
-        "brand": "Rockrider",
-        "sku_count": 16,
-        "asp": 33062,
-        "max_price": 65000,
-        "high_tier_count": 16,
-        "high_tier_pct": 100,
-        "in_stock_rate": 19,
-        "sku_score": 28.0,
-        "score": 84.9
-      },
-      {
-        "brand": "Veloce",
-        "sku_count": 21,
-        "asp": 20700,
-        "max_price": 36000,
-        "high_tier_count": 16,
-        "high_tier_pct": 76,
-        "in_stock_rate": 76,
-        "sku_score": 35.0,
-        "score": 82.1
-      },
-      {
-        "brand": "Core",
-        "sku_count": 16,
-        "asp": 20538,
-        "max_price": 32000,
-        "high_tier_count": 14,
-        "high_tier_pct": 88,
-        "in_stock_rate": 75,
-        "sku_score": 28.0,
-        "score": 75.3
-      },
-      {
         "brand": "Marine",
-        "sku_count": 15,
-        "asp": 18254,
-        "max_price": 23700,
-        "high_tier_count": 13,
-        "high_tier_pct": 87,
-        "in_stock_rate": 53,
-        "sku_score": 26.2,
-        "score": 66.9
-      },
-      {
-        "brand": "Magpy",
-        "sku_count": 2,
-        "asp": 38000,
-        "max_price": 38000,
-        "high_tier_count": 2,
+        "sku_count": 7,
+        "asp": 18730,
+        "max_price": 21111,
+        "high_tier_count": 7,
         "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 3.5,
-        "score": 64.9
+        "in_stock_rate": 0,
+        "sku_score": 12.2,
+        "score": 49.2
       },
       {
-        "brand": "Ceres",
-        "sku_count": 2,
-        "asp": 34500,
-        "max_price": 37000,
-        "high_tier_count": 2,
-        "high_tier_pct": 100,
-        "in_stock_rate": 50,
-        "sku_score": 3.5,
-        "score": 59.6
-      },
-      {
-        "brand": "Kiesel",
+        "brand": "Rockrider",
         "sku_count": 1,
-        "asp": 27000,
-        "max_price": 27000,
+        "asp": 26999,
+        "max_price": 26999,
         "high_tier_count": 1,
         "high_tier_pct": 100,
-        "in_stock_rate": 100,
+        "in_stock_rate": 0,
         "sku_score": 1.8,
-        "score": 57.4
-      },
-      {
-        "brand": "Mustang",
-        "sku_count": 1,
-        "asp": 24000,
-        "max_price": 24000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 54.0
-      },
-      {
-        "brand": "Foxter",
-        "sku_count": 7,
-        "asp": 17171,
-        "max_price": 23000,
-        "high_tier_count": 4,
-        "high_tier_pct": 57,
-        "in_stock_rate": 86,
-        "sku_score": 12.2,
-        "score": 50.6
-      },
-      {
-        "brand": "Uplayed",
-        "sku_count": 4,
-        "asp": 17800,
-        "max_price": 23000,
-        "high_tier_count": 3,
-        "high_tier_pct": 75,
-        "in_stock_rate": 75,
-        "sku_score": 7.0,
-        "score": 47.5
-      },
-      {
-        "brand": "Falcon",
-        "sku_count": 2,
-        "asp": 20500,
-        "max_price": 21000,
-        "high_tier_count": 2,
-        "high_tier_pct": 100,
-        "in_stock_rate": 50,
-        "sku_score": 3.5,
-        "score": 46.9
-      },
-      {
-        "brand": "Avon",
-        "sku_count": 3,
-        "asp": 17333,
-        "max_price": 20000,
-        "high_tier_count": 2,
-        "high_tier_pct": 67,
-        "in_stock_rate": 100,
-        "sku_score": 5.2,
-        "score": 45.7
-      },
-      {
-        "brand": "Phoenix",
-        "sku_count": 8,
-        "asp": 13738,
-        "max_price": 18000,
-        "high_tier_count": 3,
-        "high_tier_pct": 38,
-        "in_stock_rate": 75,
-        "sku_score": 14.0,
-        "score": 44.0
-      },
-      {
-        "brand": "Warrior",
-        "sku_count": 7,
-        "asp": 16814,
-        "max_price": 18999,
-        "high_tier_count": 4,
-        "high_tier_pct": 57,
-        "in_stock_rate": 29,
-        "sku_score": 12.2,
-        "score": 43.4
+        "score": 47.3
       },
       {
         "brand": "Duranta",
-        "sku_count": 16,
-        "asp": 10132,
+        "sku_count": 15,
+        "asp": 10028,
         "max_price": 15500,
         "high_tier_count": 1,
-        "high_tier_pct": 6,
-        "in_stock_rate": 6,
-        "sku_score": 28.0,
-        "score": 42.7
-      },
-      {
-        "brand": "MEZAROTTI",
-        "sku_count": 1,
-        "asp": 22000,
-        "max_price": 22000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
+        "high_tier_pct": 7,
         "in_stock_rate": 0,
-        "sku_score": 1.8,
-        "score": 41.7
+        "sku_score": 26.2,
+        "score": 40.3
       },
       {
-        "brand": "Ghost",
-        "sku_count": 2,
-        "asp": 17100,
-        "max_price": 19700,
-        "high_tier_count": 1,
-        "high_tier_pct": 50,
-        "in_stock_rate": 100,
-        "sku_score": 3.5,
-        "score": 41.2
-      },
-      {
-        "brand": "Forever",
-        "sku_count": 1,
-        "asp": 20000,
-        "max_price": 20000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
+        "brand": "Warrior",
+        "sku_count": 3,
+        "asp": 17666,
+        "max_price": 18999,
+        "high_tier_count": 2,
+        "high_tier_pct": 67,
         "in_stock_rate": 0,
-        "sku_score": 1.8,
-        "score": 39.4
+        "sku_score": 5.2,
+        "score": 35.7
       },
       {
-        "brand": "Hero",
-        "sku_count": 4,
-        "asp": 13500,
-        "max_price": 15000,
-        "high_tier_count": 1,
-        "high_tier_pct": 25,
-        "in_stock_rate": 75,
-        "sku_score": 7.0,
-        "score": 34.0
-      },
-      {
-        "brand": "Adder",
+        "brand": "Veloce",
         "sku_count": 1,
-        "asp": 14500,
-        "max_price": 14500,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 28.2
-      },
-      {
-        "brand": "Pollux",
-        "sku_count": 1,
-        "asp": 14500,
-        "max_price": 14500,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 28.2
-      },
-      {
-        "brand": "Duronto",
-        "sku_count": 1,
-        "asp": 14000,
-        "max_price": 14000,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 27.6
-      },
-      {
-        "brand": "Uctocifu",
-        "sku_count": 1,
-        "asp": 12000,
-        "max_price": 12000,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 25.4
-      },
-      {
-        "brand": "Polloux",
-        "sku_count": 1,
-        "asp": 9800,
-        "max_price": 9800,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.8,
-        "score": 22.9
-      },
-      {
-        "brand": "Python",
-        "sku_count": 1,
-        "asp": 13500,
-        "max_price": 13500,
+        "asp": 11000,
+        "max_price": 11000,
         "high_tier_count": 0,
         "high_tier_pct": 0,
         "in_stock_rate": 0,
         "sku_score": 1.8,
-        "score": 17.1
+        "score": 14.2
+      },
+      {
+        "brand": "Phoenix",
+        "sku_count": 1,
+        "asp": 6000,
+        "max_price": 6000,
+        "high_tier_count": 0,
+        "high_tier_pct": 0,
+        "in_stock_rate": 0,
+        "sku_score": 1.8,
+        "score": 8.6
       }
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T16:53:04+08:00",
+    "computed_at": "2026-07-07T16:56:57+08:00",
     "totals": {
-      "bd_pool_total": 190,
-      "bd_pool_priced": 190,
-      "bd_pool_mid_high": 135,
-      "bd_pool_brands": 26,
+      "bd_pool_total": 74,
+      "bd_pool_priced": 74,
+      "bd_pool_mid_high": 28,
+      "bd_pool_brands": 8,
       "id_pool_total": 8,
       "id_pool_brands": 4,
-      "phx_bd_total": 17,
-      "phx_bd_mid_high": 8,
-      "phx_bd_asp": 13738,
-      "phx_bd_max": 18000,
+      "phx_bd_total": 10,
+      "phx_bd_mid_high": 1,
+      "phx_bd_asp": 6000,
+      "phx_bd_max": 6000,
       "phx_bd_min": 6000
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 12,
-        "brands_count": 3,
+        "count": 11,
+        "brands_count": 2,
         "brands": {
           "Duranta": 10,
-          "Phoenix": 1,
-          "Polloux": 1
+          "Phoenix": 1
         },
         "top_5_brands": [
           "Duranta",
-          "Phoenix",
-          "Polloux"
+          "Phoenix"
         ]
       },
       "bd_10_15k": {
-        "count": 35,
-        "brands_count": 16,
+        "count": 6,
+        "brands_count": 3,
         "brands": {
-          "Duranta": 5,
-          "Veloce": 5,
-          "Phoenix": 4,
-          "Warrior": 3,
-          "Hero": 3,
-          "Foxter": 3,
-          "Core": 2,
-          "Marine": 2,
-          "Adder": 1,
-          "Avon": 1,
-          "Duronto": 1,
-          "Ghost": 1,
-          "Pollux": 1,
-          "Python": 1,
-          "Uctocifu": 1,
-          "Uplayed": 1
+          "Duranta": 4,
+          "Veloce": 1,
+          "Warrior": 1
         },
         "top_5_brands": [
           "Duranta",
           "Veloce",
-          "Phoenix",
-          "Warrior",
-          "Hero"
+          "Warrior"
         ]
       },
       "bd_15_25k": {
-        "count": 58,
-        "brands_count": 16,
+        "count": 10,
+        "brands_count": 3,
         "brands": {
-          "Marine": 13,
-          "Veloce": 10,
-          "Core": 9,
-          "Warrior": 4,
-          "Foxter": 4,
-          "Phoenix": 3,
-          "Uplayed": 3,
-          "Avon": 2,
-          "Falcon": 2,
-          "Rockrider": 2,
-          "Duranta": 1,
-          "Forever": 1,
-          "Ghost": 1,
-          "Hero": 1,
-          "MEZAROTTI": 1,
-          "Mustang": 1
+          "Marine": 7,
+          "Warrior": 2,
+          "Duranta": 1
         },
         "top_5_brands": [
           "Marine",
-          "Veloce",
-          "Core",
           "Warrior",
-          "Foxter"
+          "Duranta"
         ]
       },
       "bd_gt_25k": {
-        "count": 30,
-        "brands_count": 6,
+        "count": 1,
+        "brands_count": 1,
         "brands": {
-          "Rockrider": 14,
-          "Veloce": 6,
-          "Core": 5,
-          "Ceres": 2,
-          "Magpy": 2,
-          "Kiesel": 1
+          "Rockrider": 1
         },
         "top_5_brands": [
-          "Rockrider",
-          "Veloce",
-          "Core",
-          "Ceres",
-          "Magpy"
+          "Rockrider"
         ]
       }
     },
     "gt_25k_brands": {
-      "Rockrider": 14,
-      "Veloce": 6,
-      "Core": 5,
-      "Ceres": 2,
-      "Magpy": 2,
-      "Kiesel": 1
+      "Rockrider": 1
     },
     "gt_25k_top5": [
       {
         "brand": "Rockrider",
-        "model": "Rockrider XC 404",
-        "price": 65000
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Pro Gen 4 (2026)",
-        "price": 45000
-      },
-      {
-        "brand": "Rockrider",
-        "model": "Rockrider Xc501",
-        "price": 42000
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 403 (2023)",
-        "price": 40000
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 403",
-        "price": 40000
+        "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
+        "price": 26999
       }
     ],
     "phx_gap": {
-      "phx_max_price": 18000,
+      "phx_max_price": 6000,
       "phx_min_price": 6000,
-      "phx_asp": 13738,
-      "phx_count": 8,
-      "phx_in_15_25": 3,
+      "phx_asp": 6000,
+      "phx_count": 1,
+      "phx_in_15_25": 0,
       "phx_in_gt_25": 0,
-      "industry_max_price": 65000,
+      "industry_max_price": 26999,
       "industry_max_brand": "Rockrider",
-      "industry_max_model": "Rockrider XC 404",
-      "phx_vs_industry_ratio": 3.6,
-      "gt_25k_count": 30,
-      "gt_25k_brand_count": 6,
+      "industry_max_model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
+      "phx_vs_industry_ratio": 4.5,
+      "gt_25k_count": 1,
+      "gt_25k_brand_count": 1,
       "gt_25k_brands": [
-        "Rockrider",
-        "Ceres",
-        "Core",
-        "Kiesel",
-        "Magpy",
-        "Veloce"
+        "Rockrider"
       ],
       "gt_25k_phx_present": false,
-      "gt_15_25k_count": 58,
-      "gt_15_25k_phx_present": true
+      "gt_15_25k_count": 10,
+      "gt_15_25k_phx_present": false
     },
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Element",
         "United",
-        "Pacific"
+        "Pacific",
+        "Element"
       ]
     },
     "id_top10_brands": [
@@ -5093,33 +3080,13 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 58 SKU 16 品牌，Phoenix 缺席；> 25K 30 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 10 SKU 3 品牌，Phoenix 缺席；> 25K 1 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
         "top_competitors_gt_25k": [
           {
             "brand": "Rockrider",
-            "model": "Rockrider XC 404",
-            "price": 65000
-          },
-          {
-            "brand": "Rockrider",
-            "model": "Rockrider Pro Gen 4 (2026)",
-            "price": 45000
-          },
-          {
-            "brand": "Rockrider",
-            "model": "Rockrider Xc501",
-            "price": 42000
-          },
-          {
-            "brand": "Rockrider",
-            "model": "ROCKRIDER XC 403 (2023)",
-            "price": 40000
-          },
-          {
-            "brand": "Rockrider",
-            "model": "ROCKRIDER XC 403",
-            "price": 40000
+            "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
+            "price": 26999
           }
         ]
       },
@@ -5127,9 +3094,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Element",
           "United",
-          "Pacific"
+          "Pacific",
+          "Element"
         ]
       },
       "bd_road_bike": {
