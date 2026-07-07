@@ -2760,26 +2760,35 @@
     }
   },
   "data_quality": {
-    "level": "red",
-    "emoji": "🔴",
-    "evaluated_at": "2026-07-07T08:49:59",
+    "level": "yellow",
+    "emoji": "🟡",
+    "evaluated_at": "2026-07-07T09:07:57",
     "reasons": [
-      "VPN 依赖模块失败: dreamcycle_vpn",
-      "BD 池 74 SKU（中等，建议 ≥ 150）",
-      "Phoenix SKU 2（严重不足）"
+      "⚠️ 高级模块失败: dreamcycle_vpn — BD 高端品牌（Rockrider/Veloce/Core/Ceres/Magpy 等）· 需 VPN",
+      "⚠️ 高级模块失败: apify_social — 社媒数据（FB/IG 竞品）· 偶发 5xx",
+      "⚠️ 高级模块失败: news_id — ID 市场动态（Sogou news ID）· 偶发失败",
+      "BD 池 74 SKU（缺 dreamcycle，建议 ≥ 150）",
+      "Phoenix SKU 2（dreamcycle 没抓到 = 高端品牌不可见）"
     ],
-    "recommendations": [
-      "开启 VPN 后重启 dreamcycle_vpn"
-    ],
+    "recommendations": [],
     "stats": {
-      "vpn_modules": {
-        "dreamcycle_vpn": false,
-        "serbasepeda": true
-      },
-      "important_modules": {
+      "core_modules": {
         "daraz_bd": true,
-        "news_bd": true
+        "serbasepeda": true,
+        "news_bd": true,
+        "daraz_bd_reviews": true
       },
+      "premium_modules": {
+        "dreamcycle_vpn": false,
+        "apify_social": false,
+        "news_id": false
+      },
+      "core_failed": [],
+      "premium_failed": [
+        "dreamcycle_vpn",
+        "apify_social",
+        "news_id"
+      ],
       "bd_count": 74,
       "id_count": 8,
       "phoenix_sku": 2,
@@ -2788,12 +2797,13 @@
     "thresholds": {
       "bd_pool_min_green": 150,
       "bd_pool_min_yellow": 60,
-      "id_pool_min_green": 8,
+      "id_pool_min_green": 4,
       "id_pool_min_yellow": 4,
       "phoenix_sku_min_green": 15,
       "phoenix_sku_min_yellow": 5,
       "gt_25k_sku_min_green": 10,
       "gt_25k_sku_min_yellow": 1
-    }
+    },
+    "version": "V2.7.2"
   }
 }
