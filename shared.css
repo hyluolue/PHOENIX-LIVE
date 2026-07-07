@@ -84,3 +84,25 @@ ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
 /* 数据失真模块遮罩 */
 .dq-degraded{position:relative;opacity:.6;pointer-events:none}
 .dq-degraded::after{content:"⚠️ 数据失真 — 等 VPN 开启";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#c8102e;color:#fff;padding:8px 16px;border-radius:6px;font-size:13px;font-weight:700;z-index:10;pointer-events:auto;cursor:help}
+
+/* ===== V2.7.3 数据质量指示器（紧凑版 · 只显示右上角小圆点）===== */
+.quality-indicator{position:fixed;top:14px;right:14px;z-index:1000;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;font-size:11px;font-weight:600;cursor:help;box-shadow:0 2px 6px rgba(0,0,0,.15);user-select:none;transition:transform .15s}
+.quality-indicator:hover{transform:scale(1.05)}
+.quality-indicator .qi-dot{font-size:11px;line-height:1}
+.quality-indicator .qi-label{font-size:10.5px;letter-spacing:.2px}
+.quality-indicator.green{background:rgba(46,125,50,.92);color:#fff;border:1px solid #2e7d32}
+.quality-indicator.yellow{background:rgba(245,127,23,.92);color:#fff;border:1px solid #e65100}
+.quality-indicator.red{background:rgba(200,16,46,.92);color:#fff;border:1px solid #c8102e;animation:qi-pulse 2s infinite}
+@keyframes qi-pulse{0%,100%{box-shadow:0 2px 6px rgba(200,16,46,.4)}50%{box-shadow:0 2px 12px rgba(200,16,46,.7)}}
+/* tooltip（hover 才显示） */
+.quality-indicator .qi-tooltip{position:absolute;top:calc(100% + 8px);right:0;width:340px;padding:12px 14px;border-radius:8px;background:#1a1a2e;color:#cbd5e1;font-size:12px;line-height:1.6;font-weight:400;text-align:left;box-shadow:0 8px 24px rgba(0,0,0,.3);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .15s,visibility .15s;z-index:1001}
+.quality-indicator:hover .qi-tooltip{opacity:1;visibility:visible}
+.quality-indicator .qi-tooltip .qi-tip-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:6px;margin-bottom:8px}
+.quality-indicator .qi-tooltip .qi-tip-header b{color:#fff;font-size:12.5px}
+.quality-indicator .qi-tooltip .qi-tip-header small{color:#94a3b8;font-size:10.5px}
+.quality-indicator .qi-tooltip .qi-tip-body{line-height:1.7}
+.quality-indicator .qi-tooltip .qi-tip-body b{color:#5eead4;display:inline-block;margin-top:6px}
+.quality-indicator .qi-tooltip .qi-tip-body b:first-child{margin-top:0}
+/* 数据失真模块遮罩（仅 RED 时启用） */
+.dq-degraded{position:relative;opacity:.5;pointer-events:none}
+.dq-degraded::after{content:"⚠️ 核心数据失真";position:absolute;top:8px;right:8px;background:#c8102e;color:#fff;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;z-index:5;pointer-events:auto}
