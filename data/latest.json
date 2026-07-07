@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T11:16:10+08:00",
+  "generated_at": "2026-07-07T12:05:07+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
     "news_id": "ok",
     "shopee_id": "fail",
-    "tokopedia": "fail",
+    "tokopedia": "ok (40 SKU from user-saved HTML, scraped 2026-07-07)",
     "daraz_bd_reviews": "ok",
     "dreamcycle": "ok (116 from HTML snapshot, scraped 2026-07-07)",
     "apify_social": "fail",
@@ -3594,6 +3594,474 @@
         "scraped_at": "2026-07-07T10:44:36+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Dearloji",
+        "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
+        "price": 700000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/dearloji/sepeda-gunung-mtb-26-atlantis-discbrake-1732393288002995330?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "dearloji",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 700,000"
+      },
+      {
+        "brand": "Tokosepedaramayana",
+        "model": "RB road bike sepeda balap Element Police Toronto EFG Hybrid 7sp Gravel XTRM",
+        "price": 2225000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/tokosepedaramayana/rb-road-bike-sepeda-balap-element-police-toronto-efg-hybrid-7sp-gravel-8sp-700-1733975972454893506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "tokosepedaramayana",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,225,000"
+      },
+      {
+        "brand": "Xandergarage",
+        "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/xandergarage/sepeda-wilier-cento-10-road-bike-merah-menyala-1730931907908372074?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "xandergarage",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 120,000"
+      },
+      {
+        "brand": "Anchi Center",
+        "model": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Del",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery-1732867902506960562?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anchi-center",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "Biketoys",
+        "model": "JNE,Sicepat - Sepeda Gunung Atlantis MTB AT MT 27.5\" 69G 21S",
+        "price": 1330000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/biketoys/jne-sicepat-sepeda-gunung-atlantis-mtb-at-mt-27-5-69g-21s-27-blackred-81fdf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "biketoys",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,330,000"
+      },
+      {
+        "brand": "Toko Sepeda Rejeki",
+        "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-rejeki/sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-rejeki",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 950,000"
+      },
+      {
+        "brand": "Sumberkencanabike",
+        "model": "SEPEDA FIXIE PANDORA CST 700C",
+        "price": 1890000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/sumberkencanabike/sepeda-fixie-pandora-hi-ten-steel-1736163368663024951-1736163407125972279?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sumberkencanabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,890,000"
+      },
+      {
+        "brand": "Samudrasepedabdg",
+        "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
+        "price": 1075000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/samudrasepedabdg/sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "samudrasepedabdg",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,075,000"
+      },
+      {
+        "brand": "Lautanjayabike",
+        "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3X8 Speed Terbaru",
+        "price": 1225000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504732925887625-1735505313323648137?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lautanjayabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,225,000"
+      },
+      {
+        "brand": "Toko Sepeda Surabaya",
+        "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
+        "price": 900000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru-1731016156086961842?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 900,000"
+      },
+      {
+        "brand": "Celciusodessy",
+        "model": "Sepeda MTB Odessy Fuse Ukuran 24 - 21 Speed Frame Steel",
+        "price": 1250000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-fuse-ukuran-24-21-speed-frame-steel-1730928498269390064?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "celciusodessy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,250,000"
+      },
+      {
+        "brand": "Philipbikeshop",
+        "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3x8 Speed Terbaru",
+        "price": 1199000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/philipbikeshop/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504923024918021-1735504973449627141?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "philipbikeshop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,199,000"
+      },
+      {
+        "brand": "Lakujayagroup",
+        "model": "SEPEDA GUNUNG MTB MAZARA NEW SERIES (SIZE 24 &amp; 26 INCH) - By : Pacific Group-Outdoor",
+        "price": 1292000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/lakujayagroup/sepeda-gunung-mtb-mazara-new-series-size-24-26-inch-by-pacific-group-outdoor-1731382988705400169?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lakujayagroup",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,292,000"
+      },
+      {
+        "brand": "Schy",
+        "model": "Sepeda Fixie Odessy RM 1050 Rem Torpedo Doltrap 700C Sepeda Odessy Fixie Rem Torpedo",
+        "price": 1150000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/schy/sepeda-fixie-odessy-rm-1050-rem-torpedo-doltrap-700c-sepeda-odessy-fixie-rem-torpedo-1731515981072467518?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "schy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,150,000"
+      },
+      {
+        "brand": "Toko Sepeda Surabaya",
+        "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
+        "price": 559000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru-1730814750554556082?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 559,000"
+      },
+      {
+        "brand": "Fuzanaofficial",
+        "model": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
+        "price": 5334000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/fuzanaofficial/sepeda-mtb-united-brownhills-t1-27-5-inc-29-inc-sepeda-gunung-bestseller?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "fuzanaofficial",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 5,334,000"
+      },
+      {
+        "brand": "Zentbike313",
+        "model": "Sepeda balap / Road bike bisa request warna ,ukuran",
+        "price": 3600000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-balap-road-bike-bisa-request-warna-ukuran-1735471637645395081?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 3,600,000"
+      },
+      {
+        "brand": "Pacificoneteam",
+        "model": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
+        "price": 2265000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/pacificoneteam/pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630-1735995436920571758?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "pacificoneteam",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,265,000"
+      },
+      {
+        "brand": "Yoursc",
+        "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
+        "price": 730000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/yoursc/sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah-1736210346590569888?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "yoursc",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 730,000"
+      },
+      {
+        "brand": "Morodadi Cycle Shop",
+        "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
+        "price": 600000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/morodadi-cycle-shop/sepeda-bmx-20-velion-model-terbaru-1729598424301144218?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "morodadi-cycle-shop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 600,000"
+      },
+      {
+        "brand": "Zentbike313",
+        "model": "Sepeda fixie BxT  putih bisa request",
+        "price": 3000000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-bxt-putih-bisa-request-1733260536115790985?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 3,000,000"
+      },
+      {
+        "brand": "Fixfix Store",
+        "model": "Fixie Klasik Fullbike by Fixfix",
+        "price": 2900000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/fixfix-store/fixie-klasik-fullbike-by-fixfix-1732836119338256104?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "fixfix-store",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,900,000"
+      },
+      {
+        "brand": "Toto Senli",
+        "model": "SEPEDA FIXIE ODESSY RM 1050 SEPEDA BALAP MODEL TERBARUU",
+        "price": 1148000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toto-senli/sepeda-fixie-odessy-rm-1050-sepeda-balap-model-terbaruu-1731531012542399901?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toto-senli",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,148,000"
+      },
+      {
+        "brand": "Zentbike313",
+        "model": "Sepeda fixi LOOK HITAM PUTIH murah",
+        "price": 3200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixi-look-hitam-putih-murah-1735454454386230409?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 3,200,000"
+      },
+      {
+        "brand": "Herojayabike 1",
+        "model": "Sepeda Mini Keranjang Dewasa New PHOENIX NP-8825AT Uk 20 24 &amp; 26Inch",
+        "price": 1050000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/herojayabike-1/sepeda-mini-keranjang-dewasa-new-phoenix-np-8825at-uk-20-24-26inch-hitam-20inch-bc91e?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "herojayabike-1",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,050,000"
+      },
+      {
+        "brand": "Sevencycle Toped",
+        "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
+        "price": 2200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-polygon-bmx-rogue-20inch-alloy?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sevencycle-toped",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,200,000"
+      },
+      {
+        "brand": "Ari Terang 709",
+        "model": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
+        "price": 626000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "ari-terang-709",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 626,000"
+      },
+      {
+        "brand": "Celciusodessy",
+        "model": "Sepeda MTB Odessy Tank / Sepeda Gunung",
+        "price": 1290000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-tank-sepeda-gunung-1729818881064535280?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "celciusodessy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,290,000"
+      },
+      {
+        "brand": "Serbasepeda",
+        "model": "Exotic 2708 HR Sepeda Hybrid 700C Steel Internal Cable Routing",
+        "price": 1930000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/serbasepeda/paket-4-juta-polygon-cascade-4-27-5-hitam-m-7c361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "serbasepeda",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,930,000"
+      },
+      {
+        "brand": "Autosyakiragroup",
+        "model": "Sepeda London Taxi CRB700M Clasic (Siap Kirim)",
+        "price": 5780000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/autosyakiragroup/sepeda-london-taxi-crb700m-clasic-siap-kirim-blue-ray?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "autosyakiragroup",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 5,780,000"
+      },
+      {
+        "brand": "Rafa Bike Shop",
+        "model": "fixie tsunami hitam keren,doltrap/torpedo bisa,mau request tambah berbagai ukuran bisa",
+        "price": 2900000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/rafa-bike-shop/fixie-tsunami-hitam-keren-doltrap-torpedo-bisa-mau-request-tambah-berbagai-ukuran-bisa-1731698361217419228?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "rafa-bike-shop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,900,000"
+      },
+      {
+        "brand": "Elementindonesia",
+        "model": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "elementindonesia",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 950,000"
+      },
+      {
+        "brand": "Anchi Center",
+        "model": "【Anchi】 Sepeda gunung  26 inci untuk pengendara dengan tinggi 160-185 cm, kompetisi dewasa, sepeda gunung, garansi 5 tah",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-26-inci-untuk-pengendara-dengan-tinggi-160-185-cm-kompetisi-dewasa-sepeda-gunung-garansi-5-tahun-pengiriman-cod-1732872223159715506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anchi-center",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "Eny Yulianah",
+        "model": "commuter bike federal frame size 19 Sepeda",
+        "price": 1900000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/eny-yulianah/commuter-bike-federal-frame-size-19-sepeda-1732177003191370902?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "eny-yulianah",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,900,000"
+      },
+      {
+        "brand": "Sevencycle Toped",
+        "model": "Sepeda gunung MTB polygon Xtrada 5 27.5",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-gunung-mtb-polygon-xtrada-5-27-5-1730752751579793343?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sevencycle-toped",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 6,400,000"
+      },
+      {
+        "brand": "Retailersepedaol",
+        "model": "sepeda balap gravel bike evergreen 21sp 700x38C  steel",
+        "price": 2150000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/retailersepedaol/sepeda-balap-gravel-bike-evergreen-21sp-700x38c-steel-1733020467130894172?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "retailersepedaol",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,150,000"
+      },
+      {
+        "brand": "Zentbike313",
+        "model": "Sepeda Fixie pink muda ,bisa request warna ,ukuran",
+        "price": 2700000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-pink-muda-bisa-request-warna-ukuran-1733260439622091913?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,700,000"
+      },
+      {
+        "brand": "Lautanjayabike",
+        "model": "Sepeda Gunung MTB 27.5 Pacific Aviator 2689 XT Rem Discbrake Operangigi Terbaru",
+        "price": 1549000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-mtb-27-5-pacific-aviator-2689-xt-rem-discbrake-operangigi-terbaru-1736278176255870089-1736278182929204361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lautanjayabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,549,000"
+      },
+      {
+        "brand": "Anugrah23Sepeda",
+        "model": "Sepeda Gunung MTB Coyote Fifa World Cup 2026 Ukuran 20, 24 ,26 dan 27,5 Inch SPECIAL EDITION",
+        "price": 1449000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/anugrah23sepeda/sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681-1736029864284685505?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anugrah23sepeda",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,449,000"
       }
     ],
     "price_tracker": [],
@@ -3744,12 +4212,13 @@
         "note": "反爬挡 (DataDome) = 仅 bestseller 可见",
         "url": "https://www.tokopedia.com/"
       }
-    ]
+    ],
+    "tokopedia_count": 39
   },
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T11:16:10+08:00",
+  "gen_at": "2026-07-07T12:05:07+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4082,14 +4551,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T11:16:10+08:00",
+    "computed_at": "2026-07-07T12:05:07+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 8,
-      "id_pool_brands": 4,
+      "id_pool_total": 47,
+      "id_pool_brands": 35,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
@@ -4254,9 +4723,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Pacific",
         "Element",
-        "United"
+        "United",
+        "Pacific"
       ]
     },
     "id_top10_brands": [
@@ -4434,9 +4903,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Pacific",
           "Element",
-          "United"
+          "United",
+          "Pacific"
         ]
       },
       "bd_road_bike": {
@@ -4528,5 +4997,418 @@
       "gt_25k_sku_min_yellow": 1
     },
     "version": "V2.7.2"
+  },
+  "tokopedia": {
+    "source": "user saved HTML (2026-07-07)",
+    "search_query": "sepeda (general, 自行车通用)",
+    "scraped_at": "2026-07-07",
+    "products_total": 40,
+    "products_with_price": 39,
+    "price_range": {
+      "min": 120000,
+      "max": 6400000
+    },
+    "products": [
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "dearloji",
+        "product_id": "1732393288002995330",
+        "url": "https://www.tokopedia.com/dearloji/sepeda-gunung-mtb-26-atlantis-discbrake-1732393288002995330?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
+        "name_raw": "sepeda-gunung-mtb-26-atlantis-discbrake",
+        "price_idr": 700000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "tokosepedaramayana",
+        "product_id": "1733975972454893506",
+        "url": "https://www.tokopedia.com/tokosepedaramayana/rb-road-bike-sepeda-balap-element-police-toronto-efg-hybrid-7sp-gravel-8sp-700-1733975972454893506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "RB road bike sepeda balap Element Police Toronto EFG Hybrid 7sp Gravel XTRM",
+        "name_raw": "rb-road-bike-sepeda-balap-element-police-toronto-efg-hybrid-7sp-gravel-8sp-700",
+        "price_idr": 2225000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "xandergarage",
+        "product_id": "1730931907908372074",
+        "url": "https://www.tokopedia.com/xandergarage/sepeda-wilier-cento-10-road-bike-merah-menyala-1730931907908372074?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
+        "name_raw": "sepeda-wilier-cento-10-road-bike-merah-menyala",
+        "price_idr": 120000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "anchi-center",
+        "product_id": "1732867902506960562",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery-1732867902506960562?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Delivery",
+        "name_raw": "anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery",
+        "price_idr": 1200000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "biketoys",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/biketoys/jne-sicepat-sepeda-gunung-atlantis-mtb-at-mt-27-5-69g-21s-27-blackred-81fdf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "JNE,Sicepat - Sepeda Gunung Atlantis MTB AT MT 27.5\" 69G 21S",
+        "name_raw": "jne-sicepat-sepeda-gunung-atlantis-mtb-at-mt-27-5-69g-21s-27-blackred-81fdf",
+        "price_idr": 1330000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "toko-sepeda-rejeki",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/toko-sepeda-rejeki/sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
+        "name_raw": "sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf",
+        "price_idr": 950000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "sumberkencanabike",
+        "product_id": "1736163407125972279",
+        "url": "https://www.tokopedia.com/sumberkencanabike/sepeda-fixie-pandora-hi-ten-steel-1736163368663024951-1736163407125972279?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA FIXIE PANDORA CST 700C",
+        "name_raw": "sepeda-fixie-pandora-hi-ten-steel-1736163368663024951",
+        "price_idr": 1890000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "samudrasepedabdg",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/samudrasepedabdg/sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
+        "name_raw": "sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg",
+        "price_idr": 1075000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "lautanjayabike",
+        "product_id": "1735505313323648137",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504732925887625-1735505313323648137?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3X8 Speed Terbaru",
+        "name_raw": "sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504732925887625",
+        "price_idr": 1225000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "toko-sepeda-surabaya",
+        "product_id": "1731016156086961842",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru-1731016156086961842?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
+        "name_raw": "sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru",
+        "price_idr": 900000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "celciusodessy",
+        "product_id": "1730928498269390064",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-fuse-ukuran-24-21-speed-frame-steel-1730928498269390064?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda MTB Odessy Fuse Ukuran 24 - 21 Speed Frame Steel",
+        "name_raw": "sepeda-mtb-odessy-fuse-ukuran-24-21-speed-frame-steel",
+        "price_idr": 1250000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "philipbikeshop",
+        "product_id": "1735504973449627141",
+        "url": "https://www.tokopedia.com/philipbikeshop/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504923024918021-1735504973449627141?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3x8 Speed Terbaru",
+        "name_raw": "sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504923024918021",
+        "price_idr": 1199000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "hobbyone",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/hobbyone/cervelo-s5-dura-ace-di2-12-speed-five-black-full-bike-48-9712d?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "CERVELO S5 DURA ACE DI2 12 SPEED Five Black - Full Bike",
+        "name_raw": "cervelo-s5-dura-ace-di2-12-speed-five-black-full-bike-48-9712d",
+        "price_idr": null,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "lakujayagroup",
+        "product_id": "1731382988705400169",
+        "url": "https://www.tokopedia.com/lakujayagroup/sepeda-gunung-mtb-mazara-new-series-size-24-26-inch-by-pacific-group-outdoor-1731382988705400169?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA GUNUNG MTB MAZARA NEW SERIES (SIZE 24 &amp; 26 INCH) - By : Pacific Group-Outdoor",
+        "name_raw": "sepeda-gunung-mtb-mazara-new-series-size-24-26-inch-by-pacific-group-outdoor",
+        "price_idr": 1292000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "schy",
+        "product_id": "1731515981072467518",
+        "url": "https://www.tokopedia.com/schy/sepeda-fixie-odessy-rm-1050-rem-torpedo-doltrap-700c-sepeda-odessy-fixie-rem-torpedo-1731515981072467518?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Fixie Odessy RM 1050 Rem Torpedo Doltrap 700C Sepeda Odessy Fixie Rem Torpedo",
+        "name_raw": "sepeda-fixie-odessy-rm-1050-rem-torpedo-doltrap-700c-sepeda-odessy-fixie-rem-torpedo",
+        "price_idr": 1150000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "toko-sepeda-surabaya",
+        "product_id": "1730814750554556082",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru-1730814750554556082?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
+        "name_raw": "sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru",
+        "price_idr": 559000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "fuzanaofficial",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/fuzanaofficial/sepeda-mtb-united-brownhills-t1-27-5-inc-29-inc-sepeda-gunung-bestseller?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
+        "name_raw": "sepeda-mtb-united-brownhills-t1-27-5-inc-29-inc-sepeda-gunung-bestseller",
+        "price_idr": 5334000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "zentbike313",
+        "product_id": "1735471637645395081",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-balap-road-bike-bisa-request-warna-ukuran-1735471637645395081?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda balap / Road bike bisa request warna ,ukuran",
+        "name_raw": "sepeda-balap-road-bike-bisa-request-warna-ukuran",
+        "price_idr": 3600000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "pacificoneteam",
+        "product_id": "1735995436920571758",
+        "url": "https://www.tokopedia.com/pacificoneteam/pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630-1735995436920571758?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
+        "name_raw": "pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630",
+        "price_idr": 2265000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "yoursc",
+        "product_id": "1736210346590569888",
+        "url": "https://www.tokopedia.com/yoursc/sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah-1736210346590569888?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
+        "name_raw": "sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah",
+        "price_idr": 730000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "morodadi-cycle-shop",
+        "product_id": "1729598424301144218",
+        "url": "https://www.tokopedia.com/morodadi-cycle-shop/sepeda-bmx-20-velion-model-terbaru-1729598424301144218?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA BMX 20\" VELION MODEL TERBARU",
+        "name_raw": "sepeda-bmx-20-velion-model-terbaru",
+        "price_idr": 600000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "zentbike313",
+        "product_id": "1733260536115790985",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-bxt-putih-bisa-request-1733260536115790985?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda fixie BxT  putih bisa request",
+        "name_raw": "sepeda-fixie-bxt-putih-bisa-request",
+        "price_idr": 3000000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "fixfix-store",
+        "product_id": "1732836119338256104",
+        "url": "https://www.tokopedia.com/fixfix-store/fixie-klasik-fullbike-by-fixfix-1732836119338256104?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Fixie Klasik Fullbike by Fixfix",
+        "name_raw": "fixie-klasik-fullbike-by-fixfix",
+        "price_idr": 2900000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "toto-senli",
+        "product_id": "1731531012542399901",
+        "url": "https://www.tokopedia.com/toto-senli/sepeda-fixie-odessy-rm-1050-sepeda-balap-model-terbaruu-1731531012542399901?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "SEPEDA FIXIE ODESSY RM 1050 SEPEDA BALAP MODEL TERBARUU",
+        "name_raw": "sepeda-fixie-odessy-rm-1050-sepeda-balap-model-terbaruu",
+        "price_idr": 1148000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "zentbike313",
+        "product_id": "1735454454386230409",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixi-look-hitam-putih-murah-1735454454386230409?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda fixi LOOK HITAM PUTIH murah",
+        "name_raw": "sepeda-fixi-look-hitam-putih-murah",
+        "price_idr": 3200000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "herojayabike-1",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/herojayabike-1/sepeda-mini-keranjang-dewasa-new-phoenix-np-8825at-uk-20-24-26inch-hitam-20inch-bc91e?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Mini Keranjang Dewasa New PHOENIX NP-8825AT Uk 20 24 &amp; 26Inch",
+        "name_raw": "sepeda-mini-keranjang-dewasa-new-phoenix-np-8825at-uk-20-24-26inch-hitam-20inch-bc91e",
+        "price_idr": 1050000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "sevencycle-toped",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-polygon-bmx-rogue-20inch-alloy?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda POLYGON BMX ROGUE 20inch alloy",
+        "name_raw": "sepeda-polygon-bmx-rogue-20inch-alloy",
+        "price_idr": 2200000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "ari-terang-709",
+        "product_id": "1734082262600615126",
+        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
+        "name_raw": "ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap",
+        "price_idr": 626000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "celciusodessy",
+        "product_id": "1729818881064535280",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-tank-sepeda-gunung-1729818881064535280?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda MTB Odessy Tank / Sepeda Gunung",
+        "name_raw": "sepeda-mtb-odessy-tank-sepeda-gunung",
+        "price_idr": 1290000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "serbasepeda",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/serbasepeda/paket-4-juta-polygon-cascade-4-27-5-hitam-m-7c361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Exotic 2708 HR Sepeda Hybrid 700C Steel Internal Cable Routing",
+        "name_raw": "paket-4-juta-polygon-cascade-4-27-5-hitam-m-7c361",
+        "price_idr": 1930000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "autosyakiragroup",
+        "product_id": "",
+        "url": "https://www.tokopedia.com/autosyakiragroup/sepeda-london-taxi-crb700m-clasic-siap-kirim-blue-ray?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda London Taxi CRB700M Clasic (Siap Kirim)",
+        "name_raw": "sepeda-london-taxi-crb700m-clasic-siap-kirim-blue-ray",
+        "price_idr": 5780000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "rafa-bike-shop",
+        "product_id": "1731698361217419228",
+        "url": "https://www.tokopedia.com/rafa-bike-shop/fixie-tsunami-hitam-keren-doltrap-torpedo-bisa-mau-request-tambah-berbagai-ukuran-bisa-1731698361217419228?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "fixie tsunami hitam keren,doltrap/torpedo bisa,mau request tambah berbagai ukuran bisa",
+        "name_raw": "fixie-tsunami-hitam-keren-doltrap-torpedo-bisa-mau-request-tambah-berbagai-ukuran-bisa",
+        "price_idr": 2900000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "elementindonesia",
+        "product_id": "1732156122289636607",
+        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
+        "name_raw": "sepeda-fixie-alton-fx-mistique-bullhorn-24inch",
+        "price_idr": 950000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "anchi-center",
+        "product_id": "1732872223159715506",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-26-inci-untuk-pengendara-dengan-tinggi-160-185-cm-kompetisi-dewasa-sepeda-gunung-garansi-5-tahun-pengiriman-cod-1732872223159715506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "【Anchi】 Sepeda gunung  26 inci untuk pengendara dengan tinggi 160-185 cm, kompetisi dewasa, sepeda gunung, garansi 5 tahun, pengiriman COD",
+        "name_raw": "anchi-sepeda-gunung-26-inci-untuk-pengendara-dengan-tinggi-160-185-cm-kompetisi-dewasa-sepeda-gunung-garansi-5-tahun-pengiriman-cod",
+        "price_idr": 1200000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "eny-yulianah",
+        "product_id": "1732177003191370902",
+        "url": "https://www.tokopedia.com/eny-yulianah/commuter-bike-federal-frame-size-19-sepeda-1732177003191370902?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "commuter bike federal frame size 19 Sepeda",
+        "name_raw": "commuter-bike-federal-frame-size-19-sepeda",
+        "price_idr": 1900000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "sevencycle-toped",
+        "product_id": "1730752751579793343",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-gunung-mtb-polygon-xtrada-5-27-5-1730752751579793343?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda gunung MTB polygon Xtrada 5 27.5",
+        "name_raw": "sepeda-gunung-mtb-polygon-xtrada-5-27-5",
+        "price_idr": 6400000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "retailersepedaol",
+        "product_id": "1733020467130894172",
+        "url": "https://www.tokopedia.com/retailersepedaol/sepeda-balap-gravel-bike-evergreen-21sp-700x38c-steel-1733020467130894172?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "sepeda balap gravel bike evergreen 21sp 700x38C  steel",
+        "name_raw": "sepeda-balap-gravel-bike-evergreen-21sp-700x38c-steel",
+        "price_idr": 2150000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "zentbike313",
+        "product_id": "1733260439622091913",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-pink-muda-bisa-request-warna-ukuran-1733260439622091913?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Fixie pink muda ,bisa request warna ,ukuran",
+        "name_raw": "sepeda-fixie-pink-muda-bisa-request-warna-ukuran",
+        "price_idr": 2700000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "lautanjayabike",
+        "product_id": "1736278182929204361",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-mtb-27-5-pacific-aviator-2689-xt-rem-discbrake-operangigi-terbaru-1736278176255870089-1736278182929204361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Gunung MTB 27.5 Pacific Aviator 2689 XT Rem Discbrake Operangigi Terbaru",
+        "name_raw": "sepeda-gunung-mtb-27-5-pacific-aviator-2689-xt-rem-discbrake-operangigi-terbaru-1736278176255870089",
+        "price_idr": 1549000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Tokopedia (user saved)",
+        "shop": "anugrah23sepeda",
+        "product_id": "1736029864284685505",
+        "url": "https://www.tokopedia.com/anugrah23sepeda/sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681-1736029864284685505?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "title": "Sepeda Gunung MTB Coyote Fifa World Cup 2026 Ukuran 20, 24 ,26 dan 27,5 Inch SPECIAL EDITION",
+        "name_raw": "sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681",
+        "price_idr": 1449000,
+        "scraped_at": "2026-07-07"
+      }
+    ]
   }
 }
