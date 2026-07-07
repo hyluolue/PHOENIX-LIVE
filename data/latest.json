@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T14:40:43+08:00",
+  "generated_at": "2026-07-07T14:43:01+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -5323,7 +5323,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T14:40:43+08:00",
+  "gen_at": "2026-07-07T14:43:01+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -5656,7 +5656,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T14:40:43+08:00",
+    "computed_at": "2026-07-07T14:43:01+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
@@ -6051,7 +6051,18 @@
         "jacket",
         "mirror",
         "pannier",
-        "rack"
+        "rack",
+        "spinning",
+        "statif",
+        "treadmill",
+        "kardio",
+        "elliptical",
+        "recumbent",
+        "latis",
+        "fitnes",
+        "sepeda statis",
+        "orbitrack",
+        "treadmil"
       ],
       "mid_high_filter": "BD 5K-30K BDT + 排除童车/折叠/电动/配件",
       "gt_25k_definition": "price >= 25000 BDT (含中高端池外)"
