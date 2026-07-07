@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T14:33:03+08:00",
+  "generated_at": "2026-07-07T14:40:43+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -4926,6 +4926,240 @@
         "is_new": true,
         "scraped_at": "2026-07-07T14:30:00+08:00",
         "note": "Rp 5,099,000"
+      },
+      {
+        "brand": "Spinning",
+        "model": "Spinning Bike Twen SB622 SB623 Kardio Fitness",
+        "price": 792000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid - fitness)",
+        "url": "https://shopee.co.id/Spinning-Bike-Twen-SB622-SB623-Kardio-Fitness-i.50830142.2267220960?extraParams=%7B%22display_model_id%22%3A391110529382%2C%22model_selection_logic%22%3A3%7D",
+        "shop": "50830142",
+        "is_new": true,
+        "is_fitness": true,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 792,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Statis Orbitrack Fan Bike TWEN FB31 FB32 FB32s Platinum Bike Termurah Alat Olahraga",
+        "price": 1447200,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid - fitness)",
+        "url": "https://shopee.co.id/Sepeda-Statis-Orbitrack-Fan-Bike-TWEN-FB31-FB32-FB32s-Platinum-Bike-Termurah-Alat-Olahraga-i.50830142.7444499127?extraParams=%7B%22display_model_id%22%3A252616724724%2C%22model_selection_logic%22%3A3%7D",
+        "shop": "50830142",
+        "is_new": true,
+        "is_fitness": true,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,447,200"
+      },
+      {
+        "brand": "Twen",
+        "model": "Twen T500MT Treadmill Lipat Listrik Portable",
+        "price": 3499200,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid - fitness)",
+        "url": "https://shopee.co.id/Twen-T500MT-Treadmill-Lipat-Listrik-Portable-i.50830142.2310372079?extraParams=%7B%22display_model_id%22%3A410427132311%2C%22model_selection_logic%22%3A3%7D",
+        "shop": "50830142",
+        "is_new": true,
+        "is_fitness": true,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 3,499,200"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Element JASPER 700c 24SP",
+        "price": 1899000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-JASPER-700c-24SP-i.19737296.29826636412?extraParams=%7B%22display_model_id%22%3A262704512946%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=18436e26-e45f-4c17-8a44-5f1fa2c5a0f8&amp;xptdk=18436e26-e45f-4c17-8a44-5f1fa2c5a0f8",
+        "shop": "19737296",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,899,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
+        "price": 2300000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Pacific-Sprinter-HX-2.0-3-x-9-Speed-i.19737296.45661304596?extraParams=%7B%22display_model_id%22%3A445983093518%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1d56cd31-746f-4346-a9cc-09ed02f1ff82&amp;xptdk=1d56cd31-746f-4346-a9cc-09ed02f1ff82",
+        "shop": "19737296",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,300,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG HYBRID EXOTIC 2708 HR 700c x35",
+        "price": 1929000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-EXOTIC-2708-HR-700c-x35-i.437557453.48362174627?extraParams=%7B%22display_model_id%22%3A411055742126%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=350126df-a96f-45ed-9173-905ad02d12e6&amp;xptdk=350126df-a96f-45ed-9173-905ad02d12e6",
+        "shop": "437557453",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,929,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+        "price": 2168000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.168300440.47900256440?extraParams=%7B%22display_model_id%22%3A307202714584%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=22e7cf5b-a4ce-4653-9a46-2ca19b1d1ea9&amp;xptdk=22e7cf5b-a4ce-4653-9a46-2ca19b1d1ea9",
+        "shop": "168300440",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,168,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
+        "price": 1930000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e&amp;xptdk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e",
+        "shop": "552002197",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,930,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
+        "price": 1899000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-DEWASA-ELEMENT-JASPER-700c-SHIMANO-TOURNEY-300-ELEMENT-HYBRID-JASPER-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-24Sp-i.101726601.29226661099?extraParams=%7B%22display_model_id%22%3A331053979466%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=15d51b64-89ea-45ba-baa2-c97397064677&amp;xptdk=15d51b64-89ea-45ba-baa2-c97397064677",
+        "shop": "101726601",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,899,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid 700c EXOTIC 2708 HR DISC BRAKE",
+        "price": 1930000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-700c-EXOTIC-2708-HR-DISC-BRAKE-i.19737296.47912209585?extraParams=%7B%22display_model_id%22%3A326058984907%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1583b885-b228-4859-8e7f-0d2e0541caae&amp;xptdk=1583b885-b228-4859-8e7f-0d2e0541caae",
+        "shop": "19737296",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,930,000"
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
+        "price": 1990000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3208db7b-fa35-4d39-93a5-ffbc1b56b010&amp;xptdk=3208db7b-fa35-4d39-93a5-ffbc1b56b010",
+        "shop": "349407809",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,990,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
+        "price": 2300000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Urban-Hybrid-PACIFIC-SPRINTER-HX-2.0-i.30693741.42481966927?extraParams=%7B%22display_model_id%22%3A436106389582%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d1366b96-e0fe-4d60-a558-746167296180&amp;xptdk=d1366b96-e0fe-4d60-a558-746167296180",
+        "shop": "30693741",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,300,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
+        "price": 1899000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-EXOTIC-2708-HR-3X8-SPEED-i.101726601.19565725261?extraParams=%7B%22display_model_id%22%3A351053981026%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=11836967-72f1-4a98-9364-fe5c78ef075c&amp;xptdk=11836967-72f1-4a98-9364-fe5c78ef075c",
+        "shop": "101726601",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,899,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
+        "price": 2102000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-ELEMENT-JASPER-700C-SHIMANO-TOURNEY-TY-300-TORONTO-700C-SHIMANO-TOURNEY-JASPER24Sp-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-i.51418619.27426648402?extraParams=%7B%22display_model_id%22%3A400533499064%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7155f876-b333-45dc-aebf-f69745ffb730&amp;xptdk=7155f876-b333-45dc-aebf-f69745ffb730",
+        "shop": "51418619",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,102,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
+        "price": 2269722,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Exotic-2708-HR-700C-3-x-8-Speed-New-2026-i.1020358488.45812998146?extraParams=%7B%22display_model_id%22%3A331125147092%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=b20829d6-6bfb-468e-a452-7aff1f96dca5&amp;xptdk=b20829d6-6bfb-468e-a452-7aff1f96dca5",
+        "shop": "1020358488",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,269,722"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Strattos F3 Sepeda Hybrid Road Bike Flatbar",
+        "price": 6249000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Polygon-Strattos-F3-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.44031142146?extraParams=%7B%22display_model_id%22%3A216407602860%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=76fb3596-11ed-4549-9fe2-ccaf2a91ae55&amp;xptdk=76fb3596-11ed-4549-9fe2-ccaf2a91ae55",
+        "shop": "167054410",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 6,249,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
+        "price": 2519000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Sepeda-Element-700c-Hybrid-Jasper-Rem-Hydraulic-24-Speed-Terbaru-i.105979235.58108791418?extraParams=%7B%22display_model_id%22%3A435781170036%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d01eeb30-92c9-4668-bb21-e06aa9c840d3&amp;xptdk=d01eeb30-92c9-4668-bb21-e06aa9c840d3",
+        "shop": "105979235",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 2,519,000"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Strattos F2 Sepeda Hybrid Road Bike Flatbar",
+        "price": 5099000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Polygon-Strattos-F2-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.53561029748?extraParams=%7B%22display_model_id%22%3A244277210029%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=ba225131-a1dd-4f2a-8618-d47552e2dbf4&amp;xptdk=ba225131-a1dd-4f2a-8618-d47552e2dbf4",
+        "shop": "167054410",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 5,099,000"
       }
     ],
     "price_tracker": [],
@@ -5082,12 +5316,14 @@
     "serbasepeda_count": 47,
     "shopee_roadbike_count": 30,
     "shopee_gravel_count": 15,
-    "shopee_hybrid_count": 0
+    "shopee_hybrid_count": 0,
+    "shopee_hybrid_bicycles": 15,
+    "shopee_hybrid_fitness": 3
   },
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T14:33:03+08:00",
+  "gen_at": "2026-07-07T14:40:43+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -5420,14 +5656,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T14:33:03+08:00",
+    "computed_at": "2026-07-07T14:40:43+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 119,
-      "id_pool_brands": 58,
+      "id_pool_total": 137,
+      "id_pool_brands": 60,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
@@ -7176,6 +7412,7 @@
       "25M+": 0
     },
     "mid_high_12_15m_count": 0,
+    "note": "hybrid 与 gravel 显示完全相同 18 SKU 但 hybrid 前 3 = 健身车 = 用户体验差 = Phoenix 切入点",
     "products": [
       {
         "platform": "Shopee ID",
@@ -7205,7 +7442,7 @@
         "platform": "Shopee ID",
         "shop_id": "19737296",
         "item_id": "29826636412",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-JASPER-700c-24SP-i.19737296.29826636412?extraParams=%7B%22display_model_id%22%3A262704512946%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=b200b181-c1ac-4742-8054-f274320402a2&amp;xptdk=b200b181-c1ac-4742-8054-f274320402a2",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-JASPER-700c-24SP-i.19737296.29826636412?extraParams=%7B%22display_model_id%22%3A262704512946%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=18436e26-e45f-4c17-8a44-5f1fa2c5a0f8&amp;xptdk=18436e26-e45f-4c17-8a44-5f1fa2c5a0f8",
         "title": "Sepeda Hybrid Element JASPER 700c 24SP",
         "price_idr": 1899000
       },
@@ -7213,7 +7450,7 @@
         "platform": "Shopee ID",
         "shop_id": "19737296",
         "item_id": "45661304596",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-Pacific-Sprinter-HX-2.0-3-x-9-Speed-i.19737296.45661304596?extraParams=%7B%22display_model_id%22%3A445983093518%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fcfb478a-4105-46eb-8a3e-9ad207c80737&amp;xptdk=fcfb478a-4105-46eb-8a3e-9ad207c80737",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Pacific-Sprinter-HX-2.0-3-x-9-Speed-i.19737296.45661304596?extraParams=%7B%22display_model_id%22%3A445983093518%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1d56cd31-746f-4346-a9cc-09ed02f1ff82&amp;xptdk=1d56cd31-746f-4346-a9cc-09ed02f1ff82",
         "title": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
         "price_idr": 2300000
       },
@@ -7221,7 +7458,7 @@
         "platform": "Shopee ID",
         "shop_id": "437557453",
         "item_id": "48362174627",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-EXOTIC-2708-HR-700c-x35-i.437557453.48362174627?extraParams=%7B%22display_model_id%22%3A411055742126%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=0cb42150-18c5-4d58-b435-7a912cfeb70e&amp;xptdk=0cb42150-18c5-4d58-b435-7a912cfeb70e",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-EXOTIC-2708-HR-700c-x35-i.437557453.48362174627?extraParams=%7B%22display_model_id%22%3A411055742126%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=350126df-a96f-45ed-9173-905ad02d12e6&amp;xptdk=350126df-a96f-45ed-9173-905ad02d12e6",
         "title": "SEPEDA GUNUNG HYBRID EXOTIC 2708 HR 700c x35",
         "price_idr": 1929000
       },
@@ -7229,7 +7466,7 @@
         "platform": "Shopee ID",
         "shop_id": "168300440",
         "item_id": "47900256440",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.168300440.47900256440?extraParams=%7B%22display_model_id%22%3A307202714584%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=88864a2d-e83a-4321-a59e-a5599623f757&amp;xptdk=88864a2d-e83a-4321-a59e-a5599623f757",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.168300440.47900256440?extraParams=%7B%22display_model_id%22%3A307202714584%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=22e7cf5b-a4ce-4653-9a46-2ca19b1d1ea9&amp;xptdk=22e7cf5b-a4ce-4653-9a46-2ca19b1d1ea9",
         "title": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
         "price_idr": 2168000
       },
@@ -7237,7 +7474,7 @@
         "platform": "Shopee ID",
         "shop_id": "552002197",
         "item_id": "54112421351",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=e6d8884c-91f5-4a9e-a70a-cebd218b8b1c&amp;xptdk=e6d8884c-91f5-4a9e-a70a-cebd218b8b1c",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e&amp;xptdk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e",
         "title": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
         "price_idr": 1930000
       },
@@ -7245,7 +7482,7 @@
         "platform": "Shopee ID",
         "shop_id": "101726601",
         "item_id": "29226661099",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-DEWASA-ELEMENT-JASPER-700c-SHIMANO-TOURNEY-300-ELEMENT-HYBRID-JASPER-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-24Sp-i.101726601.29226661099?extraParams=%7B%22display_model_id%22%3A331053979466%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=ecce7b56-098e-4921-9142-551268f985d9&amp;xptdk=ecce7b56-098e-4921-9142-551268f985d9",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-DEWASA-ELEMENT-JASPER-700c-SHIMANO-TOURNEY-300-ELEMENT-HYBRID-JASPER-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-24Sp-i.101726601.29226661099?extraParams=%7B%22display_model_id%22%3A331053979466%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=15d51b64-89ea-45ba-baa2-c97397064677&amp;xptdk=15d51b64-89ea-45ba-baa2-c97397064677",
         "title": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
         "price_idr": 1899000
       },
@@ -7253,7 +7490,7 @@
         "platform": "Shopee ID",
         "shop_id": "19737296",
         "item_id": "47912209585",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-700c-EXOTIC-2708-HR-DISC-BRAKE-i.19737296.47912209585?extraParams=%7B%22display_model_id%22%3A326058984907%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5c79ba7c-84e3-4010-b519-7c3f763544b7&amp;xptdk=5c79ba7c-84e3-4010-b519-7c3f763544b7",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-700c-EXOTIC-2708-HR-DISC-BRAKE-i.19737296.47912209585?extraParams=%7B%22display_model_id%22%3A326058984907%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1583b885-b228-4859-8e7f-0d2e0541caae&amp;xptdk=1583b885-b228-4859-8e7f-0d2e0541caae",
         "title": "Sepeda Hybrid 700c EXOTIC 2708 HR DISC BRAKE",
         "price_idr": 1930000
       },
@@ -7261,7 +7498,7 @@
         "platform": "Shopee ID",
         "shop_id": "349407809",
         "item_id": "41432116440",
-        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f&amp;xptdk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f",
+        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3208db7b-fa35-4d39-93a5-ffbc1b56b010&amp;xptdk=3208db7b-fa35-4d39-93a5-ffbc1b56b010",
         "title": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
         "price_idr": 1990000
       },
@@ -7269,7 +7506,7 @@
         "platform": "Shopee ID",
         "shop_id": "30693741",
         "item_id": "42481966927",
-        "url": "https://shopee.co.id/Sepeda-Urban-Hybrid-PACIFIC-SPRINTER-HX-2.0-i.30693741.42481966927?extraParams=%7B%22display_model_id%22%3A436106389582%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=08b1a8f5-42a9-4258-8743-fd839ef40f34&amp;xptdk=08b1a8f5-42a9-4258-8743-fd839ef40f34",
+        "url": "https://shopee.co.id/Sepeda-Urban-Hybrid-PACIFIC-SPRINTER-HX-2.0-i.30693741.42481966927?extraParams=%7B%22display_model_id%22%3A436106389582%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d1366b96-e0fe-4d60-a558-746167296180&amp;xptdk=d1366b96-e0fe-4d60-a558-746167296180",
         "title": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
         "price_idr": 2300000
       },
@@ -7277,7 +7514,7 @@
         "platform": "Shopee ID",
         "shop_id": "101726601",
         "item_id": "19565725261",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-EXOTIC-2708-HR-3X8-SPEED-i.101726601.19565725261?extraParams=%7B%22display_model_id%22%3A351053981026%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=22966c99-3cfd-4000-bf4d-1c8378f2f4b5&amp;xptdk=22966c99-3cfd-4000-bf4d-1c8378f2f4b5",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-EXOTIC-2708-HR-3X8-SPEED-i.101726601.19565725261?extraParams=%7B%22display_model_id%22%3A351053981026%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=11836967-72f1-4a98-9364-fe5c78ef075c&amp;xptdk=11836967-72f1-4a98-9364-fe5c78ef075c",
         "title": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
         "price_idr": 1899000
       },
@@ -7285,7 +7522,7 @@
         "platform": "Shopee ID",
         "shop_id": "51418619",
         "item_id": "27426648402",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-ELEMENT-JASPER-700C-SHIMANO-TOURNEY-TY-300-TORONTO-700C-SHIMANO-TOURNEY-JASPER24Sp-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-i.51418619.27426648402?extraParams=%7B%22display_model_id%22%3A400533499064%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=baee36e6-0b97-4b03-99b5-f1742ba105ee&amp;xptdk=baee36e6-0b97-4b03-99b5-f1742ba105ee",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-ELEMENT-JASPER-700C-SHIMANO-TOURNEY-TY-300-TORONTO-700C-SHIMANO-TOURNEY-JASPER24Sp-HYDRAULIC-8-700C-HYBRID-PACIFIC-SPRINTER-HX-2.0-700c-3x9-SPEED-i.51418619.27426648402?extraParams=%7B%22display_model_id%22%3A400533499064%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7155f876-b333-45dc-aebf-f69745ffb730&amp;xptdk=7155f876-b333-45dc-aebf-f69745ffb730",
         "title": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
         "price_idr": 2102000
       },
@@ -7293,7 +7530,7 @@
         "platform": "Shopee ID",
         "shop_id": "1020358488",
         "item_id": "45812998146",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-Exotic-2708-HR-700C-3-x-8-Speed-New-2026-i.1020358488.45812998146?extraParams=%7B%22display_model_id%22%3A331125147092%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d7d3e4cd-db4f-4ea2-8f30-5e457d7e4041&amp;xptdk=d7d3e4cd-db4f-4ea2-8f30-5e457d7e4041",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Exotic-2708-HR-700C-3-x-8-Speed-New-2026-i.1020358488.45812998146?extraParams=%7B%22display_model_id%22%3A331125147092%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=b20829d6-6bfb-468e-a452-7aff1f96dca5&amp;xptdk=b20829d6-6bfb-468e-a452-7aff1f96dca5",
         "title": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
         "price_idr": 2269722
       },
@@ -7301,7 +7538,7 @@
         "platform": "Shopee ID",
         "shop_id": "167054410",
         "item_id": "44031142146",
-        "url": "https://shopee.co.id/Polygon-Strattos-F3-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.44031142146?extraParams=%7B%22display_model_id%22%3A216407602860%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=34e20ad8-8a2d-45cb-aedc-b9f63b6be2dd&amp;xptdk=34e20ad8-8a2d-45cb-aedc-b9f63b6be2dd",
+        "url": "https://shopee.co.id/Polygon-Strattos-F3-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.44031142146?extraParams=%7B%22display_model_id%22%3A216407602860%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=76fb3596-11ed-4549-9fe2-ccaf2a91ae55&amp;xptdk=76fb3596-11ed-4549-9fe2-ccaf2a91ae55",
         "title": "Polygon Strattos F3 Sepeda Hybrid Road Bike Flatbar",
         "price_idr": 6249000
       },
@@ -7309,7 +7546,7 @@
         "platform": "Shopee ID",
         "shop_id": "105979235",
         "item_id": "58108791418",
-        "url": "https://shopee.co.id/Sepeda-Element-700c-Hybrid-Jasper-Rem-Hydraulic-24-Speed-Terbaru-i.105979235.58108791418?extraParams=%7B%22display_model_id%22%3A435781170036%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46fc8436-0a5c-4373-a46c-b03c89b3e418&amp;xptdk=46fc8436-0a5c-4373-a46c-b03c89b3e418",
+        "url": "https://shopee.co.id/Sepeda-Element-700c-Hybrid-Jasper-Rem-Hydraulic-24-Speed-Terbaru-i.105979235.58108791418?extraParams=%7B%22display_model_id%22%3A435781170036%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d01eeb30-92c9-4668-bb21-e06aa9c840d3&amp;xptdk=d01eeb30-92c9-4668-bb21-e06aa9c840d3",
         "title": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
         "price_idr": 2519000
       },
@@ -7317,7 +7554,7 @@
         "platform": "Shopee ID",
         "shop_id": "167054410",
         "item_id": "53561029748",
-        "url": "https://shopee.co.id/Polygon-Strattos-F2-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.53561029748?extraParams=%7B%22display_model_id%22%3A244277210029%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1a18fabd-910b-42f9-9534-39b9c43d66ab&amp;xptdk=1a18fabd-910b-42f9-9534-39b9c43d66ab",
+        "url": "https://shopee.co.id/Polygon-Strattos-F2-Sepeda-Hybrid-Road-Bike-Flatbar-i.167054410.53561029748?extraParams=%7B%22display_model_id%22%3A244277210029%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=ba225131-a1dd-4f2a-8618-d47552e2dbf4&amp;xptdk=ba225131-a1dd-4f2a-8618-d47552e2dbf4",
         "title": "Polygon Strattos F2 Sepeda Hybrid Road Bike Flatbar",
         "price_idr": 5099000
       }
