@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T10:41:05+08:00",
+  "generated_at": "2026-07-07T10:44:36+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -3498,7 +3498,104 @@
     ]
   },
   "id": {
-    "price_pool": [],
+    "price_pool": [
+      {
+        "brand": "Pacific",
+        "model": "Mountain Bike Entry 26",
+        "price": 5120000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "FRC 38 Gravel 700C",
+        "price": 7290000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "United",
+        "model": "Sterling R1 700C",
+        "price": 8990000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Pacific",
+        "model": "700C Road Bike",
+        "price": 9500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "Hybrid City 700C",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "Gravel Top Spec 700C",
+        "price": 26200000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Xtrada 5 700C",
+        "price": 6500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "United",
+        "model": "Mountain 27.5",
+        "price": 7800000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T10:44:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      }
+    ],
     "price_tracker": [],
     "news": [],
     "brand_pool": [
@@ -3627,7 +3724,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T10:41:05+08:00",
+  "gen_at": "2026-07-07T10:44:36+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:41:05+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4360,7 +4457,7 @@
   "data_quality": {
     "level": "yellow",
     "emoji": "🟡",
-    "evaluated_at": "2026-07-07T10:33:05",
+    "evaluated_at": "2026-07-07T10:45:48",
     "reasons": [
       "⚠️ 高级模块失败: apify_social — 社媒数据（FB/IG 竞品）· 偶发 5xx",
       "⚠️ 高级模块失败: news_id — ID 市场动态（Sogou news ID）· 偶发失败",
