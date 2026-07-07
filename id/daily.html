@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix V3 · 市场日报 · <span id="date">加载中…</span></title>
+<title>Phoenix V3 · ID 市场日报 · <span id="date">加载中…</span></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../shared.css">
 <style>
@@ -46,30 +46,6 @@
 <h1>📊 Phoenix 市场日报 <small id="date-h1">加载中…</small></h1>
 <p style="color:#94a3b8;font-size:12px;margin:0 0 12px">每日 9:00 + 16:00 自动跑 · 数据源：Daraz BD + dreamcycle.store + serbasepeda.com + dashboard_metrics</p>
 
-<!-- BD 综合 -->
-<div class="section">
-  <h2>🇧🇩 BD 市场综合 <small>价格快照 + 趋势 + 分层 + 市场容量</small></h2>
-  <div class="kpi-grid">
-    <div class="kpi">
-      <div class="kpi-label">💰 BD 价格池</div>
-      <div class="kpi-value"><span id="bd-pool">—</span> SKU · <span id="bd-brands">—</span> 真品牌<br><small>来源：Daraz BD + dreamcycle.store</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">📈 25K+ 高端</div>
-      <div class="kpi-value"><span id="bd-25k-count">—</span> SKU · <span id="bd-25k-brands">—</span> 品牌<br><small>Rockrider/Veloce/Core 主导</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">🐦 Phoenix BD</div>
-      <div class="kpi-value"><span id="bd-phx-count">—</span> SKU · ASP <span id="bd-phx-asp">—</span><br><small>顶价 <span id="bd-phx-max">—</span> BDT</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">📊 市场容量</div>
-      <div class="kpi-value"><span id="bd-mid-high">—</span> SKU · <span id="bd-mid-high-brands">—</span> 品牌<br><small>BD 5K-30K BDT 中高端池</small></div>
-    </div>
-  </div>
-</div>
-
-<!-- ID 综合 -->
 <div class="section">
   <h2>🇮🇩 ID 市场综合 <small>价格快照 + 趋势 + 分层 + 市场容量</small></h2>
   <div class="kpi-grid">
@@ -152,17 +128,7 @@
     const bands = dm.bands || {};
     const id715 = dm.id_7_15m || {};
 
-    // BD 综合 KPI
-    const phxBD = (data.bd && data.bd.price_pool || []).filter(it => (it.brand||'').toLowerCase() === 'phoenix');
-    inject('bd-pool', totals.bd_pool_total || 0);
-    inject('bd-brands', totals.bd_pool_brands || 0);
-    inject('bd-25k-count', phxGap.gt_25k_count || 0);
-    inject('bd-25k-brands', phxGap.gt_25k_brand_count || 0);
-    inject('bd-phx-count', phxBD.length);
-    inject('bd-phx-asp', totals.phx_bd_asp ? totals.phx_bd_asp.toLocaleString() : '—');
-    inject('bd-phx-max', totals.phx_bd_max ? totals.phx_bd_max.toLocaleString() : '—');
-    inject('bd-mid-high', totals.bd_pool_mid_high || 0);
-    inject('bd-mid-high-brands', bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0);
+    
 
     // ID 综合 KPI
     inject('id-pool', totals.id_pool_total || 0);
@@ -176,19 +142,10 @@
 
     // 智能洞察（自动从 latest.json）
     const insights = [];
-    // 洞察 1: BD 25K+ 红海
-    if (phxGap.gt_25k_count) {
-      insights.push(`🚫 BD 25K+ BDT 红海：${phxGap.gt_25k_count} SKU · ${phxGap.gt_25k_brand_count} 品牌（${(phxGap.gt_25k_brands||[]).join('/')}）= Phoenix 进去就是价格战（差距 ${phxGap.phx_vs_industry_ratio||'—'}x）`);
-    }
+    // 洞察 1: BD 25K+ 红海（BD 日报中已展示）
     // 洞察 2: Phoenix 真实定位
-    if (phxGap.phx_max_price && phxGap.industry_max_price) {
-      insights.push(`🐦 Phoenix BD 真实定位：${phxGap.phx_count} SKU · ASP ${phxGap.phx_asp} · 顶价 ${phxGap.phx_max_price} BDT · 行业顶价 ${phxGap.industry_max_brand} @ ${phxGap.industry_max_price} BDT`);
-    }
     // 洞察 3: 25-40K 主战场
-    const mid = bands.bd_15_25k || {};
-    if (mid.count) {
-      insights.push(`🎯 BD 15-25K 中端：${mid.count} SKU · ${mid.brands_count} 品牌（${(mid.top_5_brands||[]).slice(0,4).join('/')}）= V2.3.1 5 SKU 主战场（差距 27K 价位真空）`);
-    }
+    // === ID 专属洞察开始 ===
     // 洞察 4: ID 7-15M 真空（V2.6.1 三蓝海品类切入点）
     if (id715.count !== undefined) {
       insights.push(`💎 <b>ID Rp 7-15M 中端真空</b>（双平台 74 SKU 实测）：${id715.count} SKU ${(id715.brands||[]).join('/')} = <b style="color:#5eead4">V2.6.1 公路+平把+砾石三蓝海切入点</b>（Phoenix 12-15M 主推）`);
