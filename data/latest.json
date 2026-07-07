@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-08T01:30:23+08:00",
+  "generated_at": "2026-07-08T01:42:29+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -23,7 +23,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/21-spd-26-847248-i557085157.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 13,035"
       },
       {
@@ -34,7 +34,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-20-847515-i323852740.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 7,820"
       },
       {
@@ -45,7 +45,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mw-20-847793-i117316491.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 9,860"
       },
       {
@@ -56,7 +56,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mkb-r01-847544-i235446617.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 6,235"
       },
       {
@@ -67,7 +67,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 8,500"
       },
       {
@@ -78,7 +78,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -89,7 +89,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 14,023"
       },
       {
@@ -100,19 +100,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:02+08:00",
+        "scraped_at": "2026-07-08T01:30:43+08:00",
         "note": "BDT 14,444"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "platform": "Daraz BD (Phoenix 凤凰)",
-        "price": 9999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
-        "note": "BDT 9,999"
       },
       {
         "brand": "Phoenix",
@@ -122,7 +111,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-i323337459.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 7,999"
       },
       {
@@ -133,7 +122,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 10,000"
       },
       {
@@ -142,20 +131,9 @@
         "platform": "Daraz BD (Phoenix 凤凰)",
         "price": 9999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202148734.html",
+        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
-        "note": "BDT 9,999"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "platform": "Daraz BD (Phoenix 凤凰)",
-        "price": 9999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -166,7 +144,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202143847.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -175,10 +153,32 @@
         "platform": "Daraz BD (Phoenix 凤凰)",
         "price": 9999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202148734.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 9,999"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+        "platform": "Daraz BD (Phoenix 凤凰)",
+        "price": 9999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:46+08:00",
+        "note": "BDT 9,999"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "platform": "Daraz BD (Phoenix 凤凰)",
+        "price": 9799,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:46+08:00",
+        "note": "BDT 9,799"
       },
       {
         "brand": "Phoenix",
@@ -188,7 +188,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-i202147734.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:05+08:00",
+        "scraped_at": "2026-07-08T01:30:46+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -199,7 +199,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
+        "scraped_at": "2026-07-08T01:30:49+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -210,7 +210,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i561273686.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
+        "scraped_at": "2026-07-08T01:30:49+08:00",
         "note": "BDT 17,000"
       },
       {
@@ -221,7 +221,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/200-26-i349289200.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
+        "scraped_at": "2026-07-08T01:30:49+08:00",
         "note": "BDT 21,111"
       },
       {
@@ -232,41 +232,41 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-playtime-947409-i349121456.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
+        "scraped_at": "2026-07-08T01:30:49+08:00",
         "note": "BDT 1,230"
       },
       {
         "brand": "Generic",
-        "model": "Mountain Bike Kids Toys For Kids",
+        "model": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
         "platform": "Daraz BD (Marine)",
-        "price": 165,
+        "price": 3101,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i317796153.html",
+        "url": "https://www.daraz.com.bd/products/aci-i314265944.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
-        "note": "BDT 165"
+        "scraped_at": "2026-07-08T01:30:49+08:00",
+        "note": "BDT 3,101"
       },
       {
         "brand": "Generic",
-        "model": "Vintage Bicycle Model Kit - with Pump & Luggage, Ideal  for Collectors & Home Office Decor",
+        "model": "Baybee Kids Push Parent Control Handle Tricycle Cruiser Pedal Go Kart Racing Ride On Toy Car For Bab",
         "platform": "Daraz BD (Marine)",
-        "price": 653,
+        "price": 3919,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i1582384062.html",
+        "url": "https://www.daraz.com.bd/products/0-4-i448794896.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
-        "note": "BDT 653"
+        "scraped_at": "2026-07-08T01:30:49+08:00",
+        "note": "BDT 3,919"
       },
       {
         "brand": "Generic",
-        "model": "Vintage Bicycle Model Kit - with Pump & Luggage, Ideal  for Collectors & Home Office Decor",
+        "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
         "platform": "Daraz BD (Marine)",
-        "price": 646,
+        "price": 1582,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573568426.html",
+        "url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
-        "note": "BDT 646"
+        "scraped_at": "2026-07-08T01:30:49+08:00",
+        "note": "BDT 1,582"
       },
       {
         "brand": "Generic",
@@ -276,63 +276,63 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i240846393.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:08+08:00",
+        "scraped_at": "2026-07-08T01:30:49+08:00",
         "note": "BDT 1,585"
       },
       {
-        "brand": "Giant",
-        "model": "Bicycle GIANT Gel Seat Cover - Black",
+        "brand": "Generic",
+        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
         "platform": "Daraz BD (Giant)",
-        "price": 355,
+        "price": 19999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i167924178.html",
+        "url": "https://www.daraz.com.bd/products/-i573710743.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 355"
-      },
-      {
-        "brand": "Giant",
-        "model": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "platform": "Daraz BD (Giant)",
-        "price": 399,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 399"
-      },
-      {
-        "brand": "Giant",
-        "model": "Giant  MTB Bike Handlebar Stem Bicycle Stem 31.8MM Cycling Bicycle Parts, 4 Colors Bike Handlebar St",
-        "platform": "Daraz BD (Giant)",
-        "price": 499,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/mtb-318mm-5-i526008712.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 499"
-      },
-      {
-        "brand": "Giant",
-        "model": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "platform": "Daraz BD (Giant)",
-        "price": 299,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 299"
+        "scraped_at": "2026-07-08T01:30:52+08:00",
+        "note": "BDT 19,999"
       },
       {
         "brand": "Generic",
-        "model": "Complete Bicycle Gear Set 21 Speed, Total 12 Parts, Cycle Gear Kit Set Compatible for All Kind of Bi",
+        "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
         "platform": "Daraz BD (Giant)",
-        "price": 1948,
+        "price": 11499,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/21-12-i1578259151.html",
+        "url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 1,948"
+        "scraped_at": "2026-07-08T01:30:52+08:00",
+        "note": "BDT 11,499"
+      },
+      {
+        "brand": "Generic",
+        "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
+        "platform": "Daraz BD (Giant)",
+        "price": 65000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/electric-foldable-bicycle-new-edition-lightweight-e-bike-with-battery-urban-commuter-vehicle-i432548081.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:52+08:00",
+        "note": "BDT 65,000"
+      },
+      {
+        "brand": "Generic",
+        "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
+        "platform": "Daraz BD (Giant)",
+        "price": 48000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i254063487.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:52+08:00",
+        "note": "BDT 48,000"
+      },
+      {
+        "brand": "Falcon",
+        "model": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "platform": "Daraz BD (Giant)",
+        "price": 10493,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:52+08:00",
+        "note": "BDT 10,493"
       },
       {
         "brand": "Generic",
@@ -342,19 +342,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-playtime-947409-i349121456.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
+        "scraped_at": "2026-07-08T01:30:53+08:00",
         "note": "BDT 1,230"
-      },
-      {
-        "brand": "Generic",
-        "model": "Aluminum Foot Pegs Big Size 2 pcs Bicycle Accessories",
-        "platform": "Daraz BD (Giant)",
-        "price": 212,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-i1574493628.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
-        "note": "BDT 212"
       },
       {
         "brand": "Generic",
@@ -364,19 +353,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:12+08:00",
+        "scraped_at": "2026-07-08T01:30:53+08:00",
         "note": "BDT 305"
       },
       {
         "brand": "Generic",
-        "model": "Bicycle",
-        "platform": "Daraz BD (Polygon)",
-        "price": 1150,
+        "model": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "platform": "Daraz BD (Giant)",
+        "price": 6324,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i1581451115.html",
+        "url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
-        "note": "BDT 1,150"
+        "scraped_at": "2026-07-08T01:30:53+08:00",
+        "note": "BDT 6,324"
       },
       {
         "brand": "Generic",
@@ -386,8 +375,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/160mm-i543907570.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
+        "scraped_at": "2026-07-08T01:30:56+08:00",
         "note": "BDT 199"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle",
+        "platform": "Daraz BD (Polygon)",
+        "price": 1150,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i1581451115.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:56+08:00",
+        "note": "BDT 1,150"
       },
       {
         "brand": "Phoenix",
@@ -397,19 +397,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1582590324.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
+        "scraped_at": "2026-07-08T01:30:56+08:00",
         "note": "BDT 6,000"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine 26\" Gold 600 Bicycle",
-        "platform": "Daraz BD (Polygon)",
-        "price": 17000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i561273686.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
-        "note": "BDT 17,000"
       },
       {
         "brand": "Generic",
@@ -419,7 +408,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
+        "scraped_at": "2026-07-08T01:30:56+08:00",
         "note": "BDT 14,444"
       },
       {
@@ -430,19 +419,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
+        "scraped_at": "2026-07-08T01:30:56+08:00",
         "note": "BDT 150"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-        "platform": "Daraz BD (Polygon)",
-        "price": 10000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
-        "note": "BDT 10,000"
       },
       {
         "brand": "Generic",
@@ -452,8 +430,30 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i546952670.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:15+08:00",
+        "scraped_at": "2026-07-08T01:30:56+08:00",
         "note": "BDT 1,286"
+      },
+      {
+        "brand": "Marine",
+        "model": "Marine 26\" Gold 600 Bicycle",
+        "platform": "Daraz BD (Polygon)",
+        "price": 17000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i561273686.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:56+08:00",
+        "note": "BDT 17,000"
+      },
+      {
+        "brand": "Generic",
+        "model": "Champion Super Racer Bike",
+        "platform": "Daraz BD (Polygon)",
+        "price": 660,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i1583574732.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:56+08:00",
+        "note": "BDT 660"
       },
       {
         "brand": "Marine",
@@ -463,7 +463,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -474,7 +474,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-veloce-slayer-10-6061-light-weight-alloy-i325128602.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 18,314"
       },
       {
@@ -485,7 +485,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i295351877.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 18,999"
       },
       {
@@ -496,7 +496,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/5-vt-l200-i169204627.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 950"
       },
       {
@@ -507,7 +507,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-i295351092.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 11,000"
       },
       {
@@ -518,30 +518,30 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i563105559.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
+        "scraped_at": "2026-07-08T01:30:59+08:00",
         "note": "BDT 14,999"
-      },
-      {
-        "brand": "Generic",
-        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-        "platform": "Daraz BD (Veloce)",
-        "price": 14444,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i319543531.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
-        "note": "BDT 14,444"
       },
       {
         "brand": "Generic",
         "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
         "platform": "Daraz BD (Veloce)",
-        "price": 14023,
+        "price": 14999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
+        "url": "https://www.daraz.com.bd/products/26-21-i567826374.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:18+08:00",
-        "note": "BDT 14,023"
+        "scraped_at": "2026-07-08T01:30:59+08:00",
+        "note": "BDT 14,999"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+        "platform": "Daraz BD (Veloce)",
+        "price": 14849,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i563103755.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:30:59+08:00",
+        "note": "BDT 14,849"
       },
       {
         "brand": "Pacific",
@@ -551,7 +551,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/36-mtb-1-i276720408.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:21+08:00",
+        "scraped_at": "2026-07-08T01:31:02+08:00",
         "note": "BDT 1,209"
       },
       {
@@ -562,19 +562,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/helmet-and-bicycle-lock-fixed-password-steel-cable-anti-theft-security-lock-i328369971.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:21+08:00",
+        "scraped_at": "2026-07-08T01:31:02+08:00",
         "note": "BDT 230"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-        "platform": "Daraz BD (Duranta)",
-        "price": 8500,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
-        "note": "BDT 8,500"
       },
       {
         "brand": "Duranta",
@@ -584,7 +573,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-20-847515-i323852740.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 7,820"
       },
       {
@@ -595,8 +584,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mw-20-847793-i117316491.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 9,860"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+        "platform": "Daraz BD (Duranta)",
+        "price": 8500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:05+08:00",
+        "note": "BDT 8,500"
       },
       {
         "brand": "Duranta",
@@ -606,7 +606,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mkb-r01-847544-i235446617.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 6,235"
       },
       {
@@ -617,8 +617,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/21-spd-26-847248-i557085157.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 13,035"
+      },
+      {
+        "brand": "Generic",
+        "model": "high quality  fat bike E cycle 26×4",
+        "platform": "Daraz BD (Duranta)",
+        "price": 70000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/high-quality-fat-bike-e-cycle-264-i191868476.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:05+08:00",
+        "note": "BDT 70,000"
       },
       {
         "brand": "Duranta",
@@ -628,7 +639,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 8,748"
       },
       {
@@ -639,30 +650,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-i531253446.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
+        "scraped_at": "2026-07-08T01:31:05+08:00",
         "note": "BDT 15,500"
-      },
-      {
-        "brand": "Generic",
-        "model": "high quality  fat bike E cycle 26×4",
-        "platform": "Daraz BD (Duranta)",
-        "price": 70000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/high-quality-fat-bike-e-cycle-264-i191868476.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:24+08:00",
-        "note": "BDT 70,000"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter Bicycle Sticker-10PSc",
-        "platform": "Daraz BD (Foxter)",
-        "price": 100,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 100"
       },
       {
         "brand": "Foxter",
@@ -672,19 +661,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
+        "scraped_at": "2026-07-08T01:31:08+08:00",
         "note": "BDT 15,276"
-      },
-      {
-        "brand": "Generic",
-        "model": "TESNO 2 Piston Bicycle Brake EBike Hydraulic Disc Brake ebike Scooter Left Front Right Rear 850/1700",
-        "platform": "Daraz BD (Foxter)",
-        "price": 659,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/tesno-2-8501700-160-i547878376.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 659"
       },
       {
         "brand": "Foxter",
@@ -694,52 +672,74 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
+        "scraped_at": "2026-07-08T01:31:08+08:00",
         "note": "BDT 16,830"
       },
       {
-        "brand": "Generic",
-        "model": "Aluminum Foot Pegs Big Size 2 pcs Bicycle Accessories",
+        "brand": "Foxter",
+        "model": "Foxter Bicycle Sticker-10PSc",
         "platform": "Daraz BD (Foxter)",
-        "price": 212,
+        "price": 100,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-i1574493628.html",
+        "url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 212"
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 100"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "platform": "Daraz BD (Foxter)",
+        "price": 107,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 107"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+        "platform": "Daraz BD (Foxter)",
+        "price": 115,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 115"
       },
       {
         "brand": "Generic",
-        "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+        "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
         "platform": "Daraz BD (Foxter)",
-        "price": 305,
+        "price": 1582,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
+        "url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 305"
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 1,582"
       },
       {
         "brand": "Generic",
-        "model": "2 Pcs Bicycle Foot Pegs Aluminium",
+        "model": "Baby Electric Bike R3",
         "platform": "Daraz BD (Foxter)",
-        "price": 85,
+        "price": 25000,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-i1574100080.html",
+        "url": "https://www.daraz.com.bd/products/r3-i319536367.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 85"
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 25,000"
       },
       {
         "brand": "Generic",
-        "model": "Bike Bicycle Mtb Led Frog Head Front Lamp Warning Rear Flash Light - Cycle Accessories - Cycle Acces",
+        "model": "RFL Best Buy Road Master Tricycle - White & Cyan Blue",
         "platform": "Daraz BD (Foxter)",
-        "price": 200,
+        "price": 1621,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/mtb-led-i570855655.html",
+        "url": "https://www.daraz.com.bd/products/rfl-i1574328968.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:27+08:00",
-        "note": "BDT 200"
+        "scraped_at": "2026-07-08T01:31:08+08:00",
+        "note": "BDT 1,621"
       },
       {
         "brand": "Warrior",
@@ -749,7 +749,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/71-20-21-26-i327937068.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:30+08:00",
+        "scraped_at": "2026-07-08T01:31:11+08:00",
         "note": "BDT 14,999"
       },
       {
@@ -760,7 +760,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i295351877.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:30+08:00",
+        "scraped_at": "2026-07-08T01:31:11+08:00",
         "note": "BDT 18,999"
       },
       {
@@ -771,52 +771,30 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
+        "scraped_at": "2026-07-08T01:31:11+08:00",
         "note": "BDT 19,000"
       },
       {
-        "brand": "Foxter",
-        "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+        "brand": "Generic",
+        "model": "Nice Bicycle toy for kids",
         "platform": "Daraz BD (Warrior 71)",
-        "price": 16830,
+        "price": 180,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
+        "url": "https://www.daraz.com.bd/products/-i317370993.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
-        "note": "BDT 16,830"
+        "scraped_at": "2026-07-08T01:31:11+08:00",
+        "note": "BDT 180"
       },
       {
         "brand": "Generic",
-        "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
+        "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
         "platform": "Daraz BD (Warrior 71)",
-        "price": 100000,
+        "price": 1286,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-i243099842.html",
+        "url": "https://www.daraz.com.bd/products/-i546952670.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
-        "note": "BDT 100,000"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 8748,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
-        "note": "BDT 8,748"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 26999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/rockrider-xc-401-i327344513.html",
-        "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
-        "note": "BDT 26,999"
+        "scraped_at": "2026-07-08T01:31:11+08:00",
+        "note": "BDT 1,286"
       },
       {
         "brand": "Generic",
@@ -826,20 +804,34 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
         "is_new": true,
-        "scraped_at": "2026-07-08T01:19:31+08:00",
+        "scraped_at": "2026-07-08T01:31:11+08:00",
         "note": "BDT 150"
+      },
+      {
+        "brand": "Foxter",
+        "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 16830,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:11+08:00",
+        "note": "BDT 16,830"
+      },
+      {
+        "brand": "Generic",
+        "model": "RFL Best Buy Royal Bike",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 1344,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/rfl-i1574414436.html",
+        "is_new": true,
+        "scraped_at": "2026-07-08T01:31:11+08:00",
+        "note": "BDT 1,344"
       }
     ],
     "price_tracker": [],
     "news": [
-      {
-        "title": "BD 25K+ BDT 高端市场: 1 SKU 跨 1 品牌 = Rockrider",
-        "source": "Daraz BD 实时",
-        "summary": "顶价 26,999 BDT（Rockrider）· Phoenix 当前无 25K+ SKU",
-        "url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
-        "published_at": "2026-07-08",
-        "is_new": true
-      },
       {
         "title": "BD 15-25K BDT 中高端: 14 SKU · 龙头 = Marine (7 SKU)",
         "source": "Daraz BD 实时",
@@ -849,7 +841,7 @@
         "is_new": true
       },
       {
-        "title": "Phoenix BD 实时: 10 SKU · ASP 9,359 BDT · 顶价 10,000",
+        "title": "Phoenix BD 实时: 9 SKU · ASP 9,266 BDT · 顶价 10,000",
         "source": "Daraz BD 实时",
         "summary": "Phoenix BD 真实排名 = #14 · 评分 46.4 · 与 Rockrider(16 SKU · ASP 33K · score 92.4) 差距 3.5x",
         "url": "https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle",
@@ -871,7 +863,7 @@
         "review_text": "Unboxing and assemble video on my youtube channel -(STP Straight to the Point)\nReally fast delevery got in 5 days.\nno camplains about the product.eveything is ok. tools were given in the box to setup the bicycle.",
         "review_time": "21 Jul 2020",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:26+08:00"
+        "scraped_at": "2026-07-08T01:34:06+08:00"
       },
       {
         "item_id": "117316491",
@@ -886,7 +878,7 @@
         "review_text": "অনেক ভালো সেলার, সঠিক পন্য পেয়েছি, দারজ এর প্রতি বিশ্বাস আরো বেড়ে, ধন্যবাদ দারাজ",
         "review_time": "15 Jan 2021",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:26+08:00"
+        "scraped_at": "2026-07-08T01:34:06+08:00"
       },
       {
         "item_id": "235440894",
@@ -901,7 +893,7 @@
         "review_text": "প্রথমত সাইকেল সেটিং করা ছিল না, অধিকাংশ স্ক্রু মিসিং, সাইকেলের স্ক্রু'র সেটিংসের জন্য প্রয়োজনীয় টুলস দেয়া হয়, কিচ্ছু ছিল না। ১০০০ টাকা খরচ করে সেট করতে হয়েছে। RFL - এর কর্মচারীরা যেহেতু বিক্রয়ের কাজ করে সুতরাং ক্রেতা সেবা তাদের জন্য গুরুত্বপূর্ণ কিছু না। ক্রেতাকে যেনতেনভাবে গছাতে পারলেই হলো",
         "review_time": "06 Feb 2024",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:27+08:00"
+        "scraped_at": "2026-07-08T01:34:08+08:00"
       },
       {
         "item_id": "323810443",
@@ -916,7 +908,7 @@
         "review_text": "batpar onek kisu dey nai kew order diben na kindly",
         "review_time": "16 Apr 2025",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:28+08:00"
+        "scraped_at": "2026-07-08T01:34:08+08:00"
       },
       {
         "item_id": "349283645",
@@ -931,7 +923,7 @@
         "review_text": "দাম অনুযায়ী মোটামুটি",
         "review_time": "22 Sep 2025",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:29+08:00"
+        "scraped_at": "2026-07-08T01:34:09+08:00"
       },
       {
         "item_id": "319543531",
@@ -946,22 +938,7 @@
         "review_text": "cycle ta onk valo overall 🤲\n\njust non-gear cycle",
         "review_time": "10 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:29+08:00"
-      },
-      {
-        "item_id": "202155027",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 2,
-        "review_text": "The cycle was not properly put together. The basket was completely crooked. All the nuts were loose which can cause a serious accident. I had to take the bicycle to a bicycle shop to fix it. Careless seller.",
-        "review_time": "20 May 2024",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:30+08:00"
+        "scraped_at": "2026-07-08T01:34:10+08:00"
       },
       {
         "item_id": "323337459",
@@ -976,7 +953,7 @@
         "review_text": "আমি যে বাইসাইকেলটি  অর্ডার করেছি উনি সেই বাইসাইকেলটি  দেন নাই। আবার যেটি  দিয়েছেন সেটা পুরাতন। উপরে স্টিকার দিয়ে ঢেকে ভিতরে মরিচাওয়ালা সাইকেল দিয়েছেন। আমি অর্ডার করেছি ফনিক্স ব্যান্ড উনি আমাকে দিয়েছে এডিনা ব্যান্ড। কালারও অন্যটি দিয়েছেন। প্রোডাক্ট খুবই বাজে। ভুল করেও এই এই সেলার থেকে কেউ কোনদিন একটি প্রোডাক্ট কিনবেন না। নিশ্চিত ভাবে ধরা খাবেন। পুরাই বাটপার। বাটপার বাটপার বাটপার । দারাজ অ্যাপ থেকে ওরা রিটার্ন অপশন বন্ধ করে দিয়ে রাখছে।",
         "review_time": "27 Nov 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:10+08:00"
       },
       {
         "item_id": "323337459",
@@ -991,7 +968,7 @@
         "review_text": "Free Shipping but seller delivery time extra money",
         "review_time": "09 Mar 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:10+08:00"
       },
       {
         "item_id": "425174012",
@@ -1006,7 +983,7 @@
         "review_text": "সাইকেল টি   ভালই পাইছি সবকিছু ওকে ছিল। তবে কেনার আগে ডেলিভারি সিস্টেমটি ক্লিয়ার করে নেবেন। আমার অতিরিক্ত ২০০ টাকা লাগছে।",
         "review_time": "01 Dec 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:11+08:00"
       },
       {
         "item_id": "425174012",
@@ -1021,7 +998,7 @@
         "review_text": "Why did you deliver a wrong item which is not match with the picture as I order …!!!\n\n\nYou should not play with the mind of a little child!!",
         "review_time": "09 May 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:11+08:00"
       },
       {
         "item_id": "425174012",
@@ -1036,7 +1013,7 @@
         "review_text": "দেখেন আপনারা কেউ এই পন্যটি কিনবেন না,আমি পতারিত হয়েছি এইটার দাম ৮০০০টাকা সেলার তার নিজের ফেজবুক পেজে বিক্রি করছে আর এখানে লিখে রেখেছে ১০০০০টাকা আমার কাছ থেকে ২০০০টাকা বেশি রেখেছে এরা বাটপার আর এসএমএস করলে কনো উওর দেই না কেনার আগে সাবধান",
         "review_time": "29 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:11+08:00"
       },
       {
         "item_id": "425174012",
@@ -1051,7 +1028,7 @@
         "review_text": "আমার শিপিং ডেলিভারি ফি ছিল।আমরা বুঝের কেহ বাসায় ছিলাম না,কিন্ত ডেলিভারি মেন ৩০০ টাকা নিয়েছে কেন???",
         "review_time": "19 Aug 2025",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:11+08:00"
       },
       {
         "item_id": "425174012",
@@ -1066,52 +1043,22 @@
         "review_text": "",
         "review_time": "13 Nov 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:31+08:00"
+        "scraped_at": "2026-07-08T01:34:11+08:00"
       },
       {
-        "item_id": "202142950",
+        "item_id": "202155027",
         "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
-        "rating": 3,
-        "review_text": "Sorry can't give 5 star. Finishing quality is poor. Rust on bell. some dent. Tyres air pressure not full.",
-        "review_time": "18 Nov 2021",
-        "has_image": true,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
-      },
-      {
-        "item_id": "202142950",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "আলহামদুলিল্লাহ সাইকেল  টা ভালো। সুন্দর হয়েছে",
-        "review_time": "07 Apr 2022",
+        "rating": 2,
+        "review_text": "The cycle was not properly put together. The basket was completely crooked. All the nuts were loose which can cause a serious accident. I had to take the bicycle to a bicycle shop to fix it. Careless seller.",
+        "review_time": "20 May 2024",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
-      },
-      {
-        "item_id": "202142950",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "গুড",
-        "review_time": "03 Feb 2022",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
+        "scraped_at": "2026-07-08T01:34:12+08:00"
       },
       {
         "item_id": "202143847",
@@ -1126,7 +1073,7 @@
         "review_text": "when order we saw PHOENIX brand that's why we ordered  but got KIESEL brand\nI think it totally unexpected \ncommittment should kept 100% accuracy",
         "review_time": "08 Mar 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
+        "scraped_at": "2026-07-08T01:34:13+08:00"
       },
       {
         "item_id": "202143847",
@@ -1141,7 +1088,7 @@
         "review_text": "This is unfortunate,  the  selected color was blue but delivered orange..so the rider is ♥ broken.",
         "review_time": "15 Nov 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
+        "scraped_at": "2026-07-08T01:34:13+08:00"
       },
       {
         "item_id": "202143847",
@@ -1156,82 +1103,127 @@
         "review_text": "it's ok as per price....rider samiul is very very good.",
         "review_time": "22 Jun 2022",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:33+08:00"
+        "scraped_at": "2026-07-08T01:34:13+08:00"
       },
       {
-        "item_id": "202150683",
+        "item_id": "202142950",
         "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "My Kids are so Happy.... Thanks for sending such a Nice Bicycle.",
-        "review_time": "14 Jun 2023",
+        "rating": 3,
+        "review_text": "Sorry can't give 5 star. Finishing quality is poor. Rust on bell. some dent. Tyres air pressure not full.",
+        "review_time": "18 Nov 2021",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:34+08:00"
+        "scraped_at": "2026-07-08T01:34:14+08:00"
       },
       {
-        "item_id": "202150683",
+        "item_id": "202142950",
         "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "প্রথম অনেক ভয়ে ছিলাম  সেলার কেমন হবে হাতে পাওয়ার পরে দেক্লাম অনেক সুন্দর sealer অনেক ভালো মানুষ",
-        "review_time": "21 Dec 2022",
-        "has_image": true,
-        "scraped_at": "2026-07-08T01:22:34+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "সাইকেলটি ভালো আছি চাইলে যে কেউ নিতে পারেন।",
-        "review_time": "15 Oct 2023",
-        "has_image": true,
-        "scraped_at": "2026-07-08T01:22:34+08:00"
-      },
-      {
-        "item_id": "202150683",
-        "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
-        "brand": "Phoenix",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "100% original.. khub valo ekti cycle \njemon dekhechi temoni peyechi",
-        "review_time": "08 Nov 2025",
+        "review_text": "আলহামদুলিল্লাহ সাইকেল  টা ভালো। সুন্দর হয়েছে",
+        "review_time": "07 Apr 2022",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:34+08:00"
+        "scraped_at": "2026-07-08T01:34:14+08:00"
       },
       {
-        "item_id": "202150683",
+        "item_id": "202142950",
         "item_title": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
+        "item_url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
         "brand": "Phoenix",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "Seems good so far",
-        "review_time": "17 Mar 2023",
+        "review_text": "গুড",
+        "review_time": "03 Feb 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:14+08:00"
+      },
+      {
+        "item_id": "189705085",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "অনেক সুন্দর সাইকেল। বাচ্চা খুব খুশি হয়েছে।",
+        "review_time": "21 Oct 2024",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:34+08:00"
+        "scraped_at": "2026-07-08T01:34:15+08:00"
+      },
+      {
+        "item_id": "189705085",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Good quality. Thanks to the seller.",
+        "review_time": "08 Jan 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:15+08:00"
+      },
+      {
+        "item_id": "189705085",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Better than the picture!!. My child like very much👍👍👍👍👍👍, highly recommended",
+        "review_time": "12 Apr 2022",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:15+08:00"
+      },
+      {
+        "item_id": "189705085",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "good",
+        "review_time": "17 Dec 2023",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:15+08:00"
+      },
+      {
+        "item_id": "189705085",
+        "item_title": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
+        "item_url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
+        "brand": "Phoenix",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "ধন্যবাদ সুন্দর একটা সাইকেল দেওয়ার জন্য",
+        "review_time": "20 Feb 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:15+08:00"
       },
       {
         "item_id": "202147734",
@@ -1246,7 +1238,7 @@
         "review_text": "পিছনের চাকায় হাওয়া ছিল না, যেটা অনেক ভুগিয়েছে। এছাড়া সব ঠিক ছিল। সাইকেল প্যাকেজিং সুন্দর হয়েছে। ডেলিভারি অনেক দেরী হয়েছে।",
         "review_time": "28 Apr 2022",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:35+08:00"
+        "scraped_at": "2026-07-08T01:34:15+08:00"
       },
       {
         "item_id": "349289200",
@@ -1261,7 +1253,7 @@
         "review_text": "অর্ডার যা ছিল সেই সাইকেল পাঠায় নাই। একদম বাজে কোয়ালিটির, বাজে কালার এর সাইকেল পাঠাইসে।",
         "review_time": "19 Aug 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:36+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
       },
       {
         "item_id": "349121456",
@@ -1276,7 +1268,7 @@
         "review_text": "মোটামুটি জিনিস দাম অনুযায়ী অনেক সুন্দর_কিন্তু ডেলিভারিতে অনেক লেট করেছে_কিন্তু জিনিসটা অনেক সুন্দর হয়েছে। \nদাম অনুপাতে ১০০/২০০ দিলাম",
         "review_time": "20 Jan 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:37+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
       },
       {
         "item_id": "349121456",
@@ -1291,7 +1283,7 @@
         "review_text": "সুন্দর অনেক টা কিন্তু আমার বাবু টা একটু ছোট আরেকটু বড় হলে চালাতে পারবে। আর আর এফ এল এটা একটা বান্ড না এটা একটা আস্থা।",
         "review_time": "3 weeks ago",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:37+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
       },
       {
         "item_id": "349121456",
@@ -1306,7 +1298,7 @@
         "review_text": "I really like the product, but the Delivary system was pretty awful. The Delivary guy who was not willing to come to the pick up location and was threatening that he will leave if I do not come to his location.",
         "review_time": "31 May 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:37+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
       },
       {
         "item_id": "349121456",
@@ -1321,7 +1313,7 @@
         "review_text": "choto gari 2 theke 3 bochor meye cheler jonno thik ache ar amrtai samner caka gure kom  motamuti valo",
         "review_time": "07 Jan 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:37+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
       },
       {
         "item_id": "349121456",
@@ -1336,7 +1328,172 @@
         "review_text": "Best product.  Nice delivery in 3 days. Amr babyr birthday r din e asche..  but set kore nite hoache. Delivery man setting kore diye 20 charge niache.",
         "review_time": "16 May 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:37+08:00"
+        "scraped_at": "2026-07-08T01:34:17+08:00"
+      },
+      {
+        "item_id": "314265944",
+        "item_title": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
+        "item_url": "https://www.daraz.com.bd/products/aci-i314265944.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Excellent product.I got the goods within 4 days.Seller's behavior was also good.My nephew was very happy to see the bike.\nYou can buy it from the seller.",
+        "review_time": "03 Jul 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:18+08:00"
+      },
+      {
+        "item_id": "314265944",
+        "item_title": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
+        "item_url": "https://www.daraz.com.bd/products/aci-i314265944.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "কেউ কিনবেন না স্কেমার order করছি একটা দিসে নরমালটা এদের কাছে কি আমাদের টাকার কোন দাম নাই কিছুই নেবেন না অনেক বড় এস্কেমার   অর্ডার করছি একটা দিছে আরেকটা নরমাল গাড়ি দিয়ে দিছে",
+        "review_time": "03 May 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:18+08:00"
+      },
+      {
+        "item_id": "314265944",
+        "item_title": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
+        "item_url": "https://www.daraz.com.bd/products/aci-i314265944.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "পণ্যটি  দ্রুত সময়ের মধ্যে দেওয়ার জন্য DRAZ টিমকে অসংখ্য ধন্যবাদ  👍পণ্যটির 🏍️গুণগত মান  অনেক ভালো এবং টেকসই  যেমনটা চেয়েছি তেমনটাই পেয়েছি কিন্তু  লাইট এবং সাউন্ড সিস্টেমের ব্যাটারি🔋 দেওয়া হয়নি 😒 তবে  খেলনা গাড়ি পেয়ে আমার একটা ভাগিনা ও  ভাগ্নী অনেক খুশি☺️ হয়েছে আপনারা যারা নেওয়ার ইচ্ছে নিঃসন্দেহে আপনারা গাড়িটি বাচ্চাদের জন্য নিতে পারেন   গাড়িটি সাইজ ও ওনেক বড়",
+        "review_time": "23 Dec 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:18+08:00"
+      },
+      {
+        "item_id": "314265944",
+        "item_title": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
+        "item_url": "https://www.daraz.com.bd/products/aci-i314265944.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "বিক্রেতা কথা রেখেছে যেমন টি চেয়েছিলাম তেমনটাই পেয়েছি... ধন্যবাদ",
+        "review_time": "18 May 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:18+08:00"
+      },
+      {
+        "item_id": "314265944",
+        "item_title": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
+        "item_url": "https://www.daraz.com.bd/products/aci-i314265944.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "অনেক সুন্দর। কিন্তু 200 টাকা বেশি নিয়ে ফেলেছে",
+        "review_time": "11 May 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:18+08:00"
+      },
+      {
+        "item_id": "448794896",
+        "item_title": "Baybee Kids Push Parent Control Handle Tricycle Cruiser Pedal Go Kart Racing Ride On Toy Car For Bab",
+        "item_url": "https://www.daraz.com.bd/products/0-4-i448794896.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "quality good, my baby teally like it, ❤️❤️",
+        "review_time": "25 Nov 2025",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:19+08:00"
+      },
+      {
+        "item_id": "245555067",
+        "item_title": "RFL Road Master Tricycle White & Cyan Blue 891390",
+        "item_url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "দাম অনুযায়ী সুন্দর ও মজবুত পেয়েছি।\nতবে ৪ বছরের বাচ্চার জন্য ছোট হবে।\n\nযেমন চেয়েছি তেমন দিয়েছে।\nধব্যবাদ সেইলর ও দারাজ কে।\n\nডেলিভারী ম্যান ও যতেষ্ট ভালো ছিল।",
+        "review_time": "14 Mar 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:20+08:00"
+      },
+      {
+        "item_id": "245555067",
+        "item_title": "RFL Road Master Tricycle White & Cyan Blue 891390",
+        "item_url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "This was  a pretty good item for toddler also have music and light. My nephew love this one.",
+        "review_time": "06 Jun 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:20+08:00"
+      },
+      {
+        "item_id": "245555067",
+        "item_title": "RFL Road Master Tricycle White & Cyan Blue 891390",
+        "item_url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Choto meyer jonno newa but Boro meye dhokol Kore niche",
+        "review_time": "16 Sep 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:20+08:00"
+      },
+      {
+        "item_id": "245555067",
+        "item_title": "RFL Road Master Tricycle White & Cyan Blue 891390",
+        "item_url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "প্রোডাক্ট ভালো আছে, ডেলিভারিতে সময় বেশি লাগছে।",
+        "review_time": "03 May 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:20+08:00"
+      },
+      {
+        "item_id": "245555067",
+        "item_title": "RFL Road Master Tricycle White & Cyan Blue 891390",
+        "item_url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "kom price ar modda valoi lagca,Music hoi",
+        "review_time": "16 Jan 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:20+08:00"
       },
       {
         "item_id": "240846393",
@@ -1351,7 +1508,7 @@
         "review_text": "Ordered red, got blue. Product's build quality is not up to the mark. Its shaky and not safe for kids. Kids may fall off from it easily.",
         "review_time": "17 Mar 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:20+08:00"
       },
       {
         "item_id": "240846393",
@@ -1366,7 +1523,7 @@
         "review_text": "ভালো তবে হেন্ডেলটা খুব শক্ত গুরাতে কষ্ট হয়",
         "review_time": "17 Jan 2024",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:20+08:00"
       },
       {
         "item_id": "240846393",
@@ -1381,7 +1538,7 @@
         "review_text": "Satisfied with happiness 😊",
         "review_time": "14 Nov 2023",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:20+08:00"
       },
       {
         "item_id": "240846393",
@@ -1396,232 +1553,97 @@
         "review_text": "কম দামে ভালো পন্য",
         "review_time": "02 Dec 2023",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:20+08:00"
       },
       {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
+        "item_id": "369353830",
+        "item_title": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
+        "item_url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
+        "brand": "Generic",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "ছবির মতই পেয়েছি। এর মানও যথেষ্ট ভালো",
-        "review_time": "15 Dec 2024",
+        "review_text": "খুবই সুন্দর একটা সাইকেল আমার বাচ্চা খুব পছন্দ করেছে টায়ার গুলা অনেক সুন্দর সেম সাইকেল দোকানে ১৩ হাজার টাকা চেয়েছে দারাজে অনেক কমে পেয়েছি ধন্যবাদ দারাজ ভালো প্রোডাক্ট দেওয়ার জন্য❤️",
+        "review_time": "03 Jun 2024",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:22+08:00"
       },
       {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
+        "item_id": "189838377",
+        "item_title": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "item_url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "brand": "Falcon",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "দারাজকে ধন্যবাদ একটা ভালো সেলারকে রাখার জন্য,দ্রত সময়ে প্রোডাক্ট হাতে পেয়েছি ,ব্যবহার করে ভালো লাগছে,",
-        "review_time": "30 Nov 2023",
+        "review_text": "আমি যেটা অর্ডার করেছি সেটা ত আসেনাই,সামনের সিটে একটু পেছনে সিট ছিল।এটাতে নেই",
+        "review_time": "15 Jul 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:24+08:00"
       },
       {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
+        "item_id": "189838377",
+        "item_title": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "item_url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "brand": "Falcon",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "soft and origin product thanks",
-        "review_time": "25 Jun 2021",
+        "review_text": "প্রথমে ফরহাদ সাইকেল ষ্টোর এবং দারাজকে ধন্যবাদ জানাই, ফিলিপস ব্র্যান্ডের সাইকেলের ডিজাইন অসাধারন। যদিও স্টিকারের ভিন্নতা ছিল কিন্তু সেটাও খুবই সুন্দর। তার সাথে দারাজ এবং সেলার পার্টনার বিসস্তার সাথে কাজ করলে কাস্টমার এর আনন্দের সিমানা থাকে না। সেলার পার্টনার ফরহাদ সাইকেলের যারা সাইকেল ফিটিং করে তাদেরকে আরও দক্ষ হতে হবে। ফিটিং ভালভাবে করতে পারে নাই। আর তাই আমাকে ২৫০/ টাকাইয় সৈয়দপুরের ভাসানি সাইকেল স্টোরে সুন্দর ভাবে তাদের কারিগর দ্বারা কাজ করতে হয়েছে। তাছারা অভারওল সবকিছুই ঠিক। ধন্যবাদ।",
+        "review_time": "17 Dec 2022",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:24+08:00"
       },
       {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
+        "item_id": "189838377",
+        "item_title": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "item_url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "brand": "Falcon",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "medium",
-        "review_time": "24 Apr 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
-      },
-      {
-        "item_id": "167924178",
-        "item_title": "Bicycle GIANT Gel Seat Cover - Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167924178.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good product",
-        "review_time": "19 Feb 2021",
+        "review_text": "That's very nice n colour is perfectly match with my desir ness, thank you dararz❤️❤️❤️❤️\nBasically I'm so pleased with their punctually, \nThey delivered the cycle within five days only❤️❤️❤️",
+        "review_time": "13 Jul 2022",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:40+08:00"
+        "scraped_at": "2026-07-08T01:34:24+08:00"
       },
       {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
+        "item_id": "189838377",
+        "item_title": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "item_url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "brand": "Falcon",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "alhamdulillah original product peyechi😊",
-        "review_time": "19 Jun 2021",
+        "review_text": "The cycle is good and heavy for baby. So everyone can buy it from this seller. Many many thanks to seller.",
+        "review_time": "15 May 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:41+08:00"
+        "scraped_at": "2026-07-08T01:34:24+08:00"
       },
       {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
+        "item_id": "189838377",
+        "item_title": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+        "item_url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
+        "brand": "Falcon",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "Quality of the item found very good. Satisfactory.",
-        "review_time": "08 Apr 2021",
+        "review_text": "মান মোটামুটি ভালো। প্রথম এ ভয় পেয়ে ছিলাম এতো টাকাদিয়ে কিনবো কি না কি দিয়ে দিবে। না দেখলাম ভালোই দিছে।",
+        "review_time": "12 Jun 2022",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:41+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 2,
-        "review_text": "Not adjustable with the seat. It moves when you are sitting on it during the riding",
-        "review_time": "23 Apr 2021",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:41+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 3,
-        "review_text": "I received  phonex seatcover?",
-        "review_time": "03 Jul 2021",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:41+08:00"
-      },
-      {
-        "item_id": "167918745",
-        "item_title": "New GIANT Bike Bicycle Silicone Silica GEL Cushion Soft Pad Saddle Seat Cover - Blue & Black",
-        "item_url": "https://www.daraz.com.bd/products/-i167918745.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good enough, I am satisfied",
-        "review_time": "17 Feb 2022",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:41+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "আলহামদুলিল্লাহ। ভালোই জিনিস পেলাম।আপনারা নিশ্চিতে নিতে পারেন।",
-        "review_time": "16 Jul 2025",
-        "has_image": true,
-        "scraped_at": "2026-07-08T01:22:42+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "যত আশা করছি এতো ভালো না।মোটামোটি চলে।",
-        "review_time": "15 Nov 2025",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:42+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "কোয়ালিটি মোটামুটি",
-        "review_time": "2 weeks ago",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:42+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "Good quality.",
-        "review_time": "21 Mar 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:42+08:00"
-      },
-      {
-        "item_id": "478560208",
-        "item_title": "Giant High Security Level Bicycle Lock Bike Chain Lock Anti-theft Bicycle Chain Lock with Key for E-",
-        "item_url": "https://www.daraz.com.bd/products/-i478560208.html",
-        "brand": "Giant",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "খুব ভালো ❤️",
-        "review_time": "04 Jan 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:42+08:00"
+        "scraped_at": "2026-07-08T01:34:24+08:00"
       },
       {
         "item_id": "167216989",
@@ -1636,7 +1658,7 @@
         "review_text": "packet quality 2/10\nmodel quality 10/10\nextra wheels 5/10\n\nover all  7.6/10 \naffordable and good",
         "review_time": "12 Jan 2026",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:45+08:00"
+        "scraped_at": "2026-07-08T01:34:25+08:00"
       },
       {
         "item_id": "167216989",
@@ -1651,7 +1673,7 @@
         "review_text": "ভালো কোয়ালিটি আমি আরো তিনটা ওদের দিয়েছ 💯💯👌👌",
         "review_time": "04 Feb 2026",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:45+08:00"
+        "scraped_at": "2026-07-08T01:34:25+08:00"
       },
       {
         "item_id": "167216989",
@@ -1666,7 +1688,7 @@
         "review_text": "owaooooooooo......so cute",
         "review_time": "26 Oct 2024",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:45+08:00"
+        "scraped_at": "2026-07-08T01:34:25+08:00"
       },
       {
         "item_id": "167216989",
@@ -1681,7 +1703,7 @@
         "review_text": "same as shown .cute .bt price is high",
         "review_time": "29 Apr 2024",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:45+08:00"
+        "scraped_at": "2026-07-08T01:34:25+08:00"
       },
       {
         "item_id": "167216989",
@@ -1696,7 +1718,82 @@
         "review_text": "ভাংঙ্গা সাইকেলটা দিলেন, মোটেও ভালো করেননি,বাচ্চার জন্যে কেনা হয়েছিলো । যাক এই শপ থেকে আর কোনো দিন কেনা হবেনা ইনশাল্লাহ্।",
         "review_time": "16 Aug 2022",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:45+08:00"
+        "scraped_at": "2026-07-08T01:34:25+08:00"
+      },
+      {
+        "item_id": "374774022",
+        "item_title": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "item_url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "সেলার আমার চাহিদা মতো পন্য পাঠিয়েছে, অর্ডার করার পর সেলার ভাই কে মেসেজে বলে দিয়েছিলাম আমার রিকোয়ারমেন্ট, সেই হিসেবে পাঠিয়েছে, খুবই আন্তরিক। প্রোডাক্ট আলহামদুলিল্লাহ ঠিক ঠাক আছে। প্যাকেজিং ও অনেক সুন্দর ভাবে করেছে বাবল দিয়ে। ১০/১০ রেটিং দিলাম সার্ভিস এবং সেলার কে।",
+        "review_time": "31 Aug 2024",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:26+08:00"
+      },
+      {
+        "item_id": "374774022",
+        "item_title": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "item_url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "ভালো আছে 100/100 ভালো।সেইম জিনিস কোন সমস্যা ছাড়া নিতে পারেন",
+        "review_time": "21 May 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:26+08:00"
+      },
+      {
+        "item_id": "374774022",
+        "item_title": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "item_url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "গাড়ি ভালো কিন্তু সেলার 🥹🥹",
+        "review_time": "03 Jun 2026",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:26+08:00"
+      },
+      {
+        "item_id": "374774022",
+        "item_title": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "item_url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Valo ekta bike but remote e kaj kore naii.",
+        "review_time": "30 Jan 2026",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:26+08:00"
+      },
+      {
+        "item_id": "374774022",
+        "item_title": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
+        "item_url": "https://www.daraz.com.bd/products/2-5-i374774022.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "good",
+        "review_time": "04 Dec 2025",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:26+08:00"
       },
       {
         "item_id": "325128602",
@@ -1711,7 +1808,7 @@
         "review_text": "প্যাকেজ লুজ। কিন্তু মালামাল বুঝে পেয়েছি।",
         "review_time": "24 Oct 2025",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:48+08:00"
+        "scraped_at": "2026-07-08T01:34:31+08:00"
       },
       {
         "item_id": "295351877",
@@ -1726,7 +1823,7 @@
         "review_text": "Meet my cutie new partner ❤️ \nReceived at best price..\nSatisfied.\nRecommended..",
         "review_time": "09 Jun 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:49+08:00"
+        "scraped_at": "2026-07-08T01:34:31+08:00"
       },
       {
         "item_id": "295351877",
@@ -1741,7 +1838,7 @@
         "review_text": "Overall good, shudhu 🔔 broken chilo",
         "review_time": "15 Apr 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:49+08:00"
+        "scraped_at": "2026-07-08T01:34:31+08:00"
       },
       {
         "item_id": "295351877",
@@ -1756,7 +1853,7 @@
         "review_text": "Everything was good. But the price is just a bit high. But still, all was good.",
         "review_time": "18 Mar 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:49+08:00"
+        "scraped_at": "2026-07-08T01:34:31+08:00"
       },
       {
         "item_id": "169204627",
@@ -1771,7 +1868,7 @@
         "review_text": "khub valo laglo ....\neta veloce er 100% authentic product .sob kichu thik thak packaging onek valo chilo .ar seller vai onek responsive chilen.Apnara cycle er perfect security r jonno eta nissondhehe nite paren.Thank you DARAZ,🥰🥰🥰",
         "review_time": "28 Aug 2021",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:50+08:00"
+        "scraped_at": "2026-07-08T01:34:32+08:00"
       },
       {
         "item_id": "169204627",
@@ -1786,7 +1883,7 @@
         "review_text": "খুব ভালো প্রডাক্ট , প্রডাক্ট এ কোন ত্রুটি নেই । কেউ চাইলে নিতে পারেন, কিন্তু ডেলিভারি পেতে অনেক দেরি হয়েছে, তাই আমি একটু রাগান্বিত হয়ে ছিলাম, কিন্তু প্রোডাক্টের কোন ত্রুটি নেই তাই বলে এখন খুব খুশি 😀☺️",
         "review_time": "29 Jun 2021",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:50+08:00"
+        "scraped_at": "2026-07-08T01:34:32+08:00"
       },
       {
         "item_id": "169204627",
@@ -1801,7 +1898,7 @@
         "review_text": "Great product and great behaviour. Delivery was pretty late but it was within the given time so that’s okay. You can trust this shop!",
         "review_time": "23 Apr 2021",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:50+08:00"
+        "scraped_at": "2026-07-08T01:34:32+08:00"
       },
       {
         "item_id": "169204627",
@@ -1816,7 +1913,7 @@
         "review_text": "Delivery is late",
         "review_time": "02 May 2021",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:50+08:00"
+        "scraped_at": "2026-07-08T01:34:32+08:00"
       },
       {
         "item_id": "276720408",
@@ -1831,7 +1928,7 @@
         "review_text": "মোটামুটি ভালো লাগছে। ওটার উপর হালকা হালকা spot আছে।তাতে চলে।",
         "review_time": "05 Apr 2023",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:52+08:00"
+        "scraped_at": "2026-07-08T01:34:35+08:00"
       },
       {
         "item_id": "328369971",
@@ -1846,7 +1943,7 @@
         "review_text": "দাম অনুযায়ী ভালো চাইলে আপনারা নিতে পারেন",
         "review_time": "25 Mar 2024",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:53+08:00"
+        "scraped_at": "2026-07-08T01:34:36+08:00"
       },
       {
         "item_id": "328369971",
@@ -1861,7 +1958,7 @@
         "review_text": "Very good product, password not changable",
         "review_time": "23 May 2025",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:53+08:00"
+        "scraped_at": "2026-07-08T01:34:36+08:00"
       },
       {
         "item_id": "328369971",
@@ -1876,7 +1973,7 @@
         "review_text": "jkjik(ijkxuukj Ohio hooky kill Ohio hookooy kill kill kubo points ijkkollijkkolloikmkikiiikii kk",
         "review_time": "03 Nov 2025",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:53+08:00"
+        "scraped_at": "2026-07-08T01:34:36+08:00"
       },
       {
         "item_id": "328369971",
@@ -1891,7 +1988,7 @@
         "review_text": "Good",
         "review_time": "14 Jun 2024",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:53+08:00"
+        "scraped_at": "2026-07-08T01:34:36+08:00"
       },
       {
         "item_id": "328369971",
@@ -1906,37 +2003,7 @@
         "review_text": "",
         "review_time": "11 Feb 2024",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:53+08:00"
-      },
-      {
-        "item_id": "212409846",
-        "item_title": "Foxter Bicycle Sticker-10PSc",
-        "item_url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
-        "brand": "Foxter",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "মোটামুটি",
-        "review_time": "29 Mar 2023",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:55+08:00"
-      },
-      {
-        "item_id": "547878376",
-        "item_title": "TESNO 2 Piston Bicycle Brake EBike Hydraulic Disc Brake ebike Scooter Left Front Right Rear 850/1700",
-        "item_url": "https://www.daraz.com.bd/products/tesno-2-8501700-160-i547878376.html",
-        "brand": "Generic",
-        "platform": "daraz_bd",
-        "review_id": "",
-        "buyer_name": "Anonymous",
-        "buyer_country": "BD",
-        "rating": 5,
-        "review_text": "very bad",
-        "review_time": "01 Mar 2026",
-        "has_image": false,
-        "scraped_at": "2026-07-08T01:22:56+08:00"
+        "scraped_at": "2026-07-08T01:34:36+08:00"
       },
       {
         "item_id": "546379650",
@@ -1951,7 +2018,7 @@
         "review_text": "Very bad experience, items is not good, price is high, deliver time was too long",
         "review_time": "5 days ago",
         "has_image": true,
-        "scraped_at": "2026-07-08T01:22:57+08:00"
+        "scraped_at": "2026-07-08T01:34:39+08:00"
       },
       {
         "item_id": "546379650",
@@ -1966,37 +2033,172 @@
         "review_text": "Not worth the money.",
         "review_time": "26 Jan 2026",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:57+08:00"
+        "scraped_at": "2026-07-08T01:34:39+08:00"
       },
       {
-        "item_id": "1574100080",
-        "item_title": "2 Pcs Bicycle Foot Pegs Aluminium",
-        "item_url": "https://www.daraz.com.bd/products/2-i1574100080.html",
-        "brand": "Generic",
+        "item_id": "212409846",
+        "item_title": "Foxter Bicycle Sticker-10PSc",
+        "item_url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
+        "brand": "Foxter",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "দেখাচ্ছে বড় কিন্তু অনেক ছোট কেউ নিবেন না এর থেকে বাজার থেকে কিনলে ভালো পাওয়া জাবে",
-        "review_time": "1 week ago",
+        "review_text": "মোটামুটি",
+        "review_time": "29 Mar 2023",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:58+08:00"
+        "scraped_at": "2026-07-08T01:34:40+08:00"
       },
       {
-        "item_id": "1574100080",
-        "item_title": "2 Pcs Bicycle Foot Pegs Aluminium",
-        "item_url": "https://www.daraz.com.bd/products/2-i1574100080.html",
-        "brand": "Generic",
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 4,
+        "review_text": "ভালো",
+        "review_time": "23 Mar 2024",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:40+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
         "platform": "daraz_bd",
         "review_id": "",
         "buyer_name": "Anonymous",
         "buyer_country": "BD",
         "rating": 5,
-        "review_text": "miuu gop gop",
-        "review_time": "22 Apr 2026",
+        "review_text": "সব ঠিকঠাক ছিল।",
+        "review_time": "07 Jan 2023",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:40+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "good",
+        "review_time": "07 May 2026",
         "has_image": false,
-        "scraped_at": "2026-07-08T01:22:58+08:00"
+        "scraped_at": "2026-07-08T01:34:40+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "jeta chaisi oita paini.,😞😞😞",
+        "review_time": "13 Jul 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:40+08:00"
+      },
+      {
+        "item_id": "187586424",
+        "item_title": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+        "item_url": "https://www.daraz.com.bd/products/-i187586424.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "it is very good I recommend",
+        "review_time": "19 Jun 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:40+08:00"
+      },
+      {
+        "item_id": "222437136",
+        "item_title": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+        "item_url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 4,
+        "review_text": "দাম অনুযায়ী ভালো জিনিস। তবে সাইকেলে ফিট হয়নি। ভুল সাইজ অর্ডার করার কারণে। তাই রিটার্ন করে সঠিক সাইজ অর্ডার দিয়েছি।",
+        "review_time": "15 Jul 2022",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:41+08:00"
+      },
+      {
+        "item_id": "222437136",
+        "item_title": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+        "item_url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "sige not match",
+        "review_time": "07 Jul 2022",
+        "has_image": true,
+        "scraped_at": "2026-07-08T01:34:41+08:00"
+      },
+      {
+        "item_id": "222437136",
+        "item_title": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+        "item_url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "বেশ ভাল",
+        "review_time": "22 Jun 2022",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:41+08:00"
+      },
+      {
+        "item_id": "222437136",
+        "item_title": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+        "item_url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
+        "brand": "Foxter",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 5,
+        "review_text": "Ok",
+        "review_time": "30 Jan 2023",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:41+08:00"
+      },
+      {
+        "item_id": "317370993",
+        "item_title": "Nice Bicycle toy for kids",
+        "item_url": "https://www.daraz.com.bd/products/-i317370993.html",
+        "brand": "Generic",
+        "platform": "daraz_bd",
+        "review_id": "",
+        "buyer_name": "Anonymous",
+        "buyer_country": "BD",
+        "rating": 1,
+        "review_text": "Faltu Vanga akta gari daya hoyase.Taka ki gase dhore?",
+        "review_time": "22 Dec 2023",
+        "has_image": false,
+        "scraped_at": "2026-07-08T01:34:44+08:00"
       }
     ]
   },
@@ -2010,7 +2212,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup"
       },
@@ -2022,7 +2224,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup"
       },
@@ -2034,7 +2236,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup"
       },
@@ -2046,7 +2248,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup"
       },
@@ -2058,7 +2260,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup"
       },
@@ -2070,7 +2272,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup"
       },
@@ -2082,7 +2284,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup"
       },
@@ -2094,7 +2296,7 @@
         "platform": "serbasepeda.com",
         "in_stock": true,
         "is_new": true,
-        "scraped_at": "2026-07-08T01:30:23+08:00",
+        "scraped_at": "2026-07-08T01:42:29+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup"
       }
@@ -2707,9 +2909,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-08T01:30:23+08:00",
+  "gen_at": "2026-07-08T01:42:29+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-08T01:30:23+08:00",
+    "computed_at": "2026-07-08T01:42:29+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -2749,7 +2951,7 @@
       "rack"
     ],
     "price_range": "BD 5K-30K BDT",
-    "total_brands": 6,
+    "total_brands": 5,
     "rankings": [
       {
         "brand": "Marine",
@@ -2763,28 +2965,6 @@
         "score": 49.2
       },
       {
-        "brand": "Rockrider",
-        "sku_count": 1,
-        "asp": 26999,
-        "max_price": 26999,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 0,
-        "sku_score": 1.8,
-        "score": 47.3
-      },
-      {
-        "brand": "Duranta",
-        "sku_count": 13,
-        "asp": 9530,
-        "max_price": 15500,
-        "high_tier_count": 1,
-        "high_tier_pct": 8,
-        "in_stock_rate": 0,
-        "sku_score": 22.8,
-        "score": 36.5
-      },
-      {
         "brand": "Warrior",
         "sku_count": 3,
         "asp": 17666,
@@ -2794,6 +2974,17 @@
         "in_stock_rate": 0,
         "sku_score": 5.2,
         "score": 35.7
+      },
+      {
+        "brand": "Duranta",
+        "sku_count": 12,
+        "asp": 9596,
+        "max_price": 15500,
+        "high_tier_count": 1,
+        "high_tier_pct": 8,
+        "in_stock_rate": 0,
+        "sku_score": 21.0,
+        "score": 34.9
       },
       {
         "brand": "Veloce",
@@ -2820,15 +3011,15 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-08T01:30:23+08:00",
+    "computed_at": "2026-07-08T01:42:29+08:00",
     "totals": {
       "bd_pool_total": 74,
       "bd_pool_priced": 74,
-      "bd_pool_mid_high": 26,
-      "bd_pool_brands": 9,
+      "bd_pool_mid_high": 24,
+      "bd_pool_brands": 8,
       "id_pool_total": 8,
       "id_pool_brands": 4,
-      "phx_bd_total": 10,
+      "phx_bd_total": 9,
       "phx_bd_mid_high": 1,
       "phx_bd_asp": 6000,
       "phx_bd_max": 6000,
@@ -2836,10 +3027,10 @@
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 11,
+        "count": 10,
         "brands_count": 2,
         "brands": {
-          "Duranta": 10,
+          "Duranta": 9,
           "Phoenix": 1
         },
         "top_5_brands": [
@@ -2876,26 +3067,14 @@
         ]
       },
       "bd_gt_25k": {
-        "count": 1,
-        "brands_count": 1,
-        "brands": {
-          "Rockrider": 1
-        },
-        "top_5_brands": [
-          "Rockrider"
-        ]
+        "count": 0,
+        "brands_count": 0,
+        "brands": {},
+        "top_5_brands": []
       }
     },
-    "gt_25k_brands": {
-      "Rockrider": 1
-    },
-    "gt_25k_top5": [
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-        "price": 26999
-      }
-    ],
+    "gt_25k_brands": {},
+    "gt_25k_top5": [],
     "phx_gap": {
       "phx_max_price": 6000,
       "phx_min_price": 6000,
@@ -2903,15 +3082,13 @@
       "phx_count": 1,
       "phx_in_15_25": 0,
       "phx_in_gt_25": 0,
-      "industry_max_price": 26999,
-      "industry_max_brand": "Rockrider",
-      "industry_max_model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-      "phx_vs_industry_ratio": 4.5,
-      "gt_25k_count": 1,
-      "gt_25k_brand_count": 1,
-      "gt_25k_brands": [
-        "Rockrider"
-      ],
+      "industry_max_price": 21111,
+      "industry_max_brand": "Marine",
+      "industry_max_model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
+      "phx_vs_industry_ratio": 3.5,
+      "gt_25k_count": 0,
+      "gt_25k_brand_count": 0,
+      "gt_25k_brands": [],
       "gt_25k_phx_present": false,
       "gt_15_25k_count": 10,
       "gt_15_25k_phx_present": false
@@ -2919,8 +3096,8 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Element",
         "United",
+        "Element",
         "Pacific"
       ]
     },
@@ -3065,22 +3242,16 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 10 SKU 3 品牌，Phoenix 缺席；> 25K 1 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 10 SKU 3 品牌，Phoenix 缺席；> 25K 0 SKU 0 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
-        "top_competitors_gt_25k": [
-          {
-            "brand": "Rockrider",
-            "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-            "price": 26999
-          }
-        ]
+        "top_competitors_gt_25k": []
       },
       "id_thunder_id_mtb": {
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Element",
           "United",
+          "Element",
           "Pacific"
         ]
       },
