@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>Phoenix V3 · 市场日报 · <span id="date">加载中…</span></title>
+<title>Phoenix V3 · BD 市场日报 · <span id="date">加载中…</span></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../shared.css">
 <style>
@@ -69,52 +69,6 @@
   </div>
 </div>
 
-<!-- ID 综合 -->
-<div class="section">
-  <h2>🇮🇩 ID 市场综合 <small>价格快照 + 趋势 + 分层 + 市场容量</small></h2>
-  <div class="kpi-grid">
-    <div class="kpi">
-      <div class="kpi-label">💰 ID 价格池</div>
-      <div class="kpi-value"><span id="id-pool">—</span> SKU · <span id="id-brands">—</span> 品牌<br><small>来源：serbasepeda.com hardcoded 8 SKU</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">📈 10-25M 中端真空</div>
-      <div class="kpi-value"><span id="id-7-15m-count">—</span> SKU · <span id="id-7-15m-brands">—</span> 品牌<br><small>= Phoenix 12M IDR 主战场</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">🌟 25M+ 高端</div>
-      <div class="kpi-value"><span id="id-25m-count">—</span> SKU<br><small>V2.6.1 MTB 红海不参与 = 此真空不利用</small></div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">🇮🇩 V2.6.1 三蓝海品类</div>
-      <div class="kpi-value">Phoenix 公路 5 + 平把 3 SKU @ 12-15M<br>FNIX 公路 2 + 砾石 2 SKU @ 12-18M<br><small>MTB/折叠/童车 = 客户 4% 红海不参与</small></div>
-    </div>
-  </div>
-</div>
-
-<!-- 智能洞察 -->
-<div class="section dark">
-  <h2>💡 智能洞察 <small>从 latest.json + 客户判断 · 每日更新</small></h2>
-  <div class="insight" id="smart-insights">
-    <div class="placeholder">⏳ 加载中…</div>
-  </div>
-</div>
-
-<!-- 数据源 + 新闻 -->
-<div class="section">
-  <h2>🔥 数据源 + 市场动态 <small>4 平台社媒 + 价格池 + 新闻</small></h2>
-  <div class="grid-2">
-    <div>
-      <h3>📱 社媒（PENDING APIFY）</h3>
-      <div class="placeholder" id="social-data">⏳ Apify 抓取中…</div>
-    </div>
-    <div>
-      <h3>📰 市场动态（BD + ID 合并）</h3>
-      <div class="placeholder" id="market-news">⏳ Sogou/Daraz 驱动加载中…</div>
-    </div>
-  </div>
-</div>
-
 <div class="footer">
   数据来源：Daraz BD · dreamcycle.store · serbasepeda.com · Sogou search · dashboard_metrics 单一来源<br>
   本页面为 Phoenix-Live Tab #4 · 每日 9:00 + 16:00 自动更新
@@ -164,15 +118,7 @@
     inject('bd-mid-high', totals.bd_pool_mid_high || 0);
     inject('bd-mid-high-brands', bands.bd_15_25k ? bands.bd_15_25k.brands_count : 0);
 
-    // ID 综合 KPI
-    inject('id-pool', totals.id_pool_total || 0);
-    inject('id-brands', totals.id_pool_brands || 0);
-    inject('id-7-15m-count', id715.count || 0);
-    inject('id-7-15m-brands', (id715.brands || []).length);
-    // ID 25M+
-    const idPool = (data.id && data.id.price_pool) || [];
-    const id25m = idPool.filter(it => (it.price||0) >= 25e6).length;
-    inject('id-25m-count', id25m);
+    
 
     // 智能洞察（自动从 latest.json）
     const insights = [];
