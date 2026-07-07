@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T14:55:06+08:00",
+  "generated_at": "2026-07-07T15:06:12+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -3500,7 +3500,7 @@
   "id": {
     "price_pool": [
       {
-        "brand": "Mountain",
+        "brand": "Generic MTB",
         "model": "Mountain Bike Entry 26",
         "price": 5120000,
         "currency": "IDR",
@@ -3510,18 +3510,6 @@
         "scraped_at": "2026-07-07T10:44:36+08:00",
         "url": "https://serbasepeda.com/",
         "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "Atlantis",
-        "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
-        "price": 700000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/dearloji/sepeda-gunung-mtb-26-atlantis-discbrake-1732393288002995330?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "dearloji",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 700,000"
       },
       {
         "brand": "Element",
@@ -3536,30 +3524,6 @@
         "note": "Rp 2,225,000"
       },
       {
-        "brand": "Wilier",
-        "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
-        "price": 120000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/xandergarage/sepeda-wilier-cento-10-road-bike-merah-menyala-1730931907908372074?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "xandergarage",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 120,000"
-      },
-      {
-        "brand": "Anchi",
-        "model": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Del",
-        "price": 1200000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery-1732867902506960562?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "anchi-center",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 1,200,000"
-      },
-      {
         "brand": "Atlantis",
         "model": "JNE,Sicepat - Sepeda Gunung Atlantis MTB AT MT 27.5\" 69G 21S",
         "price": 1330000,
@@ -3572,19 +3536,7 @@
         "note": "Rp 1,330,000"
       },
       {
-        "brand": "Salvo",
-        "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
-        "price": 950000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/toko-sepeda-rejeki/sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "toko-sepeda-rejeki",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 950,000"
-      },
-      {
-        "brand": "Fixie",
+        "brand": "Pandora",
         "model": "SEPEDA FIXIE PANDORA CST 700C",
         "price": 1890000,
         "currency": "IDR",
@@ -3594,18 +3546,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T12:00:00+08:00",
         "note": "Rp 1,890,000"
-      },
-      {
-        "brand": "Pacific",
-        "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
-        "price": 1075000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/samudrasepedabdg/sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "samudrasepedabdg",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 1,075,000"
       },
       {
         "brand": "Foster",
@@ -3618,18 +3558,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T12:00:00+08:00",
         "note": "Rp 1,225,000"
-      },
-      {
-        "brand": "Foster",
-        "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
-        "price": 900000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru-1731016156086961842?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "toko-sepeda-surabaya",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 900,000"
       },
       {
         "brand": "Odessy",
@@ -3680,18 +3608,6 @@
         "note": "Rp 1,150,000"
       },
       {
-        "brand": "BMX",
-        "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
-        "price": 559000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru-1730814750554556082?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "toko-sepeda-surabaya",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 559,000"
-      },
-      {
         "brand": "United",
         "model": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
         "price": 5334000,
@@ -3704,7 +3620,7 @@
         "note": "Rp 5,334,000"
       },
       {
-        "brand": "Balap",
+        "brand": "Custom",
         "model": "Sepeda balap / Road bike bisa request warna ,ukuran",
         "price": 3600000,
         "currency": "IDR",
@@ -3714,42 +3630,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T12:00:00+08:00",
         "note": "Rp 3,600,000"
-      },
-      {
-        "brand": "Pacific",
-        "model": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
-        "price": 2265000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/pacificoneteam/pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630-1735995436920571758?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "pacificoneteam",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 2,265,000"
-      },
-      {
-        "brand": "BMX",
-        "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
-        "price": 730000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/yoursc/sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah-1736210346590569888?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "yoursc",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 730,000"
-      },
-      {
-        "brand": "BMX",
-        "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
-        "price": 600000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/morodadi-cycle-shop/sepeda-bmx-20-velion-model-terbaru-1729598424301144218?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "morodadi-cycle-shop",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 600,000"
       },
       {
         "brand": "BXT",
@@ -3764,7 +3644,7 @@
         "note": "Rp 3,000,000"
       },
       {
-        "brand": "Fixie",
+        "brand": "Fixfix",
         "model": "Fixie Klasik Fullbike by Fixfix",
         "price": 2900000,
         "currency": "IDR",
@@ -3812,30 +3692,6 @@
         "note": "Rp 1,050,000"
       },
       {
-        "brand": "Polygon",
-        "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
-        "price": 2200000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-polygon-bmx-rogue-20inch-alloy?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "sevencycle-toped",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 2,200,000"
-      },
-      {
-        "brand": "BMX",
-        "model": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
-        "price": 626000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "ari-terang-709",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 626,000"
-      },
-      {
         "brand": "Odessy",
         "model": "Sepeda MTB Odessy Tank / Sepeda Gunung",
         "price": 1290000,
@@ -3860,7 +3716,7 @@
         "note": "Rp 1,930,000"
       },
       {
-        "brand": "London",
+        "brand": "London Taxi",
         "model": "Sepeda London Taxi CRB700M Clasic (Siap Kirim)",
         "price": 5780000,
         "currency": "IDR",
@@ -3872,7 +3728,7 @@
         "note": "Rp 5,780,000"
       },
       {
-        "brand": "Fixie",
+        "brand": "Tsunami",
         "model": "fixie tsunami hitam keren,doltrap/torpedo bisa,mau request tambah berbagai ukuran bisa",
         "price": 2900000,
         "currency": "IDR",
@@ -3882,18 +3738,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T12:00:00+08:00",
         "note": "Rp 2,900,000"
-      },
-      {
-        "brand": "Fixie",
-        "model": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
-        "price": 950000,
-        "currency": "IDR",
-        "platform": "Tokopedia (user saved)",
-        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "elementindonesia",
-        "is_new": true,
-        "scraped_at": "2026-07-07T12:00:00+08:00",
-        "note": "Rp 950,000"
       },
       {
         "brand": "Anchi",
@@ -3908,7 +3752,7 @@
         "note": "Rp 1,200,000"
       },
       {
-        "brand": "Commuter",
+        "brand": "Federal",
         "model": "commuter bike federal frame size 19 Sepeda",
         "price": 1900000,
         "currency": "IDR",
@@ -3944,7 +3788,7 @@
         "note": "Rp 2,150,000"
       },
       {
-        "brand": "Fixie",
+        "brand": "Custom",
         "model": "Sepeda Fixie pink muda ,bisa request warna ,ukuran",
         "price": 2700000,
         "currency": "IDR",
@@ -3992,18 +3836,6 @@
         "note": "Rp 1,425,000"
       },
       {
-        "brand": "BMX",
-        "model": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
-        "price": 664000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
-        "shop": "1813683454",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 664,000"
-      },
-      {
         "brand": "Odessy",
         "model": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
         "price": 1535000,
@@ -4016,18 +3848,6 @@
         "note": "Rp 1,535,000"
       },
       {
-        "brand": "Exotic",
-        "model": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
-        "price": 155000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
-        "shop": "40989696",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 155,000"
-      },
-      {
         "brand": "Odessy",
         "model": "Odessy Ritz Sepeda Lipat 16 20 Inch Rem Disc",
         "price": 1395000,
@@ -4038,42 +3858,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 1,395,000"
-      },
-      {
-        "brand": "Scoora",
-        "model": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
-        "price": 624000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/SCOORA-Zenoz-Balance-Bike-Toddler-Sepeda-Keseimbangan-Anak-i.87214633.19395363992?extraParams=%7B%22display_model_id%22%3A225818876824%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0187c97-1f91-403a-bfeb-d1ceb501c611&amp;xptdk=f0187c97-1f91-403a-bfeb-d1ceb501c611",
-        "shop": "87214633",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 624,000"
-      },
-      {
-        "brand": "Atlantis",
-        "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
-        "price": 1199000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-ANAK-20-INCH-ATLANTIS-690-PMB-MORTEIN-MN-181-3X7-SPEED-REM-CAKRAM-i.101726601.23331194148?extraParams=%7B%22display_model_id%22%3A341049944683%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=45e0a691-71d1-486b-97fd-5c572e394e6d&amp;xptdk=45e0a691-71d1-486b-97fd-5c572e394e6d",
-        "shop": "101726601",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 1,199,000"
-      },
-      {
-        "brand": "BMX",
-        "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
-        "price": 749000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/SEPEDA-BMX-20-INCH-SEPEDA-ANAK-LAKI-LAKI-MORISON-8125-AX-BAN-2.4-dan-3.0-MAZARA-2277-VELION-314-MORTEIN-511-CENTRUM-6670-1-FOSTER-5519-3-i.51418619.19079679543?extraParams=%7B%22display_model_id%22%3A297716233636%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4d168851-85bb-4716-9725-9b30e1bafb3f&amp;xptdk=4d168851-85bb-4716-9725-9b30e1bafb3f",
-        "shop": "51418619",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 749,000"
       },
       {
         "brand": "Atlantis",
@@ -4100,7 +3884,7 @@
         "note": "Rp 2,700,000"
       },
       {
-        "brand": "Inch",
+        "brand": "Xavior",
         "model": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
         "price": 2574000,
         "currency": "IDR",
@@ -4125,42 +3909,6 @@
       },
       {
         "brand": "Pacific",
-        "model": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
-        "price": 135000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Push-Bike-Aviator-BK01-ET2011-AT-7901-AT7902-ET2004-Iora-BK-01-Balance-Bike-AT7901-by-Pacific-Sepeda-Keseimbangan-AT-7902-ET-2004-2011-i.232590835.49351073485?extraParams=%7B%22display_model_id%22%3A390096432038%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bf4ad44c-15ac-4093-9511-e8b223e701a0&amp;xptdk=bf4ad44c-15ac-4093-9511-e8b223e701a0",
-        "shop": "232590835",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 135,000"
-      },
-      {
-        "brand": "BMX",
-        "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
-        "price": 524000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-VELION-V61-Ukuran-12-16-18-inch-dengan-keranjang-depan-NEW-i.1813683454.26444718825?extraParams=%7B%22display_model_id%22%3A365864656437%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d5afd78a-47f5-4e22-afd7-011da7e8e732&amp;xptdk=d5afd78a-47f5-4e22-afd7-011da7e8e732",
-        "shop": "1813683454",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 524,000"
-      },
-      {
-        "brand": "Exotic",
-        "model": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
-        "price": 223400,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Exotic-Sepeda-Anak-Roda-Tiga-Balance-Bike-6IN1-ET-709-7-ET-5511-ET-2004-ET-2011-ET-2017-BK-01-T20-7-i.2866183.27407698307?extraParams=%7B%22display_model_id%22%3A252439244308%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c&amp;xptdk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c",
-        "shop": "2866183",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 223,400"
-      },
-      {
-        "brand": "Pacific",
         "model": "Pacific Ofo City Bike 26 Shimano 7 Speed Alloy",
         "price": 2399000,
         "currency": "IDR",
@@ -4170,54 +3918,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 2,399,000"
-      },
-      {
-        "brand": "Cuddlee",
-        "model": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
-        "price": 159900,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Cuddlee-Sepeda-Keseimbangan-Anak-P0610-Sepeda-Keseimbangan-Tanpa-Pedal-Balance-Bike-Ringan-i.1496015775.26490487329?extraParams=%7B%22display_model_id%22%3A291252642136%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7f03464c-258a-4ee8-9ac9-c32266733379&amp;xptdk=7f03464c-258a-4ee8-9ac9-c32266733379",
-        "shop": "1496015775",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 159,900"
-      },
-      {
-        "brand": "Mmflight",
-        "model": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
-        "price": 439910,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Mmflight-Sepeda-Anak-Laki-Laki-Sepeda-Anak-Perempuan-Murah-Dengan-Roda-12-16&#39;%E2%80%98-i.899195971.29441138621?extraParams=%7B%22display_model_id%22%3A286448348275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=adcf35e8-ce9d-4498-b85c-0589d5864e7f&amp;xptdk=adcf35e8-ce9d-4498-b85c-0589d5864e7f",
-        "shop": "899195971",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 439,910"
-      },
-      {
-        "brand": "Exotic",
-        "model": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
-        "price": 160000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
-        "shop": "552002197",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 160,000"
-      },
-      {
-        "brand": "Exotic",
-        "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
-        "price": 212000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-3-in-1.-New-Exotic-ET5512-ET5511-AT7905-T20-5-F-701-T20-7-AT7906-T20-7-nano-family-i.15913437.22079662459?extraParams=%7B%22display_model_id%22%3A118420864971%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4337030e-941f-436d-84d5-67ff82d09cc8&amp;xptdk=4337030e-941f-436d-84d5-67ff82d09cc8",
-        "shop": "15913437",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 212,000"
       },
       {
         "brand": "Maximo",
@@ -4230,18 +3930,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 1,740,000"
-      },
-      {
-        "brand": "Balance",
-        "model": "Balance Bike Sepeda Anak Murah Aviator 7901",
-        "price": 120000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Balance-Bike-Sepeda-Anak-Murah-Aviator-7901-i.8279253.28456491584?extraParams=%7B%22display_model_id%22%3A227556530364%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=023e2f1d-7aa3-4c43-b418-744c5500dd72&amp;xptdk=023e2f1d-7aa3-4c43-b418-744c5500dd72",
-        "shop": "8279253",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 120,000"
       },
       {
         "brand": "Atlantis",
@@ -4280,18 +3968,6 @@
         "note": "Rp 1,427,000"
       },
       {
-        "brand": "BMX",
-        "model": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
-        "price": 750000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
-        "shop": "47761539",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 750,000"
-      },
-      {
         "brand": "Odessy",
         "model": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
         "price": 1148000,
@@ -4314,30 +3990,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 1,300,000"
-      },
-      {
-        "brand": "Balance",
-        "model": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
-        "price": 154899,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/BALANCE-BIKE-PUSH-BIKE-AT7901-ET2011-BK01-BK04-BK06-ET2137-ET2004-ET2017-ET2157-ET2017-AT7902-ET-2176-ET-2177-i.632272062.17640907951?extraParams=%7B%22display_model_id%22%3A176694159448%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=64ceda31-244d-4dea-9fd1-21114cd917d5&amp;xptdk=64ceda31-244d-4dea-9fd1-21114cd917d5",
-        "shop": "632272062",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 154,899"
-      },
-      {
-        "brand": "Exotic",
-        "model": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
-        "price": 136300,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Push-Bike-EXOTIC-ET-2011-ST-BAN-EVA-Balance-Bike-Sepeda-Keseimbangan-Anak-i.202502686.46405270556?extraParams=%7B%22display_model_id%22%3A405572853680%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=16d92854-c9be-42e5-a45c-966cbe568a3e&amp;xptdk=16d92854-c9be-42e5-a45c-966cbe568a3e",
-        "shop": "202502686",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 136,300"
       },
       {
         "brand": "Polygon",
@@ -4364,30 +4016,6 @@
         "note": "Rp 2,195,000"
       },
       {
-        "brand": "Atlantis",
-        "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
-        "price": 750360,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-BMX-20-Atlantis-650-I-Rem-Disc-V-Jumbo-i.140996876.2299631164?extraParams=%7B%22display_model_id%22%3A254257079852%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6617908b-1a86-49be-ad75-d675175c056f&amp;xptdk=6617908b-1a86-49be-ad75-d675175c056f",
-        "shop": "140996876",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 750,360"
-      },
-      {
-        "brand": "BMX",
-        "model": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
-        "price": 760000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
-        "shop": "927153578",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 760,000"
-      },
-      {
         "brand": "Element",
         "model": "Sepeda Balap Roadbike Element FRC 50 2026 EVO Alloy 2x9sp 700C",
         "price": 4099000,
@@ -4412,7 +4040,7 @@
         "note": "Rp 139,000,000"
       },
       {
-        "brand": "Balap",
+        "brand": "Pinarello",
         "model": "Sepeda Balap Roadbike Custom Model Pinarelo Dogma ~ Warna Bisa Request",
         "price": 4850000,
         "currency": "IDR",
@@ -4712,7 +4340,7 @@
         "note": "Rp 2,225,000"
       },
       {
-        "brand": "Sale",
+        "brand": "Specialized",
         "model": "Sale 2024 SLR 9 Gen7 Red Carbon Complete Bike Road Full Bicycle 50 52 54 56 58cm",
         "price": 142778108,
         "currency": "IDR",
@@ -4833,18 +4461,6 @@
       },
       {
         "brand": "Pacific",
-        "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
-        "price": 1990000,
-        "currency": "IDR",
-        "platform": "Shopee ID (gravel)",
-        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f&amp;xptdk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f",
-        "shop": "349407809",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:30:00+08:00",
-        "note": "Rp 1,990,000"
-      },
-      {
-        "brand": "Pacific",
         "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
         "price": 2300000,
         "currency": "IDR",
@@ -4928,20 +4544,7 @@
         "note": "Rp 5,099,000"
       },
       {
-        "brand": "Spinning",
-        "model": "Spinning Bike Twen SB622 SB623 Kardio Fitness",
-        "price": 792000,
-        "currency": "IDR",
-        "platform": "Shopee ID (hybrid - fitness)",
-        "url": "https://shopee.co.id/Spinning-Bike-Twen-SB622-SB623-Kardio-Fitness-i.50830142.2267220960?extraParams=%7B%22display_model_id%22%3A391110529382%2C%22model_selection_logic%22%3A3%7D",
-        "shop": "50830142",
-        "is_new": true,
-        "is_fitness": true,
-        "scraped_at": "2026-07-07T14:38:00+08:00",
-        "note": "Rp 792,000"
-      },
-      {
-        "brand": "Statis",
+        "brand": "Twen",
         "model": "Sepeda Statis Orbitrack Fan Bike TWEN FB31 FB32 FB32s Platinum Bike Termurah Alat Olahraga",
         "price": 1447200,
         "currency": "IDR",
@@ -4954,7 +4557,7 @@
         "note": "Rp 1,447,200"
       },
       {
-        "brand": "Twen",
+        "brand": "Twen T500Mt Treadmill Lipat Listrik Portable",
         "model": "Twen T500MT Treadmill Lipat Listrik Portable",
         "price": 3499200,
         "currency": "IDR",
@@ -5056,19 +4659,6 @@
         "is_fitness": false,
         "scraped_at": "2026-07-07T14:38:00+08:00",
         "note": "Rp 1,930,000"
-      },
-      {
-        "brand": "Pacific",
-        "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
-        "price": 1990000,
-        "currency": "IDR",
-        "platform": "Shopee ID (hybrid)",
-        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3208db7b-fa35-4d39-93a5-ffbc1b56b010&amp;xptdk=3208db7b-fa35-4d39-93a5-ffbc1b56b010",
-        "shop": "349407809",
-        "is_new": true,
-        "is_fitness": false,
-        "scraped_at": "2026-07-07T14:38:00+08:00",
-        "note": "Rp 1,990,000"
       },
       {
         "brand": "Pacific",
@@ -5318,12 +4908,459 @@
     "shopee_gravel_count": 15,
     "shopee_hybrid_count": 0,
     "shopee_hybrid_bicycles": 15,
-    "shopee_hybrid_fitness": 3
+    "shopee_hybrid_fitness": 3,
+    "kids_pool": [
+      {
+        "brand": "Atlantis",
+        "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
+        "price": 700000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/dearloji/sepeda-gunung-mtb-26-atlantis-discbrake-1732393288002995330?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "dearloji",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 700,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/xandergarage/sepeda-wilier-cento-10-road-bike-merah-menyala-1730931907908372074?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "xandergarage",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 120,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Del",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery-1732867902506960562?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anchi-center",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,200,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-rejeki/sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-rejeki",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 950,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Pacific",
+        "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
+        "price": 1075000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/samudrasepedabdg/sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "samudrasepedabdg",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 1,075,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
+        "price": 900000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru-1731016156086961842?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 900,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Velion",
+        "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
+        "price": 559000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru-1730814750554556082?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 559,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
+        "price": 2265000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/pacificoneteam/pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630-1735995436920571758?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "pacificoneteam",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,265,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "ZEFIRO",
+        "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
+        "price": 730000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/yoursc/sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah-1736210346590569888?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "yoursc",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 730,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Velion",
+        "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
+        "price": 600000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/morodadi-cycle-shop/sepeda-bmx-20-velion-model-terbaru-1729598424301144218?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "morodadi-cycle-shop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 600,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Polygon",
+        "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
+        "price": 2200000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-polygon-bmx-rogue-20inch-alloy?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sevencycle-toped",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 2,200,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
+        "price": 626000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "ari-terang-709",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 626,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia (user saved)",
+        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "elementindonesia",
+        "is_new": true,
+        "scraped_at": "2026-07-07T12:00:00+08:00",
+        "note": "Rp 950,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Centrum",
+        "model": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
+        "price": 664000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 664,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Exotic",
+        "model": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
+        "price": 155000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
+        "shop": "40989696",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 155,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
+        "price": 624000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SCOORA-Zenoz-Balance-Bike-Toddler-Sepeda-Keseimbangan-Anak-i.87214633.19395363992?extraParams=%7B%22display_model_id%22%3A225818876824%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0187c97-1f91-403a-bfeb-d1ceb501c611&amp;xptdk=f0187c97-1f91-403a-bfeb-d1ceb501c611",
+        "shop": "87214633",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 624,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Atlantis",
+        "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
+        "price": 1199000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-ANAK-20-INCH-ATLANTIS-690-PMB-MORTEIN-MN-181-3X7-SPEED-REM-CAKRAM-i.101726601.23331194148?extraParams=%7B%22display_model_id%22%3A341049944683%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=45e0a691-71d1-486b-97fd-5c572e394e6d&amp;xptdk=45e0a691-71d1-486b-97fd-5c572e394e6d",
+        "shop": "101726601",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,199,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Velion",
+        "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
+        "price": 749000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-BMX-20-INCH-SEPEDA-ANAK-LAKI-LAKI-MORISON-8125-AX-BAN-2.4-dan-3.0-MAZARA-2277-VELION-314-MORTEIN-511-CENTRUM-6670-1-FOSTER-5519-3-i.51418619.19079679543?extraParams=%7B%22display_model_id%22%3A297716233636%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4d168851-85bb-4716-9725-9b30e1bafb3f&amp;xptdk=4d168851-85bb-4716-9725-9b30e1bafb3f",
+        "shop": "51418619",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 749,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Pacific",
+        "model": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
+        "price": 135000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-Aviator-BK01-ET2011-AT-7901-AT7902-ET2004-Iora-BK-01-Balance-Bike-AT7901-by-Pacific-Sepeda-Keseimbangan-AT-7902-ET-2004-2011-i.232590835.49351073485?extraParams=%7B%22display_model_id%22%3A390096432038%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bf4ad44c-15ac-4093-9511-e8b223e701a0&amp;xptdk=bf4ad44c-15ac-4093-9511-e8b223e701a0",
+        "shop": "232590835",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 135,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Velion",
+        "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
+        "price": 524000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-VELION-V61-Ukuran-12-16-18-inch-dengan-keranjang-depan-NEW-i.1813683454.26444718825?extraParams=%7B%22display_model_id%22%3A365864656437%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d5afd78a-47f5-4e22-afd7-011da7e8e732&amp;xptdk=d5afd78a-47f5-4e22-afd7-011da7e8e732",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 524,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Exotic",
+        "model": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
+        "price": 223400,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Exotic-Sepeda-Anak-Roda-Tiga-Balance-Bike-6IN1-ET-709-7-ET-5511-ET-2004-ET-2011-ET-2017-BK-01-T20-7-i.2866183.27407698307?extraParams=%7B%22display_model_id%22%3A252439244308%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c&amp;xptdk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c",
+        "shop": "2866183",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 223,400",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
+        "price": 159900,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Cuddlee-Sepeda-Keseimbangan-Anak-P0610-Sepeda-Keseimbangan-Tanpa-Pedal-Balance-Bike-Ringan-i.1496015775.26490487329?extraParams=%7B%22display_model_id%22%3A291252642136%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7f03464c-258a-4ee8-9ac9-c32266733379&amp;xptdk=7f03464c-258a-4ee8-9ac9-c32266733379",
+        "shop": "1496015775",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 159,900",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
+        "price": 439910,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Mmflight-Sepeda-Anak-Laki-Laki-Sepeda-Anak-Perempuan-Murah-Dengan-Roda-12-16&#39;%E2%80%98-i.899195971.29441138621?extraParams=%7B%22display_model_id%22%3A286448348275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=adcf35e8-ce9d-4498-b85c-0589d5864e7f&amp;xptdk=adcf35e8-ce9d-4498-b85c-0589d5864e7f",
+        "shop": "899195971",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 439,910",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Exotic",
+        "model": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
+        "price": 160000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 160,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Exotic",
+        "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
+        "price": 212000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-3-in-1.-New-Exotic-ET5512-ET5511-AT7905-T20-5-F-701-T20-7-AT7906-T20-7-nano-family-i.15913437.22079662459?extraParams=%7B%22display_model_id%22%3A118420864971%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4337030e-941f-436d-84d5-67ff82d09cc8&amp;xptdk=4337030e-941f-436d-84d5-67ff82d09cc8",
+        "shop": "15913437",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 212,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Balance Bike Sepeda Anak Murah Aviator 7901",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Balance-Bike-Sepeda-Anak-Murah-Aviator-7901-i.8279253.28456491584?extraParams=%7B%22display_model_id%22%3A227556530364%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=023e2f1d-7aa3-4c43-b418-744c5500dd72&amp;xptdk=023e2f1d-7aa3-4c43-b418-744c5500dd72",
+        "shop": "8279253",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 120,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Axwil",
+        "model": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
+        "price": 750000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
+        "shop": "47761539",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
+        "price": 154899,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/BALANCE-BIKE-PUSH-BIKE-AT7901-ET2011-BK01-BK04-BK06-ET2137-ET2004-ET2017-ET2157-ET2017-AT7902-ET-2176-ET-2177-i.632272062.17640907951?extraParams=%7B%22display_model_id%22%3A176694159448%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=64ceda31-244d-4dea-9fd1-21114cd917d5&amp;xptdk=64ceda31-244d-4dea-9fd1-21114cd917d5",
+        "shop": "632272062",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 154,899",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Exotic",
+        "model": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
+        "price": 136300,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-EXOTIC-ET-2011-ST-BAN-EVA-Balance-Bike-Sepeda-Keseimbangan-Anak-i.202502686.46405270556?extraParams=%7B%22display_model_id%22%3A405572853680%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=16d92854-c9be-42e5-a45c-966cbe568a3e&amp;xptdk=16d92854-c9be-42e5-a45c-966cbe568a3e",
+        "shop": "202502686",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 136,300",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Atlantis",
+        "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
+        "price": 750360,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-20-Atlantis-650-I-Rem-Disc-V-Jumbo-i.140996876.2299631164?extraParams=%7B%22display_model_id%22%3A254257079852%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6617908b-1a86-49be-ad75-d675175c056f&amp;xptdk=6617908b-1a86-49be-ad75-d675175c056f",
+        "shop": "140996876",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,360",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Centrum",
+        "model": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
+        "price": 760000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
+        "shop": "927153578",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 760,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
+        "price": 1990000,
+        "currency": "IDR",
+        "platform": "Shopee ID (gravel)",
+        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f&amp;xptdk=d8e62fb1-1fbc-4fe3-8217-f7d7ec4c761f",
+        "shop": "349407809",
+        "is_new": true,
+        "scraped_at": "2026-07-07T14:30:00+08:00",
+        "note": "Rp 1,990,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Unknown",
+        "model": "Spinning Bike Twen SB622 SB623 Kardio Fitness",
+        "price": 792000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid - fitness)",
+        "url": "https://shopee.co.id/Spinning-Bike-Twen-SB622-SB623-Kardio-Fitness-i.50830142.2267220960?extraParams=%7B%22display_model_id%22%3A391110529382%2C%22model_selection_logic%22%3A3%7D",
+        "shop": "50830142",
+        "is_new": true,
+        "is_fitness": true,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 792,000",
+        "is_kids_bike": true
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
+        "price": 1990000,
+        "currency": "IDR",
+        "platform": "Shopee ID (hybrid)",
+        "url": "https://shopee.co.id/Pacific-Sepeda-Hybrid-Remaja-dan-Dewasa-Exotic-ET-2708-HR-Hi-Ten-Steel-Hybrid-i.349407809.41432116440?extraParams=%7B%22display_model_id%22%3A307738107719%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=3208db7b-fa35-4d39-93a5-ffbc1b56b010&amp;xptdk=3208db7b-fa35-4d39-93a5-ffbc1b56b010",
+        "shop": "349407809",
+        "is_new": true,
+        "is_fitness": false,
+        "scraped_at": "2026-07-07T14:38:00+08:00",
+        "note": "Rp 1,990,000",
+        "is_kids_bike": true
+      }
+    ],
+    "kids_bikes_count": 34
   },
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T14:55:06+08:00",
+  "gen_at": "2026-07-07T15:06:12+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -5656,14 +5693,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T14:55:06+08:00",
+    "computed_at": "2026-07-07T15:06:12+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 137,
-      "id_pool_brands": 39,
+      "id_pool_total": 103,
+      "id_pool_brands": 33,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
