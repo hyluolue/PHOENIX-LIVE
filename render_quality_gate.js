@@ -28,6 +28,32 @@
     const stats = dq.stats || {};
     const evaluatedAt = dq.evaluated_at || '';
 
+    // V2.7.4 注入 dashboard_metrics 数字到 HTML 硬编码位置
+    const dm = data.dashboard_metrics || {};
+    const totals = dm.totals || {};
+    const phxGap = dm.phx_gap || {};
+    const bands = dm.bands || {};
+    const id715 = dm.id_7_15m || {};
+    const gt25k = dm.gt_25k_brands || {};
+
+    // 注入 bd-pool-total（index.html + bangladesh.html 中 span id）
+    injectText('bd-pool-total', totals.bd_pool_total || 0);
+    injectText('bd-pool-total-2', totals.bd_pool_total || 0);
+    injectText('bd-pool-total-3', totals.bd_pool_total || 0);
+    // 注入 ID 池
+    injectText('id-pool-total', totals.id_pool_total || 0);
+    injectText('id-pool-brands', totals.id_pool_brands || 0);
+    // 注入 25K+ 高端
+    injectText('gt-25k-count', phxGap.gt_25k_count || 0);
+    injectText('gt-25k-brand-count', phxGap.gt_25k_brand_count || 0);
+    // 注入 ID 7-15M 中高端
+    injectText('id-7-15m-count', id715.count || 0);
+    injectText('id-7-15m-brands', (id715.brands || []).length);
+    // 注入 Phoenix 数据
+    injectText('phx-count', totals.phx_bd_mid_high || 0);
+    injectText('phx-max', totals.phx_bd_max || 0, true);
+    injectText('phx-asp', totals.phx_bd_asp || 0, true);
+
     // === 紧凑指示器（右上角悬浮小圆点 + tooltip）===
     const indicator = document.createElement('div');
     indicator.className = 'quality-indicator ' + level;
@@ -77,6 +103,16 @@
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function injectText(id, value, useLocale) {
+    const els = document.querySelectorAll(`#${id}`);
+    els.forEach(el => {
+      const display = useLocale && typeof value === 'number'
+        ? value.toLocaleString()
+        : value;
+      el.textContent = display;
+    });
   }
 
   window.renderQualityGate = render;
