@@ -4490,10 +4490,9 @@
   "data_quality": {
     "level": "yellow",
     "emoji": "🟡",
-    "evaluated_at": "2026-07-07T10:45:48",
+    "evaluated_at": "2026-07-07T10:58:44",
     "reasons": [
       "⚠️ 高级模块失败: apify_social — 社媒数据（FB/IG 竞品）· 偶发 5xx",
-      "⚠️ 高级模块失败: news_id — ID 市场动态（Sogou news ID）· 偶发失败",
       "Phoenix SKU 12（建议 ≥ 15）"
     ],
     "recommendations": [],
@@ -4507,12 +4506,11 @@
       "premium_modules": {
         "dreamcycle_vpn": true,
         "apify_social": false,
-        "news_id": false
+        "news_id": true
       },
       "core_failed": [],
       "premium_failed": [
-        "apify_social",
-        "news_id"
+        "apify_social"
       ],
       "bd_count": 190,
       "id_count": 8,
