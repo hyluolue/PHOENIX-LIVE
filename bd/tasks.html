@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="stylesheet" href="../shared.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OKR 战略规划 · Phoenix-Live</title>
+  <style>
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:44px;height:44px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+    h1{font-size:22px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
+    .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section.dark h2{color:#c8102e}
+    .section .small{font-size:11px;color:#999;font-weight:400;margin-left:6px}
+
+    /* OKR 卡片 */
+    .okr-card{background:#f8fafc;border-radius:12px;padding:16px 18px;margin-bottom:12px;border-left:4px solid #c8102e;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+    .okr-card .o-id{font-size:10px;color:#c8102e;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .okr-card .o-title{font-size:15px;font-weight:800;color:#0d47a1;margin:4px 0 8px}
+    .okr-card .o-period{font-size:11px;color:#666;margin-bottom:10px;font-style:italic}
+    .okr-card .krs{margin-top:8px}
+    .okr-card .kr{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:12px;line-height:1.6;border-bottom:1px dashed rgba(0,0,0,.06)}
+    .okr-card .kr:last-child{border-bottom:none}
+    .okr-card .kr .kr-icon{color:#2e7d32;font-weight:800;flex-shrink:0}
+    .okr-card .kr b{color:#0d47a1}
+    .okr-card .kr .delta{color:#666;font-size:10px;margin-left:4px}
+
+    /* 行动卡片 */
+    .initiative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:10px}
+    .initiative{background:#fff3e0;border-left:4px solid #e65100;padding:12px 14px;border-radius:8px;color:#bf360c;font-size:12px;line-height:1.6}
+    .initiative.bd{border-left-color:#1565c0;background:#e3f2fd;color:#0d47a1}
+    .initiative.id{border-left-color:#2e7d32;background:#e8f5e9;color:#1b5e20}
+    .initiative .init-id{font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.6;margin-bottom:4px}
+    .initiative .init-title{font-size:13px;font-weight:800;margin-bottom:4px}
+    .initiative .init-detail{font-size:11px;line-height:1.6;opacity:.85}
+    .initiative .init-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;margin-top:6px;background:rgba(0,0,0,.1)}
+
+    /* 月份时间线 */
+    .timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px}
+    .month{background:rgba(255,255,255,.05);border-radius:8px;padding:8px 10px;font-size:11px;border-left:3px solid #5eead4}
+    .month.now{border-left-color:#e53935;background:rgba(229,57,53,.15);font-weight:700}
+    .month .m-label{font-size:10px;color:#5eead4;font-weight:800;margin-bottom:4px;letter-spacing:.5px}
+    .month.now .m-label{color:#ff8a80}
+    .month .m-item{font-size:10px;color:#cbd5e1;line-height:1.5;margin-bottom:3px}
+    .month .m-item b{color:#fff}
+
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+    .badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;background:rgba(200,16,46,.15);color:#ff8a80;margin-left:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🎯 战略 OKR <span class="badge">V2 · 2026-2028</span></h1>
+        <div class="subtitle">基于 dashboard_metrics 真实数据 · V2 钻井型战略 · 1-2 战略大单品 + 10 倍升级 + 价值锚点</div>
+      </div>
+      <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./matrix.html">💎 产品矩阵</a>
+      <a href="./market.html">🇧🇩 孟加拉</a>
+      <a href="./market.html">🇮🇩 印尼</a>
+      <a href="./tasks.html" class="active">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html">🧠 策略迭代</a>
+    </div>
+    <a class="back-link" href="./index.html">← 返回总览</a>
+    </div>
+
+    <!-- 真实数据基线（dashboard_metrics 动态读 · V2.7.1） -->
+    <div class="section dark" style="border-left-color:#5eead4">
+      <h2 style="color:#5eead4"><span class="flag">📊</span>真实基线 <span class="small" style="color:#aaa">latest.json#dashboard_metrics 动态读 · 不老化</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">Phoenix BD</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            <b>排名 #<span id="task-phx-rank">—</span></b> · <span id="task-phx-score">—</span> 分<br>
+            <b><span id="task-phx-count">—</span> SKU</b> · ASP <span id="task-phx-asp">—</span> · 顶价 <span id="task-phx-max">—</span><br>
+            行业顶价 <span id="task-ind-max">—</span> (<span id="task-ind-brand">—</span>)
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">BD 行业</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            <span id="task-bd-brands">—</span> 真品牌 · <span id="task-bd-pool">—</span> SKU<br>
+            <b>15-25K: <span id="task-bd-mid">—</span> SKU</b><br>
+            <b>&gt; 25K: <span id="task-bd-high">—</span> SKU</b>
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">ID 行业</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            <span id="task-id-pool">—</span> 整车 SKU<br>
+            <b>7-15M: <span id="task-id-mid">—</span> SKU</b><br>
+            无 SGS 中国品牌 = 真空
+          </div>
+        </div>
+        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
+          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">V2 战略</div>
+          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
+            取一舍九 + 钻井型<br>
+            <b>1-2 战略大单品</b><br>
+            10 倍升级 · 价值锚点
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- V2.3 战略核心 = 三层价格阶梯（2026-07-01 客户深度反思） -->
+    <div class="section" style="border-left:4px solid #2e7d32;background:linear-gradient(135deg,rgba(46,125,50,.08) 0%,#fff 100%)">
+      <h2 style="color:#2e7d32"><span class="flag">💎</span>V2.3 战略核心 = 三层价格阶梯 <span class="small" style="color:#999">2026-07-01 客户深度反思：25-40K 才是真实高端主战场 · 40-60K 是锚点不指望销量 · 65K+ 是形象产品不指望成交</span></h2>
+      <div style="background:rgba(255,255,255,.9);border-radius:10px;padding:14px 18px;margin-top:10px;border-left:4px solid #2e7d32">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:11px">
+          <div style="background:rgba(245,158,11,.15);border-left:3px solid #f57c00;padding:10px;border-radius:6px;border:2px solid #f57c00">
+            <div style="font-weight:800;color:#e65100;font-size:12px;margin-bottom:4px">🥈 15-25K 中高端（销量基础 · 仅 3 SKU）</div>
+            <div style="color:#666;line-height:1.5"><b><span id="v23-mid-count">—</span> SKU · <span id="v23-mid-brands">—</span> 品牌</b><br><span id="v23-mid-brands-list">加载中…</span><br><b style="color:#e65100">Phoenix 已 <span id="v23-mid-phx">—</span> SKU 入门 = 还需要 5+ SKU 抢份额</b></div>
+          </div>
+          <div style="background:rgba(46,125,50,.15);border-left:3px solid #2e7d32;padding:10px;border-radius:6px;border:2px solid #2e7d32">
+            <div style="font-weight:800;color:#1b5e20;font-size:12px;margin-bottom:4px">🥇 25-40K 高端（主战场 · 0 SKU 真正缺席）🆕</div>
+            <div style="color:#1b5e20;line-height:1.5"><b><span id="v23-high-count">—</span> SKU · <span id="v23-high-brands">—</span> 品牌</b><br><span id="v23-high-brands-list">加载中…</span><br><b style="color:#c8102e">Phoenix 顶价 <span id="v23-phx-max">—</span> → 主战场 0 SKU 真正缺席 = V2.3 战略核心</b></div>
+          </div>
+          <div style="background:rgba(156,39,176,.08);border-left:3px solid #9c27b0;padding:10px;border-radius:6px">
+            <div style="font-weight:800;color:#9c27b0;font-size:12px;margin-bottom:4px">🥉 40-60K 公路车（价值锚点·不指望销量）</div>
+            <div style="color:#666;line-height:1.5"><b><span id="v23-anchor-count">—</span> SKU · <span id="v23-anchor-brands">—</span> 品牌</b><br><span id="v23-anchor-list">加载中…</span><br><b style="color:#9c27b0">部署但接受没销量</b></div>
+          </div>
+          <div style="background:rgba(106,27,154,.08);border-left:3px solid #6a1b9a;padding:10px;border-radius:6px">
+            <div style="font-weight:800;color:#6a1b9a;font-size:12px;margin-bottom:4px">📌 65K+ 顶价（形象产品·不指望成交）</div>
+            <div style="color:#666;line-height:1.5"><span id="v23-image-brand">加载中…</span> = <span id="v23-image-price">—</span><br>"<span id="v23-image-quote">65K 我可以买摩托车</span>"<br><b style="color:#6a1b9a">脱离购买力 = 仅形象</b></div>
+          </div>
+        </div>
+        <div style="background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;padding:10px 14px;border-radius:6px;margin-top:12px;font-size:12px;line-height:1.7;color:#1a1a1a">
+          <b>🎯 V2.3 战略核心结论（2026-07-01 客户深度反思）：</b><br>
+          · <b style="color:#e65100">15-25K 红海必入 = 销量基础</b>（72 SKU 16 品牌，Phoenix 当前 0 SKU，用品质差异化抢份额）<br>
+          · <b style="color:#2e7d32">25-40K 高端 = 品牌核心主战场</b>（Phoenix 从中端跃升高端 = 真实品牌升级路径 · 对标 Rockrider 9 + Veloce 7 + Core 5）<br>
+          · <b style="color:#9c27b0">40-60K 锚点 = 部署但接受没销量</b>（4 SKU 公路车 = 价值锚点 + ASP 拉升工具）<br>
+          · <b style="color:#6a1b9a">65K+ 形象 = 不指望成交</b>（脱离购买力 · 仅作品牌形象展示）<br>
+          · <b style="color:#c8102e">真正差异化 = 品质标准</b>（竞品偷工减料 vs 凤凰符合品质标准 = 真实护城河 ≠ SGS 认证）
+        </div>
+        <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 product-matrix 推荐 3 / Tab #4 BD 关键发现 / Tab #6 OKR KR1.P1-P4 / Tab #9 strategy V2.3 反思</div>
+      </div>
+    </div>
+
+    <!-- 三年愿景 + 三大 OKR -->
+    <div class="section">
+      <h2><span class="flag">🎯</span>三年愿景 <span class="small">2026-2028 · 从中端品牌到中高端第一</span></h2>
+
+      <div class="okr-card" style="border-left-color:#5eead4;border:2px solid #5eead4">
+        <div class="o-id" style="color:#5eead4">O1 · 4P 框架 · <b>2026-07-01 V2.3 重大修订</b></div>
+        <div class="o-title">BD = <b>市场第一</b>（凤凰有品牌基础 · 争 overall 头把交椅）<span style="background:#5eead4;color:#000;padding:2px 6px;border-radius:3px;font-size:9px;margin-left:6px">🥇 Overall</span></div>
+        <div class="o-period">时间窗：2026-2028 · 区域：🇧🇩 Bangladesh · <b>V2.3 三层价格阶梯</b>：高品牌 25-40K（主）+ 销量 15-25K（基础）+ 锚点 40K+（部署）+ 形象 65K+（不指望销量）</div>
+        <div class="krs">
+          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">📦 Product</span></div>
+          <div class="kr" style="background:rgba(245,158,11,.1);padding-left:6px"><span class="kr-icon">KR1.P1 🔄🔄</span><span><b style="color:#e65100">🎯 25-40K 高端 MTB SKU（主战场 · 真实品牌价值段）🆕</b>：当前 0 → 目标 <b>5+</b>（Phoenix 顶价 18K 提到 25-40K = 第一个进入真正高端的 MTB 品牌，对标 Rockrider 9 + Veloce 7 + Core 5）<span class="delta" style="color:#c8102e;font-weight:700">+5 SKU Phoenix 从中端跃升高端 = 品牌升级</span></span></div>
+          <div class="kr" style="background:rgba(0,0,0,.03);padding-left:14px;font-size:11px">
+            <table style="width:100%;border-collapse:collapse;font-size:10.5px;margin:4px 0">
+              <thead><tr style="background:rgba(0,0,0,.05)"><th style="padding:4px;text-align:left">SKU</th><th style="padding:4px;text-align:left">Phoenix 型号</th><th style="padding:4px;text-align:right">售价</th><th style="padding:4px;text-align:left">核心卖点</th><th style="padding:4px;text-align:left">对标杀手锏</th><th style="padding:4px;text-align:right">成本</th></tr></thead>
+              <tbody style="font-size:10px">
+                <tr><td><b>#1</b></td><td>XC Entry 2800</td><td><b>27,999</b></td><td>UCI 刻印 + Shimano + 内走线</td><td>入门高端市占率</td><td>8.5-9.5K</td></tr>
+                <tr><td><b>#2</b></td><td>XC Standard 3000</td><td><b>29,999</b></td><td>油压碟刹 + 9 速 + 一体中空</td><td>中间价位档主流</td><td>10-11K</td></tr>
+                <tr style="background:rgba(46,125,50,.1)"><td><b>⭐ #3</b></td><td><b>XC Pro 3200</b></td><td><b>32,999</b></td><td><b>1×11 单盘 + 中锁 + 升降座管</b></td><td><b>VS Rockrider XC 402 主战场</b></td><td><b>12-13.5K</b></td></tr>
+                <tr><td><b>#4</b></td><td>XC Elite 3500</td><td><b>35,999</b></td><td>29" 大轮 + 12 速</td><td>Veloce Shadow 升级版</td><td>14.5-16K</td></tr>
+                <tr style="background:rgba(200,16,46,.1)"><td><b>🎖️ #5</b></td><td><b>XC Race 3800</b></td><td><b>38,999</b></td><td><b>碳轮 + 4 活塞 + Shimano XT</b></td><td><b>VS Magpy DTR 38K 旗舰</b></td><td><b>17.5-19K</b></td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:4px;font-size:9.5px;color:#666">📎 完整配置：<a href="./phoenix-product-config.html" target="_blank">phoenix-product-config.html</a> · 生产简报 PDF：<a href="./phoenix-brief-prod.html" target="_blank">点此查看</a> · 销售工具 PDF：<a href="./phoenix-brief-sales.html" target="_blank">点此查看</a></div>
+          </div>
+          <div class="kr"><span class="kr-icon">KR1.P2 🔄🔄</span><span><b style="color:#e65100">15-25K 中高端 MTB SKU（销量基础）</b>：当前 <b style="color:#2e7d32">3</b> SKU (Duster-A 15.7K / Duster-C 17K / Harod01 18K) → 目标 <b>8+</b>（Marine 15 / Veloce 15 / Core 9 = 用品质差异化抢份额）<span class="delta" style="color:#1565c0;font-weight:700">+5 SKU 销量基础盘</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.P3 🆕</span><span><b style="color:#9c27b0">40-60K 公路车 SKU（品牌价值锚点 · 不指望销量）</b>：当前 0 → 目标 <b>2+</b>（公路 1 + 砾石 1，对标 Rockrider Duke 25K + Pro Gen 4 45K，<b>部署但接受没销量</b>）<span class="delta" style="color:#9c27b0">锚点 SKU</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.P4 🆕</span><span><b style="color:#6a1b9a">65K+ 形象产品 SKU（脱离购买力 · 不指望成交）</b>：当前 0 → 目标 <b>1+</b>（"65K 我可以买摩托车" = 不会真有人买 = 仅作品牌形象展示）<span class="delta" style="color:#6a1b9a">形象 SKU</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.P5</span><span><b>整体 SKU 数量</b>：当前 11 → 目标 <b>25+</b>（覆盖度门槛 + 评分 Top 5 需要）<span class="delta">+14 SKU</span></span></div>
+          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">💰 Price</span></div>
+          <div class="kr"><span class="kr-icon">KR1.Pr1 🔄🔄</span><span><b>ASP 升级（25-40K 主战场拉动）</b>：当前 13.7K → 目标 <b>22K+</b>（25-40K MTB 5 SKU 是主要拉动力 · 15-25K 5 SKU 是基础盘 · 40K+ SKU 不指望销量但拉 ASP）</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR1.Pr2 🔄🔄</span><span><b>V2.3 三层价格阶梯</b>：<br>
+            &nbsp;&nbsp;🥇 <b>25-40K 高端</b> = 主战场（Rockrider 9 / Veloce 7 / Core 5 对标 = Phoenix 跃升高端）<br>
+            &nbsp;&nbsp;🥈 <b>15-25K 中高端</b> = 销量基础（Marine 15 / Veloce 15 / Core 9 对标 = 必入红海）<br>
+            &nbsp;&nbsp;🥉 <b>40K+ 锚点</b> = 品牌价值（不指望销量 · 部署 · 对标 Rockrider Duke + XC）<br>
+            &nbsp;&nbsp;📌 <b>65K+ 形象</b> = 脱离购买力（不指望成交 · 仅作品牌形象）<span class="delta" style="color:#c8102e">三轨并行</span></span></div>
+          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">🏪 Place</span></div>
+          <div class="kr"><span class="kr-icon">KR1.Pl1</span><span><b>dreamcycle.store 入驻</b>：当前 4 SKU → 目标 8+ SKU（25-40K MTB 优先）<span class="delta">真 BD 多品牌 dealer</span></span></div>
+          <div class="kr"><span class="kr-icon">KR1.Pl2</span><span><b>Daraz BD 官方店</b>：已入驻 → 升级到 MTB/公路 主营类目</span></div>
+          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">📣 Promotion</span></div>
+          <div class="kr"><span class="kr-icon">KR1.Pm1</span><span><b>BD 评分 Top 3</b>：当前 #13 (45.6) → 目标 #3 (75+)<span class="delta">需 +30 分</span></span></div>
+          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR1.Pm2 🔄</span><span><b>品牌差异化叙事（更新）</b>：① 沃尔玛规模优势（成本控制）② UCI 认证公路车架 ③ ID 订单验证 + 返单 ④ <b style="color:#c8102e">品质标准差异化</b>（竞品偷工减料 vs 凤凰符合品质标准 = 真实护城河）</span></div>
+        </div>
+      </div>
+
+      <div class="okr-card" style="border-left-color:#2e7d32;border:2px solid #2e7d32">
+        <div class="o-id" style="color:#2e7d32">O2 · 4P 框架 · <b>2026-07-07 V2.6.1 关键修订</b>（客户判断：MTB/折叠/童车 = 红海不参与）</div>
+        <div class="o-title">ID = <b>公路 + 平把公路 + 砾石 三蓝海品类</b>（凤凰 + FNIX 双品牌 · 避 Pacific 完全错位 · 客户双重身份）<span style="background:linear-gradient(90deg,#1565c0 50%,#2e7d32 50%);color:#fff;padding:3px 8px;border-radius:3px;font-size:9px;margin-left:6px;font-weight:700">PHOENIX + FNIX</span></div>
+        <div class="o-period">时间窗：2026-2028 · 区域：🇮🇩 Indonesia · <b>V2.6.1 三蓝海</b>：公路车 + 平把公路 + 砾石（折叠 1 SKU 试水）· MTB / 折叠 / 童车 = 客户已有供应商 + 4% 毛利红海 = <b style="color:#c8102e">完全不参与</b></div>
+        <div class="krs">
+          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">📦 PHOENIX Product（UCI 国际背书 · 公路+砾石主流）</span></div>
+          <div class="kr"><span class="kr-icon">KR2.P1 🔄</span><span><b style="color:#1565c0">✅ Phoenix 公路车返单成功</b>（验证）→ 目标 <b>5 SKU</b> 累计复购 3 次</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.P2 🆕</span><span><b style="color:#2e7d32">✅ Phoenix 高端砾石返单中</b>（验证）→ 目标 <b>2 SKU</b> = 城市砾石主流</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.P3 🆕</span><span><b style="color:#1565c0">Phoenix 平把公路车 3 SKU @ 12-15M IDR</b>（Niche #3 · Shopee+Tokopedia 双平台 0 SKU 真空验证）</span></div>
+          <div class="kr" style="background:rgba(255,193,7,.1);padding-left:6px"><span class="kr-icon">KR2.P4 🆕 试水</span><span><b>Phoenix 折叠车 1 SKU @ 8M IDR</b>（FK-TEST · V2.6 降级保持 · 6 个月试销 ≥ 50 台/月才追加）</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">📦 FNIX Product（SNI 本土认证 · 中高端错位补强）🆕</span></div>
+          <div class="kr"><span class="kr-icon">KR2.P5 🆕</span><span><b style="color:#c8102e">FNIX 高端公路车 2 SKU @ 15-18M IDR</b>（错位 Phoenix 12-15M · 补 12-25M 中高端真空）</span></div>
+          <div class="kr"><span class="kr-icon">KR2.P6 🆕</span><span><b style="color:#c8102e">FNIX 砾石车 2 SKU @ 12-18M IDR</b>（错位 Phoenix 砾石返单 2 SKU · 价位升级 + SNI 认证）</span></div>
+          <div class="kr" style="background:rgba(244,67,54,.1);padding-left:6px"><span class="kr-icon">🚫 永久删除品类（V2.6.1）</span></div>
+          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">MTB 山地车</b>：客户已自有供应商 + 全品类 4% 毛利红海 = <span class="delta" style="color:#c8102e">永不参与</span>（V2.6 FNIX MTB-FLAG 1+2 已砍）</span></div>
+          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">折叠车大规模</b>：客户已自有供应商 + Dahon/JAVA 强竞品 = <span class="delta" style="color:#c8102e">仅 1 SKU 试水</span>（V2.6 折叠 3 SKU 已降级）</span></div>
+          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">童车</b>：客户已自有供应商 = <span class="delta" style="color:#c8102e">完全不参与</span></span></div>
+          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">💰 Price</span></div>
+          <div class="kr"><span class="kr-icon">KR2.Pr1 🔄</span><span><b>Phoenix 8-15M IDR 公路/平把/砾石三蓝海</b>（避 Pacific 5.1-9.5M 红海）</span></div>
+          <div class="kr"><span class="kr-icon">KR2.Pr2 🆕</span><span><b>FNIX 12-18M IDR 中高端错位</b>（Phoenix 12-15M 上方补强，不重叠）</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">🏪 Place</span></div>
+          <div class="kr"><span class="kr-icon">KR2.Pl1 🆕</span><span><b>Shopee ID + Tokopedia 双平台官方店</b>（Phoenix + FNIX 分店 · 74 SKU 实测 7M+ 真空平台）</span></div>
+          <div class="kr"><span class="kr-icon">KR2.Pl2 🆕</span><span><b>Rodalink dealer 申请</b>（9 品牌 dealer 渠道 · 但只卖 Phoenix 公路/平把/砾石 = 子品类专门店）</span></div>
+          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">📣 Promotion</span></div>
+          <div class="kr"><span class="kr-icon">KR2.Pm1 🆕</span><span><b>Phoenix 营销叙事：UCI + Walmart + 4 大客户验证</b></span></div>
+          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.Pm2 🆕</span><span><b>FNIX 营销叙事：SNI 印尼国家标准 = 印尼本土信任 = 品质差异化</b></span></div>
+          <div class="kr" style="background:rgba(244,67,54,.06);padding-left:6px"><span class="kr-icon">🚫 Pacific 错位铁律 🆕</span></div>
+          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Conflict 🆕🔴</span><span><b>100% 不重叠 Pacific 价位</b>（Phoenix + FNIX 都不可进 5.1-9.5M）· 所有 SKU 提案 <span class="delta" style="color:#c8102e">必须客户内部审查</span>（避免内部矛盾）</span></div>
+        </div>
+      </div>
+
+      <div class="okr-card" style="border-left-color:#9c27b0">
+        <div class="o-id" style="color:#9c27b0">O3</div>
+        <div class="o-title">Phoenix 建立 DTC 独立站 + 品牌叙事体系（区别于渠道方）</div>
+        <div class="o-period">时间窗：2026-2027 · 全区域</div>
+        <div class="krs">
+          <div class="kr"><span class="kr-icon">KR3.1</span><span><b>Phoenix 独立站上线</b>（phoenixbike.bd / phoenixbike.id）—— 品牌叙事唯一出口</span></div>
+          <div class="kr"><span class="kr-icon">KR3.2</span><span><b>社媒粉丝</b>：IG + FB + TK 合计 0 → 10K+（BD 8M / ID 27M 自行车潜在用户）</span></div>
+          <div class="kr"><span class="kr-icon">KR3.3</span><span><b>品牌叙事资产</b>：SGS 认证 + 三标 + 凤凰品牌故事 = DTC 溢价基础</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 今日数据驱动行动（自动从 dashboard_metrics 推导） -->
+    <div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,#fff5f6 0%,#fff 100%)">
+      <h2 style="color:#c8102e"><span class="flag">🎯</span>今日数据驱动行动 <span class="small" style="color:#999">自动从 latest.json#dashboard_metrics 推导 · 每日 9:00 更新</span></h2>
+      <div id="today-actions" class="initiative-grid">
+        <div class="initiative" style="background:#fff;color:#666">⏳ 加载中…</div>
+      </div>
+      <div class="strategy-card" style="background:rgba(200,16,46,.05);border-left:3px solid #c8102e;padding:10px 14px;border-radius:8px;font-size:12px;color:#1a1a1a;margin-top:14px;line-height:1.7">
+        <b>📋 行动生成逻辑（自动）：</b>
+        <ol style="margin:6px 0 0 18px;line-height:1.7">
+          <li>如果 Phoenix SKU < 12 → 提示 "需加速扩 SKU"</li>
+          <li>如果 Phoenix 顶价 < 25K → 提示 "需大单品提顶价"</li>
+          <li>如果 > 25K 出现新品牌 → 提示 "新竞品，跟进"</li>
+          <li>如果 15-25K 红海集中度 > 50% → 提示 "中端红海，差异化"</li>
+          <li>如果 ID 7-15M 出现 SGS 竞品 → 提示 "ID 法规紧迫"</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- BD vs ID 战略对比（2026-06-23 修订） -->
+    <div class="section" style="border-left:4px solid #ff6f00;background:linear-gradient(135deg,#fff8e1 0%,#fff 100%)">
+      <h2 style="color:#ff6f00"><span class="flag">⚖️</span>BD vs ID 战略对比 <span class="small" style="color:#999">2026-06-23 客户洞察</span></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px">
+        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:8px">
+          <div style="font-size:13px;font-weight:800;color:#0d47a1;margin-bottom:8px">🇧🇩 BD = <b>市场第一</b>（Overall Leader）</div>
+          <div style="font-size:11px;color:#1a1a1a;line-height:1.7">
+            <b>基础：</b>凤凰有 BD 品牌基础（dreamcycle.store 已入驻 + Phoenix 4 SKU）<br>
+            <b>目标：</b>BD 中高端市场第一（与 Rockrider / Veloce / Core 同台）<br>
+            <b>路径：</b>4P 框架（Product 公路车 + Price 价值锚点 + Place 渠道升级 + Promotion 品牌叙事）<br>
+            <b>对手：</b>Rockrider / Veloce / Core（已站稳 25K+ 主流）<br>
+            <b>客户证据：</b>SUNSPEED/CAMP 不惜代价 + 客户采购 4 大优势 = 切入
+          </div>
+        </div>
+        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:14px;border-radius:8px">
+          <div style="font-size:13px;font-weight:800;color:#1b5e20;margin-bottom:8px">🇮🇩 ID = <b>三蓝海品类</b>（公路 + 平把 + 砾石 · V2.6.1 客户判断修订）</div>
+          <div style="font-size:11px;color:#1a1a1a;line-height:1.7">
+            <b>基础：</b>凤凰 ID 已有 Pacific 自有品牌供应商 · MTB/折叠/童车都是红海（4% 毛利）<br>
+            <b>目标：</b>公路 + 平把公路 + 砾石 三蓝海品类切入（V2.6.1 修订）<br>
+            <b>路径：</b>4P 框架（Product 公路+平把+砾石 13 SKU + Price 8-18M IDR + Place Shopee+Tokopedia 74 SKU 实测 7M+ 真空 + Promotion UCI/SNI 双品牌叙事）<br>
+            <b>对手：</b>Polygon Monarch（2.7M 最高）/ Element Jasper 2.2M（ID 唯一砾石品类）/ 不与 Pacific 5.1-9.5M 重叠<br>
+            <b>客户证据：</b>① 客户 MTB/折叠/童车 4% 毛利红海判断 ② Shopee+Tokopedia 双平台 74 SKU 7M+ 真空实测 ③ 客户自己砍了 V2.6 MTB 提案
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(255,111,0,.1);border-left:3px solid #ff6f00;padding:8px 12px;border-radius:6px;margin-top:10px;font-size:12px;line-height:1.6;color:#1a1a1a">
+        <b>🎯 V2.6.1 核心判断（2026-07-07 客户修订）：</b>BD 与 ID 必须用完全不同的战略模板。<b>BD 争市场第一</b>（overall，凤凰有品牌基础）=<b>全品类</b>（公路+MTB+砾石都打）。<b>ID 三蓝海品类</b>（公路+平把公路+砾石）= <b style="color:#c8102e">客户判断 = MTB/折叠/童车红海 = 永不参与</b>（不是市场真空问题，是客户内部已有供应商 + 4% 毛利 = 差异化无空间 = 实事求是 = V2.6.1 核心修订）
+      </div>
+    </div>
+
+    <!-- 2026 H2 行动 = 当前最紧要 -->
+    <div class="section" style="border-left:4px solid #e53935">
+      <h2 style="color:#e53935"><span class="flag">🔥</span>2026 H2 最紧要行动 <span class="small">7-12 月 · 关键里程碑</span></h2>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:8px 0">🇧🇩 BD 行动（3 个）</h3>
+      <div class="initiative-grid">
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-01 · 紧迫</div>
+          <div class="init-title">推 SGS 资质认证（MTB + 公路）</div>
+          <div class="init-detail">关键路径：Veloce/Core/Marine 无认证 → Phoenix 抢先获 SGS + 三标 = 中端红海差异化 = 价格战突破口</div>
+          <span class="init-tag">Jul-Aug 2026</span>
+        </div>
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-02 · 关键</div>
+          <div class="init-title">BD 22K+ UCI MTB 大单品立项</div>
+          <div class="init-detail">SGS 认证 + 24"/26" + BDT 22-25K（USD 155-180）= 正面对标 Rockrider XC 401 25K / Pro Gen2 28K = 价值锚点</div>
+          <span class="init-tag">Aug-Sep 2026</span>
+        </div>
+        <div class="initiative bd">
+          <div class="init-id">BD-H2-03 · 关键</div>
+          <div class="init-title">BD 公路车品类补强立项</div>
+          <div class="init-detail">17 品牌公路车仅 Hero 1 SKU = 完全真空。Phoenix 公路车（700C 铝合金，BDT 13-15K）= 抢占第二品类</div>
+          <span class="init-tag">Sep-Oct 2026</span>
+        </div>
+        <div class="initiative bd" style="background:linear-gradient(135deg,rgba(94,234,212,.2),rgba(200,16,46,.1));border-left:4px solid #5eead4">
+          <div class="init-id">🆕 BD-H2-04 · 🥇 第一优先 (V2 修订)</div>
+          <div class="init-title">BD 公路车 / 平把公路 / 砾石 大单品立项（V2 战略大单品）</div>
+          <div class="init-detail">客户情报 2026-06-23：BD 公路车/平把公路车热度快速上升，客户不惜代价采购 SUNSPEED/CAMP。Phoenix 4 大优势 = ① 沃尔玛规模 ② UCI 认证车架 ③ ID 1月订单已验证 ④ 返单中。<b>产品方向：平把公路 + UCI 砾石 + UCI 公路 三大子类 = BDT 13-25K = V2 战略大单品（优先于 22K+ UCI MTB）</b></div>
+          <span class="init-tag" style="background:#5eead4;color:#000">🥇 优先：Jul-Aug 2026</span>
+        </div>
+        </div>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🇮🇩 ID 行动（V2.6.1 · 三蓝海品类）</h3>
+      <div class="initiative-grid">
+        <div class="initiative id" style="background:linear-gradient(135deg,rgba(46,125,50,.25),rgba(200,16,46,.1));border-left:4px solid #2e7d32">
+          <div class="init-id">🆕 ID-H2-01 · 🥇 关键 (V2.6.1 三蓝海)</div>
+          <div class="init-title">Phoenix 公路车 5 SKU + 平把公路 3 SKU 立项（双平台 74 SKU 7M+ 真空验证）</div>
+          <div class="init-detail"><b style="color:#c8102e">V2.6.1 关键修订：客户砍 MTB/折叠/童车红海 → 聚焦公路+平把+砾石三蓝海</b>。<b>产品方向：</b>Phoenix 公路车 5 SKU（KR2.P1 返单扩展 12-15M）+ 平把公路 3 SKU @ 12-15M（Niche #3 蓝海）。<b>客户证据：</b>① Shopee+Tokopedia 双平台 74 SKU 0 个进 7M+ 中端真空 ② Polygon Monarch 2.7M = Shopee 自行车最高价（ID 真自行车无 7M+） ③ 客户判断公路+平把+砾石 = ID 蓝海品类</div>
+          <span class="init-tag" style="background:#2e7d32;color:#fff">🎯 V2.6.1 蓝海切入：Jul-Sep 2026</span>
+        </div>
+        <div class="initiative id" style="background:linear-gradient(135deg,rgba(46,125,50,.25),rgba(200,16,46,.1));border-left:4px solid #2e7d32">
+          <div class="init-id">🆕 ID-H2-02 · 🥇 关键 (FNIX 错位补强)</div>
+          <div class="init-title">FNIX 高端公路 2 SKU + 砾石 2 SKU @ 12-18M IDR</div>
+          <div class="init-detail"><b>V2.6.1 FNIX 错位补强（不重叠 Phoenix 12-15M 上方）：</b>高端公路 2 SKU @ 15-18M（Niche 填补 12-25M 真空）+ 砾石 2 SKU @ 12-18M（SNI 印尼国家标准背书）。<b>客户证据：</b>① ID 折叠/MTB 红海 → FNIX 资源全转公路+砾石 ② SNI 认证 = 印尼本土信任 = 品质差异化 ③ Rodalink 9 品牌 dealer = 中高端专业渠道</div>
+          <span class="init-tag" style="background:#2e7d32;color:#fff">🎯 FNIX 错位：Jul-Sep 2026</span>
+        </div>
+        <div class="initiative id">
+          <div class="init-id">ID-H2-03 · 关键</div>
+          <div class="init-title">Shopee ID + Tokopedia 双平台官方店</div>
+          <div class="init-detail">74 SKU 实测 7M+ 真空平台 · Phoenix 官方店 + FNIX 官方店 = 子品类专门店 · 商品上架 30+ SKU 上架（按公路/平把/砾石分类）</div>
+          <span class="init-tag">立即：Jul-Aug 2026</span>
+        </div>
+        <div class="initiative id">
+          <div class="init-id">ID-H2-04 · 紧迫</div>
+          <div class="init-title">印尼 SNI 资质强制认证法规跟进</div>
+          <div class="init-detail">印尼 SNI 2024 法规升级 → 2026 H2 可能强制。所有 ID SKU 上市前必须有 SNI（FNIX 主推）</div>
+          <span class="init-tag">Jul 2026 · 持续监控</span>
+        </div>
+        <div class="initiative id" style="background:rgba(255,193,7,.15);border-left-color:#e65100">
+          <div class="init-id">ID-H2-05 · 试水 (V2.6 降级保持)</div>
+          <div class="init-title">Phoenix 折叠车 1 SKU 试水 @ 8M IDR (FK-TEST)</div>
+          <div class="init-detail"><b>V2.6 降级 = 不投长期</b> · 仅 1 SKU 试水 6 个月 · 试销 ≥ 50 台/月才追加 · 不抢 Dahon/JAVA 红海</div>
+          <span class="init-tag">Jul-Dec 2026 · 6 个月观察期</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🌐 全局 / DTC 行动（3 个）</h3>
+      <div class="initiative-grid">
+        <div class="initiative">
+          <div class="init-id">GL-H2-01 · 关键</div>
+          <div class="init-title">Phoenix 独立站选型 + 域名 + 设计</div>
+          <div class="init-detail">Shopify/WooCommerce 评估 + 域名 phoenixbike.bd / phoenixbike.id + 品牌叙事页面设计</div>
+          <span class="init-tag">Aug-Oct 2026</span>
+        </div>
+        <div class="initiative">
+          <div class="init-id">GL-H2-02 · 长期</div>
+          <div class="init-title">Phoenix 品牌叙事资产沉淀（4 季度）</div>
+          <div class="init-detail">凤凰故事 + SGS 认证故事 + 用户社群故事 + 大单品故事 = DTC 转化基础</div>
+          <span class="init-tag">Q3-Q4 2026</span>
+        </div>
+        <div class="initiative">
+          <div class="init-id">GL-H2-03 · 关键</div>
+          <div class="init-title">社媒矩阵搭建（IG + FB + TK）</div>
+          <div class="init-detail">BD/ID 同步 + 内容运营 + KOL 合作 = 2027 流量基础（目标：年底前 5K 粉）</div>
+          <span class="init-tag">Aug-Dec 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 月时间线 -->
+    <div class="section dark">
+      <h2><span class="flag" style="color:#5eead4">📅</span>2026 H2 时间线 <span class="small" style="color:#aaa">6 月已过 · 当前进度</span></h2>
+      <div class="timeline">
+        <div class="month now">
+          <div class="m-label">7 月（当前）</div>
+          <div class="m-item">· 启动 <b>SGS 认证</b></div>
+          <div class="m-item">· 立项 BD 公路车大单品（V2 优先）</div>
+          <div class="m-item">· 跟进 ID SNI 法规</div>
+          <div class="m-item">· <b style="color:#c8102e">立项 ID 三蓝海品类</b>（Phoenix 公路+平把 + FNIX 公路+砾石）</div>
+        </div>
+        <div class="month">
+          <div class="m-label">8 月</div>
+          <div class="m-item">· <b>BD 公路车设计冻结</b>（平把 + UCI 砾石）</div>
+          <div class="m-item">· <b>ID Phoenix 公路车 SKU 立项</b>（5 SKU 扩品）</div>
+          <div class="m-item">· Shopee ID + Tokopedia 双平台开店</div>
+          <div class="m-item">· 独立站域名 + Shopify 选型</div>
+        </div>
+        <div class="month">
+          <div class="m-label">9 月</div>
+          <div class="m-item">· <b>BD 公路车打样</b>（平把公路 + 砾石）</div>
+          <div class="m-item">· <b>ID 平把公路 3 SKU 设计冻结</b></div>
+          <div class="m-item">· ID 折叠 FK-TEST 1 SKU 试水启动</div>
+          <div class="m-item">· 独立站页面 v1 上线</div>
+          <div class="m-item">· 社媒 1000 粉</div>
+        </div>
+        <div class="month">
+          <div class="m-label">10 月</div>
+          <div class="m-item">· <b>ID 平把公路 + FNIX 公路打样</b></div>
+          <div class="m-item">· <b>FNIX 砾石车 SNI 认证</b>（本土背书）</div>
+          <div class="m-item">· BD 公路车 SGS 申请</div>
+          <div class="m-item">· 社媒 3K 粉</div>
+        </div>
+        <div class="month">
+          <div class="m-label">11 月</div>
+          <div class="m-item">· <b>ID 三蓝海品类小批量试产</b>（Phoenix 公路 5 SKU + FNIX 公路 2 SKU + FNIX 砾石 2 SKU）</div>
+          <div class="m-item">· 独立站预热 + 公测</div>
+          <div class="m-item">· KOL 合作 2-3 个（公路车 KOL）</div>
+          <div class="m-item">· 2027 战略规划</div>
+        </div>
+        <div class="month">
+          <div class="m-label">12 月</div>
+          <div class="m-item">· <b>BD 大单品首发（圣诞档）</b></div>
+          <div class="m-item">· <b>独立站正式上线</b></div>
+          <div class="m-item">· <b>ID 三蓝海品类 Shopee+Tokopedia 上架</b></div>
+          <div class="m-item">· 社媒 5K 粉</div>
+          <div class="m-item">· H2 OKR 复盘 + 2027 OKR</div>
+        </div>
+      </div>
+
+      <div class="strategy-card" style="background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.7">
+        <b>🎯 2026 H2 关键里程碑（V2.6.1 KPI · 4P 双市场差异化）：</b>
+        <ul style="margin:6px 0 0 18px;line-height:1.7">
+          <li><b>BD（市场第一）</b>：公路车 3 款 13-25K 上市 + 22K+ UCI MTB 1 款上市 = BD SKU 8 → 12-15（MTB 保留 = BD 没客户供应商问题）</li>
+          <li><b style="color:#c8102e">ID（三蓝海品类 · V2.6.1）</b>：Phoenix 公路车 5 SKU + 平把公路 3 SKU + FNIX 公路 2 SKU + FNIX 砾石 2 SKU + FK-TEST 1 SKU = ID SKU 8 → 15（双平台 74 SKU 实测 7M+ 真空）</li>
+          <li><b>品牌</b>：独立站上线 + 社媒 5K 粉 + 品牌叙事资产 4 篇（双市场共用）</li>
+          <li><b>BD 评分</b>：从 #14 (44.5) → 目标 #10-12（公路车品类真空开荒后 = 评分上升）</li>
+          <li><b style="color:#c8102e">ID 三蓝海</b>：从 8 → 15 SKU（V2.6.1 公路+平把+砾石切入 7M+ 真空 = 实证双平台）</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2027-2028 远景已迁移到 strategy.html Tab #9 -->
+
+    <div class="footer">
+      数据来源：dashboard_metrics (latest.json) · 战略框架 V2 钻井型 · 2027-2028 远景见 Tab #9 strategy
+    </div>
+  </div>
+
+<script>
+// V2.7.1 动态注入 task 顶部 KPI（dashboard_metrics 不老化）
+function injectTaskBaseline(dm, phx, phxGap, totals) {
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  // Phoenix BD
+  set('task-phx-rank', (phx && phx.rank) || '—');
+  set('task-phx-score', (phx && phx.score) ? phx.score.toFixed(1) : '—');
+  set('task-phx-count', (totals.phx_bd_mid_high != null) ? totals.phx_bd_mid_high : '—');
+  set('task-phx-asp', (totals.phx_bd_asp != null) ? totals.phx_bd_asp.toLocaleString() : '—');
+  set('task-phx-max', (totals.phx_bd_max != null) ? totals.phx_bd_max.toLocaleString() : '—');
+  set('task-ind-max', (phxGap.industry_max_price != null) ? phxGap.industry_max_price.toLocaleString() : '—');
+  set('task-ind-brand', phxGap.industry_max_brand || '—');
+  // BD 行业
+  set('task-bd-brands', totals.bd_pool_brands || '—');
+  set('task-bd-pool', totals.bd_pool_total || '—');
+  set('task-bd-mid', ((dm.bands||{}).bd_15_25k||{}).count || '—');
+  set('task-bd-high', phxGap.gt_25k_count || '—');
+  // ID 行业
+  set('task-id-pool', totals.id_pool_total || '—');
+  set('task-id-mid', ((dm.id_7_15m)||{}).count || '—');
+  // V2.3 价格阶梯
+  injectV23Tier(dm, phxGap);
+}
+
+// V2.3 三层价格阶梯动态注入（用真实字段名 bd_gt_25k / bd_gt_30k）
+function injectV23Tier(dm, phxGap) {
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  const bands = dm.bands || {};
+  const mid = bands.bd_15_25k || {};          // 15-25K 中高端
+  const high = bands.bd_gt_25k || {};         // 25K+ 高端（最准）
+  const anchor = bands.bd_gt_30k || {};       // 30K+ 锚点
+
+  // 15-25K 中端
+  set('v23-mid-count', mid.count || '—');
+  set('v23-mid-brands', mid.brands_count || '—');
+  set('v23-mid-brands-list', (mid.top_5_brands || []).slice(0,5).join(' / ') || '—');
+  // Phoenix 在 15-25K 数量 = phx_in_15_25
+  set('v23-mid-phx', phxGap.phx_in_15_25 || '—');
+
+  // 25K+ 高端（包含 25-40K + 40K+）
+  set('v23-high-count', high.count || '—');
+  set('v23-high-brands', high.brands_count || '—');
+  set('v23-high-brands-list', (high.top_5_brands || []).slice(0,6).join(' / ') || '—');
+  set('v23-phx-max', (phxGap.phx_max_price != null) ? phxGap.phx_max_price.toLocaleString() : '—');
+
+  // 30K+ 锚点（包含 40-60K + 65K+）
+  set('v23-anchor-count', anchor.count || '—');
+  set('v23-anchor-brands', anchor.brands_count || '—');
+  set('v23-anchor-list', (anchor.top_5_brands || []).slice(0,4).join(' + ') || '—');
+
+  // 65K+ 形象
+  if (phxGap.industry_max_brand && phxGap.industry_max_price) {
+    set('v23-image-brand', phxGap.industry_max_brand + ' ' + (phxGap.industry_max_model || ''));
+    set('v23-image-price', phxGap.industry_max_price.toLocaleString() + ' BDT');
+  }
+}
+
+async function load() {
+  let data;
+  try {
+    const r = await fetch('../data/latest.json', {cache: 'no-store'});
+    data = await r.json();
+  } catch (e) {
+    document.getElementById('today-actions').innerHTML = '<div class="initiative" style="background:#fff3e0;color:#bf360c">⚠ 加载失败：' + e.message + '</div>';
+    return;
+  }
+  const dm = data.dashboard_metrics || {};
+  const totals = dm.totals || {};
+  const bands = dm.bands || {};
+  const phxGap = dm.phx_gap || {};
+  const idInfo = dm.id_7_15m || {};
+  // V2.7.1 动态注入 task 顶部 KPI
+  const phxMetrics = data.brand_metrics && data.brand_metrics.bd && data.brand_metrics.bd.phoenix;
+  injectTaskBaseline(dm, phxMetrics, phxGap, totals);
+  const actions = [];
+  // 规则 1: Phoenix SKU < 12 → 加速扩 SKU
+  if (totals.phx_bd_mid_high < 12) {
+    actions.push({
+      region: 'BD', priority: 'URGENT',
+      title: '加速扩 SKU 到 12+',
+      detail: `Phoenix BD 当前 ${totals.phx_bd_mid_high} SKU · 距 V2 战略 SKU 目标 20+ 差 ${20 - totals.phx_bd_mid_high} SKU = 需加速产品研发（核心大单品 + 公路车 + 砾石）`,
+      tag: 'OKR KR1.2'
+    });
+  }
+  // 规则 2: Phoenix 顶价 < 25K → 大单品提顶价
+  if (phxGap.phx_max_price && phxGap.phx_max_price < 25000) {
+    actions.push({
+      region: 'BD', priority: 'URGENT',
+      title: '大单品提顶价到 25K+',
+      detail: `Phoenix 顶价仅 ${phxGap.phx_max_price.toLocaleString()} BDT · 距 V2 战略 25K+ 价值锚点差 ${(25000 - phxGap.phx_max_price).toLocaleString()} BDT = 需 22K+ UCI MTB 大单品（OKR KR1.3）`,
+      tag: 'OKR KR1.3'
+    });
+  }
+  // 规则 3: > 25K 出现新品牌（与上次对比）—— 简化：只要 > 25K SKU > 0 都提示
+  if (phxGap.gt_25k_count > 0) {
+    const brands = phxGap.gt_25k_brands || [];
+    actions.push({
+      region: 'BD', priority: 'WATCH',
+      title: `25K+ 已 ${phxGap.gt_25k_count} SKU ${brands.length} 品牌 = 跟进${brands.slice(0, 3).join(' / ')}`,
+      detail: `高端价位已稳定存在 ${brands.length} 品牌（${brands.join(' / ')}）= 凤凰 V2 大单品应正面对标，而非"切入真空"（OKR KR1.3）`,
+      tag: '市场动态'
+    });
+  }
+  // 规则 4: 15-25K 红海集中度 > 50% → 中端红海警示
+  const midhigh = bands.bd_15_25k;
+  if (midhigh && totals.bd_pool_mid_high > 0) {
+    const ratio = midhigh.count / totals.bd_pool_mid_high;
+    if (ratio > 0.4) {
+      actions.push({
+        region: 'BD', priority: 'WARN',
+        title: `15-25K 中端红海集中 ${(ratio*100).toFixed(0)}%`,
+        detail: `中高端 (15-25K) ${midhigh.count} SKU 占中高端池 ${(ratio*100).toFixed(0)}% = Phoenix 需 SGS 认证差异化（不是拼价格）`,
+        tag: 'OKR KR1.1'
+      });
+    }
+  }
+  // 规则 5: ID 7-15M 出现 SGS 竞品 = 法规紧迫
+  if (idInfo.count > 0) {
+    actions.push({
+      region: 'ID', priority: 'URGENT',
+      title: `ID 7-15M 4 SKU 全本土 = SGS 中国品牌真空`,
+      detail: `Element/United/Pacific ${idInfo.count} SKU 全部本土品牌 = 凤凰 Thunder ID 9.5M 是唯一中国品牌机会（OKR KR2.1）`,
+      tag: 'OKR KR2.1'
+    });
+  }
+  // 规则 6: Phoenix ASP < 18K → ASP 提升
+  if (totals.phx_bd_asp && totals.phx_bd_asp < 18000) {
+    actions.push({
+      region: 'BD', priority: 'WATCH',
+      title: `Phoenix ASP ${totals.phx_bd_asp.toLocaleString()} BDT 偏低`,
+      detail: `ASP ${totals.phx_bd_asp.toLocaleString()} 远低于 Rockrider 33.5K / Veloce 22K = 凤凰实际定位中端，需大单品提 ASP（OKR KR1.4）`,
+      tag: 'OKR KR1.4'
+    });
+  }
+  // 规则 7: BD 公路车品类真空 → V2 4P 战略大单品
+  actions.push({
+    region: 'BD', priority: 'URGENT',
+    title: '🥇 BD = 市场第一（4P 框架）',
+    detail: `BD 17 品牌 × 公路品类 = 仅 Hero 1 SKU = 真空。客户情报：BD 公路车/平把公路车热度快速上升，客户不惜代价采购 SUNSPEED/CAMP。V2 4P：Product 公路车 5 SKU + Price 顶价 40K + Place dreamcycle/Daraz 升级 + Promotion 4 大优势品牌叙事。凤凰有 BD 品牌基础 = 争 overall 第一（OKR O1）`,
+    tag: '🆕 O1 4P 框架'
+  });
+  // 规则 8: ID 折叠子品类 → V2 4P Niche 战略（细分唯一）
+  actions.push({
+    region: 'ID', priority: 'URGENT',
+    title: '🥇 ID = 细分唯一（4P 框架 · Niche 战略）',
+    detail: `V2 修订：凤凰 ID 已是低端品牌 = 争不了 overall 第一 = 找 niche。Element 折叠 ID 唯一 = Phoenix 折叠子品类切入机会。V2 4P Niche：Product 折叠 3 SKU（5-8M IDR 避 2-5M 红海）+ Price 不打价格战 + Place Rodalink dealer + Promotion 唯一中国折叠品牌 = Niche Leader（OKR O2）`,
+    tag: '🆕 O2 4P Niche'
+  });
+  // 渲染
+  const regionColors = {BD: '#1565c0', ID: '#2e7d32', 'GL': '#9c27b0'};
+  const priorityEmoji = {URGENT: '🔴', WATCH: '🟡', WARN: '🟠'};
+  const html = actions.map(a => {
+    const color = regionColors[a.region] || '#666';
+    return `<div class="initiative" style="border-left-color:${color}">
+      <div class="init-id">${priorityEmoji[a.priority] || '·'} ${a.region}-ACTION · ${a.priority} · ${a.tag}</div>
+      <div class="init-title">${a.title}</div>
+      <div class="init-detail">${a.detail}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('today-actions').innerHTML = html || '<div class="initiative" style="background:#e8f5e9;border-left-color:#2e7d32;color:#1b5e20"><div class="init-title">✅ 所有 OKR KR 已达成 / 监控中</div><div class="init-detail">今日无紧急行动项 = 战略推进顺利</div></div>';
+}
+// V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
+  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
+</script>
+<script src="../render_quality_gate.js"></script>
+</body>
+</html>
