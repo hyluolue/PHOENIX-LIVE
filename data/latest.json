@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T10:58:23+08:00",
+  "generated_at": "2026-07-07T11:16:10+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -3749,7 +3749,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T10:58:23+08:00",
+  "gen_at": "2026-07-07T11:16:10+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4082,7 +4082,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T10:58:23+08:00",
+    "computed_at": "2026-07-07T11:16:10+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
@@ -4172,11 +4172,11 @@
         ]
       },
       "bd_gt_25k": {
-        "count": 31,
+        "count": 30,
         "brands_count": 6,
         "brands": {
           "Rockrider": 14,
-          "Veloce": 7,
+          "Veloce": 6,
           "Core": 5,
           "Ceres": 2,
           "Magpy": 2,
@@ -4193,7 +4193,7 @@
     },
     "gt_25k_brands": {
       "Rockrider": 14,
-      "Veloce": 7,
+      "Veloce": 6,
       "Core": 5,
       "Ceres": 2,
       "Magpy": 2,
@@ -4234,10 +4234,10 @@
       "phx_in_15_25": 3,
       "phx_in_gt_25": 0,
       "industry_max_price": 65000,
-      "industry_max_brand": "Generic",
-      "industry_max_model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
+      "industry_max_brand": "Rockrider",
+      "industry_max_model": "Rockrider XC 404",
       "phx_vs_industry_ratio": 3.6,
-      "gt_25k_count": 31,
+      "gt_25k_count": 30,
       "gt_25k_brand_count": 6,
       "gt_25k_brands": [
         "Rockrider",
@@ -4254,9 +4254,9 @@
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "United",
         "Pacific",
-        "Element"
+        "Element",
+        "United"
       ]
     },
     "id_top10_brands": [
@@ -4400,7 +4400,7 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 59 SKU 17 品牌，Phoenix 缺席；> 25K 31 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 59 SKU 17 品牌，Phoenix 缺席；> 25K 30 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
         "top_competitors_gt_25k": [
           {
@@ -4434,9 +4434,9 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "United",
           "Pacific",
-          "Element"
+          "Element",
+          "United"
         ]
       },
       "bd_road_bike": {
@@ -4490,7 +4490,7 @@
   "data_quality": {
     "level": "yellow",
     "emoji": "🟡",
-    "evaluated_at": "2026-07-07T10:58:44",
+    "evaluated_at": "2026-07-07T11:16:10",
     "reasons": [
       "⚠️ 高级模块失败: apify_social — 社媒数据（FB/IG 竞品）· 偶发 5xx",
       "Phoenix SKU 12（建议 ≥ 15）"
@@ -4515,7 +4515,7 @@
       "bd_count": 190,
       "id_count": 8,
       "phoenix_sku": 12,
-      "gt_25k_total": 31
+      "gt_25k_total": 30
     },
     "thresholds": {
       "bd_pool_min_green": 150,
