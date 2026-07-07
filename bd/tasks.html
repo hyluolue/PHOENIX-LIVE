@@ -64,11 +64,19 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
+    <!-- 市场切换器 -->
+<div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(21,101,192,.08);border-radius:8px">
+  <strong style="margin-right:8px;color:#94a3b8">🌐 市场：</strong>
+  <a href="../../index.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
+  <a href="./index.html" style="padding:4px 12px;background:#1565c0;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉</a>
+  <a href="../id/tasks.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼 →</a>
+</div>
+
+<div class="header">
       <div class="logo">P</div>
       <div>
-        <h1>🎯 战略 OKR <span class="badge">V2 · 2026-2028</span></h1>
-        <div class="subtitle">基于 dashboard_metrics 真实数据 · V2 钻井型战略 · 1-2 战略大单品 + 10 倍升级 + 价值锚点</div>
+        <h1>🎯 🇧🇩 BD OKR <span class="badge">V2.3 · 2026-2028</span></h1>
+        <div class="subtitle">基于 dashboard_metrics 真实数据 · V2.3 三层价格阶梯 · BD = 市场第一</div>
       </div>
       <div class="nav">
       <a href="./index.html">🏠 总览</a>
@@ -76,7 +84,7 @@
       <a href="./competitive.html">🏆 竞品监控</a>
       <a href="./matrix.html">💎 产品矩阵</a>
       <a href="./market.html">🇧🇩 孟加拉</a>
-      <a href="./market.html">🇮🇩 印尼</a>
+      <a href="../id/market.html">🇮🇩 印尼</a>
       <a href="./tasks.html" class="active">🎯 任务 OKR</a>
       <a href="./dtc.html">💬 DTC 差评</a>
       <a href="./strategy.html">🧠 策略迭代</a>
@@ -86,7 +94,7 @@
 
     <!-- 真实数据基线（dashboard_metrics 动态读 · V2.7.1） -->
     <div class="section dark" style="border-left-color:#5eead4">
-      <h2 style="color:#5eead4"><span class="flag">📊</span>真实基线 <span class="small" style="color:#aaa">latest.json#dashboard_metrics 动态读 · 不老化</span></h2>
+      <h2 style="color:#5eead4"><span class="flag">📊</span>🇧🇩 BD 真实基线 <span class="small" style="color:#aaa">190 SKU · 27 品牌 · latest.json 动态读</span></h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
         <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">Phoenix BD</div>
@@ -104,14 +112,7 @@
             <b>&gt; 25K: <span id="task-bd-high">—</span> SKU</b>
           </div>
         </div>
-        <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
-          <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">ID 行业</div>
-          <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
-            <span id="task-id-pool">—</span> 整车 SKU<br>
-            <b>7-15M: <span id="task-id-mid">—</span> SKU</b><br>
-            无 SGS 中国品牌 = 真空
-          </div>
-        </div>
+        
         <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">V2 战略</div>
           <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
@@ -201,37 +202,6 @@
         </div>
       </div>
 
-      <div class="okr-card" style="border-left-color:#2e7d32;border:2px solid #2e7d32">
-        <div class="o-id" style="color:#2e7d32">O2 · 4P 框架 · <b>2026-07-07 V2.6.1 关键修订</b>（客户判断：MTB/折叠/童车 = 红海不参与）</div>
-        <div class="o-title">ID = <b>公路 + 平把公路 + 砾石 三蓝海品类</b>（凤凰 + FNIX 双品牌 · 避 Pacific 完全错位 · 客户双重身份）<span style="background:linear-gradient(90deg,#1565c0 50%,#2e7d32 50%);color:#fff;padding:3px 8px;border-radius:3px;font-size:9px;margin-left:6px;font-weight:700">PHOENIX + FNIX</span></div>
-        <div class="o-period">时间窗：2026-2028 · 区域：🇮🇩 Indonesia · <b>V2.6.1 三蓝海</b>：公路车 + 平把公路 + 砾石（折叠 1 SKU 试水）· MTB / 折叠 / 童车 = 客户已有供应商 + 4% 毛利红海 = <b style="color:#c8102e">完全不参与</b></div>
-        <div class="krs">
-          <div class="kr" style="background:rgba(21,101,192,.06);padding-left:6px"><span class="kr-icon">📦 PHOENIX Product（UCI 国际背书 · 公路+砾石主流）</span></div>
-          <div class="kr"><span class="kr-icon">KR2.P1 🔄</span><span><b style="color:#1565c0">✅ Phoenix 公路车返单成功</b>（验证）→ 目标 <b>5 SKU</b> 累计复购 3 次</span></div>
-          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.P2 🆕</span><span><b style="color:#2e7d32">✅ Phoenix 高端砾石返单中</b>（验证）→ 目标 <b>2 SKU</b> = 城市砾石主流</span></div>
-          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.P3 🆕</span><span><b style="color:#1565c0">Phoenix 平把公路车 3 SKU @ 12-15M IDR</b>（Niche #3 · Shopee+Tokopedia 双平台 0 SKU 真空验证）</span></div>
-          <div class="kr" style="background:rgba(255,193,7,.1);padding-left:6px"><span class="kr-icon">KR2.P4 🆕 试水</span><span><b>Phoenix 折叠车 1 SKU @ 8M IDR</b>（FK-TEST · V2.6 降级保持 · 6 个月试销 ≥ 50 台/月才追加）</span></div>
-          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">📦 FNIX Product（SNI 本土认证 · 中高端错位补强）🆕</span></div>
-          <div class="kr"><span class="kr-icon">KR2.P5 🆕</span><span><b style="color:#c8102e">FNIX 高端公路车 2 SKU @ 15-18M IDR</b>（错位 Phoenix 12-15M · 补 12-25M 中高端真空）</span></div>
-          <div class="kr"><span class="kr-icon">KR2.P6 🆕</span><span><b style="color:#c8102e">FNIX 砾石车 2 SKU @ 12-18M IDR</b>（错位 Phoenix 砾石返单 2 SKU · 价位升级 + SNI 认证）</span></div>
-          <div class="kr" style="background:rgba(244,67,54,.1);padding-left:6px"><span class="kr-icon">🚫 永久删除品类（V2.6.1）</span></div>
-          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">MTB 山地车</b>：客户已自有供应商 + 全品类 4% 毛利红海 = <span class="delta" style="color:#c8102e">永不参与</span>（V2.6 FNIX MTB-FLAG 1+2 已砍）</span></div>
-          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">折叠车大规模</b>：客户已自有供应商 + Dahon/JAVA 强竞品 = <span class="delta" style="color:#c8102e">仅 1 SKU 试水</span>（V2.6 折叠 3 SKU 已降级）</span></div>
-          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Exclude 🔴</span><span><b style="color:#c8102e">童车</b>：客户已自有供应商 = <span class="delta" style="color:#c8102e">完全不参与</span></span></div>
-          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">💰 Price</span></div>
-          <div class="kr"><span class="kr-icon">KR2.Pr1 🔄</span><span><b>Phoenix 8-15M IDR 公路/平把/砾石三蓝海</b>（避 Pacific 5.1-9.5M 红海）</span></div>
-          <div class="kr"><span class="kr-icon">KR2.Pr2 🆕</span><span><b>FNIX 12-18M IDR 中高端错位</b>（Phoenix 12-15M 上方补强，不重叠）</span></div>
-          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">🏪 Place</span></div>
-          <div class="kr"><span class="kr-icon">KR2.Pl1 🆕</span><span><b>Shopee ID + Tokopedia 双平台官方店</b>（Phoenix + FNIX 分店 · 74 SKU 实测 7M+ 真空平台）</span></div>
-          <div class="kr"><span class="kr-icon">KR2.Pl2 🆕</span><span><b>Rodalink dealer 申请</b>（9 品牌 dealer 渠道 · 但只卖 Phoenix 公路/平把/砾石 = 子品类专门店）</span></div>
-          <div class="kr" style="background:rgba(46,125,50,.06);padding-left:6px"><span class="kr-icon">📣 Promotion</span></div>
-          <div class="kr"><span class="kr-icon">KR2.Pm1 🆕</span><span><b>Phoenix 营销叙事：UCI + Walmart + 4 大客户验证</b></span></div>
-          <div class="kr" style="background:rgba(46,125,50,.1);padding-left:6px"><span class="kr-icon">KR2.Pm2 🆕</span><span><b>FNIX 营销叙事：SNI 印尼国家标准 = 印尼本土信任 = 品质差异化</b></span></div>
-          <div class="kr" style="background:rgba(244,67,54,.06);padding-left:6px"><span class="kr-icon">🚫 Pacific 错位铁律 🆕</span></div>
-          <div class="kr" style="background:rgba(244,67,54,.05);padding-left:6px"><span class="kr-icon">KR2.Conflict 🆕🔴</span><span><b>100% 不重叠 Pacific 价位</b>（Phoenix + FNIX 都不可进 5.1-9.5M）· 所有 SKU 提案 <span class="delta" style="color:#c8102e">必须客户内部审查</span>（避免内部矛盾）</span></div>
-        </div>
-      </div>
-
       <div class="okr-card" style="border-left-color:#9c27b0">
         <div class="o-id" style="color:#9c27b0">O3</div>
         <div class="o-title">Phoenix 建立 DTC 独立站 + 品牌叙事体系（区别于渠道方）</div>
@@ -259,36 +229,6 @@
           <li>如果 15-25K 红海集中度 > 50% → 提示 "中端红海，差异化"</li>
           <li>如果 ID 7-15M 出现 SGS 竞品 → 提示 "ID 法规紧迫"</li>
         </ol>
-      </div>
-    </div>
-
-    <!-- BD vs ID 战略对比（2026-06-23 修订） -->
-    <div class="section" style="border-left:4px solid #ff6f00;background:linear-gradient(135deg,#fff8e1 0%,#fff 100%)">
-      <h2 style="color:#ff6f00"><span class="flag">⚖️</span>BD vs ID 战略对比 <span class="small" style="color:#999">2026-06-23 客户洞察</span></h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px">
-        <div style="background:#e3f2fd;border-left:4px solid #1565c0;padding:14px;border-radius:8px">
-          <div style="font-size:13px;font-weight:800;color:#0d47a1;margin-bottom:8px">🇧🇩 BD = <b>市场第一</b>（Overall Leader）</div>
-          <div style="font-size:11px;color:#1a1a1a;line-height:1.7">
-            <b>基础：</b>凤凰有 BD 品牌基础（dreamcycle.store 已入驻 + Phoenix 4 SKU）<br>
-            <b>目标：</b>BD 中高端市场第一（与 Rockrider / Veloce / Core 同台）<br>
-            <b>路径：</b>4P 框架（Product 公路车 + Price 价值锚点 + Place 渠道升级 + Promotion 品牌叙事）<br>
-            <b>对手：</b>Rockrider / Veloce / Core（已站稳 25K+ 主流）<br>
-            <b>客户证据：</b>SUNSPEED/CAMP 不惜代价 + 客户采购 4 大优势 = 切入
-          </div>
-        </div>
-        <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:14px;border-radius:8px">
-          <div style="font-size:13px;font-weight:800;color:#1b5e20;margin-bottom:8px">🇮🇩 ID = <b>三蓝海品类</b>（公路 + 平把 + 砾石 · V2.6.1 客户判断修订）</div>
-          <div style="font-size:11px;color:#1a1a1a;line-height:1.7">
-            <b>基础：</b>凤凰 ID 已有 Pacific 自有品牌供应商 · MTB/折叠/童车都是红海（4% 毛利）<br>
-            <b>目标：</b>公路 + 平把公路 + 砾石 三蓝海品类切入（V2.6.1 修订）<br>
-            <b>路径：</b>4P 框架（Product 公路+平把+砾石 13 SKU + Price 8-18M IDR + Place Shopee+Tokopedia 74 SKU 实测 7M+ 真空 + Promotion UCI/SNI 双品牌叙事）<br>
-            <b>对手：</b>Polygon Monarch（2.7M 最高）/ Element Jasper 2.2M（ID 唯一砾石品类）/ 不与 Pacific 5.1-9.5M 重叠<br>
-            <b>客户证据：</b>① 客户 MTB/折叠/童车 4% 毛利红海判断 ② Shopee+Tokopedia 双平台 74 SKU 7M+ 真空实测 ③ 客户自己砍了 V2.6 MTB 提案
-          </div>
-        </div>
-      </div>
-      <div style="background:rgba(255,111,0,.1);border-left:3px solid #ff6f00;padding:8px 12px;border-radius:6px;margin-top:10px;font-size:12px;line-height:1.6;color:#1a1a1a">
-        <b>🎯 V2.6.1 核心判断（2026-07-07 客户修订）：</b>BD 与 ID 必须用完全不同的战略模板。<b>BD 争市场第一</b>（overall，凤凰有品牌基础）=<b>全品类</b>（公路+MTB+砾石都打）。<b>ID 三蓝海品类</b>（公路+平把公路+砾石）= <b style="color:#c8102e">客户判断 = MTB/折叠/童车红海 = 永不参与</b>（不是市场真空问题，是客户内部已有供应商 + 4% 毛利 = 差异化无空间 = 实事求是 = V2.6.1 核心修订）
       </div>
     </div>
 
@@ -323,40 +263,6 @@
           <span class="init-tag" style="background:#5eead4;color:#000">🥇 优先：Jul-Aug 2026</span>
         </div>
         </div>
-
-      <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🇮🇩 ID 行动（V2.6.1 · 三蓝海品类）</h3>
-      <div class="initiative-grid">
-        <div class="initiative id" style="background:linear-gradient(135deg,rgba(46,125,50,.25),rgba(200,16,46,.1));border-left:4px solid #2e7d32">
-          <div class="init-id">🆕 ID-H2-01 · 🥇 关键 (V2.6.1 三蓝海)</div>
-          <div class="init-title">Phoenix 公路车 5 SKU + 平把公路 3 SKU 立项（双平台 74 SKU 7M+ 真空验证）</div>
-          <div class="init-detail"><b style="color:#c8102e">V2.6.1 关键修订：客户砍 MTB/折叠/童车红海 → 聚焦公路+平把+砾石三蓝海</b>。<b>产品方向：</b>Phoenix 公路车 5 SKU（KR2.P1 返单扩展 12-15M）+ 平把公路 3 SKU @ 12-15M（Niche #3 蓝海）。<b>客户证据：</b>① Shopee+Tokopedia 双平台 74 SKU 0 个进 7M+ 中端真空 ② Polygon Monarch 2.7M = Shopee 自行车最高价（ID 真自行车无 7M+） ③ 客户判断公路+平把+砾石 = ID 蓝海品类</div>
-          <span class="init-tag" style="background:#2e7d32;color:#fff">🎯 V2.6.1 蓝海切入：Jul-Sep 2026</span>
-        </div>
-        <div class="initiative id" style="background:linear-gradient(135deg,rgba(46,125,50,.25),rgba(200,16,46,.1));border-left:4px solid #2e7d32">
-          <div class="init-id">🆕 ID-H2-02 · 🥇 关键 (FNIX 错位补强)</div>
-          <div class="init-title">FNIX 高端公路 2 SKU + 砾石 2 SKU @ 12-18M IDR</div>
-          <div class="init-detail"><b>V2.6.1 FNIX 错位补强（不重叠 Phoenix 12-15M 上方）：</b>高端公路 2 SKU @ 15-18M（Niche 填补 12-25M 真空）+ 砾石 2 SKU @ 12-18M（SNI 印尼国家标准背书）。<b>客户证据：</b>① ID 折叠/MTB 红海 → FNIX 资源全转公路+砾石 ② SNI 认证 = 印尼本土信任 = 品质差异化 ③ Rodalink 9 品牌 dealer = 中高端专业渠道</div>
-          <span class="init-tag" style="background:#2e7d32;color:#fff">🎯 FNIX 错位：Jul-Sep 2026</span>
-        </div>
-        <div class="initiative id">
-          <div class="init-id">ID-H2-03 · 关键</div>
-          <div class="init-title">Shopee ID + Tokopedia 双平台官方店</div>
-          <div class="init-detail">74 SKU 实测 7M+ 真空平台 · Phoenix 官方店 + FNIX 官方店 = 子品类专门店 · 商品上架 30+ SKU 上架（按公路/平把/砾石分类）</div>
-          <span class="init-tag">立即：Jul-Aug 2026</span>
-        </div>
-        <div class="initiative id">
-          <div class="init-id">ID-H2-04 · 紧迫</div>
-          <div class="init-title">印尼 SNI 资质强制认证法规跟进</div>
-          <div class="init-detail">印尼 SNI 2024 法规升级 → 2026 H2 可能强制。所有 ID SKU 上市前必须有 SNI（FNIX 主推）</div>
-          <span class="init-tag">Jul 2026 · 持续监控</span>
-        </div>
-        <div class="initiative id" style="background:rgba(255,193,7,.15);border-left-color:#e65100">
-          <div class="init-id">ID-H2-05 · 试水 (V2.6 降级保持)</div>
-          <div class="init-title">Phoenix 折叠车 1 SKU 试水 @ 8M IDR (FK-TEST)</div>
-          <div class="init-detail"><b>V2.6 降级 = 不投长期</b> · 仅 1 SKU 试水 6 个月 · 试销 ≥ 50 台/月才追加 · 不抢 Dahon/JAVA 红海</div>
-          <span class="init-tag">Jul-Dec 2026 · 6 个月观察期</span>
-        </div>
-      </div>
 
       <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🌐 全局 / DTC 行动（3 个）</h3>
       <div class="initiative-grid">
@@ -435,7 +341,7 @@
         <b>🎯 2026 H2 关键里程碑（V2.6.1 KPI · 4P 双市场差异化）：</b>
         <ul style="margin:6px 0 0 18px;line-height:1.7">
           <li><b>BD（市场第一）</b>：公路车 3 款 13-25K 上市 + 22K+ UCI MTB 1 款上市 = BD SKU 8 → 12-15（MTB 保留 = BD 没客户供应商问题）</li>
-          <li><b style="color:#c8102e">ID（三蓝海品类 · V2.6.1）</b>：Phoenix 公路车 5 SKU + 平把公路 3 SKU + FNIX 公路 2 SKU + FNIX 砾石 2 SKU + FK-TEST 1 SKU = ID SKU 8 → 15（双平台 74 SKU 实测 7M+ 真空）</li>
+          
           <li><b>品牌</b>：独立站上线 + 社媒 5K 粉 + 品牌叙事资产 4 篇（双市场共用）</li>
           <li><b>BD 评分</b>：从 #14 (44.5) → 目标 #10-12（公路车品类真空开荒后 = 评分上升）</li>
           <li><b style="color:#c8102e">ID 三蓝海</b>：从 8 → 15 SKU（V2.6.1 公路+平把+砾石切入 7M+ 真空 = 实证双平台）</li>
