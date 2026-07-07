@@ -347,10 +347,6 @@
     // === V2.3.1 主战场 25-40K 实战分析 ===
     const battleEl = document.getElementById('v231-battlefield-body');
     if (battleEl) {
-      const battleItems = (all || []).filter(it => (it.get('price') || 0) >= 25000 && (it.get('price') || 0) < 40000 && (it.get('brand') || '').toLowerCase() not in ('generic', ''));
-      // 注：上面是伪代码，下面是正确实现
-    }
-    if (battleEl) {
       const battleItems = (all || []).filter(it => {
         const p = it.price || 0;
         const b = (it.brand || '').toLowerCase();
