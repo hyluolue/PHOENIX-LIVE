@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T10:44:36+08:00",
+  "generated_at": "2026-07-07T10:57:59+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -2225,27 +2225,27 @@
     "price_tracker": [],
     "news": [
       {
-        "title": "2026年第30届孟加拉国际建筑博览会-Build Bangladesh Int 东南亚砖机...",
-        "source": "Sogou",
-        "summary": "",
-        "url": "/link?url=hedJjaC291Ok-E9WTygIKqZt6DizBOEjQzTsyPdF4eGMtDiNCAxPo8OyCgYovbtB",
-        "published_at": "",
+        "title": "BD 25K+ BDT 高端市场: 31 SKU 跨 6 品牌 = Ceres, Core, Kiesel, Magpy, Rockrider",
+        "source": "Daraz BD 实时",
+        "summary": "顶价 65,000 BDT（Rockrider）· Phoenix 当前无 25K+ SKU",
+        "url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
+        "published_at": "2026-07-07",
         "is_new": true
       },
       {
-        "title": "孟加拉达卡建筑工程机械展览会2026_门票_时间_会刊_孟加拉工程机...",
-        "source": "Sogou",
-        "summary": "",
-        "url": "/link?url=hedJjaC291MzFgprQr-IvNqzPfc9zCYS9GTGISY3SkQYZg_dS1WajCHmfGkNvdZG",
-        "published_at": "",
+        "title": "BD 15-25K BDT 中高端: 71 SKU · 龙头 = Veloce (15 SKU)",
+        "source": "Daraz BD 实时",
+        "summary": "Phoenix 在 15-25K 缺席（红海）：Marine 13 / Duranta 4 / Warrior 2 SKU",
+        "url": "https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle",
+        "published_at": "2026-07-07",
         "is_new": true
       },
       {
-        "title": "RohingyaTeenGirlsSoldasSexSlavesinBangladesh",
-        "source": "Sogou",
-        "summary": "",
-        "url": "http://mp.weixin.qq.com/s?src=11&amp;timestamp=1783318009&amp;ver=6825&amp;signature=1U5KV6zYU-lzqYjcL1m59ZzqN0jQyqUU*yk1N**4eGmaqEnFOiOCzOU*B0GcWs3oNVKQmp3imU9xMnXCTs5Xe-lEz5siBQ3c5vRn2s6EOSVThs6AmQVrQfbmf2X4BhxE&amp;new=1",
-        "published_at": "",
+        "title": "Phoenix BD 实时: 20 SKU · ASP 11,371 BDT · 顶价 18,000",
+        "source": "Daraz BD 实时",
+        "summary": "Phoenix BD 真实排名 = #14 · 评分 46.4 · 与 Rockrider(16 SKU · ASP 33K · score 92.4) 差距 3.5x",
+        "url": "https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle",
+        "published_at": "2026-07-07",
         "is_new": true
       }
     ],
@@ -3724,9 +3724,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T10:44:36+08:00",
+  "gen_at": "2026-07-07T10:57:59+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-07T10:41:05+08:00",
+    "computed_at": "2026-07-07T10:57:59+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -4057,14 +4057,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T10:41:05+08:00",
+    "computed_at": "2026-07-07T10:57:59+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 0,
-      "id_pool_brands": 0,
+      "id_pool_total": 8,
+      "id_pool_brands": 4,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
@@ -4227,8 +4227,12 @@
       "gt_15_25k_phx_present": true
     },
     "id_7_15m": {
-      "count": 0,
-      "brands": []
+      "count": 4,
+      "brands": [
+        "Element",
+        "Pacific",
+        "United"
+      ]
     },
     "id_top10_brands": [
       {
@@ -4402,9 +4406,13 @@
         ]
       },
       "id_thunder_id_mtb": {
-        "rationale": "ID 7-15M 0 SKU 品牌 []，无 SGS 中国品牌",
+        "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
-        "id_competitors": []
+        "id_competitors": [
+          "Element",
+          "Pacific",
+          "United"
+        ]
       },
       "bd_road_bike": {
         "rationale": "BD 17 品牌 公路车品类仅 Hero 1 SKU = 真空",
