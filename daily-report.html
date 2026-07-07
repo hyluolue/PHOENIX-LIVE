@@ -74,18 +74,18 @@
     </div>
     <div class="kpi">
       <div class="kpi-label">🌟 25M+ 高端</div>
-      <div class="kpi-value"><span id="id-25m-count">—</span> SKU<br><small>仅 Element Gravel Top Spec 26M = MTB 真空</small></div>
+      <div class="kpi-value"><span id="id-25m-count">—</span> SKU<br><small>V2.6.1 MTB 红海不参与 = 此真空不利用</small></div>
     </div>
     <div class="kpi">
-      <div class="kpi-label">🇮🇩 V2.6 双品牌</div>
-      <div class="kpi-value">Phoenix 8 SKU @ 12M<br>+ FNIX 7 SKU @ 22-27M<br><small>折叠降级 1 SKU 试水</small></div>
+      <div class="kpi-label">🇮🇩 V2.6.1 三蓝海品类</div>
+      <div class="kpi-value">Phoenix 公路 5 + 平把 3 SKU @ 12-15M<br>FNIX 公路 2 + 砾石 2 SKU @ 12-18M<br><small>MTB/折叠/童车 = 客户 4% 红海不参与</small></div>
     </div>
   </div>
 </div>
 
 <!-- 智能洞察 -->
 <div class="section dark">
-  <h2>💡 智能洞察 <small>从 latest.json 自动推导 · 每日更新</small></h2>
+  <h2>💡 智能洞察 <small>从 latest.json + 客户判断 · 每日更新</small></h2>
   <div class="insight" id="smart-insights">
     <div class="placeholder">⏳ 加载中…</div>
   </div>
@@ -180,14 +180,18 @@
     if (mid.count) {
       insights.push(`🎯 BD 15-25K 中端：${mid.count} SKU · ${mid.brands_count} 品牌（${(mid.top_5_brands||[]).slice(0,4).join('/')}）= V2.3.1 5 SKU 主战场（差距 27K 价位真空）`);
     }
-    // 洞察 4: ID 7-15M 真空
-    if (id715.count) {
-      insights.push(`💎 ID Rp 7-15M 中端真空：${id715.count} SKU ${(id715.brands||[]).join('/')} = 无中国 SGS 品牌 → RD-1 12M IDR 主切入点`);
+    // 洞察 4: ID 7-15M 真空（V2.6.1 三蓝海品类切入点）
+    if (id715.count !== undefined) {
+      insights.push(`💎 <b>ID Rp 7-15M 中端真空</b>（双平台 74 SKU 实测）：${id715.count} SKU ${(id715.brands||[]).join('/')} = <b style="color:#5eead4">V2.6.1 公路+平把+砾石三蓝海切入点</b>（Phoenix 12-15M 主推）`);
     }
-    // 洞察 5: ID 25M+ 真空
+    // 洞察 5: ID 25M+ 真空（V2.6.1 客户判断 = 不参与 MTB 红海）
     if (id25m) {
-      insights.push(`🌟 ID Rp 25M+ MTB 真空：仅 ${id25m} SKU = Element Gravel 26M（赛车）→ FNIX MTB-FLAG-1 27M + MTB-FLAG-2 22M 双轨`);
+      insights.push(`🚫 ID Rp 25M+ 高端：仅 ${id25m} SKU = <b style="color:#c8102e">V2.6.1 客户判断 = MTB/折叠/童车 4% 毛利红海 = 完全不参与</b>（即使真空也不进）`);
     }
+    // 洞察 6: V2.6.1 客户判断核心
+    insights.push(`🎯 <b>V2.6.1 客户判断核心</b>：MTB/折叠/童车 = 客户已有供应商 + 4% 毛利红海 = <b style="color:#c8102e">永不参与</b>（不是市场真空问题，是客户内部已有供应商）`);
+    // 洞察 7: 蓝海切入点 = 公路+平把+砾石
+    insights.push(`🌟 <b>V2.6.1 三蓝海品类</b>：公路车 + 平把公路 + 砾石车 = Phoenix 5+3+2 = 10 SKU + FNIX 2+2 = 4 SKU = <b style="color:#5eead4">总 15 SKU 火力集中三蓝海</b>`);
 
     document.getElementById('smart-insights').innerHTML = '<ul class="tight">' +
       insights.map(i => '<li>' + i + '</li>').join('') + '</ul>';
