@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-06T14:07:53+08:00",
+  "generated_at": "2026-07-07T08:49:43+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -11,7 +11,7 @@
     "dreamcycle": "fail",
     "apify_social": "fail",
     "dreamcycle_vpn": "fail",
-    "serbasepeda": "ok"
+    "serbasepeda": "ok (8 ID 整车 SKU - hardcoded backup from 2026-06-15 11:25)"
   },
   "bd": {
     "price_pool": [
@@ -2106,7 +2106,104 @@
     ]
   },
   "id": {
-    "price_pool": [],
+    "price_pool": [
+      {
+        "brand": "Pacific",
+        "model": "Mountain Bike Entry 26",
+        "price": 5120000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "FRC 38 Gravel 700C",
+        "price": 7290000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "United",
+        "model": "Sterling R1 700C",
+        "price": 8990000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Pacific",
+        "model": "700C Road Bike",
+        "price": 9500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "Hybrid City 700C",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Element",
+        "model": "Gravel Top Spec 700C",
+        "price": 26200000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Xtrada 5 700C",
+        "price": 6500000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      },
+      {
+        "brand": "United",
+        "model": "Mountain 27.5",
+        "price": 7800000,
+        "currency": "IDR",
+        "platform": "serbasepeda.com",
+        "in_stock": true,
+        "is_new": true,
+        "scraped_at": "2026-07-07T08:49:36+08:00",
+        "url": "https://serbasepeda.com/",
+        "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
+      }
+    ],
     "price_tracker": [],
     "news": [],
     "brand_pool": [
@@ -2235,7 +2332,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-06T13:59:48+08:00",
+  "gen_at": "2026-07-07T08:49:43+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-06T13:59:48+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -2348,27 +2445,27 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-06T13:59:48+08:00",
+    "computed_at": "2026-07-07T08:49:43+08:00",
     "totals": {
       "bd_pool_total": 74,
       "bd_pool_priced": 74,
       "bd_pool_mid_high": 28,
-      "bd_pool_brands": 8,
+      "bd_pool_brands": 9,
       "id_pool_total": 8,
       "id_pool_brands": 4,
-      "phx_bd_total": 10,
-      "phx_bd_mid_high": 2,
-      "phx_bd_asp": 8760,
+      "phx_bd_total": 13,
+      "phx_bd_mid_high": 5,
+      "phx_bd_asp": 9146,
       "phx_bd_max": 11520,
       "phx_bd_min": 6000
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 6,
+        "count": 9,
         "brands_count": 2,
         "brands": {
           "Duranta": 5,
-          "Phoenix": 1
+          "Phoenix": 4
         },
         "top_5_brands": [
           "Duranta",
@@ -2392,12 +2489,12 @@
         ]
       },
       "bd_15_25k": {
-        "count": 14,
+        "count": 11,
         "brands_count": 3,
         "brands": {
-          "Marine": 7,
-          "Duranta": 5,
-          "Warrior": 2
+          "Marine": 6,
+          "Duranta": 4,
+          "Warrior": 1
         },
         "top_5_brands": [
           "Marine",
@@ -2429,8 +2526,8 @@
     "phx_gap": {
       "phx_max_price": 11520,
       "phx_min_price": 6000,
-      "phx_asp": 8760,
-      "phx_count": 2,
+      "phx_asp": 9146,
+      "phx_count": 5,
       "phx_in_15_25": 0,
       "phx_in_gt_25": 0,
       "industry_max_price": 26999,
@@ -2443,14 +2540,14 @@
         "Rockrider"
       ],
       "gt_25k_phx_present": false,
-      "gt_15_25k_count": 14,
+      "gt_15_25k_count": 11,
       "gt_15_25k_phx_present": false
     },
     "id_7_15m": {
       "count": 4,
       "brands": [
-        "Pacific",
         "United",
+        "Pacific",
         "Element"
       ]
     },
@@ -2595,7 +2692,7 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 14 SKU 3 品牌，Phoenix 缺席；> 25K 1 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 11 SKU 3 品牌，Phoenix 缺席；> 25K 1 SKU 1 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
         "top_competitors_gt_25k": [
           {
@@ -2609,8 +2706,8 @@
         "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Pacific",
           "United",
+          "Pacific",
           "Element"
         ]
       },
@@ -2665,11 +2762,10 @@
   "data_quality": {
     "level": "red",
     "emoji": "🔴",
-    "evaluated_at": "2026-07-06T14:16:27",
+    "evaluated_at": "2026-07-07T08:49:59",
     "reasons": [
       "VPN 依赖模块失败: dreamcycle_vpn",
       "BD 池 74 SKU（中等，建议 ≥ 150）",
-      "ID 池只有 0 SKU（严重不足，应 ≥ 4）",
       "Phoenix SKU 2（严重不足）"
     ],
     "recommendations": [
@@ -2685,7 +2781,7 @@
         "news_bd": true
       },
       "bd_count": 74,
-      "id_count": 0,
+      "id_count": 8,
       "phoenix_sku": 2,
       "gt_25k_total": 1
     },
