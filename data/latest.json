@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-07T12:05:07+08:00",
+  "generated_at": "2026-07-07T13:22:28+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
     "news_id": "ok",
-    "shopee_id": "fail",
-    "tokopedia": "ok (40 SKU from user-saved HTML, scraped 2026-07-07)",
+    "shopee_id": "ok (39 SKU from user-saved HTML, scraped 2026-07-07)",
+    "tokopedia": "ok (39 SKU from user-saved HTML, scraped 2026-07-07)",
     "daraz_bd_reviews": "ok",
     "dreamcycle": "ok (116 from HTML snapshot, scraped 2026-07-07)",
     "apify_social": "fail",
@@ -3512,90 +3512,6 @@
         "note": "IDR 5,120,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
       },
       {
-        "brand": "Element",
-        "model": "FRC 38 Gravel 700C",
-        "price": 7290000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 7,290,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "United",
-        "model": "Sterling R1 700C",
-        "price": 8990000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 8,990,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "Pacific",
-        "model": "700C Road Bike",
-        "price": 9500000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 9,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "Element",
-        "model": "Hybrid City 700C",
-        "price": 6400000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 6,400,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "Element",
-        "model": "Gravel Top Spec 700C",
-        "price": 26200000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 26,200,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "Polygon",
-        "model": "Xtrada 5 700C",
-        "price": 6500000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 6,500,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
-        "brand": "United",
-        "model": "Mountain 27.5",
-        "price": 7800000,
-        "currency": "IDR",
-        "platform": "serbasepeda.com",
-        "in_stock": true,
-        "is_new": true,
-        "scraped_at": "2026-07-07T10:44:36+08:00",
-        "url": "https://serbasepeda.com/",
-        "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup (Playwright blocked by CF, scraped 2026-06-15 11:25)"
-      },
-      {
         "brand": "Dearloji",
         "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
         "price": 700000,
@@ -4062,6 +3978,414 @@
         "is_new": true,
         "scraped_at": "2026-07-07T12:00:00+08:00",
         "note": "Rp 1,449,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 26 27.5 MTB Atlantis 730 Rem Cakram New",
+        "price": 1425000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-26-27.5-MTB-Atlantis-730-Rem-Cakram-New-i.168300440.2616283329?extraParams=%7B%22display_model_id%22%3A335586809147%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a45da156-efa4-4ddb-b92c-1a0136ea4acd&amp;xptdk=a45da156-efa4-4ddb-b92c-1a0136ea4acd",
+        "shop": "168300440",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,425,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
+        "price": 664000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 664,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
+        "price": 1535000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-MTB-Tank-Odessy-Frame-Steel-Ukuran-27-21-Speed-i.34416008.51004581645?extraParams=%7B%22display_model_id%22%3A345426866055%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f&amp;xptdk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f",
+        "shop": "34416008",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,535,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
+        "price": 155000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
+        "shop": "40989696",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 155,000"
+      },
+      {
+        "brand": "Odessy",
+        "model": "Odessy Ritz Sepeda Lipat 16 20 Inch Rem Disc",
+        "price": 1395000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Odessy-Ritz-Sepeda-Lipat-16-20-Inch-Rem-Disc-i.105979235.28363499582?extraParams=%7B%22display_model_id%22%3A79470820135%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6&amp;xptdk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,395,000"
+      },
+      {
+        "brand": "SCOORA",
+        "model": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
+        "price": 624000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SCOORA-Zenoz-Balance-Bike-Toddler-Sepeda-Keseimbangan-Anak-i.87214633.19395363992?extraParams=%7B%22display_model_id%22%3A225818876824%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0187c97-1f91-403a-bfeb-d1ceb501c611&amp;xptdk=f0187c97-1f91-403a-bfeb-d1ceb501c611",
+        "shop": "87214633",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 624,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
+        "price": 1199000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-ANAK-20-INCH-ATLANTIS-690-PMB-MORTEIN-MN-181-3X7-SPEED-REM-CAKRAM-i.101726601.23331194148?extraParams=%7B%22display_model_id%22%3A341049944683%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=45e0a691-71d1-486b-97fd-5c572e394e6d&amp;xptdk=45e0a691-71d1-486b-97fd-5c572e394e6d",
+        "shop": "101726601",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,199,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
+        "price": 749000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-BMX-20-INCH-SEPEDA-ANAK-LAKI-LAKI-MORISON-8125-AX-BAN-2.4-dan-3.0-MAZARA-2277-VELION-314-MORTEIN-511-CENTRUM-6670-1-FOSTER-5519-3-i.51418619.19079679543?extraParams=%7B%22display_model_id%22%3A297716233636%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4d168851-85bb-4716-9725-9b30e1bafb3f&amp;xptdk=4d168851-85bb-4716-9725-9b30e1bafb3f",
+        "shop": "51418619",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 749,000"
+      },
+      {
+        "brand": "Atlantis",
+        "model": "Atlantis MTB 24 26 27.5 Inch 21 Speed Diskbrake",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Atlantis-MTB-24-26-27.5-Inch-21-Speed-Diskbrake-i.31188778.7816108635?extraParams=%7B%22display_model_id%22%3A262102219927%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=28b98f34-2af7-492a-8358-d7fb389a829b&amp;xptdk=28b98f34-2af7-492a-8358-d7fb389a829b",
+        "shop": "31188778",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Monarch Sepeda MTB Monarch 27 5 by Polygon",
+        "price": 2700000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Polygon-Monarch-Sepeda-MTB-Monarch-27-5-by-Polygon-i.167054410.43552662720?extraParams=%7B%22display_model_id%22%3A280219495020%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=911c1bfb-3883-4a09-b5b6-22812dacfc6d&amp;xptdk=911c1bfb-3883-4a09-b5b6-22812dacfc6d",
+        "shop": "167054410",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,700,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
+        "price": 2574000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-26-Inch-XAVIOR-JAGUAR-21-Speed-i.70657445.14070375782?extraParams=%7B%22display_model_id%22%3A281024193970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264&amp;xptdk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264",
+        "shop": "70657445",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,574,000"
+      },
+      {
+        "brand": "MTB",
+        "model": "MTB 24 26 27 5 Evergreen ranger 50 ranger 55 ranger 545 new phoenix 2709 2705 sepeda gunung 27 5 sepeda dewasa mountain ",
+        "price": 1165000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/MTB-24-26-27-5-Evergreen-ranger-50-ranger-55-ranger-545-new-phoenix-2709-2705-sepeda-gunung-27-5-sepeda-dewasa-mountain-bike-i.344785187.9703671025?extraParams=%7B%22display_model_id%22%3A178083554174%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9c8b86fb-657e-4013-b394-ea3748a30a96&amp;xptdk=9c8b86fb-657e-4013-b394-ea3748a30a96",
+        "shop": "344785187",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,165,000"
+      },
+      {
+        "brand": "Push",
+        "model": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
+        "price": 135000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-Aviator-BK01-ET2011-AT-7901-AT7902-ET2004-Iora-BK-01-Balance-Bike-AT7901-by-Pacific-Sepeda-Keseimbangan-AT-7902-ET-2004-2011-i.232590835.49351073485?extraParams=%7B%22display_model_id%22%3A390096432038%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bf4ad44c-15ac-4093-9511-e8b223e701a0&amp;xptdk=bf4ad44c-15ac-4093-9511-e8b223e701a0",
+        "shop": "232590835",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 135,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
+        "price": 524000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-VELION-V61-Ukuran-12-16-18-inch-dengan-keranjang-depan-NEW-i.1813683454.26444718825?extraParams=%7B%22display_model_id%22%3A365864656437%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d5afd78a-47f5-4e22-afd7-011da7e8e732&amp;xptdk=d5afd78a-47f5-4e22-afd7-011da7e8e732",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 524,000"
+      },
+      {
+        "brand": "Exotic",
+        "model": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
+        "price": 223400,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Exotic-Sepeda-Anak-Roda-Tiga-Balance-Bike-6IN1-ET-709-7-ET-5511-ET-2004-ET-2011-ET-2017-BK-01-T20-7-i.2866183.27407698307?extraParams=%7B%22display_model_id%22%3A252439244308%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c&amp;xptdk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c",
+        "shop": "2866183",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 223,400"
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Ofo City Bike 26 Shimano 7 Speed Alloy",
+        "price": 2399000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Pacific-Ofo-City-Bike-26-Shimano-7-Speed-Alloy-i.101726601.18684046784?extraParams=%7B%22display_model_id%22%3A316079321624%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5&amp;xptdk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5",
+        "shop": "101726601",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,399,000"
+      },
+      {
+        "brand": "Cuddlee",
+        "model": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
+        "price": 159900,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Cuddlee-Sepeda-Keseimbangan-Anak-P0610-Sepeda-Keseimbangan-Tanpa-Pedal-Balance-Bike-Ringan-i.1496015775.26490487329?extraParams=%7B%22display_model_id%22%3A291252642136%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7f03464c-258a-4ee8-9ac9-c32266733379&amp;xptdk=7f03464c-258a-4ee8-9ac9-c32266733379",
+        "shop": "1496015775",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 159,900"
+      },
+      {
+        "brand": "Mmflight",
+        "model": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
+        "price": 439910,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Mmflight-Sepeda-Anak-Laki-Laki-Sepeda-Anak-Perempuan-Murah-Dengan-Roda-12-16&#39;%E2%80%98-i.899195971.29441138621?extraParams=%7B%22display_model_id%22%3A286448348275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=adcf35e8-ce9d-4498-b85c-0589d5864e7f&amp;xptdk=adcf35e8-ce9d-4498-b85c-0589d5864e7f",
+        "shop": "899195971",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 439,910"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
+        "price": 160000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 160,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
+        "price": 212000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-3-in-1.-New-Exotic-ET5512-ET5511-AT7905-T20-5-F-701-T20-7-AT7906-T20-7-nano-family-i.15913437.22079662459?extraParams=%7B%22display_model_id%22%3A118420864971%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4337030e-941f-436d-84d5-67ff82d09cc8&amp;xptdk=4337030e-941f-436d-84d5-67ff82d09cc8",
+        "shop": "15913437",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 212,000"
+      },
+      {
+        "brand": "Maximo",
+        "model": "Maximo Piegare 16 Folding Bike 9 Speed Chromoly",
+        "price": 1740000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Maximo-Piegare-16-Folding-Bike-9-Speed-Chromoly-i.1290304675.27603947697?extraParams=%7B%22display_model_id%22%3A241100008127%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=0155cf49-8f71-4aba-ad35-a95b75120134&amp;xptdk=0155cf49-8f71-4aba-ad35-a95b75120134",
+        "shop": "1290304675",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,740,000"
+      },
+      {
+        "brand": "Balance",
+        "model": "Balance Bike Sepeda Anak Murah Aviator 7901",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Balance-Bike-Sepeda-Anak-Murah-Aviator-7901-i.8279253.28456491584?extraParams=%7B%22display_model_id%22%3A227556530364%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=023e2f1d-7aa3-4c43-b418-744c5500dd72&amp;xptdk=023e2f1d-7aa3-4c43-b418-744c5500dd72",
+        "shop": "8279253",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 120,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 27.5 MTB ATLANTIS 730 REM CAKRAM NEW",
+        "price": 1169000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-27.5-MTB-ATLANTIS-730-REM-CAKRAM-NEW-i.105979235.2654446919?extraParams=%7B%22display_model_id%22%3A415091602378%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a64c002d-01c7-4f24-98e1-2b59f02f042a&amp;xptdk=a64c002d-01c7-4f24-98e1-2b59f02f042a",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,169,000"
+      },
+      {
+        "brand": "Evergreen",
+        "model": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+        "price": 1935000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Evergreen-Jazz-Gravel-700C-3x7-Speed-Disk-Brake-i.31188778.25933366401?extraParams=%7B%22display_model_id%22%3A345586826468%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8&amp;xptdk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8",
+        "shop": "31188778",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,935,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+        "price": 1427000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-BALAP-ROADBIKE-PARAGON-R600-BRIFTER-ELEMENT-POLICE-TORONTO-EFG-SHIMANO-EXOTIC-2708-GR-BY-PACIFIC-700c-ET-2708-FS-1.0-BESI-SL-2.0-ALLOY-FIXIE-2708-GR-700C-BY-PACIFIC-HUNTER-PARAGON-REM-TORPEDO-R3-L-two-GRAVEL-SENSAH-MAINAN-OLAHRAGA-IBU-i.7586374.8112803798?extraParams=%7B%22display_model_id%22%3A247101891082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6e06c83a-d73c-4837-8a33-fc48cb80313a&amp;xptdk=6e06c83a-d73c-4837-8a33-fc48cb80313a",
+        "shop": "7586374",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,427,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
+        "price": 750000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
+        "shop": "47761539",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
+        "price": 1148000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Fixie-Odessy-RM-1050-Rem-Doltrap-700C-Sepeda-Odessy-Fixie-Rem-Dolltrap-i.552002197.44302211160?extraParams=%7B%22display_model_id%22%3A238258625975%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=49204061-86af-4605-8452-c1eeb495aa71&amp;xptdk=49204061-86af-4605-8452-c1eeb495aa71",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,148,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda gunung MTB 26 27 5 ATLANTIS Odessy 730 21Speed NEW",
+        "price": 1300000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-gunung-MTB-26-27-5-ATLANTIS-Odessy-730-21Speed-NEW-i.19737296.3927046087?extraParams=%7B%22display_model_id%22%3A430353443858%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6&amp;xptdk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6",
+        "shop": "19737296",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,300,000"
+      },
+      {
+        "brand": "BALANCE",
+        "model": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
+        "price": 154899,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/BALANCE-BIKE-PUSH-BIKE-AT7901-ET2011-BK01-BK04-BK06-ET2137-ET2004-ET2017-ET2157-ET2017-AT7902-ET-2176-ET-2177-i.632272062.17640907951?extraParams=%7B%22display_model_id%22%3A176694159448%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=64ceda31-244d-4dea-9fd1-21114cd917d5&amp;xptdk=64ceda31-244d-4dea-9fd1-21114cd917d5",
+        "shop": "632272062",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 154,899"
+      },
+      {
+        "brand": "Push",
+        "model": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
+        "price": 136300,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-EXOTIC-ET-2011-ST-BAN-EVA-Balance-Bike-Sepeda-Keseimbangan-Anak-i.202502686.46405270556?extraParams=%7B%22display_model_id%22%3A405572853680%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=16d92854-c9be-42e5-a45c-966cbe568a3e&amp;xptdk=16d92854-c9be-42e5-a45c-966cbe568a3e",
+        "shop": "202502686",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 136,300"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Sepeda MTB Monarch 27.5 3x7 Speed",
+        "price": 2650000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Polygon-Sepeda-MTB-Monarch-27.5-3x7-Speed-i.1387860936.24242371994?extraParams=%7B%22display_model_id%22%3A39879929362%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1e1a6a2f-ce70-4527-8205-9cf83fb486be&amp;xptdk=1e1a6a2f-ce70-4527-8205-9cf83fb486be",
+        "shop": "1387860936",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,650,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+        "price": 2195000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.105979235.44475491190?extraParams=%7B%22display_model_id%22%3A425022024467%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9e05919a-b97c-45f3-a5b0-5b8afccafc72&amp;xptdk=9e05919a-b97c-45f3-a5b0-5b8afccafc72",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,195,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
+        "price": 750360,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-20-Atlantis-650-I-Rem-Disc-V-Jumbo-i.140996876.2299631164?extraParams=%7B%22display_model_id%22%3A254257079852%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6617908b-1a86-49be-ad75-d675175c056f&amp;xptdk=6617908b-1a86-49be-ad75-d675175c056f",
+        "shop": "140996876",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,360"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
+        "price": 760000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
+        "shop": "927153578",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 760,000"
       }
     ],
     "price_tracker": [],
@@ -4213,12 +4537,14 @@
         "url": "https://www.tokopedia.com/"
       }
     ],
-    "tokopedia_count": 39
+    "tokopedia_count": 39,
+    "shopee_id_count": 34,
+    "serbasepeda_count": 47
   },
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-07T12:05:07+08:00",
+  "gen_at": "2026-07-07T13:22:28+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-07T10:58:23+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -4551,14 +4877,14 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-07T12:05:07+08:00",
+    "computed_at": "2026-07-07T13:22:28+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
       "bd_pool_mid_high": 135,
       "bd_pool_brands": 27,
-      "id_pool_total": 47,
-      "id_pool_brands": 35,
+      "id_pool_total": 74,
+      "id_pool_brands": 47,
       "phx_bd_total": 20,
       "phx_bd_mid_high": 12,
       "phx_bd_asp": 12469,
@@ -4721,12 +5047,8 @@
       "gt_15_25k_phx_present": true
     },
     "id_7_15m": {
-      "count": 4,
-      "brands": [
-        "Element",
-        "United",
-        "Pacific"
-      ]
+      "count": 0,
+      "brands": []
     },
     "id_top10_brands": [
       {
@@ -4900,13 +5222,9 @@
         ]
       },
       "id_thunder_id_mtb": {
-        "rationale": "ID 7-15M 4 SKU 品牌 ['Element', 'United', 'Pacific', 'United']，无 SGS 中国品牌",
+        "rationale": "ID 7-15M 0 SKU 品牌 []，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
-        "id_competitors": [
-          "Element",
-          "United",
-          "Pacific"
-        ]
+        "id_competitors": []
       },
       "bd_road_bike": {
         "rationale": "BD 17 品牌 公路车品类仅 Hero 1 SKU = 真空",
@@ -5407,6 +5725,384 @@
         "title": "Sepeda Gunung MTB Coyote Fifa World Cup 2026 Ukuran 20, 24 ,26 dan 27,5 Inch SPECIAL EDITION",
         "name_raw": "sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681",
         "price_idr": 1449000,
+        "scraped_at": "2026-07-07"
+      }
+    ]
+  },
+  "shopee_id": {
+    "source": "user saved HTML (2026-07-07)",
+    "search_query": "sepeda (general)",
+    "scraped_at": "2026-07-07",
+    "products_total": 39,
+    "products_with_price": 39,
+    "products_bicycle_only": 34,
+    "price_range": {
+      "min": 120000,
+      "max": 6903975
+    },
+    "price_buckets": {
+      "< 1M": 18,
+      "1-2M": 12,
+      "2-3M": 5,
+      "3-5M": 1,
+      "5-7M": 3,
+      "7-10M": 0,
+      "10-15M": 0,
+      "15-25M": 0,
+      "25M+": 0
+    },
+    "mid_high_7_15m_count": 0,
+    "high_15m_plus_count": 0,
+    "products": [
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "129918732",
+        "item_id": "9710560099",
+        "url": "https://shopee.co.id/iReborn-Alat-Fitness-Sepeda-Statis-Elektrik-Modena-Upright-Bike-(Official-Shop)-i.129918732.9710560099?extraParams=%7B%22display_model_id%22%3A53443266179%2C%22model_selection_logic%22%3A3%7D",
+        "title": "iReborn Alat Fitness Sepeda Statis Elektrik Modena Upright Bike (Official Shop)",
+        "price_idr": 3280500,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "129918732",
+        "item_id": "6905783816",
+        "url": "https://shopee.co.id/iReborn-Sepeda-Statis-Kardio-Torva-Recumbent-Bike-(Official-Shop)-i.129918732.6905783816?extraParams=%7B%22display_model_id%22%3A62824141812%2C%22model_selection_logic%22%3A3%7D",
+        "title": "iReborn Sepeda Statis Kardio Torva Recumbent Bike (Official Shop)",
+        "price_idr": 5638125,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "129918732",
+        "item_id": "5705785061",
+        "url": "https://shopee.co.id/iReborn-Sepeda-Elliptical-Boston-(Official-Shop)-i.129918732.5705785061?extraParams=%7B%22display_model_id%22%3A62824124923%2C%22model_selection_logic%22%3A3%7D",
+        "title": "iReborn Sepeda Elliptical Boston (Official Shop)",
+        "price_idr": 6235200,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "129918732",
+        "item_id": "3859444684",
+        "url": "https://shopee.co.id/iReborn-Alat-Fitness-Treadmill-Elektrik-Arrezo-(Auto-Incline)-(Official-Shop)-i.129918732.3859444684?extraParams=%7B%22display_model_id%22%3A149285291882%2C%22model_selection_logic%22%3A3%7D",
+        "title": "iReborn Alat Fitness Treadmill Elektrik Arrezo (Auto Incline) (Official Shop)",
+        "price_idr": 6903975,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "168300440",
+        "item_id": "2616283329",
+        "url": "https://shopee.co.id/Sepeda-Gunung-26-27.5-MTB-Atlantis-730-Rem-Cakram-New-i.168300440.2616283329?extraParams=%7B%22display_model_id%22%3A335586809147%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a45da156-efa4-4ddb-b92c-1a0136ea4acd&amp;xptdk=a45da156-efa4-4ddb-b92c-1a0136ea4acd",
+        "title": "Sepeda Gunung 26 27.5 MTB Atlantis 730 Rem Cakram New",
+        "price_idr": 1425000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "1813683454",
+        "item_id": "49562783363",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
+        "title": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
+        "price_idr": 664000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "34416008",
+        "item_id": "51004581645",
+        "url": "https://shopee.co.id/Sepeda-Gunung-MTB-Tank-Odessy-Frame-Steel-Ukuran-27-21-Speed-i.34416008.51004581645?extraParams=%7B%22display_model_id%22%3A345426866055%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f&amp;xptdk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f",
+        "title": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
+        "price_idr": 1535000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "40989696",
+        "item_id": "1943379121",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
+        "title": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
+        "price_idr": 155000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "105979235",
+        "item_id": "28363499582",
+        "url": "https://shopee.co.id/Odessy-Ritz-Sepeda-Lipat-16-20-Inch-Rem-Disc-i.105979235.28363499582?extraParams=%7B%22display_model_id%22%3A79470820135%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6&amp;xptdk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6",
+        "title": "Odessy Ritz Sepeda Lipat 16 20 Inch Rem Disc",
+        "price_idr": 1395000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "87214633",
+        "item_id": "19395363992",
+        "url": "https://shopee.co.id/SCOORA-Zenoz-Balance-Bike-Toddler-Sepeda-Keseimbangan-Anak-i.87214633.19395363992?extraParams=%7B%22display_model_id%22%3A225818876824%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0187c97-1f91-403a-bfeb-d1ceb501c611&amp;xptdk=f0187c97-1f91-403a-bfeb-d1ceb501c611",
+        "title": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
+        "price_idr": 624000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "101726601",
+        "item_id": "23331194148",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-ANAK-20-INCH-ATLANTIS-690-PMB-MORTEIN-MN-181-3X7-SPEED-REM-CAKRAM-i.101726601.23331194148?extraParams=%7B%22display_model_id%22%3A341049944683%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=45e0a691-71d1-486b-97fd-5c572e394e6d&amp;xptdk=45e0a691-71d1-486b-97fd-5c572e394e6d",
+        "title": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
+        "price_idr": 1199000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "51418619",
+        "item_id": "19079679543",
+        "url": "https://shopee.co.id/SEPEDA-BMX-20-INCH-SEPEDA-ANAK-LAKI-LAKI-MORISON-8125-AX-BAN-2.4-dan-3.0-MAZARA-2277-VELION-314-MORTEIN-511-CENTRUM-6670-1-FOSTER-5519-3-i.51418619.19079679543?extraParams=%7B%22display_model_id%22%3A297716233636%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4d168851-85bb-4716-9725-9b30e1bafb3f&amp;xptdk=4d168851-85bb-4716-9725-9b30e1bafb3f",
+        "title": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
+        "price_idr": 749000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "31188778",
+        "item_id": "7816108635",
+        "url": "https://shopee.co.id/Atlantis-MTB-24-26-27.5-Inch-21-Speed-Diskbrake-i.31188778.7816108635?extraParams=%7B%22display_model_id%22%3A262102219927%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=28b98f34-2af7-492a-8358-d7fb389a829b&amp;xptdk=28b98f34-2af7-492a-8358-d7fb389a829b",
+        "title": "Atlantis MTB 24 26 27.5 Inch 21 Speed Diskbrake",
+        "price_idr": 1200000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "167054410",
+        "item_id": "43552662720",
+        "url": "https://shopee.co.id/Polygon-Monarch-Sepeda-MTB-Monarch-27-5-by-Polygon-i.167054410.43552662720?extraParams=%7B%22display_model_id%22%3A280219495020%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=911c1bfb-3883-4a09-b5b6-22812dacfc6d&amp;xptdk=911c1bfb-3883-4a09-b5b6-22812dacfc6d",
+        "title": "Polygon Monarch Sepeda MTB Monarch 27 5 by Polygon",
+        "price_idr": 2700000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "14552949",
+        "item_id": "23576598110",
+        "url": "https://shopee.co.id/Sepeda-roda-tiga-Anak-balance-bike-6-in-1-Exotic-ET-709-7-T32-T20-7-lipat-push-bike-i.14552949.23576598110?extraParams=%7B%22display_model_id%22%3A226426399355%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=35ff30e3-a612-4b4c-abcf-51915fe755e5&amp;xptdk=35ff30e3-a612-4b4c-abcf-51915fe755e5",
+        "title": "Sepeda roda tiga Anak balance bike 6 in 1 Exotic ET 709 7 T32 T20 7 lipat push bike",
+        "price_idr": 255000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "70657445",
+        "item_id": "14070375782",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-26-Inch-XAVIOR-JAGUAR-21-Speed-i.70657445.14070375782?extraParams=%7B%22display_model_id%22%3A281024193970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264&amp;xptdk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264",
+        "title": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
+        "price_idr": 2574000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "344785187",
+        "item_id": "9703671025",
+        "url": "https://shopee.co.id/MTB-24-26-27-5-Evergreen-ranger-50-ranger-55-ranger-545-new-phoenix-2709-2705-sepeda-gunung-27-5-sepeda-dewasa-mountain-bike-i.344785187.9703671025?extraParams=%7B%22display_model_id%22%3A178083554174%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9c8b86fb-657e-4013-b394-ea3748a30a96&amp;xptdk=9c8b86fb-657e-4013-b394-ea3748a30a96",
+        "title": "MTB 24 26 27 5 Evergreen ranger 50 ranger 55 ranger 545 new phoenix 2709 2705 sepeda gunung 27 5 sepeda dewasa mountain ",
+        "price_idr": 1165000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "232590835",
+        "item_id": "49351073485",
+        "url": "https://shopee.co.id/Push-Bike-Aviator-BK01-ET2011-AT-7901-AT7902-ET2004-Iora-BK-01-Balance-Bike-AT7901-by-Pacific-Sepeda-Keseimbangan-AT-7902-ET-2004-2011-i.232590835.49351073485?extraParams=%7B%22display_model_id%22%3A390096432038%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bf4ad44c-15ac-4093-9511-e8b223e701a0&amp;xptdk=bf4ad44c-15ac-4093-9511-e8b223e701a0",
+        "title": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
+        "price_idr": 135000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "1813683454",
+        "item_id": "26444718825",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-VELION-V61-Ukuran-12-16-18-inch-dengan-keranjang-depan-NEW-i.1813683454.26444718825?extraParams=%7B%22display_model_id%22%3A365864656437%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d5afd78a-47f5-4e22-afd7-011da7e8e732&amp;xptdk=d5afd78a-47f5-4e22-afd7-011da7e8e732",
+        "title": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
+        "price_idr": 524000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "2866183",
+        "item_id": "27407698307",
+        "url": "https://shopee.co.id/Exotic-Sepeda-Anak-Roda-Tiga-Balance-Bike-6IN1-ET-709-7-ET-5511-ET-2004-ET-2011-ET-2017-BK-01-T20-7-i.2866183.27407698307?extraParams=%7B%22display_model_id%22%3A252439244308%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c&amp;xptdk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c",
+        "title": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
+        "price_idr": 223400,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "101726601",
+        "item_id": "18684046784",
+        "url": "https://shopee.co.id/Pacific-Ofo-City-Bike-26-Shimano-7-Speed-Alloy-i.101726601.18684046784?extraParams=%7B%22display_model_id%22%3A316079321624%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5&amp;xptdk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5",
+        "title": "Pacific Ofo City Bike 26 Shimano 7 Speed Alloy",
+        "price_idr": 2399000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "1496015775",
+        "item_id": "26490487329",
+        "url": "https://shopee.co.id/Cuddlee-Sepeda-Keseimbangan-Anak-P0610-Sepeda-Keseimbangan-Tanpa-Pedal-Balance-Bike-Ringan-i.1496015775.26490487329?extraParams=%7B%22display_model_id%22%3A291252642136%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7f03464c-258a-4ee8-9ac9-c32266733379&amp;xptdk=7f03464c-258a-4ee8-9ac9-c32266733379",
+        "title": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
+        "price_idr": 159900,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "899195971",
+        "item_id": "29441138621",
+        "url": "https://shopee.co.id/Mmflight-Sepeda-Anak-Laki-Laki-Sepeda-Anak-Perempuan-Murah-Dengan-Roda-12-16&#39;%E2%80%98-i.899195971.29441138621?extraParams=%7B%22display_model_id%22%3A286448348275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=adcf35e8-ce9d-4498-b85c-0589d5864e7f&amp;xptdk=adcf35e8-ce9d-4498-b85c-0589d5864e7f",
+        "title": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
+        "price_idr": 439910,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "552002197",
+        "item_id": "24704446081",
+        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
+        "title": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
+        "price_idr": 160000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "15913437",
+        "item_id": "22079662459",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-3-in-1.-New-Exotic-ET5512-ET5511-AT7905-T20-5-F-701-T20-7-AT7906-T20-7-nano-family-i.15913437.22079662459?extraParams=%7B%22display_model_id%22%3A118420864971%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4337030e-941f-436d-84d5-67ff82d09cc8&amp;xptdk=4337030e-941f-436d-84d5-67ff82d09cc8",
+        "title": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
+        "price_idr": 212000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "1290304675",
+        "item_id": "27603947697",
+        "url": "https://shopee.co.id/Maximo-Piegare-16-Folding-Bike-9-Speed-Chromoly-i.1290304675.27603947697?extraParams=%7B%22display_model_id%22%3A241100008127%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=0155cf49-8f71-4aba-ad35-a95b75120134&amp;xptdk=0155cf49-8f71-4aba-ad35-a95b75120134",
+        "title": "Maximo Piegare 16 Folding Bike 9 Speed Chromoly",
+        "price_idr": 1740000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "8279253",
+        "item_id": "28456491584",
+        "url": "https://shopee.co.id/Balance-Bike-Sepeda-Anak-Murah-Aviator-7901-i.8279253.28456491584?extraParams=%7B%22display_model_id%22%3A227556530364%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=023e2f1d-7aa3-4c43-b418-744c5500dd72&amp;xptdk=023e2f1d-7aa3-4c43-b418-744c5500dd72",
+        "title": "Balance Bike Sepeda Anak Murah Aviator 7901",
+        "price_idr": 120000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "105979235",
+        "item_id": "2654446919",
+        "url": "https://shopee.co.id/Sepeda-Gunung-27.5-MTB-ATLANTIS-730-REM-CAKRAM-NEW-i.105979235.2654446919?extraParams=%7B%22display_model_id%22%3A415091602378%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a64c002d-01c7-4f24-98e1-2b59f02f042a&amp;xptdk=a64c002d-01c7-4f24-98e1-2b59f02f042a",
+        "title": "Sepeda Gunung 27.5 MTB ATLANTIS 730 REM CAKRAM NEW",
+        "price_idr": 1169000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "31188778",
+        "item_id": "25933366401",
+        "url": "https://shopee.co.id/Evergreen-Jazz-Gravel-700C-3x7-Speed-Disk-Brake-i.31188778.25933366401?extraParams=%7B%22display_model_id%22%3A345586826468%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8&amp;xptdk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8",
+        "title": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+        "price_idr": 1935000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "7586374",
+        "item_id": "8112803798",
+        "url": "https://shopee.co.id/SEPEDA-BALAP-ROADBIKE-PARAGON-R600-BRIFTER-ELEMENT-POLICE-TORONTO-EFG-SHIMANO-EXOTIC-2708-GR-BY-PACIFIC-700c-ET-2708-FS-1.0-BESI-SL-2.0-ALLOY-FIXIE-2708-GR-700C-BY-PACIFIC-HUNTER-PARAGON-REM-TORPEDO-R3-L-two-GRAVEL-SENSAH-MAINAN-OLAHRAGA-IBU-i.7586374.8112803798?extraParams=%7B%22display_model_id%22%3A247101891082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6e06c83a-d73c-4837-8a33-fc48cb80313a&amp;xptdk=6e06c83a-d73c-4837-8a33-fc48cb80313a",
+        "title": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+        "price_idr": 1427000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "47761539",
+        "item_id": "29476883288",
+        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
+        "title": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
+        "price_idr": 750000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "552002197",
+        "item_id": "44302211160",
+        "url": "https://shopee.co.id/Sepeda-Fixie-Odessy-RM-1050-Rem-Doltrap-700C-Sepeda-Odessy-Fixie-Rem-Dolltrap-i.552002197.44302211160?extraParams=%7B%22display_model_id%22%3A238258625975%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=49204061-86af-4605-8452-c1eeb495aa71&amp;xptdk=49204061-86af-4605-8452-c1eeb495aa71",
+        "title": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
+        "price_idr": 1148000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "19737296",
+        "item_id": "3927046087",
+        "url": "https://shopee.co.id/Sepeda-gunung-MTB-26-27-5-ATLANTIS-Odessy-730-21Speed-NEW-i.19737296.3927046087?extraParams=%7B%22display_model_id%22%3A430353443858%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6&amp;xptdk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6",
+        "title": "Sepeda gunung MTB 26 27 5 ATLANTIS Odessy 730 21Speed NEW",
+        "price_idr": 1300000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "632272062",
+        "item_id": "17640907951",
+        "url": "https://shopee.co.id/BALANCE-BIKE-PUSH-BIKE-AT7901-ET2011-BK01-BK04-BK06-ET2137-ET2004-ET2017-ET2157-ET2017-AT7902-ET-2176-ET-2177-i.632272062.17640907951?extraParams=%7B%22display_model_id%22%3A176694159448%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=64ceda31-244d-4dea-9fd1-21114cd917d5&amp;xptdk=64ceda31-244d-4dea-9fd1-21114cd917d5",
+        "title": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
+        "price_idr": 154899,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "202502686",
+        "item_id": "46405270556",
+        "url": "https://shopee.co.id/Push-Bike-EXOTIC-ET-2011-ST-BAN-EVA-Balance-Bike-Sepeda-Keseimbangan-Anak-i.202502686.46405270556?extraParams=%7B%22display_model_id%22%3A405572853680%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=16d92854-c9be-42e5-a45c-966cbe568a3e&amp;xptdk=16d92854-c9be-42e5-a45c-966cbe568a3e",
+        "title": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
+        "price_idr": 136300,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "1387860936",
+        "item_id": "24242371994",
+        "url": "https://shopee.co.id/Polygon-Sepeda-MTB-Monarch-27.5-3x7-Speed-i.1387860936.24242371994?extraParams=%7B%22display_model_id%22%3A39879929362%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1e1a6a2f-ce70-4527-8205-9cf83fb486be&amp;xptdk=1e1a6a2f-ce70-4527-8205-9cf83fb486be",
+        "title": "Polygon Sepeda MTB Monarch 27.5 3x7 Speed",
+        "price_idr": 2650000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "105979235",
+        "item_id": "44475491190",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.105979235.44475491190?extraParams=%7B%22display_model_id%22%3A425022024467%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9e05919a-b97c-45f3-a5b0-5b8afccafc72&amp;xptdk=9e05919a-b97c-45f3-a5b0-5b8afccafc72",
+        "title": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+        "price_idr": 2195000,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "140996876",
+        "item_id": "2299631164",
+        "url": "https://shopee.co.id/Sepeda-BMX-20-Atlantis-650-I-Rem-Disc-V-Jumbo-i.140996876.2299631164?extraParams=%7B%22display_model_id%22%3A254257079852%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6617908b-1a86-49be-ad75-d675175c056f&amp;xptdk=6617908b-1a86-49be-ad75-d675175c056f",
+        "title": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
+        "price_idr": 750360,
+        "scraped_at": "2026-07-07"
+      },
+      {
+        "platform": "Shopee ID (user saved)",
+        "shop_id": "927153578",
+        "item_id": "29642609203",
+        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
+        "title": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
+        "price_idr": 760000,
         "scraped_at": "2026-07-07"
       }
     ]
