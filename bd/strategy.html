@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌战略迭代 · V1→V2 · PHOENIX 全球作战室</title>
+  <link rel="stylesheet" href="../shared.css">
+<style>
+
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0; min-height: 100vh; padding: 20px;
+}
+header {
+  background: linear-gradient(90deg, #C8102E 0%, #8b0a1f 100%);
+  border-radius: 12px; padding: 20px 28px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+header .title { font-size: 22px; font-weight: 800; color: white; }
+header .subtitle { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+.btn-back {
+  background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 600;
+  text-decoration: none;
+}
+.btn-back:hover { background: rgba(255,255,255,0.25); }
+
+.section {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 20px 22px; margin-bottom: 18px;
+}
+.section h2 {
+  font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section h2 .badge {
+  font-size: 10px; padding: 3px 8px; border-radius: 4px;
+  background: rgba(200,16,46,0.2); color: #ff9cae; font-weight: 600;
+}
+.section h2 .badge.green { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+.section h2 .badge.warn { background: rgba(245,158,11,0.2); color: #fcd34d; }
+
+/* V2 草稿 */
+.v2-card {
+  background: linear-gradient(135deg, rgba(200,16,46,0.08), rgba(200,16,46,0.02));
+  border: 1px solid rgba(200,16,46,0.3); border-left: 4px solid #C8102E;
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 14px;
+}
+.v2-card .core { font-size: 18px; font-weight: 800; color: #ff9cae; margin-bottom: 8px; }
+.v2-card .logic { font-size: 13px; color: #e2e8f0; line-height: 1.7; }
+
+.frame-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;
+  margin-top: 10px;
+}
+.frame-card {
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 14px 16px;
+}
+.frame-card h3 { font-size: 13px; color: #5eead4; margin-bottom: 8px; font-weight: 700; }
+.frame-card .field { font-size: 12px; color: #cbd5e1; margin: 4px 0; line-height: 1.6; }
+.frame-card .field strong { color: #fcd34d; }
+.frame-card .gap { font-size: 11px; color: #fca5a5; margin-top: 8px; font-style: italic; }
+
+/* V1 列表 */
+.quadrant-bar {
+  display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap;
+}
+.quad-btn {
+  padding: 6px 14px; background: rgba(255,255,255,0.06); color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; font-size: 12px;
+  cursor: pointer;
+}
+.quad-btn.active { background: #C8102E; color: white; border-color: #C8102E; }
+
+.v1-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 12px; }
+.v1-card {
+  background: rgba(0,0,0,0.3); border-radius: 8px; padding: 14px;
+  border-left: 4px solid #475569; transition: all 0.2s;
+}
+.v1-card.bd { border-left-color: #1565C0; }
+.v1-card.id { border-left-color: #2E7D32; }
+.v1-card:hover { transform: translateY(-2px); }
+.v1-card .head {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap;
+}
+.v1-card .reg {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 700;
+  text-transform: uppercase;
+}
+.v1-card.bd .reg { background: rgba(21,101,192,0.2); color: #93c5fd; }
+.v1-card.id .reg { background: rgba(46,125,50,0.2); color: #86efac; }
+.v1-card .pri {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px;
+}
+.v1-card .pri.p3 { background: rgba(239,68,68,0.2); color: #fca5a5; }
+.v1-card .pri.p2 { background: rgba(245,158,11,0.2); color: #fcd34d; }
+.v1-card .pri.p1 { background: rgba(148,163,184,0.15); color: #cbd5e1; }
+.v1-card .fw {
+  font-size: 10px; padding: 2px 6px; border-radius: 3px;
+  background: rgba(94,234,212,0.15); color: #5eead4;
+}
+.v1-card .title { font-size: 13px; font-weight: 700; color: #fff; margin: 6px 0 4px; }
+.v1-card .body { font-size: 12px; color: #cbd5e1; line-height: 1.6; margin-bottom: 6px; }
+.v1-card .kpi { font-size: 11px; color: #5eead4; }
+.v1-card .kpi strong { color: #fcd34d; }
+
+/* 4 框架映射 */
+.framework-card {
+  background: rgba(0,0,0,0.25); border-radius: 10px; padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08); margin-bottom: 12px;
+}
+.framework-card h3 {
+  font-size: 15px; color: #5eead4; margin-bottom: 8px; font-weight: 700;
+}
+.framework-card .item-list { display: flex; flex-direction: column; gap: 4px; }
+.framework-card .item-row {
+  display: flex; align-items: center; gap: 8px; font-size: 12px;
+  padding: 4px 8px; background: rgba(255,255,255,0.03); border-radius: 4px;
+}
+.framework-card .item-row .id-num { color: #fcd34d; font-weight: 700; min-width: 24px; }
+.framework-card .item-row .role { color: #5eead4; min-width: 100px; font-size: 11px; }
+.framework-card .item-row .note { color: #cbd5e1; flex: 1; }
+.framework-card .gap-line {
+  margin-top: 10px; padding: 8px 10px; background: rgba(239,68,68,0.08);
+  border-left: 3px solid #ef4444; border-radius: 4px; font-size: 12px; color: #fca5a5;
+}
+
+/* 新观点 input */
+.note-input {
+  background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 16px;
+}
+.note-input h3 { color: #fcd34d; font-size: 14px; margin-bottom: 10px; }
+.note-input .row { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.note-input select, .note-input input {
+  background: rgba(255,255,255,0.06); color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 6px;
+  padding: 6px 10px; font-size: 12px;
+}
+.note-input textarea {
+  width: 100%; min-height: 80px; background: rgba(255,255,255,0.05);
+  color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px; padding: 10px; font-size: 13px; resize: vertical;
+  font-family: inherit;
+}
+.note-input button {
+  background: #C8102E; color: white; border: none; padding: 8px 18px;
+  border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600;
+}
+.note-input button:hover { background: #8b0a1f; }
+
+.notes-list { margin-top: 16px; }
+.note-item {
+  background: rgba(0,0,0,0.25); border-radius: 8px; padding: 12px 14px;
+  margin-bottom: 8px; border-left: 3px solid #5eead4;
+}
+.note-item .head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.note-item .cat { font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(94,234,212,0.15); color: #5eead4; }
+.note-item .time { font-size: 10px; color:#94a3b8; }
+.note-item .body { font-size: 12px; color: #e2e8f0; line-height: 1.6; }
+.empty { color:#94a3b8; font-size: 13px; text-align: center; padding: 20px; }
+
+footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title">🎯 品牌战略迭代 · V1 → V2</div>
+    <div class="subtitle" id="subtitle">凤凰自行车 · 品牌战略工作台 · 理论框架交叉验证</div>
+  </div>
+  <div class="nav">
+      <a href="./index.html">🏠 总览</a>
+      <a href="./daily.html">📅 市场日报</a>
+      <a href="./competitive.html">🏆 竞品监控</a>
+      <a href="./matrix.html">💎 产品矩阵</a>
+      <a href="./market.html">🇧🇩 孟加拉</a>
+      <a href="./market.html">🇮🇩 印尼</a>
+      <a href="./tasks.html">🎯 任务 OKR</a>
+      <a href="./dtc.html">💬 DTC 差评</a>
+      <a href="./strategy.html" class="active">🧠 策略迭代</a>
+    </div>
+    <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
+</header>
+
+<div class="phoenix-nav" style="display:flex;flex-wrap:wrap;gap:6px;padding:0 24px 12px;font-size:12px">
+  <a href="./daily.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">📅 市场日报</a>
+  <a href="./competitive.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏆 竞品监控</a>
+  <a href="./competitive-id.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏆 竞品监控</a>
+  <a href="./matrix.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">💎 产品矩阵</a>
+  <a href="./market.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🇧🇩 孟加拉</a>
+  <a href="./market.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🇮🇩 印尼</a>
+  <a href="./tasks.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🎯 任务 OKR</a>
+  <a href="./dtc.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">💬 DTC 差评</a>
+  <a href="./index.html" style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:6px;color:#cbd5e1;text-decoration:none">🏠 总览</a>
+</div>
+
+<!-- V2 战略完成度跟踪（自动从 dashboard_metrics 计算） -->
+<div class="section dark" style="border-left:4px solid #c8102e">
+  <h2>📊 V2 战略完成度跟踪 <span class="badge">实时 · dashboard_metrics 驱动</span></h2>
+  <div class="kpi-grid" style="margin-bottom:14px">
+    <div class="kpi dynamic">
+      <div class="kpi-label">🎯 V2 战略大单品</div>
+      <div class="kpi-value" id="kp-v2-product">⏳ 加载中…</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">📈 BD 评分排名</div>
+      <div class="kpi-value" id="kp-v2-rank">⏳ 加载中…</div>
+    </div>
+    <div class="kpi accent">
+      <div class="kpi-label">🚫 红海/💎 蓝海</div>
+      <div class="kpi-value" id="kp-v2-redblue">⏳ 加载中…</div>
+    </div>
+    <div class="kpi gap">
+      <div class="kpi-label">⚠️ 顶价差距</div>
+      <div class="kpi-value" id="kp-v2-gap">⏳ 加载中…</div>
+    </div>
+  </div>
+  <div id="v2-progress" style="font-size:12px;color:#e2e8f0;line-height:1.8">⏳ 加载中…</div>
+  <div style="margin-top:10px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
+</div>
+
+<!-- V2.3 三层价格阶梯（2026-07-01 客户深度反思） -->
+<div class="section" style="border-left:4px solid #2e7d32;background:linear-gradient(135deg,rgba(46,125,50,.08),transparent)">
+  <h2 style="color:#2e7d32">💎 V2.3 战略核心 = 三层价格阶梯 <span class="badge" style="background:#9c27b0">2026-07-01 客户深度反思</span></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:10px;font-size:11px">
+    <div style="background:rgba(245,158,11,.15);border-left:3px solid #f57c00;padding:10px;border-radius:6px;border:2px solid #f57c00">
+      <div style="font-weight:800;color:#e65100;font-size:12px">🥈 15-25K 销量基础（Phoenix 3 SKU 已入门）</div>
+      <div style="color:#666;line-height:1.5;margin-top:4px"><b>72 SKU · 16 品牌</b><br>Marine 15 / Veloce 15 / Core 9<br>Foxter 4 / Duranta 3 / Warrior 2<br>Phoenix <b style="color:#2e7d32">3 SKU 入门</b>（Duster-A 15.7K / Duster-C 17K / Harod01 18K）<b style="color:#c8102e">还需 5+ SKU</b></div>
+    </div>
+    <div style="background:rgba(46,125,50,.15);border-left:3px solid #2e7d32;padding:10px;border-radius:6px;border:2px solid #2e7d32">
+      <div style="font-weight:800;color:#1b5e20;font-size:12px">🥇 25-40K 高端主战场 🆕</div>
+      <div style="color:#1b5e20;line-height:1.5;margin-top:4px"><b>26 SKU · 6 品牌</b><br>Rockrider 9 / Veloce 7 / Core 5<br>Ceres 2 / Magpy 2 / Kiesel 1<br><b>Phoenix 真实品牌价值段</b></div>
+    </div>
+    <div style="background:rgba(156,39,176,.08);border-left:3px solid #9c27b0;padding:10px;border-radius:6px">
+      <div style="font-weight:800;color:#9c27b0;font-size:12px">🥉 40-60K 锚点（部署不指望销量）</div>
+      <div style="color:#666;line-height:1.5;margin-top:4px"><b>4 SKU · 1 品牌</b><br>Rockrider Duke + Pro + XC 403<br><b>部署但接受没销量</b></div>
+    </div>
+    <div style="background:rgba(106,27,154,.08);border-left:3px solid #6a1b9a;padding:10px;border-radius:6px">
+      <div style="font-weight:800;color:#6a1b9a;font-size:12px">📌 65K+ 形象（不指望成交）</div>
+      <div style="color:#666;line-height:1.5;margin-top:4px">Rockrider XC 404 = 65K<br>"65K 我可以买摩托车"<br><b>脱离购买力仅形象</b></div>
+    </div>
+  </div>
+  <div style="background:rgba(255,255,255,.05);padding:10px 14px;border-radius:6px;margin-top:10px;font-size:12px;line-height:1.7;color:#e2e8f0">
+    <b>🎯 V2.3 战略核心结论（2026-07-01 客户深度反思）：</b><br>
+    · <b style="color:#e65100">15-25K 销量基础</b>（72 SKU 16 品牌 = Marine/Veloce 主导，Phoenix <b style="color:#2e7d32">3 SKU 已入门</b>，还需 5+ SKU，用品质标准抢份额）<br>
+    · <b style="color:#2e7d32">25-40K 高端主战场</b>（Phoenix 从 18K 跃升到 25-40K = 真实品牌升级路径 · 对标 Rockrider 9 + Veloce 7 + Core 5）<br>
+    · <b style="color:#9c27b0">40-60K 锚点 = 部署但接受没销量</b>（4 SKU 公路车 = 价值锚点 + ASP 拉升工具）<br>
+    · <b style="color:#6a1b9a">65K+ 形象 = 不指望成交</b>（脱离购买力 · 仅作品牌形象展示）<br>
+    · <b style="color:#c8102e">真正差异化 = 品质标准</b>（竞品偷工减料 vs 凤凰符合品质标准 = 真实护城河 ≠ SGS 认证）
+  </div>
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 推荐 3 / Tab #4 BD 关键发现 + Tab #6 ID 折叠 + Tab #7 OKR KR1.P1-P4 / Tab #8 DTC 差评新品类方向</div>
+</div>
+
+<!-- V2.3.1 5 SKU 落地进度跟踪 -->
+<div class="section" style="border-left:4px solid #e65100;background:linear-gradient(135deg,rgba(230,81,0,.08),transparent)">
+  <h2 style="color:#e65100">🚀 V2.3.1 5 SKU 落地进度跟踪 <span class="badge" style="background:#e65100;color:#fff">2026-07-01 启动</span></h2>
+  <div style="background:rgba(255,255,255,.05);border-radius:10px;padding:14px;margin-top:10px">
+    <table style="width:100%;border-collapse:collapse;font-size:11px;color:#e2e8f0">
+      <thead><tr style="background:rgba(230,81,0,.2)"><th style="padding:6px">SKU</th><th style="padding:6px;text-align:right">本周</th><th style="padding:6px;text-align:right">下周</th><th style="padding:6px;text-align:right">月底</th><th style="padding:6px;text-align:left">里程碑</th></tr></thead>
+      <tbody>
+        <tr><td>BOM 锁定 5 SKU</td><td style="text-align:right">⏳ 进行</td><td style="text-align:right">🎯 完成</td><td style="text-align:right">-</td><td>供应商 + 配件规格确认</td></tr>
+        <tr><td>SKU #1 XC Entry 2800 (27.9K)</td><td style="text-align:right">⏳ 打样</td><td style="text-align:right">⏳ 测试</td><td style="text-align:right">🎯 BD 客户看样</td><td>首批 30 台预订</td></tr>
+        <tr><td>SKU #2 XC Standard 3000 (29.9K)</td><td style="text-align:right">⏳ 打样</td><td style="text-align:right">⏳ 测试</td><td style="text-align:right">🎯 BD 客户看样</td><td>首批 25 台预订</td></tr>
+        <tr style="background:rgba(230,81,0,.15)"><td>⭐ SKU #3 XC Pro 3200 (32.9K) 主战场</td><td style="text-align:right">⏳ 打样</td><td style="text-align:right">⏳ 测试</td><td style="text-align:right">🎯 <b>主推上市</b></td><td>首批 50 台预订（最高优先级）</td></tr>
+        <tr><td>SKU #4 XC Elite 3500 (35.9K)</td><td style="text-align:right">-</td><td style="text-align:right">⏳ 打样</td><td style="text-align:right">⏳ 测试</td><td>首批 20 台</td></tr>
+        <tr style="background:rgba(200,16,46,.15)"><td>🎖️ SKU #5 XC Race 3800 (38.9K) 旗舰</td><td style="text-align:right">-</td><td style="text-align:right">⏳ 打样</td><td style="text-align:right">⏳ 测试</td><td>首批 10 台（形象产品）</td></tr>
+        <tr style="background:rgba(46,125,50,.2);font-weight:700"><td>📊 月底达成</td><td colspan="3" style="text-align:center">5 SKU 全部进入测试 = 7 月底累计 135 台预售</td><td>→ Phoenix 25-40K 真实品牌价值段占位</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px;color:#e2e8f0">
+    <div style="background:rgba(46,125,50,.15);padding:8px 12px;border-radius:6px"><b>📈 Phoenix 评分预测</b><br>现状 44.7 (#13) → 完成 5 SKU = <b>72 分 (#6)</b> · 距 Veloce #2 = 10 分</div>
+    <div style="background:rgba(255,193,7,.15);padding:8px 12px;border-radius:6px"><b>💰 评分增长点</b><br>+5 SKU × SKU 满分 17.5 = +87 → +25 评分<br>+40K 顶价 → +27K ASP → 各 +13 分</div>
+  </div>
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">📎 配套文档：<a href="./phoenix-product-config.html" target="_blank" style="color:#5eead4">phoenix-product-config.html</a> · <a href="./phoenix-brief-prod.html" target="_blank" style="color:#5eead4">生产简报 PDF</a> · <a href="./phoenix-brief-sales.html" target="_blank" style="color:#5eead4">销售工具 PDF</a></div>
+</div>
+
+<!-- V2.6.1 ID Day 7 客户交付里程碑（V2.6 → V2.6.1 客户判断修订） -->
+<div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,rgba(200,16,46,.06),#fff)">
+  <h2 style="color:#c8102e">🇮🇩 V2.6.1 ID Day 7 客户交付 <span class="badge" style="background:#c8102e;color:#fff">2026-07-07 客户简短</span> <span class="badge" style="background:#c8102e">⚠️ 客户判断：MTB/折叠/童车 = 红海不参与</span> <span class="badge" style="background:#2e7d32">三蓝海品类（公路+平把+砾石）</span> <small style="color:#999;font-weight:400">30 分钟 7 页交付</small></h2>
+
+  <div style="background:rgba(200,16,46,.08);border-left:4px solid #c8102e;padding:14px 18px;border-radius:8px;margin:10px 0">
+    <b style="color:#c8102e">🎯 Day 7 目标 = 客户 30 分钟看完 = 决议 5 件</b><br>
+    · <b style="color:#c8102e">接受 V2.6.1 客户判断修订</b>（MTB/折叠/童车 = 4% 毛利红海 · 完全不参与 · 资源全转三蓝海）<br>
+    · 同意双品牌（PHOENIX + FNIX）<b>3 Niche 公路+平把+砾石 主推</b>（V2.6 MTB 删除 + 平把公路新增）<br>
+    · 内部审查机制确认 + 客户品类判断（4% 毛利）作为决策依据<br>
+    · Week 1 优先做哪个 niche（建议 Phoenix RD-1 公路 12M + 平把公路 3 SKU 同步）<br>
+    · 下次会议 7/14 同时段
+  </div>
+
+  <div style="background:rgba(244,67,54,.08);border-left:4px solid #c8102e;padding:14px 18px;border-radius:8px;margin:10px 0">
+    <b style="color:#c8102e">🚨 V2.6.1 客户判断核心修订（请客户先接受）</b><br>
+    · <b>客户判断：MTB/折叠/童车 = 4% 毛利红海</b>（不是市场真空问题，是客户内部已有供应商）<br>
+    · <b>折叠车</b>：V2.6 降级保持 = 仅 1 SKU 试水 FK-TEST @ 8M IDR（不投长期）<br>
+    · <b>MTB 任何 SKU</b>：<span style="color:#c8102e"><b>完全删除</b></span>（V2.6 FNIX MTB-FLAG 1+2 全部砍掉）<br>
+    · <b>童车</b>：<span style="color:#c8102e"><b>完全不参与</b></span>（客户自有供应商）<br>
+    · <b>V2.6.1 新增</b>：Phoenix 平把公路 3 SKU @ 12-15M（V2.6 没有 = 蓝海填补）<br>
+    · <b>总 SKU：V2.6 = 7（折叠 1 + 砾石 3 + MTB 2 + 公路 2） → V2.6.1 = 15（公路 5 + 平把 3 + 折叠 1 + FNIX 公路 2 + 砾石 4）</b>
+  </div>
+
+  <div style="background:rgba(46,125,50,.08);border-left:4px solid #2e7d32;padding:14px 18px;border-radius:8px;margin:10px 0">
+    <b style="color:#2e7d32">📊 V2.6.1 双平台 7M+ 真空实测证据（关键说服力）</b><br>
+    · <b>Shopee ID</b>：39 产品 0 SKU 进 7M+（过滤健身单车+童车后 34 SKU 自行车同样 0 进 7M+）<br>
+    · <b>Tokopedia</b>：39 产品 0 SKU 进 7M+（最高 Rp 6.4M = iReborn 健身单车）<br>
+    · <b>ID 真自行车最高价</b>：Polygon Monarch 2.7M（Shopee） · Pacific 6.4M（serbasepeda）<br>
+    · <b>V2.6.1 切入 12M IDR</b> = 比市场最高价高 1.7 倍 = <b style="color:#2e7d32">真蓝海 + 高 ASP</b>
+  </div>
+
+  <h3 style="color:#c8102e;margin-top:14px">📋 V2.6.1 6 Niche 15 SKU 一览（5 主推 + 1 试水）</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px">
+    <thead>
+      <tr style="background:#2e7d32;color:#fff">
+        <th style="padding:6px;text-align:left">Niche</th>
+        <th style="padding:6px;text-align:left">品牌</th>
+        <th style="padding:6px;text-align:left">SKU 型号</th>
+        <th style="padding:6px;text-align:right">价位</th>
+        <th style="padding:6px;text-align:left">对标</th>
+        <th style="padding:6px;text-align:center">战略地位</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#fff8dc"><td><b>Niche #1 🔥</b></td><td><span class="badge badge-phx">PX</span></td><td><b>公路车主推 5 SKU</b>（已返单扩品）</td><td>12-15M</td><td>Shopee 0 SKU 进 7M+ · 双平台真空</td><td><b style="color:#2e7d32">🌟 主推 #1 · V2.6.1 加强</b></td></tr>
+      <tr style="background:#fff8dc"><td><b>Niche #2 🔥</b></td><td><span class="badge badge-phx">PX</span></td><td><b>平把公路 3 SKU</b> 🆕</td><td>12-15M</td><td>Shopee 0 SKU 进 7M+ · 平把专属蓝海</td><td><b style="color:#2e7d32">🌟 主推 #2 · V2.6.1 新增</b></td></tr>
+      <tr style="background:#fff8dc"><td><b>Niche #3 🔥</b></td><td><span class="badge badge-fnix">FNIX</span></td><td><b>高端公路 2 SKU</b>（错位 Phoenix 12-15M 上方）</td><td>15-18M</td><td>补 12-25M 真空 · 错位 Phoenix</td><td><b style="color:#2e7d32">🌟 主推 #3 · V2.6.1 加强 1→2</b></td></tr>
+      <tr style="background:#fff8dc"><td><b>Niche #4 🔥</b></td><td><span class="badge badge-fnix">FNIX</span></td><td><b>高端砾石 2 SKU</b>（SNI 印尼国家标准背书）</td><td>12-18M</td><td>Element Jasper 2.2M = ID 唯一 · 真空</td><td><b style="color:#2e7d32">🌟 主推 #4 · V2.6.1 保留</b></td></tr>
+      <tr style="background:#fff8dc"><td><b>Niche #5 🔥</b></td><td><span class="badge badge-phx">PX</span></td><td><b>高端砾石返单 2 SKU</b>（已返单验证）</td><td>12-15M</td><td>已返单 · 城市砾石主流</td><td><b style="color:#2e7d32">🌟 主推 #5 · V2.6 返单保留</b></td></tr>
+      <tr style="background:#fff3e0"><td><b>Niche #6 ⚠️</b></td><td><span class="badge badge-phx">PX</span></td><td><b>FK-TEST 折叠试水 1 SKU</b>（V2.6 降级保持）</td><td>8M</td><td>大行 / JAVA（红海不参与）</td><td><b style="color:#ff9800">⚠️ 试水 · 不投长期</b></td></tr>
+      <tr style="background:#ffebee"><td><b>🚫 删除</b></td><td colspan="4"><s>V2.6 FNIX MTB-FLAG-1 (27M) + MTB-FLAG-2 (22M) · Phoenix 任何 MTB</s></td><td>客户 4% 毛利红海判断</td><td><b style="color:#c8102e">永不参与</b></td></tr>
+      <tr style="background:#e8f5e9"><td><b>合计</b></td><td></td><td></td><td><b>15</b></td><td>8-18M</td><td><b>V2.6.1 火力集中三蓝海</b></td><td><b style="color:#2e7d32">100% 不重叠 Pacific</b></td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="color:#c8102e;margin-top:14px">⏰ V2.6.1 Week 1 10 项任务进度</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:12px">
+    <thead>
+      <tr style="background:#e65100;color:#fff">
+        <th style="padding:5px">#</th>
+        <th style="padding:5px;text-align:left">任务</th>
+        <th style="padding:5px;text-align:left">负责方</th>
+        <th style="padding:5px;text-align:left">截止</th>
+        <th style="padding:5px;text-align:center">状态</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#fff8dc"><td><b>1 ⭐</b></td><td><b>接受 V2.6.1 客户判断修订</b>（MTB/折叠/童车 = 红海不参与 · 三蓝海品类 = 公路+平把+砾石）</td><td>客户决策</td><td>Day 7 会议</td><td><b style="color:#e65100">⏸ 待决议</b></td></tr>
+      <tr><td>2</td><td>确认 <b>6 Niche 15 SKU</b>（公路 5 + 平把 3 + FNIX 公路 2 + 砾石 4 + 折叠 1）</td><td>客户决策</td><td>Day 7+1</td><td><b style="color:#e65100">⏸ 待决议</b></td></tr>
+      <tr><td>3</td><td><b>重点 SKU RD-1 公路车 12M 试产 1 台</b>（返单样品改进）</td><td>凤凰工厂</td><td>7/12</td><td><b style="color:#2e7d32">🔵 Day 7+5 天启动</b></td></tr>
+      <tr><td>4</td><td>RD-1 BOM + USD 出厂报价</td><td>凤凰采购</td><td>7/10</td><td><b style="color:#2e7d32">🔵 Day 7+3 天启动</b></td></tr>
+      <tr style="background:#fff8dc"><td>5 🆕</td><td><b>Phoenix 平把公路 3 SKU 设计冻结</b>（V2.6.1 新增 Niche #2）</td><td>客户研发</td><td>7/14</td><td><b style="color:#2e7d32">🔵 启动</b></td></tr>
+      <tr style="background:#fff8dc"><td>6 🆕</td><td><b>FNIX 高端公路 2 SKU 配置</b>（错位 Phoenix 上方 · 15-18M）</td><td>客户研发</td><td>7/14</td><td><b style="color:#2e7d32">🔵 启动</b></td></tr>
+      <tr style="background:#fff3e0"><td>7 ⬇️</td><td>Phoenix 折叠 FK-TEST 1 SKU 配置<br>（<b style="color:#c8102e">试水级 · V2.6 降级保持</b>）</td><td>客户研发</td><td>7/21</td><td><b style="color:#ff9800">⚠️ 试水 · 不投长期</b></td></tr>
+      <tr><td>8</td><td><b>FNIX 品牌命名确认</b>（FNIX / FNIX-ID / FENIX）</td><td>客户决策</td><td>7/10</td><td><b style="color:#e65100">⏸ Day 7+3 天等决议</b></td></tr>
+      <tr><td>9</td><td>SNI 认证流程文件 + 时间表（FNIX 公路 + 砾石）</td><td>客户法务</td><td>7/21</td><td><b style="color:#e65100">⏸ Day 7+14 天</b></td></tr>
+      <tr><td>10</td><td>V2.6.1 完整 PDF 提案（MTB 删除 + 平把公路新增）</td><td>凤凰总部</td><td>7/9</td><td><b style="color:#e65100">⏸ 待 V2.6.1 决议后启动</b></td></tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:14px;background:rgba(46,125,50,.1);border-left:4px solid #2e7d32;padding:14px 18px;border-radius:8px">
+    <b style="color:#2e7d32">🚦 当前 V2.6.1 ID 战略进度</b><br>
+    · V2.6.1 框架 <span class="badge" style="background:#2e7d32">✅ 已完成</span>（indonesia.html 已重写 6 Niche 15 SKU 提案）<br>
+    · V2.6.1 OKR <span class="badge" style="background:#2e7d32">✅ 已完成</span>（task.html O2 已重写 KR2.P1-P6 + Exclude MTB/折叠/童车）<br>
+    · V2.6.1 客户简报 PDF <span class="badge" style="background:#e65100">⏸ 待 V2.6.1 决议后输出</span>（7/9 前）<br>
+    · 双平台实测 <span class="badge" style="background:#2e7d32">✅ 已完成</span>（Shopee+Tokopedia 74 SKU 7M+ 真空验证）<br>
+    · Day 7 客户简短 7/7 <span class="badge" style="background:#e65100">⏸ 7 天倒计时</span><br>
+    · RD-1 试产 7/12 <span class="badge" style="background:#e65100">⏸ 待 Day 7 启动</span><br>
+    · FNIX 命名决策 7/10 <span class="badge" style="background:#e65100">⏸ 待 Day 7 决议</span>
+  </div>
+
+  <div style="margin-top:8px;font-size:10px;color:#94a3b8">📎 V2.6 客户简报（PDF 1.65MB 7 页）需 V2.6.1 决议后重出 · 框架：<a href="./phoenix-id-v24-framework.html" target="_blank" style="color:#5eead4">HTML</a> · 勾连：Tab #6 V2.6.1 三蓝海品类 / Tab #7 OKR KR2.Exclude MTB/折叠/童车</div>
+</div>
+
+<!-- V2 草稿已归档到 history（见最底） -->
+
+<!-- 4 框架交叉验证（V1 → V2 gap） -->
+<div class="section">
+  <h2>🔀 4 框架交叉验证 <span class="badge green">STP / 4P / 品牌资产 / 飞轮</span></h2>
+  <div id="frameworks">
+    <!-- 自动渲染 -->
+  </div>
+</div>
+
+<!-- V1 全部 32 条已归档到 history -->
+
+<!-- 新观点输入 -->
+<div class="section">
+  <h2>💡 新观点 / 修订 <span class="badge warn">实时沉淀到 V2</span></h2>
+  <div class="note-input">
+    <h3>把你新的洞察写下来，自动归类到 V2 草稿</h3>
+    <div class="row">
+      <select id="note-region">
+        <option value="bd">BD 孟加拉</option>
+        <option value="id">ID 印尼</option>
+        <option value="global">全局通用</option>
+      </select>
+      <select id="note-framework">
+        <option value="stp">STP 细分/目标/定位</option>
+        <option value="4p">4P 产品/价格/渠道/促销</option>
+        <option value="brand_assets">品牌资产</option>
+        <option value="flywheel">飞轮</option>
+        <option value="slogan">Slogan / 主张</option>
+        <option value="insight">洞察/客户语言</option>
+        <option value="other">其他</option>
+      </select>
+      <input type="text" id="note-title" placeholder="一句话标题（可选）" style="flex:1; min-width:200px">
+    </div>
+    <textarea id="note-body" placeholder="详细描述：你想说啥？为啥这么想？反驳哪个 V1 条？或者新发现？"></textarea>
+    <div style="margin-top: 8px;">
+      <button onclick="addNote()">💾 沉淀到 V2 草稿</button>
+      <span style="margin-left: 12px; font-size: 11px; color: #94a3b8;">保存到 data/strategy_notes.json · 每日 9:00 自动备份到 GitHub</span>
+    </div>
+  </div>
+  <div class="notes-list" id="notes-list">
+    <div class="empty">暂无新观点</div>
+  </div>
+</div>
+
+<footer>
+  <div>数据源：React bundle 抽出（V1 32 条）+ V2 草稿 + 你的新观点</div>
+  <div style="margin-top: 4px;">理论框架：STP（细分-目标-定位）/ 4P（产品-价格-渠道-促销）/ 品牌资产 / 增长飞轮</div>
+</footer>
+
+<script src="../data/strategy_v1.js"></script>
+<script>
+const DATA_URL = '../data/strategy_notes.json';
+const LATEST_URL = '../data/latest.json';
+
+let currentQuad = 'all';
+let allNotes = [];
+
+// V2 战略完成度跟踪（自动从 dashboard_metrics 计算）
+async function loadV2Progress() {
+  const el = document.getElementById('v2-progress');
+  try {
+    const r = await fetch(LATEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    const dm = data.dashboard_metrics || {};
+    const totals = dm.totals || {};
+    const phxGap = dm.phx_gap || {};
+    const id715 = dm.id_7_15m || {};
+    // V2 KR 进度计算
+    const phxSku = totals.phx_bd_mid_high || 0;
+    const skuPct = Math.min((phxSku / 20) * 100, 100);
+    const phxMax = phxGap.phx_max_price || 0;
+    const maxPct = Math.min((phxMax / 40000) * 100, 100);
+    const phxAsp = totals.phx_bd_asp || 0;
+    const aspPct = Math.min((phxAsp / 22000) * 100, 100);
+    const idSku = id715.count || 0;
+    const idPct = Math.min((idSku / 5) * 100, 100);
+    const overall = (skuPct + maxPct + aspPct + idPct) / 4;
+    // 4 个 KPI 卡片（V2 战略大单品 + 排名 + 红蓝海 + 顶价差距）
+    const elKpProduct = document.getElementById('kp-v2-product');
+    if (elKpProduct) elKpProduct.innerHTML = `<b style="color:#c8e6c9">${phxSku}/20 SKU</b><br><small>公路车 5 SKU + ID 折叠 3 SKU</small>`;
+    const elKpRank = document.getElementById('kp-v2-rank');
+    if (elKpRank) elKpRank.innerHTML = `<b>#14 / 27 品牌</b><br><small>当前 44.5 分 · 目标 Top 3 (75+)</small>`;
+    const elKpRedBlue = document.getElementById('kp-v2-redblue');
+    if (elKpRedBlue) elKpRedBlue.innerHTML = `<b>🚫 25-40K 红海 25 SKU</b><br><b style="color:#c8e6c9">💎 40-60K 真空 5 SKU</b>`;
+    const elKpGap = document.getElementById('kp-v2-gap');
+    if (elKpGap) elKpGap.innerHTML = `<b>${phxMax.toLocaleString()} / 65,000 BDT</b><br><small>行业顶价 ${(phxGap.industry_max_brand||'')} ${(phxGap.industry_max_price||0).toLocaleString()}</small>`;
+    el.innerHTML = `
+      <div style="margin-bottom:10px">
+        <b style="color:#ff9cae">🎯 V2 整体完成度：${overall.toFixed(0)}%</b>
+        <div style="background:rgba(255,255,255,.1);border-radius:6px;height:8px;margin-top:4px;overflow:hidden">
+          <div style="background:linear-gradient(90deg,#c8102e,#ff9cae);height:8px;width:${overall.toFixed(0)}%;transition:width .5s"></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.2 SKU 数量 <span style="color:#5eead4">${phxSku}/20</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${skuPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.3 顶价 <span style="color:#5eead4">${phxMax.toLocaleString()}/40K</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${maxPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR1.4 ASP <span style="color:#5eead4">${phxAsp.toLocaleString()}/22K</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${aspPct.toFixed(0)}%"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
+          <div style="font-size:11px;color:#cbd5e1">KR2.4 ID SKU <span style="color:#5eead4">${idSku}/5</span></div>
+          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${idPct.toFixed(0)}%"></div></div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:#cbd5e1">勾连：每条 KR → Tab #3 product-matrix 蓝海 + Tab #6 task OKR 行动 + Tab #7 dtc 差评</div>
+    `;
+  } catch (e) {
+    el.innerHTML = '<div style="color:#94a3b8">⚠ 加载 latest.json 失败：' + e.message + '</div>';
+  }
+}
+
+async function loadNotes() {
+  try {
+    const r = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    allNotes = data.notes || [];
+    renderNotes();
+  } catch (e) {
+    document.getElementById('notes-list').innerHTML = '<div class="empty">⚠️ 加载 data/strategy_notes.json 失败：' + e.message + '</div>';
+  }
+}
+
+function renderV2Frames() {
+  const html = [];
+  const frames = V2_DRAFT.four_frames;
+  for (const [k, v] of Object.entries(frames)) {
+    let fields = '';
+    for (const [fk, fv] of Object.entries(v)) {
+      fields += `<div class="field"><strong>${fk}:</strong> ${esc(fv)}</div>`;
+    }
+    html += `<div class="frame-card"><h3>${k.toUpperCase()}</h3>${fields}</div>`;
+  }
+  document.getElementById('v2-frames').innerHTML = html;
+}
+
+function renderFrameworks() {
+  const html = [];
+  for (const [k, frame] of Object.entries(V1_FRAMEWORK_MAP)) {
+    const items = frame.items.map(it =>
+      `<div class="item-row"><span class="id-num">#${it.id}</span><span class="role">${esc(it.role)}</span><span class="note">${esc(it.note)}</span></div>`
+    ).join('');
+    html += `<div class="framework-card">
+      <h3>${esc(frame.name)} <span style="font-size:11px;color:#94a3b8">· ${frame.count} 条</span></h3>
+      <div class="item-list">${items}</div>
+      <div class="gap-line">⚠️ Gap: ${esc(frame.gap)}</div>
+    </div>`;
+  }
+  document.getElementById('frameworks').innerHTML = html;
+}
+
+function renderV1() {
+  let items = V1_STRATEGIES;
+  if (currentQuad !== 'all') {
+    const [q, r] = currentQuad.split('-');
+    items = items.filter(it => it.quadrant === q && it.region === r);
+  }
+  const html = items.map(it => `
+    <div class="v1-card ${it.region}">
+      <div class="head">
+        <span class="reg">${it.region === 'bd' ? 'BD' : 'ID'}</span>
+        <span class="pri p${it.priority}">${'★'.repeat(it.priority)}${'☆'.repeat(3 - it.priority)}</span>
+        <span class="fw">${esc(it.framework)}</span>
+      </div>
+      <div class="title">#${it.id} ${esc(it.title)}</div>
+      <div class="body">${esc(it.body)}</div>
+      <div class="kpi"><strong>KPI:</strong> ${esc(it.kpi)}</div>
+    </div>
+  `).join('');
+  document.getElementById('v1-grid').innerHTML = html || '<div class="empty">无匹配</div>';
+}
+
+function renderNotes() {
+  if (!allNotes.length) {
+    document.getElementById('notes-list').innerHTML = '<div class="empty">暂无新观点（上面输入框写）</div>';
+    return;
+  }
+  const html = allNotes.slice().reverse().map(n => `
+    <div class="note-item">
+      <div class="head">
+        <span class="cat">${esc(n.region)} · ${esc(n.framework)}</span>
+        <span class="time">${esc(n.time)}</span>
+      </div>
+      ${n.title ? `<div style="font-weight:700;color:#fcd34d;font-size:13px;margin:4px 0">${esc(n.title)}</div>` : ''}
+      <div class="body">${esc(n.body)}</div>
+    </div>
+  `).join('');
+  document.getElementById('notes-list').innerHTML = html;
+}
+
+async function addNote() {
+  const region = document.getElementById('note-region').value;
+  const framework = document.getElementById('note-framework').value;
+  const title = document.getElementById('note-title').value.trim();
+  const body = document.getElementById('note-body').value.trim();
+  if (!body) { alert('请写点啥'); return; }
+
+  const note = {
+    id: Date.now(),
+    region, framework, title, body,
+    time: new Date().toISOString().substring(0, 19).replace('T', ' '),
+  };
+
+  // 1) 存到 localStorage（前端即时可见）
+  allNotes.push(note);
+  renderNotes();
+
+  // 2) 清空 input
+  document.getElementById('note-title').value = '';
+  document.getElementById('note-body').value = '';
+
+  // 3) 提示用户后续：导出 JSON 下载
+  // (前端没法直接写 GitHub，但能下载)
+  const fullData = {
+    schema_version: '1.0',
+    version: '2.0-draft',
+    last_updated: new Date().toISOString().substring(0, 10),
+    v1_archived: { source: 'React bundle', extracted_at: '2026-06-11', total_count: 32 },
+    v2_draft: V2_DRAFT,
+    notes: allNotes,
+    open_questions: []
+  };
+  // 让用户用"下载"按钮
+  if (!window._downloadAdded) {
+    const btn = document.createElement('button');
+    btn.textContent = '📥 下载最新 JSON';
+    btn.style.cssText = 'background: rgba(94,234,212,.2); color: #5eead4; border: 1px solid rgba(94,234,212,.3); margin-left: 8px;';
+    btn.onclick = () => downloadJson(fullData);
+    document.querySelector('.note-input button').after(btn);
+    window._downloadAdded = true;
+  }
+}
+
+function downloadJson(data) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'strategy_notes.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function esc(s) {
+  return String(s || '').replace(/[<>&"']/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// quadrant 筛选
+document.querySelectorAll('.quad-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.quad-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentQuad = btn.dataset.quad;
+    renderV1();
+  });
+});
+
+renderV2Frames();
+renderFrameworks();
+renderV1();
+loadNotes();
+loadV2Progress();
+
+// V2.7 数据质量门 — VPN 信号灯
+Promise.all([loadNotes(), loadV2Progress()]).then(async () => {
+  try {
+    const r = await fetch('../data/latest.json', {cache:'no-store'});
+    const data = await r.json();
+    if (typeof renderQualityGate === 'function') renderQualityGate(data);
+  } catch(e){}
+});
+</script>
+
+<script src="../render_quality_gate.js"></script>
+</body>
+</html>
