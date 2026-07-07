@@ -84,31 +84,31 @@
     <a class="back-link" href="./index.html">← 返回总览</a>
     </div>
 
-    <!-- 真实数据基线（dashboard_metrics 互验） -->
+    <!-- 真实数据基线（dashboard_metrics 动态读 · V2.7.1） -->
     <div class="section dark" style="border-left-color:#5eead4">
-      <h2 style="color:#5eead4"><span class="flag">📊</span>真实基线 <span class="small" style="color:#aaa">2026-06-23 · latest.json</span></h2>
+      <h2 style="color:#5eead4"><span class="flag">📊</span>真实基线 <span class="small" style="color:#aaa">latest.json#dashboard_metrics 动态读 · 不老化</span></h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
         <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">Phoenix BD</div>
           <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
-            <b>排名 #14 / 25</b> 品牌 · 44.5 分<br>
-            <b>8 SKU</b> · ASP 14,425 · 顶价 18,000<br>
-            远低行业顶价 <b>65,000</b> (Rockrider)
+            <b>排名 #<span id="task-phx-rank">—</span></b> · <span id="task-phx-score">—</span> 分<br>
+            <b><span id="task-phx-count">—</span> SKU</b> · ASP <span id="task-phx-asp">—</span> · 顶价 <span id="task-phx-max">—</span><br>
+            行业顶价 <span id="task-ind-max">—</span> (<span id="task-ind-brand">—</span>)
           </div>
         </div>
         <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">BD 行业</div>
           <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
-            27 真品牌 · 190 SKU · 113 dreamcycle<br>
-            <b>15-25K: 57 SKU 16 品牌</b><br>
-            <b>&gt; 25K: 31 SKU 7 品牌</b> (Rockrider 13)
+            <span id="task-bd-brands">—</span> 真品牌 · <span id="task-bd-pool">—</span> SKU<br>
+            <b>15-25K: <span id="task-bd-mid">—</span> SKU</b><br>
+            <b>&gt; 25K: <span id="task-bd-high">—</span> SKU</b>
           </div>
         </div>
         <div style="background:rgba(94,234,212,.1);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">ID 行业</div>
           <div style="font-size:12px;color:#fff;margin-top:4px;line-height:1.6">
-            8 整车 SKU (serbasepeda CF 拦截)<br>
-            <b>7-15M: 4 SKU</b> (Element/United/Pacific)<br>
+            <span id="task-id-pool">—</span> 整车 SKU<br>
+            <b>7-15M: <span id="task-id-mid">—</span> SKU</b><br>
             无 SGS 中国品牌 = 真空
           </div>
         </div>
@@ -130,19 +130,19 @@
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:11px">
           <div style="background:rgba(245,158,11,.15);border-left:3px solid #f57c00;padding:10px;border-radius:6px;border:2px solid #f57c00">
             <div style="font-weight:800;color:#e65100;font-size:12px;margin-bottom:4px">🥈 15-25K 中高端（销量基础 · 仅 3 SKU）</div>
-            <div style="color:#666;line-height:1.5"><b>72 SKU · 16 品牌</b><br>Marine 15 / Veloce 15 / Core 9<br>Foxter 4 / Duranta 3 / Warrior 2<br><b style="color:#e65100">Phoenix 已 3 SKU 入门（Duster-A 15.7K / Duster-C 17K / Harod01 18K）= 还需要 5+ SKU 抢份额</b></div>
+            <div style="color:#666;line-height:1.5"><b><span id="v23-mid-count">—</span> SKU · <span id="v23-mid-brands">—</span> 品牌</b><br><span id="v23-mid-brands-list">加载中…</span><br><b style="color:#e65100">Phoenix 已 <span id="v23-mid-phx">—</span> SKU 入门 = 还需要 5+ SKU 抢份额</b></div>
           </div>
           <div style="background:rgba(46,125,50,.15);border-left:3px solid #2e7d32;padding:10px;border-radius:6px;border:2px solid #2e7d32">
             <div style="font-weight:800;color:#1b5e20;font-size:12px;margin-bottom:4px">🥇 25-40K 高端（主战场 · 0 SKU 真正缺席）🆕</div>
-            <div style="color:#1b5e20;line-height:1.5"><b>26 SKU · 6 品牌</b><br>Rockrider 9 / Veloce 7 / Core 5<br>Ceres 2 / Magpy 2 / Kiesel 1<br><b style="color:#c8102e">Phoenix 顶价 18K → 主战场 0 SKU 真正缺席 = 这是 V2.3 战略核心</b></div>
+            <div style="color:#1b5e20;line-height:1.5"><b><span id="v23-high-count">—</span> SKU · <span id="v23-high-brands">—</span> 品牌</b><br><span id="v23-high-brands-list">加载中…</span><br><b style="color:#c8102e">Phoenix 顶价 <span id="v23-phx-max">—</span> → 主战场 0 SKU 真正缺席 = V2.3 战略核心</b></div>
           </div>
           <div style="background:rgba(156,39,176,.08);border-left:3px solid #9c27b0;padding:10px;border-radius:6px">
             <div style="font-weight:800;color:#9c27b0;font-size:12px;margin-bottom:4px">🥉 40-60K 公路车（价值锚点·不指望销量）</div>
-            <div style="color:#666;line-height:1.5"><b>4 SKU · 1 品牌</b><br>Rockrider Duke + Pro + XC 403<br><b style="color:#9c27b0">部署但接受没销量</b></div>
+            <div style="color:#666;line-height:1.5"><b><span id="v23-anchor-count">—</span> SKU · <span id="v23-anchor-brands">—</span> 品牌</b><br><span id="v23-anchor-list">加载中…</span><br><b style="color:#9c27b0">部署但接受没销量</b></div>
           </div>
           <div style="background:rgba(106,27,154,.08);border-left:3px solid #6a1b9a;padding:10px;border-radius:6px">
             <div style="font-weight:800;color:#6a1b9a;font-size:12px;margin-bottom:4px">📌 65K+ 顶价（形象产品·不指望成交）</div>
-            <div style="color:#666;line-height:1.5">Rockrider XC 404 = 65K<br>"65K 我可以买摩托车"<br><b style="color:#6a1b9a">脱离购买力 = 仅形象</b></div>
+            <div style="color:#666;line-height:1.5"><span id="v23-image-brand">加载中…</span> = <span id="v23-image-price">—</span><br>"<span id="v23-image-quote">65K 我可以买摩托车</span>"<br><b style="color:#6a1b9a">脱离购买力 = 仅形象</b></div>
           </div>
         </div>
         <div style="background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;padding:10px 14px;border-radius:6px;margin-top:12px;font-size:12px;line-height:1.7;color:#1a1a1a">
@@ -318,13 +318,7 @@
           <div class="init-detail">客户情报 2026-06-23：BD 公路车/平把公路车热度快速上升，客户不惜代价采购 SUNSPEED/CAMP。Phoenix 4 大优势 = ① 沃尔玛规模 ② UCI 认证车架 ③ ID 1月订单已验证 ④ 返单中。<b>产品方向：平把公路 + UCI 砾石 + UCI 公路 三大子类 = BDT 13-25K = V2 战略大单品（优先于 22K+ UCI MTB）</b></div>
           <span class="init-tag" style="background:#5eead4;color:#000">🥇 优先：Jul-Aug 2026</span>
         </div>
-        <div class="initiative bd" style="opacity:.6">
-          <div class="init-id">BD-H2-02 · 关键（V2 降为第二）</div>
-          <div class="init-title">BD 22K+ UCI MTB 大单品（25K+ 价值锚点）</div>
-          <div class="init-detail">25K+ 价位 4 品牌 31 SKU = Rockrider/Veloce/Core 主导 = 价值锚点。V2 修订后降为第二优先（公路车优先）</div>
-          <span class="init-tag">Aug-Sep 2026</span>
         </div>
-      </div>
 
       <h3 style="font-size:13px;color:#0d47a1;margin:14px 0 8px">🇮🇩 ID 行动（3 个 · Niche 战略）</h3>
       <div class="initiative-grid">
@@ -439,49 +433,70 @@
       </div>
     </div>
 
-    <!-- 2027-2028 远景 -->
-    <div class="section" style="border-left:4px solid #9c27b0">
-      <h2 style="color:#9c27b0"><span class="flag">🚀</span>2027-2028 远景 <span class="small">3-5 年路径</span></h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
-        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
-          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2027</div>
-          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">BD 中高端 Top 3 + ID 月销 200+</div>
-          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
-            <li>· BD SKU 12-15 → 20+（Top 3 门槛）</li>
-            <li>· ID 月销 200 台（Shopee 主渠道）</li>
-            <li>· 独立站 BD 月访 50K + ID 月访 20K</li>
-            <li>· 社媒 30K 粉（BD 15K + ID 15K）</li>
-          </ul>
-        </div>
-        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
-          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2028</div>
-          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">Phoenix = 区域中高端第一品牌</div>
-          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
-            <li>· BD 评分 #3（与 Rockrider/Veloce 同台）</li>
-            <li>· ID 评分 Top 5（与 Polygon/Element 同台）</li>
-            <li>· 顶价 40K+（价值锚点稳定）</li>
-            <li>· 准备进入第三市场（尼泊尔/斯里兰卡）</li>
-          </ul>
-        </div>
-        <div style="background:#f3e5f5;border-left:3px solid #9c27b0;padding:12px 14px;border-radius:8px">
-          <div style="font-size:11px;color:#9c27b0;font-weight:800;text-transform:uppercase">2029-2030</div>
-          <div style="font-size:13px;font-weight:800;color:#4a148c;margin:4px 0">南亚 + 东南亚区域品牌</div>
-          <ul style="font-size:11px;color:#1a1a1a;line-height:1.7;list-style:none;padding:0">
-            <li>· 第三市场破冰（尼泊尔/斯里兰卡/越南）</li>
-            <li>· 区域年销 5W+ 台</li>
-            <li>· 上市准备 / 战略融资 / 全球品牌叙事</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <!-- 2027-2028 远景已迁移到 strategy.html Tab #9 -->
 
     <div class="footer">
-      数据来源：dashboard_metrics (latest.json) · 战略框架 V2 钻井型 · 三年愿景<br />
-      本页面为 Phoenix-Live Tab #6 (OKR 战略) · 每季度 OKR 复盘 + 每月 initiative 进度
+      数据来源：dashboard_metrics (latest.json) · 战略框架 V2 钻井型 · 2027-2028 远景见 Tab #9 strategy
     </div>
   </div>
 
 <script>
+// V2.7.1 动态注入 task 顶部 KPI（dashboard_metrics 不老化）
+function injectTaskBaseline(dm, phx, phxGap, totals) {
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  // Phoenix BD
+  set('task-phx-rank', (phx && phx.rank) || '—');
+  set('task-phx-score', (phx && phx.score) ? phx.score.toFixed(1) : '—');
+  set('task-phx-count', (totals.phx_bd_mid_high != null) ? totals.phx_bd_mid_high : '—');
+  set('task-phx-asp', (totals.phx_bd_asp != null) ? totals.phx_bd_asp.toLocaleString() : '—');
+  set('task-phx-max', (totals.phx_bd_max != null) ? totals.phx_bd_max.toLocaleString() : '—');
+  set('task-ind-max', (phxGap.industry_max_price != null) ? phxGap.industry_max_price.toLocaleString() : '—');
+  set('task-ind-brand', phxGap.industry_max_brand || '—');
+  // BD 行业
+  set('task-bd-brands', totals.bd_pool_brands || '—');
+  set('task-bd-pool', totals.bd_pool_total || '—');
+  set('task-bd-mid', ((dm.bands||{}).bd_15_25k||{}).count || '—');
+  set('task-bd-high', phxGap.gt_25k_count || '—');
+  // ID 行业
+  set('task-id-pool', totals.id_pool_total || '—');
+  set('task-id-mid', ((dm.id_7_15m)||{}).count || '—');
+  // V2.3 价格阶梯
+  injectV23Tier(dm, phxGap);
+}
+
+// V2.3 三层价格阶梯动态注入（用真实字段名 bd_gt_25k / bd_gt_30k）
+function injectV23Tier(dm, phxGap) {
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  const bands = dm.bands || {};
+  const mid = bands.bd_15_25k || {};          // 15-25K 中高端
+  const high = bands.bd_gt_25k || {};         // 25K+ 高端（最准）
+  const anchor = bands.bd_gt_30k || {};       // 30K+ 锚点
+
+  // 15-25K 中端
+  set('v23-mid-count', mid.count || '—');
+  set('v23-mid-brands', mid.brands_count || '—');
+  set('v23-mid-brands-list', (mid.top_5_brands || []).slice(0,5).join(' / ') || '—');
+  // Phoenix 在 15-25K 数量 = phx_in_15_25
+  set('v23-mid-phx', phxGap.phx_in_15_25 || '—');
+
+  // 25K+ 高端（包含 25-40K + 40K+）
+  set('v23-high-count', high.count || '—');
+  set('v23-high-brands', high.brands_count || '—');
+  set('v23-high-brands-list', (high.top_5_brands || []).slice(0,6).join(' / ') || '—');
+  set('v23-phx-max', (phxGap.phx_max_price != null) ? phxGap.phx_max_price.toLocaleString() : '—');
+
+  // 30K+ 锚点（包含 40-60K + 65K+）
+  set('v23-anchor-count', anchor.count || '—');
+  set('v23-anchor-brands', anchor.brands_count || '—');
+  set('v23-anchor-list', (anchor.top_5_brands || []).slice(0,4).join(' + ') || '—');
+
+  // 65K+ 形象
+  if (phxGap.industry_max_brand && phxGap.industry_max_price) {
+    set('v23-image-brand', phxGap.industry_max_brand + ' ' + (phxGap.industry_max_model || ''));
+    set('v23-image-price', phxGap.industry_max_price.toLocaleString() + ' BDT');
+  }
+}
+
 async function load() {
   let data;
   try {
@@ -496,6 +511,9 @@ async function load() {
   const bands = dm.bands || {};
   const phxGap = dm.phx_gap || {};
   const idInfo = dm.id_7_15m || {};
+  // V2.7.1 动态注入 task 顶部 KPI
+  const phxMetrics = data.brand_metrics && data.brand_metrics.bd && data.brand_metrics.bd.phoenix;
+  injectTaskBaseline(dm, phxMetrics, phxGap, totals);
   const actions = [];
   // 规则 1: Phoenix SKU < 12 → 加速扩 SKU
   if (totals.phx_bd_mid_high < 12) {
