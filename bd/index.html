@@ -64,6 +64,20 @@
     .insight .hl{color:#c8102e}
     ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+  
+    .price-tier{display:grid;gap:10px;margin:10px 0}
+    .tier{background:rgba(255,255,255,.04);padding:10px;border-left:3px solid #94a3b8;border-radius:4px}
+    .tier-1{border-left-color:#94a3b8}.tier-2{border-left-color:#fbbf24}.tier-3{border-left-color:#22c55e}.tier-4{border-left-color:#c8102e}
+    .tier-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;color:#fff;font-weight:700}
+    .tier-name{font-size:13px}.tier-count{font-size:11px;color:#aaa;font-weight:400}
+    .tier-prices{font-size:11px;color:#cbd5e1;margin-bottom:4px}
+    .tier-brands{font-size:11px;color:#94a3b8}
+    .tier-brands b{color:#fbbf24}
+    .section.dark{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff}
+    .section.dark .insight{background:rgba(94,234,212,.05);border-left-color:#5eead4;color:#cbd5e1}
+    .alert{padding:12px;background:rgba(255,255,255,.04);border-left:3px solid;border-radius:4px;margin:10px 0;font-size:12px;line-height:1.6}
+    .price-grid{display:grid;gap:10px}
+    .insight{padding:8px 12px;background:rgba(94,234,212,.05);border-left:3px solid #5eead4;border-radius:4px;margin:8px 0;font-size:12px;line-height:1.6}
   </style>
 </head>
 <body>
@@ -102,24 +116,6 @@
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
-    <div class="section" style="background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);color:#1a1a1a">
-      <h2><span class="flag">🇧🇩</span>孟加拉自行车市场概况 <small style="color:#999;font-weight:400">（BD 国情 + 自有产能 + 进出口 + 渠道结构 — 一国全景）</small></h2>
-      <div class="kpi-grid">
-        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
-          <div class="kpi-label" style="color:#64748b">🇧🇩 BD 国情</div>
-          <div class="kpi-value" style="color:#475569">人口 1.75 亿 · GDP USD 4,650 亿<br><small>南亚自行车消费大国 · 摩托化尚未完成</small></div>
-        </div>
-        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
-          <div class="kpi-label" style="color:#64748b">🏭 BD 制造业</div>
-          <div class="kpi-value" style="color:#475569">本土 8+ 自有品牌<br><small>Meghna / Bicycle BD / Atlas / Pronko<br>OEM 中心（中国转移产能）</small></div>
-        </div>
-        <div class="kpi" style="background:#fff;border-left-color:#94a3b8">
-          <div class="kpi-label" style="color:#64748b">🛒 BD 渠道结构</div>
-          <div class="kpi-value" style="color:#475569">Daraz BD · dreamcycle.store · bicyclebd.com<br><small>电商 + 实体经销 · Phoenix 中高端真空</small></div>
-        </div>
-      </div>
-    </div>
-
     <div class="section" id="bd-market-overview">
       <h2><span class="flag">🇧🇩</span>孟加拉 BD 市场 <small style="color:#999;font-weight:400">（2025 报告 + latest.json 实时）</small></h2>
       <div class="kpi-grid">
@@ -150,44 +146,105 @@
       </div>
     </div>
 
-    <div class="section">
-      <h2><span class="flag">🎯</span>Tab 路由快速跳转</h2>
+<div class="section">
+      <h2><span class="flag">💰</span>中高端 MTB 价格分层 <small style="color:#999;font-weight:400">（BD 5K-30K BDT 中高端整车 · TOP 10 品牌 · 排除白牌/童车/折叠/配件）</small></h2>
+      <div class="price-tier" id="price-tiers">
+        <div class="tier tier-1">
+          <div class="tier-head">
+            <span class="tier-name">入门 &lt; 10K BDT</span>
+            <span class="tier-count" id="t1-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t1-prices">— BDT</div>
+          <div class="tier-brands" id="t1-brands">—</div>
+        </div>
+        <div class="tier tier-2">
+          <div class="tier-head">
+            <span class="tier-name">中端 10K-15K BDT</span>
+            <span class="tier-count" id="t2-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t2-prices">— BDT</div>
+          <div class="tier-brands" id="t2-brands">—</div>
+        </div>
+        <div class="tier tier-3">
+          <div class="tier-head">
+            <span class="tier-name">中高端 15K-25K BDT</span>
+            <span class="tier-count" id="t3-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t3-prices">— BDT</div>
+          <div class="tier-brands" id="t3-brands">—</div>
+        </div>
+        <div class="tier tier-4">
+          <div class="tier-head">
+            <span class="tier-name">高端 &gt; 25K BDT</span>
+            <span class="tier-count" id="t4-count">— SKU</span>
+          </div>
+          <div class="tier-prices" id="t4-prices">— BDT</div>
+          <div class="tier-brands" id="t4-brands">—</div>
+        </div>
+      </div>
+      <div class="insight" id="bd-tier-insight">
+        <b>🔥 战略级价格洞察（从 latest.json <span id="bd-pool-total-2">190</span> SKU 真实数据归纳）：</b>
+        <ul class="tight" id="bd-tier-strategy">
+          <li>⏳ 加载中…</li>
+        </ul>
+      </div>
+      <!-- V2.3.1 主战场分析（自动从 latest.json 计算） -->
+      <div class="insight" style="margin-top:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32" id="v231-battlefield">
+        <b>🥇 V2.3.1 BD 25-40K 高端主战场实战分析（自动）：</b>
+        <div id="v231-battlefield-body" style="font-size:11.5px;line-height:1.6;margin-top:6px">⏳ 加载中…</div>
+      </div>
+
+    
+<div class="section">
+      <h2><span class="flag">🎯</span>凤凰定位 & 竞品矩阵 <small style="color:#999;font-weight:400">（战略层 · 不会每日变）</small></h2>
       <div class="kpi-grid">
-        <a class="kpi" href="./market.html" style="text-decoration:none">
-          <div class="kpi-label">🇧🇩 Tab #2</div>
-          <div class="kpi-value" style="color:#1565c0">孟加拉 MTB 作战室 →</div>
-        </a>
-        <a class="kpi" href="./market.html" style="text-decoration:none">
-          <div class="kpi-label">🌐 ID 市场</div>
-          <div class="kpi-value" style="color:#2e7d32"><a href="../id/index.html" style="color:#2e7d32">🇮🇩 印尼 ID 作战室 →</a></div>
-        </a>
-        <a class="kpi" href="./competitive.html" style="text-decoration:none">
-          <div class="kpi-label">📈 Tab #4</div>
-          <div class="kpi-value" style="color:#c8102e">竞品监控 + 品牌矩阵 →</div>
-        </a>
-        <a class="kpi" href="./matrix.html" style="text-decoration:none">
-          <div class="kpi-label">🧭 Tab #5</div>
-          <div class="kpi-value" style="color:#6a1b9a">产品矩阵 · 蓝海推论 →</div>
-        </a>
-        <a class="kpi" href="./tasks.html" style="text-decoration:none">
-          <div class="kpi-label">📋 Tab #6</div>
-          <div class="kpi-value" style="color:#00695c">任务清单 →</div>
-        </a>
-        <a class="kpi" href="./dtc.html" style="text-decoration:none">
-          <div class="kpi-label">🛒 Tab #7</div>
-          <div class="kpi-value" style="color:#5eead4">DTC 差评 + 社媒 →</div>
-        </a>
-        <a class="kpi" href="./daily.html" style="text-decoration:none">
-          <div class="kpi-label">📊 Tab #5</div>
-          <div class="kpi-value" style="color:#e65100">市场日报 7 板块 →</div>
-        </a>
-        <a class="kpi" href="./strategy.html" style="text-decoration:none">
-          <div class="kpi-label">🎯 Tab #8</div>
-          <div class="kpi-value" style="color:#9c27b0">战略迭代 V1/V2 →</div>
-        </a>
+        <div class="kpi gap">
+          <div class="kpi-label">凤凰真实价位</div>
+          <div class="kpi-value">BDT 7,999 - 14,999<br><span style="font-size:10px;color:#888;font-weight:400">14 SKU 全在中端以下</span></div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">中高端价位竞品</div>
+          <div class="kpi-value">Marine Gold 19,000<br>Veloce Raptor 15,999<br>Duranta Steel 15,465</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">最大差异化机会</div>
+          <div class="kpi-value">Veloce / Core / Marine 均无 SGS 认证<br>→ 凤凰 SGS + 三标 = 唯一卖点</div>
+        </div>
+        <div class="kpi gap">
+          <div class="kpi-label">价格锚点机会</div>
+          <div class="kpi-value" id="bd-anchor">⏳ 加载中…</div>
+        </div>
       </div>
     </div>
 
+    
+<div class="section dark">
+      <h2><span class="flag" style="color:#5eead4">🏪</span>BD 本土 MTB 独立站档案 <small style="color:#aaa;font-weight:400">· 2026-06-15 验证</small></h2>
+      <div class="alert" style="background:rgba(94,234,212,.08);border-left-color:#5eead4;color:#fff">
+        <strong style="color:#5eead4">🏪 Dream Cycle (dreamcycle.store)</strong> · <span style="color:#aaa;font-size:11px">真 BD 本土多品牌零售平台 · WordPress + WooCommerce</span>
+        <ul class="tight">
+          <li><strong style="color:#5eead4">在售品牌 19 个</strong>：自有 Polloux / Uctocifu + 经销 Duranta / Veloce / <b>Phoenix</b> / Foxter / Hero / Warrior / Avon / Core / Pacific / Uplayed / 71 Warrior / Rockrider / Duronto / Polloux / Python 等</li>
+          <li><strong style="color:#5eead4">价格段 9,800-14,000 BDT</strong>（USD ~85-120），共 20 SKU 已抓全</li>
+          <li><strong style="color:#5eead4">Phoenix 4 SKU 在售</strong>：Donald (Non gear) 12,300 / Miracle 13,000 (OOS) / Donald v2 13,500 / Tornado 24 inch 13,700</li>
+          <li><strong style="color:#5eead4">社媒</strong>：FB/IG/YT @dreamcyclestore · TK @dreamcyclestorebd · 达卡 01721-638523</li>
+        </ul>
+        <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(94,234,212,.3)">
+          <strong style="color:#5eead4">🎯 战略含义：</strong>
+          <ol class="tight">
+            <li>凤凰 <b>真实价位 12,300-13,700 BDT</b>，与 Duranta Knight 11,700 / Foxter Buzz-1 13,300 / Veloce 12,000 属同档 = <b>中端红海</b></li>
+            <li>Dream Cycle 卖所有品牌 = <b>凤凰无法独占品类</b> → DTC 独立站是品牌叙事唯一出路</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="section">
+      <h2><span class="flag">📰</span>孟加拉市场动态 <small style="color:#999;font-weight:400">（Sogou 搜索 · 每日）</small></h2>
+      <div id="news" class="price-grid" style="grid-template-columns:1fr"></div>
+    </div>
+
+    
     <div class="footer">
       数据来源：Daraz BD / dreamcycle.store / serbasepeda.com / dashboard_metrics 单一数据源<br />
       本页面为 Phoenix-Live Tab #1（静态总览，可直接编辑 HTML 迭代）· 每日 9:00 自动更新
@@ -320,6 +377,49 @@
 
   load();
 </script>
-<script src="../render_quality_gate.js"></script>
+<script src="../render_quality_gate.js">
+
+    // === 4 价格段 tier 计算 + 新闻填充（从 market.html 合并）===
+    (function () {
+      if (typeof data === 'undefined' || !data) return;
+      const bdPool = ((data.bd && data.bd.price_pool) || []).filter(it => (it.price||0) > 0 && (it.brand||'').toLowerCase() !== 'generic');
+      const totalSku = bdPool.length;
+      const totalEl = document.getElementById('bd-pool-total-2');
+      if (totalEl) totalEl.textContent = totalSku;
+      const TIERS2 = [
+        { id: 't1', lo: 0, hi: 10000 }, { id: 't2', lo: 10000, hi: 15000 },
+        { id: 't3', lo: 15000, hi: 25000 }, { id: 't4', lo: 25000, hi: 1e9 }
+      ];
+      for (const t of TIERS2) {
+        const tier = bdPool.filter(it => it.price >= t.lo && it.price < t.hi);
+        const elCount = document.getElementById(t.id + '-count');
+        const elPrices = document.getElementById(t.id + '-prices');
+        const elBrands = document.getElementById(t.id + '-brands');
+        if (elCount) elCount.textContent = tier.length + ' SKU';
+        if (elPrices) {
+          if (tier.length) {
+            const avg = Math.round(tier.reduce((s,it)=>s+it.price,0)/tier.length);
+            const mn = Math.min(...tier.map(it=>it.price));
+            const mx = Math.max(...tier.map(it=>it.price));
+            elPrices.textContent = `均价 ${avg.toLocaleString()} BDT · ${mn.toLocaleString()}-${mx.toLocaleString()}`;
+          } else { elPrices.textContent = '— BDT'; }
+        }
+        if (elBrands) {
+          const brands = [...new Set(tier.map(it => it.brand).filter(Boolean))];
+          elBrands.innerHTML = brands.length ? brands.slice(0,4).map(b => `<b>${b}</b>`).join(' / ') : '—';
+        }
+      }
+      // 新闻填充
+      const newsEl = document.getElementById('news');
+      if (newsEl && data.bd && data.bd.news) {
+        newsEl.innerHTML = data.bd.news.slice(0,9).map(n => `
+          <div style="padding:8px;background:rgba(255,255,255,.04);border-radius:4px;font-size:11px;line-height:1.5">
+            <b>${esc(n.title || '')}</b><br>
+            <span style="color:#94a3b8">${esc((n.source || '') + ' · ' + (n.date || ''))}</span>
+          </div>
+        `).join('') || '<div style="color:#94a3b8">暂无新闻</div>';
+      }
+    })();
+  </script>
 </body>
 </html>
