@@ -1173,7 +1173,7 @@ function renderMarketCapacity(elId, DATA, region) {
 
   } else {
 
-    const idId25mPlus = id.filter(x => x.price >= 25e6).length;
+    const idId25mPlus = (DATA.id && DATA.id.price_pool || []).filter(x => (x.price||0) >= 25e6).length;
     const id7to15 = idInfo.count || 0;
     const id7to15Brands = (idInfo.brands || []).join(' / ') || '本土品牌';
     insight = `<div style="margin-top:10px;padding:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#1b5e20">
