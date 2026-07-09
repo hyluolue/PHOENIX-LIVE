@@ -8,7 +8,7 @@
     "shopee_id": "ok (39 SKU from user-saved HTML, scraped 2026-07-07)",
     "tokopedia": "ok (39 SKU from user-saved HTML, scraped 2026-07-07)",
     "daraz_bd_reviews": "ok",
-    "dreamcycle": "fail",
+    "dreamcycle": "ok (snapshot merged: 116 SKU from data/dreamcycle_bicycle_snapshot.json)",
     "apify_social": "fail",
     "dreamcycle_vpn": "ok (116 from HTML snapshot, manual save, scraped 2026-07-07)",
     "serbasepeda": "ok"
@@ -828,6 +828,1036 @@
         "is_new": true,
         "scraped_at": "2026-07-09T09:38:28+08:00",
         "note": "BDT 26,999"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 16000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-oscar-2/",
+        "is_new": true,
+        "note": "BDT 16,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 16500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-500-price-in-bangladesh/",
+        "is_new": true,
+        "note": "BDT 16,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 16700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-slayer-1-0-2023/",
+        "is_new": true,
+        "note": "BDT 16,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 16700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uplayed-race-3-0/",
+        "is_new": true,
+        "note": "BDT 16,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-300/",
+        "is_new": true,
+        "note": "BDT 17,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-duster-c/",
+        "is_new": true,
+        "note": "BDT 17,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17300,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2602l/",
+        "is_new": true,
+        "note": "BDT 17,300 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-300-2/",
+        "is_new": true,
+        "note": "BDT 17,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-gold-100/",
+        "is_new": true,
+        "note": "BDT 17,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Warrior",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 17700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/warrior-2-0/",
+        "is_new": true,
+        "note": "BDT 17,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 18000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-legion-10/",
+        "is_new": true,
+        "note": "BDT 18,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 18000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-harod01/",
+        "is_new": true,
+        "note": "BDT 18,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Seventy",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 18500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-3-0/",
+        "is_new": true,
+        "note": "BDT 18,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uplayed-jordan/",
+        "is_new": true,
+        "note": "BDT 19,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Avon",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/avon-xt-26/",
+        "is_new": true,
+        "note": "BDT 19,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-gold-400/",
+        "is_new": true,
+        "note": "BDT 19,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-stunt-prodigy/",
+        "is_new": true,
+        "note": "BDT 19,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-gold-600/",
+        "is_new": true,
+        "note": "BDT 19,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Ghost",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/ghost-asx-5900/",
+        "is_new": true,
+        "note": "BDT 19,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 19700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-oscar-3/",
+        "is_new": true,
+        "note": "BDT 19,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Forever",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/forever-pearl/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-thruster-v1/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Falcon",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/falcon-thunderbird-27-5/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-600-a/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-nuclear-400/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-oscar-4/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Avon",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/avon-xt-27-5/",
+        "is_new": true,
+        "note": "BDT 20,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 20500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-legion-20-2/",
+        "is_new": true,
+        "note": "BDT 20,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 21000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-600-price-in-bd/",
+        "is_new": true,
+        "note": "BDT 21,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Falcon",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 21000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/falcon-thunderbird2026/",
+        "is_new": true,
+        "note": "BDT 21,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Mezarott",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 22000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/mezarott-29-inch-cycle/",
+        "is_new": true,
+        "note": "BDT 22,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-ride-seeker-h3/",
+        "is_new": true,
+        "note": "BDT 23,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-legion-30-2/",
+        "is_new": true,
+        "note": "BDT 23,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uplayed-pro/",
+        "is_new": true,
+        "note": "BDT 23,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 30500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-stunt-ultimate-2/",
+        "is_new": true,
+        "note": "BDT 30,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 32000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-%e0%a6%ae%e0%a6%be%e0%a6%89%e0%a6%a8%e0%a7%8d%e0%a6%9f%e0%a7%87%e0%a6%a8-%e0%a6%ac%e0%a6%be%e0%a6%87%e0%a6%95-%e0%a6%b6%e0%a6%95%e0%a7%8d%e0%a6%a4%e0%a6%bf%e0%a6%b6%e0%a6%be/",
+        "is_new": true,
+        "note": "BDT 32,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Ceres",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 32000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/ceres-suv-2/",
+        "is_new": true,
+        "note": "BDT 32,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 32000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-800/",
+        "is_new": true,
+        "note": "BDT 32,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 32500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-legacy/",
+        "is_new": true,
+        "note": "BDT 32,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 35000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-2602/",
+        "is_new": true,
+        "note": "BDT 35,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 36000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-6502/",
+        "is_new": true,
+        "note": "BDT 36,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Ceres",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 37000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/ceres-ht2-hybrid/",
+        "is_new": true,
+        "note": "BDT 37,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 38000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen3-2025/",
+        "is_new": true,
+        "note": "BDT 38,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Magpy",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 38000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/magpy-stunt-cycle/",
+        "is_new": true,
+        "note": "BDT 38,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 40000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-xc-403-price/",
+        "is_new": true,
+        "note": "BDT 40,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 42000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-xc501/",
+        "is_new": true,
+        "note": "BDT 42,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 45000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen-4-2026/",
+        "is_new": true,
+        "note": "BDT 45,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 65000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-xc-404-price/",
+        "is_new": true,
+        "note": "BDT 65,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Polloux",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 9800,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/polloux-20-inch-cycle/",
+        "is_new": true,
+        "note": "BDT 9,800 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Duranta",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 11700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/duranta-knight/",
+        "is_new": true,
+        "note": "BDT 11,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Hero",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/hero-road-bikenon-gear/",
+        "is_new": true,
+        "note": "BDT 12,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Uctocifu",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uctocifunon-gear/",
+        "is_new": true,
+        "note": "BDT 12,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-non-gear/",
+        "is_new": true,
+        "note": "BDT 12,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12300,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-20-inch/",
+        "is_new": true,
+        "note": "BDT 12,300 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Uplayed",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/uplayed-20-inch/",
+        "is_new": true,
+        "note": "BDT 12,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-page-20-inch/",
+        "is_new": true,
+        "note": "BDT 12,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Hero",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 12500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/hero-mtb-20-inch/",
+        "is_new": true,
+        "note": "BDT 12,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-miracle/",
+        "is_new": true,
+        "note": "BDT 13,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Avon",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/avon-non-gear/",
+        "is_new": true,
+        "note": "BDT 13,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-gio-100/",
+        "is_new": true,
+        "note": "BDT 13,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13300,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1-non-gear/",
+        "is_new": true,
+        "note": "BDT 13,300 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-donald-non-gear-2/",
+        "is_new": true,
+        "note": "BDT 13,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Python",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/python/",
+        "is_new": true,
+        "note": "BDT 13,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-1non-gear2026/",
+        "is_new": true,
+        "note": "BDT 13,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-junior-24-inch/",
+        "is_new": true,
+        "note": "BDT 13,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 13700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-tornado-24-inch/",
+        "is_new": true,
+        "note": "BDT 13,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-stunt-machine/",
+        "is_new": true,
+        "note": "BDT 23,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-oscar-5/",
+        "is_new": true,
+        "note": "BDT 23,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 23700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-platinum-200/",
+        "is_new": true,
+        "note": "BDT 23,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Mustang",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 24000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/mustang-1700/",
+        "is_new": true,
+        "note": "BDT 24,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 24000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2603/",
+        "is_new": true,
+        "note": "BDT 24,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 24500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-stunt-elite-2/",
+        "is_new": true,
+        "note": "BDT 24,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 25000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-xc-401-price/",
+        "is_new": true,
+        "note": "BDT 25,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 25500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-6503/",
+        "is_new": true,
+        "note": "BDT 25,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 26000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-duke-2025/",
+        "is_new": true,
+        "note": "BDT 26,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 27000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-700/",
+        "is_new": true,
+        "note": "BDT 27,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 27000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-duke-pro/",
+        "is_new": true,
+        "note": "BDT 27,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Kiesel",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 27000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/kiesel-naxos-10/",
+        "is_new": true,
+        "note": "BDT 27,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 27700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-lanster/",
+        "is_new": true,
+        "note": "BDT 27,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 28000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-pro-gen2/",
+        "is_new": true,
+        "note": "BDT 28,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 28500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-project-3-0/",
+        "is_new": true,
+        "note": "BDT 28,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 28500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-2601/",
+        "is_new": true,
+        "note": "BDT 28,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 30000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-shadow-pro-6501/",
+        "is_new": true,
+        "note": "BDT 30,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 30000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-mention-4x/",
+        "is_new": true,
+        "note": "BDT 30,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Seventy",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-1-0/",
+        "is_new": true,
+        "note": "BDT 14,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Rockrider",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/rockrider-m8-folding/",
+        "is_new": true,
+        "note": "BDT 14,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Duronto",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/duronto-sturn/",
+        "is_new": true,
+        "note": "BDT 14,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Seventy",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/seventy-one-warrior-2-0/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Adder",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/adder-perfect/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Hero",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/2854/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-gio-300/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-fire-eagle/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Pollux",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/pollux-24-inch/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Ghost",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/ghost-pro/",
+        "is_new": true,
+        "note": "BDT 14,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Foxter",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 14700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/foxter-buzz-3/",
+        "is_new": true,
+        "note": "BDT 14,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-100/",
+        "is_new": true,
+        "note": "BDT 15,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Hero",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/hero-hunk-999/",
+        "is_new": true,
+        "note": "BDT 15,000 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15100,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-2601l/",
+        "is_new": true,
+        "note": "BDT 15,100 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15300,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-raptor-sport-6501/",
+        "is_new": true,
+        "note": "BDT 15,300 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Core",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15500,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/core-nio-400/",
+        "is_new": true,
+        "note": "BDT 15,500 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15700,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/phoenix-duster-a/",
+        "is_new": true,
+        "note": "BDT 15,700 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Marine",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 15800,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/marine-gold/",
+        "is_new": true,
+        "note": "BDT 15,800 (dreamcycle.store snapshot)"
+      },
+      {
+        "brand": "Veloce",
+        "model": "",
+        "platform": "dreamcycle.store",
+        "price": 16000,
+        "currency": "BDT",
+        "url": "https://www.dreamcycle.store/shop/veloce-stunt-prodigy-2/",
+        "is_new": true,
+        "note": "BDT 16,000 (dreamcycle.store snapshot)"
       }
     ],
     "price_tracker": [],
@@ -4568,10 +5598,10 @@
   "dashboard_metrics": {
     "computed_at": "2026-07-09T09:49:29+08:00",
     "totals": {
-      "bd_pool_total": 74,
-      "bd_pool_priced": 74,
-      "bd_pool_mid_high": 25,
-      "bd_pool_brands": 8,
+      "bd_pool_total": 177,
+      "bd_pool_priced": 177,
+      "bd_pool_mid_high": 143,
+      "bd_pool_brands": 28,
       "id_pool_total": 141,
       "id_pool_brands": 35,
       "phx_bd_total": 12,
@@ -4582,55 +5612,97 @@
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 11,
-        "brands_count": 2,
+        "count": 18,
+        "brands_count": 3,
         "brands": {
           "Duranta": 10,
-          "Phoenix": 1
+          "Phoenix": 7,
+          "Polloux": 1
         },
         "top_5_brands": [
           "Duranta",
-          "Phoenix"
+          "Phoenix",
+          "Polloux"
         ]
       },
       "bd_10_15k": {
-        "count": 5,
-        "brands_count": 4,
+        "count": 36,
+        "brands_count": 18,
         "brands": {
-          "Phoenix": 2,
-          "Veloce": 1,
-          "Duranta": 1,
-          "Warrior": 1
+          "Phoenix": 8,
+          "Veloce": 4,
+          "Duranta": 2,
+          "Warrior": 1,
+          "Hero": 3,
+          "Uctocifu": 1,
+          "Uplayed": 1,
+          "Marine": 2,
+          "Avon": 1,
+          "Core": 2,
+          "Foxter": 3,
+          "Python": 1,
+          "Seventy": 2,
+          "Rockrider": 1,
+          "Duronto": 1,
+          "Adder": 1,
+          "Pollux": 1,
+          "Ghost": 1
         },
         "top_5_brands": [
           "Phoenix",
           "Veloce",
-          "Duranta",
-          "Warrior"
+          "Hero",
+          "Foxter",
+          "Duranta"
         ]
       },
       "bd_15_25k": {
-        "count": 8,
-        "brands_count": 3,
+        "count": 62,
+        "brands_count": 17,
         "brands": {
-          "Marine": 6,
+          "Marine": 13,
+          "Foxter": 9,
+          "Veloce": 12,
           "Duranta": 1,
-          "Warrior": 1
+          "Warrior": 2,
+          "Core": 7,
+          "Uplayed": 3,
+          "Phoenix": 3,
+          "Seventy": 1,
+          "Avon": 2,
+          "Ghost": 1,
+          "Forever": 1,
+          "Rockrider": 2,
+          "Falcon": 2,
+          "Mezarott": 1,
+          "Mustang": 1,
+          "Hero": 1
         },
         "top_5_brands": [
           "Marine",
-          "Duranta",
-          "Warrior"
+          "Veloce",
+          "Foxter",
+          "Core",
+          "Uplayed"
         ]
       },
       "bd_gt_25k": {
-        "count": 1,
-        "brands_count": 1,
+        "count": 27,
+        "brands_count": 6,
         "brands": {
-          "Rockrider": 1
+          "Rockrider": 11,
+          "Veloce": 7,
+          "Ceres": 2,
+          "Core": 5,
+          "Magpy": 1,
+          "Kiesel": 1
         },
         "top_5_brands": [
-          "Rockrider"
+          "Rockrider",
+          "Veloce",
+          "Core",
+          "Ceres",
+          "Magpy"
         ]
       }
     },
