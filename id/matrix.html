@@ -213,8 +213,10 @@ const EXCLUDED = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','
 function isMidHigh(it) {
   if ((it.brand||'').toLowerCase() === 'generic') return false;
   const p = it.price || 0;
-  if (p < 5000 || p > 30000) return false;
+  // ID 价段：Rp 1M - 30M（IDR 1,000,000 - 30,000,000）+ 跳过童车/折叠车（V2.6.1 不参与）
+  if (p < 1e6 || p > 3e7) return false;
   const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
+  // V2.6.1 ID 跳过品类：童车 + 大规模折叠车（保留 1 SKU 折叠试水）
   return !EXCLUDED.some(kw => m.includes(kw));
 }
 function catOf(it) {
@@ -228,7 +230,7 @@ function catOf(it) {
 async function load() {
   const r = await fetch('../data/latest.json', {cache: 'no-store'});
   const data = await r.json();
-  const all = (data.bd && data.bd.price_pool || []).filter(isMidHigh);
+  const all = (data.id && data.id.price_pool || []).filter(isMidHigh);
   // 4 品类
   const cats = ['road', 'hybrid', 'gravel', 'mtb'];
   // 17 品牌（按 SKU 数倒序，Phoenix 优先）
@@ -267,8 +269,8 @@ async function load() {
 
   // V2.6.1 ID 三蓝海品类真空 JS（已废弃 gap-15-25/gap-25-plus/gap-id-6-10/gap-cat）
   // 数据从 dashboard_metrics.id_7_15m + id.price_pool 读取
-  const idAllPool = (allData.id && allData.id.price_pool || []).filter(it => (it.price || 0) > 0);
-  const id715 = (allData.dashboard_metrics && allData.dashboard_metrics.id_7_15m) || {};
+  const idAllPool = (data.id && data.id.price_pool || []).filter(it => (it.price || 0) > 0);
+  const id715 = (data.dashboard_metrics && data.dashboard_metrics.id_7_15m) || {};
 
   // 公路车 12-15M 真空
   const idRoad1215 = idAllPool.filter(it => {
@@ -322,9 +324,9 @@ async function load() {
   const phxTotal = rankings.length;
 
   let diag = '<div class="kpi-grid">';
-  diag += '<div class="kpi"><div class="kpi-label">Phoenix SKU 数</div><div class="kpi-value">' + phx.length + ' SKU<br><small>SKU 排序 #' + (rankings.filter(m=>m.sku_count > phx.length).length + 1) + ' · 加权得分 #' + phxPos + '/' + phxTotal + '</small></div></div>';
-  diag += '<div class="kpi"><div class="kpi-label">价段</div><div class="kpi-value">' + (phxPrice.length?Math.min(...phxPrice).toLocaleString() + ' - ' + Math.max(...phxPrice).toLocaleString():'-') + ' BDT<br><small>均价 ' + phxAvg.toLocaleString() + ' BDT</small></div></div>';
-  diag += '<div class="kpi"><div class="kpi-label">品类分布</div><div class="kpi-value">⛰️ MTB × ' + phxCat.mtb + ' · 🚲 Hybrid × ' + phxCat.hybrid + '<br>🚴 公路 × ' + phxCat.road + ' · 🛤️ Gravel × ' + phxCat.gravel + '</div></div>';
+  diag += '<div class="kpi"><div class="kpi-label">Phoenix ID SKU 数</div><div class="kpi-value">' + phx.length + ' SKU<br><small>ID 真实入场 · 蓝海品类集中度 #' + phxPos + '/' + phxTotal + '</small></div></div>';
+  diag += '<div class="kpi"><div class="kpi-label">价段 (IDR)</div><div class="kpi-value">' + (phxPrice.length?Math.min(...phxPrice).toLocaleString() + ' - ' + Math.max(...phxPrice).toLocaleString():'-') + ' IDR<br><small>均价 ' + phxAvg.toLocaleString() + ' IDR（V2.6.1 三蓝海）</small></div></div>';
+  diag += '<div class="kpi"><div class="kpi-label">品类分布（ID V2.6.1）</div><div class="kpi-value">🚴 公路 × ' + phxCat.road + ' · 🚲 平把 × ' + phxCat.hybrid + '<br>🛤️ Gravel × ' + phxCat.gravel + ' · ⛰️ MTB × ' + phxCat.mtb + '</div></div>';
   if (phxM) {
     diag += '<div class="kpi gap"><div class="kpi-label">加权得分</div><div class="kpi-value">' + phxM.score + ' 分<br><small>' + phxM.high_tier_pct + '% 高端 · ' + phxM.in_stock_rate + '% 有货</small></div></div>';
   }
