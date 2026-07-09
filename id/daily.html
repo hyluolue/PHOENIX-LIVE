@@ -10,7 +10,7 @@
 
 <title>市场日报 · 凤凰自行车中高端MTB全球作战室</title>
 
-<link rel="stylesheet" href="./shared.css">
+<link rel="stylesheet" href="../shared.css">
 
 <style>
 
@@ -482,7 +482,7 @@ h1{font-size:22px;font-weight:800}
 
 <script>
 
-const DATA_URL = './data/latest.json';
+const DATA_URL = '../data/latest.json';
 
 const HISTORY_URL = './data/history.json';
 
@@ -1292,7 +1292,7 @@ loadAll().then(async () => {
 
   try {
 
-    const r = await fetch('./data/latest.json', {cache:'no-store'});
+    const r = await fetch('../data/latest.json', {cache:'no-store'});
 
     const data = await r.json();
 
@@ -1308,7 +1308,7 @@ setInterval(loadAll, 60_000);
 
 
 
-<script src="./render_quality_gate.js"></script>
+<script src="../render_quality_gate.js"></script>
 
 </body>
 
@@ -1324,3 +1324,5 @@ setInterval(loadAll, 60_000);
 <!-- force-deploy-134559 -->
 
 <!-- force-deploy-135955 -->
+
+<!-- force-deploy-142557 -->
