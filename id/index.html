@@ -64,6 +64,119 @@
     .insight .hl{color:#c8102e}
     ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+  
+    .price-tier{display:grid;gap:10px;margin:10px 0}
+    .tier{background:rgba(255,255,255,.04);padding:10px;border-left:3px solid #94a3b8;border-radius:4px}
+    .tier-1{border-left-color:#94a3b8}.tier-2{border-left-color:#fbbf24}.tier-3{border-left-color:#22c55e}.tier-4{border-left-color:#c8102e}
+    .tier-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;color:#fff;font-weight:700}
+    .tier-name{font-size:13px}.tier-count{font-size:11px;color:#aaa;font-weight:400}
+    .tier-prices{font-size:11px;color:#cbd5e1;margin-bottom:4px}
+    .tier-brands{font-size:11px;color:#94a3b8}
+    .tier-brands b{color:#fbbf24}
+    .section.dark{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff}
+    .section.dark .insight{background:rgba(94,234,212,.05);border-left-color:#5eead4;color:#cbd5e1}
+    .alert{padding:12px;background:rgba(255,255,255,.04);border-left:3px solid;border-radius:4px;margin:10px 0;font-size:12px;line-height:1.6}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 市场切换器 -->
+<div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(46,125,50,.08);border-radius:8px">
+  <strong style="margin-right:8px;color:#94a3b8">🌐 市场：</strong>
+  <a href="../index.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;text-decoration:none">📊 双市场总览</a>
+  <a href="../bd/index.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;text-decoration:none">🇧🇩 BD 孟加拉 →</a>
+  <a href="./index.html" style="padding:4px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-weight:600;text-decoration:none">🇮🇩 ID 印尼</a>
+</div>
+
+<div class="header">
+      <div class="logo">P</div>
+      <div>
+        <h1>🇮🇩 Phoenix-Live · ID 印尼作战室</h1>
+        <div class="subtitle">ID 印尼单市场版 · <span id="date"></span> · 每日 9:00 自动更新</div>
+      </div>
+      <div class="nav">
+        <a href="./daily.html">📅 市场日报</a>
+        <a href="./competitive.html">🏆 竞品监控</a>
+        <a href="./matrix.html">💎 产品矩阵</a>
+        <a href="./market.html">🇮🇩 印尼</a>
+        <a href="./tasks.html">🎯 任务 OKR</a>
+        <a href="./dtc.html">💬 DTC 差评</a>
+        <a href="./strategy.html">🧠 策略迭代</a>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
+      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
+      <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
+      <span id="status-apify" class="pill pill-fail">⏳ apify_social</span>
+      <span class="last-updated" id="updated">—</span>
+      <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
+    </div>
+
+    <div class="section" id="id-market-overview"> <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>phoenix-live · 总览</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
+    a{color:#9ec5fe;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto}
+    .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
+    h1{font-size:22px;font-weight:800}
+    .subtitle{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
+    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
+    .status-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px;align-items:center}
+    .pill{padding:4px 10px;border-radius:999px;font-weight:600}
+    .pill-ok{background:#1b5e20;color:#a5d6a7}
+    .pill-partial{background:#e65100;color:#ffcc80}
+    .pill-fail{background:#b71c1c;color:#ffcdd2}
+    .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
+    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
+    .refresh-btn:hover{background:#1976d2}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
+    .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section h2 .flag{font-size:18px}
+    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
+    .section.dark h2{color:#c8102e}
+    .section.dark .kpi{background:rgba(255,255,255,.05);color:#fff;border-left-color:#5eead4}
+    .section.dark .kpi-label{color:#5eead4}
+    .section.dark .kpi-value{color:#fff}
+    /* dark section 内的 gap/accent kpi 改深色背景 + 浅色字（避免黑底黑字）*/
+    .section.dark .kpi.gap{background:rgba(230,81,0,.15);border-left-color:#ff9800;color:#fff}
+    .section.dark .kpi.gap .kpi-label{color:#ffb74d}
+    .section.dark .kpi.gap .kpi-value{color:#ffcc80}
+    .section.dark .kpi.accent{background:rgba(200,16,46,.2);border-left-color:#ff5252;color:#fff}
+    .section.dark .kpi.accent .kpi-label{color:#ff8a80}
+    .section.dark .kpi.accent .kpi-value{color:#ffcdd2}
+    .section.dark .kpi.dynamic{background:rgba(46,125,50,.2);border-left-color:#66bb6a;color:#fff}
+    .section.dark .kpi.dynamic .kpi-label{color:#a5d6a7}
+    .section.dark .kpi.dynamic .kpi-value{color:#c8e6c9}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .kpi{background:#e3f2fd;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
+    .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+    .kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
+    .kpi.dynamic{border-left-color:#2e7d32;background:#e8f5e9}
+    .kpi.dynamic .kpi-label{color:#2e7d32}
+    .kpi.dynamic .kpi-value{color:#1b5e20}
+    .kpi.gap{background:#fff3e0;border-left-color:#e65100}
+    .kpi.gap .kpi-label{color:#e65100}
+    .kpi.gap .kpi-value{color:#bf360c}
+    .kpi.accent{background:rgba(200,16,46,.08);border-left-color:#c8102e}
+    .kpi.accent .kpi-label{color:#c8102e}
+    .kpi.accent .kpi-value{color:#c8102e}
+    .kpi-value small{font-weight:400;color:#888;display:block;margin-top:2px}
+    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
+    .insight b{color:#5eead4}
+    .insight .gap{color:#5eead4}
+    .insight .hl{color:#c8102e}
+    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
   </style>
 </head>
 <body>
@@ -203,45 +316,7 @@
       </div>
     </div>
 
-    <div class="section">
-      <h2><span class="flag">🎯</span>Tab 路由快速跳转</h2>
-      <div class="kpi-grid">
-        <a class="kpi" href="./market.html" style="text-decoration:none">
-          <div class="kpi-label">🌐 BD 市场</div>
-          <div class="kpi-value" style="color:#1565c0"><a href="../bd/index.html" style="color:#1565c0">🇧🇩 孟加拉 BD 作战室 →</a></div>
-        </a>
-        <a class="kpi" href="./market.html" style="text-decoration:none">
-          <div class="kpi-label">🇮🇩 Tab #3</div>
-          <div class="kpi-value" style="color:#2e7d32">印尼 MTB 作战室 →</div>
-        </a>
-        <a class="kpi" href="./competitive.html" style="text-decoration:none">
-          <div class="kpi-label">📈 Tab #4</div>
-          <div class="kpi-value" style="color:#c8102e">竞品监控 + 品牌矩阵 →</div>
-        </a>
-        <a class="kpi" href="./matrix.html" style="text-decoration:none">
-          <div class="kpi-label">🧭 Tab #5</div>
-          <div class="kpi-value" style="color:#6a1b9a">产品矩阵 · 蓝海推论 →</div>
-        </a>
-        <a class="kpi" href="./tasks.html" style="text-decoration:none">
-          <div class="kpi-label">📋 Tab #6</div>
-          <div class="kpi-value" style="color:#00695c">任务清单 →</div>
-        </a>
-        <a class="kpi" href="./dtc.html" style="text-decoration:none">
-          <div class="kpi-label">🛒 Tab #7</div>
-          <div class="kpi-value" style="color:#5eead4">DTC 差评 + 社媒 →</div>
-        </a>
-        <a class="kpi" href="./daily.html" style="text-decoration:none">
-          <div class="kpi-label">📊 Tab #5</div>
-          <div class="kpi-value" style="color:#e65100">市场日报 7 板块 →</div>
-        </a>
-        <a class="kpi" href="./strategy.html" style="text-decoration:none">
-          <div class="kpi-label">🎯 Tab #8</div>
-          <div class="kpi-value" style="color:#9c27b0">战略迭代 V1/V2 →</div>
-        </a>
-      </div>
-    </div>
-
-    <div class="footer">
+<div class="footer">
       数据来源：Shopee ID / Tokopedia / serbasepeda.com / 客户保存 HTML 解析 / dashboard_metrics 单一数据源<br />
       本页面为 Phoenix-Live Tab #1（静态总览，可直接编辑 HTML 迭代）· 每日 9:00 自动更新
     </div>
@@ -384,3 +459,4 @@
 <script src="../render_quality_gate.js"></script>
 </body>
 </html>
+
