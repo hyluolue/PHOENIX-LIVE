@@ -584,7 +584,7 @@ function render() {
   const idBefore = id.length;
   id = id.filter(isMidHighAdult);
   if (idBefore !== id.length) {
-    console.log(\[V2.6.1] ID 真实数据: \ → \ SKU（剔除 \ 周边/折叠/童车）\);
+    console.log(`[V2.6.1] ID 真实数据: ${idBefore} → ${id.length} SKU（剔除 ${idBefore - id.length} 周边/折叠/童车）`);
   }
 
   const reviews = (DATA.bd && DATA.bd.dtc_reviews) || [];
@@ -645,7 +645,7 @@ function render() {
     document.getElementById('status-bar').innerHTML += ' <span class="pill fail">⚠️ ID 真实数据未并入 (等 cron 9:00/16:00 跑)</span>';
     DATA.fetch_status = DATA.fetch_status || {};
     DATA.fetch_status.serbasepeda = 'warn (V2.6.1 ID 真实数据 141 SKU 应已并入, 当前为空 - 检查 cron)';
-  }}
+  }
 
 
 
@@ -925,9 +925,9 @@ function renderOpportunities(bd, id, reviews, social) {
 
       if ((band.includes('40K') || band.includes('25-40K')) && count > 0 && count < densest[1] / 4) {
 
-        const items = bd.filter(p => {
+        const items = bd.filter(it => {
 
-          const p = p.price || 0;
+          const p = (it.price || 0);
 
           if (band.includes('40K')) return p >= 40000;
 
@@ -1316,3 +1316,5 @@ setInterval(loadAll, 60_000);
 
 
 <!-- force-deploy-113600 -->
+
+<!-- force-deploy-114945 -->
