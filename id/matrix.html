@@ -303,11 +303,8 @@ async function load() {
   document.getElementById('gap-skip-cat').innerHTML =
     '<b>MTB / 折叠车 / 童车</b><br>客户已有供应商 + 4% 毛利红海<br><span style="color:#c8102e">V2.6.1 永久跳过（即使真空也不进）</span><br>= 火力集中三蓝海品类 15 SKU';
 
-  // 兼容 HTML 中其他元素（gap-15-25 / gap-25-plus / gap-id-6-10 / gap-cat / phoenix-diag）保留不动
-  document.getElementById('gap-15-25').textContent = '（本字段为 BD 专属；ID 已用 V2.6.1 gap-road-12-15 替代）';
-  document.getElementById('gap-25-plus').textContent = '（本字段为 BD 专属）';
-  document.getElementById('gap-id-6-10').textContent = '（已重定向到 V2.6.1 三蓝海品类）';
-  document.getElementById('gap-cat').textContent = '（已重定向到 V2.6.1 三蓝海品类）';
+  // 兼容 HTML 中旧元素（gap-15-25/25-plus/id-6-10/cat）的兼容 placeholder 已删除（HTML 已重写为 V2.6.1）
+  // 空 hop 直接进入 Phoenix 诊断
 
   // === 3. Phoenix 诊断 ===
   const phx = all.filter(it => (it.brand||'').toLowerCase() === 'phoenix');
