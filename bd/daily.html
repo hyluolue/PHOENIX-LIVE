@@ -108,6 +108,9 @@
 
     // BD 综合 KPI
     const phxBD = (data.bd && data.bd.price_pool || []).filter(it => (it.brand||'').toLowerCase() === 'phoenix');
+    // ID Rp 25M+ 高端 SKU 数（仅统计 — 用于洞察）
+    const idPool25 = (data.id && data.id.price_pool) || [];
+    const id25m = idPool25.filter(it => (it.price||0) >= 25e6).length;
     inject('bd-pool', totals.bd_pool_total || 0);
     inject('bd-brands', totals.bd_pool_brands || 0);
     inject('bd-25k-count', phxGap.gt_25k_count || 0);
