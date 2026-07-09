@@ -227,6 +227,31 @@ function catOf(it) {
   return 'mtb';
 }
 
+const KNOWN_BRANDS = [["Phoenix", "Marine", "Veloce", "Giant", "Polygon", "Core", "Pacific", "Duranta", "Foxter", "Be worth", "Warrior", "Thorne", "Element", "United", "Federal", "Wimcycle", "United Bike", "Rockrider", "Ceres", "Magpy", "Kiesel", "MEZAROTTI", "Forever", "Falcon", "Adder", "Avon", "Pollux", "Polloux", "Duronto", "Python", "Hero", "Trek", "Specialized", "Cannondale", "Scott", "Mustang", "Seventy One", "71 Warrior", "Maximo", "Police", "Twitter", "Evergreen", "TRINX", "Odessy", "Atlantis", "Exotic", "Seventy One", "Warrior 71", "BXT", "Magpy", "FNIX", "JAVA", "Triban", "Firefox", "BSA", "Mach City", "Velion", "CENTRUM", "Centrum", "Morison", "Axwil", "ZEFIRO", "RB"]];
+const BRAND_BLACKLIST = [["sepeda", "sepatu", "bicycle", "cycle", "bike", "bmx", "stunt", "fixie", "road", "roadbike", "mountain", "mtb", "gravel", "hybrid", "folding", "kid", "kids", "baby", "child", "spare", "part", "accessory", "gear", "komponen", "helmet", "lamp", "lock", "bottle", "pump", "sepeda statis", "orbitrack", "treadmill", "spinning", "edition", "official", "shop", "size", "speed", "shimano", "campagnolo", "new", "ori", "asli", "untuk", "dengan", "rem", "ban", "roda", "kirim", "limited", "special", "exclusive", "commuter", "JNE", "Sicepat", "【Anchi"]];
+function cleanBrand(it) {
+  const brand = it.brand || '';
+  const model = it.model || '';
+  // 1. brand 字段是真实品牌
+  for (const kb of KNOWN_BRANDS) {
+    if (kb.toLowerCase() === brand.toLowerCase()) return kb;
+  }
+  // 2. brand 在黑名单 (Sepeda/MTB/Road/Fixie 等通用词), 从 model 找真实品牌
+  const text = (model + ' ' + brand).toLowerCase();
+  const isBlacklisted = BRAND_BLACKLIST.some(b => text.includes(b.toLowerCase()));
+  if (isBlacklisted) {
+    // 长品牌优先匹配
+    const sorted = [...KNOWN_BRANDS].sort((a, b) => b.length - a.length);
+    for (const kb of sorted) {
+      if (text.includes(kb.toLowerCase())) return kb;
+    }
+    return 'Generic';
+  }
+  // 3. brand 字段不是黑名单 + 不在 KNOWN_BRANDS → 保留原值
+  return brand || 'Generic';
+}
+
+
 async function load() {
   const r = await fetch('../data/latest.json', {cache: 'no-store'});
   const data = await r.json();
@@ -234,8 +259,12 @@ async function load() {
   // 4 品类
   const cats = ['road', 'hybrid', 'gravel', 'mtb'];
   // 17 品牌（按 SKU 数倒序，Phoenix 优先）
+  // V2.6.1 品牌清洗: 过滤掉 Sepeda/MTB/Road/Fixie/RB/commuter 等通用词, 从 model 找真实品牌
   const brandCount = {};
-  all.forEach(it => { brandCount[it.brand] = (brandCount[it.brand] || 0) + 1; });
+  all.forEach(it => {
+    const b = cleanBrand(it);
+    brandCount[b] = (brandCount[b] || 0) + 1;
+  });
   const brands = Object.keys(brandCount)
     .sort((a, b) => {
       if (a === 'Phoenix') return -1;
@@ -245,7 +274,8 @@ async function load() {
   // 构建 heat[brand][cat] = count
   const heat = {};
   brands.forEach(b => heat[b] = {road:0,hybrid:0,gravel:0,mtb:0});
-  all.forEach(it => { heat[it.brand][catOf(it)]++; });
+  // V2.6.1 品牌清洗: heat key 也用 cleanBrand
+  all.forEach(it => { heat[cleanBrand(it)][catOf(it)]++; });
 
   // === 1. 热力图 ===
   const heatGrid = document.getElementById('heat-grid');
@@ -259,7 +289,7 @@ async function load() {
   let html = '<div class="heat-label"></div>';
   cats.forEach(c => html += '<div class="heat-label" style="text-align:center">' + (c==='road'?'🚴 公路':c==='hybrid'?'🚲 Hybrid':c==='gravel'?'🛤️ Gravel':'⛰️ MTB') + '</div>');
   brands.forEach(b => {
-    html += '<div class="heat-label">' + (b==='Phoenix'?'<b style="color:#c8102e">'+b+'</b>':b) + '</div>';
+    html += '<div class="heat-label">' + (b.toLowerCase()==='phoenix'?'<b style="color:#c8102e">'+b+'</b>':b) + '</div>';
     cats.forEach(c => {
       const n = heat[b][c];
       html += '<div class="heat-cell" style="background:' + colorFor(n) + '"><span class="cnt">' + n + '</span><span class="lbl">' + (n===0?'真空':n===1?'弱势':'中强') + '</span></div>';
