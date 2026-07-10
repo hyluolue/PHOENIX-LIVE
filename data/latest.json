@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-10T09:19:32+08:00",
+  "generated_at": "2026-07-10T09:21:07+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -16,92 +16,92 @@
   "bd": {
     "price_pool": [
       {
-        "brand": "Generic",
-        "model": "Mountain Bike Bicycle Side Kickstand Kick Stand Aluminium Alloy Adjustable Universal - Black",
+        "brand": "Duranta",
+        "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
         "platform": "Daraz BD (MTB 综合)",
-        "price": 290,
+        "price": 13035,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i215567769.html",
+        "url": "https://www.daraz.com.bd/products/21-spd-26-847248-i557085157.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 290"
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 13,035"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
+        "platform": "Daraz BD (MTB 综合)",
+        "price": 7820,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-spd-20-847515-i323852740.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 7,820"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
+        "platform": "Daraz BD (MTB 综合)",
+        "price": 9860,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-spd-mw-20-847793-i117316491.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 9,860"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
+        "platform": "Daraz BD (MTB 综合)",
+        "price": 6235,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-spd-mkb-r01-847544-i235446617.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 6,235"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+        "platform": "Daraz BD (MTB 综合)",
+        "price": 8500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 8,500"
+      },
+      {
+        "brand": "Marine",
+        "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+        "platform": "Daraz BD (MTB 综合)",
+        "price": 19000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i323810443.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 19,000"
       },
       {
         "brand": "Generic",
-        "model": "Mountain Bike Bicycle Side Kickstand Kick Stand Aluminium Alloy Adjustable Universal - Black",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
         "platform": "Daraz BD (MTB 综合)",
-        "price": 311,
+        "price": 14023,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i215349895.html",
+        "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 311"
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 14,023"
       },
       {
         "brand": "Generic",
-        "model": "2 BMX Mountain Bike Bicycle Axle Pedal Alloy Foot Stunt Pegs Anti-Slip Front Rear Axle-15mm",
+        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
         "platform": "Daraz BD (MTB 综合)",
-        "price": 270,
+        "price": 14444,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-bmx-axle-15mm-i209136019.html",
+        "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 270"
-      },
-      {
-        "brand": "Generic",
-        "model": "Bicycle Kick 2 Nath Stand For Mountain Bike 24\" 26\" - Black",
-        "platform": "Daraz BD (MTB 综合)",
-        "price": 145,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-24-26-i326764437.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 145"
-      },
-      {
-        "brand": "Generic",
-        "model": "Aluminum Alloy Mountain Bike Seatpost Clamp, Quick Release Cycling Seat Tube Clip",
-        "platform": "Daraz BD (MTB 综合)",
-        "price": 89,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i198300627.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 89"
-      },
-      {
-        "brand": "Generic",
-        "model": "160mm 6\" Disc Brake Rotor Mountain Bike Cycle 1pc",
-        "platform": "Daraz BD (MTB 综合)",
-        "price": 177,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/160mm-6-1-i211644012.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 177"
-      },
-      {
-        "brand": "Generic",
-        "model": "Aluminum Alloy Mountain Bike Seatpost Clamp, Quick Release Cycling Seat Tube Clip - Red",
-        "platform": "Daraz BD (MTB 综合)",
-        "price": 90,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i148790825.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 90"
-      },
-      {
-        "brand": "Generic",
-        "model": "2 Pcs Bicycle Disc Brake Pad/hydraulic Break Pad Mountain Bike and Bicycle Accessories",
-        "platform": "Daraz BD (MTB 综合)",
-        "price": 117,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/2-i202925348.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:40+08:00",
-        "note": "BDT 117"
+        "scraped_at": "2026-07-10T09:20:09+08:00",
+        "note": "BDT 14,444"
       },
       {
         "brand": "Phoenix",
@@ -111,7 +111,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202155027.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:21+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -122,7 +122,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-i323337459.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:21+08:00",
         "note": "BDT 7,999"
       },
       {
@@ -133,7 +133,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:21+08:00",
         "note": "BDT 10,000"
       },
       {
@@ -144,7 +144,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202148734.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:21+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -155,7 +155,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202142950.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:22+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -166,7 +166,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202143847.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:22+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -177,7 +177,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:22+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -188,7 +188,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-i202147734.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:46+08:00",
+        "scraped_at": "2026-07-10T09:20:22+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -199,7 +199,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:26+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -210,7 +210,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i561273686.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 17,000"
       },
       {
@@ -221,7 +221,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/200-26-i349289200.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 21,111"
       },
       {
@@ -232,7 +232,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-playtime-947409-i349121456.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 1,320"
       },
       {
@@ -243,7 +243,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 1,698"
       },
       {
@@ -254,7 +254,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i240846410.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 1,544"
       },
       {
@@ -265,7 +265,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1578112438.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 496"
       },
       {
@@ -276,85 +276,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:50+08:00",
+        "scraped_at": "2026-07-10T09:20:27+08:00",
         "note": "BDT 10,000"
-      },
-      {
-        "brand": "Generic",
-        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-        "platform": "Daraz BD (Giant)",
-        "price": 19999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573710743.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 19,999"
-      },
-      {
-        "brand": "Generic",
-        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-        "platform": "Daraz BD (Giant)",
-        "price": 22222,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573726158.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 22,222"
-      },
-      {
-        "brand": "Generic",
-        "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-        "platform": "Daraz BD (Giant)",
-        "price": 11499,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 11,499"
-      },
-      {
-        "brand": "Generic",
-        "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-        "platform": "Daraz BD (Giant)",
-        "price": 65000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/electric-foldable-bicycle-new-edition-lightweight-e-bike-with-battery-urban-commuter-vehicle-i432548081.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 65,000"
-      },
-      {
-        "brand": "Generic",
-        "model": "Captain Gypsy Bike with Remote",
-        "platform": "Daraz BD (Giant)",
-        "price": 7200,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i522880672.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 7,200"
-      },
-      {
-        "brand": "Generic",
-        "model": "electric bicycle with RGB wheel 26size",
-        "platform": "Daraz BD (Giant)",
-        "price": 44000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/rgb-26-i432932131.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 44,000"
-      },
-      {
-        "brand": "Generic",
-        "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-        "platform": "Daraz BD (Giant)",
-        "price": 48000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i254063487.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
-        "note": "BDT 48,000"
       },
       {
         "brand": "Generic",
@@ -364,8 +287,85 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/110-mtb-diy-i167216989.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:54+08:00",
+        "scraped_at": "2026-07-10T09:20:32+08:00",
         "note": "BDT 305"
+      },
+      {
+        "brand": "Generic",
+        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+        "platform": "Daraz BD (Giant)",
+        "price": 14444,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i319543531.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:32+08:00",
+        "note": "BDT 14,444"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle",
+        "platform": "Daraz BD (Giant)",
+        "price": 1150,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i1581451115.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:32+08:00",
+        "note": "BDT 1,150"
+      },
+      {
+        "brand": "Generic",
+        "model": "○699 -47%\nT/Capply\"\n5.5\nEnd in 3 days 10:21:01\nBaby Balance Bike My lst Scooter Ride-on\nCycle Learn ",
+        "platform": "Daraz BD (Giant)",
+        "price": 500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i529988543.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:32+08:00",
+        "note": "BDT 500"
+      },
+      {
+        "brand": "Warrior",
+        "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
+        "platform": "Daraz BD (Giant)",
+        "price": 14999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/71-20-21-26-i327937068.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:33+08:00",
+        "note": "BDT 14,999"
+      },
+      {
+        "brand": "Generic",
+        "model": "26\" Spaark Breeze 18speed gear bicycle steel body cycle  Cash On Delivery Available",
+        "platform": "Daraz BD (Giant)",
+        "price": 14333,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-spaark-18-i369355775.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:33+08:00",
+        "note": "BDT 14,333"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Electric Bike With Hub Motor & Digital Display E-Rider-101",
+        "platform": "Daraz BD (Giant)",
+        "price": 22222,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/e-rider-101-i344165569.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:33+08:00",
+        "note": "BDT 22,222"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta E-Rider-201 Battery inside the Frame & Honda Wheel Hub Motor",
+        "platform": "Daraz BD (Giant)",
+        "price": 22222,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/duranta-e-rider-201-i344171240.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:33+08:00",
+        "note": "BDT 22,222"
       },
       {
         "brand": "Generic",
@@ -375,19 +375,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/160mm-i543907570.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
+        "scraped_at": "2026-07-10T09:20:37+08:00",
         "note": "BDT 199"
-      },
-      {
-        "brand": "Generic",
-        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-        "platform": "Daraz BD (Polygon)",
-        "price": 14444,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i319543531.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
-        "note": "BDT 14,444"
       },
       {
         "brand": "Phoenix",
@@ -397,41 +386,41 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1582590324.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
+        "scraped_at": "2026-07-10T09:20:38+08:00",
         "note": "BDT 6,000"
       },
       {
-        "brand": "Marine",
-        "model": "Marine 26\" Gold 600 Bicycle",
+        "brand": "Generic",
+        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
         "platform": "Daraz BD (Polygon)",
-        "price": 17000,
+        "price": 14444,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i561273686.html",
+        "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
-        "note": "BDT 17,000"
+        "scraped_at": "2026-07-10T09:20:38+08:00",
+        "note": "BDT 14,444"
       },
       {
         "brand": "Generic",
-        "model": "Simulation Toy Bicycle Model Children's Mini Metal Car Single-Pole Finger Bicycle Ferry Black Color",
+        "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
         "platform": "Daraz BD (Polygon)",
-        "price": 1650,
+        "price": 1255,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i529143243.html",
+        "url": "https://www.daraz.com.bd/products/-i546953340.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
-        "note": "BDT 1,650"
+        "scraped_at": "2026-07-10T09:20:38+08:00",
+        "note": "BDT 1,255"
       },
       {
         "brand": "Generic",
-        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+        "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
         "platform": "Daraz BD (Polygon)",
-        "price": 19999,
+        "price": 1228,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573710743.html",
+        "url": "https://www.daraz.com.bd/products/-i546091737.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
-        "note": "BDT 19,999"
+        "scraped_at": "2026-07-10T09:20:38+08:00",
+        "note": "BDT 1,228"
       },
       {
         "brand": "Generic",
@@ -441,19 +430,30 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
+        "scraped_at": "2026-07-10T09:20:38+08:00",
         "note": "BDT 150"
       },
       {
         "brand": "Generic",
-        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+        "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
         "platform": "Daraz BD (Polygon)",
-        "price": 22222,
+        "price": 1261,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573726158.html",
+        "url": "https://www.daraz.com.bd/products/-i546192796.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:56:58+08:00",
-        "note": "BDT 22,222"
+        "scraped_at": "2026-07-10T09:20:38+08:00",
+        "note": "BDT 1,261"
+      },
+      {
+        "brand": "Marine",
+        "model": "Marine 26\" Gold 600 Bicycle",
+        "platform": "Daraz BD (Polygon)",
+        "price": 17000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i561273686.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:38+08:00",
+        "note": "BDT 17,000"
       },
       {
         "brand": "Marine",
@@ -463,7 +463,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -474,7 +474,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-veloce-slayer-10-6061-light-weight-alloy-i325128602.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 18,314"
       },
       {
@@ -485,7 +485,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i295351877.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 18,999"
       },
       {
@@ -496,7 +496,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/5-vt-l200-i169204627.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 950"
       },
       {
@@ -507,7 +507,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-i295351092.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 11,000"
       },
       {
@@ -518,30 +518,30 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/cyclace-150-i540122760.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
+        "scraped_at": "2026-07-10T09:20:43+08:00",
         "note": "BDT 25,900"
-      },
-      {
-        "brand": "Generic",
-        "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-        "platform": "Daraz BD (Veloce)",
-        "price": 14444,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i319543531.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
-        "note": "BDT 14,444"
       },
       {
         "brand": "Generic",
         "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
         "platform": "Daraz BD (Veloce)",
-        "price": 14023,
+        "price": 14999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
+        "url": "https://www.daraz.com.bd/products/26-21-i563105559.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:05+08:00",
-        "note": "BDT 14,023"
+        "scraped_at": "2026-07-10T09:20:43+08:00",
+        "note": "BDT 14,999"
+      },
+      {
+        "brand": "Generic",
+        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+        "platform": "Daraz BD (Veloce)",
+        "price": 14999,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/26-21-i567826374.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:43+08:00",
+        "note": "BDT 14,999"
       },
       {
         "brand": "Pacific",
@@ -551,7 +551,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/36-mtb-1-i276720408.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:08+08:00",
+        "scraped_at": "2026-07-10T09:20:47+08:00",
         "note": "BDT 1,209"
       },
       {
@@ -562,19 +562,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/helmet-and-bicycle-lock-fixed-password-steel-cable-anti-theft-security-lock-i328369971.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:08+08:00",
+        "scraped_at": "2026-07-10T09:20:47+08:00",
         "note": "BDT 230"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-        "platform": "Daraz BD (Duranta)",
-        "price": 8500,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
-        "note": "BDT 8,500"
       },
       {
         "brand": "Duranta",
@@ -584,7 +573,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-20-847515-i323852740.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 7,820"
       },
       {
@@ -595,8 +584,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mw-20-847793-i117316491.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 9,860"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+        "platform": "Daraz BD (Duranta)",
+        "price": 8500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:52+08:00",
+        "note": "BDT 8,500"
       },
       {
         "brand": "Duranta",
@@ -606,7 +606,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mkb-r01-847544-i235446617.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 6,235"
       },
       {
@@ -617,8 +617,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/21-spd-26-847248-i557085157.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 13,035"
+      },
+      {
+        "brand": "Generic",
+        "model": "high quality  fat bike E cycle 26×4",
+        "platform": "Daraz BD (Duranta)",
+        "price": 70000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/high-quality-fat-bike-e-cycle-264-i191868476.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:20:52+08:00",
+        "note": "BDT 70,000"
       },
       {
         "brand": "Duranta",
@@ -628,7 +639,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 8,748"
       },
       {
@@ -639,19 +650,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-i531253446.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
+        "scraped_at": "2026-07-10T09:20:52+08:00",
         "note": "BDT 15,500"
-      },
-      {
-        "brand": "Generic",
-        "model": "high quality  fat bike E cycle 26×4",
-        "platform": "Daraz BD (Duranta)",
-        "price": 70000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/high-quality-fat-bike-e-cycle-264-i191868476.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:12+08:00",
-        "note": "BDT 70,000"
       },
       {
         "brand": "Foxter",
@@ -661,7 +661,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:57+08:00",
         "note": "BDT 15,276"
       },
       {
@@ -672,7 +672,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:57+08:00",
         "note": "BDT 16,830"
       },
       {
@@ -683,19 +683,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/sticker-10psc-i212409846.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:57+08:00",
         "note": "BDT 100"
-      },
-      {
-        "brand": "Generic",
-        "model": "RFL Playtime Royal Bike 947409",
-        "platform": "Daraz BD (Foxter)",
-        "price": 1320,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/rfl-playtime-947409-i349121456.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
-        "note": "BDT 1,320"
       },
       {
         "brand": "Foxter",
@@ -705,7 +694,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i187586424.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:57+08:00",
         "note": "BDT 107"
       },
       {
@@ -716,19 +705,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/foxter-bike-rear-derailleur-hanger-transmission-tail-hook-for-cycle-bicycle-mtb-road-bike-i222437136.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:58+08:00",
         "note": "BDT 115"
       },
       {
         "brand": "Generic",
-        "model": "Baby Electric Bike R3",
+        "model": "RFL Playtime Royal Bike 947409",
         "platform": "Daraz BD (Foxter)",
-        "price": 25000,
+        "price": 1320,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/r3-i319536367.html",
+        "url": "https://www.daraz.com.bd/products/rfl-playtime-947409-i349121456.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
-        "note": "BDT 25,000"
+        "scraped_at": "2026-07-10T09:20:58+08:00",
+        "note": "BDT 1,320"
       },
       {
         "brand": "Generic",
@@ -738,96 +727,107 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:16+08:00",
+        "scraped_at": "2026-07-10T09:20:58+08:00",
         "note": "BDT 1,698"
       },
       {
-        "brand": "Warrior",
-        "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 14999,
+        "brand": "Generic",
+        "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
+        "platform": "Daraz BD (Foxter)",
+        "price": 12999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/71-20-21-26-i327937068.html",
+        "url": "https://www.daraz.com.bd/products/24-1-i563102742.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 14,999"
+        "scraped_at": "2026-07-10T09:20:58+08:00",
+        "note": "BDT 12,999"
       },
       {
         "brand": "Warrior",
-        "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
+        "model": "Retro Style Viking Warrior Pattern Guardian Bell Pendant Punk Hip Hop Necklaces Motorcycle Bicycle B",
         "platform": "Daraz BD (Warrior 71)",
-        "price": 18999,
+        "price": 836,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i295351877.html",
+        "url": "https://www.daraz.com.bd/products/-i567595712.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 18,999"
-      },
-      {
-        "brand": "Marine",
-        "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 19000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i323810443.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 19,000"
-      },
-      {
-        "brand": "Foxter",
-        "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 16830,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 16,830"
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 836"
       },
       {
         "brand": "Generic",
-        "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
+        "model": "Bicycle,Cycle Screwdriver Tool, Bicycle accessories",
         "platform": "Daraz BD (Warrior 71)",
-        "price": 100000,
+        "price": 170,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-i243099842.html",
+        "url": "https://www.daraz.com.bd/products/-i1576291842.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 100,000"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 8748,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 8,748"
-      },
-      {
-        "brand": "Rockrider",
-        "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-        "platform": "Daraz BD (Warrior 71)",
-        "price": 26999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/rockrider-xc-401-i327344513.html",
-        "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 26,999"
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 170"
       },
       {
         "brand": "Generic",
-        "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
+        "model": "WAKE 780MM Purple Alloy Handlebar for Bicycle",
         "platform": "Daraz BD (Warrior 71)",
-        "price": 150,
+        "price": 950,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/160mm-i543936139.html",
+        "url": "https://www.daraz.com.bd/products/780mm-i1582609377.html",
         "is_new": true,
-        "scraped_at": "2026-07-10T08:57:19+08:00",
-        "note": "BDT 150"
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 950"
+      },
+      {
+        "brand": "Generic",
+        "model": "2 Pcs Bicycle Aluminum Heavy Duty Foot Peg Bicycle Accesories",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 225,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/2-i1574104040.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 225"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle Foot Pegs Aluminium 2 pcs",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 84,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/2-i148830837.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 84"
+      },
+      {
+        "brand": "Warrior",
+        "model": "Disc Brake 160mm Rotor With Screw Electric Scooter for ZERO 11X for KAABO Wolf Warrior Wolf King GT ",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 1130,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/zero-11x-kaabo-wolf-warrior-king-gt-vsett-11-i1573741284.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 1,130"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle Break Lever mountain cycle bike Break Lever aluminum alloy",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 215,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/bicycle-break-lever-mountain-cycle-bike-break-lever-aluminum-alloy-i221106668.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 215"
+      },
+      {
+        "brand": "Generic",
+        "model": "Bicycle aluminum alloy stand cycle alloy stand cycle Kick Stand",
+        "platform": "Daraz BD (Warrior 71)",
+        "price": 280,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i291809642.html",
+        "is_new": true,
+        "scraped_at": "2026-07-10T09:21:03+08:00",
+        "note": "BDT 280"
       },
       {
         "brand": "Foxter",
@@ -6261,6 +6261,882 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 760,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
+        "price": 700000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/dearloji/sepeda-gunung-mtb-26-atlantis-discbrake-1732393288002995330?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "dearloji",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 700,000"
+      },
+      {
+        "brand": "RB",
+        "model": "RB road bike sepeda balap Element Police Toronto EFG Hybrid 7sp Gravel XTRM",
+        "price": 2225000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/tokosepedaramayana/rb-road-bike-sepeda-balap-element-police-toronto-efg-hybrid-7sp-gravel-8sp-700-1733975972454893506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "tokosepedaramayana",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,225,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/xandergarage/sepeda-wilier-cento-10-road-bike-merah-menyala-1730931907908372074?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "xandergarage",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 120,000"
+      },
+      {
+        "brand": "【Anchi】",
+        "model": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Del",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-24-26-27-5-inci-cocok-untuk-pengendara-tinggi-155-190-cm-balap-dewasa-garansi-5-tahun-cod-home-delivery-1732867902506960562?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anchi-center",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "JNE,Sicepat",
+        "model": "JNE,Sicepat - Sepeda Gunung Atlantis MTB AT MT 27.5\" 69G 21S",
+        "price": 1330000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/biketoys/jne-sicepat-sepeda-gunung-atlantis-mtb-at-mt-27-5-69g-21s-27-blackred-81fdf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "biketoys",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,330,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/toko-sepeda-rejeki/sepeda-gunung-salvo-ukuran-24-dan-26-gigi-cakram-depan-belakang-biru-32dbf?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-rejeki",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 950,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA FIXIE PANDORA CST 700C",
+        "price": 1890000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/sumberkencanabike/sepeda-fixie-pandora-hi-ten-steel-1736163368663024951-1736163407125972279?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sumberkencanabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,890,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
+        "price": 1075000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/samudrasepedabdg/sepeda-gunung-mtb-26-merk-velion-by-pacific-7sp-murah-bdg?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "samudrasepedabdg",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,075,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3X8 Speed Terbaru",
+        "price": 1225000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504732925887625-1735505313323648137?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lautanjayabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,225,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
+        "price": 900000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-gunung-mtb-foster-5522-ukuran-20-26-inch-rem-cakram-baru-1731016156086961842?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 900,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda MTB Odessy Fuse Ukuran 24 - 21 Speed Frame Steel",
+        "price": 1250000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-fuse-ukuran-24-21-speed-frame-steel-1730928498269390064?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "celciusodessy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,250,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3x8 Speed Terbaru",
+        "price": 1199000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/philipbikeshop/sepeda-gunung-24-26-27-5-mtb-foster-6657-rem-discbrake-operangigi-3x8-speed-terbaru-1735504923024918021-1735504973449627141?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "philipbikeshop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,199,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB MAZARA NEW SERIES (SIZE 24 &amp; 26 INCH) - By : Pacific Group-Outdoor",
+        "price": 1292000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/lakujayagroup/sepeda-gunung-mtb-mazara-new-series-size-24-26-inch-by-pacific-group-outdoor-1731382988705400169?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lakujayagroup",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,292,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Fixie Odessy RM 1050 Rem Torpedo Doltrap 700C Sepeda Odessy Fixie Rem Torpedo",
+        "price": 1150000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/schy/sepeda-fixie-odessy-rm-1050-rem-torpedo-doltrap-700c-sepeda-odessy-fixie-rem-torpedo-1731515981072467518?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "schy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,150,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
+        "price": 559000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/toko-sepeda-surabaya/sepeda-anak-laki-bmx-velion-d1-ukuran-20-inch-ban-2-40-rem-cakram-usia-8-11-tahun-baru-1730814750554556082?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toko-sepeda-surabaya",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 559,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
+        "price": 5334000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/fuzanaofficial/sepeda-mtb-united-brownhills-t1-27-5-inc-29-inc-sepeda-gunung-bestseller?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "fuzanaofficial",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 5,334,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda balap / Road bike bisa request warna ,ukuran",
+        "price": 3600000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-balap-road-bike-bisa-request-warna-ukuran-1735471637645395081?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 3,600,000"
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
+        "price": 2265000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/pacificoneteam/pacific-sepeda-gunung-remaja-dan-dewasa-mtb-cameron-3-0-ukuran-ban-26-dan-27-5-1735992621931595630-1735995436920571758?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "pacificoneteam",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,265,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
+        "price": 730000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/yoursc/sepeda-20-bmx-8850-limitless-sepeda-anak-murah-sepeda-bmx-murah-1736210346590569888?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "yoursc",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 730,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
+        "price": 600000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/morodadi-cycle-shop/sepeda-bmx-20-velion-model-terbaru-1729598424301144218?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "morodadi-cycle-shop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 600,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda fixie BxT  putih bisa request",
+        "price": 3000000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-bxt-putih-bisa-request-1733260536115790985?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 3,000,000"
+      },
+      {
+        "brand": "Fixie",
+        "model": "Fixie Klasik Fullbike by Fixfix",
+        "price": 2900000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/fixfix-store/fixie-klasik-fullbike-by-fixfix-1732836119338256104?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "fixfix-store",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,900,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA FIXIE ODESSY RM 1050 SEPEDA BALAP MODEL TERBARUU",
+        "price": 1148000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/toto-senli/sepeda-fixie-odessy-rm-1050-sepeda-balap-model-terbaruu-1731531012542399901?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "toto-senli",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,148,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda fixi LOOK HITAM PUTIH murah",
+        "price": 3200000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixi-look-hitam-putih-murah-1735454454386230409?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 3,200,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Mini Keranjang Dewasa New PHOENIX NP-8825AT Uk 20 24 &amp; 26Inch",
+        "price": 1050000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/herojayabike-1/sepeda-mini-keranjang-dewasa-new-phoenix-np-8825at-uk-20-24-26inch-hitam-20inch-bc91e?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "herojayabike-1",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,050,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
+        "price": 2200000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-polygon-bmx-rogue-20inch-alloy?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sevencycle-toped",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,200,000"
+      },
+      {
+        "brand": "[[",
+        "model": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
+        "price": 626000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "ari-terang-709",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 626,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda MTB Odessy Tank / Sepeda Gunung",
+        "price": 1290000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/celciusodessy/sepeda-mtb-odessy-tank-sepeda-gunung-1729818881064535280?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "celciusodessy",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,290,000"
+      },
+      {
+        "brand": "Exotic",
+        "model": "Exotic 2708 HR Sepeda Hybrid 700C Steel Internal Cable Routing",
+        "price": 1930000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/serbasepeda/paket-4-juta-polygon-cascade-4-27-5-hitam-m-7c361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "serbasepeda",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,930,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda London Taxi CRB700M Clasic (Siap Kirim)",
+        "price": 5780000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/autosyakiragroup/sepeda-london-taxi-crb700m-clasic-siap-kirim-blue-ray?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "autosyakiragroup",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 5,780,000"
+      },
+      {
+        "brand": "fixie",
+        "model": "fixie tsunami hitam keren,doltrap/torpedo bisa,mau request tambah berbagai ukuran bisa",
+        "price": 2900000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/rafa-bike-shop/fixie-tsunami-hitam-keren-doltrap-torpedo-bisa-mau-request-tambah-berbagai-ukuran-bisa-1731698361217419228?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "rafa-bike-shop",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,900,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
+        "price": 950000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "elementindonesia",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 950,000"
+      },
+      {
+        "brand": "【Anchi】",
+        "model": "【Anchi】 Sepeda gunung  26 inci untuk pengendara dengan tinggi 160-185 cm, kompetisi dewasa, sepeda gunung, garansi 5 tah",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/anchi-center/anchi-sepeda-gunung-26-inci-untuk-pengendara-dengan-tinggi-160-185-cm-kompetisi-dewasa-sepeda-gunung-garansi-5-tahun-pengiriman-cod-1732872223159715506?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anchi-center",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "commuter",
+        "model": "commuter bike federal frame size 19 Sepeda",
+        "price": 1900000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/eny-yulianah/commuter-bike-federal-frame-size-19-sepeda-1732177003191370902?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "eny-yulianah",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,900,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda gunung MTB polygon Xtrada 5 27.5",
+        "price": 6400000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/sevencycle-toped/sepeda-gunung-mtb-polygon-xtrada-5-27-5-1730752751579793343?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "sevencycle-toped",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 6,400,000"
+      },
+      {
+        "brand": "sepeda",
+        "model": "sepeda balap gravel bike evergreen 21sp 700x38C  steel",
+        "price": 2150000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/retailersepedaol/sepeda-balap-gravel-bike-evergreen-21sp-700x38c-steel-1733020467130894172?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "retailersepedaol",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,150,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Fixie pink muda ,bisa request warna ,ukuran",
+        "price": 2700000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-pink-muda-bisa-request-warna-ukuran-1733260439622091913?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "zentbike313",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,700,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung MTB 27.5 Pacific Aviator 2689 XT Rem Discbrake Operangigi Terbaru",
+        "price": 1549000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/lautanjayabike/sepeda-gunung-mtb-27-5-pacific-aviator-2689-xt-rem-discbrake-operangigi-terbaru-1736278176255870089-1736278182929204361?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "lautanjayabike",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,549,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung MTB Coyote Fifa World Cup 2026 Ukuran 20, 24 ,26 dan 27,5 Inch SPECIAL EDITION",
+        "price": 1449000,
+        "currency": "IDR",
+        "platform": "Tokopedia",
+        "url": "https://www.tokopedia.com/anugrah23sepeda/sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681-1736029864284685505?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
+        "shop": "anugrah23sepeda",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,449,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 26 27.5 MTB Atlantis 730 Rem Cakram New",
+        "price": 1425000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-26-27.5-MTB-Atlantis-730-Rem-Cakram-New-i.168300440.2616283329?extraParams=%7B%22display_model_id%22%3A335586809147%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a45da156-efa4-4ddb-b92c-1a0136ea4acd&amp;xptdk=a45da156-efa4-4ddb-b92c-1a0136ea4acd",
+        "shop": "168300440",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,425,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
+        "price": 664000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 664,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
+        "price": 1535000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-MTB-Tank-Odessy-Frame-Steel-Ukuran-27-21-Speed-i.34416008.51004581645?extraParams=%7B%22display_model_id%22%3A345426866055%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f&amp;xptdk=7c69325b-2ca6-4ca4-86b6-ca0d46aaa80f",
+        "shop": "34416008",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,535,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
+        "price": 155000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
+        "shop": "40989696",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 155,000"
+      },
+      {
+        "brand": "Odessy",
+        "model": "Odessy Ritz Sepeda Lipat 16 20 Inch Rem Disc",
+        "price": 1395000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Odessy-Ritz-Sepeda-Lipat-16-20-Inch-Rem-Disc-i.105979235.28363499582?extraParams=%7B%22display_model_id%22%3A79470820135%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6&amp;xptdk=95a0b45b-45bd-424b-82a5-2d7ad4e094e6",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,395,000"
+      },
+      {
+        "brand": "SCOORA",
+        "model": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
+        "price": 624000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SCOORA-Zenoz-Balance-Bike-Toddler-Sepeda-Keseimbangan-Anak-i.87214633.19395363992?extraParams=%7B%22display_model_id%22%3A225818876824%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0187c97-1f91-403a-bfeb-d1ceb501c611&amp;xptdk=f0187c97-1f91-403a-bfeb-d1ceb501c611",
+        "shop": "87214633",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 624,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
+        "price": 1199000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-ANAK-20-INCH-ATLANTIS-690-PMB-MORTEIN-MN-181-3X7-SPEED-REM-CAKRAM-i.101726601.23331194148?extraParams=%7B%22display_model_id%22%3A341049944683%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=45e0a691-71d1-486b-97fd-5c572e394e6d&amp;xptdk=45e0a691-71d1-486b-97fd-5c572e394e6d",
+        "shop": "101726601",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,199,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
+        "price": 749000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-BMX-20-INCH-SEPEDA-ANAK-LAKI-LAKI-MORISON-8125-AX-BAN-2.4-dan-3.0-MAZARA-2277-VELION-314-MORTEIN-511-CENTRUM-6670-1-FOSTER-5519-3-i.51418619.19079679543?extraParams=%7B%22display_model_id%22%3A297716233636%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4d168851-85bb-4716-9725-9b30e1bafb3f&amp;xptdk=4d168851-85bb-4716-9725-9b30e1bafb3f",
+        "shop": "51418619",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 749,000"
+      },
+      {
+        "brand": "Atlantis",
+        "model": "Atlantis MTB 24 26 27.5 Inch 21 Speed Diskbrake",
+        "price": 1200000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Atlantis-MTB-24-26-27.5-Inch-21-Speed-Diskbrake-i.31188778.7816108635?extraParams=%7B%22display_model_id%22%3A262102219927%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=28b98f34-2af7-492a-8358-d7fb389a829b&amp;xptdk=28b98f34-2af7-492a-8358-d7fb389a829b",
+        "shop": "31188778",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,200,000"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Monarch Sepeda MTB Monarch 27 5 by Polygon",
+        "price": 2700000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Polygon-Monarch-Sepeda-MTB-Monarch-27-5-by-Polygon-i.167054410.43552662720?extraParams=%7B%22display_model_id%22%3A280219495020%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=911c1bfb-3883-4a09-b5b6-22812dacfc6d&amp;xptdk=911c1bfb-3883-4a09-b5b6-22812dacfc6d",
+        "shop": "167054410",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,700,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
+        "price": 2574000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-GUNUNG-MTB-26-Inch-XAVIOR-JAGUAR-21-Speed-i.70657445.14070375782?extraParams=%7B%22display_model_id%22%3A281024193970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264&amp;xptdk=d1ac76bd-7015-4c51-8a8d-f8b553d3f264",
+        "shop": "70657445",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,574,000"
+      },
+      {
+        "brand": "MTB",
+        "model": "MTB 24 26 27 5 Evergreen ranger 50 ranger 55 ranger 545 new phoenix 2709 2705 sepeda gunung 27 5 sepeda dewasa mountain ",
+        "price": 1165000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/MTB-24-26-27-5-Evergreen-ranger-50-ranger-55-ranger-545-new-phoenix-2709-2705-sepeda-gunung-27-5-sepeda-dewasa-mountain-bike-i.344785187.9703671025?extraParams=%7B%22display_model_id%22%3A178083554174%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9c8b86fb-657e-4013-b394-ea3748a30a96&amp;xptdk=9c8b86fb-657e-4013-b394-ea3748a30a96",
+        "shop": "344785187",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,165,000"
+      },
+      {
+        "brand": "Push",
+        "model": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
+        "price": 135000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-Aviator-BK01-ET2011-AT-7901-AT7902-ET2004-Iora-BK-01-Balance-Bike-AT7901-by-Pacific-Sepeda-Keseimbangan-AT-7902-ET-2004-2011-i.232590835.49351073485?extraParams=%7B%22display_model_id%22%3A390096432038%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=bf4ad44c-15ac-4093-9511-e8b223e701a0&amp;xptdk=bf4ad44c-15ac-4093-9511-e8b223e701a0",
+        "shop": "232590835",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 135,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
+        "price": 524000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-VELION-V61-Ukuran-12-16-18-inch-dengan-keranjang-depan-NEW-i.1813683454.26444718825?extraParams=%7B%22display_model_id%22%3A365864656437%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=d5afd78a-47f5-4e22-afd7-011da7e8e732&amp;xptdk=d5afd78a-47f5-4e22-afd7-011da7e8e732",
+        "shop": "1813683454",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 524,000"
+      },
+      {
+        "brand": "Exotic",
+        "model": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
+        "price": 223400,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Exotic-Sepeda-Anak-Roda-Tiga-Balance-Bike-6IN1-ET-709-7-ET-5511-ET-2004-ET-2011-ET-2017-BK-01-T20-7-i.2866183.27407698307?extraParams=%7B%22display_model_id%22%3A252439244308%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c&amp;xptdk=36bef9ec-fb5e-4ed8-be02-ffe6a769b28c",
+        "shop": "2866183",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 223,400"
+      },
+      {
+        "brand": "Pacific",
+        "model": "Pacific Ofo City Bike 26 Shimano 7 Speed Alloy",
+        "price": 2399000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Pacific-Ofo-City-Bike-26-Shimano-7-Speed-Alloy-i.101726601.18684046784?extraParams=%7B%22display_model_id%22%3A316079321624%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5&amp;xptdk=63c31e32-d826-4ad2-8f4f-9fabac3db5f5",
+        "shop": "101726601",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,399,000"
+      },
+      {
+        "brand": "Cuddlee",
+        "model": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
+        "price": 159900,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Cuddlee-Sepeda-Keseimbangan-Anak-P0610-Sepeda-Keseimbangan-Tanpa-Pedal-Balance-Bike-Ringan-i.1496015775.26490487329?extraParams=%7B%22display_model_id%22%3A291252642136%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=7f03464c-258a-4ee8-9ac9-c32266733379&amp;xptdk=7f03464c-258a-4ee8-9ac9-c32266733379",
+        "shop": "1496015775",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 159,900"
+      },
+      {
+        "brand": "Mmflight",
+        "model": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
+        "price": 439910,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Mmflight-Sepeda-Anak-Laki-Laki-Sepeda-Anak-Perempuan-Murah-Dengan-Roda-12-16&#39;%E2%80%98-i.899195971.29441138621?extraParams=%7B%22display_model_id%22%3A286448348275%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=adcf35e8-ce9d-4498-b85c-0589d5864e7f&amp;xptdk=adcf35e8-ce9d-4498-b85c-0589d5864e7f",
+        "shop": "899195971",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 439,910"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
+        "price": 160000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 160,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
+        "price": 212000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-3-in-1.-New-Exotic-ET5512-ET5511-AT7905-T20-5-F-701-T20-7-AT7906-T20-7-nano-family-i.15913437.22079662459?extraParams=%7B%22display_model_id%22%3A118420864971%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=4337030e-941f-436d-84d5-67ff82d09cc8&amp;xptdk=4337030e-941f-436d-84d5-67ff82d09cc8",
+        "shop": "15913437",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 212,000"
+      },
+      {
+        "brand": "Maximo",
+        "model": "Maximo Piegare 16 Folding Bike 9 Speed Chromoly",
+        "price": 1740000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Maximo-Piegare-16-Folding-Bike-9-Speed-Chromoly-i.1290304675.27603947697?extraParams=%7B%22display_model_id%22%3A241100008127%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=0155cf49-8f71-4aba-ad35-a95b75120134&amp;xptdk=0155cf49-8f71-4aba-ad35-a95b75120134",
+        "shop": "1290304675",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,740,000"
+      },
+      {
+        "brand": "Balance",
+        "model": "Balance Bike Sepeda Anak Murah Aviator 7901",
+        "price": 120000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Balance-Bike-Sepeda-Anak-Murah-Aviator-7901-i.8279253.28456491584?extraParams=%7B%22display_model_id%22%3A227556530364%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=023e2f1d-7aa3-4c43-b418-744c5500dd72&amp;xptdk=023e2f1d-7aa3-4c43-b418-744c5500dd72",
+        "shop": "8279253",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 120,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Gunung 27.5 MTB ATLANTIS 730 REM CAKRAM NEW",
+        "price": 1169000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Gunung-27.5-MTB-ATLANTIS-730-REM-CAKRAM-NEW-i.105979235.2654446919?extraParams=%7B%22display_model_id%22%3A415091602378%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a64c002d-01c7-4f24-98e1-2b59f02f042a&amp;xptdk=a64c002d-01c7-4f24-98e1-2b59f02f042a",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,169,000"
+      },
+      {
+        "brand": "Evergreen",
+        "model": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+        "price": 1935000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Evergreen-Jazz-Gravel-700C-3x7-Speed-Disk-Brake-i.31188778.25933366401?extraParams=%7B%22display_model_id%22%3A345586826468%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8&amp;xptdk=9d5c4c4e-7a3b-4ce1-a462-cb6281b392e8",
+        "shop": "31188778",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,935,000"
+      },
+      {
+        "brand": "SEPEDA",
+        "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+        "price": 1427000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/SEPEDA-BALAP-ROADBIKE-PARAGON-R600-BRIFTER-ELEMENT-POLICE-TORONTO-EFG-SHIMANO-EXOTIC-2708-GR-BY-PACIFIC-700c-ET-2708-FS-1.0-BESI-SL-2.0-ALLOY-FIXIE-2708-GR-700C-BY-PACIFIC-HUNTER-PARAGON-REM-TORPEDO-R3-L-two-GRAVEL-SENSAH-MAINAN-OLAHRAGA-IBU-i.7586374.8112803798?extraParams=%7B%22display_model_id%22%3A247101891082%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6e06c83a-d73c-4837-8a33-fc48cb80313a&amp;xptdk=6e06c83a-d73c-4837-8a33-fc48cb80313a",
+        "shop": "7586374",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,427,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
+        "price": 750000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
+        "shop": "47761539",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
+        "price": 1148000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Fixie-Odessy-RM-1050-Rem-Doltrap-700C-Sepeda-Odessy-Fixie-Rem-Dolltrap-i.552002197.44302211160?extraParams=%7B%22display_model_id%22%3A238258625975%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=49204061-86af-4605-8452-c1eeb495aa71&amp;xptdk=49204061-86af-4605-8452-c1eeb495aa71",
+        "shop": "552002197",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,148,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda gunung MTB 26 27 5 ATLANTIS Odessy 730 21Speed NEW",
+        "price": 1300000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-gunung-MTB-26-27-5-ATLANTIS-Odessy-730-21Speed-NEW-i.19737296.3927046087?extraParams=%7B%22display_model_id%22%3A430353443858%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6&amp;xptdk=66ae77bc-5571-4c4e-b0ac-f2a3e82764d6",
+        "shop": "19737296",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 1,300,000"
+      },
+      {
+        "brand": "BALANCE",
+        "model": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
+        "price": 154899,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/BALANCE-BIKE-PUSH-BIKE-AT7901-ET2011-BK01-BK04-BK06-ET2137-ET2004-ET2017-ET2157-ET2017-AT7902-ET-2176-ET-2177-i.632272062.17640907951?extraParams=%7B%22display_model_id%22%3A176694159448%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=64ceda31-244d-4dea-9fd1-21114cd917d5&amp;xptdk=64ceda31-244d-4dea-9fd1-21114cd917d5",
+        "shop": "632272062",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 154,899"
+      },
+      {
+        "brand": "Push",
+        "model": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
+        "price": 136300,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Push-Bike-EXOTIC-ET-2011-ST-BAN-EVA-Balance-Bike-Sepeda-Keseimbangan-Anak-i.202502686.46405270556?extraParams=%7B%22display_model_id%22%3A405572853680%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=16d92854-c9be-42e5-a45c-966cbe568a3e&amp;xptdk=16d92854-c9be-42e5-a45c-966cbe568a3e",
+        "shop": "202502686",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 136,300"
+      },
+      {
+        "brand": "Polygon",
+        "model": "Polygon Sepeda MTB Monarch 27.5 3x7 Speed",
+        "price": 2650000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Polygon-Sepeda-MTB-Monarch-27.5-3x7-Speed-i.1387860936.24242371994?extraParams=%7B%22display_model_id%22%3A39879929362%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1e1a6a2f-ce70-4527-8205-9cf83fb486be&amp;xptdk=1e1a6a2f-ce70-4527-8205-9cf83fb486be",
+        "shop": "1387860936",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,650,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+        "price": 2195000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-Hybrid-Element-Jasper-Terbaru-Rem-Discbrake-Operangigi-i.105979235.44475491190?extraParams=%7B%22display_model_id%22%3A425022024467%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9e05919a-b97c-45f3-a5b0-5b8afccafc72&amp;xptdk=9e05919a-b97c-45f3-a5b0-5b8afccafc72",
+        "shop": "105979235",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 2,195,000"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
+        "price": 750360,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-20-Atlantis-650-I-Rem-Disc-V-Jumbo-i.140996876.2299631164?extraParams=%7B%22display_model_id%22%3A254257079852%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=6617908b-1a86-49be-ad75-d675175c056f&amp;xptdk=6617908b-1a86-49be-ad75-d675175c056f",
+        "shop": "140996876",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 750,360"
+      },
+      {
+        "brand": "Sepeda",
+        "model": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
+        "price": 760000,
+        "currency": "IDR",
+        "platform": "Shopee ID",
+        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
+        "shop": "927153578",
+        "is_new": true,
+        "scraped_at": "2026-07-07T13:20:00+08:00",
+        "note": "Rp 760,000"
       }
     ],
     "price_tracker": [],
@@ -6414,7 +7290,7 @@
     ],
     "tokopedia_count": 39,
     "shopee_id_count": 34,
-    "serbasepeda_count": 141,
+    "serbasepeda_count": 214,
     "shopee_roadbike_count": 30,
     "shopee_gravel_count": 0,
     "shopee_hybrid_count": 0,
@@ -6871,9 +7747,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-10T09:19:32+08:00",
+  "gen_at": "2026-07-10T09:21:07+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-10T09:19:30+08:00",
+    "computed_at": "2026-07-10T09:21:06+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -6917,14 +7793,14 @@
     "rankings": [
       {
         "brand": "Rockrider",
-        "sku_count": 16,
-        "asp": 33062,
+        "sku_count": 15,
+        "asp": 33467,
         "max_price": 65000,
-        "high_tier_count": 16,
+        "high_tier_count": 15,
         "high_tier_pct": 100,
-        "in_stock_rate": 94,
-        "sku_score": 28.0,
-        "score": 92.4
+        "in_stock_rate": 100,
+        "sku_score": 26.2,
+        "score": 91.2
       },
       {
         "brand": "Veloce",
@@ -7059,6 +7935,17 @@
         "score": 49.4
       },
       {
+        "brand": "Duranta",
+        "sku_count": 15,
+        "asp": 11419,
+        "max_price": 22222,
+        "high_tier_count": 3,
+        "high_tier_pct": 20,
+        "in_stock_rate": 7,
+        "sku_score": 26.2,
+        "score": 46.1
+      },
+      {
         "brand": "Avon",
         "sku_count": 3,
         "asp": 17333,
@@ -7079,17 +7966,6 @@
         "in_stock_rate": 88,
         "sku_score": 14.0,
         "score": 45.2
-      },
-      {
-        "brand": "Warrior",
-        "sku_count": 4,
-        "asp": 17674,
-        "max_price": 18999,
-        "high_tier_count": 3,
-        "high_tier_pct": 75,
-        "in_stock_rate": 25,
-        "sku_score": 7.0,
-        "score": 41.2
       },
       {
         "brand": "Ghost",
@@ -7114,6 +7990,17 @@
         "score": 38.9
       },
       {
+        "brand": "Warrior",
+        "sku_count": 3,
+        "asp": 17233,
+        "max_price": 18999,
+        "high_tier_count": 2,
+        "high_tier_pct": 67,
+        "in_stock_rate": 33,
+        "sku_score": 5.2,
+        "score": 38.6
+      },
+      {
         "brand": "Hero",
         "sku_count": 4,
         "asp": 13500,
@@ -7123,17 +8010,6 @@
         "in_stock_rate": 100,
         "sku_score": 7.0,
         "score": 36.5
-      },
-      {
-        "brand": "Duranta",
-        "sku_count": 9,
-        "asp": 10016,
-        "max_price": 15500,
-        "high_tier_count": 1,
-        "high_tier_pct": 11,
-        "in_stock_rate": 11,
-        "sku_score": 15.7,
-        "score": 31.5
       },
       {
         "brand": "Adder",
@@ -7204,13 +8080,13 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-10T09:19:32+08:00",
+    "computed_at": "2026-07-10T09:21:07+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
-      "bd_pool_mid_high": 127,
+      "bd_pool_mid_high": 131,
       "bd_pool_brands": 27,
-      "id_pool_total": 214,
+      "id_pool_total": 287,
       "id_pool_brands": 35,
       "phx_bd_total": 17,
       "phx_bd_mid_high": 8,
@@ -7220,10 +8096,10 @@
     },
     "bands": {
       "bd_lt_10k": {
-        "count": 8,
+        "count": 11,
         "brands_count": 3,
         "brands": {
-          "Duranta": 6,
+          "Duranta": 9,
           "Phoenix": 1,
           "Polloux": 1
         },
@@ -7234,14 +8110,14 @@
         ]
       },
       "bd_10_15k": {
-        "count": 32,
+        "count": 33,
         "brands_count": 17,
         "brands": {
           "Veloce": 5,
           "Phoenix": 4,
+          "Duranta": 3,
           "Hero": 3,
           "Foxter": 3,
-          "Duranta": 2,
           "Marine": 2,
           "Core": 2,
           "Seventy": 2,
@@ -7258,26 +8134,26 @@
         "top_5_brands": [
           "Veloce",
           "Phoenix",
+          "Duranta",
           "Hero",
-          "Foxter",
-          "Duranta"
+          "Foxter"
         ]
       },
       "bd_15_25k": {
-        "count": 57,
+        "count": 58,
         "brands_count": 17,
         "brands": {
           "Marine": 12,
           "Veloce": 10,
           "Core": 9,
           "Foxter": 4,
-          "Warrior": 3,
+          "Duranta": 3,
           "Uplayed": 3,
           "Phoenix": 3,
+          "Warrior": 2,
           "Avon": 2,
           "Rockrider": 2,
           "Falcon": 2,
-          "Duranta": 1,
           "Seventy": 1,
           "Ghost": 1,
           "Forever": 1,
@@ -7290,14 +8166,14 @@
           "Veloce",
           "Core",
           "Foxter",
-          "Warrior"
+          "Duranta"
         ]
       },
       "bd_gt_25k": {
-        "count": 30,
+        "count": 29,
         "brands_count": 6,
         "brands": {
-          "Rockrider": 14,
+          "Rockrider": 13,
           "Veloce": 6,
           "Core": 5,
           "Ceres": 2,
@@ -7314,7 +8190,7 @@
       }
     },
     "gt_25k_brands": {
-      "Rockrider": 14,
+      "Rockrider": 13,
       "Veloce": 6,
       "Core": 5,
       "Ceres": 2,
@@ -7359,7 +8235,7 @@
       "industry_max_brand": "Rockrider",
       "industry_max_model": "Rockrider XC 404",
       "phx_vs_industry_ratio": 3.6,
-      "gt_25k_count": 30,
+      "gt_25k_count": 29,
       "gt_25k_brand_count": 6,
       "gt_25k_brands": [
         "Rockrider",
@@ -7370,16 +8246,16 @@
         "Kiesel"
       ],
       "gt_25k_phx_present": false,
-      "gt_15_25k_count": 57,
+      "gt_15_25k_count": 58,
       "gt_15_25k_phx_present": true
     },
     "id_7_15m": {
       "count": 6,
       "brands": [
-        "Sepeda",
         "United",
         "Pacific",
-        "Element"
+        "Element",
+        "Sepeda"
       ]
     },
     "id_top10_brands": [
@@ -7523,7 +8399,7 @@
     ],
     "strategy_v2": {
       "bd_22k_uci_mtb": {
-        "rationale": "BD 15-25K 57 SKU 17 品牌，Phoenix 缺席；> 25K 30 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
+        "rationale": "BD 15-25K 58 SKU 17 品牌，Phoenix 缺席；> 25K 29 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
         "target_price": "22K-25K BDT",
         "top_competitors_gt_25k": [
           {
@@ -7557,10 +8433,10 @@
         "rationale": "ID 7-15M 6 SKU 品牌 ['Element', 'United', 'Pacific', 'United', 'Sepeda', 'Sepeda']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
-          "Sepeda",
           "United",
           "Pacific",
-          "Element"
+          "Element",
+          "Sepeda"
         ]
       },
       "bd_road_bike": {
