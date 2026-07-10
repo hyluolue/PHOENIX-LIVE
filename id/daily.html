@@ -289,32 +289,7 @@ h1{font-size:22px;font-weight:800}
   </div>
 
 
-
-  <!-- ===== 板块 2: 7 日价格趋势 ===== -->
-
-  <div class="section-title">📅 7 日价格趋势</div>
-
-  <div class="grid-2" id="trend-section">
-
-    <div class="card">
-
-      <h2>🇧🇩 孟加拉价格趋势 (7 日)</h2>
-
-      <div class="small">基于每日历史快照 · 计算均价</div>
-
-      <div id="bd-trend"><div class="empty">⏳ 累积 7 天数据中（首次跑后开始）</div></div>
-
-    </div>
-
-    <div class="card">
-
-      <h2>🇮🇩 印尼价格趋势 (7 日)</h2>
-
-      <div class="small">serbasepeda.com 8 成人整车 · 每日 9:00 自动累积</div>
-
-      <div id="id-trend"><div class="empty">⏳ serbasepeda 累积 7 天数据中（首次跑后开始）</div></div>
-
-    </div>
+  <!-- V2.6.1 简化 (2026-07-10): 7 日价格趋势 section 删除 - 与价格池 (板块 4) 数据同源 (HISTORY.daily.prices), 重复. 9:00 cron 仍写 HISTORY, 后续如需可恢复 -->
 
   </div>
 
@@ -665,9 +640,9 @@ function render() {
 
   renderPriceSnapshot('id-snapshot', id, 'IDR');
 
-  renderTrend('bd-trend', bd, 'BDT', 'bd');
-
-  renderTrend('id-trend', id, 'IDR', 'id');
+  // V2.6.1 简化 (2026-07-10): renderTrend 7 日价格趋势 section 已删除, 删调用
+  // renderTrend('bd-trend', bd, 'BDT', 'bd');
+  // renderTrend('id-trend', id, 'IDR', 'id');
 
   renderBuckets('bd-buckets', bd, 'BDT', 'BD');
 
@@ -789,69 +764,8 @@ function renderPriceSnapshot(elId, prices, cur) {
 
 
 
-function renderTrend(elId, prices, cur, region) {
-
-  const el = document.getElementById(elId);
-
-  if (!HISTORY || !HISTORY[region] || HISTORY[region].length < 2) {
-
-    el.innerHTML = `<div class="empty">⏳ 累积历史数据中（已记录 ${HISTORY && HISTORY[region] ? HISTORY[region].length : 0} 天 · 需要 7 天）</div>`;
-
-    return;
-
-  }
-
-  const days = HISTORY[region];
-
-  const html = days.map(d => {
-
-    const ps = (d.prices || []).map(x => x.price).filter(x => x > 0);
-
-    if (!ps.length) return `<div class="trend-row"><div class="label">${d.date}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
-
-    const avg = ps.reduce((a,b) => a+b, 0) / ps.length;
-
-    const max = Math.max(...ps);
-
-    const pct = (avg / max * 100).toFixed(0);
-
-    return `<div class="trend-row">
-
-      <div class="label">${d.date}</div>
-
-      <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
-
-      <div class="count">${fmtK(avg, cur)}</div>
-
-      <div class="pct">${ps.length} SKU</div>
-
-    </div>`;
-
-  }).join('');
-
-  // 算 7 日均价变化
-
-  const avgs = days.map(d => (d.prices || []).map(x => x.price).filter(x => x > 0)).filter(p => p.length).map(p => p.reduce((a,b) => a+b, 0) / p.length);
-
-  let trend = '';
-
-  if (avgs.length >= 2) {
-
-    const delta = ((avgs[avgs.length-1] - avgs[0]) / avgs[0] * 100);
-
-    const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '→';
-
-    const color = delta > 0 ? '#fca5a5' : delta < 0 ? '#6ee7b7' : '#94a3b8';
-
-    trend = `<div style="margin-top:8px;font-size:11px;color:#94a3b8">7 日均价变化: <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
-
-  }
-
-  el.innerHTML = html + trend;
-
-}
-
-
+// V2.6.1 简化 (2026-07-10): renderTrend 函数已删除 - 7 日价格趋势 section 与价格池重复, 改由价格池 (cleanBrand + 价段 + 品类 filter) 覆盖
+// function renderTrend() { ... } - 完整代码已删除
 
 function renderBuckets(elId, prices, cur, regionName) {
   if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无数据</div>'; return; }
