@@ -283,22 +283,28 @@
     const gt25 = dm.gt_25k_brands || {};
     const id715 = dm.id_7_15m || {};
 
-    // 顶 KPI（同步 Tab #1 顶部）
-    document.getElementById('bd-gap-1').textContent = (bands.bd_15_25k ? bands.bd_15_25k.count : 0) + ' SKU';
-    document.getElementById('bd-gap-2').textContent = (bands.bd_gt_25k ? bands.bd_gt_25k.count : 0) + ' SKU';
+    // 顶 KPI（同步 Tab #1 顶部, null-safe 防双市场架构跨页引用）
+    const elBdGap1 = document.getElementById('bd-gap-1');
+    if (elBdGap1) elBdGap1.textContent = (bands.bd_15_25k ? bands.bd_15_25k.count : 0) + ' SKU';
+    const elBdGap2 = document.getElementById('bd-gap-2');
+    if (elBdGap2) elBdGap2.textContent = (bands.bd_gt_25k ? bands.bd_gt_25k.count : 0) + ' SKU';
 
-    // 关键价格段洞察（统一从 dashboard_metrics 读）
+    // 关键价格段洞察（统一从 dashboard_metrics 读, null-safe）
     if (bands.bd_15_25k) {
-      document.getElementById('bd-band-midhigh').innerHTML = `${bands.bd_15_25k.count} SKU · ${bands.bd_15_25k.brands_count} 品牌<br><small>${bands.bd_15_25k.top_5_brands.join(' / ')}</small>`;
+      const el = document.getElementById('bd-band-midhigh');
+      if (el) el.innerHTML = `${bands.bd_15_25k.count} SKU · ${bands.bd_15_25k.brands_count} 品牌<br><small>${bands.bd_15_25k.top_5_brands.join(' / ')}</small>`;
     }
     if (bands.bd_gt_25k) {
-      document.getElementById('bd-band-high').innerHTML = `${bands.bd_gt_25k.count} SKU · ${bands.bd_gt_25k.brands_count} 品牌<br><small>${bands.bd_gt_25k.top_5_brands.join(' / ')}${phxGap.gt_25k_brands.length > bands.bd_gt_25k.top_5_brands.length ? ' +' + (phxGap.gt_25k_brands.length - bands.bd_gt_25k.top_5_brands.length) : ''}</small>`;
+      const el = document.getElementById('bd-band-high');
+      if (el) el.innerHTML = `${bands.bd_gt_25k.count} SKU · ${bands.bd_gt_25k.brands_count} 品牌<br><small>${bands.bd_gt_25k.top_5_brands.join(' / ')}${phxGap.gt_25k_brands.length > bands.bd_gt_25k.top_5_brands.length ? ' +' + (phxGap.gt_25k_brands.length - bands.bd_gt_25k.top_5_brands.length) : ''}</small>`;
     }
     if (totals.phx_bd_mid_high !== undefined) {
-      document.getElementById('bd-phx-band').innerHTML = `${totals.phx_bd_mid_high} SKU · ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT<br><small>ASP ${totals.phx_bd_asp.toLocaleString()} · 顶价远低行业 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</small>`;
+      const el = document.getElementById('bd-phx-band');
+      if (el) el.innerHTML = `${totals.phx_bd_mid_high} SKU · ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT<br><small>ASP ${totals.phx_bd_asp.toLocaleString()} · 顶价远低行业 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</small>`;
     }
     if (id715.count !== undefined) {
-      document.getElementById('id-band').innerHTML = `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`;
+      const el = document.getElementById('id-band');
+      if (el) el.innerHTML = `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`;
     }
     // V2.6.1 ID 战略洞察全部在 HTML 内硬编码（V2.6.1 三蓝海品类 15 SKU 完整部署）
     // JS 不再补 strategy list（HTML 已有完整内容）
