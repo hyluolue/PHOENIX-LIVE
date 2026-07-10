@@ -388,9 +388,11 @@
       console.error('brand-monitor render failed:', e);
     }
 
-    // ID 实时数据 (serbasepeda hardcoded)
-    document.getElementById('id-count').textContent = '16';
-    document.getElementById('id-priced').textContent = '15';
+    // ID 实时数据 (serbasepeda hardcoded) - V2.6.1 修复 (2026-07-10 21:40): null-safe, BD page 没这些 id
+    const idCountEl = document.getElementById('id-count');
+    const idPricedEl = document.getElementById('id-priced');
+    if (idCountEl) idCountEl.textContent = '16';
+    if (idPricedEl) idPricedEl.textContent = '15';
 
     // V2.7 数据质量门 — 顶部 VPN 信号灯 + 数据失真模块遮罩
     if (typeof renderQualityGate === 'function') {
