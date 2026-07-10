@@ -342,6 +342,7 @@
       setHTML('id-band', `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`);
     }
     // 战略洞察列表（统一从 dashboard_metrics 读 · 不再硬编码老数据）
+    // V2.6.1 修复 (2026-07-10 21:30): null-safe, 元素不存在时不抛错阻止后续渲染
     const dq = (data.data_quality || {}).level || 'green';
     const isDegraded = dq === 'red' || dq === 'yellow';
     const strategyHtml = [
@@ -358,7 +359,7 @@
       // ID 7-15M — 已有动态读
       `<li><b>ID 7-15M 对照：</b>${id715.count} SKU · ${id715.brands.join('/')} = ID 真空（详见 /id/index.html，BD page 仅作全球趋势参照）</li>`,
     ].join('');
-    document.getElementById('bd-strategy-list').innerHTML = strategyHtml;
+    setHTML('bd-strategy-list', strategyHtml);
 
     // 品牌监控：走 brand_metrics.rankings 前 10（与 Tab #5 product-matrix 共享）
     // V2.6.1 修复 (2026-07-10): 加 try/catch 兜底, 防止前面 throw 阻止到这里
