@@ -831,74 +831,55 @@ function renderTrend(elId, prices, cur, region) {
 
 
 function renderBuckets(elId, prices, cur, regionName) {
-
   if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无数据</div>'; return; }
-
-  let buckets;
-
-  if (cur === 'BDT') {
-
-    buckets = [
-
-      { name: '入门 5K-10K', lo: 5000, hi: 10000 },
-
-      { name: '中端 10K-15K', lo: 10000, hi: 15000 },
-
-      { name: '中高端 15K-25K', lo: 15000, hi: 25000 },
-
-      { name: '高端 25K-40K', lo: 25000, hi: 40000 },
-
-      { name: '超高端 40K+', lo: 40000, hi: 9999999 },
-
-    ];
-
-  } else {
-
-    // IDR (印尼盾) - serbasepeda 真实数据：Rp 265K-26.2M
-
-    buckets = [
-
-      { name: '配件 &lt; Rp 1M', lo: 0, hi: 1e6 },
-
-      { name: '入门 Rp 1-7M', lo: 1e6, hi: 7e6 },
-
-      { name: '中端 Rp 7-15M', lo: 7e6, hi: 15e6 },
-
-      { name: '高端 Rp 15M+', lo: 15e6, hi: 9999999 },
-
-    ];
-
+  // V2.6.1 修复 (2026-07-10): 柱长按 SKU 数比例 (不是 avg/maxP), 直观看段间对比
+  // 同步应用 isMidHighAdult 过滤 (与 dashboard_metrics 单一数据源)
+  const EXCLUDED_BUCKET = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack','spinning','statif','treadmill','kardio','elliptical','recumbent','orbitrack'];
+  function isMidHighBucketBD(p) {
+    if ((p.brand||'').toLowerCase() === 'generic') return false;
+    if (p.currency === 'IDR' || p._region === 'ID') return false;  // ID 端用 IDR 过滤
+    if ((p.price||0) < 5000) return false;
+    const m = ((p.model||'') + ' ' + (p.brand||'')).toLowerCase();
+    return !EXCLUDED_BUCKET.some(kw => m.includes(kw));
   }
-
-  const html = buckets.map(b => {
-
-    const inB = prices.filter(p => p.price >= b.lo && p.price < b.hi);
-
+  const filtered = cur === 'BDT' ? prices.filter(isMidHighBucketBD) : prices;
+  let buckets;
+  if (cur === 'BDT') {
+    buckets = [
+      { name: '入门 5K-10K', lo: 5000, hi: 10000 },
+      { name: '中端 10K-15K', lo: 10000, hi: 15000 },
+      { name: '中高端 15K-25K', lo: 15000, hi: 25000 },
+      { name: '高端 25K-40K', lo: 25000, hi: 40000 },
+      { name: '超高端 40K+', lo: 40000, hi: 9999999 },
+    ];
+  } else {
+    buckets = [
+      { name: '配件 &lt; Rp 1M', lo: 0, hi: 1e6 },
+      { name: '入门 Rp 1-7M', lo: 1e6, hi: 7e6 },
+      { name: '中端 Rp 7-15M', lo: 7e6, hi: 15e6 },
+      { name: '高端 Rp 15M+', lo: 15e6, hi: 9999999 },
+    ];
+  }
+  // V2.6.1 修复: 柱长按 SKU 数 (count/maxCount) 而不是 avg/maxP
+  const counts = buckets.map(b => filtered.filter(p => p.price >= b.lo && p.price < b.hi).length);
+  const maxCount = Math.max(...counts, 1);
+  const totalInBuckets = counts.reduce((a,b)=>a+b, 0);
+  const totalAll = filtered.length;
+  const filteredOut = totalAll - totalInBuckets;
+  const html = buckets.map((b, i) => {
+    const inB = filtered.filter(p => p.price >= b.lo && p.price < b.hi);
     const brands = [...new Set(inB.map(p => p.brand))];
-
-    if (!inB.length) return `<div class="trend-row"><div class="label">${b.name}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
-
-    const ps = inB.map(p => p.price);
-
-    const avg = ps.reduce((a,b)=>a+b,0)/ps.length;
-
-    const maxP = Math.max(...ps);
-
-    const pct = (avg / maxP * 100).toFixed(0);
-
+    if (!inB.length) return `<div class="trend-row"><div class="label">${b.name}</div><div class="bar"></div><div class="count">0 SKU</div><div class="pct">-</div></div>`;
+    const pct = (counts[i] / maxCount * 100).toFixed(0);
     return `<div class="trend-row">
-
       <div class="label">${b.name}</div>
-
       <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
-
       <div class="count">${inB.length} SKU</div>
-
       <div class="pct">${brands.length} 品牌</div>
 
     </div>`;
 
-  }).join('') + `<div style="margin-top:10px;font-size:11px;color:#94a3b8">${prices.length} 商品 · ${[...new Set(prices.map(p=>p.brand))].length} 品牌 · ${cur}</div>`;
+  }).join('') + `<div style="margin-top:10px;font-size:11px;color:#94a3b8">${totalInBuckets} 中高端 SKU (已排除周边) · ${[...new Set(filtered.map(p=>p.brand))].length} 品牌 · ${cur} · <span style="color:#fbbf24">总池 ${totalAll} (含 ${filteredOut} 周边/童车/折叠)</span></div>`;
 
   document.getElementById(elId).innerHTML = html;
 
@@ -907,24 +888,23 @@ function renderBuckets(elId, prices, cur, regionName) {
 
 
 function renderOpportunities(bd, id, reviews, social) {
-
   const html = [];
-
-  // BD 缺口价位（用 dashboard_metrics 真实数据）
-
-  const bdPrices = bd.map(p => p.price).filter(x => x > 0);
-
+  // BD 缺口价位（用 isMidHigh 过滤 + dashboard_metrics 真实数据, V2.6.1 修复)
+  // 应用 isMidHigh 过滤（与 renderBuckets 单一数据源）
+  const EXCLUDED_OPP = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack'];
+  const bdMidHigh = bd.filter(p => {
+    if ((p.brand||'').toLowerCase() === 'generic') return false;
+    if ((p.price||0) < 5000) return false;
+    const m = ((p.model||'') + ' ' + (p.brand||'')).toLowerCase();
+    return !EXCLUDED_OPP.some(kw => m.includes(kw));
+  });
+  const bdPrices = bdMidHigh.map(p => p.price).filter(x => x > 0);
   if (bdPrices.length) {
-
-    const buckets = { '入门 (5-10K)': bd.filter(p => p.price >= 5000 && p.price < 10000).length,
-
-                     '中端 (10-15K)': bd.filter(p => p.price >= 10000 && p.price < 15000).length,
-
-                     '中高端 (15-25K)': bd.filter(p => p.price >= 15000 && p.price < 25000).length,
-
-                     '高端 (25-40K)': bd.filter(p => p.price >= 25000 && p.price < 40000).length,
-
-                     '超高端 (40K+)': bd.filter(p => p.price >= 40000).length };
+    const buckets = { '入门 (5-10K)': bdMidHigh.filter(p => p.price >= 5000 && p.price < 10000).length,
+                     '中端 (10-15K)': bdMidHigh.filter(p => p.price >= 10000 && p.price < 15000).length,
+                     '中高端 (15-25K)': bdMidHigh.filter(p => p.price >= 15000 && p.price < 25000).length,
+                     '高端 (25-40K)': bdMidHigh.filter(p => p.price >= 25000 && p.price < 40000).length,
+                     '超高端 (40K+)': bdMidHigh.filter(p => p.price >= 40000).length };
 
     const densest = Object.entries(buckets).sort((a,b) => b[1] - a[1])[0];
 
