@@ -391,6 +391,18 @@
       renderQualityGate(data);
     }
 
+    // V2.6.1 修复 (2026-07-10 21:14): bd-anchor 价格锚点机会（之前 placeholder ⏳ 加载中... 永远不变）
+    const bdAnchor = document.getElementById('bd-anchor');
+    if (bdAnchor) {
+      if (phxGap.industry_max_brand && phxGap.industry_max_price) {
+        const phxMax = phxGap.phx_max_price || 0;
+        const ratio = phxGap.phx_vs_industry_ratio || 1;
+        bdAnchor.innerHTML = `${phxGap.industry_max_brand} <b>${phxGap.industry_max_price.toLocaleString()} BDT</b><br><small>Phoenix 顶价仅 ${phxMax.toLocaleString()} (差距 ${ratio.toFixed(1)}x)<br>= 价值锚点机会：<b>UCI/SGS 高端品牌空位</b></small>`;
+      } else {
+        bdAnchor.innerHTML = '<small>— 数据待补</small>';
+      }
+    }
+
     // === 4 价格段 tier 计算 + 新闻填充（从 market.html 合并）===
     // V2.6.1 修复 (2026-07-10): 之前 tier 代码错放在 <script src=...> 内部被浏览器忽略
     //   - t1/t2/t3/t4 永远是 "— SKU / — BDT"
