@@ -1121,17 +1121,19 @@ function renderMarketCapacity(elId, DATA, region) {
     });
 
   } else {
-    // V2.6.1 ID 真实数据 4 段位（5-7M 入门 / 7-15M 中端 / 15-25M 中高端 / 25M+ 高端）
+    // V2.6.1 ID 真实数据 5 段位（1-7M 入门 / 7-15M 中端 / 15-25M 中高端 / 25-50M 高端 / 50M+ 超高端）
+    // 2026-07-10 修复: 30M 上限排除顶价 (Pinarello/Trek/Specialized 100M+ 全被过滤), 改成 200M
     const idBands = [
       { name: 'Rp 1-7M 入门', lo: 1e6, hi: 7e6 },
       { name: 'Rp 7-15M 中端', lo: 7e6, hi: 15e6 },
       { name: 'Rp 15-25M 中高端', lo: 15e6, hi: 25e6 },
-      { name: 'Rp 25M+ 高端', lo: 25e6, hi: 999e6 }
+      { name: 'Rp 25-50M 高端', lo: 25e6, hi: 50e6 },
+      { name: 'Rp 50M+ 超高端', lo: 50e6, hi: 999e6 }
     ];
     const idAll = (DATA.id && DATA.id.price_pool || [])
       .filter(x => x.price > 0)
       .filter(x => x.currency === 'IDR' || x._region === 'ID')
-      .filter(x => x.price >= 1e6 && x.price <= 3e7);
+      .filter(x => x.price >= 1e6);  // V2.6.1 修复: 去掉 30M 上限, 让所有顶价产品 (142.8M Specialized S-Works 等) 显示
     const idMax = Math.max(...idBands.map(b => idAll.filter(p => p.price >= b.lo && p.price < b.hi).length), 1);
     bandRows = idBands.map(b => {
       const inB = idAll.filter(p => p.price >= b.lo && p.price < b.hi);
