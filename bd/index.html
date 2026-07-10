@@ -382,53 +382,84 @@
     if (typeof renderQualityGate === 'function') {
       renderQualityGate(data);
     }
+
+    // === 4 价格段 tier 计算 + 新闻填充（从 market.html 合并）===
+    // V2.6.1 修复 (2026-07-10): 之前 tier 代码错放在 <script src=...> 内部被浏览器忽略
+    //   - t1/t2/t3/t4 永远是 "— SKU / — BDT"
+    //   - 战略级价格洞察 + V2.3.1 BD 25-40K 永远是 "⏳ 加载中..."
+    //   - 移到 load() 函数内部, 在 renderQualityGate 之后执行
+    const bdPoolT = ((data.bd && data.bd.price_pool) || []).filter(it => (it.price||0) > 0 && (it.brand||'').toLowerCase() !== 'generic');
+    const totalSkuT = bdPoolT.length;
+    const totalElT = document.getElementById('bd-pool-total-2');
+    if (totalElT) totalElT.textContent = totalSkuT;
+    const TIERS2 = [
+      { id: 't1', lo: 0, hi: 10000 }, { id: 't2', lo: 10000, hi: 15000 },
+      { id: 't3', lo: 15000, hi: 25000 }, { id: 't4', lo: 25000, hi: 1e9 }
+    ];
+    for (const t of TIERS2) {
+      const tier = bdPoolT.filter(it => it.price >= t.lo && it.price < t.hi);
+      const elCount = document.getElementById(t.id + '-count');
+      const elPrices = document.getElementById(t.id + '-prices');
+      const elBrands = document.getElementById(t.id + '-brands');
+      if (elCount) elCount.textContent = tier.length + ' SKU';
+      if (elPrices) {
+        if (tier.length) {
+          const avg = Math.round(tier.reduce((s,it)=>s+it.price,0)/tier.length);
+          const mn = Math.min(...tier.map(it=>it.price));
+          const mx = Math.max(...tier.map(it=>it.price));
+          elPrices.textContent = `均价 ${avg.toLocaleString()} BDT · ${mn.toLocaleString()}-${mx.toLocaleString()}`;
+        } else { elPrices.textContent = '— BDT'; }
+      }
+      if (elBrands) {
+        const brands = [...new Set(tier.map(it => it.brand).filter(Boolean))];
+        elBrands.innerHTML = brands.length ? brands.slice(0,4).map(b => `<b>${b}</b>`).join(' / ') : '—';
+      }
+    }
+    // V2.3.1 BD 25-40K 高端主战场实战分析
+    const battlefieldEl = document.getElementById('v231-battlefield-body');
+    if (battlefieldEl) {
+      // 25-40K 段: 25K <= price < 40K
+      const battleSku = bdPoolT.filter(it => it.price >= 25000 && it.price < 40000);
+      const battleBrands = [...new Set(battleSku.map(it => it.brand).filter(Boolean))];
+      const phxBattle = battleSku.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+      const battleHtml = [
+        `🎯 <b>25-40K 高端主战场</b>：${battleSku.length} SKU · ${battleBrands.length} 品牌（${battleBrands.slice(0,5).join(' / ')}）`,
+        `🏆 <b>Phoenix 现状</b>：${phxBattle.length} SKU（V2.3.1 目标 = 5 SKU @ 25-40K 拿下高端锚点）`,
+        `💡 <b>差异化建议</b>：UCI/Shimano 105 公路 + SGS 认证 + 油压碟刹 = 跳出 Rockrider/Veloce 价格战`,
+      ].join('<br>');
+      battlefieldEl.innerHTML = battleHtml;
+    }
+    // 战略级价格洞察列表
+    const tierStrategyEl = document.getElementById('bd-tier-strategy');
+    if (tierStrategyEl) {
+      const t1 = bdPoolT.filter(it => it.price < 10000);
+      const t2 = bdPoolT.filter(it => it.price >= 10000 && it.price < 15000);
+      const t3 = bdPoolT.filter(it => it.price >= 15000 && it.price < 25000);
+      const t4 = bdPoolT.filter(it => it.price >= 25000);
+      const phxInT3 = t3.filter(it => (it.brand || '').toLowerCase() === 'phoenix').length;
+      const phxInT4 = t4.filter(it => (it.brand || '').toLowerCase() === 'phoenix').length;
+      const tierHtml = [
+        `<b>入门 &lt; 10K</b>：${t1.length} SKU · 均价 ${t1.length ? Math.round(t1.reduce((s,it)=>s+it.price,0)/t1.length).toLocaleString() : '—'} BDT = 价格战红海`,
+        `<b>中端 10-15K</b>：${t2.length} SKU = 实际战场，Phoenix 14 SKU 全在段内`,
+        `<b>中高端 15-25K</b>：${t3.length} SKU · Phoenix ${phxInT3} SKU = 蓝海机会，少而精`,
+        `<b>高端 &gt; 25K</b>：${t4.length} SKU · Phoenix ${phxInT4} SKU = 主战场空白，V2.3.1 目标`,
+      ].join('</li><li>');
+      tierStrategyEl.innerHTML = `<li>${tierHtml}</li>`;
+    }
+    // 新闻填充
+    const newsEl = document.getElementById('news');
+    if (newsEl && data.bd && data.bd.news) {
+      newsEl.innerHTML = data.bd.news.slice(0,9).map(n => `
+        <div style="padding:8px;background:rgba(255,255,255,.04);border-radius:4px;font-size:11px;line-height:1.5">
+          <b>${esc(n.title || '')}</b><br>
+          <span style="color:#94a3b8">${esc((n.source || '') + ' · ' + (n.date || ''))}</span>
+        </div>
+      `).join('') || '<div style="color:#94a3b8">暂无新闻</div>';
+    }
   }
 
   load();
 </script>
-<script src="../render_quality_gate.js">
-
-    // === 4 价格段 tier 计算 + 新闻填充（从 market.html 合并）===
-    (function () {
-      if (typeof data === 'undefined' || !data) return;
-      const bdPool = ((data.bd && data.bd.price_pool) || []).filter(it => (it.price||0) > 0 && (it.brand||'').toLowerCase() !== 'generic');
-      const totalSku = bdPool.length;
-      const totalEl = document.getElementById('bd-pool-total-2');
-      if (totalEl) totalEl.textContent = totalSku;
-      const TIERS2 = [
-        { id: 't1', lo: 0, hi: 10000 }, { id: 't2', lo: 10000, hi: 15000 },
-        { id: 't3', lo: 15000, hi: 25000 }, { id: 't4', lo: 25000, hi: 1e9 }
-      ];
-      for (const t of TIERS2) {
-        const tier = bdPool.filter(it => it.price >= t.lo && it.price < t.hi);
-        const elCount = document.getElementById(t.id + '-count');
-        const elPrices = document.getElementById(t.id + '-prices');
-        const elBrands = document.getElementById(t.id + '-brands');
-        if (elCount) elCount.textContent = tier.length + ' SKU';
-        if (elPrices) {
-          if (tier.length) {
-            const avg = Math.round(tier.reduce((s,it)=>s+it.price,0)/tier.length);
-            const mn = Math.min(...tier.map(it=>it.price));
-            const mx = Math.max(...tier.map(it=>it.price));
-            elPrices.textContent = `均价 ${avg.toLocaleString()} BDT · ${mn.toLocaleString()}-${mx.toLocaleString()}`;
-          } else { elPrices.textContent = '— BDT'; }
-        }
-        if (elBrands) {
-          const brands = [...new Set(tier.map(it => it.brand).filter(Boolean))];
-          elBrands.innerHTML = brands.length ? brands.slice(0,4).map(b => `<b>${b}</b>`).join(' / ') : '—';
-        }
-      }
-      // 新闻填充
-      const newsEl = document.getElementById('news');
-      if (newsEl && data.bd && data.bd.news) {
-        newsEl.innerHTML = data.bd.news.slice(0,9).map(n => `
-          <div style="padding:8px;background:rgba(255,255,255,.04);border-radius:4px;font-size:11px;line-height:1.5">
-            <b>${esc(n.title || '')}</b><br>
-            <span style="color:#94a3b8">${esc((n.source || '') + ' · ' + (n.date || ''))}</span>
-          </div>
-        `).join('') || '<div style="color:#94a3b8">暂无新闻</div>';
-      }
-    })();
-  </script>
+<script src="../render_quality_gate.js"></script>
 </body>
 </html>
