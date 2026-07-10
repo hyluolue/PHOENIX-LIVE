@@ -184,16 +184,25 @@
         </div>
         <div class="kpi" style="border-left-color:#2e7d32">
           <div class="kpi-label">💎 Roadbike 12-15M</div>
-          <div class="kpi-value"><span id="v261-roadbike-12-15m">1</span> SKU<br><small>CAMP SR5 14M (中国台湾)<br>= Phoenix 12-15M 切入点</small></div>
+          <div class="kpi-value" id="v261-roadbike-12-15m-wrap">⏳ 加载中…<br><small>Phoenix 主推切入段</small></div>
+        </div>
+        <div class="kpi" style="border-left-color:#c8102e">
+          <div class="kpi-label">⚠ Roadbike &gt; 20M 进口红海</div>
+          <div class="kpi-value" id="v261-roadbike-gt20-wrap">⏳ 加载中…<br><small>Pinarello/Trek/CAMP 进口旗舰</small></div>
         </div>
         <div class="kpi" style="border-left-color:#2e7d32">
           <div class="kpi-label">💎 Gravel 7-15M</div>
-          <div class="kpi-value"><span id="v261-gravel-7-15m">0</span> SKU ✅ 完全真空<br><small>真实竞争对手只在 1-3M (Element/Pacific/Exotic)<br>= FNIX/Phoenix 7-15M 独占窗口</small></div>
+          <div class="kpi-value" id="v261-gravel-7-15m-wrap">⏳ 加载中…<br><small>FNIX/Phoenix 砾石切入段</small></div>
         </div>
         <div class="kpi" style="border-left-color:#2e7d32">
           <div class="kpi-label">💎 Hybrid 7-15M</div>
-          <div class="kpi-value"><span id="v261-hybrid-7-15m">0</span> SKU ✅ 完全真空<br><small>Shopee 算法把健身车放前 = 真实自行车被淹没<br>= Phoenix "Hybrid" 关键词优化 = 体验优势</small></div>
+          <div class="kpi-value" id="v261-hybrid-7-15m-wrap">⏳ 加载中…<br><small>Phoenix "Hybrid" SEO 优势</small></div>
         </div>
+      </div>
+      <!-- V2.6.1 ID 全价段分布 (透明度, 2026-07-10 新增) -->
+      <div class="insight" style="margin-top:10px;background:rgba(33,150,243,.05);border-left-color:#1976d2">
+        <b>📊 ID 全价段分布（287 SKU 真实数据 · 防失真）：</b>
+        <span id="v261-id-bands-full">⏳ 加载中…</span>
       </div>
       <div class="insight" style="margin-top:14px">
         <b>🎯 V2.6.1 三蓝海品类火力集中（15 SKU）：</b>
@@ -284,7 +293,7 @@
       document.getElementById('bd-phx-detail').textContent = 'Donald 12,300 / Miracle 13,000 / Donald v2 13,500 / Tornado 13,700';
     }
 
-    // V2.6.1 ID 三蓝海品类 KPI（双平台实测）
+    // V2.6.1 ID 三蓝海品类 KPI（双平台实测）— 2026-07-10 改从 dashboard_metrics 读, 避免跨 Tab 失真
     const idPool = ((data.id && data.id.price_pool) || []).filter(it => (it.price || 0) > 0);
     const idBicycles = idPool.filter(it => {
       const t = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
@@ -294,25 +303,50 @@
     const idBrands = new Set(idBicycles.map(it => (it.brand || '').toLowerCase()).filter(b => b));
     document.getElementById('v261-id-pool').textContent = idBicycles.length;
     document.getElementById('v261-id-brands').textContent = idBrands.size;
-    // Roadbike 12-15M
-    const roadbike_rb = idBicycles.filter(it => {
-      const t = (it.model || '').toLowerCase();
-      return (t.includes('road') || t.includes('balap')) && (it.price || 0) >= 12e6 && (it.price || 0) < 15e6;
-    });
-    document.getElementById('v261-roadbike-12-15m').textContent = roadbike_rb.length;
+    // V2.6.1 品类 × 价段 (统一从 dashboard_metrics 读, 与 id/matrix.html#catOf 算法一致)
+    const dmMetrics = (data.dashboard_metrics || {});
+    const idCatXBand = dmMetrics.id_cat_x_band || {};
+    const idBandsFull = dmMetrics.id_bands_full || {};
+    // Roadbike 12-15M 真空
+    const rb1215 = (dmMetrics.id_road_bike_12_15m || {}).count || 0;
+    const rb1215Brands = (dmMetrics.id_road_bike_12_15m || {}).brands || [];
+    const rb1215Tag = rb1215 === 0 ? ' ✅ 完全真空' : (rb1215 <= 2 ? ' ≈ 几乎真空' : '');
+    document.getElementById('v261-roadbike-12-15m-wrap').innerHTML =
+      `<b>${rb1215}</b> SKU${rb1215Tag}<br><small>${rb1215Brands.slice(0,2).join(' / ') || '无品牌'}<br>= Phoenix 12-15M 切入点</small>`;
+    // Roadbike > 20M 红海 (新透明度, 2026-07-10)
+    const rbGt20 = (dmMetrics.id_road_bike_gt_20m || {}).count || 0;
+    const rbGt20Brands = (dmMetrics.id_road_bike_gt_20m || {}).brands || [];
+    const rbGt20Unique = [...new Set(rbGt20Brands.map(b => b.toLowerCase()))];
+    document.getElementById('v261-roadbike-gt20-wrap').innerHTML =
+      `<b>${rbGt20}</b> SKU<br><small>${rbGt20Unique.slice(0,4).join(' / ')}<br>= 进口旗舰已占, Phoenix 切 12-15M 错位</small>`;
     // Gravel 7-15M
-    const gravel_7_15 = idBicycles.filter(it => {
-      const t = (it.model || '').toLowerCase();
-      return (t.includes('gravel') || t.includes('hybrid') || t.includes('flatbar') || t.includes('jasper') ||
-              t.includes('strattos') || t.includes('sprinter')) && (it.price || 0) >= 7e6 && (it.price || 0) < 15e6;
-    });
-    document.getElementById('v261-gravel-7-15m').textContent = gravel_7_15.length;
+    const gr715 = (dmMetrics.id_gravel_7_15m || {}).count || 0;
+    const gr715Brands = (dmMetrics.id_gravel_7_15m || {}).brands || [];
+    const gr715Tag = gr715 === 0 ? ' ✅ 完全真空' : (gr715 <= 2 ? ' ≈ 几乎真空' : '');
+    document.getElementById('v261-gravel-7-15m-wrap').innerHTML =
+      `<b>${gr715}</b> SKU${gr715Tag}<br><small>${gr715Brands.slice(0,2).join(' / ') || '无品牌'}<br>= FNIX/Phoenix 7-15M 独占窗口</small>`;
     // Hybrid 7-15M
-    const hybrid_7_15 = idBicycles.filter(it => {
-      const t = (it.model || '').toLowerCase();
-      return t.includes('hybrid') && (it.price || 0) >= 7e6 && (it.price || 0) < 15e6;
-    });
-    document.getElementById('v261-hybrid-7-15m').textContent = hybrid_7_15.length;
+    const hy715 = (dmMetrics.id_hybrid_7_15m || {}).count || 0;
+    const hy715Brands = (dmMetrics.id_hybrid_7_15m || {}).brands || [];
+    const hy715Tag = hy715 === 0 ? ' ✅ 完全真空' : (hy715 <= 2 ? ' ≈ 几乎真空' : '');
+    document.getElementById('v261-hybrid-7-15m-wrap').innerHTML =
+      `<b>${hy715}</b> SKU${hy715Tag}<br><small>${hy715Brands.slice(0,2).join(' / ') || '无品牌 (Shopee 算法把健身车放前)'}<br>= Phoenix "Hybrid" SEO 优势</small>`;
+    // ID 全价段分布 (透明度)
+    if (Object.keys(idBandsFull).length > 0) {
+      const total = idBicycles.length;
+      const fmt = (band, name) => {
+        const c = (idBandsFull[band] || {}).count || 0;
+        const pct = total ? Math.round(c / total * 100) : 0;
+        return `<b style="color:${c === 0 ? '#c8102e' : (c <= 10 ? '#e65100' : '#666')}">${name}: ${c} SKU (${pct}%)</b>`;
+      };
+      document.getElementById('v261-id-bands-full').innerHTML =
+        fmt('id_lt_1m', '&lt;1M') + ' · ' +
+        fmt('id_1_7m', '1-7M') + ' · ' +
+        `<b style="color:#2e7d32">${fmt('id_7_15m', '7-15M')}</b>` + ' · ' +
+        fmt('id_15_20m', '15-20M') + ' · ' +
+        fmt('id_gt_20m', '&gt;20M') +
+        ` · <b>总 ${total} SKU (真自行车 · 排除健身车)</b>`;
+    }
     // Header 上 id-pool-total
     const idTotalAll = idPool.length;
     const el = document.querySelector('h2 .flag[style*="c8102e"] + ');
