@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-10T11:51:58+08:00",
+  "generated_at": "2026-07-10T11:57:54+08:00",
   "fetch_status": {
     "daraz_bd": "ok",
     "news_bd": "ok",
@@ -7747,7 +7747,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-10T11:51:58+08:00",
+  "gen_at": "2026-07-10T11:57:54+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-10T09:21:06+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
@@ -8080,7 +8080,7 @@
     ]
   },
   "dashboard_metrics": {
-    "computed_at": "2026-07-10T11:51:58+08:00",
+    "computed_at": "2026-07-10T11:57:54+08:00",
     "totals": {
       "bd_pool_total": 190,
       "bd_pool_priced": 190,
@@ -8252,9 +8252,9 @@
     "id_7_15m": {
       "count": 6,
       "brands": [
+        "United",
         "Pacific",
         "Element",
-        "United",
         "Sepeda"
       ]
     },
@@ -8262,49 +8262,49 @@
       "id_lt_1m": {
         "count": 78,
         "brands": [
-          "Push",
-          "SCOORA",
-          "Exotic",
-          "Balance",
-          "SEPEDA",
-          "[[",
-          "Sepeda",
           "Mmflight",
+          "SCOORA",
+          "[[",
+          "Push",
+          "Balance",
+          "BALANCE",
+          "SEPEDA",
           "Cuddlee",
-          "BALANCE"
+          "Sepeda",
+          "Exotic"
         ]
       },
       "id_1_7m": {
         "count": 192,
         "brands": [
           "JNE,Sicepat",
-          "Police",
-          "Pacific",
-          "SEPEDA",
-          "Fixie",
-          "Odessy",
-          "fixie",
           "sepeda",
-          "commuter",
+          "RB",
           "Polygon",
           "Evergreen",
-          "RB",
-          "【Anchi】",
-          "Road",
-          "MTB",
-          "Exotic",
-          "Element",
-          "Sepeda",
+          "Police",
           "Maximo",
-          "Atlantis"
+          "Pacific",
+          "Odessy",
+          "MTB",
+          "commuter",
+          "Sepeda",
+          "Exotic",
+          "Road",
+          "【Anchi】",
+          "Atlantis",
+          "Fixie",
+          "Element",
+          "fixie",
+          "SEPEDA"
         ]
       },
       "id_7_15m": {
         "count": 6,
         "brands": [
+          "United",
           "Pacific",
           "Element",
-          "United",
           "Sepeda"
         ]
       },
@@ -8317,14 +8317,14 @@
       "id_gt_20m": {
         "count": 9,
         "brands": [
-          "CAMP",
-          "Element",
-          "Trek",
-          "PINARELLO",
           "Roadbike",
-          "Sepeda",
+          "Element",
           "Sale",
-          "Pinarello"
+          "PINARELLO",
+          "Pinarello",
+          "Trek",
+          "Sepeda",
+          "CAMP"
         ]
       }
     },
@@ -8339,13 +8339,13 @@
           "Sepeda"
         ],
         "gt_20m_brands": [
-          "CAMP",
-          "Trek",
-          "PINARELLO",
           "Roadbike",
-          "Sepeda",
           "Sale",
-          "Pinarello"
+          "PINARELLO",
+          "Pinarello",
+          "Trek",
+          "Sepeda",
+          "CAMP"
         ],
         "12_15m_count": 1
       },
@@ -8399,13 +8399,13 @@
     "id_road_bike_gt_20m": {
       "count": 8,
       "brands": [
-        "CAMP",
-        "Trek",
-        "PINARELLO",
         "Roadbike",
-        "Sepeda",
         "Sale",
-        "Pinarello"
+        "PINARELLO",
+        "Pinarello",
+        "Trek",
+        "Sepeda",
+        "CAMP"
       ]
     },
     "id_top10_brands": [
@@ -8583,9 +8583,9 @@
         "rationale": "ID 7-15M 6 SKU 品牌 ['Element', 'United', 'Pacific', 'United', 'Sepeda', 'Sepeda']，无 SGS 中国品牌",
         "target_price": "Rp 9.5M",
         "id_competitors": [
+          "United",
           "Pacific",
           "Element",
-          "United",
           "Sepeda"
         ]
       },
