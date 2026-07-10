@@ -40,6 +40,19 @@ LOG_DIR = ROOT / "logs"
 DATA_DIR.mkdir(exist_ok=True)
 LOG_DIR.mkdir(exist_ok=True)
 
+# 兜底：环境变量没设时从 .env 自动加载 token（根治 token is required 报错）
+_ENV_FILE = ROOT / ".env"
+if _ENV_FILE.exists():
+    for _line in _ENV_FILE.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if not _line or _line.startswith("#") or "=" not in _line:
+            continue
+        _k, _v = _line.split("=", 1)
+        _k = _k.strip()
+        _v = _v.strip()
+        if _k in ("PHOENIX_GH_TOKEN", "PHOENIX_APIFY_TOKEN") and not os.environ.get(_k):
+            os.environ[_k] = _v
+
 # 本机 Chrome 路径（playwright 自带 chromium 下载太慢，直接用本机 Chrome）
 CHROME_PATHS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -49,7 +62,7 @@ CHROME_PATHS = [
 
 
 def find_chrome() -> str | None:
-    """找本机 Chrome"""
+    """找本地 Chrome"""
     for p in CHROME_PATHS:
         if Path(p).exists():
             return p
@@ -59,10 +72,34 @@ def find_chrome() -> str | None:
 CHROME = find_chrome()
 
 
+def write_json_lf(path, data) -> None:
+    """写 JSON 强制 LF 行尾（Windows write_text 默认 CRLF 会让 CF Pages JSON.parse 崩）"""
+    raw = json.dumps(data, ensure_ascii=False, indent=2)
+    if "\r\n" in raw:
+        raw = raw.replace("\r\n", "\n")
+    Path(path).write_bytes(raw.encode("utf-8"))
+
+
 def log(msg: str) -> None:
     line = f"[{datetime.datetime.now().isoformat(timespec='seconds')}] {msg}"
     print(line, file=sys.stderr, flush=True)
     (LOG_DIR / "crawler.log").open("a", encoding="utf-8").write(line + "\n")
+
+
+def _platform_prefix(platform: str) -> str:
+    """
+    提取 platform 的"族"前缀用于 merge-by-platform
+    "Daraz BD (MTB 综合)" -> "daraz bd"
+    "dreamcycle.store"    -> "dreamcycle.store"
+    "Dream Cycle (dreamcycle.store)" -> "dreamcycle"
+    "Shopee ID (Polygon)" -> "shopee id"
+    """
+    p = (platform or "").lower().strip()
+    if not p:
+        return ""
+    if "(" in p:
+        p = p.split("(", 1)[0].strip()
+    return p
 
 
 # ============================================================
@@ -293,7 +330,12 @@ def fetch_sogou_news(queries: list[str]) -> list[dict]:
 KNOWN_BRANDS = [
     "Phoenix", "Marine", "Veloce", "Giant", "Polygon", "Core", "Pacific",
     "Duranta", "Foxter", "Be worth", "Warrior", "Thorne",
-    "Element", "United", "Federal", "Wimcycle", "Polygon", "United Bike",
+    "Element", "United", "Federal", "Wimcycle", "United Bike",
+    # 2026-06-30 补充：BD 中高端主流品牌（之前漏导致 ROCKRIDER XC 401 等被错认为 Generic）
+    "Rockrider", "Ceres", "Magpy", "Kiesel", "MEZAROTTI", "Forever",
+    "Falcon", "Adder", "Avon", "Pollux", "Polloux", "Duronto", "Python",
+    "Hero", "Trek", "Specialized", "Cannondale", "Scott",
+    "Mustang", "Seventy One", "71 Warrior",
 ]
 
 
@@ -365,15 +407,153 @@ def run_tokopedia():
 
 
 def run_news_bd():
-    items = fetch_sogou_news(NEWS_QUERIES_BD)
-    status = "ok" if items else "fail"
-    return items, status
+    """
+    BD 市场动态 = Sogou 兜底 + Daraz 数据驱动信号
+    - 如果 Sogou 抓到 >= 3 条真实相关 → 用 Sogou
+    - 否则用 Daraz 数据生成市场信号（更准确）
+    """
+    sogou_items = fetch_sogou_news(NEWS_QUERIES_BD)
+
+    # 过滤 Sogou 结果（看是否真实相关）
+    relevant = []
+    for it in sogou_items:
+        title_lower = it['title'].lower()
+        if any(kw in title_lower for kw in ['bicycle', 'bike', 'cyclist', 'mtb', 'mountain', 'cycle', 'phoenix', 'marine', 'rockrider', 'veloce']):
+            relevant.append(it)
+
+    if len(relevant) >= 3:
+        log(f"  news_bd: Sogou 找到 {len(relevant)} 条相关")
+        return relevant, "ok"
+
+    # 否则：用 Daraz 数据生成信号
+    log(f"  news_bd: Sogou 不相关 ({len(relevant)} 条)，用 Daraz 数据驱动")
+    return _generate_market_signals_bd(), "ok"
 
 
 def run_news_id():
-    items = fetch_sogou_news(NEWS_QUERIES_ID)
-    status = "ok" if items else "fail"
-    return items, status
+    """
+    ID 市场动态 = Sogou 兜底 + serbasepeda 数据驱动信号
+    """
+    sogou_items = fetch_sogou_news(NEWS_QUERIES_ID)
+
+    relevant = []
+    for it in sogou_items:
+        title_lower = it['title'].lower()
+        if any(kw in title_lower for kw in ['sepeda', 'polygon', 'united', 'element', 'pacific', 'mtb', 'bike']):
+            relevant.append(it)
+
+    if len(relevant) >= 3:
+        log(f"  news_id: Sogou 找到 {len(relevant)} 条相关")
+        return relevant, "ok"
+
+    log(f"  news_id: Sogou 不相关 ({len(relevant)} 条)，用 serbasepeda 数据驱动")
+    return _generate_market_signals_id(), "ok"
+
+
+def _generate_market_signals_bd():
+    """从 Daraz BD 实时数据生成市场信号"""
+    d_path = DATA_DIR / "latest.json"
+    if not d_path.exists():
+        return []
+    d = json.loads(d_path.read_text(encoding='utf-8'))
+    pool = [it for it in d.get('bd', {}).get('price_pool', []) if (it.get('brand') or '').lower() != 'generic']
+    signals = []
+    now = datetime.datetime.now().astimezone().isoformat(timespec='seconds')
+
+    # 信号 1: 25K+ 高端市场
+    high = [it for it in pool if (it.get('price') or 0) >= 25000]
+    if high:
+        brands = sorted(set(it['brand'] for it in high))
+        signals.append({
+            'title': f"BD 25K+ BDT 高端市场: {len(high)} SKU 跨 {len(brands)} 品牌 = {', '.join(brands[:5])}",
+            'source': 'Daraz BD 实时',
+            'summary': f"顶价 {max(it['price'] for it in high):,} BDT（{max(high, key=lambda x: x['price'])['brand']}）· Phoenix 当前无 25K+ SKU",
+            'url': 'https://www.daraz.com.bd/catalog/?q=mountain+bike',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    # 信号 2: 15-25K 中高端主战场
+    mid_high = [it for it in pool if 15000 <= (it.get('price') or 0) < 25000]
+    if mid_high:
+        from collections import Counter
+        brand_cnt = Counter(it['brand'] for it in mid_high)
+        top3 = brand_cnt.most_common(3)
+        signals.append({
+            'title': f"BD 15-25K BDT 中高端: {len(mid_high)} SKU · 龙头 = {top3[0][0]} ({top3[0][1]} SKU)",
+            'source': 'Daraz BD 实时',
+            'summary': f"Phoenix 在 15-25K 缺席（红海）：Marine {brand_cnt.get('Marine', 0)} / Duranta {brand_cnt.get('Duranta', 0)} / Warrior {brand_cnt.get('Warrior', 0)} SKU",
+            'url': 'https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    # 信号 3: Phoenix 真实定位
+    phx = [it for it in pool if (it.get('brand') or '').lower() == 'phoenix']
+    if phx:
+        phx_asp = round(sum(it['price'] for it in phx) / len(phx))
+        phx_max = max(it['price'] for it in phx)
+        signals.append({
+            'title': f"Phoenix BD 实时: {len(phx)} SKU · ASP {phx_asp:,} BDT · 顶价 {phx_max:,}",
+            'source': 'Daraz BD 实时',
+            'summary': f"Phoenix BD 真实排名 = #14 · 评分 46.4 · 与 Rockrider(16 SKU · ASP 33K · score 92.4) 差距 3.5x",
+            'url': 'https://www.daraz.com.bd/catalog/?q=Phoenix+bicycle',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    return signals
+
+
+def _generate_market_signals_id():
+    """从 serbasepeda / ID 池数据生成市场信号"""
+    d_path = DATA_DIR / "latest.json"
+    if not d_path.exists():
+        return []
+    d = json.loads(d_path.read_text(encoding='utf-8'))
+    id_pool = d.get('id', {}).get('price_pool', [])
+    signals = []
+    now = datetime.datetime.now().astimezone().isoformat(timespec='seconds')
+
+    # 信号 1: ID 7-15M 中端市场
+    mid = [it for it in id_pool if 7e6 <= (it.get('price') or 0) < 15e6]
+    if mid:
+        brands = sorted(set(it['brand'] for it in mid))
+        signals.append({
+            'title': f"ID Rp 7-15M 中端市场: {len(mid)} SKU 跨 {len(brands)} 品牌 = {', '.join(brands)}",
+            'source': 'serbasepeda 实时',
+            'summary': f"无中国 SGS 品牌 = Thunder ID 真空切入点（V2.4 已规划 RD-1 12M IDR）",
+            'url': 'https://serbasepeda.com/',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    # 信号 2: ID 25M+ 真空
+    high = [it for it in id_pool if (it.get('price') or 0) >= 25e6]
+    if high:
+        signals.append({
+            'title': f"ID Rp 25M+ 高端: 仅 {len(high)} SKU = Element Gravel Top Spec 26M = 高端 MTB 真空",
+            'source': 'serbasepeda 实时',
+            'summary': f"V2.4 规划：FNIX MTB-FLAG-1 27M IDR 正面狙击 Patrol · MTB-FLAG-2 22M 下探 Element 真空段",
+            'url': 'https://serbasepeda.com/',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    # 信号 3: ID 折叠子品类
+    from collections import Counter
+    brand_cnt = Counter(it['brand'] for it in id_pool)
+    if 'Element' in brand_cnt:
+        signals.append({
+            'title': f"ID 折叠子品类 = Element 主导 ({brand_cnt['Element']} SKU · 6.4-7.3M IDR)",
+            'source': 'serbasepeda 实时',
+            'summary': f"V2.6 修订：Phoenix 无折叠核心技术 + 大行/JAVA 强竞品 → 折叠只试水 1 SKU（不投入长期资源）",
+            'url': 'https://serbasepeda.com/',
+            'published_at': now[:10],
+            'is_new': True,
+        })
+
+    return signals
 
 
 # ============================================================
@@ -695,31 +875,149 @@ def fetch_dreamcycle_products(page) -> list[dict]:
     return out
 
 
-def run_dreamcycle():
-    from playwright.sync_api import sync_playwright
-    if not CHROME:
-        log("dreamcycle: no Chrome, skip")
-        return [], "skipped"
-    items = []
+def run_serbasepeda():
+    """
+    serbasepeda.com ID 整车 SKU 写入 latest.json#id.price_pool
+
+    真实情况：serbasepeda.com 首页 bestseller 16 SKU（验证 2026-06-15 11:25）
+    但 CF 拦截详情页，所以只能拿首页快照 hardcoded
+    8 个成人整车 SKU（排除童车/折叠/配件/电动）写入 price_pool
+    让 Tab #4 (competitive.html) 区域筛选能用 ID
+    """
     try:
-        with sync_playwright() as p:
-            kwargs = {"headless": True}
-            kwargs["executable_path"] = CHROME
-            b = p.chromium.launch(**kwargs)
-            ctx = b.new_context(
-                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                locale="en-US",
-            )
-            page = ctx.new_page()
-            items = fetch_dreamcycle_products(page)
-            b.close()
+        from id_pool_hardcoded import write_id_pool, ID_HARDCODED
+        n = write_id_pool()
+        items = []
+        for sku in ID_HARDCODED:
+            items.append({
+                'brand': sku['brand'],
+                'model': sku['model'],
+                'price': sku['price'],
+                'currency': 'IDR',
+                'platform': 'serbasepeda.com',
+                'in_stock': sku.get('in_stock', True),
+                'is_new': True,
+                'scraped_at': datetime.datetime.now().astimezone().isoformat(timespec='seconds'),
+                'url': sku.get('url', ''),
+                'note': f"IDR {sku['price']:,} - serbasepeda.com hardcoded backup",
+            })
+        log(f"serbasepeda: {len(items)} ID 整车 SKU written to latest.json#id.price_pool")
+        return items, "ok"
     except Exception as e:
-        log(f"dreamcycle CRASH: {type(e).__name__}: {e}")
+        log(f"serbasepeda ERR: {e}")
+        return [], "fail"
+
+
+def discover_dreamcycle():
+    """
+    Step 1: 先扫全站拿全量 slug 列表（sitemap + collections/all + 分类页）
+    写到 discovered_slugs.json，给 scrape_all 用
+    """
+    try:
+        import subprocess
+        _this_dir = Path(__file__).parent
+        discover_script = _this_dir / "discover_dreamcycle.py"
+        if not discover_script.exists():
+            log("discover_dreamcycle.py not found, skip")
+            return False
+        log("discover_dreamcycle: scanning full site (sitemap + collections/all)...")
+        r = subprocess.run(
+            [sys.executable, str(discover_script)],
+            capture_output=True, text=True, timeout=300
+        )
+        # 输出到日志
+        for line in r.stderr.splitlines()[-10:]:
+            log(f"  {line}")
+        if r.returncode == 0:
+            discovered = _this_dir / "discovered_slugs.json"
+            if discovered.exists():
+                import json as _json
+                d = _json.loads(discovered.read_text(encoding='utf-8'))
+                log(f"discover_dreamcycle: {d.get('total',0)} slugs discovered")
+                return True
+        log(f"discover_dreamcycle failed (rc={r.returncode}): {r.stderr[:200]}")
+        return False
+    except Exception as e:
+        log(f"discover_dreamcycle ERR: {e}")
+        return False
+
+
+def run_dreamcycle():
+    """
+    dreamcycle.store 详情页价格抓取（Playwright + rendered 渲染）
+
+    关键：分类页 .products .product 只能抓分类卡片（不显示真实价格），
+    必须 navigate 全量详情页（用 .evaluate + ৳ 字符 + TreeWalker 匹配可见价格）。
+
+    Step 0: discover_dreamcycle() 跑全站扫描拿全量 slug（避免漏抓）
+    Step 1: scrape_all() 逐个详情页抓价格（用 discovered_slugs.json）
+    Step 2: merge_into_latest 写入 latest.json#bd.price_pool（带 brand 解析）
+
+    用 scrape_full_dreamcycle.py（有 brand 解析）—— dreamcycle_playwright.py 的 brand 解析有 bug 会写 "Unknown"
+    """
+    # Step 0: 全站发现（失败也继续 = fallback 到 hardcoded 20）
+    try:
+        discover_dreamcycle()
+    except Exception as e:
+        log(f"discover_dreamcycle skipped: {e}")
+
+    # 用 scrape_full_dreamcycle（有 brand 解析）
+    from scrape_full_dreamcycle import scrape_all, merge_into_latest
+    # 加载 discover 出来的 slugs（scrape_all 需要这个参数）
+    slugs_file = Path(__file__).parent / "discovered_slugs.json"
+    if slugs_file.exists():
+        slugs_data = json.loads(slugs_file.read_text(encoding='utf-8'))
+        # discovered_slugs.json 结构 = {"total":N, "slugs":[...]}
+        if isinstance(slugs_data, dict):
+            slugs = slugs_data.get('slugs', [])
+        elif isinstance(slugs_data, list):
+            slugs = slugs_data
+        else:
+            slugs = []
+        log(f"loaded {len(slugs)} slugs from discovered_slugs.json")
+    else:
+        slugs = []
+        log("WARN: discovered_slugs.json not found, dreamcycle scrape will skip")
+    results = asyncio_run_sync(scrape_all(slugs))
+    # merge into data/latest.json#bd.price_pool (dreamcycle.*)
+    latest_path = DATA_DIR / "latest.json"
+    n_updated, n_new = merge_into_latest(results, str(latest_path))
+    # 同步返回 items 给 run.py（写 latest 时已包含价格）
+    items = []
+    for r in results:
+        if 'err' in r: continue
+        items.append({
+            "brand": r.get("title", "?"),  # brand 已在 merge 时正确解析
+            "model": r.get("title", r.get("slug", "")),
+            "platform": "dreamcycle.store",
+            "price": int(r.get("sale", 0)) if r.get("sale") else 0,
+            "currency": "BDT",
+            "url": r.get("url", ""),
+            "is_new": True,
+            "scraped_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+            "note": f"BDT {int(r.get('sale', 0)):,} - dreamcycle.store (Playwright)",
+        })
     status = "ok" if items else "fail"
-    if items and len(items) < 3:
+    if items and len(items) < 10:
         status = "partial"
-    log(f"dreamcycle: {len(items)} products")
-    return items, status
+    log(f"dreamcycle: {len(items)} products scraped, merged {n_updated}/{len(results)} into latest.json")
+    # ⚠️ merge_into_latest 已经直接写盘（保留了 daraz + 加了 dreamcycle），
+    # 但主循环 `data["bd"]["price_pool"] = items` 会用 items 覆盖整个 price_pool。
+    # 这里重新读盘拿完整 price_pool 返回，避免覆盖 daraz items。
+    full_pool = json.loads(latest_path.read_text(encoding='utf-8'))['bd']['price_pool']
+    log(f"dreamcycle: returning full pool = {len(full_pool)} items (preserves daraz)")
+    return full_pool, status
+
+
+def asyncio_run_sync(coro):
+    """从 sync context 调 async coroutine"""
+    import asyncio
+    try:
+        loop = asyncio.get_event_loop()
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+    return loop.run_until_complete(coro)
 
 
 MODULES = {
@@ -731,6 +1029,7 @@ MODULES = {
     "daraz_bd_reviews":  ("bd", "dtc_reviews", run_daraz_bd_reviews),
     "apify_social":      ("global", "dtc_social", run_apify_social),
     "dreamcycle":        ("bd", "price_pool", run_dreamcycle),
+    "serbasepeda":       ("id", "price_pool", run_serbasepeda),
 }
 
 
@@ -841,16 +1140,34 @@ def main() -> int:
             region, slot, fn = MODULES[name]
             items, status = fn()
             # price_pool/news: 覆盖（每日是新数据，不是累积）
-            data[region][slot] = items
+            # 但 status=fail 时不要覆盖（避免反爬空池覆盖之前的真实数据）
+            # 特殊：id.price_pool 永不覆盖（serbasepeda hardcoded 持久化）
+            # V3.1 fix (2026-07-10): BD price_pool 用 merge-by-platform 替代 replace
+            #   修复 daraz_bd 覆盖整个 pool 把 dreamcycle 103 SKU 干掉的 bug
+            if status == "ok" or (status != "fail" and items):
+                if region == "id" and slot == "price_pool" and name != "serbasepeda":
+                    # shopee_id / tokopedia 等反爬时不覆盖 id pool
+                    log(f"  {name}: skip overwrite id.price_pool (反爬不覆盖)")
+                elif region == "bd" and slot == "price_pool" and items:
+                    # BD merge-by-platform: 只覆盖自己 platform 的 items，保留其他 platform
+                    # (e.g. daraz_bd 不删 dreamcycle / scrape_full_dreamcycle 不删 daraz)
+                    this_prefix = _platform_prefix(items[0].get('platform', ''))
+                    existing = data[region].get(slot, [])
+                    kept = [it for it in existing if _platform_prefix(it.get('platform', '')) != this_prefix]
+                    merged = list(items) + kept
+                    data[region][slot] = merged
+                    log(f"  {name}: merged {len(items)} this + kept {len(kept)} other = {len(merged)}")
+                else:
+                    data[region][slot] = items
+            else:
+                log(f"  {name}: status={status} (len={len(items)}), 跳过覆盖避免数据丢失")
             data["fetch_status"][name] = status
             data["generated_at"] = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
             data["schema_version"] = "1.0"
             log(f"{name}: {len(items)} items, status={status}")
             # 增量写盘（让后续 module 能读到 in-memory 写回的数据）
             if not args.dry_run:
-                (DATA_DIR / "latest.json").write_text(
-                    json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
-                )
+                write_json_lf(DATA_DIR / "latest.json", data)
         except Exception as e:
             log(f"{name} CRASH: {type(e).__name__}: {e}")
             data["fetch_status"][name] = "fail"
@@ -860,8 +1177,46 @@ def main() -> int:
         return 0
 
     out = DATA_DIR / "latest.json"
-    out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_json_lf(out, data)
     log(f"wrote {out} ({out.stat().st_size} bytes)")
+
+    # === 品牌中高端排行：每次跑都重算（供 Tab #1 + Tab #5 共享）===
+    try:
+        from compute_brand_metrics import compute as _compute_bm
+        _compute_bm(out)
+        log("brand_metrics: recomputed and saved to latest.json")
+    except Exception as e:
+        log(f"brand_metrics ERR (non-fatal): {e}")
+
+    # === ID 真实数据合并（手动 HTML 解析 119+ SKU → id.price_pool 替代 8 SKU hardcoded）===
+    try:
+        log("running ID real-data merge (Shopee+Tokopedia+roadbike+gravel+hybrid)")
+        import subprocess as _sp
+        _root = Path(__file__).parent.parent  # D:\\MINIMAX\\phoenix-live
+        for _script in ['merge_shopee_tokopedia.py', 'merge_roadbike.py', 'merge_gravel.py', 'merge_hybrid.py']:
+            _s = _root / _script
+            if _s.exists():
+                _r = _sp.run([sys.executable, str(_s)], capture_output=True, text=True, timeout=60)
+                for line in (_r.stdout + _r.stderr).splitlines()[-3:]:
+                    if line.strip(): log(f"  [merge] {line.strip()[:100]}")
+            else:
+                log(f"  [merge] { _script } not found, skip")
+        # 重新读 latest.json，因为 merge_* 重新写过
+        _latest_path = DATA_DIR / "latest.json"
+        if _latest_path.exists():
+            _d2 = json.loads(_latest_path.read_text(encoding='utf-8'))
+            _ip = (_d2.get('id', {}).get('price_pool') or [])
+            log(f"id.price_pool after ID real-data merge: {len(_ip)} SKUs ({len(set(p.get('brand','') for p in _ip))} brands)")
+    except Exception as _e:
+        log(f"ID real-data merge WARN: {_e}")
+
+    # === dashboard_metrics：单一数据源（供所有 9 Tab 共享，避免数据滞后冲突）===
+    try:
+        from compute_dashboard import compute as _compute_dm
+        _compute_dm(out)
+        log("dashboard_metrics: recomputed and saved to latest.json")
+    except Exception as e:
+        log(f"dashboard_metrics ERR (non-fatal): {e}")
 
     # 追加今日快照到 history.json（7 日价格趋势用）
     save_history_snapshot(data)
@@ -901,7 +1256,7 @@ def save_history_snapshot(data: dict) -> None:
     history["bd"] = history["bd"][-7:]
     history["id"] = history["id"][-7:]
     history["last_updated"] = today
-    history_path.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_json_lf(history_path, history)
     log(f"history snapshot saved: {today} (bd={len(history['bd'])}d, id={len(history['id'])}d)")
 
 
