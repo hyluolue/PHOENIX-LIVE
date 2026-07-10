@@ -1259,25 +1259,54 @@ function renderPricePool(elId, prices) {
 function cleanBrandForPool(it) {
   const brand = (it.brand || '').trim();
   const model = (it.model || '').trim();
-  // V2.6.1 印尼语通用词 blacklist (只检查 brand 字段, 不污染 model 里的描述)
-  const BL = ['sepeda','sepatu','bicycle','cycle','bike','bmx','stunt','fixie','road','roadbike','mountain','mtb','gravel','hybrid','folding','kid','kids','baby','child','spare','part','accessory','gear','komponen','helmet','lamp','lock','bottle','pump','sepeda statis','orbitrack','treadmill','spinning','edition','official','shop','size','speed','shimano','campagnolo','new','ori','asli','untuk','dengan','rem','ban','roda','kirim','limited','special','exclusive','commuter','jne','sicepat'];
-  const KB = ["Phoenix","Marine","Veloce","Giant","Polygon","Core","Pacific","Duranta","Foxter","Be worth","Warrior","Thorne","Element","United","Federal","Wimcycle","United Bike","Rockrider","Ceres","Magpy","Kiesel","MEZAROTTI","Forever","Falcon","Adder","Avon","Pollux","Polloux","Duronto","Python","Hero","Trek","Specialized","Cannondale","Scott","Mustang","Seventy One","71 Warrior","Maximo","Police","Twitter","Evergreen","TRINX","Odessy","Atlantis","Exotic","BXT","FNIX","JAVA","Triban","Firefox","BSA","Mach City","Velion","CENTRUM","Centrum","Morison","Axwil","ZEFIRO","RB"];
-  // 1. brand 字段是 KNOWN_BRANDS
+  // V2.6.1 印尼语通用词 blacklist (含 "Sale" "S-Works" 卖家错填 + 车型 + 物流)
+  const BL = ['sepeda','sepatu','bicycle','cycle','bike','bmx','stunt','fixie','road','roadbike','mountain','mtb','gravel','hybrid','folding','kid','kids','baby','child','spare','part','accessory','gear','komponen','helmet','lamp','lock','bottle','pump','sepeda statis','orbitrack','treadmill','spinning','edition','official','shop','size','speed','shimano','campagnolo','new','ori','asli','untuk','dengan','rem','ban','roda','kirim','limited','special','exclusive','commuter','jne','sicepat','sale','promo','diskon','baru','original','ori100%','ready','stock','ready stock','garansi','warranty','cicilan','cod','bayar','preorder','pre-order','pre order','hot','top','best','terlaris','termurah','termahal','murah','mahal','populer','recommended','rekomendasi'];
+  const KB = ["Specialized","S-Works","S-WORKS","Phoenix","Marine","Veloce","Giant","Polygon","Core","Pacific","Duranta","Foxter","Be worth","Warrior","Thorne","Element","United","Federal","Wimcycle","United Bike","Rockrider","Ceres","Magpy","Kiesel","MEZAROTTI","Forever","Falcon","Adder","Avon","Pollux","Polloux","Duronto","Python","Hero","Trek","Cannondale","Scott","Mustang","Seventy One","71 Warrior","Maximo","Police","Twitter","Evergreen","TRINX","Odessy","Atlantis","Exotic","BXT","FNIX","JAVA","Triban","Firefox","BSA","Mach City","Velion","CENTRUM","Centrum","Morison","Axwil","ZEFIRO","RB"];
+  // 0. 型号 → 品牌映射 (V2.6.1: 卖家 brand 错填时, 从 model 找真品牌)
+  const MODEL_MAP = [
+    {kw: 's-works', brand: 'Specialized'},
+    {kw: 'slr 9', brand: 'Specialized'},
+    {kw: 'slr9', brand: 'Specialized'},
+    {kw: 'tarmac', brand: 'Specialized'},
+    {kw: 'roubaix', brand: 'Specialized'},
+    {kw: 'allez', brand: 'Specialized'},
+    {kw: 'dogma', brand: 'Pinarello'},
+    {kw: 'madone', brand: 'Trek'},
+    {kw: 'domane', brand: 'Trek'},
+    {kw: 'emonda', brand: 'Trek'},
+    {kw: 'helios', brand: 'Polygon'},
+    {kw: 'strattos', brand: 'Polygon'},
+    {kw: 'xtrada', brand: 'Polygon'},
+    {kw: 'cascade', brand: 'Polygon'},
+    {kw: 'cayman', brand: 'Polygon'},
+    {kw: 'jasper', brand: 'Element'},
+    {kw: 'sprinter', brand: 'Pacific'},
+    {kw: 'veloce', brand: 'Pacific'},
+    {kw: 'cultur', brand: 'Pacific'},
+  ];
+  const mLow = model.toLowerCase();
+  for (const m of MODEL_MAP) {
+    if (mLow.includes(m.kw)) return m.brand;
+  }
+  // 1. brand 字段是 KNOWN_BRANDS (case-insensitive exact match)
   for (const kb of KB) {
     if (kb.toLowerCase() === brand.toLowerCase()) return kb;
   }
-  // 2. brand 字段是通用词 (Sepeda/MTB/Road 等), 从 model 找真品牌 (长品牌优先)
-  const isBl = BL.some(b => brand.toLowerCase().includes(b.toLowerCase()));
+  // 2. brand 字段是通用词 / 卖家错填 / encoding 错乱, 从 model 找真品牌 (长品牌优先)
+  const isBl = BL.some(b => brand.toLowerCase().includes(b.toLowerCase())) || /^[^\w]/.test(brand) || brand.length < 2;
   if (isBl) {
-    const text = model.toLowerCase();
+    const text = mLow;
     const sorted = [...KB].sort((a, b) => b.length - a.length);
     for (const kb of sorted) {
       if (text.includes(kb.toLowerCase())) return kb;
     }
     return 'Generic';
   }
-  // 3. 保留原值 (如果像真品牌: 长度≥2 + 字母开头)
-  if (brand && brand.length >= 2 && /^[A-Za-z]/.test(brand)) return brand;
+  // 3. brand 不在 KB 不在 BL - 也尝试从 model 找 (V2.6.1 修复: 卖家错填的 brand 不应保留)
+  const sorted = [...KB].sort((a, b) => b.length - a.length);
+  for (const kb of sorted) {
+    if (mLow.includes(kb.toLowerCase())) return kb;
+  }
   return 'Generic';
 }
 
