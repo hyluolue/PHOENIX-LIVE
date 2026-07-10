@@ -302,14 +302,25 @@ async function load() {
   const idAllPool = (data.id && data.id.price_pool || []).filter(it => (it.price || 0) > 0);
   const id715 = (data.dashboard_metrics && data.dashboard_metrics.id_7_15m) || {};
 
+  // V2.6.1 修复 (2026-07-10): 改用 dashboard_metrics 读, 不再硬编码 "0 SKU 完全真空"
   // 公路车 12-15M 真空
   const idRoad1215 = idAllPool.filter(it => {
     const t = (it.model || '').toLowerCase();
     const p = it.price || 0;
     return (t.includes('road') || t.includes('balap')) && p >= 12e6 && p < 15e6;
   });
+  // Road > 20M 进口红海 (透明度, 2026-07-10 新增)
+  const idRoadGt20 = idAllPool.filter(it => {
+    const t = (it.model || '').toLowerCase();
+    const p = it.price || 0;
+    return (t.includes('road') || t.includes('balap') || t.includes('racer')) && p >= 20e6;
+  });
+  const rbTag1215 = idRoad1215.length === 0 ? '完全真空' : (idRoad1215.length <= 2 ? '几乎真空' : '中端少量');
   document.getElementById('gap-road-12-15').innerHTML =
-    '<b>仅 ' + idRoad1215.length + ' SKU（CAMP SR5 14M 几乎真空）</b><br>Shopee 30 roadbike + Tokopedia 39 双平台实测<br>= Phoenix 公路车 12M 切入铁证';
+    '<b>' + idRoad1215.length + ' SKU ' + rbTag1215 + '</b>（' + (idRoad1215.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
+    '⚠ 但 &gt;20M 进口红海 ' + idRoadGt20.length + ' SKU（' + [...new Set(idRoadGt20.map(it => it.brand))].slice(0,4).join(' / ') + '）<br>' +
+    '= Phoenix 公路车 12-15M 中端错位切入铁证<br>' +
+    '（Shopee ' + idAllPool.filter(it => it.platform === 'Shopee ID (roadbike)').length + ' roadbike + Tokopedia ' + idAllPool.filter(it => it.platform === 'Tokopedia').length + ' 双平台实测）';
 
   // 平把公路 7-15M 真空
   const idFlatbar715 = idAllPool.filter(it => {
@@ -317,8 +328,11 @@ async function load() {
     const p = it.price || 0;
     return (t.includes('hybrid') || t.includes('flatbar')) && p >= 7e6 && p < 15e6;
   });
+  const fbTag = idFlatbar715.length === 0 ? '完全真空' : (idFlatbar715.length <= 2 ? '几乎真空' : '中端少量');
   document.getElementById('gap-flatbar-7-15').innerHTML =
-    '<b>0 SKU 完全真空</b><br>Shopee hybrid 18 SKU（去掉健身车 3 个）+ Tokopedia 39<br>7-15M IDR 段 0 SKU<br>= Phoenix 平把 8M + 平把 10M 切入铁证';
+    '<b>' + idFlatbar715.length + ' SKU ' + fbTag + '</b>（' + (idFlatbar715.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
+    'Shopee hybrid 15 SKU + Tokopedia 全池实测<br>7-15M IDR 段 ' + idFlatbar715.length + ' SKU<br>' +
+    '= Phoenix 平把 8M + 平把 10M 切入铁证';
 
   // 砾石车 7-15M 真空
   const idGravel715 = idAllPool.filter(it => {
@@ -326,8 +340,11 @@ async function load() {
     const p = it.price || 0;
     return t.includes('gravel') && p >= 7e6 && p < 15e6;
   });
+  const grTag = idGravel715.length === 0 ? '完全真空' : (idGravel715.length <= 2 ? '几乎真空' : '中端少量');
   document.getElementById('gap-gravel-7-15').innerHTML =
-    '<b>0 SKU 完全真空</b><br>Shopee gravel 18 SKU 中<br>7-15M IDR 段 0 SKU<br>= Phoenix 砾石 10M + 12M 切入铁证';
+    '<b>' + idGravel715.length + ' SKU ' + grTag + '</b>（' + (idGravel715.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
+    'Shopee gravel 15 SKU 中 7-15M ' + idGravel715.length + ' SKU<br>' +
+    '= Phoenix 砾石 10M + 12M 切入铁证';
 
   // 永久跳过品类
   document.getElementById('gap-skip-cat').innerHTML =
