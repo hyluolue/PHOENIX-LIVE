@@ -82,8 +82,8 @@
       <div class="nav">
       <a href="./index.html">🏠 总览</a>
       <a href="./daily.html">📅 市场日报</a>
-      <a href="./competitive.html">🏆 竞品监控</a>
-      <a href="./matrix.html" class="active">💎 产品矩阵</a>
+      <a href="./competitive.html" style="background:#5eead4;color:#1a1a2e">🏆 竞品监控 ← 合并了 #1 热力图</a>
+      <a href="./matrix.html" class="active" style="opacity:0.6">💎 产品矩阵 (部分已合并)</a>
       <a href="./market.html">🇮🇩 印尼</a>
       <a href="./tasks.html">🎯 任务 OKR</a>
       <a href="./dtc.html">💬 DTC 差评</a>
@@ -91,19 +91,11 @@
     </div>
     </div>
 
-        <div class="section">
-      <h2><span class="flag">🔥</span>1. 竞品覆盖热力图 <span class="small">（17 品牌 × 4 品类 = 谁在哪品类强）</span></h2>
-      <div class="legend">
-        <span style="background:#94a3b8">0 SKU = 真空</span>
-        <span style="background:#1565c0">1-2 SKU = 弱势</span>
-        <span style="background:#fbbf24;color:#000">3-5 SKU = 中等</span>
-        <span style="background:#ea580c">6-10 SKU = 强势</span>
-        <span style="background:#c8102e">10+ SKU = 统治</span>
-      </div>
-      <div class="heat-grid" id="heat-grid"></div>
-      <div class="insight">
-        <b>📊 热力图读法：</b>横轴 4 品类 = 公路 / 平把公路 / 砾石 / 折叠（V2.6.1 ID 三蓝海+折叠试水品类） · 纵轴 14 真品牌 · 色深 = SKU 数。
-        蓝海机会 = <span class="gap">大量空白格</span>（品牌未覆盖品类） · 红海 = <span class="hl">高密度区</span>（品牌内卷）。
+    <!-- 1. 竞品覆盖热力图 (2026-07-10 已合并到 id/competitive.html 顶部, 见下方提示) -->
+    <div class="section" style="background:rgba(94,234,212,.08);border-left:4px solid #5eead4">
+      <h2 style="color:#5eead4"><span class="flag">➡️</span>1. 竞品覆盖热力图 <span class="small" style="color:#94a3b8">已合并到 <a href="./competitive.html" style="color:#5eead4;text-decoration:underline">id/competitive.html</a> 顶部 → <a href="./competitive.html#heat-grid" style="color:#5eead4;text-decoration:underline">跳转到热力图</a></span></h2>
+      <div class="insight" style="background:rgba(94,234,212,.08);border-left:3px solid #5eead4;color:#fff;margin-top:14px">
+        <b style="color:#5eead4">📌 合并说明（V2.7 简化原则）：</b>竞品覆盖热力图 = 重复内容，<b>已并入 id/competitive.html 顶部"竞品覆盖热力图"section</b>（同源数据同款 JS = 单一来源）。本 Tab 仍保留 V2.6.1 ID 三蓝海品类真空识别（#2）+ Phoenix 覆盖诊断（#3）+ V2.6.1 战略详情（#4）。
       </div>
     </div>
 
