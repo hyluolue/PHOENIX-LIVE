@@ -428,12 +428,18 @@ h1{font-size:22px;font-weight:800}
 
     <div class="card">
 
-      <h2>🇮🇩 印尼价格池 <span class="small">V2.6.1 三蓝海对标竞品 + 进口参考 · 默认按价格降序</span></h2>
+      <h2>🇮🇩 印尼价格池 <span class="small">V2.6.1 三蓝海对标竞品（公路/平把/砾石 · MTB 永久跳过仅参考）</span></h2>
 
       <div style="display:flex;gap:6px;margin:8px 0;flex-wrap:wrap">
-        <button class="filter-btn active" data-pool-mode="target" style="padding:5px 12px;background:#2e7d32;color:#fff;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">🎯 对标竞品 7-15M</button>
-        <button class="filter-btn" data-pool-mode="premium" style="padding:5px 12px;background:rgba(255,255,255,.1);color:#94a3b8;border:1px solid #94a3b8;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">🏆 进口参考 &gt;15M (非对标)</button>
+        <span style="font-size:10px;color:#94a3b8;align-self:center;margin-right:4px">价段:</span>
+        <button class="filter-btn active" data-pool-mode="target" style="padding:5px 12px;background:#2e7d32;color:#fff;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">🎯 对标 7-15M</button>
+        <button class="filter-btn" data-pool-mode="premium" style="padding:5px 12px;background:rgba(255,255,255,.1);color:#94a3b8;border:1px solid #94a3b8;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">🏆 进口 &gt;15M</button>
         <button class="filter-btn" data-pool-mode="all" style="padding:5px 12px;background:rgba(255,255,255,.1);color:#94a3b8;border:1px solid #94a3b8;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">📊 全部</button>
+        <span style="width:1px;background:rgba(255,255,255,.2);margin:0 4px"></span>
+        <span style="font-size:10px;color:#94a3b8;align-self:center;margin-right:4px">品类:</span>
+        <button class="filter-btn-cat active" data-cat-mode="3b" style="padding:5px 12px;background:#1565c0;color:#fff;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">🚴 三蓝海</button>
+        <button class="filter-btn-cat" data-cat-mode="mtb" style="padding:5px 12px;background:rgba(255,255,255,.1);color:#94a3b8;border:1px solid #94a3b8;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">⛰️ MTB 仅参考</button>
+        <button class="filter-btn-cat" data-cat-mode="all" style="padding:5px 12px;background:rgba(255,255,255,.1);color:#94a3b8;border:1px solid #94a3b8;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer">📊 全品类</button>
       </div>
 
       <div id="id-prices">
@@ -690,6 +696,23 @@ function render() {
       btn.style.color = '#fff';
       btn.style.border = 'none';
       window._poolMode = btn.dataset.poolMode;
+      renderPricePool('id-prices', id);
+    });
+  });
+  // V2.6.1 品类过滤 (三蓝海 / MTB / 全部) 2026-07-10
+  document.querySelectorAll('.filter-btn-cat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn-cat').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'rgba(255,255,255,.1)';
+        b.style.color = '#94a3b8';
+        b.style.border = '1px solid #94a3b8';
+      });
+      btn.classList.add('active');
+      btn.style.background = '#1565c0';
+      btn.style.color = '#fff';
+      btn.style.border = 'none';
+      window._poolCatMode = btn.dataset.catMode;
       renderPricePool('id-prices', id);
     });
   });
@@ -1252,19 +1275,32 @@ function renderPricePool(elId, prices) {
     .filter(p => p._brand !== 'Generic' && p._brand !== 'Unknown');
   // V2.6.1 视图模式: target(7-15M 对标) / premium(>15M 进口参考) / all(全部)
   const mode = (window._poolMode || (elId === 'id-prices' ? 'target' : 'all'));
-  const filtered = mode === 'target' ? cleaned.filter(p => (p.price || 0) >= 7e6 && (p.price || 0) <= 15e6)
-                  : mode === 'premium' ? cleaned.filter(p => (p.price || 0) > 15e6)
-                  : cleaned;
+  let filtered = mode === 'target' ? cleaned.filter(p => (p.price || 0) >= 7e6 && (p.price || 0) <= 15e6)
+                : mode === 'premium' ? cleaned.filter(p => (p.price || 0) > 15e6)
+                : cleaned;
+  // V2.6.1 品类过滤 (2026-07-10): 默认 三蓝海 (road+hybrid+gravel) - MTB 永久跳过
+  const catMode = (window._poolCatMode || '3b');
+  function _catOf(p) {
+    const t = ((p.model||'') + ' ' + (p._brand||'')).toLowerCase();
+    if (t.match(/gravel|cyclocross|jasper|strattos|frc/)) return 'gravel';
+    if (t.match(/hybrid|commuter|flatbar|city|rochester/)) return 'hybrid';
+    if (t.match(/road|balap|racer/)) return 'road';
+    return 'mtb';
+  }
+  filtered = catMode === '3b' ? filtered.filter(p => ['road','hybrid','gravel'].includes(_catOf(p)))
+            : catMode === 'mtb' ? filtered.filter(p => _catOf(p) === 'mtb')
+            : filtered;
   const sorted = filtered.sort((a, b) => (b.price || 0) - (a.price || 0));
-  const modeLabel = mode === 'target' ? '🎯 对标竞品 (7-15M IDR)' : mode === 'premium' ? '🏆 进口参考 (>15M, 非对标)' : '📊 全部';
-  const modeNote = mode === 'premium' ? '<br><small style="color:#94a3b8">⚠️ Specialzed/Trek/Pinarello/CAMP 等进口旗舰不构成 Phoenix 12-15M 蓝海段对标 - 仅作市场天花板参考</small>' : '';
+  const modeLabel = mode === 'target' ? '🎯 对标 7-15M' : mode === 'premium' ? '🏆 进口 >15M' : '📊 全部';
+  const catLabel = catMode === '3b' ? '🚴 三蓝海 (road+hybrid+gravel)' : catMode === 'mtb' ? '⛰️ MTB 仅参考 (V2.6.1 永久跳过品类)' : '📊 全品类';
+  const modeNote = mode === 'premium' ? '<br><small style="color:#94a3b8">⚠️ Specialized/Trek/Pinarello/CAMP 进口旗舰不构成 Phoenix 12-15M 蓝海段对标 - 仅作市场天花板参考</small>' : '';
   const html = sorted.slice(0, 20).map(p => `<div class="price-item">
     <span class="brand" style="color:${p._brand.toLowerCase()==='phoenix'?'#c8102e':'#5eead4'}">${esc(p._brand)}</span>
     <span class="model" title="${esc(p.model)}">${esc(p.model)}</span>
     <span class="price">${esc((p.price || 0).toLocaleString())}</span>
     <span class="platform">${esc(p.platform)}</span>
   </div>`).join('');
-  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">${modeLabel} · 显示 ${Math.min(20, sorted.length)} / ${sorted.length} SKU（已过滤 ${prices.length - cleaned.length} 条无品牌 · 总 ${prices.length}）${modeNote}</div>`;
+  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">${modeLabel} × ${catLabel} · 显示 ${Math.min(20, sorted.length)} / ${sorted.length} SKU（已过滤 ${prices.length - cleaned.length} 条无品牌 · 总 ${prices.length}）${modeNote}</div>`;
 }
 
 function cleanBrandForPool(it) {
