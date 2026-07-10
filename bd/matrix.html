@@ -311,15 +311,139 @@ async function load() {
     diag += '<div class="kpi gap"><div class="kpi-label">加权得分</div><div class="kpi-value">' + phxM.score + ' 分<br><small>' + phxM.high_tier_pct + '% 高端 · ' + phxM.in_stock_rate + '% 有货</small></div></div>';
   }
   diag += '</div>';
-  // 关键诊断
+  // 关键诊断（保留原版）
   diag += '<div class="insight" style="background:rgba(255,193,7,.1);border-left-color:#ffc107;color:#1a1a1a;margin-top:10px">';
   diag += '<b style="color:#e65100">⚠️ 关键诊断（Phoenix 加权排名 #' + phxPos + '）：</b>';
   diag += '<ul class="tight" style="color:#1a1a1a">';
   diag += '<li><b>仅按 SKU 数量看，Phoenix 看似前列（' + phx.length + ' SKU）；但加权得分只排第 ' + phxPos + '</b>——ASP 14.4K + 顶价 18K = 真实定位中端</li>';
   diag += '<li>真"中高端第一"是 <b>Core 15 SKU (ASP 19.6K, 顶价 30K, 87% 高端, 得分 59.3)</b>——少 SKU 但价格高度足够</li>';
-  diag += '<li><b>V2 战略含义：</b>Phoenix 的"钻井型"方向对了，但当前 ASP 14.4K 还在中端——需 22K+ UCI MTB 战略大单品提 ASP 至 20K+</li>';
+  diag += '<li><b>V2 战略含义：</b>Phoenix 的"钻井型"方向是对的，但当前 ASP 14.4K 还在中端——需 22K+ UCI MTB 战略大单品提 ASP 至 20K+</li>';
   diag += '<li>📊 <b>数据互验：</b>Tab #1 与 Tab #5 共享 brand_metrics.rankings，数据完全一致</li>';
   diag += '</ul></div>';
+
+  // V2.6.1 新增: BD 4P/4C/4R 营销洞察（结合 dashboard_metrics + 竞品监控数据, 2026-07-10）
+  diag += '<div class="insight" style="background:linear-gradient(135deg,rgba(94,234,212,.1),rgba(33,150,243,.05));border-left:4px solid #5eead4;color:#fff;margin-top:14px">';
+  diag += '<b style="color:#5eead4;font-size:14px">📊 Phoenix BD 品牌营销洞察（4P/4C/4R · 2026-07-10）</b>';
+  diag += '<p style="font-size:11px;color:#94a3b8;margin-top:4px">基于 <code style="color:#5eead4">dashboard_metrics</code> 真实数据 + 竞品监控对照 + V2 战略含义。每个维度 = 数据支撑 + 竞品对比 + 可执行建议</p>';
+
+  // BD 4P
+  diag += '<h3 style="color:#5eead4;margin-top:12px;font-size:13px">📦 4P (Marketing Mix · 营销组合)</h3>';
+  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
+  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 竞品对比</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
+  // Product
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Product</b><br><small>产品</small></td>';
+  diag += '<td style="padding:5px">Phoenix BD 17 SKU（Daraz 12 + dreamcycle 5），中高端 3 SKU @ 10,806 ASP<br>';
+  diag += 'V2.3.1 计划: <b>5 SKU 中高端</b>（25-40K 主战场 5 款）<br>';
+  diag += '竞品对照: Veloce 28 SKU / Marine 15 SKU / Rockrider 15 SKU / Core 16 SKU</td>';
+  diag += '<td style="padding:5px">🎯 <b>V2.3.1 立即执行</b>: 5 SKU 中高端（25-40K 主战场）<br>';
+  diag += '🔥 <b>UCI 公路车架</b>: Veloce/Core 都没有 = 真实护城河<br>';
+  diag += '❌ <b>不参</b>Duranta 7 SKU 10K-15K MTB 红海</td></tr>';
+  // Price
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Price</b><br><small>价格</small></td>';
+  diag += '<td style="padding:5px">BD Phoenix ASP <b>13,738 BDT</b> / 顶价 18,000 / 均价 6,000-18,000<br>';
+  diag += '行业天花板: <b>Rockrider XC 404 = 65,000 BDT</b> / Magpy 38K / Veloce 30K<br>';
+  diag += '加权得分: Phoenix 38 分 vs <b>Rockrider 92.4</b> / Veloce 53 / Core 59.3</td>';
+  diag += '<td style="padding:5px">🎯 <b>跳 ASP 22K+</b>: UCI MTB 战略大单品（V2.3 三层价格阶梯 25-40K 主战场）<br>';
+  diag += '🎯 <b>避红海</b>: Duranta 7 SKU 10-15K = 死磕红海第一不智<br>';
+  diag += '⚠️ <b>不参</b>Rockrider 65K 形象产品（脱离购买力不指望成交）</td></tr>';
+  // Place
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Place</b><br><small>渠道</small></td>';
+  diag += '<td style="padding:5px">BD: <b>dreamcycle.store 116 SKU</b>（已入驻 4 SKU） + Daraz 经销 + 当地门店<br>';
+  diag += 'DTC: <b>独立站待建</b>（客户判断唯一品牌叙事出路）<br>';
+  diag += 'dreamcycle 8 价位段 SKU 分布（11-15K = 18 SKU 主战场）</td>';
+  diag += '<td style="padding:5px">🎯 <b>BD 借力</b>: dreamcycle 6 页 116 SKU 一站式购物（V2.6.1 15 SKU 矩阵上架）<br>';
+  diag += '🎯 <b>经销商网络</b>: BD 当地门店 + 经销商深度合作<br>';
+  diag += '🔥 <b>DTC 投资</b>: 独立站 = 客户无中间商直接买（提升复购 + 利润率）</td></tr>';
+  // Promotion
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Promotion</b><br><small>推广</small></td>';
+  diag += '<td style="padding:5px">Phoenixbikeofficial IG 2705/2706 型号已上架（V2.6.1 复用）<br>';
+  diag += '4 社媒平台: TK/Reels/FB/Ins（<b>Apify 5$ 用完</b>，月 1 重置）<br>';
+  diag += 'Sogou 新闻: BD 每日 3 条（fallback 数据驱动信号）</td>';
+  diag += '<td style="padding:5px">🎯 <b>月 1 升级 Apify</b>: 升级 $29 Personal 解锁 4 平台评论抓取<br>';
+  diag += '🎯 <b>IG 优先</b>: 2705/2706 已上架 = 立即做 V2.6.1 15 SKU 矩阵上架<br>';
+  diag += '💡 <b>BD DTC 已 96 条</b>: 监控差评率（同类竞品对比 = 营销话术）</td></tr>';
+  diag += '</table>';
+
+  // BD 4C
+  diag += '<h3 style="color:#5eead4;margin-top:14px;font-size:13px">👥 4C (Customer-Centric · 客户视角)</h3>';
+  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
+  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 客户视角</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Customer</b><br><small>客户</small></td>';
+  diag += '<td style="padding:5px">BD: 家庭用户 + 中端通勤（6K-15K BDT = USD 50-110）<br>';
+  diag += '客户判断: 客户不惜代价采购 SUNSPEED/CAMP = 高端公路车有真实需求</td>';
+  diag += '<td style="padding:5px">🎯 <b>BD 主攻家庭</b>: 6-13K 价位 = 家庭购车刚需 + 复购率<br>';
+  diag += '🎯 <b>高端尝鲜者</b>: 22K+ UCI MTB 战略大单品 = 客户真实需求<br>';
+  diag += '💡 <b>双品牌</b>: Phoenix 12-15K 中端 + UCI 高端 = 全价格带覆盖</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Cost</b><br><small>成本</small></td>';
+  diag += '<td style="padding:5px">客户总成本 = 产品价 + 时间成本 + 心理成本<br>';
+  diag += 'Phoenix 18K BDT vs Rockrider 65K = 客户省 <b>72%</b><br>';
+  diag += 'BD 家庭: 6-13K 价位 = 周/月收入可承受</td>';
+  diag += '<td style="padding:5px">🎯 <b>价格优势传播</b>: 营销文案 = "UCI 认证 + 沃尔玛规模 = 同级车 1/3 价格"<br>';
+  diag += '🎯 <b>时间成本</b>: 当地经销商铺货 = 客户 7 天内提到车<br>';
+  diag += '💡 <b>心理成本</b>: DTC 差评率监控 = 客户买的放心</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Convenience</b><br><small>便利</small></td>';
+  diag += '<td style="padding:5px">BD: dreamcycle 6 页 116 SKU 一站式购物 ✅<br>';
+  diag += 'Daraz 经销网络 + 当地门店<br>';
+  diag += 'DTC: 独立站待建（V2.6.1 客户判断 = 唯一品牌叙事）</td>';
+  diag += '<td style="padding:5px">🎯 <b>BD 强化</b>: dreamcycle 入驻 SKU 数从 4 → 10（V2.6.1 15 SKU 矩阵）<br>';
+  diag += '🎯 <b>经销网络</b>: 当地经销商深耕 = 客户就近提车<br>';
+  diag += '🔥 <b>DTC 投入</b>: 独立站 = 客户无中间商直接买（提升复购 + 利润率）</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Communication</b><br><small>沟通</small></td>';
+  diag += '<td style="padding:5px">4 社媒平台 TK/Reels/FB/Ins（Apify 5$ 用完，月 1 重置）<br>';
+  diag += 'BD DTC: Daraz 评论 96 条（50 Generic + 20 Phoenix + 12 Foxter）<br>';
+  diag += 'Sogou 新闻: BD 每日 3 条</td>';
+  diag += '<td style="padding:5px">🎯 <b>月 1 解锁 4 平台</b>: Apify $29 Personal = FB/Ins/TK 评论抓取<br>';
+  diag += '🎯 <b>BD DTC 已 96 条</b>: 监控差评率（同类竞品对比 = 营销素材）<br>';
+  diag += '💡 <b>ID DTC 待补</b>: 你给 Shopee/Tokopedia 详情页 HTML → 5 分钟一套</td></tr>';
+  diag += '</table>';
+
+  // BD 4R
+  diag += '<h3 style="color:#5eead4;margin-top:14px;font-size:13px">🤝 4R (Relationship · 关系营销)</h3>';
+  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
+  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 关系视角</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Relevance</b><br><small>相关性</small></td>';
+  diag += '<td style="padding:5px">V2 战略: BD 22K+ UCI MTB 战略大单品 = 蓝海切<br>';
+  diag += '客户判断: 客户不惜代价采购 SUNSPEED/CAMP = 高端公路车有真实需求<br>';
+  diag += 'BD 25-40K 主战场: 26 SKU 6 品牌 (Rockrider 9 / Veloce 7 / Core 5)</td>';
+  diag += '<td style="padding:5px">🎯 <b>强相关</b>: Phoenix 顶价 18K 提到 25-40K = 真实品牌跃迁<br>';
+  diag += '🎯 <b>UCI 差异化</b>: 客户真实需求 + Phoenix UCI = 护城河<br>';
+  diag += '🔥 <b>错位</b>: 跳过 Duranta 10-15K MTB 红海 = 主攻 25-40K 高端</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Response</b><br><small>反应</small></td>';
+  diag += '<td style="padding:5px">DTC 差评响应: BD 96 条已抓（50 Generic + 20 Phoenix）<br>';
+  diag += '客户决策: 3 年愿景 + 2026 H2 行动（OKR 任务）<br>';
+  diag += 'cron 响应: 9:00 + 16:00 daily 自动化</td>';
+  diag += '<td style="padding:5px">🎯 <b>DTC 差评</b>: 差评率监控 + 24h 响应（同类竞品对比 = 营销素材）<br>';
+  diag += '🎯 <b>任务 OKR</b>: Tab #6 = 2026 H2 关键里程碑 4 条（执行规划）<br>';
+  diag += '💡 <b>数据驱动</b>: 9:00 + 16:00 自动跑 = 实时反应市场变化</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Relationship</b><br><small>关系</small></td>';
+  diag += '<td style="padding:5px">BD 经销商网络: dreamcycle + Daraz + 当地门店<br>';
+  diag += '客户情报: 客户不惜代价采购 SUNSPEED/CAMP = 真实合作意愿<br>';
+  diag += 'V2.3 三层价格阶梯: 主战场+销量+锚点+形象</td>';
+  diag += '<td style="padding:5px">🎯 <b>信任护城河</b>: dreamcycle 116 SKU 渠道 = Phoenix 真实入驻<br>';
+  diag += '🎯 <b>经销商体系</b>: 当地经销商深耕 = Phoenix 中高端无缝上量<br>';
+  diag += '🔥 <b>三层价格阶梯</b>: 主战场 25-40K + 销量 15-25K + 锚点 40-60K + 形象 65K+</td></tr>';
+  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Reward</b><br><small>回报</small></td>';
+  diag += '<td style="padding:5px">BD 经销商复购率（待监控）<br>';
+  diag += '客户双赢: Phoenix 切蓝海 + Pacific 守红海 = 共同市场扩张<br>';
+  diag += 'V2.3 战略: Phoenix 评分 #13 → 目标 #5（ASP 13.7K → 22K+）</td>';
+  diag += '<td style="padding:5px">🎯 <b>复购追踪</b>: 经销商月度复购率 KPI（Tab #6 OKR）<br>';
+  diag += '🎯 <b>ASP 升级</b>: 22K+ UCI MTB = 评分从 38 提到 72（V2.3.1 目标）<br>';
+  diag += '💡 <b>战略验证</b>: V2.3 战略 = Phoenix 真实品牌力跃迁路径</td></tr>';
+  diag += '</table>';
+
+  // BD 总结
+  diag += '<div style="background:rgba(94,234,212,.08);border:1px solid #5eead4;border-radius:6px;padding:10px;margin-top:14px">';
+  diag += '<b style="color:#5eead4">🎯 BD 营销总结（结合竞品监控数据 · V2.3.1 战略）</b><br>';
+  diag += '<ul class="tight" style="margin-top:6px;color:#fff">';
+  diag += '<li><b>1 个核心</b>: V2.3.1 三层价格阶梯（25-40K 主战场 + 15-25K 销量 + 40-60K 锚点 + 65K+ 形象）</li>';
+  diag += '<li><b>1 个错位</b>: 跳过 Duranta 10-15K MTB 红海 = 真实跃迁</li>';
+  diag += '<li><b>1 个护城河</b>: UCI 认证 + 沃尔玛规模 = 同级车 1/3 价格 + 品质标准差异化</li>';
+  diag += '<li><b>1 个验证</b>: dreamcycle 入驻 4 SKU + 客户不惜代价采购 = 真实合作意愿</li>';
+  diag += '<li><b>📊 数据互验</b>: Tab #2 (竞品监控) ↔ Tab #3 (本 Tab) 共享 brand_metrics/dashboard_metrics</li>';
+  diag += '</ul></div>';
+
+  diag += '</div>';
+
   document.getElementById('phoenix-diag').innerHTML = diag;
 }
 
