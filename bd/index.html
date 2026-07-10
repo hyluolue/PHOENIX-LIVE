@@ -324,17 +324,22 @@
     document.getElementById('bd-gap-2').textContent = (bands.bd_gt_25k ? bands.bd_gt_25k.count : 0) + ' SKU';
 
     // 关键价格段洞察（统一从 dashboard_metrics 读）
+    // V2.6.1 修复 (2026-07-10 21:30): null-safe, 元素不存在时不抛错阻止后续渲染
+    function setHTML(id, html) {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    }
     if (bands.bd_15_25k) {
-      document.getElementById('bd-band-midhigh').innerHTML = `${bands.bd_15_25k.count} SKU · ${bands.bd_15_25k.brands_count} 品牌<br><small>${bands.bd_15_25k.top_5_brands.join(' / ')}</small>`;
+      setHTML('bd-band-midhigh', `${bands.bd_15_25k.count} SKU · ${bands.bd_15_25k.brands_count} 品牌<br><small>${bands.bd_15_25k.top_5_brands.join(' / ')}</small>`);
     }
     if (bands.bd_gt_25k) {
-      document.getElementById('bd-band-high').innerHTML = `${bands.bd_gt_25k.count} SKU · ${bands.bd_gt_25k.brands_count} 品牌<br><small>${bands.bd_gt_25k.top_5_brands.join(' / ')}${phxGap.gt_25k_brands.length > bands.bd_gt_25k.top_5_brands.length ? ' +' + (phxGap.gt_25k_brands.length - bands.bd_gt_25k.top_5_brands.length) : ''}</small>`;
+      setHTML('bd-band-high', `${bands.bd_gt_25k.count} SKU · ${bands.bd_gt_25k.brands_count} 品牌<br><small>${bands.bd_gt_25k.top_5_brands.join(' / ')}${phxGap.gt_25k_brands.length > bands.bd_gt_25k.top_5_brands.length ? ' +' + (phxGap.gt_25k_brands.length - bands.bd_gt_25k.top_5_brands.length) : ''}</small>`);
     }
     if (totals.phx_bd_mid_high !== undefined) {
-      document.getElementById('bd-phx-band').innerHTML = `${totals.phx_bd_mid_high} SKU · ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT<br><small>ASP ${totals.phx_bd_asp.toLocaleString()} · 顶价远低行业 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</small>`;
+      setHTML('bd-phx-band', `${totals.phx_bd_mid_high} SKU · ${totals.phx_bd_min.toLocaleString()} - ${totals.phx_bd_max.toLocaleString()} BDT<br><small>ASP ${totals.phx_bd_asp.toLocaleString()} · 顶价远低行业 ${phxGap.industry_max_price.toLocaleString()} (${phxGap.industry_max_brand})</small>`);
     }
     if (id715.count !== undefined) {
-      document.getElementById('id-band').innerHTML = `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`;
+      setHTML('id-band', `${id715.count} SKU · ${id715.brands.length} 品牌<br><small>${id715.brands.join(' / ')}</small>`);
     }
     // 战略洞察列表（统一从 dashboard_metrics 读 · 不再硬编码老数据）
     const dq = (data.data_quality || {}).level || 'green';
