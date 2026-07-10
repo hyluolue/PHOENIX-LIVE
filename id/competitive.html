@@ -176,7 +176,7 @@
     </div>
 
     <div class="footer">
-      数据来源：Daraz BD (74 SKU) / dreamcycle.store (113 SKU) / serbasepeda.com (8 ID 整车) / Sogou / OEC<br />
+      数据来源：<span id="footer-data-source">⏳ 加载中…</span><br />
       本页面为 Phoenix-Live Tab #2 · 竞品监控（🇧🇩 BD / 🇮🇩 ID 切换）· 每日 9:00 自动更新
     </div>
   </div>
@@ -314,11 +314,21 @@
       elMtbSkip.innerHTML = `<b style="color:#c8e6c9">完全跳过</b><br><small>客户已有 MTB 供应商<br>+ 4% 毛利红海不参与<br>= V2.6.1 客户判断</small>`;
     }
     if (elRoadVac) {
-      const id715 = dm.id_7_15m || {};
-      elRoadVac.innerHTML = `<b style="color:#c8e6c9">1 SKU 几乎真空</b><br><small>CAMP SR5 14M（唯一）<br>= Phoenix 公路车 12M 切入铁证</small>`;
+      // V2.6.1 修复 (2026-07-10): 从 dashboard_metrics 读, 不再硬编码 "1 SKU 几乎真空"
+      const rb1215 = (dm.id_road_bike_12_15m || {}).count || 0;
+      const rb1215Brands = (dm.id_road_bike_12_15m || {}).brands || [];
+      const rbGt20 = (dm.id_road_bike_gt_20m || {}).count || 0;
+      const rbTag = rb1215 === 0 ? '完全真空' : (rb1215 <= 2 ? '几乎真空' : '中端少量');
+      elRoadVac.innerHTML = `<b style="color:#c8e6c9">${rb1215} SKU ${rbTag}</b><br><small>${rb1215Brands.slice(0,2).join(' / ') || '无品牌'}<br>但 &gt;20M ${rbGt20} SKU 进口红海 (Pinarello/Trek)<br>= Phoenix 12-15M 错位切入铁证</small>`;
     }
     if (elGravelVac) {
-      elGravelVac.innerHTML = `<b style="color:#c8e6c9">0 SKU 完全真空</b><br><small>Shopee + Tokopedia 74 SKU<br>0 进入 7M+ 中端<br>= 平把 8M + 砾石 10M 切入点</small>`;
+      // V2.6.1 修复 (2026-07-10): 改读 metrics, 74 SKU 硬编码 → 真实 287 SKU
+      const gr715 = (dm.id_gravel_7_15m || {}).count || 0;
+      const hy715 = (dm.id_hybrid_7_15m || {}).count || 0;
+      const idPoolTotal = (dm.totals || {}).id_pool_total || 287;
+      const grBrands = (dm.id_gravel_7_15m || {}).brands || [];
+      const hyBrands = (dm.id_hybrid_7_15m || {}).brands || [];
+      elGravelVac.innerHTML = `<b style="color:#c8e6c9">Gravel ${gr715} / Hybrid ${hy715} SKU</b><br><small>Gravel 7-15M: ${grBrands.slice(0,2).join(' / ') || '无'}<br>Hybrid 7-15M: ${hyBrands.slice(0,2).join(' / ') || '无'}<br>= Shopee+Tokopedia ${idPoolTotal} SKU 双平台<br>平把 8M + 砾石 10M 切入点</small>`;
     }
     if (elIdTop) {
       const idTop10 = dm.id_top10_brands || [];
@@ -458,7 +468,17 @@
   document.getElementById('search').addEventListener('input', render);
 
   // V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
-  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
+  load().then(data => {
+    if (typeof renderQualityGate === "function") renderQualityGate(data);
+    // footer 数据源动态化 (V2.6.1 修复: 74 SKU 硬编码 → 真实数据, 2026-07-10)
+    const footerEl = document.getElementById('footer-data-source');
+    if (footerEl && data) {
+      const bdPool = (data.bd && data.bd.price_pool || []).length;
+      const idPool = (data.id && data.id.price_pool || []).length;
+      const fmt = (n) => n ? n.toLocaleString() : '?';
+      footerEl.textContent = `Daraz BD (${fmt(bdPool)} SKU) / Shopee+Tokopedia+serbasepeda (${fmt(idPool)} SKU) / Sogou news / OEC`;
+    }
+  });
 </script>
 <script src="../render_quality_gate.js"></script>
 </body>
