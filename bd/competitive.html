@@ -378,20 +378,24 @@
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
       ` · <span style="color:#c8102e">Phoenix 排名 #${phxPos}（${phxBm ? phxBm.score : '-'} 分）· 顶价 ${phxGap.phx_max_price ? phxGap.phx_max_price.toLocaleString() : '?'} vs 行业 ${phxGap.industry_max_price ? phxGap.industry_max_price.toLocaleString() : '?'} (${phxGap.industry_max_brand || '?'})</span>`;
 
-    // V2.1 蓝海 4 个 KPI 卡片
+    // V2.3.1 蓝海 4 个 KPI 卡片 (2026-07-15 修复: bands 字段从 bd_25_40k/bd_40_60k 改为 bd_gt_25k 等新字段)
     const elRed = document.getElementById('cmp-redsea');
     const elBlue = document.getElementById('cmp-blueocean');
     const elTop = document.getElementById('cmp-top');
     const elPhx = document.getElementById('cmp-phx');
     if (elRed) {
-      const redCount = (dm.bands && dm.bands.bd_25_40k) ? dm.bands.bd_25_40k.count : 25;
-      const redBrands = (dm.bands && dm.bands.bd_25_40k) ? dm.bands.bd_25_40k.brands_count : 7;
-      elRed.innerHTML = `<b>${redCount} SKU · ${redBrands} 品牌</b><br><small>Rockrider 8 / Veloce 7 / Core 5<br>= Phoenix 进去 = 价格战</small>`;
+      // 25-40K 红海 ≈ bd_gt_25k (全部 25K+)
+      const redCount = (dm.bands && dm.bands.bd_gt_25k) ? dm.bands.bd_gt_25k.count : 30;
+      const redBrands = (dm.bands && dm.bands.bd_gt_25k) ? dm.bands.bd_gt_25k.brands_count : 6;
+      elRed.innerHTML = `<b>${redCount} SKU · ${redBrands} 品牌</b><br><small>Rockrider 14 / Veloce 6 / Core 5<br>= Phoenix 进去 = 价格战</small>`;
     }
     if (elBlue) {
-      const blueCount = (dm.bands && dm.bands.bd_40_60k) ? dm.bands.bd_40_60k.count : 5;
-      const blueBrands = (dm.bands && dm.bands.bd_40_60k) ? dm.bands.bd_40_60k.brands_count : 5;
-      elBlue.innerHTML = `<b style="color:#c8e6c9">${blueCount} SKU · ${blueBrands} 品牌</b><br><small>Rockrider XC 越野 4 + Duranta 电动 1<br>= Phoenix 公路车 = 品类蓝海</small>`;
+      // 40-60K 真空 = 25K+ 顶价 30 SKU 中, 40K+ 子集
+      // 从 price_pool 动态算 (避免 dashboard_metrics 没有这个字段)
+      const pool40k = (allData.bd?.price_pool || []).filter(it => (it.price || 0) >= 40000);
+      const blueCount = pool40k.length;
+      const blueBrands = new Set(pool40k.map(it => it.brand)).size;
+      elBlue.innerHTML = `<b style="color:#c8e6c9">${blueCount} SKU · ${blueBrands} 品牌</b><br><small>Rockrider XC 越野 + Ceres 公路车<br>= Phoenix 公路车 = 品类蓝海</small>`;
     }
     if (elTop) {
       elTop.innerHTML = `<b>${(phxGap.industry_max_price || 65000).toLocaleString()} BDT</b><br><small>${phxGap.industry_max_brand || 'Rockrider'} XC 404<br>= 行业天花板</small>`;
@@ -504,15 +508,8 @@
     }).join('');
   }
 
-  // region tab 切换
-  // 单市场模式: BD 强制, 不支持切换 (用顶部 nav 切到 id/competitive.html)
-      btn.classList.add('active');
-      btn.style.background = btn.dataset.region === 'bd' ? '#1565c0' : '#2e7d32';
-      btn.style.color = '#fff';
-      window._currentRegion = btn.dataset.region;
-      render();
-    });
-  });
+  // region tab 切换 (BD 强制, 不支持切换, 用顶部 nav 切到 id/competitive.html)
+  // 注: 旧版保留了一段孤儿代码 (无 querySelectorAll 头), 已删除以免 script throw
   document.getElementById('search').addEventListener('input', render);
 
   // V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
