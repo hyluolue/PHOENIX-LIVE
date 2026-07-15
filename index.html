@@ -322,12 +322,15 @@
     const gr715Tag = gr715 === 0 ? ' ✅ 完全真空' : (gr715 <= 2 ? ' ≈ 几乎真空' : '');
     document.getElementById('v261-gravel-7-15m-wrap').innerHTML =
       `<b>${gr715}</b> SKU${gr715Tag}<br><small>${gr715Brands.slice(0,2).join(' / ') || '无品牌'}<br>= FNIX/Phoenix 7-15M 独占窗口</small>`;
-    // Hybrid 7-15M
+    // Hybrid 7-15M (V2.6.1 修复 2026-07-15: 标注"类目总数"避免"7-15M 真空"误导)
     const hy715 = (dmMetrics.id_hybrid_7_15m || {}).count || 0;
     const hy715Brands = (dmMetrics.id_hybrid_7_15m || {}).brands || [];
-    const hy715Tag = hy715 === 0 ? ' ✅ 完全真空' : (hy715 <= 2 ? ' ≈ 几乎真空' : '');
+    const hyTotal = ((dmMetrics.id_cat_x_band || {}).hybrid) || {};
+    const hyTotalCount = hyTotal.count || 0;
+    const hyTotalUnder7M = hyTotal['1_7m_count'] || 0;
+    const hy715Tag = hy715 === 0 ? ' ✅ 7-15M 真空' : (hy715 <= 2 ? ' ≈ 7-15M 几乎真空' : '');
     document.getElementById('v261-hybrid-7-15m-wrap').innerHTML =
-      `<b>${hy715}</b> SKU${hy715Tag}<br><small>${hy715Brands.slice(0,2).join(' / ') || '无品牌 (Shopee 算法把健身车放前)'}<br>= Phoenix "Hybrid" SEO 优势</small>`;
+      `<b>${hy715}</b> SKU${hy715Tag}<br><small>类目总数 ${hyTotalCount}（1-7M 段 ${hyTotalUnder7M}）<br>= Phoenix "Hybrid" SEO + 通勤切入</small>`;
     // ID 全价段分布 (透明度)
     if (Object.keys(idBandsFull).length > 0) {
       const total = idBicycles.length;
