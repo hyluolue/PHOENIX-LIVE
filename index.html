@@ -41,14 +41,19 @@
     .market-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
     .market-card.bd{border-left-color:#1565c0}
     .market-card.id{border-left-color:#2e7d32}
+    .market-card.priority{border-left-color:#ff9800;background:linear-gradient(135deg,#fff8e1 0%,#fff 100%)}
+    .market-card.skipped{border-left-color:#9e9e9e;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 10px,#f0f0f0 10px,#f0f0f0 20px);opacity:0.7}
     .market-card.planned{border-left-color:#9e9e9e;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 10px,#f5f5f5 10px,#f5f5f5 20px)}
+    .market-card.priority .opportunity{color:#e65100}
     .market-card.planned .opportunity{color:#666;font-style:italic}
     .market-card .head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
     .market-card .flag{font-size:32px}
     .market-card .title{font-size:18px;font-weight:800;color:#0d47a1;flex:1}
     .market-card.planned .title{color:#666}
     .market-card .status-tag{font-size:10px;padding:2px 8px;border-radius:3px;font-weight:700;background:#1b5e20;color:#a5d6a7}
+    .market-card.priority .status-tag{background:#ff9800;color:#fff}
     .market-card.planned .status-tag{background:#9e9e9e;color:#fff}
+    .market-card.skipped .status-tag{background:#9e9e9e;color:#fff;text-decoration:line-through}
     .market-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:12px}
     .market-card .row:last-of-type{border-bottom:none}
     .market-card .row .key{color:#666;font-weight:600}
@@ -63,7 +68,10 @@
     .market-card .link-row a:hover{background:#1976d2}
     .market-card .link-row a.green{background:#2e7d32}
     .market-card .link-row a.green:hover{background:#1b5e20}
+    .market-card.priority .link-row a{background:#ff9800}
+    .market-card.priority .link-row a:hover{background:#e65100}
     .market-card.planned .link-row a{background:#9e9e9e;pointer-events:none}
+    .market-card.skipped .link-row a{background:#9e9e9e;pointer-events:none;text-decoration:line-through}
   </style>
 </head>
 <body>
@@ -120,6 +128,30 @@
   </div>
   <div style="margin-top:8px;padding:6px 10px;background:rgba(0,0,0,.25);border-left:3px solid #fbbf24;border-radius:4px;font-size:11px;color:#e2e8f0;line-height:1.5">
     💡 <b style="color:#fbbf24">DTC 验证路径：</b>从 IG/Daraz/Shopee 差评 + 好评中拉消费者原话 → 找出 4 候选里<b style="color:#4caf50">哪个最符合消费者心智</b>
+  </div>
+</div>
+
+<!-- V2.9.12 (2026-07-15): 市场分层 4 层架构概览 (4 layers - user reflection 7/15) -->
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;padding:8px;background:rgba(0,0,0,.15);border-radius:10px">
+  <div style="background:linear-gradient(135deg,#1565c0,#0d47a1);color:#fff;padding:10px;border-radius:6px;border-left:4px solid #5eead4">
+    <div style="font-size:10px;font-weight:800;letter-spacing:1px">🥇 L1 · 主力验证</div>
+    <div style="font-size:13px;font-weight:900;margin-top:4px">🇧🇩 BD + 🇮🇩 ID</div>
+    <div style="font-size:10px;opacity:.9;line-height:1.3">凤凰认知度最高 · 已激活 · 模式验证</div>
+  </div>
+  <div style="background:linear-gradient(135deg,#ff9800,#e65100);color:#fff;padding:10px;border-radius:6px;border-left:4px solid #fbbf24">
+    <div style="font-size:10px;font-weight:800;letter-spacing:1px">🥈 L2 · 复制市场</div>
+    <div style="font-size:13px;font-weight:900;margin-top:4px">🇪🇬 EG + 🇮🇳 IN</div>
+    <div style="font-size:10px;opacity:.9;line-height:1.3">待 BD/ID 验证后启动</div>
+  </div>
+  <div style="background:linear-gradient(135deg,#9e9e9e,#616161);color:#fff;padding:10px;border-radius:6px;border-left:4px solid #bdbdbd">
+    <div style="font-size:10px;font-weight:800;letter-spacing:1px">🥉 L3 · 观察</div>
+    <div style="font-size:13px;font-weight:900;margin-top:4px">🇹🇭 TH + 🇵🇭 PH + 🇲🇾 MY</div>
+    <div style="font-size:10px;opacity:.9;line-height:1.3">暂缓（MY 华人是机会）</div>
+  </div>
+  <div style="background:linear-gradient(135deg,#b71c1c,#880e4f);color:#fff;padding:10px;border-radius:6px;border-left:4px solid #f48fb1">
+    <div style="font-size:10px;font-weight:800;letter-spacing:1px">⛔ L4 · 跳过</div>
+    <div style="font-size:13px;font-weight:900;margin-top:4px">🇻🇳 VN</div>
+    <div style="font-size:10px;opacity:.9;line-height:1.3">明确不投入</div>
   </div>
 </div>
 
@@ -227,6 +259,42 @@
         💡 <b>凤凰可复制性：</b>5 案例已证明东方美学 + 中国/民族文化 = 不同行业成功公式 = <b>自行车行业缺口</b>（闪电龙年 10 万+ 是已验证的自行车案例）· 凤凰作为<b style="color:#c8102e">百年民族品牌</b> = 文化资本 + 品牌积淀 = <b>应该比闪电做得更好更持续</b>
       </div>
     </div>
+    <!-- V2.9.12 (2026-07-15): 🇨🇳 印尼华人圈 = 凤凰"中国品牌出海"百年未有之大变局 -->
+    <div style="background:linear-gradient(135deg,rgba(200,16,46,.08) 0%,rgba(255,215,0,.06) 100%);border:2px solid #c8102e;padding:20px;border-radius:16px;margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+        <span style="font-size:32px">🇨🇳</span>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:18px;font-weight:900;color:#c8102e">印尼华人圈 = 凤凰"中国品牌出海"百年未有之大变局</div>
+          <div style="font-size:11px;color:#666;margin-top:2px">用户 7/15 关键洞察：印尼是全球华人最多国家（1000+ 万）+ 中国国力强大 = 凤凰在 ID 营销华人圈 = 顶级商业模式机会</div>
+        </div>
+        <span style="background:#fbbf24;color:#333;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:800">🇮🇩 ID 战略 P0</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px">
+        <div style="background:#fff;padding:14px;border-radius:10px;border-left:4px solid #c8102e">
+          <div style="font-size:11px;color:#c8102e;font-weight:800;letter-spacing:.5px">🇮🇩 印尼华人规模</div>
+          <div style="font-size:14px;font-weight:900;color:#0d47a1;margin:4px 0">1000+ 万 · 全球第一</div>
+          <div style="font-size:11px;color:#666;line-height:1.4">印尼华人占全球海外华人 <b style="color:#c8102e">40%</b> · 主要集中雅加达/泗水/棉兰 · 中产以上比例高</div>
+        </div>
+        <div style="background:#fff;padding:14px;border-radius:10px;border-left:4px solid #c8102e">
+          <div style="font-size:11px;color:#c8102e;font-weight:800;letter-spacing:.5px">🇲🇾 马来西亚华人</div>
+          <div style="font-size:14px;font-weight:900;color:#0d47a1;margin:4px 0">700+ 万 · 全球第二</div>
+          <div style="font-size:11px;color:#666;line-height:1.4">马来华人占全国 <b style="color:#c8102e">22.6%</b> · 文化保留度更高 · 凤凰民族品牌共鸣度极高</div>
+        </div>
+        <div style="background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#fff;padding:14px;border-radius:10px;border-left:4px solid #fff">
+          <div style="font-size:11px;color:#fff;font-weight:800;letter-spacing:.5px">🌍 全球海外华人</div>
+          <div style="font-size:14px;font-weight:900;color:#fff;margin:4px 0">5000+ 万</div>
+          <div style="font-size:11px;color:#fff;line-height:1.4">东南亚为主 + 欧美 550 万 · 中国国力强 → 华人文化自信 → 中国品牌 = 高级品</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.75);padding:14px;border-left:3px solid #c8102e;border-radius:6px;font-size:12px;color:#333;line-height:1.7;margin-bottom:10px">
+        💎 <b>核心洞察：</b>"<b style="color:#c8102e">顺中国国力强大 = 顺欧美品牌出海成功逻辑</b>" · 100 年前欧美国力强 → 欧美品牌（奔驰/宝马/可口可乐）出海成名牌 → 100 年后中国国力强 → 中国品牌（华为/比亚迪/凤凰）出海 = <b>顶级机会</b><br>
+        <b style="color:#c8102e">印尼华人圈 = 凤凰民族品牌的天然桥头堡</b>（文化共鸣度最高 + 中产消费力 + 中国文化自信）
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(200,16,46,.06) 0%,rgba(255,215,0,.04) 100%);padding:12px;border-left:3px solid #fbbf24;border-radius:6px;font-size:12px;color:#c8102e;line-height:1.7">
+        📌 <b>商业模式路径：</b>先打透 <b>🇮🇩 印尼华人圈</b>（1000+ 万高净值）→ 验证品牌叙事 + 文化共鸣 → 复制到 <b>🇲🇾 马来西亚华人</b>（700+ 万）→ 再扩展到 <b>🇪🇬 埃及 / 🇮🇳 印度</b> 主流市场<br>
+        <b style="color:#c8102e">V5 文化美学战略意义：</b>对华人圈 = "民族品牌文化共鸣" · 对本地穆斯林圈 = "本地文化融合（蜡染 batik）" = <b>双圈层同时打透</b>
+      </div>
+    </div>
     <!-- 全球 KPI 行 -->
     <div class="global-kpi" id="global-kpi">
       <div class="kpi"><div class="label">🌐 全球 SKU</div><div class="value" id="g-sku">—</div><div class="delta" id="g-sku-delta">跨 BD + ID 实时抓取</div></div>
@@ -243,8 +311,8 @@
 
     <div class="footer">
       数据来源：Daraz BD · dreamcycle.store · serbasepeda.com · Shopee ID · Tokopedia · dashboard_metrics 单一数据源<br />
-      本页面为 Phoenix-Live V2.9.1 · 基于 <b>埃森哲市场洞察五看方法论</b> (看宏观/看行业/看客户/看竞争/看自己) · 每日 9:00 + 16:00 自动更新<br />
-      未来扩展：在 <code>MARKETS</code> 数组加一行 + 配置数据源 + 启用 status 即可
+      本页面为 Phoenix-Live V2.9.12 · 基于 <b>埃森哲市场洞察五看方法论</b> (看宏观/看行业/看客户/看竞争/看自己) · 市场分层 4 层架构 (L1 主力 BD+ID / L2 复制 EG+IN / L3 观察 / L4 跳过 VN) · 每日 9:00 + 16:00 自动更新<br />
+      未来扩展：在 <code>MARKETS</code> 数组加一行 + 配置 dataKey + 启用 status (active/priority/planned/skipped) 即可
     </div>
   </div>
 
@@ -253,52 +321,63 @@
   const d = new Date();
   document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
 
-  /* V2.9.0 市场配置 - 数据驱动，未来加市场只改这里 */
-  /* status: active = 已激活（数据接入）/ planned = 已规划（待数据） */
+  /* V2.9.12 市场分层架构 - 用户 7/15 反思后重塑 */
+  /* Layer 1 主力验证 (active) → Layer 2 复制 (priority) → Layer 3 观察 (planned) → Layer 4 跳过 (skipped) */
+  /* 核心战略：BD + ID 是凤凰认知度最高的主战场 → 模式验证成功后再复制到 EG + IN */
   const MARKETS = [
+    // ===== Layer 1: 主力验证市场 (凤凰认知度最高，先打透) =====
     {
-      id: 'bd', name: '孟加拉 BD', flag: '🇧🇩', status: 'active',
+      id: 'bd', name: '孟加拉 BD', flag: '🇧🇩', status: 'active', layer: '主力验证',
       page: './bd/index.html', color: '#1565c0',
       dataKey: 'bd',
       opportunity: '<b>25-40K 高端 MTB</b> 真空 = Phoenix 顶价 18K → 25-40K = 真实品牌力跃迁（评分 #13 → 目标 #5）',
       funnel: { sku: 190, brands: 27, phx: 13, phxAsp: '14,239 BDT', gapCount: 1, topBand: '15-25K 中高端 62 SKU = 凤凰已 7 SKU 入门' }
     },
     {
-      id: 'id', name: '印尼 ID', flag: '🇮🇩', status: 'active',
+      id: 'id', name: '印尼 ID', flag: '🇮🇩', status: 'active', layer: '主力验证',
       page: './id/index.html', color: '#2e7d32',
       dataKey: 'id',
-      opportunity: '<b>三蓝海品类</b>：公路 12-15M（CAMP SR5 1 SKU 真空）+ 平把 7-15M（0 SKU 完全真空）+ 砾石 7-15M（0 SKU）= V2.6.1 15 SKU 火力集中',
+      opportunity: '<b>三蓝海品类</b>：公路 12-15M + 平把 7-15M（0 SKU 真空）+ 砾石 7-15M = V2.6.1 15 SKU 火力集中 + 🇨🇳 <b>1000+ 万印尼华人</b>= 文化共鸣度最高的金矿',
       funnel: { sku: 141, brands: 35, phx: 0, phxAsp: '未入场', gapCount: 3, topBand: '7-15M 中端 6 SKU = 4 品牌 (Element/Pacific/Sepeda/United)' }
     },
+    // ===== Layer 2: 复制市场 (BD/ID 模式成功后再复制) =====
     {
-      id: 'vn', name: '越南 VN', flag: '🇻🇳', status: 'planned',
-      page: '#', color: '#9e9e9e',
-      opportunity: '待评估：东南亚第二大自行车市场（年产 1.2M 辆），本土品牌 Thong Nhat / Asama / Anbico · 数据源待接入',
-      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '数据未接入' }
+      id: 'eg', name: '埃及 EG', flag: '🇪🇬', status: 'priority', layer: '复制市场',
+      page: '#', color: '#ff9800',
+      opportunity: '<b>非洲 + 中东 + 欧洲三大市场枢纽</b> · 开罗 2500 万人口辐射 · <b>穆斯林文化</b>设计涂装可复用 BD/ID 模式 · 数据源待接入',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '待 BD/ID 验证后启动' }
     },
     {
-      id: 'th', name: '泰国 TH', flag: '🇹🇭', status: 'planned',
+      id: 'in', name: '印度 IN', flag: '🇮🇳', status: 'priority', layer: '复制市场',
+      page: '#', color: '#ff9800',
+      opportunity: '<b>南亚最大市场</b> · 公路车品类空白（Hero / Firefox 本土主导但公路弱）· 凤凰 <b>UCI 认证差异化</b>机会 · 数据源待接入',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '待 BD/ID 验证后启动' }
+    },
+    // ===== Layer 3: 观察市场 (暂缓) =====
+    {
+      id: 'th', name: '泰国 TH', flag: '🇹🇭', status: 'planned', layer: '观察',
       page: '#', color: '#9e9e9e',
-      opportunity: '待评估：泰国自行车协会 + Bangkok Cycle Show 渠道 · 本土品牌 Grand Sport / United / Anchor · 数据源待接入',
-      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '数据未接入' }
+      opportunity: '泰国自行车协会 + Bangkok Cycle Show 渠道 · 本土品牌 Grand Sport / United / Anchor 强势 · 暂缓评估',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '暂缓' }
     },
     {
-      id: 'ph', name: '菲律宾 PH', flag: '🇵🇭', status: 'planned',
+      id: 'ph', name: '菲律宾 PH', flag: '🇵🇭', status: 'planned', layer: '观察',
       page: '#', color: '#9e9e9e',
-      opportunity: '待评估：菲律宾自行车进口市场 USD 80M (2023) · 骑行者基数大 · 本土品牌薄弱 · 数据源待接入',
-      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '数据未接入' }
+      opportunity: '菲律宾自行车进口市场 USD 80M (2023) · 本土品牌薄弱 · 暂缓评估',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '暂缓' }
     },
     {
-      id: 'eg', name: '埃及 EG', flag: '🇪🇬', status: 'planned',
+      id: 'my', name: '马来西亚 MY', flag: '🇲🇾', status: 'planned', layer: '观察',
       page: '#', color: '#9e9e9e',
-      opportunity: '待评估：非洲 + 中东 + 欧洲三大市场枢纽，开罗 2500 万人口辐射 · 本土品牌 Arab Phoenix / Gazelle MEA · 数据源待接入',
-      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '数据未接入' }
+      opportunity: '🇲🇾 <b>700+ 万华人</b>= 第二大华人市场（仅次于印尼）· 凤凰民族品牌文化共鸣度高 · 暂缓（先打透印尼华人圈）',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '华人圈机会' }
     },
+    // ===== Layer 4: 明确跳过 =====
     {
-      id: 'in', name: '印度 IN', flag: '🇮🇳', status: 'planned',
+      id: 'vn', name: '越南 VN', flag: '🇻🇳', status: 'skipped', layer: '跳过',
       page: '#', color: '#9e9e9e',
-      opportunity: '待评估：南亚最大市场 · 公路车品类空白（Hero / Firefox 本土主导但公路弱）· 凤凰 UCI 认证差异化机会 · 数据源待接入',
-      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '数据未接入' }
+      opportunity: '<b>明确不投入：</b>本土品牌 Thong Nhat / Asama / Anbico 强势 + 凤凰认知度低 · 资源聚焦 BD/ID/EG/IN',
+      funnel: { sku: 0, brands: 0, phx: 0, phxAsp: '—', gapCount: 0, topBand: '明确不参与' }
     }
   ];
 
@@ -371,14 +450,23 @@
     // 渲染市场 card
     const grid = document.getElementById('market-grid');
     let html = '';
+    const statusMap = {
+      active: { tag: '✓ 激活', short: 'active' },
+      priority: { tag: '🔥 优先', short: 'priority' },
+      planned: { tag: '○ 规划', short: 'planned' },
+      skipped: { tag: '⏭ 跳过', short: 'skipped' }
+    };
     MARKETS.forEach(m => {
+      const st = statusMap[m.status] || statusMap.planned;
       const isActive = m.status === 'active';
+      const isPriority = m.status === 'priority';
       html += `<div class="market-card ${m.id} ${m.status}">
         <div class="head">
           <span class="flag">${m.flag}</span>
           <span class="title">${m.name}</span>
-          <span class="status-tag">${isActive ? '✓ 激活' : '○ 规划中'}</span>
+          <span class="status-tag">${st.tag}</span>
         </div>
+        <div style="font-size:9px;color:#666;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px;margin-bottom:8px;display:inline-block;font-weight:600">📍 ${m.layer}</div>
         <div class="row"><span class="key">SKU 总数</span><span class="val">${fmt(m.funnel.sku)}</span></div>
         <div class="row"><span class="key">真品牌数</span><span class="val">${fmt(m.funnel.brands)}</span></div>
         <div class="row"><span class="key">Phoenix SKU</span><span class="val ${m.funnel.phx > 0 ? 'phoenix' : ''}">${fmt(m.funnel.phx)}</span></div>
@@ -387,7 +475,7 @@
         <div class="row"><span class="key">最大价位带</span><span class="val">${m.funnel.topBand}</span></div>
         <div class="opportunity">${m.opportunity}</div>
         <div class="link-row">
-          ${isActive ? `<a href="${m.page}">📊 完整市场 →</a><a class="green" href="${m.page.replace('/index.html', '/matrix.html')}">💎 产品矩阵</a><a class="green" href="${m.page.replace('/index.html', '/competitive.html')}">🏆 竞品监控</a>` : `<a>📊 完整市场 (待激活)</a><a>💎 产品矩阵 (待激活)</a><a>🏆 竞品监控 (待激活)</a>`}
+          ${isActive ? `<a href="${m.page}">📊 完整市场 →</a><a class="green" href="${m.page.replace('/index.html', '/matrix.html')}">💎 产品矩阵</a><a class="green" href="${m.page.replace('/index.html', '/competitive.html')}">🏆 竞品监控</a>` : isPriority ? `<a>📊 完整市场 (待 BD/ID 验证)</a><a>💎 产品矩阵 (待启动)</a><a>🏆 竞品监控 (待启动)</a>` : `<a>📊 完整市场 (${st.tag})</a><a>💎 产品矩阵 (${st.tag})</a><a>🏆 竞品监控 (${st.tag})</a>`}
         </div>
       </div>`;
     });
