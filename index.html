@@ -70,14 +70,15 @@
   <!-- 顶部 banner -->
   <div style="display:flex;align-items:center;padding:14px 18px;background:linear-gradient(90deg,rgba(21,101,192,.1) 0%,rgba(46,125,50,.1) 100%);border-bottom:1px solid rgba(94,234,212,.2);margin-bottom:18px">
     <strong style="margin-right:8px;color:#fff;font-size:13px">🌍 Phoenix-Live V2.9.0 ·</strong>
-    <span style="font-size:11px;color:#94a3b8">全球机会点 × 市场（凤凰视角）· BD + ID 已激活 · 未来扩展 VN / TH / PH 等</span>
+    <span style="font-size:11px;color:#94a3b8">基于 <b style="color:#5eead4">埃森哲市场洞察五看方法论</b> · 全球机会点 × 市场 · BD + ID 已激活 · 未来扩展 VN / TH / PH 等</span>
   </div>
 
   <div class="container">
     <div class="header">
       <div class="logo">P</div>
       <div>
-        <h1>🌍 Phoenix 全球自行车市场 · 机会点</h1>
+        <h1>🌍 Phoenix 全球作战室 · 五看方法论</h1>
+      <div style="font-size:12px;color:#5eead4;font-weight:600;margin-top:4px">看宏观 · 看行业 · 看客户 · 看竞争 · 看自己</div>
         <div class="subtitle">凤凰品牌全球扩张地图 · <span id="date"></span> · 每日 9:00 + 16:00 自动更新</div>
       </div>
       <div class="nav">
@@ -101,6 +102,35 @@
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
+    
+    <!-- V2.9.1 (2026-07-15): 埃森哲五看方法论导航卡 -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:20px;background:rgba(94,234,212,.06);padding:14px;border-radius:12px;border:1px solid rgba(94,234,212,.2)">
+      <a href="./strategy.html" style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:14px 10px;border-radius:8px;text-decoration:none;color:#fff;border-left:4px solid #5eead4;transition:transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size:11px;color:#5eead4;font-weight:800;letter-spacing:.5px">1. 看宏观</div>
+        <div style="font-size:13px;font-weight:800;color:#fff;margin-top:4px">PEST 趋势</div>
+        <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">政治·经济·社会·技术<br>行业风向标</div>
+      </a>
+      <a href="./daily-report.html" style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:14px 10px;border-radius:8px;text-decoration:none;color:#fff;border-left:4px solid #1565c0;transition:transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size:11px;color:#5eead4;font-weight:800;letter-spacing:.5px">2. 看行业</div>
+        <div style="font-size:13px;font-weight:800;color:#fff;margin-top:4px">8 板块数据看板</div>
+        <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">价格·容量·机会<br>社媒·新闻</div>
+      </a>
+      <a href="./dtc.html" style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:14px 10px;border-radius:8px;text-decoration:none;color:#fff;border-left:4px solid #ff9800;transition:transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size:11px;color:#5eead4;font-weight:800;letter-spacing:.5px">3. 看客户</div>
+        <div style="font-size:13px;font-weight:800;color:#fff;margin-top:4px">DTC 差评 + 客户行为</div>
+        <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">差评率·好评率<br>用户画像</div>
+      </a>
+      <a href="./competitive.html" style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:14px 10px;border-radius:8px;text-decoration:none;color:#fff;border-left:4px solid #c8102e;transition:transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size:11px;color:#5eead4;font-weight:800;letter-spacing:.5px">4. 看竞争</div>
+        <div style="font-size:13px;font-weight:800;color:#fff;margin-top:4px">竞品监控 (热力图 + KPI)</div>
+        <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">品牌矩阵·4P<br>微观 + 宏观</div>
+      </a>
+      <a href="./product-matrix.html" style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:14px 10px;border-radius:8px;text-decoration:none;color:#fff;border-left:4px solid #9c27b0;transition:transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size:11px;color:#5eead4;font-weight:800;letter-spacing:.5px">5. 看自己</div>
+        <div style="font-size:13px;font-weight:800;color:#fff;margin-top:4px">产品矩阵 (Phoenix 自检)</div>
+        <div style="font-size:10px;color:#94a3b8;margin-top:4px;line-height:1.4">SKU 诊断·技术资产<br>关键差距·研发方向</div>
+      </a>
+    </div>
     <!-- 全球 KPI 行 -->
     <div class="global-kpi" id="global-kpi">
       <div class="kpi"><div class="label">🌐 全球 SKU</div><div class="value" id="g-sku">—</div><div class="delta" id="g-sku-delta">跨 BD + ID 实时抓取</div></div>
@@ -117,7 +147,7 @@
 
     <div class="footer">
       数据来源：Daraz BD · dreamcycle.store · serbasepeda.com · Shopee ID · Tokopedia · dashboard_metrics 单一数据源<br />
-      本页面为 Phoenix-Live V2.9.0 · 全球机会点 × 市场 · 每日 9:00 + 16:00 自动更新<br />
+      本页面为 Phoenix-Live V2.9.1 · 基于 <b>埃森哲市场洞察五看方法论</b> (看宏观/看行业/看客户/看竞争/看自己) · 每日 9:00 + 16:00 自动更新<br />
       未来扩展：在 <code>MARKETS</code> 数组加一行 + 配置数据源 + 启用 status 即可
     </div>
   </div>
