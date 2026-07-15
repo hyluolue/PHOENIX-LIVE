@@ -106,3 +106,13 @@ ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
 /* 数据失真模块遮罩（仅 RED 时启用） */
 .dq-degraded{position:relative;opacity:.5;pointer-events:none}
 .dq-degraded::after{content:"⚠️ 核心数据失真";position:absolute;top:8px;right:8px;background:#c8102e;color:#fff;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;z-index:5;pointer-events:auto}
+
+/* V2.6.1 修复 (2026-07-15): heat-grid 竞品覆盖热力图排版 */
+.heat-grid{display:grid;grid-template-columns:120px repeat(4,1fr);gap:4px;margin:12px 0;align-items:stretch}
+.heat-label{padding:8px 10px;background:rgba(255,255,255,.06);border-radius:4px;font-size:11px;font-weight:700;color:#cbd5e1;display:flex;align-items:center;min-height:36px}
+.heat-label.phoenix{color:#c8102e;font-weight:800}
+.heat-cell{padding:10px 6px;border-radius:4px;text-align:center;font-size:11px;line-height:1.4;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60px;color:#fff;font-weight:600;transition:transform .15s}
+.heat-cell:hover{transform:scale(1.08);z-index:2;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.heat-cell .cnt{font-size:18px;font-weight:800;line-height:1}
+.heat-cell .lbl{font-size:9px;margin-top:2px;opacity:.85;text-transform:uppercase;letter-spacing:.3px}
+.heat-cell.strong{box-shadow:0 0 0 2px rgba(255,255,255,.4)}
