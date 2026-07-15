@@ -4,19 +4,14 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>产品矩阵 · Phoenix-Live</title>
+<title>产品矩阵 · Phoenix ID</title>
   <link rel="stylesheet" href="../shared.css">
 <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);min-height:100vh;color:#fff;padding:20px}
     a{color:#9ec5fe;text-decoration:none}
     a:hover{text-decoration:underline}
-    .nav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px auto}
-    .nav a{padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px;font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
-    .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
-    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
-    .refresh-btn:hover{background:#1976d2}
-    .container{max-width:1200px;margin:0 auto}
+    .container{max-width:1400px;margin:0 auto}
     .header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
     .logo{width:48px;height:48px;background:#c8102e;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0}
     h1{font-size:22px;font-weight:800}
@@ -26,497 +21,321 @@
     .nav a.active,.nav a:hover{background:#5eead4;color:#1a1a2e;text-decoration:none}
     .back-link{font-size:12px;color:rgba(255,255,255,.7);margin-left:auto;padding:6px 12px;background:rgba(255,255,255,.1);border-radius:8px}
     .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
-    .section.dark{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #c8102e}
-    .section.dark h2{color:#c8102e}
-    .section.gap-highlight{border-left:4px solid #ffc107}
     .section h2{font-size:16px;font-weight:700;color:#1565c0;margin-bottom:14px;display:flex;align-items:center;gap:8px}
     .section h2 .flag{font-size:18px}
-    .section .small{font-size:11px;color:#999;font-weight:400;margin-left:6px}
-    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-    .kpi{background:#f7f9fc;border-radius:10px;padding:12px 14px;border-left:3px solid #1565c0}
-    .kpi-label{font-size:10px;color:#1565c0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
-    .kpi-value{font-size:13px;font-weight:700;color:#0d47a1;line-height:1.5}
-    .khi{padding:6px 8px;border-radius:6px;text-align:center;font-size:11px;font-weight:700;color:#fff;min-height:34px;display:flex;align-items:center;justify-content:center}
-    .heat-grid{display:grid;grid-template-columns:120px repeat(4,1fr);gap:4px;margin-top:8px}
-    .heat-label{padding:6px;font-size:11px;font-weight:700;color:#0d47a1;text-align:right}
-    .heat-cell{padding:10px;border-radius:6px;text-align:center;font-weight:700;position:relative}
-    .heat-cell .cnt{font-size:13px;display:block}
-    .heat-cell .lbl{font-size:9px;opacity:0.85;display:block;margin-top:2px}
-    .insight{background:rgba(94,234,212,.08);border-left:3px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#fff;margin-top:14px;line-height:1.8}
-    .insight b{color:#5eead4}
-    .insight .gap{color:#5eead4}
-    .insight .hl{color:#ff8a80}
-    ul.tight{margin:6px 0 0 18px;padding:0;line-height:1.7}
-    /* gap-card 强制浅色背景 + 深色字（dark section 里也清晰可读）*/
-    .gap-card{background:rgba(255,247,230,.95)!important;border:1px solid #ffc107;border-left:4px solid #ffc107;padding:14px;border-radius:8px;margin-top:8px;box-shadow:0 1px 4px rgba(0,0,0,.1)}
-    .gap-card h3{font-size:14px;color:#e65100!important;margin-bottom:6px;font-weight:800}
-    .gap-card p{font-size:12px;color:#1a1a1a!important;line-height:1.7}
-    .gap-card b{color:#c8102e!important}
-    /* insight（dark section 内的浅色提示卡）*/
-    .insight{background:rgba(255,255,255,.95)!important;border:1px solid #5eead4;border-left:4px solid #5eead4;padding:12px 16px;border-radius:8px;font-size:12px;color:#1a1a1a!important;margin-top:14px;line-height:1.8;box-shadow:0 1px 4px rgba(0,0,0,.1)}
-    .insight b{color:#1565c0!important}
-    .insight .gap{color:#e65100!important}
-    .insight .hl{color:#c8102e!important}
+    .section h2 .small{font-size:11px;color:#999;font-weight:400;margin-left:6px}
     .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
-    .legend{display:flex;gap:8px;margin-top:8px;font-size:10px;color:#666;flex-wrap:wrap}
-    .legend span{padding:2px 6px;border-radius:3px;color:#fff;font-weight:600}
+    /* V2.9.0 (2026-07-15): 产品矩阵重构 - 4 块统一 card grid 风格 */
+    .matrix-grid{display:grid;grid-template-columns:120px repeat(4,1fr);gap:4px;margin-top:8px}
+    .matrix-label{padding:10px 8px;font-size:12px;font-weight:700;color:#0d47a1;text-align:right;background:#e3f2fd;border-radius:4px;display:flex;align-items:center;justify-content:flex-end}
+    .matrix-cell{padding:14px 6px;border-radius:4px;text-align:center;font-weight:700;color:#fff;min-height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;transition:transform .15s}
+    .matrix-cell:hover{transform:scale(1.05)}
+    .matrix-cell .cnt{font-size:18px;display:block;font-weight:900}
+    .matrix-cell .lbl{font-size:10px;opacity:0.9;display:block;margin-top:4px;font-weight:600}
+    .phx-0{background:#e0e0e0;color:#999}
+    .phx-1{background:#ffcdd2;color:#c8102e}
+    .phx-2{background:#ef9a9a;color:#fff}
+    .phx-3{background:#e57373;color:#fff}
+    .phx-4{background:#ef5350;color:#fff}
+    .phx-5{background:#c8102e;color:#fff}
+    .gap-0{background:#1b5e20;color:#a5d6a7;border:2px solid #2e7d32}
+    .gap-1{background:#a5d6a7;color:#1b5e20}
+    .gap-2{background:#fff59d;color:#f57f17}
+    .gap-3{background:#ff8a65;color:#fff}
+    .gap-4{background:#c8102e;color:#fff}
+    .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:8px}
+    .tech-card{background:linear-gradient(135deg,#fff5f6 0%,#fff 100%);border-radius:10px;padding:16px;border-left:4px solid #c8102e;transition:transform .15s;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+    .tech-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.1)}
+    .tech-card.sni{border-left-color:#2e7d32;background:linear-gradient(135deg,#e8f5e9 0%,#fff 100%)}
+    .tech-icon{font-size:24px;margin-bottom:6px}
+    .tech-name{font-size:15px;font-weight:800;color:#c8102e;margin-bottom:6px}
+    .tech-card.sni .tech-name{color:#1b5e20}
+    .tech-desc{font-size:12px;color:#444;line-height:1.5;margin-bottom:8px}
+    .tech-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}
+    .tech-tag{font-size:10px;padding:2px 6px;background:#e3f2fd;color:#0d47a1;border-radius:3px;font-weight:600}
+    .tech-tag.competitor{background:#fff3e0;color:#e65100}
+    .tech-adv{font-size:11px;color:#2e7d32;font-weight:700;background:#e8f5e9;padding:4px 8px;border-radius:4px;margin-top:6px}
+    .rd-list{margin:8px 0 0 0;padding:0;list-style:none}
+    .rd-item{display:flex;gap:12px;padding:12px;background:#f7f9fc;border-radius:8px;margin-bottom:8px;border-left:4px solid #c8102e}
+    .rd-item:hover{background:#fff5f6}
+    .rd-priority{flex-shrink:0;width:36px;height:36px;background:#c8102e;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900}
+    .rd-priority.p1{background:#c8102e}
+    .rd-priority.p2{background:#e65100}
+    .rd-priority.p3{background:#fbbf24;color:#333}
+    .rd-content{flex:1}
+    .rd-title{font-size:14px;font-weight:800;color:#0d47a1;margin-bottom:4px}
+    .rd-detail{font-size:12px;color:#444;line-height:1.5}
+    .rd-detail b{color:#c8102e}
+    .rd-meta{margin-top:6px;font-size:11px;color:#666}
+    .rd-meta .tech{background:#e3f2fd;color:#0d47a1;padding:1px 6px;border-radius:3px;font-weight:600;margin-right:4px}
   </style>
 </head>
 <body>
   <div class="container">
     <!-- 市场切换器 -->
-<div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(46,125,50,.08);border-radius:8px">
+<div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(21,101,192,.08);border-radius:8px">
   <strong style="margin-right:8px;color:#94a3b8">🌐 市场：</strong>
-  <a href="../../index.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
-  <a href="../bd/matrix.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉 →</a>
+  <a href="../../index.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
+  <a href="../bd/matrix.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉 ←</a>
   <a href="./index.html" style="padding:4px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼</a>
 </div>
 
 <div class="header">
-      <div class="logo">P</div>
-      <div>
-        <h1>🧭 产品矩阵 · Phoenix-Live</h1>
-        <div class="subtitle">基于竞品数据 → 蓝海识别 → 凤凰研发建议 · <span id="date"></span></div>
+  <div class="logo">P</div>
+  <div>
+    <h1>🧭 产品矩阵 · ID 单市场</h1>
+    <div class="subtitle">看自己：Phoenix SKU 自检 + 蓝海产品 + 技术资产 + 研发方向 · <span id="date"></span></div>
+  </div>
+  <a class="back-link" href="./index.html">← 返回总览</a>
+  <div class="nav">
+    <a href="./index.html">🏠 总览</a>
+    <a href="./daily.html">📅 市场日报</a>
+    <a href="./competitive.html">🏆 竞品监控</a>
+    <a href="./matrix.html" class="active">💎 产品矩阵</a>
+    <a href="./tasks.html">🎯 任务 OKR</a>
+    <a href="./dtc.html">💬 DTC 差评</a>
+    <a href="./strategy.html">🧠 策略迭代</a>
+  </div>
+</div>
+
+<!-- 1. Phoenix SKU 自检热力图 -->
+<div class="section" style="border-left:4px solid #c8102e">
+  <h2><span class="flag">🔍</span>1. Phoenix SKU 自检 <span class="small">（4 品类 × 4 价格段 · 现有 SKU 分布 · 看自己）</span></h2>
+  <div id="phx-self-grid" class="matrix-grid"></div>
+  <div class="insight" style="background:rgba(200,16,46,.04);border-left:3px solid #c8102e;padding:10px 14px;border-radius:8px;font-size:12px;color:#1a1a1a;margin-top:14px">
+    <b style="color:#c8102e">📊 读法：</b>横轴 4 品类 · 纵轴 4 价格段 · 数字 = Phoenix 现有 SKU 数 · 灰色=无覆盖 · 浅红=少 · 深红=密。<b>白色 cell = Phoenix 缺席的品类×价段 = 研发空间</b>。
+  </div>
+</div>
+
+<!-- 2. 蓝海产品矩阵 -->
+<div class="section" style="border-left:4px solid #2e7d32">
+  <h2><span class="flag">💎</span>2. 蓝海产品矩阵 <span class="small">（市场空白点 · 4 品类 × 4 价格段 · 竞品密度）</span></h2>
+  <div id="blue-ocean-grid" class="matrix-grid"></div>
+  <div class="insight" style="background:rgba(46,125,50,.06);border-left:3px solid #2e7d32;padding:10px 14px;border-radius:8px;font-size:12px;color:#1a1a1a;margin-top:14px">
+    <b style="color:#2e7d32">📊 读法：</b>深绿=真空（0 竞品）= <b>真蓝海</b> · 浅绿=1-2 SKU · 黄色=3-5 SKU · 橙色=6-10 SKU · 红色=11+ SKU=红海。<b>深绿 cell = 优先研发目标</b>。
+  </div>
+</div>
+
+<!-- 3. 技术资产 -->
+<div class="section" style="border-left:4px solid #9c27b0">
+  <h2><span class="flag">🛠️</span>3. Phoenix 技术资产 <span class="small">（看自己 · 品牌方内部能力 · 5 项核心工艺含 SNI 印尼本地认证）</span></h2>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-icon">🏆</div>
+      <div class="tech-name">UCI 认证公路车架</div>
+      <div class="tech-desc">UCI 赛事级几何 · 碳纤维 + 6061-T6 铝合金混合车架 · 满足 UCI 2.2 公路车规</div>
+      <div class="tech-tags">
+        <span class="tech-tag">🚴 公路</span>
+        <span class="tech-tag">🛤️ 砾石</span>
+        <span class="tech-tag competitor">对标: Polygon Strattos / Element FRC</span>
       </div>
-      <a class="back-link" href="./index.html">← 返回总览</a>
-      <div class="nav">
-      <a href="./index.html">🏠 总览</a>
-      <a href="./daily.html">📅 市场日报</a>
-      <a href="./competitive.html" style="background:#5eead4;color:#1a1a2e">🏆 竞品监控 ← 合并了 #1 热力图</a>
-      <a href="./matrix.html" class="active" style="opacity:0.6">💎 产品矩阵 (部分已合并)</a>
-      <a href="./market.html">🇮🇩 印尼</a>
-      <a href="./tasks.html">🎯 任务 OKR</a>
-      <a href="./dtc.html">💬 DTC 差评</a>
-      <a href="./strategy.html">🧠 策略迭代</a>
+      <div class="tech-adv">✓ 竞品 95% 无 UCI 认证 = 真实赛事级差异化</div>
     </div>
+    <div class="tech-card">
+      <div class="tech-icon">🎨</div>
+      <div class="tech-name">静电涂装工艺</div>
+      <div class="tech-desc">5 层漆面 · 静电粉末喷涂 + 烤漆 · 10 年不褪色 · 抗 UV 耐腐蚀</div>
+      <div class="tech-tags">
+        <span class="tech-tag">🚴 公路</span>
+        <span class="tech-tag">⛰️ MTB</span>
+        <span class="tech-tag">🚲 Hybrid</span>
+        <span class="tech-tag">🛤️ 砾石</span>
+        <span class="tech-tag competitor">对标: 全部竞品</span>
+      </div>
+      <div class="tech-adv">✓ 竞品多烤漆 2-3 层 · 凤凰 5 层 = 耐用度 2x</div>
     </div>
-
-    <!-- 1. 竞品覆盖热力图 (2026-07-10 已合并到 id/competitive.html 顶部, 见下方提示) -->
-    <div class="section" style="background:rgba(94,234,212,.08);border-left:4px solid #5eead4">
-      <h2 style="color:#5eead4"><span class="flag">➡️</span>1. 竞品覆盖热力图 <span class="small" style="color:#94a3b8">已合并到 <a href="./competitive.html" style="color:#5eead4;text-decoration:underline">id/competitive.html</a> 顶部 → <a href="./competitive.html#heat-grid" style="color:#5eead4;text-decoration:underline">跳转到热力图</a></span></h2>
-      <div class="insight" style="background:rgba(94,234,212,.08);border-left:3px solid #5eead4;color:#fff;margin-top:14px">
-        <b style="color:#5eead4">📌 合并说明（V2.7 简化原则）：</b>竞品覆盖热力图 = 重复内容，<b>已并入 id/competitive.html 顶部"竞品覆盖热力图"section</b>（同源数据同款 JS = 单一来源）。本 Tab 仍保留 V2.6.1 ID 三蓝海品类真空识别（#2）+ Phoenix 覆盖诊断（#3）+ V2.6.1 战略详情（#4）。
+    <div class="tech-card">
+      <div class="tech-icon">✨</div>
+      <div class="tech-name">夜光烤漆</div>
+      <div class="tech-desc">荧光颗粒添加 · 夜间弱光可视 8 米 · 安全警示 + 视觉差异化双卖点</div>
+      <div class="tech-tags">
+        <span class="tech-tag">🚴 公路</span>
+        <span class="tech-tag">🚲 Hybrid</span>
+        <span class="tech-tag">🛤️ 砾石</span>
+        <span class="tech-tag competitor">对标: Pacific / United</span>
       </div>
+      <div class="tech-adv">✓ 印尼夜骑安全痛点 + 视觉差异化</div>
     </div>
-
-    <div class="section gap-highlight">
-      <h2><span class="flag">💎</span>2. V2.6.1 ID 三蓝海品类真空识别 <span class="small">（公路 12-15M / 平把砾石 7-15M）</span></h2>
-      <div class="kpi-grid" id="gap-grid">
-        <div class="gap-card">
-          <h3>💎 ID 公路车 12-15M 真空</h3>
-          <p id="gap-road-12-15">加载中...</p>
-        </div>
-        <div class="gap-card">
-          <h3>💎 ID 平把公路 7-15M 真空</h3>
-          <p id="gap-flatbar-7-15">加载中...</p>
-        </div>
-        <div class="gap-card">
-          <h3>💎 ID 砾石车 7-15M 真空</h3>
-          <p id="gap-gravel-7-15">加载中...</p>
-        </div>
-        <div class="gap-card">
-          <h3>💎 V2.6.1 永久跳过品类</h3>
-          <p id="gap-skip-cat">加载中...</p>
-        </div>
+    <div class="tech-card sni">
+      <div class="tech-icon">🇮🇩</div>
+      <div class="tech-name">SNI 印尼本地认证（FNIX 品牌）</div>
+      <div class="tech-desc">印尼国家标准 SNI · 本地工厂认证 · 进口免检 · 海关快速清关</div>
+      <div class="tech-tags">
+        <span class="tech-tag">🚴 公路</span>
+        <span class="tech-tag">🛤️ 砾石</span>
+        <span class="tech-tag competitor">对标: 全部进口品牌</span>
       </div>
+      <div class="tech-adv">✓ FNIX 错位 Phoenix 上方 · SNI 印尼背书 · 12-25M 真空 = 品牌升级护城河</div>
     </div>
-
-    <div class="section">
-      <h2><span class="flag">🔍</span>3. Phoenix ID 当前覆盖诊断 <span class="small">（V2.6.1 三蓝海品类 15 SKU + Pacific 防火墙）</span></h2>
-      <div id="phoenix-diag"></div>
-    </div>
-
-    <div class="section dark">
-      <h2><span class="flag" style="color:#c8102e">🎯</span>4. V2.6.1 ID 三蓝海品类战略 <span class="small" style="color:#aaa">客户原话：公路车 / 平把公路车 / 砾石车还算蓝海一点的产品</span></h2>
-
-      <div class="insight">
-        <b>📌 V2.6.1 客户判断：</b>MTB/折叠/童车 = 客户已有供应商 + 全品类 4% 毛利红海 = <b style="color:#c8102e">完全不参与</b> · 三蓝海品类火力集中 15 SKU。
+    <div class="tech-card">
+      <div class="tech-icon">🦴</div>
+      <div class="tech-name">镂空车架 (CNC)</div>
+      <div class="tech-desc">CNC 镂空减重 200g · 强度 +20% · 视觉金属感 + 轻量化</div>
+      <div class="tech-tags">
+        <span class="tech-tag">🚴 公路</span>
+        <span class="tech-tag">🛤️ 砾石</span>
+        <span class="tech-tag">⛰️ MTB</span>
+        <span class="tech-tag competitor">对标: Polygon / Wimcycle</span>
       </div>
-
-      <div class="gap-card" style="background:rgba(46,125,50,.1);border-left-color:#2e7d32;margin-top:12px">
-        <h3 style="color:#2e7d32">💎 蓝海 1: ID 公路车 12-15M 真空</h3>
-        <p>
-          <b>真空数据支撑：</b>Shopee 30 SKU · Tokopedia 39 SKU 双平台实测，roadbike 12-15M IDR 段 = <b>仅 CAMP SR5 1 SKU（14M）</b>，几乎真空。<br>
-          <b>产品方向：</b>Phoenix 公路车主推 5 SKU @ 12-15M（USD 770-960），UCI 认证车架，Shimano 105/Tiagra 套件。<br>
-          <b>战略意义：</b>Phoenix ID 真实入场 → <b>Pacific 防火墙：跳过 5.1-9.5M（Pacific 主力价位）</b> → 切入 12M+ ID 中高端真空。<br>
-          <b>对标基准：</b>CAMP SR5 Tiagra 14M（唯一竞品）/ Polygon Helios A9 93.3M（进口旗舰，不构成竞争）/ Twitter Cyclone Pro 17.5M（IDC 顶级）。
-        </p>
-      </div>
-
-      <div class="gap-card" style="background:rgba(33,150,243,.1);border-left-color:#1976d2;margin-top:12px">
-        <h3 style="color:#1565c0">💎 蓝海 2: ID 平把公路 7-15M 真空</h3>
-        <p>
-          <b>真空数据支撑：</b>Shopee hybrid = gravel 同 SKU 集合 18 条，其中真自行车 15 条，7-15M 真空 = <b>0 SKU 完全真空</b>。<br>
-          <b>产品方向：</b>Phoenix 平把公路 3 SKU @ 7-10M（USD 450-640），Shimano 套件，"Hybrid" 关键词优化抢占流量入口。<br>
-          <b>战略意义：</b>Shopee 算法把健身车（spinning/treadmill）排前 = 真实自行车被淹没 = <b>Phoenix "Hybrid" 关键词 SEO 优势</b>。<br>
-          <b>对标基准：</b>Pacific Sprinter HX 2.0 2.3M（低端不竞争）/ Element Jasper 1.9M（同上）/ Polygon Strattos F3 6.2M（高端空白 = 切入点）。
-        </p>
-      </div>
-
-      <div class="gap-card" style="background:rgba(76,175,80,.15);border-left-color:#1b5e20;margin-top:12px;border:2px solid #2e7d32">
-        <h3 style="color:#1b5e20">💎 蓝海 3: ID 砾石车 7-15M 真空 + FNIX 高端公路 15-18M</h3>
-        <p>
-          <b>真空数据支撑：</b>gravel 18 SKU 中真自行车仅 15 条，7-15M 段 = <b>0 SKU 完全真空</b>（仅 Polygon Strattos 6.2M / Element Jasper 1.9M 这些"通勤 hybrid"勉强算）。<br>
-          <b>产品方向：</b>Phoenix 砾石返单 2 SKU @ 12-15M + FNIX 高端公路 2 SKU @ 15-18M + FNIX 砾石 2 SKU @ 12-18M。<br>
-          <b>战略意义：</b>FNIX 错位 Phoenix 上方 · SNI 印尼背书 · 12-25M ID 高端真空 = 品牌升级。<br>
-          <b>对标基准：</b>Polygon Strattos F2 5.1M（独家，错位）/ Element Hybrid 1.9-3M / 真实砾石竞品 = 完全空白。
-        </p>
-      </div>
-
-      <div class="gap-card" style="background:rgba(255,152,0,.1);border-left-color:#ff9800;margin-top:12px">
-        <h3 style="color:#ff9800">🛡️ V2.6.1 防火墙 = Pacific + Phoenix + FNIX 三品牌护城河</h3>
-        <p>
-          <b>Pacific（客户自有）：</b>守住 5.1-9.5M（ID 主流价格带）= 通勤/入门。<br>
-          <b>Phoenix ID（凤凰主推）：</b>切入 12-15M 公路 + 7-10M 平把 + 12-15M 砾石返单 = 中高端三蓝海。<br>
-          <b>FNIX（凤凰错位）：</b>15-18M 公路 + 12-18M 砾石 = SNI 印尼背书 + 错位 Phoenix 上方。<br>
-          <b>Phoenix 折叠 FK-TEST 1 SKU @ 8M：</b>试水 · 不投长期（Dahon + JAVA 强竞品）。<br>
-          <b>永久跳过品类：</b>MTB（V2.6 FNIX MTB-FLAG 1+2 全部砍）/ 折叠车大规模 / 童车。<br>
-          <b>三品牌合计 15 SKU 火力集中：</b>Phoenix 公路 5 + 平把 3 + 砾石返单 2 + FK-TEST 折叠 1 + FNIX 公路 2 + FNIX 砾石 2。
-        </p>
-      </div>
-    </div>
-
-      <div class="insight" style="margin-top:14px">
-        <b>📌 V2.6.1 ID 战术执行（客户判断 · 2026-07-07 双平台实测验证）：</b>
-        <ul class="tight">
-          <li><b>🥇 第一优先：ID 公路车主推 5 SKU</b>@ 12-15M（roadbike 1 SKU 真空 · CAMP SR5 14M 对标） → UCI 认证 + 沃尔玛规模</li>
-          <li><b>🥈 第二优先：ID 平把公路 3 SKU</b>@ 7-10M（hybrid/gravel 完全真空 · "Hybrid" 关键词优化）</li>
-          <li><b>🥉 第三优先：FNIX 高端公路 2 SKU + 砾石 2 SKU</b>@ 12-18M（SNI 印尼背书 · 错位 Phoenix 上方 · 补 12-25M 真空）</li>
-          <li><b>🛡️ 永不参与品类：</b><span class="hl" style="background:rgba(200,16,46,.2);padding:2px 4px">MTB（V2.6 FNIX MTB-FLAG 1+2 全部砍）/ 折叠车大规模 / 童车 = 客户已有供应商 + 4% 毛利红海</span></li>
-          <li><b>借力现有渠道：</b>Phoenixbikeofficial IG 已真实入场 2705/2706 型号 → 直接上架 V2.6.1 15 SKU 矩阵</li>
-          <li><b>关键成功因素：</b><span style="color:#2e7d32;font-weight:700">① UCI 公路车架（高端品类）② SNI FNIX 错位 ③ 双平台实测验证真空 ④ Pacific 防火墙 ⑤ 品质标准差异化</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer">
-      数据来源：Shopee ID 30 SKU roadbike + 15 SKU gravel + 18 SKU hybrid / Tokopedia 39 SKU / serbasepeda 8 整车 / V2.6.1 ID 三蓝海品类战略<br />
-      本页面为 Phoenix ID 单市场 Tab #5（产品矩阵 · 蓝海推论）· 每次 latest.json 更新后点击刷新即可
+      <div class="tech-adv">✓ 轻量化 + 视觉差异化 = 高端品类必备</div>
     </div>
   </div>
+</div>
+
+<!-- 4. 研发方向 -->
+<div class="section" style="border-left:4px solid #ff9800">
+  <h2><span class="flag">🎯</span>4. ID 研发方向 <span class="small">（看自己 + 蓝海 → V2.6.1 三蓝海品类 15 SKU 矩阵）</span></h2>
+  <ul class="rd-list">
+    <li class="rd-item">
+      <div class="rd-priority p1">P1</div>
+      <div class="rd-content">
+        <div class="rd-title">🥇 ID 公路车主推 · 5 SKU @ 12-15M IDR (真空段唯一 CAMP SR5 14M 对标)</div>
+        <div class="rd-detail">
+          真空数据：roadbike 12-15M IDR 段 = <b>仅 CAMP SR5 1 SKU</b> · Pacific 防火墙：跳过 5.1-9.5M（Pacific 主力）· 切入 12M+ 中高端真空 · UCI 认证 + 沃尔玛规模 + Shimano 105/Tiagra 套件
+        </div>
+        <div class="rd-meta">
+          <span class="tech">🏆 UCI 车架</span>
+          <span class="tech">🎨 静电涂装</span>
+          <span class="tech">🦴 镂空车架</span>
+        </div>
+      </div>
+    </li>
+    <li class="rd-item">
+      <div class="rd-priority p2">P2</div>
+      <div class="rd-content">
+        <div class="rd-title">🥈 ID 平把公路 · 3 SKU @ 7-10M IDR（7-15M 段 0 SKU 完全真空）</div>
+        <div class="rd-detail">
+          真空数据：hybrid 7-15M = <b>0 SKU</b> · "Hybrid" 关键词 SEO 优势 · Shopee 算法把健身车（spinning/treadmill）排前 = 真实自行车被淹没 = Phoenix 真实自行车 + 关键词优化抢流量入口
+        </div>
+        <div class="rd-meta">
+          <span class="tech">🎨 静电涂装</span>
+          <span class="tech">✨ 夜光烤漆</span>
+        </div>
+      </div>
+    </li>
+    <li class="rd-item">
+      <div class="rd-priority p3">P3</div>
+      <div class="rd-content">
+        <div class="rd-title">🥉 FNIX 高端公路 + 砾石 · 4 SKU @ 12-18M IDR（SNI 印尼本地认证背书）</div>
+        <div class="rd-detail">
+          FNIX 错位 Phoenix 上方 · SNI 印尼背书 · 12-25M IDR 高端真空 = 品牌升级护城河 · 公路 2 SKU + 砾石 2 SKU · 永久跳过 MTB（V2.6 FNIX MTB-FLAG 1+2 全部砍）/ 折叠车大规模 / 童车
+        </div>
+        <div class="rd-meta">
+          <span class="tech">🇮🇩 SNI 认证</span>
+          <span class="tech">🏆 UCI 车架</span>
+          <span class="tech">🎨 静电涂装</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="footer">
+  数据来源：latest.json · Phoenix 技术资产（品牌方内部维护）· V2.6.1 ID 三蓝海品类战略 · 2026-07-15 重构<br />
+  本页面为 Phoenix-Live Tab #5（产品矩阵 · 看自己）· 每日 9:00 + 16:00 自动更新
+</div>
+</div>
 
 <script>
-const cn = ['日','一','二','三','四','五','六'];
-const d = new Date();
-document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
+  const cn = ['日','一','二','三','四','五','六'];
+  const d = new Date();
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
 
-// 中高端整车筛选
-const EXCLUDED = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack'];
-function isMidHigh(it) {
-  if ((it.brand||'').toLowerCase() === 'generic') return false;
-  const p = it.price || 0;
-  // ID 价段：Rp 1M - 30M（IDR 1,000,000 - 30,000,000）+ 跳过童车/折叠车（V2.6.1 不参与）
-  if (p < 1e6 || p > 3e7) return false;
-  const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
-  // V2.6.1 ID 跳过品类：童车 + 大规模折叠车（保留 1 SKU 折叠试水）
-  return !EXCLUDED.some(kw => m.includes(kw));
-}
-function catOf(it) {
-  const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
-  if (m.includes('gravel') || m.includes('frc')) return 'gravel';
-  if (m.includes('hybrid') || m.includes('city') || m.includes('rochester') || m.includes('junior')) return 'hybrid';
-  if (m.includes('road') || m.includes('racer')) return 'road';
-  return 'mtb';
-}
+  // 4 品类 × 4 价格段 (ID IDR)
+  const CATS = [
+    { id: 'road', name: '🚴 公路' },
+    { id: 'mtb', name: '⛰️ MTB' },
+    { id: 'hybrid', name: '🚲 Hybrid' },
+    { id: 'gravel', name: '🛤️ 砾石' }
+  ];
+  const BANDS = [
+    { id: 'lt7', name: '< Rp 7M', min: 0, max: 7e6 },
+    { id: '7_15', name: 'Rp 7-15M', min: 7e6, max: 15e6 },
+    { id: '15_25', name: 'Rp 15-25M', min: 15e6, max: 25e6 },
+    { id: 'gt25', name: 'Rp 25M+', min: 25e6, max: 999e9 }
+  ];
 
-const KNOWN_BRANDS = ["Phoenix", "Marine", "Veloce", "Giant", "Polygon", "Core", "Pacific", "Duranta", "Foxter", "Be worth", "Warrior", "Thorne", "Element", "United", "Federal", "Wimcycle", "United Bike", "Rockrider", "Ceres", "Magpy", "Kiesel", "MEZAROTTI", "Forever", "Falcon", "Adder", "Avon", "Pollux", "Polloux", "Duronto", "Python", "Hero", "Trek", "Specialized", "Cannondale", "Scott", "Mustang", "Seventy One", "71 Warrior", "Maximo", "Police", "Twitter", "Evergreen", "TRINX", "Odessy", "Atlantis", "Exotic", "BXT", "FNIX", "JAVA", "Triban", "Firefox", "BSA", "Mach City", "Velion", "CENTRUM", "Centrum", "Morison", "Axwil", "ZEFIRO", "RB"];
-const BRAND_BLACKLIST = ["sepeda", "sepatu", "bicycle", "cycle", "bike", "bmx", "stunt", "fixie", "road", "roadbike", "mountain", "mtb", "gravel", "hybrid", "folding", "kid", "kids", "baby", "child", "spare", "part", "accessory", "gear", "komponen", "helmet", "lamp", "lock", "bottle", "pump", "sepeda statis", "orbitrack", "treadmill", "spinning", "edition", "official", "shop", "size", "speed", "shimano", "campagnolo", "new", "ori", "asli", "untuk", "dengan", "rem", "ban", "roda", "kirim", "limited", "special", "exclusive", "commuter", "JNE", "Sicepat"];
-function cleanBrand(it) {
-  const brand = it.brand || '';
-  const model = it.model || '';
-  // 1. brand 字段是真实品牌
-  for (const kb of KNOWN_BRANDS) {
-    if (kb.toLowerCase() === brand.toLowerCase()) return kb;
+  // 排除健身车/童车/折叠
+  const EXCLUDED = ['treadmill','spinning','kardio','elliptical','recumbent','sepeda statis','orbitrack','kid','baby','child','folding','bmx','stunt','helmet','lamp','light','lock','bottle','pump','sepeda','sepatu','accessory','gear','komponen'];
+  function isBike(it) {
+    const p = it.price || 0;
+    if (p < 1e6 || p > 5e7) return false;
+    const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
+    return !EXCLUDED.some(kw => m.includes(kw));
   }
-  // 2. brand 在黑名单 (Sepeda/MTB/Road/Fixie 等通用词), 从 model 找真实品牌
-  const text = (model + ' ' + brand).toLowerCase();
-  const isBlacklisted = BRAND_BLACKLIST.some(b => text.includes(b.toLowerCase()));
-  if (isBlacklisted) {
-    // 长品牌优先匹配
-    const sorted = [...KNOWN_BRANDS].sort((a, b) => b.length - a.length);
-    for (const kb of sorted) {
-      if (text.includes(kb.toLowerCase())) return kb;
-    }
-    return 'Generic';
+  function catOf(it) {
+    const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
+    if (m.includes('gravel') || m.includes('frc')) return 'gravel';
+    if (m.includes('hybrid') || m.includes('city') || m.includes('rochester') || m.includes('flatbar') || m.includes('flat bar')) return 'hybrid';
+    if (m.includes('road') || m.includes('racer') || m.includes('roadbike')) return 'road';
+    return 'mtb';
   }
-  // 3. brand 字段不是黑名单 + 不在 KNOWN_BRANDS → 保留原值
-  return brand || 'Generic';
-}
+  function inBand(price, band) {
+    return price >= band.min && price < band.max;
+  }
+  function getPhxLevel(n) {
+    if (n === 0) return 'phx-0';
+    if (n === 1) return 'phx-1';
+    if (n === 2) return 'phx-2';
+    if (n === 3) return 'phx-3';
+    if (n === 4) return 'phx-4';
+    return 'phx-5';
+  }
+  function getGapLevel(n) {
+    if (n === 0) return 'gap-0';
+    if (n <= 2) return 'gap-1';
+    if (n <= 5) return 'gap-2';
+    if (n <= 10) return 'gap-3';
+    return 'gap-4';
+  }
+  function getGapLbl(n) {
+    if (n === 0) return '真空';
+    if (n <= 2) return '少';
+    if (n <= 5) return '中';
+    if (n <= 10) return '密';
+    return '红海';
+  }
 
-
-async function load() {
-  const r = await fetch('../data/latest.json', {cache: 'no-store'});
-  const data = await r.json();
-  const all = (data.id && data.id.price_pool || []).filter(isMidHigh);
-  // 4 品类
-  const cats = ['road', 'hybrid', 'gravel', 'mtb'];
-  // 17 品牌（按 SKU 数倒序，Phoenix 优先）
-  // V2.6.1 品牌清洗: 过滤掉 Sepeda/MTB/Road/Fixie/RB/commuter 等通用词, 从 model 找真实品牌
-  const brandCount = {};
-  all.forEach(it => {
-    const b = cleanBrand(it);
-    brandCount[b] = (brandCount[b] || 0) + 1;
-  });
-  const brands = Object.keys(brandCount)
-    .sort((a, b) => {
-      if (a === 'Phoenix') return -1;
-      if (b === 'Phoenix') return 1;
-      return brandCount[b] - brandCount[a];
+  async function load() {
+    const r = await fetch('../data/latest.json', {cache: 'no-store'});
+    const data = await r.json();
+    // 合并 ID 4 平台数据
+    const idAll = [];
+    ['price_pool','shopee_roadbike','shopee_gravel','shopee_hybrid','tokopedia','shopee_id'].forEach(k => {
+      if (data.id && data.id[k] && Array.isArray(data.id[k])) idAll.push(...data.id[k]);
     });
-  // 构建 heat[brand][cat] = count
-  const heat = {};
-  brands.forEach(b => heat[b] = {road:0,hybrid:0,gravel:0,mtb:0});
-  // V2.6.1 品牌清洗: heat key 也用 cleanBrand
-  all.forEach(it => { heat[cleanBrand(it)][catOf(it)]++; });
+    const all = idAll.filter(isBike);
+    const phx = all.filter(it => (it.brand||'').toLowerCase() === 'phoenix');
+    const competitors = all.filter(it => (it.brand||'').toLowerCase() !== 'phoenix');
 
-  // === 1. 热力图 ===
-  const heatGrid = document.getElementById('heat-grid');
-  const colorFor = (n) => {
-    if (n === 0) return '#94a3b8';
-    if (n <= 2) return '#1565c0';
-    if (n <= 5) return '#fbbf24';
-    if (n <= 10) return '#ea580c';
-    return '#c8102e';
-  };
-  let html = '<div class="heat-label"></div>';
-  cats.forEach(c => html += '<div class="heat-label" style="text-align:center">' + (c==='road'?'🚴 公路':c==='hybrid'?'🚲 Hybrid':c==='gravel'?'🛤️ Gravel':'⛰️ MTB') + '</div>');
-  brands.forEach(b => {
-    html += '<div class="heat-label">' + (b.toLowerCase()==='phoenix'?'<b style="color:#c8102e">'+b+'</b>':b) + '</div>';
-    cats.forEach(c => {
-      const n = heat[b][c];
-      html += '<div class="heat-cell" style="background:' + colorFor(n) + '"><span class="cnt">' + n + '</span><span class="lbl">' + (n===0?'真空':n===1?'弱势':'中强') + '</span></div>';
+    // === 1. Phoenix 自检矩阵 ===
+    const phxGrid = document.getElementById('phx-self-grid');
+    let phxHtml = '<div class="matrix-label" style="background:#c8102e;color:#fff">品类 \\ 价格</div>';
+    BANDS.forEach(b => phxHtml += '<div class="matrix-label">' + b.name + '</div>');
+    CATS.forEach(cat => {
+      phxHtml += '<div class="matrix-label">' + cat.name + '</div>';
+      BANDS.forEach(b => {
+        const n = phx.filter(it => catOf(it) === cat.id && inBand(it.price || 0, b)).length;
+        phxHtml += '<div class="matrix-cell ' + getPhxLevel(n) + '"><span class="cnt">' + n + '</span><span class="lbl">' + (n === 0 ? '空白' : 'SKU') + '</span></div>';
+      });
     });
-  });
-  heatGrid.innerHTML = html;
+    phxGrid.innerHTML = phxHtml;
 
-  // V2.6.1 ID 三蓝海品类真空 JS（已废弃 gap-15-25/gap-25-plus/gap-id-6-10/gap-cat）
-  // 数据从 dashboard_metrics.id_7_15m + id.price_pool 读取
-  const idAllPool = (data.id && data.id.price_pool || []).filter(it => (it.price || 0) > 0);
-  const id715 = (data.dashboard_metrics && data.dashboard_metrics.id_7_15m) || {};
-
-  // V2.6.1 修复 (2026-07-10): 改用 dashboard_metrics 读, 不再硬编码 "0 SKU 完全真空"
-  // 公路车 12-15M 真空
-  const idRoad1215 = idAllPool.filter(it => {
-    const t = (it.model || '').toLowerCase();
-    const p = it.price || 0;
-    return (t.includes('road') || t.includes('balap')) && p >= 12e6 && p < 15e6;
-  });
-  // Road > 20M 进口红海 (透明度, 2026-07-10 新增)
-  const idRoadGt20 = idAllPool.filter(it => {
-    const t = (it.model || '').toLowerCase();
-    const p = it.price || 0;
-    return (t.includes('road') || t.includes('balap') || t.includes('racer')) && p >= 20e6;
-  });
-  const rbTag1215 = idRoad1215.length === 0 ? '完全真空' : (idRoad1215.length <= 2 ? '几乎真空' : '中端少量');
-  document.getElementById('gap-road-12-15').innerHTML =
-    '<b>' + idRoad1215.length + ' SKU ' + rbTag1215 + '</b>（' + (idRoad1215.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
-    '⚠ 但 &gt;20M 进口红海 ' + idRoadGt20.length + ' SKU（' + [...new Set(idRoadGt20.map(it => it.brand))].slice(0,4).join(' / ') + '）<br>' +
-    '= Phoenix 公路车 12-15M 中端错位切入铁证<br>' +
-    '（Shopee ' + idAllPool.filter(it => it.platform === 'Shopee ID (roadbike)').length + ' roadbike + Tokopedia ' + idAllPool.filter(it => it.platform === 'Tokopedia').length + ' 双平台实测）';
-
-  // 平把公路 7-15M 真空
-  const idFlatbar715 = idAllPool.filter(it => {
-    const t = (it.model || '').toLowerCase();
-    const p = it.price || 0;
-    return (t.includes('hybrid') || t.includes('flatbar')) && p >= 7e6 && p < 15e6;
-  });
-  const fbTag = idFlatbar715.length === 0 ? '完全真空' : (idFlatbar715.length <= 2 ? '几乎真空' : '中端少量');
-  document.getElementById('gap-flatbar-7-15').innerHTML =
-    '<b>' + idFlatbar715.length + ' SKU ' + fbTag + '</b>（' + (idFlatbar715.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
-    'Shopee hybrid 15 SKU + Tokopedia 全池实测<br>7-15M IDR 段 ' + idFlatbar715.length + ' SKU<br>' +
-    '= Phoenix 平把 8M + 平把 10M 切入铁证';
-
-  // 砾石车 7-15M 真空
-  const idGravel715 = idAllPool.filter(it => {
-    const t = (it.model || '').toLowerCase();
-    const p = it.price || 0;
-    return t.includes('gravel') && p >= 7e6 && p < 15e6;
-  });
-  const grTag = idGravel715.length === 0 ? '完全真空' : (idGravel715.length <= 2 ? '几乎真空' : '中端少量');
-  document.getElementById('gap-gravel-7-15').innerHTML =
-    '<b>' + idGravel715.length + ' SKU ' + grTag + '</b>（' + (idGravel715.map(it=>it.brand).join(' / ') || '无品牌') + '）<br>' +
-    'Shopee gravel 15 SKU 中 7-15M ' + idGravel715.length + ' SKU<br>' +
-    '= Phoenix 砾石 10M + 12M 切入铁证';
-
-  // 永久跳过品类
-  document.getElementById('gap-skip-cat').innerHTML =
-    '<b>MTB / 折叠车 / 童车</b><br>客户已有供应商 + 4% 毛利红海<br><span style="color:#c8102e">V2.6.1 永久跳过（即使真空也不进）</span><br>= 火力集中三蓝海品类 15 SKU';
-
-  // 兼容 HTML 中旧元素（gap-15-25/25-plus/id-6-10/cat）的兼容 placeholder 已删除（HTML 已重写为 V2.6.1）
-  // 空 hop 直接进入 Phoenix 诊断
-
-  // === 3. Phoenix 诊断 ===
-  const phx = all.filter(it => (it.brand||'').toLowerCase() === 'phoenix');
-  const phxPrice = phx.map(it => it.price);
-  const phxAvg = phxPrice.length ? Math.round(phxPrice.reduce((a,b)=>a+b,0)/phxPrice.length) : 0;
-  const phxCat = {road:0,hybrid:0,gravel:0,mtb:0};
-  phx.forEach(it => phxCat[catOf(it)]++);
-
-  // 走 brand_metrics 找 Phoenix 实际排名（与 Tab #1 共享）
-  const rankings = (data.brand_metrics && data.brand_metrics.rankings) || [];
-  const phxRank = rankings.findIndex(m => m.brand.toLowerCase() === 'phoenix');
-  const phxM = phxRank >= 0 ? rankings[phxRank] : null;
-  const phxPos = phxRank >= 0 ? (phxRank + 1) : '?';
-  const phxTotal = rankings.length;
-
-  let diag = '<div class="kpi-grid">';
-  diag += '<div class="kpi"><div class="kpi-label">Phoenix ID SKU 数</div><div class="kpi-value">' + phx.length + ' SKU<br><small>ID 真实入场 · 蓝海品类集中度 #' + phxPos + '/' + phxTotal + '</small></div></div>';
-  diag += '<div class="kpi"><div class="kpi-label">价段 (IDR)</div><div class="kpi-value">' + (phxPrice.length?Math.min(...phxPrice).toLocaleString() + ' - ' + Math.max(...phxPrice).toLocaleString():'-') + ' IDR<br><small>均价 ' + phxAvg.toLocaleString() + ' IDR（V2.6.1 三蓝海）</small></div></div>';
-  diag += '<div class="kpi"><div class="kpi-label">品类分布（ID V2.6.1）</div><div class="kpi-value">🚴 公路 × ' + phxCat.road + ' · 🚲 平把 × ' + phxCat.hybrid + '<br>🛤️ Gravel × ' + phxCat.gravel + ' · ⛰️ MTB × ' + phxCat.mtb + '</div></div>';
-  if (phxM) {
-    diag += '<div class="kpi gap"><div class="kpi-label">加权得分</div><div class="kpi-value">' + phxM.score + ' 分<br><small>' + phxM.high_tier_pct + '% 高端 · ' + phxM.in_stock_rate + '% 有货</small></div></div>';
+    // === 2. 蓝海产品矩阵 ===
+    const gapGrid = document.getElementById('blue-ocean-grid');
+    let gapHtml = '<div class="matrix-label" style="background:#2e7d32;color:#fff">品类 \\ 价格</div>';
+    BANDS.forEach(b => gapHtml += '<div class="matrix-label">' + b.name + '</div>');
+    CATS.forEach(cat => {
+      gapHtml += '<div class="matrix-label">' + cat.name + '</div>';
+      BANDS.forEach(b => {
+        const n = competitors.filter(it => catOf(it) === cat.id && inBand(it.price || 0, b)).length;
+        gapHtml += '<div class="matrix-cell ' + getGapLevel(n) + '"><span class="cnt">' + n + '</span><span class="lbl">' + getGapLbl(n) + '</span></div>';
+      });
+    });
+    gapGrid.innerHTML = gapHtml;
   }
-  diag += '</div>';
 
-  // V2.6.1 关键诊断（保留原版）
-  diag += '<div class="insight" style="background:rgba(255,193,7,.1);border-left-color:#ffc107;color:#1a1a1a;margin-top:10px">';
-  diag += '<b style="color:#e65100">⚠️ 关键诊断（Phoenix 加权排名 #' + phxPos + '）：</b>';
-  diag += '<ul class="tight" style="color:#1a1a1a">';
-  diag += '<li><b>仅按 SKU 数量看，Phoenix 看似前列（' + phx.length + ' SKU）；但加权得分只排第 ' + phxPos + '</b>——ASP 14.4K + 顶价 18K = 真实定位中端</li>';
-  diag += '<li>真"中高端第一"是 <b>Core 15 SKU (ASP 19.6K, 顶价 30K, 87% 高端, 得分 59.3)</b>——少 SKU 但价格高度足够</li>';
-  diag += '<li><b>V2 战略含义：</b>Phoenix 的"钻井型"方向对了，但当前 ASP 14.4K 还在中端——需 22K+ UCI MTB 战略大单品提 ASP 至 20K+</li>';
-  diag += '<li>📊 <b>数据互验：</b>Tab #1 与 Tab #5 共享 brand_metrics.rankings，数据完全一致</li>';
-  diag += '</ul></div>';
-
-  // V2.6.1 新增: 4P/4C/4R 营销洞察（结合 dashboard_metrics + 竞品监控数据, 2026-07-10）
-  diag += '<div class="insight" style="background:linear-gradient(135deg,rgba(94,234,212,.1),rgba(33,150,243,.05));border-left:4px solid #5eead4;color:#fff;margin-top:14px">';
-  diag += '<b style="color:#5eead4;font-size:14px">📊 Phoenix 品牌营销洞察（4P/4C/4R · 2026-07-10）</b>';
-  diag += '<p style="font-size:11px;color:#94a3b8;margin-top:4px">基于 <code style="color:#5eead4">dashboard_metrics</code> 真实数据 + 竞品监控对照 + V2.6.1 客户判断。每个维度 = 数据支撑 + 竞品对比 + 可执行建议</p>';
-
-  // 4P 框架
-  diag += '<h3 style="color:#5eead4;margin-top:12px;font-size:13px">📦 4P (Marketing Mix · 营销组合)</h3>';
-  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
-  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 竞品对比</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
-  // Product
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Product</b><br><small>产品</small></td>';
-  diag += '<td style="padding:5px">Phoenix ID <b>0 SKU</b>（真实入场 0）vs V2.6.1 计划 <b>15 SKU</b>（5 公路+3 平把+2 砾石返单+1 折叠试水+4 FNIX）<br>';
-  diag += 'BD Phoenix 17 SKU（Daraz 12 + dreamcycle 5），中高端 3 SKU @ 10,806 ASP<br>';
-  diag += '竞品对照: Polygon 11 SKU / Pacific 10 SKU / Marine 15 SKU / Veloce 28 SKU</td>';
-  diag += '<td style="padding:5px">🎯 <b>V2.6.1 立即执行</b>: 公路 5 + 平把 3 + 砾石 2 = 10 SKU 切入 7-15M 蓝海<br>';
-  diag += '🔥 <b>差异化</b>: UCI 认证公路车架（Veloce/Core 都没有）= 真实护城河<br>';
-  diag += '❌ <b>永久跳过</b>: MTB/折叠大规模/童车（4% 毛利红海）</td></tr>';
-  // Price
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Price</b><br><small>价格</small></td>';
-  diag += '<td style="padding:5px">BD Phoenix ASP 13,738 BDT / 顶价 18,000 / 均价 6,000-18,000<br>';
-  diag += 'ID Phoenix 0 SKU（V2.6.1 计划 12-15M IDR = 8-12 USD/M）<br>';
-  diag += '行业天花板: <b>Rockrider 65K BDT</b> / Specialized S-Works 142.8M IDR（进口旗舰）<br>';
-  diag += '加权得分: Phoenix 38 分 vs Core 59.3 / Veloce 53 / Rockrider 92.4</td>';
-  diag += '<td style="padding:5px">🎯 <b>BD 跳 ASP 22K+</b>: UCI MTB 战略大单品提 ASP 至 22K+（V2.3 三层价格阶梯）<br>';
-  diag += '🎯 <b>ID 切 12-15M 真空</b>: 跳过 Pacific 5.1-9.5M 主力价位（同公司防火墙）<br>';
-  diag += '⚠️ <b>不参</b>对标 Specialized/Trek/Pinarello（142.8M/100M/139M = 非对标段）</td></tr>';
-  // Place
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Place</b><br><small>渠道</small></td>';
-  diag += '<td style="padding:5px">BD: <b>dreamcycle.store 116 SKU</b>（已入驻 4 SKU）+ Daraz 经销 + 当地门店<br>';
-  diag += 'ID: <b>Pacific（客户自有品牌 = 同公司双品牌防火墙）</b> + Shopee 39 SKU + Tokopedia 39 SKU<br>';
-  diag += 'DTC: <b>独立站待建</b>（客户判断唯一品牌叙事出路）</td>';
-  diag += '<td style="padding:5px">🎯 <b>BD 借力</b>: dreamcycle 6 页 116 SKU 一站式购物 + 经销商网络<br>';
-  diag += '🎯 <b>ID 借力</b>: Pacific 经销商 + 工厂同源（OEM Pacific 代工 Phoenix = 防火墙）<br>';
-  diag += '🔥 <b>DTC 投资</b>: 独立站 = 品牌叙事唯一出路（FB/IG 社媒反哺）</td></tr>';
-  // Promotion
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Promotion</b><br><small>推广</small></td>';
-  diag += '<td style="padding:5px"><b>已真实入场</b>: Phoenixbikeofficial IG 2705/2706 型号已上架（V2.6.1 复用）<br>';
-  diag += '4 社媒平台: TK/Reels/FB/Ins（<b>Apify 5$ 用完</b>，月 1 重置）<br>';
-  diag += 'Sogou 新闻: BD/ID 每日 3 条真实新闻（fallback 数据驱动信号）</td>';
-  diag += '<td style="padding:5px">🎯 <b>月 1 升级 Apify</b>: 升级 $29 Personal 解锁 4 平台评论抓取<br>';
-  diag += '🎯 <b>IG 优先</b>: 2705/2706 已上架 = 立即做 V2.6.1 15 SKU 矩阵上架<br>';
-  diag += '⚠️ <b>暂用 HTML 解析</b>: 你给 Shopee/Tokopedia 商品页 HTML 立即有 ID DTC 评论</td></tr>';
-  diag += '</table>';
-
-  // 4C 框架
-  diag += '<h3 style="color:#5eead4;margin-top:14px;font-size:13px">👥 4C (Customer-Centric · 客户视角)</h3>';
-  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
-  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 客户视角</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
-  // Customer
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Customer</b><br><small>客户</small></td>';
-  diag += '<td style="padding:5px">BD: 家庭用户 + 中端通勤（6K-15K BDT = USD 50-110）<br>';
-  diag += 'ID: 中产 + 蓝海品类尝鲜者（7-15M IDR = USD 450-960）<br>';
-  diag += '客户情报（V2.6.1）: 公路车/平把/砾石 = ID 蓝海</td>';
-  diag += '<td style="padding:5px">🎯 <b>BD 主攻家庭</b>: 6-13K 价位 = 家庭购车刚需 + 复购率<br>';
-  diag += '🎯 <b>ID 主攻中产尝鲜</b>: 12-15M 公路 + 7-10M 平把 = 蓝海真空切<br>';
-  diag += '💡 <b>客户双身份</b>: ID 经销商 = 同公司（Pacific 自有 + Phoenix 主推）</td></tr>';
-  // Cost
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Cost</b><br><small>成本</small></td>';
-  diag += '<td style="padding:5px">客户总成本 = 产品价 + 时间成本 + 心理成本<br>';
-  diag += 'Phoenix 18K BDT vs Rockrider 65K = 客户省 <b>72%</b><br>';
-  diag += 'ID Phoenix 12M vs Pinarello 139M = 客户省 <b>91%</b></td>';
-  diag += '<td style="padding:5px">🎯 <b>价格优势传播</b>: 营销文案 = "UCI 认证 + 沃尔玛规模 = 同级车 1/3 价格"<br>';
-  diag += '🎯 <b>时间成本</b>: 当地经销商铺货 = 客户 7 天内提到车<br>';
-  diag += '💡 <b>心理成本</b>: DTC 差评率监控 = 客户买的放心</td></tr>';
-  // Convenience
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Convenience</b><br><small>便利</small></td>';
-  diag += '<td style="padding:5px">BD: dreamcycle 6 页 116 SKU 一站式购物 ✅<br>';
-  diag += 'ID: Pacific 经销商 + Shopee/Tokopedia 双平台<br>';
-  diag += 'DTC: 独立站待建（V2.6.1 客户判断 = 唯一品牌叙事）</td>';
-  diag += '<td style="padding:5px">🎯 <b>BD 强化</b>: dreamcycle 入驻 SKU 数从 4 → 10（V2.6.1 15 SKU 矩阵）<br>';
-  diag += '🎯 <b>ID 强化</b>: Pacific 渠道深耕 + Shopee "Hybrid" 关键词 SEO<br>';
-  diag += '🔥 <b>DTC 投入</b>: 独立站 = 客户无中间商直接买（提升复购 + 利润率）</td></tr>';
-  // Communication
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Communication</b><br><small>沟通</small></td>';
-  diag += '<td style="padding:5px">4 社媒平台 TK/Reels/FB/Ins（Apify 5$ 用完，月 1 重置）<br>';
-  diag += 'BD DTC: Daraz 评论 96 条（50 Generic + 20 Phoenix + 12 Foxter）<br>';
-  diag += 'ID DTC: 0 条（待补 Shopee/Tokopedia 评论）<br>';
-  diag += 'Sogou 新闻: BD/ID 每日 3 条</td>';
-  diag += '<td style="padding:5px">🎯 <b>月 1 解锁 4 平台</b>: Apify $29 Personal = FB/Ins/TK 评论抓取<br>';
-  diag += '🎯 <b>暂用 HTML 解析</b>: 你给 Shopee/Tokopedia 详情页 HTML → 5 分钟一套 ID 评论<br>';
-  diag += '💡 <b>BD DTC 已 96 条</b>: 监控差评率（同类竞品对比 = 营销话术）</td></tr>';
-  diag += '</table>';
-
-  // 4R 框架
-  diag += '<h3 style="color:#5eead4;margin-top:14px;font-size:13px">🤝 4R (Relationship · 关系营销)</h3>';
-  diag += '<table style="width:100%;font-size:11px;border-collapse:collapse;margin-top:6px">';
-  diag += '<tr style="background:rgba(94,234,212,.1)"><th style="padding:5px;text-align:left;color:#5eead4;width:80px">维度</th><th style="padding:5px;text-align:left;color:#5eead4">数据支撑 + 关系视角</th><th style="padding:5px;text-align:left;color:#5eead4">建议</th></tr>';
-  // Relevance
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Relevance</b><br><small>相关性</small></td>';
-  diag += '<td style="padding:5px">V2.6.1 蓝海 = <b>公路 12-15M 0 SKU / 平把 7-15M 0 SKU / 砾石 7-15M 1 SKU</b><br>';
-  diag += '客户双身份: Pacific 自有 (5.1-9.5M) + Phoenix 主推 (12M+) = 永不重叠<br>';
-  diag += '客户判断: 公路/平把/砾石 = ID 蓝海品类</td>';
-  diag += '<td style="padding:5px">🎯 <b>强相关</b>: Phoenix 主推 12-15M 公路 = V2.6.1 客户判断 + 数据真空<br>';
-  diag += '🎯 <b>错位</b>: 跳过 Pacific 5.1-9.5M = 永不重叠防火墙<br>';
-  diag += '🔥 <b>UCI 差异化</b>: Specialized/Trek/Pinarello 142M/100M/139M 进口旗舰 = 非对标段，Phoenix 切中端真空 = 真实护城河</td></tr>';
-  // Response
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Response</b><br><small>反应</small></td>';
-  diag += '<td style="padding:5px">DTC 差评响应: BD 96 条 / ID 0 条（待补）<br>';
-  diag += '客户决策: 3 年愿景 + 2026 H2 行动（OKR 任务）<br>';
-  diag += 'cron 响应: 9:00 + 16:00 daily 自动化</td>';
-  diag += '<td style="padding:5px">🎯 <b>DTC 差评</b>: 差评率监控 + 24h 响应（同类竞品对比 = 营销素材）<br>';
-  diag += '🎯 <b>任务 OKR</b>: Tab #6 = 2026 H2 关键里程碑 4 条（执行规划）<br>';
-  diag += '💡 <b>数据驱动</b>: 9:00 + 16:00 自动跑 = 实时反应市场变化</td></tr>';
-  // Relationship
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Relationship</b><br><small>关系</small></td>';
-  diag += '<td style="padding:5px">客户双重身份（Phoenix ID 独家代理 + Pacific 自有品牌）<br>';
-  diag += 'Pacific OEM 代工 Phoenix = 工厂同源防火墙<br>';
-  diag += 'Pacific 经销商 = ID 渠道深度护城河</td>';
-  diag += '<td style="padding:5px">🎯 <b>信任护城河</b>: Pacific 自有 + OEM Phoenix = 客户利益绑定<br>';
-  diag += '🎯 <b>经销商体系</b>: Pacific 经销深耕 = Phoenix 主推无缝上量<br>';
-  diag += '🔥 <b>V2.6.1 永久跳过</b>: 永不重叠 = 客户信任 + 长期合作</td></tr>';
-  // Reward
-  diag += '<tr><td style="padding:5px;color:#fbbf24"><b>Reward</b><br><small>回报</small></td>';
-  diag += '<td style="padding:5px">ID 1月订单已验证 + 返单中（V2.6.1 客户证据）<br>';
-  diag += 'BD 经销商复购率（待监控）<br>';
-  diag += '客户双赢: Phoenix 切真空 + Pacific 守红海 = 共同市场</td>';
-  diag += '<td style="padding:5px">🎯 <b>复购追踪</b>: 经销商月度复购率 KPI（Tab #6 OKR）<br>';
-  diag += '🎯 <b>客户双赢</b>: Pacific 5.1-9.5M + Phoenix 12-15M = 共同市场扩张<br>';
-  diag += '💡 <b>返单中</b>: V2.6.1 客户判断 = 真实盈利模式验证</td></tr>';
-  diag += '</table>';
-
-  // 总结
-  diag += '<div style="background:rgba(94,234,212,.08);border:1px solid #5eead4;border-radius:6px;padding:10px;margin-top:14px">';
-  diag += '<b style="color:#5eead4">🎯 营销总结（结合竞品监控数据 · V2.6.1 客户判断）</b><br>';
-  diag += '<ul class="tight" style="margin-top:6px;color:#fff">';
-  diag += '<li><b>1 个核心</b>: V2.6.1 三蓝海品类（公路 12-15M + 平把 7-10M + 砾石 10-15M）= Phoenix 真实入场 ID 蓝海</li>';
-  diag += '<li><b>1 个错位</b>: 跳过 Pacific 5.1-9.5M = 永不重叠防火墙</li>';
-  diag += '<li><b>1 个护城河</b>: UCI 认证 + 沃尔玛规模 = 同级车 1/3 价格 + 品质标准差异化</li>';
-  diag += '<li><b>1 个验证</b>: ID 1月订单 + 返单 + dreamcycle 入驻 = 真实盈利模式</li>';
-  diag += '<li><b>📊 数据互验</b>: Tab #2 (竞品监控) ↔ Tab #3 (本 Tab) 共享 brand_metrics/dashboard_metrics</li>';
-  diag += '</ul></div>';
-
-  diag += '</div>';
-
-  document.getElementById('phoenix-diag').innerHTML = diag;
-}
-
-// V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
-  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
+  load();
 </script>
 <script src="../render_quality_gate.js"></script>
 </body>
