@@ -189,6 +189,12 @@ h1{font-size:22px;font-weight:800}
 .section-title{font-size:14px;font-weight:700;color:#5eead4;margin:24px 0 12px;padding-bottom:6px;border-bottom:2px solid rgba(94,234,212,.2)}
 
 .footer{text-align:center;padding:30px 0 10px;color:#94a3b8;font-size:11px}
+    /* V2.9.0 (2026-07-15): region 过滤 - data-market 控制显示 */
+    .region-active-all .card[data-market]{display:block}
+    .region-active-bd .card[data-market="id"]{display:none}
+    .region-active-id .card[data-market="bd"]{display:none}
+    .grid-2[data-market-aware]{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .region-active-bd .grid-2[data-market-aware], .region-active-id .grid-2[data-market-aware]{grid-template-columns:1fr}
 
 </style>
 
@@ -250,17 +256,7 @@ h1{font-size:22px;font-weight:800}
 
   <!-- 区域筛选: 双市场总览 / BD / ID -->
 
-  <div style="display:flex;gap:8px;margin:0 0 16px;padding:10px;background:rgba(21,101,192,.08);border-radius:8px;align-items:center">
-
-    <strong style="margin-right:8px;color:#94a3b8;font-size:12px">🌐 查看市场：</strong>
-
-    <button class="region-tab active" data-region="all" style="padding:5px 14px;border:none;background:#5eead4;color:#1a1a2e;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🌍 双市场总览</button>
-
-    <button class="region-tab" data-region="bd" style="padding:5px 14px;border:none;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇧🇩 BD 孟加拉</button>
-
-    <button class="region-tab" data-region="id" style="padding:5px 14px;border:none;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇮🇩 ID 印尼</button>
-
-  </div>
+  <div id="market-chips" style="display:flex;gap:8px;margin:0 0 16px;padding:10px;background:rgba(21,101,192,.08);border-radius:8px;align-items:center;flex-wrap:wrap"></div>
 
 
 
@@ -268,9 +264,9 @@ h1{font-size:22px;font-weight:800}
 
   <div class="section-title">📈 价格快照 (KPI 矩阵)</div>
 
-  <div class="grid-2" id="price-snapshots">
+  <div class="grid-2" data-market-aware id="price-snapshots">
 
-    <div class="card">
+    <div class="card" data-market="bd">
 
       <h2>🇧🇩 孟加拉 MTB 价格快照</h2>
 
@@ -284,7 +280,7 @@ h1{font-size:22px;font-weight:800}
 
     </div>
 
-    <div class="card">
+    <div class="card" data-market="id">
 
       <h2>🇮🇩 印尼 MTB 价格快照</h2>
 
@@ -310,9 +306,9 @@ h1{font-size:22px;font-weight:800}
 
   <div class="section-title">📅 7 日价格趋势</div>
 
-  <div class="grid-2" id="trend-section">
+  <div class="grid-2" data-market-aware id="trend-section">
 
-    <div class="card">
+    <div class="card" data-market="bd">
 
       <h2>🇧🇩 孟加拉价格趋势 (7 日)</h2>
 
@@ -322,7 +318,7 @@ h1{font-size:22px;font-weight:800}
 
     </div>
 
-    <div class="card">
+    <div class="card" data-market="id">
 
       <h2>🇮🇩 印尼价格趋势 (7 日)</h2>
 
@@ -340,9 +336,9 @@ h1{font-size:22px;font-weight:800}
 
   <div class="section-title">💰 价格分层 (按价位段分桶)</div>
 
-  <div class="grid-2">
+  <div class="grid-2" data-market-aware>
 
-    <div class="card">
+    <div class="card" data-market="bd">
 
       <h2>🇧🇩 孟加拉价格分层</h2>
 
@@ -352,7 +348,7 @@ h1{font-size:22px;font-weight:800}
 
     </div>
 
-    <div class="card">
+    <div class="card" data-market="id">
 
       <h2>🇮🇩 印尼价格分层</h2>
 
@@ -386,9 +382,9 @@ h1{font-size:22px;font-weight:800}
 
   <div class="section-title">📊 市场容量（按价格带 + 真实 SKU 分布）</div>
 
-  <div class="grid-2">
+  <div class="grid-2" data-market-aware>
 
-    <div class="card">
+    <div class="card" data-market="bd">
 
       <h2>🇧🇩 孟加拉市场容量</h2>
 
@@ -398,7 +394,7 @@ h1{font-size:22px;font-weight:800}
 
     </div>
 
-    <div class="card">
+    <div class="card" data-market="id">
 
       <h2>🇮🇩 印尼市场容量</h2>
 
@@ -464,7 +460,7 @@ h1{font-size:22px;font-weight:800}
 
   <div class="grid">
 
-    <div class="card">
+    <div class="card" data-market="bd">
 
       <h2>🇧🇩 孟加拉新闻</h2>
 
@@ -472,7 +468,7 @@ h1{font-size:22px;font-weight:800}
 
     </div>
 
-    <div class="card">
+    <div class="card" data-market="id">
 
       <h2>🇮🇩 印尼新闻</h2>
 
@@ -497,6 +493,40 @@ h1{font-size:22px;font-weight:800}
 
 
 <script>
+
+  // V2.9.0 (2026-07-15): 市场切换器 - 数据驱动
+  const MARKETS_DASH = [
+    { id: 'all', name: '全部', flag: '🌍', color: '#5eead4', active: true },
+    { id: 'bd', name: '孟加拉 BD', flag: '🇧🇩', color: '#1565c0' },
+    { id: 'id', name: '印尼 ID', flag: '🇮🇩', color: '#2e7d32' }
+    // 未来扩展: { id: 'vn', name: '越南 VN', flag: '🇻🇳', color: '#...' }
+  ];
+  function renderChips() {
+    const c = document.getElementById('market-chips');
+    if (!c) return;
+    c.innerHTML = '<strong style="margin-right:8px;color:#94a3b8;font-size:12px">🌐 查看市场：</strong>' +
+      MARKETS_DASH.map(m => {
+        const isActive = m.active;
+        const bg = isActive ? m.color : m.color + '22';
+        const fg = isActive ? (m.id === 'all' ? '#1a1a2e' : '#fff') : m.color;
+        return '<button class="region-chip" data-region="' + m.id + '" style="padding:5px 14px;border:none;background:' + bg + ';color:' + fg + ';border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s">' + m.flag + ' ' + m.name + '</button>';
+      }).join('');
+    c.querySelectorAll('.region-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        MARKETS_DASH.forEach(m => m.active = false);
+        const m = MARKETS_DASH.find(x => x.id === btn.dataset.region);
+        if (m) m.active = true;
+        applyRegion();
+        renderChips();
+      });
+    });
+  }
+  function applyRegion() {
+    const active = MARKETS_DASH.find(m => m.active) || MARKETS_DASH[0];
+    document.body.className = 'region-active-' + active.id;
+  }
+  renderChips();
+  applyRegion();
 
 const DATA_URL = './data/latest.json';
 
