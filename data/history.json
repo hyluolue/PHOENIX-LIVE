@@ -1011,7 +1011,7 @@
     },
     {
       "date": "2026-07-16",
-      "sku_count": 51,
+      "sku_count": 49,
       "brand_count": 5,
       "phx_count": 10,
       "sources": [
@@ -1084,5 +1084,5 @@
       "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-07-16T15:17:59+08:00"
+  "last_updated": "2026-07-16T15:19:56+08:00"
 }
