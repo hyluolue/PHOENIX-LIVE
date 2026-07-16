@@ -84,7 +84,7 @@ h1{font-size:22px;font-weight:800}
 
 .card h2 .flag{font-size:18px}
 
-.card .small{font-size:11px;color:#94a3b8;font-weight:400;margin-left:6px}
+.card .small{font-size:11px;color:#cbd5e1;font-weight:400;margin-left:6px}
 
 
 
@@ -94,7 +94,7 @@ h1{font-size:22px;font-weight:800}
 
 .kpi{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;text-align:center}
 
-.kpi .label{font-size:10px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.kpi .label{font-size:10px;color:#cbd5e1;text-transform:uppercase;letter-spacing:.05em}
 
 .kpi .value{font-size:22px;font-weight:800;color:#fff;margin-top:4px}
 
@@ -118,7 +118,7 @@ h1{font-size:22px;font-weight:800}
 
 .price-item .price{color:#fcd34d;font-weight:700}
 
-.price-item .platform{font-size:9px;color:#94a3b8;background:rgba(255,255,255,.05);padding:2px 6px;border-radius:3px}
+.price-item .platform{font-size:9px;color:#cbd5e1;background:rgba(255,255,255,.05);padding:2px 6px;border-radius:3px}
 
 
 
@@ -134,7 +134,7 @@ h1{font-size:22px;font-weight:800}
 
 .trend-row .count{width:50px;text-align:right;color:#fcd34d;font-weight:700}
 
-.trend-row .pct{width:60px;text-align:right;color:#94a3b8;font-size:11px}
+.trend-row .pct{width:60px;text-align:right;color:#cbd5e1;font-size:11px}
 
 
 
@@ -158,7 +158,7 @@ h1{font-size:22px;font-weight:800}
 
 .social-row .cap{color:#e2e8f0;line-height:1.5;font-size:11px}
 
-.social-row .stats{color:#94a3b8;font-size:10px;margin-top:4px}
+.social-row .stats{color:#cbd5e1;font-size:10px;margin-top:4px}
 
 
 
@@ -180,15 +180,15 @@ h1{font-size:22px;font-weight:800}
 
 .news-item .title{color:#e2e8f0;font-weight:600}
 
-.news-item .meta{color:#94a3b8;font-size:10px;margin-top:2px}
+.news-item .meta{color:#cbd5e1;font-size:10px;margin-top:2px}
 
 
 
-.empty{color:#94a3b8;font-size:13px;text-align:center;padding:20px}
+.empty{color:#cbd5e1;font-size:13px;text-align:center;padding:20px}
 
 .section-title{font-size:14px;font-weight:700;color:#5eead4;margin:24px 0 12px;padding-bottom:6px;border-bottom:2px solid rgba(94,234,212,.2)}
 
-.footer{text-align:center;padding:30px 0 10px;color:#94a3b8;font-size:11px}
+.footer{text-align:center;padding:30px 0 10px;color:#cbd5e1;font-size:11px}
 
 </style>
 
@@ -797,7 +797,7 @@ function renderTrend(elId, prices, cur, region) {
 
     const color = delta > 0 ? '#fca5a5' : delta < 0 ? '#6ee7b7' : '#94a3b8';
 
-    trend = `<div style="margin-top:8px;font-size:11px;color:#94a3b8">7 日均价变化: <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
+    trend = `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">7 日均价变化: <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
 
   }
 
@@ -875,7 +875,7 @@ function renderBuckets(elId, prices, cur, regionName) {
 
     </div>`;
 
-  }).join('') + `<div style="margin-top:10px;font-size:11px;color:#94a3b8">${prices.length} 商品 · ${[...new Set(prices.map(p=>p.brand))].length} 品牌 · ${cur}</div>`;
+  }).join('') + `<div style="margin-top:10px;font-size:11px;color:#cbd5e1">${prices.length} 商品 · ${[...new Set(prices.map(p=>p.brand))].length} 品牌 · ${cur}</div>`;
 
   document.getElementById(elId).innerHTML = html;
 
@@ -1252,7 +1252,7 @@ function renderPricePool(elId, prices) {
     <span class="price">${esc((p.price || 0).toLocaleString())}</span>
     <span class="platform">${esc(p.platform)}</span>
   </div>`).join('');
-  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#94a3b8">显示 ${Math.min(20, cleaned.length)} / ${prices.length} 商品（已过滤 ${prices.length - cleaned.length} 条无品牌）</div>`;
+  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">显示 ${Math.min(20, cleaned.length)} / ${prices.length} 商品（已过滤 ${prices.length - cleaned.length} 条无品牌）</div>`;
 }
 
 function cleanBrandForPoolBD(it) {
