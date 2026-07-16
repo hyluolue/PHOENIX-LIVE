@@ -34,7 +34,7 @@
     .section h2{font-size:16px;font-weight:700;color:#c8102e;margin-bottom:14px;display:flex;align-items:center;gap:8px}
     .section h2 .flag{font-size:18px}
     .filter-bar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
-    .filter-bar label{font-size:12px;color:#666;margin-right:4px}
+    .filter-bar label{font-size:12px;color:#cbd5e1;margin-right:4px}
     .filter-bar select,.filter-bar input{padding:5px 10px;border:1px solid #ddd;border-radius:6px;font-size:12px;background:#fff;color:#333}
     .filter-bar input{min-width:200px}
     .brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
@@ -58,7 +58,7 @@
     .brand-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:12px;min-height:32px}
     .brand-item:last-child{border-bottom:none}
     .brand-item .model{color:#222;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:10px;font-weight:500}
-    .brand-item .model .plat{color:#888;font-weight:400;font-size:11px;margin-left:4px}
+    .brand-item .model .plat{color:#cbd5e1;font-weight:400;font-size:11px;margin-left:4px}
     .brand-item .price{color:#c8102e;font-weight:800;white-space:nowrap;font-size:14px;background:#ffebee;padding:2px 8px;border-radius:4px}
     .brand-item a{color:inherit;text-decoration:none}
     .brand-item a:hover{background:rgba(200,16,46,.05)}
@@ -73,7 +73,7 @@
   <div class="container">
     <!-- 市场切换器 -->
 <div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(46,125,50,.08);border-radius:8px">
-  <strong style="margin-right:8px;color:#94a3b8">🌐 市场：</strong>
+  <strong style="margin-right:8px;color:#cbd5e1">🌐 市场：</strong>
   <a href="../../index.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
   <a href="../bd/competitive.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉 →</a>
   <a href="./index.html" style="padding:4px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼</a>
@@ -106,7 +106,7 @@
 
     <!-- 0. 竞品覆盖热力图 (从 matrix.html 合并, 2026-07-10) -->
     <div class="section">
-      <h2><span class="flag">🔥</span>竞品覆盖热力图 <span class="small" style="color:#94a3b8">（品牌 × 4 品类 · 谁在哪品类强 · 从 matrix.html 合并）</span></h2>
+      <h2><span class="flag">🔥</span>竞品覆盖热力图 <span class="small" style="color:#cbd5e1">（品牌 × 4 品类 · 谁在哪品类强 · 从 matrix.html 合并）</span></h2>
       <div class="legend">
         <span style="background:#94a3b8">0 SKU = 真空</span>
         <span style="background:#1565c0">1-2 SKU = 弱势</span>
@@ -150,7 +150,7 @@
           <div class="kpi-value" id="cmp-pacific-fence">⏳ 加载中…</div>
         </div>
       </div>
-      <div style="font-size:10px;color:#94a3b8">勾连：Tab #1 总览 ID 三蓝海品类战略 + dashboard_metrics.id_7_15m + id_top10_brands</div>
+      <div style="font-size:10px;color:#cbd5e1">勾连：Tab #1 总览 ID 三蓝海品类战略 + dashboard_metrics.id_7_15m + id_top10_brands</div>
     </div>
 
     <div class="section">
@@ -391,7 +391,7 @@
     const phxPos = phxBm ? (allData.brand_metrics.rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix') + 1) : '?';
     document.getElementById('summary').innerHTML =
       `中高端整车 <strong>${totalItems}</strong> 条 · <strong>${priced}</strong> 条有价 · <strong>${totalBrands}</strong> 品牌（TOP 10 已截取）` +
-      (genericCount > 0 ? ` · <span style="color:#94a3b8;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
+      (genericCount > 0 ? ` · <span style="color:#cbd5e1;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
       (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
       ` · <span style="color:#c8102e">ID V2.6.1 三蓝海品类切入点 = Pacific 防火墙（≥12M）+ 公路车 12-15M 真空 + 平把/砾石 7-15M 真空</span>`;
 
@@ -460,9 +460,9 @@
           <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
               <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
-              <span style="font-size:10px;color:#94a3b8;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
+              <span style="font-size:10px;color:#cbd5e1;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
             </div>
-            <div style="font-size:11px;color:#666;line-height:1.5">
+            <div style="font-size:11px;color:#cbd5e1;line-height:1.5">
               ${isGap ? '<span style="color:#c8102e;font-weight:700">⚠ 真实真空</span>' : brands.length <= 3 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 3).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 3) + '</span>'}
             </div>
           </div>
@@ -488,10 +488,10 @@
           <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
               <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
-              <span style="font-size:10px;color:#94a3b8;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
+              <span style="font-size:10px;color:#cbd5e1;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
             </div>
-            <div style="font-size:11px;color:#666;line-height:1.5">
-              ${isGap ? '<span style="color:#94a3b8">· 真空（无数据）</span>' : brands.length <= 4 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 4).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 4) + '</span>'}
+            <div style="font-size:11px;color:#cbd5e1;line-height:1.5">
+              ${isGap ? '<span style="color:#cbd5e1">· 真空（无数据）</span>' : brands.length <= 4 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 4).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 4) + '</span>'}
             </div>
           </div>
         `;
