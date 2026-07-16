@@ -31,13 +31,13 @@
     .okr-card{background:#f8fafc;border-radius:12px;padding:16px 18px;margin-bottom:12px;border-left:4px solid #c8102e;box-shadow:0 1px 4px rgba(0,0,0,.05)}
     .okr-card .o-id{font-size:10px;color:#c8102e;font-weight:800;letter-spacing:1px;text-transform:uppercase}
     .okr-card .o-title{font-size:15px;font-weight:800;color:#0d47a1;margin:4px 0 8px}
-    .okr-card .o-period{font-size:11px;color:#666;margin-bottom:10px;font-style:italic}
+    .okr-card .o-period{font-size:11px;color:#cbd5e1;margin-bottom:10px;font-style:italic}
     .okr-card .krs{margin-top:8px}
     .okr-card .kr{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:12px;line-height:1.6;border-bottom:1px dashed rgba(0,0,0,.06)}
     .okr-card .kr:last-child{border-bottom:none}
     .okr-card .kr .kr-icon{color:#2e7d32;font-weight:800;flex-shrink:0}
     .okr-card .kr b{color:#0d47a1}
-    .okr-card .kr .delta{color:#666;font-size:10px;margin-left:4px}
+    .okr-card .kr .delta{color:#cbd5e1;font-size:10px;margin-left:4px}
 
     /* 行动卡片 */
     .initiative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:10px}
@@ -66,7 +66,7 @@
   <div class="container">
     <!-- 市场切换器 -->
 <div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(21,101,192,.08);border-radius:8px">
-  <strong style="margin-right:8px;color:#94a3b8">🌐 市场：</strong>
+  <strong style="margin-right:8px;color:#cbd5e1">🌐 市场：</strong>
   <a href="../../index.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
   <a href="./index.html" style="padding:4px 12px;background:#1565c0;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉</a>
   <a href="../id/tasks.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼 →</a>
@@ -130,7 +130,7 @@
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;font-size:11px">
           <div style="background:rgba(245,158,11,.15);border-left:3px solid #f57c00;padding:10px;border-radius:6px;border:2px solid #f57c00">
             <div style="font-weight:800;color:#e65100;font-size:12px;margin-bottom:4px">🥈 15-25K 中高端（销量基础 · 仅 3 SKU）</div>
-            <div style="color:#666;line-height:1.5"><b><span id="v23-mid-count">—</span> SKU · <span id="v23-mid-brands">—</span> 品牌</b><br><span id="v23-mid-brands-list">加载中…</span><br><b style="color:#e65100">Phoenix 已 <span id="v23-mid-phx">—</span> SKU 入门 = 还需要 5+ SKU 抢份额</b></div>
+            <div style="color:#cbd5e1;line-height:1.5"><b><span id="v23-mid-count">—</span> SKU · <span id="v23-mid-brands">—</span> 品牌</b><br><span id="v23-mid-brands-list">加载中…</span><br><b style="color:#e65100">Phoenix 已 <span id="v23-mid-phx">—</span> SKU 入门 = 还需要 5+ SKU 抢份额</b></div>
           </div>
           <div style="background:rgba(46,125,50,.15);border-left:3px solid #2e7d32;padding:10px;border-radius:6px;border:2px solid #2e7d32">
             <div style="font-weight:800;color:#1b5e20;font-size:12px;margin-bottom:4px">🥇 25-40K 高端（主战场 · 0 SKU 真正缺席）🆕</div>
@@ -138,11 +138,11 @@
           </div>
           <div style="background:rgba(156,39,176,.08);border-left:3px solid #9c27b0;padding:10px;border-radius:6px">
             <div style="font-weight:800;color:#9c27b0;font-size:12px;margin-bottom:4px">🥉 40-60K 公路车（价值锚点·不指望销量）</div>
-            <div style="color:#666;line-height:1.5"><b><span id="v23-anchor-count">—</span> SKU · <span id="v23-anchor-brands">—</span> 品牌</b><br><span id="v23-anchor-list">加载中…</span><br><b style="color:#9c27b0">部署但接受没销量</b></div>
+            <div style="color:#cbd5e1;line-height:1.5"><b><span id="v23-anchor-count">—</span> SKU · <span id="v23-anchor-brands">—</span> 品牌</b><br><span id="v23-anchor-list">加载中…</span><br><b style="color:#9c27b0">部署但接受没销量</b></div>
           </div>
           <div style="background:rgba(106,27,154,.08);border-left:3px solid #6a1b9a;padding:10px;border-radius:6px">
             <div style="font-weight:800;color:#6a1b9a;font-size:12px;margin-bottom:4px">📌 65K+ 顶价（形象产品·不指望成交）</div>
-            <div style="color:#666;line-height:1.5"><span id="v23-image-brand">加载中…</span> = <span id="v23-image-price">—</span><br>"<span id="v23-image-quote">65K 我可以买摩托车</span>"<br><b style="color:#6a1b9a">脱离购买力 = 仅形象</b></div>
+            <div style="color:#cbd5e1;line-height:1.5"><span id="v23-image-brand">加载中…</span> = <span id="v23-image-price">—</span><br>"<span id="v23-image-quote">65K 我可以买摩托车</span>"<br><b style="color:#6a1b9a">脱离购买力 = 仅形象</b></div>
           </div>
         </div>
         <div style="background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;padding:10px 14px;border-radius:6px;margin-top:12px;font-size:12px;line-height:1.7;color:#1a1a1a">
@@ -153,7 +153,7 @@
           · <b style="color:#6a1b9a">65K+ 形象 = 不指望成交</b>（脱离购买力 · 仅作品牌形象展示）<br>
           · <b style="color:#c8102e">真正差异化 = 品质标准</b>（竞品偷工减料 vs 凤凰符合品质标准 = 真实护城河 ≠ SGS 认证）
         </div>
-        <div style="margin-top:8px;font-size:10px;color:#94a3b8">勾连：Tab #3 product-matrix 推荐 3 / Tab #4 BD 关键发现 / Tab #6 OKR KR1.P1-P4 / Tab #9 strategy V2.3 反思</div>
+        <div style="margin-top:8px;font-size:10px;color:#cbd5e1">勾连：Tab #3 product-matrix 推荐 3 / Tab #4 BD 关键发现 / Tab #6 OKR KR1.P1-P4 / Tab #9 strategy V2.3 反思</div>
       </div>
     </div>
 
@@ -179,7 +179,7 @@
                 <tr style="background:rgba(200,16,46,.1)"><td><b>🎖️ #5</b></td><td><b>XC Race 3800</b></td><td><b>38,999</b></td><td><b>碳轮 + 4 活塞 + Shimano XT</b></td><td><b>VS Magpy DTR 38K 旗舰</b></td><td><b>17.5-19K</b></td></tr>
               </tbody>
             </table>
-            <div style="margin-top:4px;font-size:9.5px;color:#666">📎 完整配置：<a href="./phoenix-product-config.html" target="_blank">phoenix-product-config.html</a> · 生产简报 PDF：<a href="./phoenix-brief-prod.html" target="_blank">点此查看</a> · 销售工具 PDF：<a href="./phoenix-brief-sales.html" target="_blank">点此查看</a></div>
+            <div style="margin-top:4px;font-size:9.5px;color:#cbd5e1">📎 完整配置：<a href="./phoenix-product-config.html" target="_blank">phoenix-product-config.html</a> · 生产简报 PDF：<a href="./phoenix-brief-prod.html" target="_blank">点此查看</a> · 销售工具 PDF：<a href="./phoenix-brief-sales.html" target="_blank">点此查看</a></div>
           </div>
           <div class="kr"><span class="kr-icon">KR1.P2 🔄🔄</span><span><b style="color:#e65100">15-25K 中高端 MTB SKU（销量基础）</b>：当前 <b style="color:#2e7d32">3</b> SKU (Duster-A 15.7K / Duster-C 17K / Harod01 18K) → 目标 <b>8+</b>（Marine 15 / Veloce 15 / Core 9 = 用品质差异化抢份额）<span class="delta" style="color:#1565c0;font-weight:700">+5 SKU 销量基础盘</span></span></div>
           <div class="kr"><span class="kr-icon">KR1.P3 🆕</span><span><b style="color:#9c27b0">40-60K 公路车 SKU（品牌价值锚点 · 不指望销量）</b>：当前 0 → 目标 <b>2+</b>（公路 1 + 砾石 1，对标 Rockrider Duke 25K + Pro Gen 4 45K，<b>部署但接受没销量</b>）<span class="delta" style="color:#9c27b0">锚点 SKU</span></span></div>
@@ -217,7 +217,7 @@
     <div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,#fff5f6 0%,#fff 100%)">
       <h2 style="color:#c8102e"><span class="flag">🎯</span>今日数据驱动行动 <span class="small" style="color:#999">自动从 latest.json#dashboard_metrics 推导 · 每日 9:00 更新</span></h2>
       <div id="today-actions" class="initiative-grid">
-        <div class="initiative" style="background:#fff;color:#666">⏳ 加载中…</div>
+        <div class="initiative" style="background:#fff;color:#cbd5e1">⏳ 加载中…</div>
       </div>
       <div class="strategy-card" style="background:rgba(200,16,46,.05);border-left:3px solid #c8102e;padding:10px 14px;border-radius:8px;font-size:12px;color:#1a1a1a;margin-top:14px;line-height:1.7">
         <b>📋 行动生成逻辑（自动）：</b>
