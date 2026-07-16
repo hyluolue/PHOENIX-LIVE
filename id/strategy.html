@@ -164,11 +164,11 @@ header .subtitle { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 4
 }
 .note-item .head { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
 .note-item .cat { font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(94,234,212,0.15); color: #5eead4; }
-.note-item .time { font-size: 10px; color:#94a3b8; }
+.note-item .time { font-size: 10px; color:#cbd5e1; }
 .note-item .body { font-size: 12px; color: #e2e8f0; line-height: 1.6; }
-.empty { color:#94a3b8; font-size: 13px; text-align: center; padding: 20px; }
+.empty { color:#cbd5e1; font-size: 13px; text-align: center; padding: 20px; }
 
-footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11px; }
+footer { text-align: center; padding: 30px 0 10px; color:#cbd5e1; font-size: 11px; }
 </style>
 </head>
 <body>
@@ -211,7 +211,7 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
     </div>
   </div>
   <div id="v2-progress" style="font-size:12px;color:#e2e8f0;line-height:1.8">⏳ 加载中…</div>
-  <div style="margin-top:10px;font-size:10px;color:#94a3b8">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
+  <div style="margin-top:10px;font-size:10px;color:#cbd5e1">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
 </div>
 
 <!-- V2.6.1 ID Day 7 客户交付里程碑（V2.6 → V2.6.1 客户判断修订） -->
@@ -305,7 +305,7 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
     · FNIX 命名决策 7/10 <span class="badge" style="background:#e65100">⏸ 待 Day 7 决议</span>
   </div>
 
-  <div style="margin-top:8px;font-size:10px;color:#94a3b8">📎 V2.6 客户简报（PDF 1.65MB 7 页）需 V2.6.1 决议后重出 · 框架：<a href="./phoenix-id-v24-framework.html" target="_blank" style="color:#5eead4">HTML</a> · 勾连：Tab #6 V2.6.1 三蓝海品类 / Tab #7 OKR KR2.Exclude MTB/折叠/童车</div>
+  <div style="margin-top:8px;font-size:10px;color:#cbd5e1">📎 V2.6 客户简报（PDF 1.65MB 7 页）需 V2.6.1 决议后重出 · 框架：<a href="./phoenix-id-v24-framework.html" target="_blank" style="color:#5eead4">HTML</a> · 勾连：Tab #6 V2.6.1 三蓝海品类 / Tab #7 OKR KR2.Exclude MTB/折叠/童车</div>
 </div>
 
 <!-- V2 草稿已归档到 history（见最底） -->
@@ -425,7 +425,7 @@ footer { text-align: center; padding: 30px 0 10px; color:#94a3b8; font-size: 11p
     <textarea id="note-body" placeholder="详细描述：你想说啥？为啥这么想？反驳哪个 V1 条？或者新发现？"></textarea>
     <div style="margin-top: 8px;">
       <button onclick="addNote()">💾 沉淀到 V2 草稿</button>
-      <span style="margin-left: 12px; font-size: 11px; color: #94a3b8;">保存到 data/strategy_notes.json · 每日 9:00 自动备份到 GitHub</span>
+      <span style="margin-left: 12px; font-size: 11px; color: #cbd5e1;">保存到 data/strategy_notes.json · 每日 9:00 自动备份到 GitHub</span>
     </div>
   </div>
   <div class="notes-list" id="notes-list">
@@ -504,7 +504,7 @@ async function loadV2Progress() {
       <div style="margin-top:10px;font-size:11px;color:#cbd5e1">勾连：每条 KR → Tab #3 product-matrix 蓝海 + Tab #6 task OKR 行动 + Tab #7 dtc 差评</div>
     `;
   } catch (e) {
-    el.innerHTML = '<div style="color:#94a3b8">⚠ 加载 latest.json 失败：' + e.message + '</div>';
+    el.innerHTML = '<div style="color:#cbd5e1">⚠ 加载 latest.json 失败：' + e.message + '</div>';
   }
 }
 
@@ -540,7 +540,7 @@ function renderFrameworks() {
       `<div class="item-row"><span class="id-num">#${it.id}</span><span class="role">${esc(it.role)}</span><span class="note">${esc(it.note)}</span></div>`
     ).join('');
     html += `<div class="framework-card">
-      <h3>${esc(frame.name)} <span style="font-size:11px;color:#94a3b8">· ${frame.count} 条</span></h3>
+      <h3>${esc(frame.name)} <span style="font-size:11px;color:#cbd5e1">· ${frame.count} 条</span></h3>
       <div class="item-list">${items}</div>
       <div class="gap-line">⚠️ Gap: ${esc(frame.gap)}</div>
     </div>`;
