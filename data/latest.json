@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-16T13:41:26+08:00",
+  "generated_at": "2026-07-16T13:43:19+08:00",
   "source_query": "V2.9.17-P1.5 safe_crawl playwright: 13 BD queries",
   "source_url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
   "fetch_status": {
@@ -23,7 +23,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i323810443.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 19,000"
       },
       {
@@ -34,7 +34,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-spaark-18-i369355775.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 14,190"
       },
       {
@@ -45,7 +45,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1585065760.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 15,990"
       },
       {
@@ -56,7 +56,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/be-worth-i1576643329.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 2,699"
       },
       {
@@ -67,7 +67,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i563103748.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 19,999"
       },
       {
@@ -78,7 +78,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-mw-20-847793-i117316491.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 9,860"
       },
       {
@@ -89,7 +89,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i319543531.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 14,444"
       },
       {
@@ -100,7 +100,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i349283645.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:51+08:00",
+        "scraped_at": "2026-07-16T13:41:37+08:00",
         "note": "BDT 14,023"
       },
       {
@@ -111,7 +111,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-bicycle-for-kids-bicycle-phoenix-20-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202150683.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 9,999"
       },
       {
@@ -122,7 +122,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-i323337459.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 7,999"
       },
       {
@@ -133,7 +133,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/16-phoenix-bicycle-for-kids-bicycle-phoenix-16-baby-by-cycle-for-kids-bmx-cycle-kids-bike-cycle-for-baby-xwz-extrem-cycle-i202143847.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -144,8 +144,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phoenix-20-7-12-i425174012.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 8,722"
+      },
+      {
+        "brand": "Generic",
+        "model": "A.C.I .Captain Spider Bike With Music / Paddle Tricycle For Kids and Baby Bike R",
+        "platform": "Daraz BD (Phoenix bicycle)",
+        "price": 3899,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/aci-upoma-i409400161.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:41:40+08:00",
+        "note": "BDT 3,899"
       },
       {
         "brand": "Phoenix",
@@ -155,7 +166,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-kids-bicycle-phoenix-20-baby-by-cycle-for-ladies-stylish-and-comfortable-bicycle-for-girls-and-ladies-i189705085.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 9,799"
       },
       {
@@ -166,19 +177,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-phoenix-disc-brake-cycle-enjoy-smooth-and-reliable-braking-performance-with-the-20-phoenix-disc-brake-cycle-i294304675.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
+        "scraped_at": "2026-07-16T13:41:40+08:00",
         "note": "BDT 11,499"
-      },
-      {
-        "brand": "Phoenix",
-        "model": "Bicycle For Girls - Stylish And Comfortable 16\" Baby Cycle D",
-        "platform": "Daraz BD (Phoenix bicycle)",
-        "price": 9699,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/phoenix-bicycle-for-girls-stylish-and-comfortable-16-baby-cycle-designed-for-girls-kids-cycling-equipment-i189703071.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:39:53+08:00",
-        "note": "BDT 9,699"
       },
       {
         "brand": "Marine",
@@ -188,7 +188,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i561273686.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:55+08:00",
+        "scraped_at": "2026-07-16T13:41:42+08:00",
         "note": "BDT 17,000"
       },
       {
@@ -199,7 +199,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/200-26-i349289200.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:55+08:00",
+        "scraped_at": "2026-07-16T13:41:42+08:00",
         "note": "BDT 21,111"
       },
       {
@@ -210,7 +210,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/rfl-891390-i245555067.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:55+08:00",
+        "scraped_at": "2026-07-16T13:41:42+08:00",
         "note": "BDT 1,698"
       },
       {
@@ -221,7 +221,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i573810397.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:55+08:00",
+        "scraped_at": "2026-07-16T13:41:42+08:00",
         "note": "BDT 1,275"
       },
       {
@@ -232,7 +232,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i522880672.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:57+08:00",
+        "scraped_at": "2026-07-16T13:41:49+08:00",
         "note": "BDT 7,200"
       },
       {
@@ -243,7 +243,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-20-i369353830.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:57+08:00",
+        "scraped_at": "2026-07-16T13:41:49+08:00",
         "note": "BDT 11,499"
       },
       {
@@ -254,7 +254,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/playtime-88186-i333070592.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:57+08:00",
+        "scraped_at": "2026-07-16T13:41:49+08:00",
         "note": "BDT 3,000"
       },
       {
@@ -265,30 +265,41 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/phillips-bicycle-for-girls-kids-bicycle-phillips-20-baby-by-cycle-for-ladies-i189838377.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:39:57+08:00",
+        "scraped_at": "2026-07-16T13:41:49+08:00",
         "note": "BDT 10,493"
       },
       {
-        "brand": "Phoenix",
-        "model": "26\" BICYCLE",
-        "platform": "Daraz BD (Polygon bicycle)",
-        "price": 6000,
+        "brand": "Generic",
+        "model": "71 Race 20 Inch Non Gear Steel Body - Enjoy Smooth Riding With This 20 Inch Non-",
+        "platform": "Daraz BD (Giant bicycle)",
+        "price": 8799,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i1582590324.html",
+        "url": "https://www.daraz.com.bd/products/71-race-20-inch-non-gear-steel-body-enjoy-smooth-riding-with-this-20-inch-non-gear-bicycle-featuring-a-steel-body-i325191043.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:00+08:00",
-        "note": "BDT 6,000"
+        "scraped_at": "2026-07-16T13:41:49+08:00",
+        "note": "BDT 8,799"
       },
       {
         "brand": "Generic",
-        "model": "Electric bicycle 26\"size",
+        "model": "24 inchi 1 Speed Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke ",
         "platform": "Daraz BD (Polygon bicycle)",
-        "price": 50000,
+        "price": 12222,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-i192140001.html",
+        "url": "https://www.daraz.com.bd/products/24-1-i563111261.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:00+08:00",
-        "note": "BDT 50,000"
+        "scraped_at": "2026-07-16T13:41:51+08:00",
+        "note": "BDT 12,222"
+      },
+      {
+        "brand": "Phoenix",
+        "model": "bicycle 16 \"",
+        "platform": "Daraz BD (Polygon bicycle)",
+        "price": 9500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i531801286.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:41:51+08:00",
+        "note": "BDT 9,500"
       },
       {
         "brand": "Generic",
@@ -298,19 +309,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/24-1-i563102742.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:00+08:00",
+        "scraped_at": "2026-07-16T13:41:51+08:00",
         "note": "BDT 12,999"
-      },
-      {
-        "brand": "Generic",
-        "model": "fat bike rim 26 size",
-        "platform": "Daraz BD (Polygon bicycle)",
-        "price": 3000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-i337741315.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:00+08:00",
-        "note": "BDT 3,000"
       },
       {
         "brand": "Veloce",
@@ -320,7 +320,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-veloce-slayer-10-6061-light-weight-alloy-i325128602.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:02+08:00",
+        "scraped_at": "2026-07-16T13:41:53+08:00",
         "note": "BDT 18,314"
       },
       {
@@ -331,52 +331,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/20-i295351092.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:02+08:00",
+        "scraped_at": "2026-07-16T13:41:53+08:00",
         "note": "BDT 11,000"
       },
       {
         "brand": "Generic",
         "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
         "platform": "Daraz BD (Veloce bicycle)",
-        "price": 14234,
+        "price": 12999,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i563104658.html",
+        "url": "https://www.daraz.com.bd/products/26-21-i567817842.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:02+08:00",
-        "note": "BDT 14,234"
-      },
-      {
-        "brand": "Generic",
-        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
-        "platform": "Daraz BD (Veloce bicycle)",
-        "price": 16999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i563100800.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:02+08:00",
-        "note": "BDT 16,999"
-      },
-      {
-        "brand": "Generic",
-        "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat ",
-        "platform": "Daraz BD (Veloce bicycle)",
-        "price": 14999,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/26-21-i563106548.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:02+08:00",
-        "note": "BDT 14,999"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Steel 1-Speed Muscular Premier 24 Red Bicycle",
-        "platform": "Daraz BD (Duranta bicycle)",
-        "price": 8748,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
-        "note": "BDT 8,748"
+        "scraped_at": "2026-07-16T13:41:53+08:00",
+        "note": "BDT 12,999"
       },
       {
         "brand": "Duranta",
@@ -386,8 +353,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-24-847749-i235440894.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
+        "scraped_at": "2026-07-16T13:41:55+08:00",
         "note": "BDT 8,500"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Steel 1-Speed Muscular Premier 24 Red Bicycle",
+        "platform": "Daraz BD (Duranta bicycle)",
+        "price": 8748,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/1-24-i529826066.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:41:55+08:00",
+        "note": "BDT 8,748"
       },
       {
         "brand": "Duranta",
@@ -397,19 +375,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/1-spd-24-i529795639.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
+        "scraped_at": "2026-07-16T13:41:55+08:00",
         "note": "BDT 8,954"
-      },
-      {
-        "brand": "Duranta",
-        "model": "Steel 21-Spd Mascular 26 Red",
-        "platform": "Daraz BD (Duranta bicycle)",
-        "price": 15465,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i543258436.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
-        "note": "BDT 15,465"
       },
       {
         "brand": "Duranta",
@@ -419,7 +386,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/21-spd-26-847248-i557085157.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
+        "scraped_at": "2026-07-16T13:41:55+08:00",
         "note": "BDT 13,035"
       },
       {
@@ -430,7 +397,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/21-spd-x-800-26-i529798528.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
+        "scraped_at": "2026-07-16T13:41:55+08:00",
         "note": "BDT 16,320"
       },
       {
@@ -441,8 +408,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/mascular-26-804681-i529797775.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:04+08:00",
+        "scraped_at": "2026-07-16T13:41:55+08:00",
         "note": "BDT 13,145"
+      },
+      {
+        "brand": "Duranta",
+        "model": "Steel 21-Spd Mascular 26 Red",
+        "platform": "Daraz BD (Duranta bicycle)",
+        "price": 15465,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i543258436.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:41:55+08:00",
+        "note": "BDT 15,465"
       },
       {
         "brand": "Foxter",
@@ -452,7 +430,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1581785755.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:06+08:00",
+        "scraped_at": "2026-07-16T13:41:58+08:00",
         "note": "BDT 15,276"
       },
       {
@@ -463,19 +441,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/26-21-i546379650.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:06+08:00",
+        "scraped_at": "2026-07-16T13:41:58+08:00",
         "note": "BDT 16,830"
       },
       {
         "brand": "Generic",
-        "model": "24 inchi 1 Speed Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke ",
+        "model": "TANKE E-Bike MTB Hydraulic Disc Brake Set Electric E Scooter Power Control Shift",
         "platform": "Daraz BD (Foxter bicycle)",
-        "price": 12222,
+        "price": 4395,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/24-1-i563111261.html",
+        "url": "https://www.daraz.com.bd/products/-i546045852.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:06+08:00",
-        "note": "BDT 12,222"
+        "scraped_at": "2026-07-16T13:41:58+08:00",
+        "note": "BDT 4,395"
       },
       {
         "brand": "Hero",
@@ -485,30 +463,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/hero-hf-bs4-tl-i538773302.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:06+08:00",
+        "scraped_at": "2026-07-16T13:41:58+08:00",
         "note": "BDT 115,047"
       },
       {
-        "brand": "Generic",
-        "model": "RFL Playtime Happy Bike Tri Cycle 987700",
+        "brand": "Duranta",
+        "model": "Alloy 21-Spd Dynamic X-800 26 Red Bicycle",
         "platform": "Daraz BD (Decathlon bicycle)",
-        "price": 1572,
+        "price": 21335,
         "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573808354.html",
+        "url": "https://www.daraz.com.bd/products/21-spd-x-800-26-i529786789.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:08+08:00",
-        "note": "BDT 1,572"
-      },
-      {
-        "brand": "Generic",
-        "model": "RFL Best Buy Fusion Tri Cycle (Red & Black)",
-        "platform": "Daraz BD (Decathlon bicycle)",
-        "price": 2518,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/rfl-i1574453206.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:08+08:00",
-        "note": "BDT 2,518"
+        "scraped_at": "2026-07-16T13:42:00+08:00",
+        "note": "BDT 21,335"
       },
       {
         "brand": "Generic",
@@ -518,8 +485,52 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i190518152.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:08+08:00",
+        "scraped_at": "2026-07-16T13:42:00+08:00",
         "note": "BDT 10,185"
+      },
+      {
+        "brand": "Generic",
+        "model": "RFL Best Buy Fusion Tri Cycle (Red & Black)",
+        "platform": "Daraz BD (Decathlon bicycle)",
+        "price": 2518,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/rfl-i1574453206.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:42:00+08:00",
+        "note": "BDT 2,518"
+      },
+      {
+        "brand": "Generic",
+        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Frie",
+        "platform": "Daraz BD (Decathlon bicycle)",
+        "price": 22222,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/-i573726158.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:42:00+08:00",
+        "note": "BDT 22,222"
+      },
+      {
+        "brand": "Generic",
+        "model": "ACEX Steel 21-Speed Achilles 26'' Red-Black Bicycle",
+        "platform": "Daraz BD (Decathlon bicycle)",
+        "price": 13950,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/acex-21-26-i529792858.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:42:00+08:00",
+        "note": "BDT 13,950"
+      },
+      {
+        "brand": "Generic",
+        "model": "24 Inch Race 71 Non-Gear Steel Body Cycle - Perfect For Racing Enthusiasts, Enjo",
+        "platform": "Daraz BD (Decathlon bicycle)",
+        "price": 10500,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/24-71-i327835166.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:42:00+08:00",
+        "note": "BDT 10,500"
       },
       {
         "brand": "Generic",
@@ -529,7 +540,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i318750968.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:11+08:00",
+        "scraped_at": "2026-07-16T13:42:02+08:00",
         "note": "BDT 8,500"
       },
       {
@@ -540,19 +551,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i342574703.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:11+08:00",
+        "scraped_at": "2026-07-16T13:42:02+08:00",
         "note": "BDT 92,000"
-      },
-      {
-        "brand": "Generic",
-        "model": "Redbee Bullet Bike",
-        "platform": "Daraz BD (Firefox bicycle)",
-        "price": 13000,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i563677853.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:40:11+08:00",
-        "note": "BDT 13,000"
       },
       {
         "brand": "Generic",
@@ -562,8 +562,19 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i529032869.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:40:11+08:00",
+        "scraped_at": "2026-07-16T13:42:02+08:00",
         "note": "BDT 65,000"
+      },
+      {
+        "brand": "Generic",
+        "model": "F8 Ebikes",
+        "platform": "Daraz BD (Firefox bicycle)",
+        "price": 69000,
+        "currency": "BDT",
+        "url": "https://www.daraz.com.bd/products/f8-ebike-i528833396.html",
+        "is_new": true,
+        "scraped_at": "2026-07-16T13:42:02+08:00",
+        "note": "BDT 69,000"
       },
       {
         "brand": "Generic",
@@ -573,7 +584,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1581437789.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:41:25+08:00",
+        "scraped_at": "2026-07-16T13:43:17+08:00",
         "note": "BDT 1,443"
       },
       {
@@ -584,7 +595,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i563566987.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:41:25+08:00",
+        "scraped_at": "2026-07-16T13:43:17+08:00",
         "note": "BDT 4,999"
       },
       {
@@ -595,19 +606,8 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/-i1578857895.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:41:25+08:00",
+        "scraped_at": "2026-07-16T13:43:17+08:00",
         "note": "BDT 5,820"
-      },
-      {
-        "brand": "Generic",
-        "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Frie",
-        "platform": "Daraz BD (bicycle BD)",
-        "price": 22222,
-        "currency": "BDT",
-        "url": "https://www.daraz.com.bd/products/-i573726158.html",
-        "is_new": true,
-        "scraped_at": "2026-07-16T13:41:25+08:00",
-        "note": "BDT 22,222"
       },
       {
         "brand": "Generic",
@@ -617,7 +617,7 @@
         "currency": "BDT",
         "url": "https://www.daraz.com.bd/products/3c-victoryegle-2022-i343246138.html",
         "is_new": true,
-        "scraped_at": "2026-07-16T13:41:25+08:00",
+        "scraped_at": "2026-07-16T13:43:17+08:00",
         "note": "BDT 1,810"
       }
     ],
@@ -3859,7 +3859,7 @@
       }
     ]
   },
-  "gen_at": "2026-07-16T13:41:26+08:00",
+  "gen_at": "2026-07-16T13:43:19+08:00",
   "shopee_id": {
     "source": "user saved HTML (2026-07-07)",
     "search_query": "sepeda (general)",
