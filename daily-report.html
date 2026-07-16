@@ -284,16 +284,10 @@ h1{font-size:22px;font-weight:800}
 
       <h2>🇮🇩 印尼 MTB 价格快照</h2>
 
-      <div class="small">serbasepeda.com 首页 bestseller · 8 成人整车 SKU（童车/折叠车/配件/头盔排除）</div>
+      <div class="small">Shopee ID + Tokopedia · 4 子品类 · 实时</div>
 
       <div class="kpi-grid" id="id-snapshot">
-
-        <div class="kpi-card"><div class="kpi-label">💰 8 成人整车 SKU</div><div class="kpi-value">Rp 568K - 26.2M<br><small>4 大本土品牌 (Pacific/United/Element/Pacific)</small></div></div>
-
-        <div class="kpi-card"><div class="kpi-label">📊 价格分层</div><div class="kpi-value">1 SKU 入门 Rp 1-7M<br>6 SKU 中端 Rp 7-15M<br>1 SKU 高端 Rp 26.2M</div></div>
-
-        <div class="kpi-card"><div class="kpi-label">🎯 ID 中端空白</div><div class="kpi-value" style="color:#e65100">Rp 6-10M 无 SGS 认证品牌<br>Thunder ID Rp 9.5M 最佳切入<br><small>见 Tab #3 完整分析</small></div></div>
-
+        <div class="empty">加载中...</div>
       </div>
 
     </div>
@@ -322,9 +316,9 @@ h1{font-size:22px;font-weight:800}
 
       <h2>🇮🇩 印尼价格趋势 (7 日)</h2>
 
-      <div class="small">serbasepeda.com 8 成人整车 · 每日 9:00 自动累积</div>
+      <div class="small">Shopee ID + Tokopedia · 每日 9:00 + 16:00 自动累积</div>
 
-      <div id="id-trend"><div class="empty">⏳ serbasepeda 累积 7 天数据中（首次跑后开始）</div></div>
+      <div id="id-trend"><div class="empty">⏳ 7 天数据累积中（首次跑后开始）</div></div>
 
     </div>
 
@@ -352,7 +346,7 @@ h1{font-size:22px;font-weight:800}
 
       <h2>🇮🇩 印尼价格分层</h2>
 
-      <div class="small">serbasepeda.com · 按 IDR 价位段分桶（&lt; 1M 配件 / 1-7M 入门 / 7-15M 中端 / 15M+ 高端）</div>
+      <div class="small">Shopee ID + Tokopedia · 4 子品类 · 价格分层 （IDR 价位段分桶：&lt; 1M 入门 / 1-7M 主流 / 7-15M 中端 / 15M+ 高端）</div>
 
       <div id="id-buckets"></div>
 
@@ -398,7 +392,7 @@ h1{font-size:22px;font-weight:800}
 
       <h2>🇮🇩 印尼市场容量</h2>
 
-      <div class="small">serbasepeda.com 8 整车（CF 拦截详情）· 走 latest.json#id.price_pool</div>
+      <div class="small">Shopee ID + Tokopedia · 4 子品类 · IDR 价格 → latest.json#id.price_pool</div>
 
       <div id="id-capacity"></div>
 
@@ -440,7 +434,7 @@ h1{font-size:22px;font-weight:800}
 
     <div class="card">
 
-      <h2>🇮🇩 印尼价格池 <span class="small">serbasepeda.com 8 成人整车</span></h2>
+      <h2>🇮🇩 印尼价格池 <span class="small">Shopee ID + Tokopedia · 4 子品类</span></h2>
 
       <div id="id-prices">
 
@@ -643,7 +637,7 @@ function render() {
 
   const fs = DATA.fetch_status || {};
 
-  const pills = ['daraz_bd','dreamcycle','shopee_id','tokopedia','serbasepeda','news_bd','news_id','daraz_bd_reviews','apify_social']
+  const pills = ['daraz_bd','dreamcycle','shopee_id','tokopedia','serbasepeda_deprecated','news_bd','news_id','daraz_bd_reviews','apify_social']
 
     .map(k => {
 
@@ -673,13 +667,13 @@ function render() {
 
 
 
-  // 标记 serbasepeda 为 hardcoded backup（让状态条显示 ok）
+    // V2.9.17-P0: 移除 serbasepeda hardcoded backup, 全部从 latest.json 读取
 
   DATA.fetch_status = DATA.fetch_status || {};
 
-  if (!DATA.fetch_status.serbasepeda) {
+    // V2.9.17-P0: 移除 hardcoded backup 赋值, serbasepeda 状态从 latest.json 读取
 
-    DATA.fetch_status.serbasepeda = 'ok (8 成人整车 SKU - hardcoded backup, 童车/折叠车/配件/头盔排除)';
+    // V2.9.17-P0: 移除 hardcoded backup，全部从 latest.json 读取
 
   }
 
@@ -690,7 +684,7 @@ function render() {
   if (id.length === 0) {
     document.getElementById('status-bar').innerHTML += ' <span class="pill fail">⚠️ ID 真实数据未并入 (等 cron 9:00/16:00 跑)</span>';
     DATA.fetch_status = DATA.fetch_status || {};
-    DATA.fetch_status.serbasepeda = 'warn (V2.6.1 ID 真实数据 141 SKU 应已并入, 当前为空 - 检查 cron)';
+    DATA.fetch_status.serbasepeda = 'warn (ID 数据为空, 检查抓取脚本)';
   }
 
 
