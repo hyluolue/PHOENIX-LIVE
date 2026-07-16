@@ -1213,34 +1213,29 @@
           "price": 9500
         },
         {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18314
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 950
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
           "brand": "Phoenix",
           "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
           "price": 15990
         },
         {
+          "brand": "Veloce",
+          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
+          "price": 18314
+        },
+        {
+          "brand": "Generic",
+          "model": "One Ruby Bicycle Seventy 24 For Women - Cycle - Experience The Comfort And Style Of The Ruby Bicycle",
+          "price": 10499
+        },
+        {
           "brand": "Generic",
           "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
           "price": 14023
+        },
+        {
+          "brand": "Generic",
+          "model": "71 Race 20 Inch Non Gear Steel Body - Enjoy Smooth Riding With This 20 Inch Non-Gear Bicycle Featuri",
+          "price": 8799
         },
         {
           "brand": "Generic",
@@ -1251,6 +1246,11 @@
           "brand": "Generic",
           "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
           "price": 14444
+        },
+        {
+          "brand": "Generic",
+          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+          "price": 16999
         },
         {
           "brand": "Pacific",
@@ -1289,13 +1289,13 @@
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Mascular 26 Red",
-          "price": 15465
+          "model": "Duranta Alloy 21-Spd Dynamic X-800 26 Blue",
+          "price": 16320
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Alloy 21-Spd Dynamic X-800 26 Blue",
-          "price": 16320
+          "model": "Duranta Steel 21-Spd Mascular 26 Red",
+          "price": 15465
         },
         {
           "brand": "Duranta",
@@ -1329,13 +1329,13 @@
         },
         {
           "brand": "Generic",
-          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
-          "price": 12999
+          "model": "TANKE E-Bike MTB Hydraulic Disc Brake Set Electric E Scooter Power Control Shifter Bicycle Brakes 16",
+          "price": 4395
         },
         {
           "brand": "Generic",
-          "model": "TANKE E-Bike MTB Hydraulic Disc Brake Set Electric E Scooter Power Control Shifter Bicycle Brakes 16",
-          "price": 4395
+          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
+          "price": 12999
         },
         {
           "brand": "Hero",
@@ -1344,28 +1344,8 @@
         },
         {
           "brand": "Warrior",
-          "model": "Retro Style Viking Warrior Pattern Guardian Bell Pendant Punk Hip Hop Necklaces Motorcycle Bicycle B",
-          "price": 836
-        },
-        {
-          "brand": "Warrior",
           "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
           "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Viking Bear Head Warrior Ring Men's Bicycle Personality Creative Temperament Stainless Steel Ring Je",
-          "price": 615
-        },
-        {
-          "brand": "Generic",
-          "model": "WAKE 780MM Purple Alloy Handlebar for Bicycle",
-          "price": 950
-        },
-        {
-          "brand": "Warrior",
-          "model": "Disc Brake 160mm Rotor With Screw Electric Scooter for ZERO 11X for KAABO Wolf Warrior Wolf King GT ",
-          "price": 1130
         },
         {
           "brand": "Warrior",
@@ -1374,13 +1354,33 @@
         },
         {
           "brand": "Generic",
-          "model": "2 Pcs Bicycle Aluminum Heavy Duty Foot Peg Bicycle Accesories",
-          "price": 225
+          "model": "baby hand toy bike,Little super bike for kids",
+          "price": 675
         },
         {
-          "brand": "Warrior",
-          "model": "FVRITO Mini Bicycle Exhaust Pipe Kit for Iron Blood Warrior 212cc 224cc 196cc Coleman CT200U BT200X ",
-          "price": 2003
+          "brand": "Generic",
+          "model": "Mountain Bike Kids Toys For Kids",
+          "price": 165
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
+          "price": 8748
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
+        },
+        {
+          "brand": "Generic",
+          "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
+          "price": 1286
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Alloy 21-Spd Dynamic X-800 26 Red Bicycle",
+          "price": 21335
         }
       ]
     }
