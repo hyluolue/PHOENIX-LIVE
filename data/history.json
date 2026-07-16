@@ -1,757 +1,14 @@
 {
   "bd": [
     {
-      "date": "2026-07-02",
-      "prices": [
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Stl 18-S Spaark Breeze 26 Blue W/Carrier Cycle 847815",
-          "price": 11065
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 12750
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 9200
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 7600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 10000
-        },
-        {
-          "brand": "Be worth",
-          "model": "【Be worth】 Bike Accessories Bike Mountain Bike Bike Model",
-          "price": 2699
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-          "price": 7999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle ,",
-          "price": 9799
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
-          "price": 21111
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
-          "price": 1737
-        },
-        {
-          "brand": "Generic",
-          "model": "Jim & Jolly Road Master Tricycle Red & Black 891391",
-          "price": 1602
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Generic",
-          "model": "Jim & Jolly Road Master Tricycle - White & Cyan Blue - Fun Ride for Kids - Model 891390 Easy to Use ",
-          "price": 1602
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1550
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 19999
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 22222
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote",
-          "price": 7200
-        },
-        {
-          "brand": "Generic",
-          "model": "electric bicycle with RGB wheel 26size",
-          "price": 44000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids",
-          "price": 8000
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk plate Without Churi For Disk Brake",
-          "price": 199
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 13934
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1550
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 950
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 13934
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
-        },
-        {
-          "brand": "Pacific",
-          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
-          "price": 1300
-        },
-        {
-          "brand": "Generic",
-          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
-          "price": 230
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Stl 18-S Spaark Breeze 26 Blue W/Carrier Cycle 847815",
-          "price": 11065
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 10000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 9200
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 12750
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 7600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
-          "price": 15999
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16999
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bicycle Sticker-10PSc",
-          "price": 100
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1350
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-          "price": 120
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
-          "price": 115
-        },
-        {
-          "brand": "Generic",
-          "model": "Baby & Electric Bike R3",
-          "price": 23000
-        },
-        {
-          "brand": "Generic",
-          "model": "Baby Electric Bike R3",
-          "price": 25000
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16999
-        },
-        {
-          "brand": "Generic",
-          "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
-          "price": 100000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
-          "brand": "Generic",
-          "model": "Alloy Finger BMX Functional Kids Bicycle mode Finger Toys Gift",
-          "price": 983
-        }
-      ]
-    },
-    {
-      "date": "2026-07-06",
-      "prices": [
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 9200
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 12750
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 7600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 10000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 15600
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-          "price": 7999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-          "price": 11520
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
-          "price": 21111
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1320
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Jim & Jolly Road Master Tricycle Red & Black 891391",
-          "price": 1602
-        },
-        {
-          "brand": "Generic",
-          "model": "A.C.I Captain Spider Bike With Music - Paddle Tricycle For Kids and Babies bike - Great Value",
-          "price": 3500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 19999
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 22222
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
-        },
-        {
-          "brand": "Generic",
-          "model": "electric bicycle with RGB wheel 26size",
-          "price": 44000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids",
-          "price": 8000
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
-        },
-        {
-          "brand": "Generic",
-          "model": "Playtime Fusion Tri Cycle (Red & Black) 88186",
-          "price": 3000
-        },
-        {
-          "brand": "Generic",
-          "model": "Children Gifts Collection  Toys Mountain Mini Bicycle Diecast Bicycle Ornament Vintage Bicycle Model",
-          "price": 649
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Generic",
-          "model": "Showpiece Bicycle  1:8 Alloy Model Mountain Bicycle Showpiece Foldable Cycle Metal Racing Mountain B",
-          "price": 942
-        },
-        {
-          "brand": "Generic",
-          "model": "Simulation Toy Bicycle Model Children's Mini Metal Car Single-Pole Finger Bicycle Ferry Black Color",
-          "price": 1650
-        },
-        {
-          "brand": "Generic",
-          "model": "1PC Racing Bicycle Mountain Bike Mini Dirt Bike Bicycle Model Cool Boy Toy, For Kid, Multicolor",
-          "price": 1133
-        },
-        {
-          "brand": "Generic",
-          "model": "baby hand toy bike,Little super bike for kids",
-          "price": 675
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18999
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 942
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 13934
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
-        },
-        {
-          "brand": "Pacific",
-          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
-          "price": 1300
-        },
-        {
-          "brand": "Generic",
-          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
-          "price": 230
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 10000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 9200
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 12750
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 7600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 15600
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Supreme 26\" Blue Gents Cycle",
-          "price": 15500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
-          "price": 15999
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16999
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bicycle Sticker-10PSc",
-          "price": 100
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1320
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
-          "price": 114
-        },
-        {
-          "brand": "Generic",
-          "model": "Baby & Electric Bike R3",
-          "price": 23000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-          "price": 119
-        },
-        {
-          "brand": "Generic",
-          "model": "Baby Electric Bike R3",
-          "price": 25000
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
-          "price": 100000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16999
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Generic",
-          "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
-          "price": 1286
-        }
-      ]
-    },
-    {
-      "date": "2026-07-07",
+      "date": "2026-07-10",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "daraz_bd"
+      ],
+      "note": "baseline 完整抓取",
       "prices": [
         {
           "brand": "Generic",
@@ -792,756 +49,6 @@
           "brand": "Generic",
           "model": "2 Pcs Bicycle Disc Brake Pad/hydraulic Break Pad Mountain Bike and Bicycle Accessories",
           "price": 117
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-          "price": 7999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle ,",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls - Stylish And Comfortable 16\" Baby Cycle Designed For Girls - Kids' Cyclin",
-          "price": 9699
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
-          "price": 21111
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1230
-        },
-        {
-          "brand": "Generic",
-          "model": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
-          "price": 3101
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
-          "price": 1582
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Jim & Jolly Road Master Tricycle Red & Black 891391",
-          "price": 1585
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Jim & Jolly Road Master Tricycle - White & Cyan Blue - Fun Ride for Kids - Model 891390 Easy to ",
-          "price": 1544
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 22222
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote",
-          "price": 7200
-        },
-        {
-          "brand": "Generic",
-          "model": "electric bicycle with RGB wheel 26size",
-          "price": 44000
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1230
-        },
-        {
-          "brand": "Generic",
-          "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
-          "price": 305
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Generic",
-          "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
-          "price": 1286
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Best Buy Road Master Tricycle - White & Cyan Blue",
-          "price": 1621
-        },
-        {
-          "brand": "Generic",
-          "model": "ACEX Steel 1-Speed Prometheus 26'' Black-Blue Bicycle",
-          "price": 13932
-        },
-        {
-          "brand": "Generic",
-          "model": "71 Race 24 Inch Non Gear Steel Body",
-          "price": 9900
-        },
-        {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18314
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 950
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 16999
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 19999
-        },
-        {
-          "brand": "Pacific",
-          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
-          "price": 1209
-        },
-        {
-          "brand": "Generic",
-          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
-          "price": 230
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 7820
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 6235
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 13260
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Supreme 26\" Blue Gents Cycle",
-          "price": 15500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bicycle Sticker-10PSc",
-          "price": 100
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
-          "price": 15276
-        },
-        {
-          "brand": "Generic",
-          "model": "TESNO 2 Piston Bicycle Brake EBike Hydraulic Disc Brake ebike Scooter Left Front Right Rear 850/1700",
-          "price": 659
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Generic",
-          "model": "2 Pcs Bicycle Foot Pegs Aluminium",
-          "price": 85
-        },
-        {
-          "brand": "Generic",
-          "model": "ACI Captain Gypsy Bike For Kids (2year to 5 year) with Remote Control & Foot Accelerator  Cash On De",
-          "price": 6324
-        },
-        {
-          "brand": "Generic",
-          "model": "Bike Bicycle Mtb Led Frog Head Front Lamp Warning Rear Flash Light - Cycle Accessories - Cycle Acces",
-          "price": 200
-        },
-        {
-          "brand": "Generic",
-          "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
-          "price": 305
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Generic",
-          "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
-          "price": 100000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        }
-      ]
-    },
-    {
-      "date": "2026-07-08",
-      "prices": [
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 7820
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 6235
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-          "price": 7999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 10000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-          "price": 11520
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "Handle Looking Glass for Motorcycle or Bicycle 1 Pis",
-          "price": 90
-        },
-        {
-          "brand": "Veloce",
-          "model": "Bicycle Pedals Heavy Duty Meghna Brand 1 pair Bicycle Veloce Paddle Bike Accessorise",
-          "price": 175
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle Brake Fluid 60ml Mineral Oil for Brake Systems Leak-Proof Bicycle Brake Oil MTB/Road Bike Hy",
-          "price": 137
-        },
-        {
-          "brand": "Generic",
-          "model": "1Pcs Mini Model Bicycle Toys Cycling 1:10 Alloy Miniature MTB Bike Model Creative Mountain Cycling K",
-          "price": 304
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Generic",
-          "model": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
-          "price": 3101
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle Tube 24\" BMX/Mountainbike Any Bicycle 24\"× 1.95 Easy Nojel 24\" Bicycle Heavy Duty For Cycle ",
-          "price": 214
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 22222
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote",
-          "price": 7200
-        },
-        {
-          "brand": "Generic",
-          "model": "electric bicycle with RGB wheel 26size",
-          "price": 44000
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Generic",
-          "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
-          "price": 305
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk plate Without Churi For Disk Brake",
-          "price": 199
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Generic",
-          "model": "1PC Racing Bicycle Mountain Bike Mini Dirt Bike Bicycle Model Cool Boy Toy, For Kid, Multicolor",
-          "price": 1133
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Generic",
-          "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
-          "price": 1286
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18314
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 950
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
-          "brand": "Generic",
-          "model": "CYCLACE Super strong Spinner Exercise Bike 150kg weight capacity Exercise bike",
-          "price": 25900
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 9404
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
-        },
-        {
-          "brand": "Pacific",
-          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
-          "price": 1209
-        },
-        {
-          "brand": "Generic",
-          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
-          "price": 230
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 7820
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 6235
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Generic",
-          "model": "high quality  fat bike E cycle 26×4",
-          "price": 70000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Supreme 26\" Blue Gents Cycle",
-          "price": 15500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
-          "price": 15276
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bicycle Sticker-10PSc",
-          "price": 100
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
-          "price": 107
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
-          "price": 115
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
-          "price": 1698
-        },
-        {
-          "brand": "Generic",
-          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
-          "price": 12999
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Best Buy Road Master Tricycle - White & Cyan Blue",
-          "price": 1698
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "Alloy Bicycle Model - Road and Mountain Bike Adult Children Toys, Great Easter Gift for Cycling Love",
-          "price": 1286
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Best Buy Royal Bike",
-          "price": 1408
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        }
-      ]
-    },
-    {
-      "date": "2026-07-10",
-      "prices": [
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
-          "price": 7820
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
-          "price": 6235
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
         },
         {
           "brand": "Phoenix",
@@ -1625,43 +132,43 @@
         },
         {
           "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 19999
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 22222
+        },
+        {
+          "brand": "Generic",
+          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
+          "price": 11499
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
+          "price": 65000
+        },
+        {
+          "brand": "Generic",
+          "model": "Captain Gypsy Bike with Remote",
+          "price": 7200
+        },
+        {
+          "brand": "Generic",
+          "model": "electric bicycle with RGB wheel 26size",
+          "price": 44000
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
+          "price": 48000
+        },
+        {
+          "brand": "Generic",
           "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
           "price": 305
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Generic",
-          "model": "○699 -47%\nT/Capply\"\n5.5\nEnd in 3 days 10:21:01\nBaby Balance Bike My lst Scooter Ride-on\nCycle Learn ",
-          "price": 500
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Generic",
-          "model": "26\" Spaark Breeze 18speed gear bicycle steel body cycle  Cash On Delivery Available",
-          "price": 14333
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Electric Bike With Hub Motor & Digital Display E-Rider-101",
-          "price": 22222
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta E-Rider-201 Battery inside the Frame & Honda Wheel Hub Motor",
-          "price": 22222
         },
         {
           "brand": "Generic",
@@ -1669,24 +176,29 @@
           "price": 199
         },
         {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
           "brand": "Generic",
           "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
           "price": 14444
         },
         {
-          "brand": "Generic",
-          "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
-          "price": 1255
+          "brand": "Phoenix",
+          "model": "PHOENIX 26\" BICYCLE",
+          "price": 6000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine 26\" Gold 600 Bicycle",
+          "price": 17000
         },
         {
           "brand": "Generic",
-          "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
-          "price": 1228
+          "model": "Simulation Toy Bicycle Model Children's Mini Metal Car Single-Pole Finger Bicycle Ferry Black Color",
+          "price": 1650
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 19999
         },
         {
           "brand": "Generic",
@@ -1695,13 +207,8 @@
         },
         {
           "brand": "Generic",
-          "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
-          "price": 1261
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 22222
         },
         {
           "brand": "Marine",
@@ -1735,13 +242,13 @@
         },
         {
           "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
+          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+          "price": 14444
         },
         {
           "brand": "Generic",
           "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14999
+          "price": 14023
         },
         {
           "brand": "Pacific",
@@ -1752,6 +259,11 @@
           "brand": "Generic",
           "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
           "price": 230
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+          "price": 8500
         },
         {
           "brand": "Duranta",
@@ -1765,11 +277,6 @@
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Duranta",
           "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
           "price": 6235
         },
@@ -1777,11 +284,6 @@
           "brand": "Duranta",
           "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
           "price": 13035
-        },
-        {
-          "brand": "Generic",
-          "model": "high quality  fat bike E cycle 26×4",
-          "price": 70000
         },
         {
           "brand": "Duranta",
@@ -1792,6 +294,11 @@
           "brand": "Duranta",
           "model": "Duranta Supreme 26\" Blue Gents Cycle",
           "price": 15500
+        },
+        {
+          "brand": "Generic",
+          "model": "high quality  fat bike E cycle 26×4",
+          "price": 70000
         },
         {
           "brand": "Foxter",
@@ -1809,6 +316,11 @@
           "price": 100
         },
         {
+          "brand": "Generic",
+          "model": "RFL Playtime Royal Bike 947409",
+          "price": 1320
+        },
+        {
           "brand": "Foxter",
           "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
           "price": 107
@@ -1820,8 +332,8 @@
         },
         {
           "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1320
+          "model": "Baby Electric Bike R3",
+          "price": 25000
         },
         {
           "brand": "Generic",
@@ -1829,49 +341,44 @@
           "price": 1698
         },
         {
-          "brand": "Generic",
-          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
-          "price": 12999
+          "brand": "Warrior",
+          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
+          "price": 14999
         },
         {
           "brand": "Warrior",
-          "model": "Retro Style Viking Warrior Pattern Guardian Bell Pendant Punk Hip Hop Necklaces Motorcycle Bicycle B",
-          "price": 836
+          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
+          "price": 18999
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+          "price": 16830
         },
         {
           "brand": "Generic",
-          "model": "Bicycle,Cycle Screwdriver Tool, Bicycle accessories",
-          "price": 170
+          "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
+          "price": 100000
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
+          "price": 8748
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
+          "price": 26999
         },
         {
           "brand": "Generic",
-          "model": "WAKE 780MM Purple Alloy Handlebar for Bicycle",
-          "price": 950
-        },
-        {
-          "brand": "Generic",
-          "model": "2 Pcs Bicycle Aluminum Heavy Duty Foot Peg Bicycle Accesories",
-          "price": 225
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle Foot Pegs Aluminium 2 pcs",
-          "price": 84
-        },
-        {
-          "brand": "Warrior",
-          "model": "Disc Brake 160mm Rotor With Screw Electric Scooter for ZERO 11X for KAABO Wolf Warrior Wolf King GT ",
-          "price": 1130
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle Break Lever mountain cycle bike Break Lever aluminum alloy",
-          "price": 215
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle aluminum alloy stand cycle alloy stand cycle Kick Stand",
-          "price": 280
+          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
+          "price": 150
         },
         {
           "brand": "Foxter",
@@ -2456,28 +963,55 @@
       ]
     },
     {
+      "date": "2026-07-11",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败",
+      "prices": []
+    },
+    {
+      "date": "2026-07-12",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败",
+      "prices": []
+    },
+    {
+      "date": "2026-07-13",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败",
+      "prices": []
+    },
+    {
       "date": "2026-07-14",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败",
+      "prices": []
+    },
+    {
+      "date": "2026-07-15",
+      "sku_count": 74,
+      "brand_count": 9,
+      "phx_count": 13,
+      "sources": [
+        "daraz_bd_partial"
+      ],
+      "note": "部分抓取（关键词太窄）",
+      "prices": []
+    },
+    {
+      "date": "2026-07-16",
       "prices": [
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
         {
           "brand": "Marine",
           "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
@@ -2485,13 +1019,28 @@
         },
         {
           "brand": "Generic",
+          "model": "26\" Spaark Breeze 18speed gear bicycle steel body cycle  Cash On Delivery Available",
+          "price": 14190
+        },
+        {
+          "brand": "Phoenix",
+          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
+          "price": 15990
+        },
+        {
+          "brand": "Be worth",
+          "model": "【Be worth】 Bike Accessories Bike Mountain Bike Bike Model",
+          "price": 2699
+        },
+        {
+          "brand": "Generic",
           "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
+          "price": 19999
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 13260
+          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
+          "price": 9860
         },
         {
           "brand": "Generic",
@@ -2499,9 +1048,24 @@
           "price": 14444
         },
         {
+          "brand": "Generic",
+          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+          "price": 14023
+        },
+        {
+          "brand": "Phoenix",
+          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9999
+        },
+        {
           "brand": "Phoenix",
           "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
           "price": 7999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9799
         },
         {
           "brand": "Phoenix",
@@ -2515,28 +1079,18 @@
         },
         {
           "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
           "price": 9799
         },
         {
           "brand": "Phoenix",
-          "model": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-          "price": 11243
+          "model": "20'' Phoenix Disc Brake Cycle - Enjoy Smooth And Reliable Braking Performance With The 20'' Phoenix ",
+          "price": 11499
         },
         {
           "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
+          "model": "Phoenix Bicycle For Girls - Stylish And Comfortable 16\" Baby Cycle Designed For Girls - Kids' Cyclin",
+          "price": 9699
         },
         {
           "brand": "Marine",
@@ -2555,13 +1109,8 @@
         },
         {
           "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1320
-        },
-        {
-          "brand": "Generic",
-          "model": "A.C.I Captain Spider Bike With Music / Paddle Tricycle For Kids and Babies bike  Cash On Delivery Av",
-          "price": 3101
+          "model": "baby hand toy bike,Little super bike for kids",
+          "price": 675
         },
         {
           "brand": "Generic",
@@ -2570,28 +1119,18 @@
         },
         {
           "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids) Prince Cycle Stor",
-          "price": 6999
+          "model": "Tricycle for kids, new baby bicycle, moto bike baby bicycle toy bicycle kids tricycle kids bike",
+          "price": 741
         },
         {
           "brand": "Generic",
-          "model": "RFL Jim & Jolly Road Master Tricycle - White & Cyan Blue - Fun Ride for Kids - Model 891390 Easy to ",
-          "price": 1544
+          "model": "Vintage Bicycle Model Kit - with Pump & Luggage, Ideal  for Collectors & Home Office Decor",
+          "price": 653
         },
         {
           "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 19999
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
+          "model": "RFL Playtime Royal Bike 947409",
+          "price": 1275
         },
         {
           "brand": "Generic",
@@ -2600,18 +1139,18 @@
         },
         {
           "brand": "Generic",
-          "model": "electric bicycle with RGB wheel 26size",
-          "price": 44000
+          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
+          "price": 11499
         },
         {
           "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids",
-          "price": 8000
+          "model": "Playtime Fusion Tri Cycle (Red & Black) 88186",
+          "price": 3000
         },
         {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
+          "brand": "Falcon",
+          "model": "Phillips or falcon Bicycle for girls kids bicycle Phillips 20\\\" Baby By cycle for Ladies",
+          "price": 10493
         },
         {
           "brand": "Phoenix",
@@ -2619,19 +1158,29 @@
           "price": 15990
         },
         {
+          "brand": "Generic",
+          "model": "baby hand toy bike,Little super bike for kids",
+          "price": 675
+        },
+        {
+          "brand": "Generic",
+          "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+          "price": 305
+        },
+        {
+          "brand": "Generic",
+          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+          "price": 14444
+        },
+        {
           "brand": "Phoenix",
           "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
           "price": 15990
         },
         {
           "brand": "Generic",
-          "model": "Children Gifts Collection  Toys Mountain Mini Bicycle Diecast Bicycle Ornament Vintage Bicycle Model",
-          "price": 649
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle series Alloy (Beautiful toy model)",
-          "price": 850
+          "model": "baby hand toy bike,Little super bike for kids",
+          "price": 675
         },
         {
           "brand": "Generic",
@@ -2645,978 +1194,23 @@
         },
         {
           "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
-          "price": 18314
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
-          "price": 950
-        },
-        {
-          "brand": "Veloce",
-          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
-          "price": 11000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Pacific",
-          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
-          "price": 1209
-        },
-        {
-          "brand": "Generic",
-          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
-          "price": 230
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 13260
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Supreme 26\" Blue Gents Cycle",
-          "price": 15500
-        },
-        {
-          "brand": "Generic",
-          "model": "high quality  fat bike E cycle 26×4",
-          "price": 70000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Mascular-26\"(Multi speed) 804681 Bicycle",
-          "price": 13145
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Bicycle Sticker-10PSc",
-          "price": 100
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
-          "price": 15276
-        },
-        {
-          "brand": "Generic",
-          "model": "TESNO 2 Piston Bicycle Brake EBike Hydraulic Disc Brake ebike Scooter Left Front Right Rear 850/1700",
-          "price": 621
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Generic",
-          "model": "Children Gifts Collection  Toys Mountain Mini Bicycle Diecast Bicycle Ornament Vintage Bicycle Model",
-          "price": 649
-        },
-        {
-          "brand": "Generic",
-          "model": "Aluminum Foot Pegs Big Size 2 pcs Bicycle Accessories",
-          "price": 212
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero XTREME 125R ABS Motorcycle",
-          "price": 175547
-        },
-        {
-          "brand": "Warrior",
-          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
-          "price": 14999
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
-          "price": 18999
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Generic",
-          "model": "1:8 All-Terrain Mountain bicycle Die-Made Model with realistic suspension and brakes, suitable for i",
-          "price": 1323
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
-          "brand": "Generic",
           "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
           "price": 150
         },
         {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-2",
-          "price": 16000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 500",
-          "price": 16500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Slayer 1.0",
-          "price": 16700
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Race 3.0",
-          "price": 16700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 300(2025)",
-          "price": 17000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Duster-C",
-          "price": 17000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2602L",
-          "price": 17300
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-300(2026)",
-          "price": 17700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold-100",
-          "price": 17700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-200 Plus",
-          "price": 17700
-        },
-        {
-          "brand": "Warrior",
-          "model": "Warrior 2.0",
-          "price": 17700
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 10",
-          "price": 18000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Harod01",
-          "price": 18000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6502",
-          "price": 18000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2602",
-          "price": 18000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy One Warrior 3.0",
-          "price": 18500
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Jordan",
-          "price": 19000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon XT 26",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold 400",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Master",
-          "price": 19500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Master",
-          "price": 19500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold-600",
-          "price": 19500
-        },
-        {
-          "brand": "Ghost",
-          "model": "Ghost ASX-5900",
-          "price": 19700
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-3",
-          "price": 19700
-        },
-        {
-          "brand": "Forever",
-          "model": "Forever Pearl",
-          "price": 20000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER THRUSTER V1",
-          "price": 20000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER STUNT SEEKER (2023)",
-          "price": 20000
-        },
-        {
-          "brand": "Falcon",
-          "model": "FALCON THUNDERBIRD (2025)",
-          "price": 20000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 600 A",
-          "price": 20000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Nuclear-400",
-          "price": 20000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-4",
-          "price": 20000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon XT 27.5",
-          "price": 20000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 20",
-          "price": 20500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 600-B",
-          "price": 21000
-        },
-        {
-          "brand": "Falcon",
-          "model": "Falcon Thunderbird(2026)",
-          "price": 21000
-        },
-        {
-          "brand": "Mezarott",
-          "model": "MEZAROTTI 29 inch Cycle",
-          "price": 22000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Ride Seeker H3",
-          "price": 23000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Stunt Seeker",
-          "price": 23000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 30",
-          "price": 23000
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Pro",
-          "price": 23000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Ultimate",
-          "price": 30500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Xc402",
-          "price": 32000
-        },
-        {
-          "brand": "Ceres",
-          "model": "CERES SUV-2",
-          "price": 32000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 800",
-          "price": 32000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legacy",
-          "price": 32500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 2602",
-          "price": 35000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 6502",
-          "price": 36000
-        },
-        {
-          "brand": "Ceres",
-          "model": "CERES HT2 (Hybrid)",
-          "price": 37000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER PRO GEN3",
-          "price": 38000
-        },
-        {
-          "brand": "Magpy",
-          "model": "MAGPY DTR",
-          "price": 38000
-        },
-        {
-          "brand": "Magpy",
-          "model": "MAGPY&nbsp;DTR",
-          "price": 38000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 403",
-          "price": 40000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 403 (2023)",
-          "price": 40000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Xc501",
-          "price": 42000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Pro Gen 4 (2026)",
-          "price": 45000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider XC 404",
-          "price": 65000
-        },
-        {
-          "brand": "Polloux",
-          "model": "polloux 20 inch cycle",
-          "price": 9800
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Knight",
-          "price": 11700
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Road bike(Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Uctocifu",
-          "model": "Uctocifu(Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior (Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 16″",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 20 inch",
-          "price": 12300
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine PAGE 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero MTB 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix miracle",
-          "price": 13000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon (Non gear)",
-          "price": 13000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Gio-100",
-          "price": 13000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Donald (Non gear)",
-          "price": 13000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-1 (Non Gear)",
-          "price": 13300
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Donald (Non Gear)",
-          "price": 13500
-        },
-        {
-          "brand": "Python",
-          "model": "PYTHON",
-          "price": 13500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-1(Non gear)2026",
-          "price": 13500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 24 inch",
-          "price": 13500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Tornado 24 inch",
-          "price": 13700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stunt machine",
-          "price": 23000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-5",
-          "price": 23000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Platinum 200",
-          "price": 23700
-        },
-        {
-          "brand": "Mustang",
-          "model": "Mustang 1700",
-          "price": 24000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2603",
-          "price": 24000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Elite",
-          "price": 24500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401",
-          "price": 25000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE (2024)",
-          "price": 25000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6503",
-          "price": 25500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE (2025)",
-          "price": 26000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Duke-2026",
-          "price": 26000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 700",
-          "price": 27000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE PRO",
-          "price": 27000
-        },
-        {
-          "brand": "Kiesel",
-          "model": "Kiesel Naxos 10",
-          "price": 27000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Lanster",
-          "price": 27700
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER PRO Gen2",
-          "price": 28000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Project 3.0",
-          "price": 28500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 2601",
-          "price": 28500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 6501",
-          "price": 30000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Mention 4x",
-          "price": 30000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy one Warrior 1.0",
-          "price": 14000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER M8 (Folding)",
-          "price": 14000
-        },
-        {
-          "brand": "Duronto",
-          "model": "Duronto Sturn",
-          "price": 14000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy one Warrior 2.0",
-          "price": 14500
-        },
-        {
-          "brand": "Adder",
-          "model": "Adder Perfect",
-          "price": 14500
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Tokyo",
-          "price": 14500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Gio 300",
-          "price": 14500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Fire eagle",
-          "price": 14500
-        },
-        {
-          "brand": "Pollux",
-          "model": "Pollux 24 inch",
-          "price": 14500
-        },
-        {
-          "brand": "Ghost",
-          "model": "Ghost Pro",
-          "price": 14500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-3",
-          "price": 14700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 100",
-          "price": 15000
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Hunk 999",
-          "price": 15000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2601L",
-          "price": 15100
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6501",
-          "price": 15300
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 400",
-          "price": 15500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-200",
-          "price": 15500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Duster-A",
-          "price": 15700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold",
-          "price": 15800
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Prodigy",
-          "price": 16000
-        }
-      ]
-    },
-    {
-      "date": "2026-07-15",
-      "prices": [
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 13260
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
-          "price": 13035
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
-          "price": 9860
+          "brand": "Generic",
+          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
+          "price": 12999
         },
         {
           "brand": "Generic",
-          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
+          "model": "24 inchi 1 Speed Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano Parts",
+          "price": 12222
         },
         {
           "brand": "Phoenix",
-          "model": "Phoenix Donald 26 inchi 24 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke",
-          "price": 13973
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
-          "price": 7999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
-          "price": 8722
-        },
-        {
-          "brand": "Phoenix",
-          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9799
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20'' Phoenix Double Disc Brake With Fat Tyte Cycle - Enjoy Smooth And Reliable Braking Performance W",
-          "price": 11243
-        },
-        {
-          "brand": "Phoenix",
-          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
-          "price": 9999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 20\" Baby By Cycle For Ladies - Stylish And Comfortabl",
-          "price": 9799
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine 26\" Gold 600 Bicycle",
-          "price": 17000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
-          "price": 21111
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Jim and jolly Commando Bike 891368",
-          "price": 2406
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Playtime Royal Bike 947409",
-          "price": 1320
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Jim & Jolly Road Master Tricycle - White & Cyan Blue - Fun Ride for Kids - Model 891390 Easy to ",
-          "price": 1544
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle",
-          "price": 1150
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
-          "price": 1698
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 19999
-        },
-        {
-          "brand": "Generic",
-          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
-          "price": 11499
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote",
-          "price": 7200
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
-          "price": 65000
-        },
-        {
-          "brand": "Generic",
-          "model": "Captain Gypsy Bike with Remote Control - Red (Rechargeable Electric Bike for Kids",
-          "price": 8000
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
-          "price": 48000
-        },
-        {
-          "brand": "Generic",
-          "model": "Playtime Fusion Tri Cycle (Red & Black) 88186",
-          "price": 3000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Phoenix",
-          "model": "26\\\" Phoenix Tornado 21-Speed Gear Bicycle - Explore The Outdoors With This Reliable And Agile Mount",
-          "price": 15990
-        },
-        {
-          "brand": "Generic",
-          "model": "Bicycle series Alloy (Beautiful toy model)",
-          "price": 850
-        },
-        {
-          "brand": "Generic",
-          "model": "Finger BMX Mini Bicycle Assembly Bike Model Toys Finger Kids Bicycle BMX",
-          "price": 551
-        },
-        {
-          "brand": "Generic",
-          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
-          "price": 19999
-        },
-        {
-          "brand": "Phoenix",
-          "model": "PHOENIX 26\" BICYCLE",
-          "price": 6000
-        },
-        {
-          "brand": "Generic",
-          "model": "Vintage Metal Mountain Bike Model Desktop Mini Alloy Classic Bicycle Toy Die-Cast Finger Model Home ",
-          "price": 1204
-        },
-        {
-          "brand": "Generic",
-          "model": "baby hand toy bike,Little super bike for kids",
-          "price": 675
-        },
-        {
-          "brand": "Generic",
-          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
-          "price": 14444
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
+          "model": "Phoenix bicycle 16 \"",
+          "price": 9500
         },
         {
           "brand": "Veloce",
@@ -3624,9 +1218,9 @@
           "price": 18314
         },
         {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
         },
         {
           "brand": "Veloce",
@@ -3644,14 +1238,19 @@
           "price": 15990
         },
         {
-          "brand": "Phoenix",
-          "model": "Phoenix Donald 26 inchi 24 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke",
-          "price": 13973
+          "brand": "Generic",
+          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+          "price": 14023
         },
         {
           "brand": "Generic",
           "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
-          "price": 14023
+          "price": 12999
+        },
+        {
+          "brand": "Generic",
+          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+          "price": 14444
         },
         {
           "brand": "Pacific",
@@ -3670,13 +1269,18 @@
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Cyclone 26 Inch Green 24 Speed Bicycle 847883",
-          "price": 13260
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+          "price": 8500
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
-          "price": 8500
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
+          "price": 8748
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Spd Angellena Ladies 24 Pink Without Basket Bicycle",
+          "price": 8954
         },
         {
           "brand": "Duranta",
@@ -3685,8 +1289,8 @@
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
+          "model": "Duranta Steel 21-Spd Mascular 26 Red",
+          "price": 15465
         },
         {
           "brand": "Duranta",
@@ -3695,13 +1299,8 @@
         },
         {
           "brand": "Duranta",
-          "model": "Duranta Supreme 26\" Blue Gents Cycle",
-          "price": 15500
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Spd Angellena Ladies 24 Pink Without Basket Bicycle",
-          "price": 8954
+          "model": "Duranta Mascular-26\"(Multi speed) 804681 Bicycle",
+          "price": 13145
         },
         {
           "brand": "Foxter",
@@ -3724,24 +1323,29 @@
           "price": 107
         },
         {
-          "brand": "Generic",
-          "model": "RFL JIm & Jolly Tornado Bike - Blue",
-          "price": 6357
-        },
-        {
           "brand": "Foxter",
           "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
           "price": 115
         },
         {
           "brand": "Generic",
-          "model": "baby hand toy bike,Little super bike for kids",
-          "price": 675
+          "model": "24 inchi 1 Speed Non Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shiman",
+          "price": 12999
         },
         {
           "brand": "Generic",
-          "model": "Baby & Electric Bike R3",
-          "price": 23000
+          "model": "TANKE E-Bike MTB Hydraulic Disc Brake Set Electric E Scooter Power Control Shifter Bicycle Brakes 16",
+          "price": 4395
+        },
+        {
+          "brand": "Hero",
+          "model": "Hero HF DELUXE BS4 TL Motorcycle",
+          "price": 115047
+        },
+        {
+          "brand": "Warrior",
+          "model": "Retro Style Viking Warrior Pattern Guardian Bell Pendant Punk Hip Hop Necklaces Motorcycle Bicycle B",
+          "price": 836
         },
         {
           "brand": "Warrior",
@@ -3750,895 +1354,92 @@
         },
         {
           "brand": "Warrior",
+          "model": "Viking Bear Head Warrior Ring Men's Bicycle Personality Creative Temperament Stainless Steel Ring Je",
+          "price": 615
+        },
+        {
+          "brand": "Generic",
+          "model": "WAKE 780MM Purple Alloy Handlebar for Bicycle",
+          "price": 950
+        },
+        {
+          "brand": "Warrior",
+          "model": "Disc Brake 160mm Rotor With Screw Electric Scooter for ZERO 11X for KAABO Wolf Warrior Wolf King GT ",
+          "price": 1130
+        },
+        {
+          "brand": "Warrior",
           "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
           "price": 18999
         },
         {
-          "brand": "Marine",
-          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
-          "price": 19000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
-          "price": 16830
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
-          "price": 8748
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
-          "price": 26999
-        },
-        {
           "brand": "Generic",
-          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
-          "price": 150
-        },
-        {
-          "brand": "Generic",
-          "model": "RFL Thunder 20 inch Bicycle",
-          "price": 9500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-2",
-          "price": 16000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 500",
-          "price": 16500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Slayer 1.0",
-          "price": 16700
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Race 3.0",
-          "price": 16700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 300(2025)",
-          "price": 17000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Duster-C",
-          "price": 17000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2602L",
-          "price": 17300
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-300(2026)",
-          "price": 17700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold-100",
-          "price": 17700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-200 Plus",
-          "price": 17700
+          "model": "2 Pcs Bicycle Aluminum Heavy Duty Foot Peg Bicycle Accesories",
+          "price": 225
         },
         {
           "brand": "Warrior",
-          "model": "Warrior 2.0",
-          "price": 17700
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 10",
-          "price": 18000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Harod01",
-          "price": 18000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6502",
-          "price": 18000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2602",
-          "price": 18000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy One Warrior 3.0",
-          "price": 18500
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Jordan",
-          "price": 19000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon XT 26",
-          "price": 19000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold 400",
-          "price": 19000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Master",
-          "price": 19500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Master",
-          "price": 19500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold-600",
-          "price": 19500
-        },
-        {
-          "brand": "Ghost",
-          "model": "Ghost ASX-5900",
-          "price": 19700
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-3",
-          "price": 19700
-        },
-        {
-          "brand": "Forever",
-          "model": "Forever Pearl",
-          "price": 20000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER THRUSTER V1",
-          "price": 20000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER STUNT SEEKER (2023)",
-          "price": 20000
-        },
-        {
-          "brand": "Falcon",
-          "model": "FALCON THUNDERBIRD (2025)",
-          "price": 20000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 600 A",
-          "price": 20000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Nuclear-400",
-          "price": 20000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-4",
-          "price": 20000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon XT 27.5",
-          "price": 20000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 20",
-          "price": 20500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 600-B",
-          "price": 21000
-        },
-        {
-          "brand": "Falcon",
-          "model": "Falcon Thunderbird(2026)",
-          "price": 21000
-        },
-        {
-          "brand": "Mezarott",
-          "model": "MEZAROTTI 29 inch Cycle",
-          "price": 22000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Ride Seeker H3",
-          "price": 23000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Stunt Seeker",
-          "price": 23000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legion 30",
-          "price": 23000
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed Pro",
-          "price": 23000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Ultimate",
-          "price": 30500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Xc402",
-          "price": 32000
-        },
-        {
-          "brand": "Ceres",
-          "model": "CERES SUV-2",
-          "price": 32000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 800",
-          "price": 32000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Legacy",
-          "price": 32500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 2602",
-          "price": 35000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 6502",
-          "price": 36000
-        },
-        {
-          "brand": "Ceres",
-          "model": "CERES HT2 (Hybrid)",
-          "price": 37000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER PRO GEN3",
-          "price": 38000
-        },
-        {
-          "brand": "Magpy",
-          "model": "MAGPY DTR",
-          "price": 38000
-        },
-        {
-          "brand": "Magpy",
-          "model": "MAGPY&nbsp;DTR",
-          "price": 38000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 403",
-          "price": 40000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 403 (2023)",
-          "price": 40000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Xc501",
-          "price": 42000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Pro Gen 4 (2026)",
-          "price": 45000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider XC 404",
-          "price": 65000
-        },
-        {
-          "brand": "Polloux",
-          "model": "polloux 20 inch cycle",
-          "price": 9800
-        },
-        {
-          "brand": "Duranta",
-          "model": "Duranta Knight",
-          "price": 11700
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Road bike(Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Uctocifu",
-          "model": "Uctocifu(Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior (Non gear)",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 16″",
-          "price": 12000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 20 inch",
-          "price": 12300
-        },
-        {
-          "brand": "Uplayed",
-          "model": "Uplayed 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine PAGE 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero MTB 20 inch",
-          "price": 12500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix miracle",
-          "price": 13000
-        },
-        {
-          "brand": "Avon",
-          "model": "Avon (Non gear)",
-          "price": 13000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Gio-100",
-          "price": 13000
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Donald (Non gear)",
-          "price": 13000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-1 (Non Gear)",
-          "price": 13300
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Donald (Non Gear)",
-          "price": 13500
-        },
-        {
-          "brand": "Python",
-          "model": "PYTHON",
-          "price": 13500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-1(Non gear)2026",
-          "price": 13500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Junior 24 inch",
-          "price": 13500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Tornado 24 inch",
-          "price": 13700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Stunt machine",
-          "price": 23000
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Oscar-5",
-          "price": 23000
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Platinum 200",
-          "price": 23700
-        },
-        {
-          "brand": "Mustang",
-          "model": "Mustang 1700",
-          "price": 24000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2603",
-          "price": 24000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Elite",
-          "price": 24500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER XC 401",
-          "price": 25000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE (2024)",
-          "price": 25000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6503",
-          "price": 25500
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE (2025)",
-          "price": 26000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "Rockrider Duke-2026",
-          "price": 26000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 700",
-          "price": 27000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER DUKE PRO",
-          "price": 27000
-        },
-        {
-          "brand": "Kiesel",
-          "model": "Kiesel Naxos 10",
-          "price": 27000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Lanster",
-          "price": 27700
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER PRO Gen2",
-          "price": 28000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Project 3.0",
-          "price": 28500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 2601",
-          "price": 28500
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Shadow Pro 6501",
-          "price": 30000
-        },
-        {
-          "brand": "Core",
-          "model": "Core Mention 4x",
-          "price": 30000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy one Warrior 1.0",
-          "price": 14000
-        },
-        {
-          "brand": "Rockrider",
-          "model": "ROCKRIDER M8 (Folding)",
-          "price": 14000
-        },
-        {
-          "brand": "Duronto",
-          "model": "Duronto Sturn",
-          "price": 14000
-        },
-        {
-          "brand": "Seventy",
-          "model": "Seventy one Warrior 2.0",
-          "price": 14500
-        },
-        {
-          "brand": "Adder",
-          "model": "Adder Perfect",
-          "price": 14500
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Tokyo",
-          "price": 14500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Gio 300",
-          "price": 14500
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Fire eagle",
-          "price": 14500
-        },
-        {
-          "brand": "Pollux",
-          "model": "Pollux 24 inch",
-          "price": 14500
-        },
-        {
-          "brand": "Ghost",
-          "model": "Ghost Pro",
-          "price": 14500
-        },
-        {
-          "brand": "Foxter",
-          "model": "Foxter Buzz-3",
-          "price": 14700
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 100",
-          "price": 15000
-        },
-        {
-          "brand": "Hero",
-          "model": "Hero Hunk 999",
-          "price": 15000
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 2601L",
-          "price": 15100
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Raptor Sport 6501",
-          "price": 15300
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio 400",
-          "price": 15500
-        },
-        {
-          "brand": "Core",
-          "model": "Core Nio-200",
-          "price": 15500
-        },
-        {
-          "brand": "Phoenix",
-          "model": "Phoenix Duster-A",
-          "price": 15700
-        },
-        {
-          "brand": "Marine",
-          "model": "Marine Gold",
-          "price": 15800
-        },
-        {
-          "brand": "Veloce",
-          "model": "Veloce Stunt Prodigy",
-          "price": 16000
+          "model": "FVRITO Mini Bicycle Exhaust Pipe Kit for Iron Blood Warrior 212cc 224cc 196cc Coleman CT200U BT200X ",
+          "price": 2003
         }
       ]
     }
   ],
   "id": [
     {
-      "date": "2026-07-02",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
-      ]
-    },
-    {
-      "date": "2026-07-06",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
-      ]
-    },
-    {
-      "date": "2026-07-07",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
-      ]
-    },
-    {
-      "date": "2026-07-08",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
-      ]
-    },
-    {
       "date": "2026-07-10",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
+      "sku_count": 141,
+      "brand_count": 35,
+      "phx_count": 0,
+      "sources": [
+        "shopee_roadbike",
+        "shopee_gravel",
+        "shopee_hybrid",
+        "tokopedia"
       ]
+    },
+    {
+      "date": "2026-07-11",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败"
+    },
+    {
+      "date": "2026-07-12",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败"
+    },
+    {
+      "date": "2026-07-13",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败"
     },
     {
       "date": "2026-07-14",
-      "prices": [
-        {
-          "brand": "Pacific",
-          "model": "Mountain Bike Entry 26",
-          "price": 5120000
-        },
-        {
-          "brand": "Element",
-          "model": "FRC 38 Gravel 700C",
-          "price": 7290000
-        },
-        {
-          "brand": "United",
-          "model": "Sterling R1 700C",
-          "price": 8990000
-        },
-        {
-          "brand": "Pacific",
-          "model": "700C Road Bike",
-          "price": 9500000
-        },
-        {
-          "brand": "Element",
-          "model": "Hybrid City 700C",
-          "price": 6400000
-        },
-        {
-          "brand": "Element",
-          "model": "Gravel Top Spec 700C",
-          "price": 26200000
-        },
-        {
-          "brand": "Polygon",
-          "model": "Xtrada 5 700C",
-          "price": 6500000
-        },
-        {
-          "brand": "United",
-          "model": "Mountain 27.5",
-          "price": 7800000
-        }
-      ]
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "crawler 失败"
     },
     {
       "date": "2026-07-15",
+      "sku_count": 0,
+      "brand_count": 0,
+      "phx_count": 0,
+      "sources": [],
+      "note": "serbasepeda hardcoded 8 SKU 不计入"
+    },
+    {
+      "date": "2026-07-16",
       "prices": [
         {
           "brand": "Pacific",
@@ -4683,5 +1484,5 @@
       ]
     }
   ],
-  "last_updated": "2026-07-15"
+  "last_updated": "2026-07-16"
 }
