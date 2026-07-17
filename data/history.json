@@ -1011,9 +1011,19 @@
     },
     {
       "date": "2026-07-16",
-      "sku_count": 53,
+      "sku_count": 43,
       "brand_count": 5,
-      "phx_count": 10,
+      "phx_count": 9,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-17",
+      "sku_count": 40,
+      "brand_count": 5,
+      "phx_count": 2,
       "sources": [
         "safe_crawl"
       ],
@@ -1082,7 +1092,17 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-17",
+      "sku_count": 141,
+      "brand_count": 35,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-07-16T15:38:14+08:00"
+  "last_updated": "2026-07-17T08:49:38+08:00"
 }
