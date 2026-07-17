@@ -267,12 +267,21 @@ def main():
     # V2.9.17-P2.3 修复: 用 prev_bd_max (历史最大) 不是 prev_bd (上次) 防 9:30 cron 漂移
     threshold = max(BD_BASELINE_MIN, int(prev_bd_max * BD_KEEP_RATIO))
     if len(bd_pool) < threshold:
-        log(f"[WARN] BD {len(bd_pool)} < threshold {threshold} (prev {prev_bd} x 0.7 = {int(prev_bd*0.7)}), keep previous daraz_bd pool")
-        daraz_existing = [it for it in latest["bd"]["price_pool"]
-                          if "daraz" in (it.get("platform", "")).lower()]
-        other = [it for it in latest["bd"]["price_pool"]
-                 if "daraz" not in (it.get("platform", "")).lower()]
-        bd_pool = daraz_existing + other
+        log(f"[WARN] BD {len(bd_pool)} < threshold {threshold} (prev_bd_max {prev_bd_max} x 0.7 = {int(prev_bd_max*0.7)}, prev_bd was {prev_bd}), triggering baseline restore")
+        # V2.9.17-P2.4: 从 baseline 文件恢复 (不是从 latest.json 读, latest 可能已被漂移)
+        baseline_file = DATA_DIR / "latest_20260710_190SKU_baseline.json"
+        if baseline_file.exists():
+            with baseline_file.open("r", encoding="utf-8") as f:
+                _baseline = json.load(f)
+            bd_pool = _baseline["bd"]["price_pool"]
+            log(f"[RESTORE] BD baseline from {baseline_file.name}: {len(bd_pool)} SKU")
+        else:
+            daraz_existing = [it for it in latest["bd"]["price_pool"]
+                              if "daraz" in (it.get("platform", "")).lower()]
+            other = [it for it in latest["bd"]["price_pool"]
+                     if "daraz" not in (it.get("platform", "")).lower()]
+            bd_pool = daraz_existing + other
+            log(f"[WARN] no baseline file, fallback to latest.json: {len(bd_pool)} SKU")
         status_msg = f"warn (BD {len(bd_pool)} kept, baseline protected, threshold {threshold})"
     else:
         status_msg = f"ok ({len(bd_pool)} SKU, threshold {threshold})"
