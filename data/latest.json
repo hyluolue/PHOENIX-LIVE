@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T09:48:04+08:00",
+  "generated_at": "2026-07-17T09:50:11+08:00",
   "source_query": "V2.9.17-P1.5 safe_crawl playwright: 13 BD queries",
   "source_url": "https://www.daraz.com.bd/catalog/?q=mountain+bike",
   "fetch_status": {
@@ -3859,7 +3859,7 @@
       }
     ]
   },
-  "gen_at": "2026-07-17T09:48:04+08:00",
+  "gen_at": "2026-07-17T09:50:11+08:00",
   "shopee_id": {
     "source": "user saved HTML (2026-07-07)",
     "search_query": "sepeda (general)",
