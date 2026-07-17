@@ -264,7 +264,8 @@ def main():
     log(f"BD total: {len(bd_pool)} SKU")
 
     # baseline \u4fdd\u62a4 (\u4e24\u91cd\u9608\u503c: \u7edd\u5bf9\u6700\u4f4e + \u76f8\u5bf9\u6bd4\u4f8b)
-    threshold = max(BD_BASELINE_MIN, int(prev_bd * BD_KEEP_RATIO))
+    # V2.9.17-P2.3 修复: 用 prev_bd_max (历史最大) 不是 prev_bd (上次) 防 9:30 cron 漂移
+    threshold = max(BD_BASELINE_MIN, int(prev_bd_max * BD_KEEP_RATIO))
     if len(bd_pool) < threshold:
         log(f"[WARN] BD {len(bd_pool)} < threshold {threshold} (prev {prev_bd} x 0.7 = {int(prev_bd*0.7)}), keep previous daraz_bd pool")
         daraz_existing = [it for it in latest["bd"]["price_pool"]
