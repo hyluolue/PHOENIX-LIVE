@@ -47,6 +47,16 @@
       "sku_count": 190,
       "source": "baseline_restored",
       "note": "V2.9.17-P2.3 从 latest_20260710_190SKU_baseline.json 恢复 (9:30 mavis session 漂移 26 后)"
+    },
+    {
+      "date": "2026-07-18",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
   "id": [
@@ -97,6 +107,17 @@
       "sku_count": 141,
       "source": "baseline_restored",
       "note": "V2.9.17-P2.3 从 baseline 恢复"
+    },
+    {
+      "date": "2026-07-18",
+      "sku_count": 141,
+      "brand_count": 35,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
-  ]
+  ],
+  "last_updated": "2026-07-18T09:11:33+08:00"
 }

@@ -249,6 +249,11 @@ def main():
     prev_id = len(latest["id"]["price_pool"])
     log(f"prev: BD={prev_bd} ID={prev_id}")
 
+    # V2.9.17-P2.3 修复: 用历史最大 BD SKU 数作为 prev_bd_max (防 latest.json 已被漂移)
+    hist_bd_max = max((h.get("sku_count", 0) for h in history.get("bd", [])), default=0)
+    prev_bd_max = max(prev_bd, hist_bd_max)
+    log(f"prev_bd_max = max(prev_bd {prev_bd}, hist_bd_max {hist_bd_max}) = {prev_bd_max}")
+
     # Playwright
     log("launching Playwright...")
     from playwright.sync_api import sync_playwright
