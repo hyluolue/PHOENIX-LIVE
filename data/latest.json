@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-18T09:11:33+08:00",
+  "generated_at": "2026-07-18T16:17:53+08:00",
   "fetch_status": {
     "daraz_bd": "warn (BD 190 kept, baseline protected, threshold 133)",
     "shopee_id": "ok (baseline 141 kept)",
@@ -5993,7 +5993,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-18T09:11:33+08:00",
+  "gen_at": "2026-07-18T16:17:53+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-10T09:03:16+08:00",
     "method": "score = (min(sku/20,1)*100*0.35) + (min(asp/30K,1)*100*0.25) + (high_tier_pct*100*0.15) + (min(max/50K,1)*100*0.15) + (in_stock_rate*100*0.10)",
