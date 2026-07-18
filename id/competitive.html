@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>孟加拉竞品监控 · 实时</title>
+  <title>印尼竞品监控 · 实时</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="stylesheet" href="../shared.css">
   <style>
@@ -28,278 +28,307 @@
     .refresh-btn:hover{background:#1976d2}
     .pill-fail{background:#b71c1c;color:#ffcdd2}
     .last-updated{font-size:11px;color:rgba(255,255,255,.5);margin-left:auto}
-    .refresh-btn{background:#1565c0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-size:12px;cursor:pointer;font-weight:600}
-    .refresh-btn:hover{background:#1976d2}
-    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px 22px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:16px}
-    .section h2{font-size:16px;font-weight:700;color:#c8102e;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .section{background:#fff;color:#1a1a1a;border-radius:16px;padding:18px 20px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:14px}
+    .section h2{font-size:15px;font-weight:700;color:#c8102e;margin-bottom:12px;display:flex;align-items:center;gap:8px}
     .section h2 .flag{font-size:18px}
-    .filter-bar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
-    .filter-bar label{font-size:12px;color:#cbd5e1;margin-right:4px}
-    .filter-bar select,.filter-bar input{padding:5px 10px;border:1px solid #ddd;border-radius:6px;font-size:12px;background:#fff;color:#333}
-    .filter-bar input{min-width:200px}
-    .brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
-    /* V2.9.0 (2026-07-15): 品牌卡片排版优化 - 字号加大、对比度增强 */
-    .brand-card{background:#fafafa;border-radius:10px;padding:14px 16px;border-left:4px solid #c8102e;transition:transform .15s;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-    .brand-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
-    .brand-card.phoenix{border-left-color:#c8102e;background:#fff5f6}
-    .brand-card.marine{border-left-color:#1565c0;background:#e3f2fd}
-    .brand-card.giant{border-left-color:#2e7d32;background:#e8f5e9}
-    .brand-card.foxter{border-left-color:#9c27b0;background:#f3e5f5}
-    .brand-card.pacific{border-left-color:#ff6f00;background:#fff3e0}
-    .brand-card.warrior{border-left-color:#5d4037;background:#efebe9}
-    .brand-card.thorne{border-left-color:#00838f;background:#e0f7fa}
-    .brand-card.duranta{border-left-color:#c2185b;background:#fce4ec}
-    .brand-card.veloce{border-left-color:#558b2f;background:#f1f8e9}
-    .brand-card.pentane{border-left-color:#0277bd;background:#e1f5fe}
-    .brand-name{font-size:16px;font-weight:800;color:#0d47a1;margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px}
-    .brand-name .phx{color:#c8102e}
-    .brand-name .count-tag{color:#999;font-weight:500;font-size:11px;margin-left:6px}
-    .brand-name .score-tag{color:#c8102e;font-weight:700;font-size:12px;margin-left:6px;background:#ffebee;padding:1px 6px;border-radius:4px}
-    .brand-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:12px;min-height:32px}
-    .brand-item:last-child{border-bottom:none}
-    .brand-item .model{color:#222;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:10px;font-weight:500}
-    .brand-item .model .plat{color:#cbd5e1;font-weight:400;font-size:11px;margin-left:4px}
-    .brand-item .price{color:#c8102e;font-weight:800;white-space:nowrap;font-size:14px;background:#ffebee;padding:2px 8px;border-radius:4px}
-    .brand-item a{color:inherit;text-decoration:none}
-    .brand-item a:hover{background:rgba(200,16,46,.05)}
-    .summary{background:#e3f2fd;padding:10px 14px;border-radius:8px;font-size:12px;margin-bottom:14px;color:#0d47a1}
-    .summary strong{color:#c8102e}
-    .empty{padding:40px 20px;text-align:center;color:#999;font-size:13px;font-style:italic}
-    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:30px}
+    .section h2 .sub{font-size:11px;color:#999;font-weight:400;margin-left:4px}
+    .empty{padding:30px 20px;text-align:center;color:#999;font-size:13px;font-style:italic}
+    .footer{text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-top:24px}
+
+    .kpi4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+    .kpi4 .card{background:#fff;border-radius:14px;padding:16px 18px;border-top:4px solid #1565c0;box-shadow:0 2px 10px rgba(0,0,0,.06);position:relative;overflow:hidden}
+    .kpi4 .card .label{font-size:11px;color:#666;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:4px}
+    .kpi4 .card .value{font-size:30px;font-weight:900;color:#0d47a1;line-height:1.1;letter-spacing:-.5px}
+    .kpi4 .card .delta{font-size:11px;color:#666;margin-top:6px;line-height:1.4}
+    .kpi4 .card .icon{position:absolute;right:12px;top:12px;font-size:32px;opacity:.15}
+    .kpi4 .card.phx{border-top-color:#c8102e;background:linear-gradient(135deg,#fff5f6,#fff)}
+    .kpi4 .card.phx .value{color:#c8102e}
+    .kpi4 .card.redsea{border-top-color:#b71c1c;background:linear-gradient(135deg,#ffebee,#fff)}
+    .kpi4 .card.redsea .value{color:#b71c1c}
+    .kpi4 .card.blueocean{border-top-color:#2e7d32;background:linear-gradient(135deg,#e8f5e9,#fff)}
+    .kpi4 .card.blueocean .value{color:#2e7d32}
+    .kpi4 .card.topcmp{border-top-color:#ff9800;background:linear-gradient(135deg,#fff3e0,#fff)}
+    .kpi4 .card.topcmp .value{color:#e65100}
+
+    .compare-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:14px}
+    .phx-card{background:linear-gradient(135deg,#c8102e,#7a0a1b);color:#fff;border-radius:14px;padding:18px;box-shadow:0 4px 20px rgba(200,16,46,.25)}
+    .phx-card .title{font-size:13px;font-weight:700;letter-spacing:.5px;opacity:.9;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .phx-card .brand{font-size:36px;font-weight:900;margin-bottom:14px;letter-spacing:-1px}
+    .phx-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:12px}
+    .phx-card .row:last-child{border-bottom:none}
+    .phx-card .row .k{opacity:.85;font-size:11px}
+    .phx-card .row .v{font-weight:800;font-size:14px}
+    .phx-card .verdict{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,.15);border-radius:8px;font-size:12px;line-height:1.5}
+    .phx-card .verdict b{color:#fbbf24}
+
+    .rival-card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+    .rival-card .title{font-size:13px;font-weight:700;color:#c8102e;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+    .rival-row{display:grid;grid-template-columns:90px 1fr 60px;align-items:center;gap:8px;padding:6px 0;font-size:12px}
+    .rival-row .name{font-weight:700;color:#0d47a1;display:flex;align-items:center;gap:4px}
+    .rival-row .bar-bg{background:#f0f0f0;border-radius:4px;height:18px;overflow:hidden;position:relative}
+    .rival-row .bar{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:6px;color:#fff;font-size:10px;font-weight:700}
+    .rival-row .count{text-align:right;font-weight:800;color:#0d47a1;font-size:14px}
+
+    .band-table{width:100%;border-collapse:separate;border-spacing:0 4px}
+    .band-table th{font-size:10px;color:#666;font-weight:700;text-align:center;padding:4px;background:#f5f5f5}
+    .band-table th:first-child{text-align:left;background:transparent}
+    .band-table td{font-size:12px;padding:0;text-align:center}
+    .band-table td.brand{text-align:left;font-weight:700;color:#0d47a1;padding:6px 10px;background:#fafafa;border-radius:6px 0 0 6px;min-width:90px}
+    .band-table td.brand.phx{background:linear-gradient(90deg,#fff5f6,#fff);color:#c8102e}
+    .band-table td.brand.phx::before{content:'★ ';color:#c8102e}
+    .band-table td.cell{padding:6px 4px}
+    .band-cell{height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800}
+    .band-cell.empty{background:#f0f0f0;color:#cbd5e1;font-weight:400}
+    .band-cell.lvl-1{background:#bbdefb;color:#0d47a1}
+    .band-cell.lvl-2{background:#fbbf24;color:#333}
+    .band-cell.lvl-3{background:#ea580c}
+    .band-cell.lvl-4{background:#c8102e}
+
+    .action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .action-card{background:linear-gradient(135deg,#fffbf5,#fff);border-radius:12px;padding:14px 16px;border-left:4px solid #ff9800;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    .action-card .step{font-size:10px;font-weight:800;color:#ff9800;letter-spacing:1px;margin-bottom:4px}
+    .action-card h3{font-size:14px;font-weight:800;color:#0d47a1;margin-bottom:8px}
+    .action-card .why{font-size:11px;color:#666;line-height:1.5;margin-bottom:8px}
+    .action-card .metric{font-size:11px;background:#e3f2fd;color:#0d47a1;padding:6px 8px;border-radius:4px;font-weight:600}
+    .action-card .metric b{color:#c8102e}
+
+    .platform-card{background:rgba(94,234,212,.12);border-left:3px solid #5eead4;padding:12px;border-radius:6px}
+    .platform-card h3{color:#5eead4;font-size:13px;margin-bottom:6px}
+    .platform-card p{color:#fff;font-size:11px;line-height:1.6;margin:2px 0}
+
+    .heat-grid{display:none}
   </style>
 </head>
 <body>
-<script>window._currentRegion = "id";</script>
+<script>window._currentRegion = "id"; // 强制 ID</script>
   <div class="container">
-    <!-- 市场切换器 -->
-<div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(46,125,50,.08);border-radius:8px">
-  <strong style="margin-right:8px;color:#cbd5e1">🌐 市场：</strong>
-  <a href="../../index.html" style="padding:4px 12px;background:rgba(46,125,50,.15);color:#2e7d32;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
-  <a href="../bd/competitive.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉 →</a>
-  <a href="./index.html" style="padding:4px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼</a>
-</div>
+    <div style="display:flex;gap:8px;margin-bottom:14px;padding:10px;background:rgba(46,125,50,.08);border-radius:8px">
+      <strong style="margin-right:8px;color:#cbd5e1">🌐 市场：</strong>
+      <a href="../../index.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">📊 双市场总览</a>
+      <a href="../bd/competitive.html" style="padding:4px 12px;background:rgba(21,101,192,.15);color:#1565c0;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇧🇩 BD 孟加拉 →</a>
+      <a href="./index.html" style="padding:4px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-weight:600;font-size:12px;text-decoration:none">🇮🇩 ID 印尼</a>
+    </div>
 
-<div class="header">
+    <div class="header">
       <div class="logo">P</div>
       <div>
         <h1>4️⃣ 看竞争 · 竞品监控 <span style="font-size:14px;color:#5eead4;font-weight:600">（埃森哲五看 P44-48）</span></h1>
-        <div class="subtitle">🇧🇩 BD / 🇮🇩 ID 双市场切换 · <span id="date"></span> · 每日 9:00 自动更新</div>
+        <div class="subtitle">🇮🇩 ID 单市场 (切到 BD 看孟加拉) · <span id="date"></span> · 每日 9:00 自动更新</div>
       </div>
       <div class="nav">
-      <a href="./index.html">🏠 总览</a>
-      <a href="../daily-report.html">📅 市场日报</a>
-      <a href="./competitive.html" class="active">🏆 竞品监控</a>
-      <a href="./matrix.html">💎 产品矩阵</a>
-      <a href="../bd/index.html">🇧🇩 孟加拉</a>
-      <a href="./index.html">🇮🇩 印尼</a>
-      <a href="./tasks.html">🎯 任务 OKR</a>
-      <a href="./dtc.html">💬 DTC 差评</a>
-      <a href="./strategy.html">🧠 策略迭代</a>
+        <a href="./index.html">🏠 总览</a>
+        <a href="../daily-report.html">📅 市场日报</a>
+        <a href="./competitive.html" class="active">🏆 竞品监控</a>
+        <a href="./matrix.html">💎 产品矩阵</a>
+        <a href="../bd/index.html">🇧🇩 孟加拉</a>
+        <a href="./index.html">🇮🇩 印尼</a>
+        <a href="./tasks.html">🎯 任务 OKR</a>
+        <a href="./dtc.html">💬 DTC 差评</a>
+        <a href="./strategy.html">🧠 策略迭代</a>
+      </div>
     </div>
-    <a class="back-link" href="./index.html">← 返回总览</a>
 
     <div class="status-bar">
-      <span id="status-daraz" class="pill pill-fail">⏳ daraz_bd</span>
-      <span id="status-dreamcycle" class="pill pill-fail">⏳ dreamcycle</span>
+      <span id="status-shopee" class="pill pill-fail">⏳ shopee_id</span>
+      <span id="status-tokopedia" class="pill pill-fail">⏳ tokopedia</span>
       <span id="status-serbasepeda" class="pill pill-fail">⏳ serbasepeda</span>
       <span class="last-updated" id="updated">—</span>
       <button class="refresh-btn" onclick="location.reload()">↻ 刷新</button>
     </div>
 
-    <!-- 0. 竞品覆盖热力图 (从 matrix.html 合并, 2026-07-10) -->
-    <div class="section">
-      <h2><span class="flag">🔥</span>竞品覆盖热力图 <span class="small" style="color:#cbd5e1">（品牌 × 4 品类 · 谁在哪品类强 · 从 matrix.html 合并）</span></h2>
-      <div class="legend">
-        <span style="background:#94a3b8">0 SKU = 真空</span>
-        <span style="background:#1565c0">1-2 SKU = 弱势</span>
-        <span style="background:#fbbf24;color:#000">3-5 SKU = 中等</span>
-        <span style="background:#ea580c">6-10 SKU = 强势</span>
-        <span style="background:#c8102e">10+ SKU = 统治</span>
+    <div class="kpi4">
+      <div class="card phx">
+        <span class="icon">🔥</span>
+        <div class="label">Phoenix 现状</div>
+        <div class="value" id="kpi-phx-rank">#—</div>
+        <div class="delta" id="kpi-phx-detail">加载中...</div>
       </div>
-      <div class="heat-grid" id="heat-grid"></div>
-      <div class="insight" style="background:rgba(94,234,212,.08);border-left:3px solid #5eead4;color:#fff;margin-top:14px">
-        <b style="color:#5eead4">📊 热力图读法：</b>横轴 4 品类 = 公路 / Hybrid / Gravel / MTB（ID 中高端整车） · 纵轴 17 真品牌 · 色深 = SKU 数。
-        蓝海机会 = <span style="color:#5eead4">大量空白格</span>（品牌未覆盖品类） · 红海 = <span style="color:#ff8a80">高密度区</span>（品牌内卷）。
+      <div class="card redsea">
+        <span class="icon">🩸</span>
+        <div class="label">7-15M 红海 (主战场)</div>
+        <div class="value" id="kpi-redsea">—</div>
+        <div class="delta" id="kpi-redsea-detail">加载中...</div>
       </div>
-    </div>
-
-    <!-- V2.6.1 ID 三蓝海品类战略关键数字面板 -->
-    <div class="section dark" style="border-left:4px solid #2e7d32">
-      <h2>💎 V2.6.1 ID 三蓝海品类切入点 <span class="badge" style="background:#2e7d32">2026-07-07 双平台实测</span></h2>
-      <div class="kpi-grid" style="margin-bottom:14px">
-        <div class="kpi gap">
-          <div class="kpi-label">🚫 ID MTB 红海不参与</div>
-          <div class="kpi-value" id="cmp-mtb-skip">⏳ 加载中…</div>
-        </div>
-        <div class="kpi dynamic" style="border:2px solid #66bb6a">
-          <div class="kpi-label">💎 公路车 12-15M 真空</div>
-          <div class="kpi-value" id="cmp-road-vacuum">⏳ 加载中…</div>
-        </div>
-        <div class="kpi dynamic" style="border:2px solid #66bb6a">
-          <div class="kpi-label">💎 平把+砾石 7-15M 真空</div>
-          <div class="kpi-value" id="cmp-gravel-vacuum">⏳ 加载中…</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">📌 ID 顶价品牌</div>
-          <div class="kpi-value" id="cmp-id-top">⏳ 加载中…</div>
-        </div>
-        <div class="kpi accent">
-          <div class="kpi-label">🎯 Phoenix ID 切入点</div>
-          <div class="kpi-value" id="cmp-phx-id">⏳ 加载中…</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">🛡️ Pacific 防火墙</div>
-          <div class="kpi-value" id="cmp-pacific-fence">⏳ 加载中…</div>
-        </div>
+      <div class="card blueocean">
+        <span class="icon">💎</span>
+        <div class="label">15M+ 蓝海 (顶价)</div>
+        <div class="value" id="kpi-blueocean">—</div>
+        <div class="delta" id="kpi-blueocean-detail">加载中...</div>
       </div>
-      <div style="font-size:10px;color:#cbd5e1">勾连：Tab #1 总览 ID 三蓝海品类战略 + dashboard_metrics.id_7_15m + id_top10_brands</div>
+      <div class="card topcmp">
+        <span class="icon">⚡</span>
+        <div class="label">Top 1 竞品 (主敌)</div>
+        <div class="value" id="kpi-topcmp">—</div>
+        <div class="delta" id="kpi-topcmp-detail">加载中...</div>
+      </div>
     </div>
 
     <div class="section">
-      <h2><span class="flag">📈</span>品牌价格矩阵 <small style="color:#999;font-weight:400">（按品牌聚合）</small></h2>
-      <div class="summary" id="summary">加载中...</div>
-      <div class="filter-bar">
-        <label>市场：</label>
-        <div class="region-tabs" style="display:inline-flex;gap:0;background:rgba(0,0,0,.05);border-radius:8px;padding:3px;margin-right:8px">
-          <button class="region-tab active" data-region="bd" style="padding:5px 14px;border:none;background:#1565c0;color:#fff;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇧🇩 孟加拉</button>
-          <button class="region-tab" data-region="id" style="padding:5px 14px;border:none;background:transparent;color:#1565c0;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">🇮🇩 印尼</button>
+      <h2><span class="flag">⚔️</span>Phoenix 现状 vs Top 5 竞品 <span class="sub">· 横条对比 = 一眼看差距</span></h2>
+      <div class="compare-grid">
+        <div class="phx-card">
+          <div class="title">🔴 Phoenix 自检</div>
+          <div class="brand">PHOENIX</div>
+          <div class="row"><span class="k">中高端整车 SKU</span><span class="v" id="phx-sku">—</span></div>
+          <div class="row"><span class="k">顶价 (IDR)</span><span class="v" id="phx-top">—</span></div>
+          <div class="row"><span class="k">主价位带</span><span class="v" id="phx-band">—</span></div>
+          <div class="row"><span class="k">品牌力评分</span><span class="v" id="phx-score">—</span></div>
+          <div class="row"><span class="k">已入驻渠道</span><span class="v" id="phx-channel">—</span></div>
+          <div class="verdict" id="phx-verdict">加载中...</div>
         </div>
-        <input type="text" id="search" placeholder="🔍 搜品牌或型号..." style="flex:1" />
+        <div class="rival-card">
+          <div class="title">🏆 Top 5 竞品 · 按 SKU 数倒序</div>
+          <div id="rival-list">加载中...</div>
+        </div>
       </div>
-      <div id="tier-grid" class="tier-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px"></div>
-      <div id="brand-grid" class="brand-grid"></div>
     </div>
 
-    <div class="section" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:#fff;border-left:4px solid #5eead4">
-      <h2 style="color:#5eead4"><span class="flag">🏪</span>本土独立站 / 平台档案 <small style="color:#999;font-weight:400">· 2026-06-15 验证</small></h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
-        <div style="background:rgba(94,234,212,.12);border-left:3px solid #5eead4;padding:12px;border-radius:6px">
-          <div style="font-size:11px;color:#5eead4;font-weight:700;text-transform:uppercase">🇧🇩 dreamcycle.store ✓ 真实</div>
-          <div style="font-size:12px;color:#fff;margin-top:6px;line-height:1.6">
-            <strong>类型</strong>：BD 多品牌零售平台<br>
-            <strong>技术</strong>：WordPress + WooCommerce<br>
-            <strong>在售品牌</strong>：Duranta / Veloce / Core / Rockrider / <strong style="color:#5eead4">Phoenix</strong> / Foxter / Marine / Warrior / Avon / 25+<br>
-            <strong>SKU</strong>：113 真实整车（6 页 × 20 SKU）<br>
-            <strong>价格</strong>：8,750-65,000 BDT（行业顶价 Rockrider XC 404）<br>
-            <strong>TK</strong>：@dreamcyclestorebd<br>
-            <strong>价值</strong>：<span style="color:#5eead4">凤凰已入驻渠道</span>
-          </div>
+    <div class="section">
+      <h2><span class="flag">📊</span>竞品价位带竞争图 <span class="sub">· 5 价段 × 8 品牌 · 看谁在哪价位强 · Phoenix 高亮 ★</span></h2>
+      <table class="band-table">
+        <thead>
+          <tr>
+            <th>品牌</th>
+            <th>1-7M 入门</th>
+            <th>7-15M 中端</th>
+            <th>15-25M 中高端</th>
+            <th>25-35M 高端</th>
+            <th>35M+ 顶价</th>
+            <th>合计</th>
+          </tr>
+        </thead>
+        <tbody id="band-tbody"><tr><td colspan="7" class="empty">加载中...</td></tr></tbody>
+      </table>
+      <div style="margin-top:10px;padding:8px 10px;background:#f5f5f5;border-radius:6px;font-size:11px;color:#666;line-height:1.5">
+        💡 <b style="color:#0d47a1">读法：</b>蓝 = 1-2 SKU（弱势）/ 黄 = 3-5 SKU（中等）/ 橙 = 6-10 SKU（强势）/ 红 = 10+ SKU（统治）/ 灰 = 真空。
+        <b style="color:#c8102e">Phoenix 标 ★</b> = 当前位置一目了然。
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🎯</span>Phoenix 行动建议 <span class="sub">· 数据驱动 · 3 条具体动作</span></h2>
+      <div class="action-grid" id="action-grid">
+        <div class="action-card">
+          <div class="step">STEP 1 · 价格带切入</div>
+          <h3 id="a1-title">加载中...</h3>
+          <div class="why" id="a1-why">—</div>
+          <div class="metric" id="a1-metric">—</div>
         </div>
-        <div style="background:rgba(94,234,212,.12);border-left:3px solid #5eead4;padding:12px;border-radius:6px">
-          <div style="font-size:11px;color:#5eead4;font-weight:700;text-transform:uppercase">🇮🇩 serbasepeda.com ✓ 真实（部分）</div>
-          <div style="font-size:12px;color:#fff;margin-top:6px;line-height:1.6">
-            <strong>类型</strong>：ID 自行车专门零售平台<br>
-            <strong>技术</strong>：CF challenge + 详情页不渲染<br>
-            <strong>在售品牌</strong>：Pacific / United / Element / Polygon / 13 类目 dealer<br>
-            <strong>SKU</strong>：8 成人整车（CF 拦截详情页，仅首页 bestseller 16 SKU 快照）<br>
-            <strong>价格</strong>：Rp 5.12M - 26.2M<br>
-            <strong>价值</strong>：<span style="color:#5eead4">Phoenix ID 渠道真空</span>
-          </div>
+        <div class="action-card">
+          <div class="step">STEP 2 · 避开红海</div>
+          <h3 id="a2-title">加载中...</h3>
+          <div class="why" id="a2-why">—</div>
+          <div class="metric" id="a2-metric">—</div>
+        </div>
+        <div class="action-card">
+          <div class="step">STEP 3 · 渠道/品类</div>
+          <h3 id="a3-title">加载中...</h3>
+          <div class="why" id="a3-why">—</div>
+          <div class="metric" id="a3-metric">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="flag">🏪</span>本土平台档案 <span class="sub">· 凤凰入驻情况 · 2026-06-15 验证</span></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px">
+        <div class="platform-card" style="background:rgba(255,152,0,.12);border-left-color:#ff9800;color:#fff">
+          <h3 style="color:#ffcc80">🇮🇩 Shopee ID · 凤凰待入驻</h3>
+          <p>✅ 类型：东南亚最大电商 (Sea Group)</p>
+          <p>✅ 在售品牌：Pacific / United / Polygon / Element / Sepeda / 10+ 品牌</p>
+          <p>✅ SKU：60+ 整车 (中端价位 + 周边)</p>
+          <p>📌 价值：<b style="color:#ffcc80">电商流量入口</b> = 凤凰借平台抢年轻用户</p>
+        </div>
+        <div class="platform-card" style="background:rgba(255,152,0,.12);border-left-color:#ff9800;color:#fff">
+          <h3 style="color:#ffcc80">🇮🇩 Tokopedia · 凤凰待入驻</h3>
+          <p>✅ 类型：印尼本土最大电商 (GoTo Group)</p>
+          <p>✅ 在售品牌：Pacific / Polygon / Sepeda / 10+ 品牌</p>
+          <p>✅ SKU：50+ 整车 (中端价位 + 周边)</p>
+          <p>📌 价值：<b style="color:#ffcc80">本土化入口</b> = 凤凰借 GoTo 生态触达 270M 印尼用户</p>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      数据来源：<span id="footer-data-source">⏳ 加载中…</span><br />
-      本页面为 Phoenix-Live Tab #2 · 竞品监控（🇧🇩 BD / 🇮🇩 ID 切换）· 每日 9:00 自动更新
+      数据来源：Shopee ID (60+ SKU) / Tokopedia (50+ SKU) / serbasepeda (8 整车) / Sogou<br />
+      本页面为 Phoenix-Live Tab #4 · 竞品监控（🇮🇩 ID）· 每日 9:00 + 16:00 自动更新
     </div>
   </div>
 
 <script>
   const cn = ['日','一','二','三','四','五','六'];
   const d = new Date();
-  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日 星期'+cn[d.getDay()];
+  document.getElementById('date').textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日星期'+cn[d.getDay()];
 
-  function esc(s) {
-    if (s == null) return '';
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  }
+  function esc(s) { if (s == null) return ''; return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
-  // === 0. 竞品覆盖热力图 (从 matrix.html 合并, 2026-07-10) ===
-  const EXCLUDED_HEAT = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack'];
-  function isMidHighHeat(it) {
-    if ((it.brand||'').toLowerCase() === 'generic') return false;
+  const EXCLUDED_KW_ID = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','kacamata','pelindung','wear','jacket','sticker','mirror','pannier','rack','sepeda','sepatu'];
+  function isMidHighAdultID(it) {
     const p = it.price || 0;
     if (p < 1e6 || p > 3e7) return false;
-    const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
-    return !EXCLUDED_HEAT.some(kw => m.includes(kw));
+    const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+    if (EXCLUDED_KW_ID.some(kw => m.includes(kw))) return false;
+    return true;
   }
-  function catOfHeat(it) {
-    const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
+  function catOfID(it) {
+    const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
     if (m.includes('gravel') || m.includes('frc')) return 'gravel';
-    if (m.includes('hybrid') || m.includes('city') || m.includes('rochester') || m.includes('junior')) return 'hybrid';
-    if (m.includes('road') || m.includes('racer')) return 'road';
+    if (m.includes('hybrid') || m.includes('city') || m.includes('rochester') || m.includes('flatbar')) return 'hybrid';
+    if (m.includes('road') || m.includes('racer') || m.includes('roadbike')) return 'road';
     return 'mtb';
   }
-  const KNOWN_BRANDS_HEAT = ["Phoenix","Marine","Veloce","Giant","Polygon","Core","Pacific","Duranta","Foxter","Be worth","Warrior","Thorne","Element","United","Federal","Wimcycle","United Bike","Rockrider","Ceres","Magpy","Kiesel","MEZAROTTI","Forever","Falcon","Adder","Avon","Pollux","Polloux","Duronto","Python","Hero","Trek","Specialized","Cannondale","Scott","Mustang","Seventy One","71 Warrior","Maximo","Police","Twitter","Evergreen","TRINX","Odessy","Atlantis","Exotic","BXT","FNIX","JAVA","Triban","Firefox","BSA","Mach City","Velion","CENTRUM","Centrum","Morison","Axwil","ZEFIRO","RB"];
-  const BRAND_BLACKLIST_HEAT = ["sepeda","sepatu","bicycle","cycle","bike","bmx","stunt","fixie","road","roadbike","mountain","mtb","gravel","hybrid","folding","kid","kids","baby","child","spare","part","accessory","gear","komponen","helmet","lamp","lock","bottle","pump","sepeda statis","orbitrack","treadmill","spinning","edition","official","shop","size","speed","shimano","campagnolo","new","ori","asli","untuk","dengan","rem","ban","roda","kirim","limited","special","exclusive","commuter","JNE","Sicepat"];
-  function cleanBrandHeat(it) {
-    const brand = it.brand || '';
-    const model = it.model || '';
-    for (const kb of KNOWN_BRANDS_HEAT) {
-      if (kb.toLowerCase() === brand.toLowerCase()) return kb;
-    }
-    const text = (model + ' ' + brand).toLowerCase();
-    const isBlacklisted = BRAND_BLACKLIST_HEAT.some(b => text.includes(b.toLowerCase()));
-    if (isBlacklisted) {
-      const sorted = [...KNOWN_BRANDS_HEAT].sort((a, b) => b.length - a.length);
-      for (const kb of sorted) {
-        if (text.includes(kb.toLowerCase())) return kb;
-      }
-      return 'Generic';
-    }
-    return brand || 'Generic';
+  function brandKeyID(b) {
+    if (!b) return 'Generic';
+    const lower = b.toLowerCase().trim();
+    if (lower.includes('phoenix')) return 'Phoenix';
+    if (lower.includes('polygon')) return 'Polygon';
+    if (lower.includes('pacific')) return 'Pacific';
+    if (lower.includes('element')) return 'Element';
+    if (lower.includes('united')) return 'United';
+    if (lower.includes('evergreen')) return 'Evergreen';
+    if (lower.includes('twitter')) return 'Twitter';
+    if (lower.includes('throne')) return 'Throne';
+    if (lower.includes('wimcycle')) return 'Wimcycle';
+    if (lower.includes('trinx')) return 'Trinx';
+    if (lower.includes('federal')) return 'Federal';
+    if (lower.includes('toko') || lower.includes('official')) return 'Generic';
+    if (lower === 'sepeda' || lower === 'sepada') return 'Generic';
+    return b;
   }
-  function renderHeatGrid(data) {
-    if (!data || !data.id) return;
-    const all = (data.id.price_pool || []).filter(isMidHighHeat);
-    const cats = ['road','hybrid','gravel','mtb'];
-    const brandCount = {};
-    all.forEach(it => { const b = cleanBrandHeat(it); brandCount[b] = (brandCount[b] || 0) + 1; });
-    const brands = Object.keys(brandCount)
-      .sort((a, b) => { if (a === 'Phoenix') return -1; if (b === 'Phoenix') return 1; return brandCount[b] - brandCount[a]; });
-    const heat = {};
-    brands.forEach(b => heat[b] = {road:0,hybrid:0,gravel:0,mtb:0});
-    all.forEach(it => { heat[cleanBrandHeat(it)][catOfHeat(it)]++; });
-    const heatGrid = document.getElementById('heat-grid');
-    if (!heatGrid) return;
-    const colorFor = (n) => {
-      if (n === 0) return '#94a3b8';
-      if (n <= 2) return '#1565c0';
-      if (n <= 5) return '#fbbf24';
-      if (n <= 10) return '#ea580c';
-      return '#c8102e';
-    };
-    let html = '<div class="heat-label"></div>';
-    cats.forEach(c => html += '<div class="heat-label" style="text-align:center">' + (c==='road'?'🚴 公路':c==='hybrid'?'🚲 Hybrid':c==='gravel'?'🛤️ Gravel':'⛰️ MTB') + '</div>');
-    brands.forEach(b => {
-      html += '<div class="heat-label">' + (b.toLowerCase()==='phoenix'?'<b style="color:#c8102e">'+b+'</b>':b) + '</div>';
-      cats.forEach(c => {
-        const n = heat[b][c];
-        html += '<div class="heat-cell" style="background:' + colorFor(n) + '"><span class="cnt">' + n + '</span><span class="lbl">' + (n===0?'真空':n<=2?'弱势':n<=5?'中等':n<=10?'强势':'统治') + '</span></div>';
-      });
-    });
-    heatGrid.innerHTML = html;
+  function fmtIDR(n) {
+    if (n >= 1e6) return 'Rp ' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return 'Rp ' + (n/1e3).toFixed(0) + 'K';
+    return 'Rp ' + n.toLocaleString();
+  }
+
+  const PRICE_BANDS_ID = [
+    { name: '1-7M', lo: 1e6, hi: 7e6 },
+    { name: '7-15M', lo: 7e6, hi: 15e6 },
+    { name: '15-25M', lo: 15e6, hi: 25e6 },
+    { name: '25-35M', lo: 25e6, hi: 35e6 },
+    { name: '35M+', lo: 35e6, hi: 1e10 },
+  ];
+  function cellLevel(n) {
+    if (n === 0) return 'empty';
+    if (n <= 2) return 'lvl-1';
+    if (n <= 5) return 'lvl-2';
+    if (n <= 10) return 'lvl-3';
+    return 'lvl-4';
   }
 
   let allData = null;
 
   async function load() {
-    let data;
     try {
       const r = await fetch('../data/latest.json', {cache: 'no-store'});
-      data = await r.json();
+      allData = await r.json();
     } catch (e) {
-      document.getElementById('brand-grid').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
+      document.getElementById('rival-list').innerHTML = '<div class="empty">⚠️ 加载失败：' + e.message + '</div>';
       return;
     }
-    allData = data;
-    document.getElementById('updated').textContent = '更新于 ' + (data.generated_at || '未知');
+    document.getElementById('updated').textContent = '更新于 ' + (allData.generated_at || '未知');
 
-    // V2.6.1 竞品覆盖热力图 (从 matrix.html 合并)
-    renderHeatGrid(data);
-
-    const s = data.fetch_status || {};
+    const s = allData.fetch_status || {};
     function setPill(elId, k) {
       const el = document.getElementById(elId);
       if (!el) return;
@@ -307,271 +336,165 @@
       const isOk = v.startsWith('ok');
       const isFail = v.startsWith('fail');
       const isPartial = v.startsWith('partial');
-      el.className = 'pill ' + (isOk ? 'ok' : isFail ? 'fail' : isPartial ? 'partial' : 'pending');
+      el.className = 'pill ' + (isOk ? 'pill-ok' : isFail ? 'pill-fail' : isPartial ? 'pill-partial' : '');
       el.textContent = (isOk ? '✓ ' : isFail ? '✗ ' : isPartial ? '⚠ ' : '⏳ ') + k.replace(/_/g, ' ');
       el.title = v;
     }
-    setPill('status-daraz', 'daraz_bd');
-    setPill('status-dreamcycle', 'dreamcycle');
+    setPill('status-shopee', 'shopee_id');
+    setPill('status-tokopedia', 'tokopedia');
     setPill('status-serbasepeda', 'serbasepeda');
-
 
     render();
   }
 
   function render() {
     if (!allData) return;
-    const region = window._currentRegion || 'bd';  // 由 tab 控制
-    const search = document.getElementById('search').value.toLowerCase();
-
-    // 收集价格项
-    const items = [];
-    if (region === 'all' || region === 'bd') {
-      for (const it of (allData.bd?.price_pool || [])) {
-        items.push({...it, _region: 'BD'});
-      }
-    }
-    if (region === 'all' || region === 'id') {
-      for (const it of (allData.id?.price_pool || [])) {
-        items.push({...it, _region: 'ID'});
-      }
-    }
-
-    // 品牌名归一化（处理首字母大写差异）
-    function brandKey(b) {
-      if (!b) return 'Generic';
-      const lower = b.toLowerCase();
-      if (lower.includes('phoenix')) return 'Phoenix';
-      if (lower.includes('marine')) return 'Marine';
-      if (lower.includes('giant')) return 'Giant';
-      if (lower.includes('foxter')) return 'Foxter';
-      if (lower.includes('pacific')) return 'Pacific';
-      if (lower.includes('warrior')) return 'Warrior';
-      if (lower.includes('thorne')) return 'Thorne';
-      if (lower.includes('duranta')) return 'Duranta';
-      if (lower.includes('veloce')) return 'Veloce';
-      if (lower.includes('be worth') || lower.includes('beworth')) return 'Be worth';
-      if (lower.includes('polygon')) return 'Polygon';
-      return b;
-    }
-
-    // 中高端整车筛选：BD 5K-30K BDT / ID Rp 1M-30M
-    // 排除童车/折叠/BMX/头盔/灯/瓶架/挡泥板等周边
-    const EXCLUDED_KW = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', 'helmet', 'lamp', 'light', 'bracket', 'fender', 'bell', 'lock', 'bottle', 'bag', 'carrier', 'pump', 'seat post', 'chain', 'pedal', 'grip', 'saddle', 'tire', 'tyre', 'tube', 'spoke', 'handle', 'bar end', 'glove', '眼镜', '护具', 'wear', 'jacket', 'sticker', 'bell', 'mirror', 'pannier', 'rack'];
-    function isMidHighAdultBike(it) {
-      const p = it.price || 0;
-      if (it._region === 'BD' && (p < 5000 || p > 30000)) return false;
-      if (it._region === 'ID' && (p < 1e6 || p > 3e7)) return false;
-      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
-      if (EXCLUDED_KW.some(kw => m.includes(kw))) return false;
-      return true;
-    }
-
-    // 按品牌聚合（排除 Generic = Daraz 白牌 + 限定中高端整车）
+    const items = (allData.id?.price_pool || []).filter(it => (it.brand || '').toLowerCase() !== 'generic');
+    const midHigh = items.filter(isMidHighAdultID);
     const byBrand = {};
-    const genericCount = items.filter(it => (it.brand || '').toLowerCase() === 'generic').length;
-    for (const it of items) {
-      if ((it.brand || '').toLowerCase() === 'generic') continue;
-      if (!isMidHighAdultBike(it)) continue;  // 中高端整车筛选
-      if (search) {
-        const s = (it.brand + ' ' + (it.model || '')).toLowerCase();
-        if (!s.includes(search)) continue;
-      }
-      const k = brandKey(it.brand);
-      if (!byBrand[k]) byBrand[k] = [];
-      byBrand[k].push(it);
-    }
+    midHigh.forEach(it => { const k = brandKeyID(it.brand); if (k === 'Generic') return; (byBrand[k] = byBrand[k] || []).push(it); });
+    const brands = Object.keys(byBrand);
 
-    // 统计
-    const totalBrands = Object.keys(byBrand).length;
-    const totalItems = items.length - genericCount;
-    const priced = items.filter(i => i.price > 0 && (i.brand || '').toLowerCase() !== 'generic').length;
-    // 顶部 summary 同步 dashboard_metrics（与 Tab #1 #5 共享）
-    const dm = allData.dashboard_metrics || {};
-    const phxGap = dm.phx_gap || {};
-    const phxBm = (allData.brand_metrics && allData.brand_metrics.rankings || []).find(r => r.brand.toLowerCase() === 'phoenix');
-    const phxPos = phxBm ? (allData.brand_metrics.rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix') + 1) : '?';
-    document.getElementById('summary').innerHTML =
-      `中高端整车 <strong>${totalItems}</strong> 条 · <strong>${priced}</strong> 条有价 · <strong>${totalBrands}</strong> 品牌（TOP 10 已截取）` +
-      (genericCount > 0 ? ` · <span style="color:#cbd5e1;font-size:11px">（排除 ${genericCount} 白牌 + 童车/折叠/配件）</span>` : '') +
-      (region === 'all' ? '' : ` · <strong>${region.toUpperCase()}</strong> 区域`) +
-      ` · <span style="color:#c8102e">ID V2.6.1 三蓝海品类切入点 = Pacific 防火墙（≥12M）+ 公路车 12-15M 真空 + 平把/砾石 7-15M 真空</span>`;
+    const bandDist = PRICE_BANDS_ID.map(b => {
+      const inB = midHigh.filter(it => it.price >= b.lo && it.price < b.hi);
+      return { name: b.name, count: inB.length, brands: new Set(inB.map(it => brandKeyID(it.brand)).filter(k => k !== 'Generic')).size };
+    });
+    const totalSku = midHigh.length;
+    const totalBrands = brands.length;
 
-    // V2.6.1 ID 三蓝海品类战略 KPI
-    const elMtbSkip = document.getElementById('cmp-mtb-skip');
-    const elRoadVac = document.getElementById('cmp-road-vacuum');
-    const elGravelVac = document.getElementById('cmp-gravel-vacuum');
-    const elIdTop = document.getElementById('cmp-id-top');
-    const elPhxId = document.getElementById('cmp-phx-id');
-    const elPacific = document.getElementById('cmp-pacific-fence');
-    if (elMtbSkip) {
-      elMtbSkip.innerHTML = `<b style="color:#c8e6c9">完全跳过</b><br><small>客户已有 MTB 供应商<br>+ 4% 毛利红海不参与<br>= V2.6.1 客户判断</small>`;
-    }
-    if (elRoadVac) {
-      // V2.6.1 修复 (2026-07-10): 从 dashboard_metrics 读, 不再硬编码 "1 SKU 几乎真空"
-      const rb1215 = (dm.id_road_bike_12_15m || {}).count || 0;
-      const rb1215Brands = (dm.id_road_bike_12_15m || {}).brands || [];
-      const rbGt20 = (dm.id_road_bike_gt_20m || {}).count || 0;
-      const rbTag = rb1215 === 0 ? '完全真空' : (rb1215 <= 2 ? '几乎真空' : '中端少量');
-      elRoadVac.innerHTML = `<b style="color:#c8e6c9">${rb1215} SKU ${rbTag}</b><br><small>${rb1215Brands.slice(0,2).join(' / ') || '无品牌'}<br>但 &gt;20M ${rbGt20} SKU 进口红海 (Pinarello/Trek)<br>= Phoenix 12-15M 错位切入铁证</small>`;
-    }
-    if (elGravelVac) {
-      // V2.6.1 修复 (2026-07-10): 改读 metrics, 74 SKU 硬编码 → 真实 287 SKU
-      const gr715 = (dm.id_gravel_7_15m || {}).count || 0;
-      const hy715 = (dm.id_hybrid_7_15m || {}).count || 0;
-      const idPoolTotal = (dm.totals || {}).id_pool_total || 287;
-      const grBrands = (dm.id_gravel_7_15m || {}).brands || [];
-      const hyBrands = (dm.id_hybrid_7_15m || {}).brands || [];
-      elGravelVac.innerHTML = `<b style="color:#c8e6c9">Gravel ${gr715} / Hybrid ${hy715} SKU</b><br><small>Gravel 7-15M: ${grBrands.slice(0,2).join(' / ') || '无'}<br>Hybrid 7-15M: ${hyBrands.slice(0,2).join(' / ') || '无'}<br>= Shopee+Tokopedia ${idPoolTotal} SKU 双平台<br>平把 8M + 砾石 10M 切入点</small>`;
-    }
-    if (elIdTop) {
-      const idTop10 = dm.id_top10_brands || [];
-      if (idTop10.length > 0) {
-        const top = idTop10[0];
-        elIdTop.innerHTML = `<b>${esc(top.brand)}</b><br><small>${esc(top.price_range || 'Rp ?')}<br>${esc(top.categories || '').slice(0, 30)}</small>`;
-      } else {
-        elIdTop.innerHTML = `<b>Polygon</b><br><small>Rp 5-30M+<br>本土最大品牌</small>`;
-      }
-    }
-    if (elPhxId) {
-      elPhxId.innerHTML = `<b style="color:#ffcdd2">Rp 12M (USD 780)</b><br><small>Phoenix 公路车@12M<br>+ FNIX 公路@15-18M<br>+ 平把@7-10M</small>`;
-    }
-    if (elPacific) {
-      elPacific.innerHTML = `<b style="color:#c8e6c9">Phoenix ≥12M</b><br><small>跳过 Pacific 5.1-9.5M<br>同公司双品牌永不重叠<br>错位线 = 主战场</small>`;
-    }
-
-    // 价格段品牌矩阵（按区域分别显示）
-    const tierGrid = document.getElementById('tier-grid');
-    let tierHtml = '';
-
-    if (region === 'all' || region === 'bd') {
-      const bdItems = items.filter(it => it._region === 'BD' && it.price > 0 && (it.brand || '').toLowerCase() !== 'generic');
-      const tierBands = [
-        { name: 'BD < 10K', lo: 0, hi: 10000, color: '#90a4ae' },
-        { name: 'BD 10K-15K', lo: 10000, hi: 15000, color: '#1565c0' },
-        { name: 'BD 15K-25K', lo: 15000, hi: 25000, color: '#e65100' },
-        { name: 'BD > 25K', lo: 25000, hi: 1e9, color: '#c8102e' },
-      ];
-      tierHtml += '<div style="grid-column: 1/-1;font-size:12px;font-weight:800;color:#0d47a1;margin-top:4px">🇧🇩 孟加拉 BDT 价段</div>';
-      tierHtml += tierBands.map(t => {
-        const inTier = bdItems.filter(it => it.price >= t.lo && it.price < t.hi);
-        const phx = inTier.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
-        const brands = [...new Set(inTier.map(it => it.brand))].sort();
-        const isGap = inTier.length === 0;
-        return `
-          <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
-              <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
-              <span style="font-size:10px;color:#cbd5e1;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
-            </div>
-            <div style="font-size:11px;color:#cbd5e1;line-height:1.5">
-              ${isGap ? '<span style="color:#c8102e;font-weight:700">⚠ 真实真空</span>' : brands.length <= 3 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 3).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 3) + '</span>'}
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    if (region === 'all' || region === 'id') {
-      const idItems = items.filter(it => it._region === 'ID' && it.price > 0);
-      const tierBandsId = [
-        { name: 'ID < Rp 1M', lo: 0, hi: 1e6, color: '#90a4ae' },
-        { name: 'ID Rp 1-7M', lo: 1e6, hi: 7e6, color: '#1565c0' },
-        { name: 'ID Rp 7-15M', lo: 7e6, hi: 15e6, color: '#e65100' },
-        { name: 'ID > Rp 15M', lo: 15e6, hi: 1e12, color: '#c8102e' },
-      ];
-      tierHtml += '<div style="grid-column: 1/-1;font-size:12px;font-weight:800;color:#0d47a1;margin-top:8px">🇮🇩 印尼 IDR 价段</div>';
-      tierHtml += tierBandsId.map(t => {
-        const inTier = idItems.filter(it => it.price >= t.lo && it.price < t.hi);
-        const phx = inTier.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
-        const brands = [...new Set(inTier.map(it => it.brand))].sort();
-        const isGap = inTier.length === 0;
-        return `
-          <div style="background:#f7f9fc;border-radius:8px;padding:10px 12px;border-left:4px solid ${t.color}">
-            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
-              <span style="font-size:12px;font-weight:800;color:#0d47a1">${t.name}</span>
-              <span style="font-size:10px;color:#cbd5e1;font-weight:600">${inTier.length} SKU${phx.length > 0 ? ' · <span style="color:#c8102e">Phoenix × ' + phx.length + '</span>' : ''}</span>
-            </div>
-            <div style="font-size:11px;color:#cbd5e1;line-height:1.5">
-              ${isGap ? '<span style="color:#cbd5e1">· 真空（无数据）</span>' : brands.length <= 4 ? brands.map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') : brands.slice(0, 4).map(b => b === 'Phoenix' ? '<b style="color:#c8102e">Phoenix</b>' : b).join(' · ') + ' <span style="color:#999">+ ' + (brands.length - 4) + '</span>'}
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    tierGrid.innerHTML = tierHtml || '';
-
-    // 渲染品牌卡
-    const grid = document.getElementById('brand-grid');
-    if (totalBrands === 0) {
-      grid.innerHTML = '<div class="empty">无匹配数据</div>';
-      return;
-    }
-    // 排序：走 brand_metrics.rankings（与 Tab #1 #5 共享，按加权得分倒序）
-    // Phoenix 不再硬排第一 —— 真实位置由评分决定（当前 #14）
+    // KPI 1: Phoenix 现状
+    const phxItems = byBrand['Phoenix'] || [];
+    const phxPrices = phxItems.map(it => it.price).filter(x => x > 0);
+    const phxMax = phxPrices.length ? Math.max(...phxPrices) : 0;
+    const phxMin = phxPrices.length ? Math.min(...phxPrices) : 0;
+    const phxAvg = phxPrices.length ? Math.round(phxPrices.reduce((a,b) => a+b, 0) / phxPrices.length) : 0;
+    const phxBands = PRICE_BANDS_ID.map(b => ({ name: b.name, count: phxItems.filter(it => it.price >= b.lo && it.price < b.hi).length }));
+    const phxTopBand = phxBands.sort((a,b) => b.count - a.count)[0];
     const rankings = (allData.brand_metrics && allData.brand_metrics.rankings) || [];
-    const rankedBrands = new Set(rankings.map(r => r.brand));
-    const order = [
-      // 1. brand_metrics 排过序的（前 10 已经在 rankings.slice(0,10)）
-      ...rankings.slice(0, 10).map(r => r.brand).filter(b => byBrand[b]),
-      // 2. brand_metrics 没用但 byBrand 有的（兜底）
-      ...Object.keys(byBrand).filter(b => !rankedBrands.has(b)).sort((a, b) => byBrand[b].length - byBrand[a].length),
-    ].slice(0, 10);
+    const phxIdx = rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix');
+    const phxRank = phxIdx >= 0 ? phxIdx + 1 : '?';
+    const phxScore = rankings[phxIdx] ? rankings[phxIdx].score : '?';
 
-    grid.innerHTML = order.map(brand => {
-      const cardItems = byBrand[brand].slice(0, 5); // 每个品牌最多显示 5 条
-      const more = byBrand[brand].length - cardItems.length;
-      const cls = brand.toLowerCase();
-      // 找 brand_metrics 里的得分
-      const bm = rankings.find(r => r.brand === brand);
-      return `
-        <div class="brand-card ${cls}">
-          <div class="brand-name">${brand.toLowerCase()==='phoenix'?'<span class="phx">'+esc(brand)+'</span>':esc(brand)}<span class="count-tag">· ${byBrand[brand].length} 条</span>${bm?'<span class="score-tag">'+bm.score+' 分</span>':''}</div>
-          ${cardItems.map(it => {
-            // 价格格式：IDR → Rp X.XM；BDT → 原样
-            const priceStr = it.currency === 'IDR' ? 'Rp ' + (it.price / 1e6).toFixed(2) + 'M' : (it.currency || 'BDT') + ' ' + it.price.toLocaleString();
-            return `
-            <a class="brand-item" href="${esc(it.url)}" target="_blank" rel="noopener">
-              <span class="model">${esc(it.model)}<span class="plat">· ${esc(it.platform)}</span></span>
-              <span class="price">${priceStr}</span>
-            </a>
-          `;}).join('')}
-          ${more > 0 ? `<div style="font-size:10px;color:#999;padding:4px 0;text-align:right">+${more} more</div>` : ''}
-        </div>
-      `;
+    document.getElementById('kpi-phx-rank').textContent = '#' + phxRank;
+    if (phxItems.length === 0) {
+      document.getElementById('kpi-phx-detail').innerHTML = '<b style="color:#c8102e">0 SKU</b> · 顶价 — · 评分 — · 凤凰<b style="color:#c8102e">未入场</b>';
+    } else {
+      document.getElementById('kpi-phx-detail').innerHTML = `${phxItems.length} SKU · 顶价 ${fmtIDR(phxMax)} · 评分 ${phxScore} 分`;
+    }
+
+    // KPI 2: 7-15M 红海
+    const red7 = bandDist.find(b => b.name === '7-15M');
+    document.getElementById('kpi-redsea').textContent = red7.count + ' SKU';
+    const red7Brands = brands.filter(b => (byBrand[b] || []).some(it => it.price >= 7e6 && it.price < 15e6));
+    document.getElementById('kpi-redsea-detail').innerHTML = `${red7.brands} 品牌 · <b style="color:#b71c1c">价格战</b><br>主敌: ${red7Brands.slice(0,3).join(' / ') || '无'}`;
+
+    // KPI 3: 15M+ 蓝海
+    const blue15 = bandDist.find(b => b.name === '15-25M');
+    const blue35 = bandDist.find(b => b.name === '35M+');
+    const blue15Total = (blue15.count || 0) + (blue35.count || 0) + (bandDist.find(b => b.name === '25-35M') || {count:0}).count;
+    const blue15Brands = brands.filter(b => (byBrand[b] || []).some(it => it.price >= 15e6));
+    document.getElementById('kpi-blueocean').textContent = blue15Total + ' SKU';
+    const blueMax = blue15Brands.length ? Math.max(...(byBrand[blue15Brands[0]] || []).map(it => it.price)) : 0;
+    document.getElementById('kpi-blueocean-detail').innerHTML = `${blue15Brands.length} 品牌 · 顶价 <b style="color:#2e7d32">${fmtIDR(blueMax)}</b><br>= <b style="color:#2e7d32">凤凰 FNIX 18M 主战场</b>`;
+
+    // KPI 4: Top 1 竞品
+    const sortedBrands = brands.filter(b => b !== 'Phoenix').map(b => ({ b, n: (byBrand[b] || []).length })).sort((a,b) => b.n - a.n);
+    const top1 = sortedBrands[0] || { b: '?', n: 0 };
+    const top1Max = (byBrand[top1.b] || []).reduce((max, it) => Math.max(max, it.price || 0), 0);
+    document.getElementById('kpi-topcmp').textContent = top1.b;
+    document.getElementById('kpi-topcmp-detail').innerHTML = `${top1.n} SKU · 顶价 ${fmtIDR(top1Max)}<br>= <b style="color:#e65100">Phoenix 最大对手</b>`;
+
+    // Phoenix 现状专卡
+    document.getElementById('phx-sku').textContent = phxItems.length > 0 ? phxItems.length + ' SKU' : '0 SKU ⚠️';
+    document.getElementById('phx-top').textContent = phxMax > 0 ? fmtIDR(phxMax) : '—';
+    document.getElementById('phx-band').textContent = phxTopBand.count > 0 ? phxTopBand.name + ' (' + phxTopBand.count + ')' : '未入场';
+    document.getElementById('phx-score').textContent = phxScore + ' 分 (#' + phxRank + ')';
+    document.getElementById('phx-channel').textContent = '待入驻 (Shopee / Tokopedia)';
+    let verdict = '';
+    if (phxItems.length === 0) {
+      verdict = '⚠️ <b>ID 暂无 SKU</b> = 完全未入场 · <b>2026 优先目标市场</b> · 推 5-10 款 SKU 直接入 Shopee + Tokopedia';
+    } else if (phxTopBand.name === '35M+' || phxTopBand.name === '25-35M') {
+      verdict = '🎯 占据 <b>' + phxTopBand.name + ' 顶价</b> = FNIX 高端切入 = 价值锚点';
+    } else if (phxTopBand.name === '15-25M') {
+      verdict = '🎯 占据 <b>15-25M 中高端</b> = FNIX 主战场 = 与 ' + blue15Brands.slice(0,2).join('/') + ' 同台';
+    } else {
+      verdict = '⚠️ 占据 <b>' + phxTopBand.name + '</b> = 入门价位 = 升级到 15-25M FNIX = 客单价 +50%';
+    }
+    document.getElementById('phx-verdict').innerHTML = verdict;
+
+    // Top 5 竞品横条
+    const top5 = sortedBrands.slice(0, 5);
+    const maxN = top5.length ? top5[0].n : 1;
+    const rivalColors = ['#1565c0', '#2e7d32', '#9c27b0', '#ff6f00', '#5d4037'];
+    document.getElementById('rival-list').innerHTML = top5.map((r, i) => {
+      const widthPct = (r.n / maxN * 100).toFixed(0);
+      return `<div class="rival-row">
+        <div class="name">${r.b}</div>
+        <div class="bar-bg"><div class="bar" style="width:${widthPct}%;background:${rivalColors[i]}">${r.n} SKU</div></div>
+        <div class="count">${r.n}</div>
+      </div>`;
     }).join('');
+
+    // 价位带竞争表
+    const tableBrands = ['Phoenix', ...top5.slice(0, 7).map(r => r.b)].filter(b => byBrand[b]);
+    const bandRows = tableBrands.map(b => {
+      const items = byBrand[b] || [];
+      const cells = PRICE_BANDS_ID.map(band => {
+        const n = items.filter(it => it.price >= band.lo && it.price < band.hi).length;
+        return `<td class="cell"><div class="band-cell ${cellLevel(n)}">${n || '·'}</div></td>`;
+      }).join('');
+      const total = items.length;
+      const phxClass = b === 'Phoenix' ? 'phx' : '';
+      return `<tr><td class="brand ${phxClass}">${b}</td>${cells}<td class="cell"><b style="color:#0d47a1">${total}</b></td></tr>`;
+    }).join('');
+    document.getElementById('band-tbody').innerHTML = bandRows;
+
+    // 3 条行动建议
+    // STEP 1
+    if (phxItems.length === 0) {
+      document.getElementById('a1-title').innerHTML = '🚀 立即入场 ID 市场';
+      document.getElementById('a1-why').textContent = 'Phoenix 在 ID = 0 SKU = 100% 蓝海 = 不进场就是失地';
+      document.getElementById('a1-metric').innerHTML = '目标 <b>FNIX 18M IDR 主推</b> + 5-10 SKU 入 Shopee + Tokopedia';
+    } else if (phxTopBand.name === '35M+' || phxTopBand.name === '25-35M') {
+      document.getElementById('a1-title').innerHTML = '🏆 守住 ' + phxTopBand.name + ' 顶价';
+      document.getElementById('a1-why').textContent = '已占据行业顶价 = 价值锚点 = 不可降价';
+      document.getElementById('a1-metric').innerHTML = '顶价 <b>' + fmtIDR(phxMax) + '</b> = 行业天花板';
+    } else if (phxTopBand.name === '15-25M') {
+      document.getElementById('a1-title').innerHTML = '🎯 死守 15-25M FNIX 主战';
+      document.getElementById('a1-why').textContent = '中高端价位 = ' + blue15Brands.slice(0,3).join('/') + ' = FNIX 旗舰主推';
+      document.getElementById('a1-metric').innerHTML = 'Phoenix <b>' + (byBrand['Phoenix'] || []).filter(it => it.price >= 15e6 && it.price < 25e6).length + ' SKU</b> vs ' + top1.b + ' <b>' + (byBrand[top1.b] || []).filter(it => it.price >= 15e6 && it.price < 25e6).length + ' SKU</b>';
+    } else {
+      document.getElementById('a1-title').innerHTML = '⬆️ 升级到 15-25M FNIX';
+      document.getElementById('a1-why').textContent = '当前 ' + phxTopBand.name + ' 入门 = 升级 = 推 1-2 款 FNIX 中端';
+      document.getElementById('a1-metric').innerHTML = '现均价 <b>' + fmtIDR(phxAvg) + '</b> → 目标 <b>Rp 18M+</b> = 客单价 +60%';
+    }
+
+    // STEP 2
+    const top1TopBand = PRICE_BANDS_ID.map(b => ({ name: b.name, n: (byBrand[top1.b] || []).filter(it => it.price >= b.lo && it.price < b.hi).length })).sort((a,b) => b.n - a.n)[0];
+    document.getElementById('a2-title').innerHTML = '🚫 避开 ' + top1.b + ' 统治价位';
+    document.getElementById('a2-why').textContent = top1.b + ' 在 ' + top1TopBand.name + ' 有 ' + top1TopBand.n + ' SKU = 统治 = Phoenix 进入必败';
+    document.getElementById('a2-metric').innerHTML = '<b>' + top1.b + '</b> 主价位 <b>' + top1TopBand.name + '</b> · 顶价 <b>' + fmtIDR(top1Max) + '</b> = 蓝海 = 反向定位';
+
+    // STEP 3
+    const catCount = { road: 0, hybrid: 0, gravel: 0, mtb: 0 };
+    midHigh.forEach(it => { catCount[catOfID(it)]++; });
+    const phxCatCount = { road: 0, hybrid: 0, gravel: 0, mtb: 0 };
+    (byBrand['Phoenix'] || []).forEach(it => { phxCatCount[catOfID(it)]++; });
+    const emptyCat = Object.entries(catCount).filter(([c, n]) => n > 0 && phxCatCount[c] === 0).map(([c]) => c);
+    if (emptyCat.length > 0) {
+      const cat = emptyCat[0];
+      const catName = cat === 'road' ? '公路车' : cat === 'hybrid' ? 'Hybrid 平把' : cat === 'gravel' ? 'Gravel 砾石' : 'MTB 山地';
+      document.getElementById('a3-title').innerHTML = '🚴 补 ' + catName + ' 品类';
+      document.getElementById('a3-why').textContent = 'Phoenix 缺 ' + catName + ' = 行业有 ' + catCount[cat] + ' SKU / ' + new Set(midHigh.filter(it => catOfID(it) === cat).map(it => brandKeyID(it.brand))).size + ' 品牌 = 真蓝海';
+      document.getElementById('a3-metric').innerHTML = '凤凰现 <b>0 ' + catName + '</b> · 顶价 <b>' + fmtIDR(midHigh.filter(it => catOfID(it) === cat).reduce((max, it) => Math.max(max, it.price || 0), 0)) + '</b> = 切入价位';
+    } else {
+      document.getElementById('a3-title').innerHTML = '✅ 4 品类全覆盖 · 守现状';
+      document.getElementById('a3-why').textContent = 'Phoenix 4 品类都已有 SKU = 重点 = 升级单价位带';
+      document.getElementById('a3-metric').innerHTML = '现 <b>' + Object.values(phxCatCount).reduce((a,b) => a+b, 0) + ' SKU</b> · 守主战场 = FNIX 15-25M 升级';
+    }
   }
 
-  // region tab 切换
-  document.querySelectorAll('.region-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.region-tab').forEach(b => {
-        b.classList.remove('active');
-        b.style.background = 'transparent';
-        b.style.color = '#1565c0';
-      });
-      btn.classList.add('active');
-      btn.style.background = btn.dataset.region === 'bd' ? '#1565c0' : '#2e7d32';
-      btn.style.color = '#fff';
-      window._currentRegion = btn.dataset.region;
-      render();
-    });
-  });
-  document.getElementById('search').addEventListener('input', render);
-
-  // V2.7 数据质量门 — VPN 信号灯（必须在 load 完成后调用）
-  load().then(data => {
-    if (typeof renderQualityGate === "function") renderQualityGate(data);
-    // footer 数据源动态化 (V2.6.1 修复: 74 SKU 硬编码 → 真实数据, 2026-07-10)
-    const footerEl = document.getElementById('footer-data-source');
-    if (footerEl && data) {
-      const bdPool = (data.bd && data.bd.price_pool || []).length;
-      const idPool = (data.id && data.id.price_pool || []).length;
-      const fmt = (n) => n ? n.toLocaleString() : '?';
-      footerEl.textContent = `Daraz BD (${fmt(bdPool)} SKU) / Shopee+Tokopedia+serbasepeda (${fmt(idPool)} SKU) / Sogou news / OEC`;
-    }
-  });
+  load().then(data => { if (typeof renderQualityGate === "function") renderQualityGate(data); });
 </script>
 <script src="../render_quality_gate.js"></script>
 </body>
