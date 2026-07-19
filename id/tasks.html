@@ -358,6 +358,85 @@ async function load() {
     return;
   }
   const dm = data.dashboard_metrics || {};
+  // V2.9.43 dashboard_metrics V2.7.2 兼容: 实时从 price_pool 算 legacyDm (跟 bd/tasks.html V2.9.43 一致)
+  // V2.7.2 重构后 dashboard_metrics 只有 bd.total_sku + bd.real_brands 3 key, 老字段 undefined -> '—' 全空白
+  // 跟 bd/index.html V2.9.36 + bd/competitive.html V2.9.42 + bd/tasks.html V2.9.43 跨 Tab 统一: 同一份 price_pool 算
+  if (!dm.totals && data.bd && data.bd.price_pool) {
+    const bdPool = data.bd.price_pool.filter(it => (it.price || 0) > 0);
+    function isGenericBd(b) { if (!b) return true; return /^(sepeda|sepada|mtb|generic|bike|bicycle)$/i.test(b); }
+    function isAdultBike(it) {
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      return !['kid','baby','child','folding','bmx','stunt','16"','20"','boys','girls'].some(kw => m.includes(kw));
+    }
+    const adultBd = bdPool.filter(isAdultBike);
+    const phxBdAll = bdPool.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    const phxBdAdult = phxBdAll.filter(isAdultBike);
+    const phxPrices = phxBdAdult.map(it => it.price).filter(x => x > 0);
+    const phxMin = phxPrices.length ? Math.min(...phxPrices) : 0;
+    const phxMax = phxPrices.length ? Math.max(...phxPrices) : 0;
+    const phxAsp = phxPrices.length ? Math.round(phxPrices.reduce((a,b)=>a+b,0) / phxPrices.length) : 0;
+    const nonPhxNonGen = adultBd.filter(it => (it.brand || '').toLowerCase() !== 'phoenix' && !isGenericBd((it.brand || '').toLowerCase()));
+    const allPrices = nonPhxNonGen.map(it => it.price).filter(x => x > 0);
+    const industryMax = allPrices.length ? Math.max(...allPrices) : 0;
+    const industryMaxItem = nonPhxNonGen.find(it => it.price === industryMax) || {};
+    const mid_15_25k = adultBd.filter(it => it.price >= 15000 && it.price < 25000);
+    const gt_25k = adultBd.filter(it => it.price >= 25000);
+    const gt_30k = adultBd.filter(it => it.price >= 30000);
+    const phxSku = phxBdAdult.length;
+    const phxHigh = phxBdAdult.filter(it => it.price >= 15000).length;
+    const phxHighPct = phxSku > 0 ? Math.round(phxHigh / phxSku * 100) : 0;
+    const phxInStock = phxBdAdult.filter(it => it.in_stock).length;
+    const phxInStockPct = phxSku > 0 ? Math.round(phxInStock / phxSku * 100) : 0;
+    const sku_score = Math.min(phxSku / 20, 1) * 100 * 0.20;
+    const asp_score = Math.min(phxAsp / 30000, 1) * 100 * 0.30;
+    const high_score = phxHighPct * 0.20;
+    const max_score = Math.min(phxMax / 50000, 1) * 100 * 0.20;
+    const in_stock_score = phxInStockPct * 0.10;
+    const phxScoreVal = Math.round((sku_score + asp_score + high_score + max_score + in_stock_score) * 10) / 10;
+    const idPool = (data.id && data.id.price_pool || []).filter(it => (it.price || 0) > 0);
+    const id7to15 = idPool.filter(it => it.price >= 7e6 && it.price < 15e6);
+    const id7to15Brands = [...new Set(id7to15.map(it => (it.brand || '').trim()).filter(b => b))];
+    const ADULT_BRANDS = {};
+    adultBd.forEach(it => { const b = (it.brand || '').trim(); if (!b || isGenericBd(b.toLowerCase())) return; (ADULT_BRANDS[b] = ADULT_BRANDS[b] || []).push(it); });
+    const brandMetricsList = [];
+    for (const [b, items] of Object.entries(ADULT_BRANDS)) {
+      const ps = items.map(it => it.price || 0).filter(p => p > 0);
+      if (!ps.length) continue;
+      const sn = ps.length;
+      const asp = ps.reduce((a, b) => a + b, 0) / sn;
+      const mx = Math.max(...ps);
+      const hp = ps.filter(p => p >= 15000).length / sn * 100;
+      const is = items.filter(it => it.in_stock).length / sn * 100;
+      const sc = Math.min(sn/20,1)*100*0.20 + Math.min(asp/30000,1)*100*0.30 + hp*0.20 + Math.min(mx/50000,1)*100*0.20 + is*0.10;
+      brandMetricsList.push({ brand: b, score: Math.round(sc*10)/10 });
+    }
+    brandMetricsList.sort((a, b) => b.score - a.score);
+    const phxRank = brandMetricsList.findIndex(m => m.brand.toLowerCase() === 'phoenix') + 1 || '?';
+    dm.totals = {
+      phx_bd_mid_high: phxSku, phx_bd_min: phxMin, phx_bd_max: phxMax, phx_bd_asp: phxAsp,
+      bd_pool_brands: new Set(Object.keys(ADULT_BRANDS)).size,
+      bd_pool_total: adultBd.length,
+      bd_pool_mid_high: mid_15_25k.length,
+      id_pool_total: idPool.length
+    };
+    dm.bands = {
+      bd_lt_10k: { count: adultBd.filter(it => it.price < 10000).length },
+      bd_10_15k: { count: adultBd.filter(it => it.price >= 10000 && it.price < 15000).length },
+      bd_15_25k: { count: mid_15_25k.length, brands_count: new Set(mid_15_25k.map(it => it.brand)).size, top_5_brands: [...new Set(mid_15_25k.map(it => it.brand))].slice(0,5) },
+      bd_gt_25k: { count: gt_25k.length, brands_count: new Set(gt_25k.map(it => it.brand)).size, top_5_brands: [...new Set(gt_25k.map(it => it.brand))].slice(0,6) },
+      bd_gt_30k: { count: gt_30k.length, brands_count: new Set(gt_30k.map(it => it.brand)).size, top_5_brands: [...new Set(gt_30k.map(it => it.brand))].slice(0,4) }
+    };
+    dm.phx_gap = {
+      industry_max_price: industryMax, industry_max_brand: industryMaxItem.brand || '?', industry_max_model: industryMaxItem.model || '',
+      phx_max_price: phxMax, phx_vs_industry_ratio: phxMax && industryMax ? industryMax / phxMax : 0,
+      phx_in_15_25: mid_15_25k.filter(it => (it.brand || '').toLowerCase() === 'phoenix').length,
+      gt_25k_count: gt_25k.length, gt_25k_brand_count: new Set(gt_25k.map(it => it.brand)).size,
+      gt_25k_brands: [...new Set(gt_25k.map(it => it.brand))].slice(0, 6)
+    };
+    dm.id_7_15m = { count: id7to15.length, brands: id7to15Brands };
+    if (!data.brand_metrics) data.brand_metrics = {};
+    data.brand_metrics.bd = { phoenix: { rank: phxRank, score: phxScoreVal } };
+  }
   const totals = dm.totals || {};
   const bands = dm.bands || {};
   const phxGap = dm.phx_gap || {};
