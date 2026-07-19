@@ -1334,7 +1334,25 @@ function renderPricePool(elId, prices) {
 
   if (!prices.length) { document.getElementById(elId).innerHTML = '<div class="empty">暂无价格</div>'; return; }
 
-  const sorted = [...prices].sort((a, b) => a.price - b.price);
+  // V2.9.35 (2026-07-19): 排序改降序 (高→低) + 过滤 generic 词 (Sepeda/MTB/【Anchi】 等)
+  // 之前: 升序 (低→高) + 不过滤 generic → Sepeda/MTB 等非品牌词反复出现
+  const GENERIC_BRANDS = new Set([
+    'generic', 'sepeda', 'sepada', 'mtb', 'bike', 'bicycle', 'bikes',
+    'toko', 'official', 'fixie', 'road', 'roadbike', 'mountain', 'gravel',
+    'hybrid', 'folding', 'kid', 'kids', 'baby', 'child', 'bmx', 'stunt',
+    'helmet', 'lamp', 'lock', 'bottle', 'pump', 'edition'
+  ]);
+  function isRealBrand(b) {
+    if (!b) return false;
+    const lower = b.toLowerCase().trim();
+    if (GENERIC_BRANDS.has(lower)) return false;
+    if (lower.startsWith('[[') || lower.startsWith('【')) return false;
+    if (lower.includes('anchi') || lower.includes('【anchi】')) return false;
+    if (lower.includes('sepeda') || lower.includes('sepada')) return false;
+    return true;
+  }
+  const filtered = prices.filter(p => isRealBrand(p.brand));
+  const sorted = [...filtered].sort((a, b) => (b.price || 0) - (a.price || 0));
 
   const html = sorted.slice(0, 20).map(p => `<div class="price-item">
 
@@ -1348,7 +1366,7 @@ function renderPricePool(elId, prices) {
 
   </div>`).join('');
 
-  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">显示 ${Math.min(20, sorted.length)} / ${sorted.length} 商品</div>`;
+  document.getElementById(elId).innerHTML = html + `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">显示 ${Math.min(20, sorted.length)} / ${sorted.length} 商品 (已过滤 ${prices.length - filtered.length} 个 generic 品牌)</div>`;
 
 }
 
