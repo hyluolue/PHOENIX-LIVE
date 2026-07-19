@@ -329,27 +329,80 @@
     // V2.6.1 ID 战略洞察全部在 HTML 内硬编码（V2.6.1 三蓝海品类 15 SKU 完整部署）
     // JS 不再补 strategy list（HTML 已有完整内容）
 
-    // 品牌监控：走 brand_metrics.rankings 前 10（与 Tab #5 product-matrix 共享）
-    // V2.6.1 修复 (2026-07-10): 加 try/catch 兜底, 防止前面 throw 阻止到这里
+    // 品牌监控：V2.9.38 实时从 data.id.price_pool 算 ID 品牌 metrics
+    // (之前用 data.brand_metrics.rankings = BD 品牌数据, 错配)
     const brandGrid = document.getElementById('brand-monitor-grid');
     try {
-      const rankings = (data.brand_metrics && data.brand_metrics.rankings) || [];
+      const ID_EXCLUDED = ['kid','baby','child','folding','bmx','stunt','helmet','lamp','light','bracket','fender','bell','lock','bottle','bag','carrier','pump','sticker','seat post','chain','pedal','grip','saddle','tire','tyre','tube','spoke','handle','bar end','glove','wear','jacket','mirror','pannier','rack','sepeda','sepada','mtb','bike','bicycle','toko','official','fixie','road','mountain','gravel','hybrid','komponen','shimano','campagnolo','edition','commuter'];
+      function brandKeyID2(b) {
+        if (!b) return 'Generic';
+        const lower = b.toLowerCase().trim();
+        if (lower.includes('phoenix')) return 'Phoenix';
+        if (lower.includes('polygon')) return 'Polygon';
+        if (lower.includes('pacific')) return 'Pacific';
+        if (lower.includes('element')) return 'Element';
+        if (lower.includes('united')) return 'United';
+        if (lower.includes('evergreen')) return 'Evergreen';
+        if (lower.includes('twitter')) return 'Twitter';
+        return b;
+      }
+      function isIDRealBrand(b) {
+        if (!b) return false;
+        const lower = b.toLowerCase().trim();
+        if (ID_EXCLUDED.some(kw => lower.includes(kw))) return false;
+        return true;
+      }
+      // 实时算 ID 品牌 metrics
+      const idPool = (data.id?.price_pool || []).filter(it => (it.price || 0) >= 1e6 && (it.price || 0) <= 3e7);
+      const byBrand = {};
+      idPool.forEach(it => {
+        const k = brandKeyID2(it.brand);
+        if (k === 'Generic') return;
+        if (!isIDRealBrand(k)) return;
+        (byBrand[k] = byBrand[k] || []).push(it);
+      });
+      const idMetrics = [];
+      for (const [brand, items] of Object.entries(byBrand)) {
+        const skus = items.map(it => it.price || 0).filter(p => p > 0);
+        if (!skus.length) continue;
+        const sku_count = skus.length;
+        const asp = Math.round(skus.reduce((a, b) => a + b, 0) / sku_count);
+        const max_price = Math.max(...skus);
+        // IDR 高级门槛 = 15M
+        const high_tier_count = skus.filter(p => p >= 15e6).length;
+        const high_tier_pct = Math.round(high_tier_count / sku_count * 100);
+        const in_stock = items.filter(it => it.in_stock).length;
+        const in_stock_rate = Math.round(in_stock / sku_count * 100);
+        // 评分: SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10% (匹配 strategy 6/7 节加权)
+        const sku_score = Math.min(sku_count / 10, 1) * 100 * 0.20;
+        // IDR ASP 满分 = 25M
+        const asp_score = Math.min(asp / 25e6, 1) * 100 * 0.30;
+        const high_score = high_tier_pct * 0.20;
+        // IDR 顶价满分 = 30M
+        const max_score = Math.min(max_price / 30e6, 1) * 100 * 0.20;
+        const in_stock_score = in_stock_rate * 0.10;
+        const score = Math.round((sku_score + asp_score + high_score + max_score + in_stock_score) * 10) / 10;
+        idMetrics.push({ brand, sku_count, asp, max_price, high_tier_count, high_tier_pct, in_stock_rate, score });
+      }
+      idMetrics.sort((a, b) => b.score - a.score);
+      const rankings = idMetrics.slice(0, 10);
+
       if (rankings.length > 0) {
         let html = '';
-        rankings.slice(0, 10).forEach((m, i) => {
+        rankings.forEach((m, i) => {
           const isPhx = m.brand.toLowerCase() === 'phoenix';
           const kpiClass = isPhx ? 'kpi accent' : 'kpi';
           const rank = i + 1;
           const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '·';
-          const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix #13→V2.3.1 目标 #6 (44.7→72 分 = 完成 5 SKU @ 25-40K)</small>' : '';
+          const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix ID #0 SKU = 蓝海真空待入场</small>' : '';
           html += `<div class="${kpiClass}">
             <div class="kpi-label">${rankEmoji} ${esc(m.brand)} (${m.score} 分)</div>
-            <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K) · ${m.in_stock_rate}% 有货</small>${tag}</div>
+            <div class="kpi-value">${m.sku_count} SKU · 均价 Rp ${(m.asp/1e6).toFixed(1)}M · 顶价 Rp ${(m.max_price/1e6).toFixed(1)}M<br><small>${m.high_tier_pct}% 高端 (≥15M IDR) · ${m.in_stock_rate}% 有货</small>${tag}</div>
           </div>`;
         });
         brandGrid.innerHTML = html;
       } else {
-        brandGrid.innerHTML = '<div class="kpi"><div class="kpi-label">⚠️ 暂无品牌数据</div><div class="kpi-value">brand_metrics.rankings 为空，请检查 latest.json</div></div>';
+        brandGrid.innerHTML = '<div class="kpi"><div class="kpi-label">⚠️ 暂无 ID 品牌数据</div><div class="kpi-value">实时从 price_pool 算, 但 ID 中高端无数据</div></div>';
       }
     } catch (e) {
       brandGrid.innerHTML = `<div class="kpi" style="color:#c8102e"><div class="kpi-label">⚠️ 渲染失败</div><div class="kpi-value">${e.message}<br>查看 console</div></div>`;
