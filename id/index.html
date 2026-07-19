@@ -272,7 +272,7 @@
     document.getElementById('v261-hybrid-7-15m').textContent = hybrid_7_15.length;
     // Header 上 id-pool-total
     const idTotalAll = idPool.length;
-    const el = document.querySelector('h2 .flag[style*="c8102e"] + ');
+    // V2.9.36: 删掉无效的 querySelector ('h2 .flag[style*="c8102e"] + ' 末尾 + 无 selector, 抛错)
     const h2 = document.querySelector('h2');
     const h2Span = h2 ? h2.querySelector('#id-pool-total') : null;
     if (h2Span) h2Span.textContent = idTotalAll;
