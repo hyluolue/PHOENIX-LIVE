@@ -276,7 +276,35 @@
     const h2 = document.querySelector('h2');
     const h2Span = h2 ? h2.querySelector('#id-pool-total') : null;
     if (h2Span) h2Span.textContent = idTotalAll;
-    const dm = data.dashboard_metrics || {};
+    // V2.9.36 (2026-07-19): dashboard_metrics V2.7.2 重构 -> 老字段 undefined. 从 price_pool 实时算 legacyDm
+    const bdPoolAll = (data.bd && data.bd.price_pool || []).filter(it => (it.price||0) > 0);
+    const idPoolAll = (data.id && data.id.price_pool || []).filter(it => (it.price||0) > 0);
+    function isGeneric(b) { if (!b) return true; return /^(sepeda|sepada|mtb|generic|bike|bicycle)$/i.test(b); }
+    function bandsOf(items, ranges) {
+      return ranges.map(([lo, hi]) => {
+        const inB = items.filter(it => it.price >= lo && it.price < hi);
+        const realBrands = inB.map(it => (it.brand || '').trim()).filter(b => !isGeneric(b));
+        return { count: inB.length, brands_count: new Set(realBrands.map(b => b.toLowerCase())).size, top_5_brands: [...new Set(realBrands)].slice(0, 5) };
+      });
+    }
+    const bdBandsR = bandsOf(bdPoolAll, [[0,10000],[10000,15000],[15000,25000],[25000,1e9]]);
+    const phxBd = bdPoolAll.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    const phxBdPrices = phxBd.map(it => it.price);
+    const phxMax = phxBdPrices.length ? Math.max(...phxBdPrices) : 0;
+    const phxMin = phxBdPrices.length ? Math.min(...phxBdPrices) : 0;
+    const nonPhx = bdPoolAll.filter(it => (it.brand || '').toLowerCase() !== 'phoenix');
+    const industryMax = nonPhx.length ? Math.max(...nonPhx.map(it => it.price)) : 0;
+    const industryMaxBrand = nonPhx.length ? ((nonPhx.find(it => it.price === industryMax) || {}).brand || '?') : '?';
+    const id715Items = idPoolAll.filter(it => it.price >= 7e6 && it.price < 15e6);
+    const gt25k = bdPoolAll.filter(it => it.price >= 25000);
+    const gt25kBrands = [...new Set(gt25k.map(it => (it.brand || '').trim()).filter(b => !isGeneric(b)))];
+    const legacyDm = {
+      totals: { phx_bd_mid_high: phxBd.length, phx_bd_min: phxMin, phx_bd_max: phxMax, phx_bd_asp: phxBdPrices.length ? Math.round(phxBdPrices.reduce((a,b)=>a+b,0)/phxBdPrices.length) : 0 },
+      phx_gap: { gt_25k_count: gt25k.length, gt_25k_brand_count: new Set(gt25k.map(it => it.brand).filter(b => !isGeneric(b))).size, gt_25k_brands: gt25kBrands, gt_15_25k_count: bdBandsR[2].count, gt_15_25k_phx_present: phxBd.some(it => it.price >= 15000 && it.price < 25000), industry_max_price: industryMax, industry_max_brand: industryMaxBrand, phx_max_price: phxMax, phx_vs_industry_ratio: phxMax && industryMax ? industryMax / phxMax : 1 },
+      bands: { bd_10_15k: bdBandsR[1], bd_15_25k: bdBandsR[2], bd_gt_25k: bdBandsR[3] },
+      id_7_15m: { count: id715Items.length, brands: [...new Set(id715Items.map(it => it.brand).filter(b => !isGeneric(b)))] }
+    };
+    const dm = (data.dashboard_metrics && data.dashboard_metrics.totals) ? data.dashboard_metrics : legacyDm;
     const totals = dm.totals || {};
     const phxGap = dm.phx_gap || {};
     const bands = dm.bands || {};

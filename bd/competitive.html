@@ -423,12 +423,16 @@
     const blue40Brands = brands.filter(b => (byBrand[b] || []).some(it => it.price >= 40000));
     document.getElementById('kpi-blueocean-detail').innerHTML = `${blue40.brands} 品牌 · 顶价 <b style="color:#2e7d32">${blue40Brands.length ? Math.max(...(byBrand[blue40Brands[0]] || []).map(it => it.price)) : 0} BDT</b><br>= <b style="color:#2e7d32">凤凰高端切入点</b>`;
 
-    // === KPI 4: Top 1 竞品 (排除 Phoenix, 按 SKU 倒序) ===
+    // === KPI 4: Top 1 竞品 (V2.9.36 用户 7/19: 默认 ROCKRIDER = 中国进口品牌 + 头部品牌) ===
+    // 用户观点: Phoenix 应该对标 ROCKRIDER (中国进口, 同源), 而不是 Veloce (本土品牌有本土优势)
+    // 如果 ROCKRIDER 不在数据中, fallback 到 SKU 倒序第一
     const sortedBrands = brands.filter(b => b !== 'Phoenix').map(b => ({ b, n: (byBrand[b] || []).length })).sort((a,b) => b.n - a.n);
-    const top1 = sortedBrands[0] || { b: '?', n: 0 };
+    const top1Candidate = byBrand['Rockrider'] ? { b: 'Rockrider', n: byBrand['Rockrider'].length } : (sortedBrands[0] || { b: '?', n: 0 });
+    const top1 = top1Candidate;
     const top1Max = (byBrand[top1.b] || []).reduce((max, it) => Math.max(max, it.price || 0), 0);
     document.getElementById('kpi-topcmp').textContent = top1.b;
-    document.getElementById('kpi-topcmp-detail').innerHTML = `${top1.n} SKU · 顶价 ${top1Max.toLocaleString()} BDT<br>= <b style="color:#e65100">Phoenix 最大对手</b>`;
+    const top1Label = top1.b === 'Rockrider' ? '<b style="color:#e65100">中国进口 + 头部品牌</b>' : '<b style="color:#e65100">Phoenix 最大对手</b>';
+    document.getElementById('kpi-topcmp-detail').innerHTML = `${top1.n} SKU · 顶价 ${top1Max.toLocaleString()} BDT<br>= ${top1Label}`;
 
     // === Phoenix 现状专卡 ===
     document.getElementById('phx-sku').textContent = phxItems.length + ' SKU';
@@ -451,20 +455,29 @@
     }
     document.getElementById('phx-verdict').innerHTML = verdict;
 
-    // === Top 5 竞品横条 ===
-    const top5 = sortedBrands.slice(0, 5);
+    // === Top 5 竞品横条 (V2.9.36: 优先 Rockrider 第一, 再 SKU 倒序填充) ===
+    const top5Order = [];
+    if (byBrand['Rockrider']) top5Order.push({ b: 'Rockrider', n: byBrand['Rockrider'].length });
+    for (const s of sortedBrands) {
+      if (top5Order.length >= 5) break;
+      if (s.b === 'Rockrider') continue;  // 已加
+      top5Order.push(s);
+    }
+    const top5 = top5Order;
     const maxN = top5.length ? top5[0].n : 1;
     const rivalColors = ['#1565c0', '#2e7d32', '#9c27b0', '#ff6f00', '#5d4037'];
     document.getElementById('rival-list').innerHTML = top5.map((r, i) => {
+      const isBenchmark = r.b === 'Rockrider';
       const widthPct = (r.n / maxN * 100).toFixed(0);
+      const label = isBenchmark ? r.b + ' ★' : r.b;
       return `<div class="rival-row">
-        <div class="name">${r.b}</div>
+        <div class="name" style="color:${isBenchmark ? '#c8102e' : '#0d47a1'}">${label}</div>
         <div class="bar-bg"><div class="bar" style="width:${widthPct}%;background:${rivalColors[i]}">${r.n} SKU</div></div>
         <div class="count">${r.n}</div>
       </div>`;
     }).join('');
 
-    // === 价位带竞争表 (Phoenix + Top 7 竞品) ===
+    // === 价位带竞争表 (Phoenix + Rockrider 优先 + 其他 Top) ===
     const tableBrands = ['Phoenix', ...top5.slice(0, 7).map(r => r.b)].filter(b => byBrand[b]);
     const bandRows = tableBrands.map(b => {
       const items = byBrand[b] || [];
