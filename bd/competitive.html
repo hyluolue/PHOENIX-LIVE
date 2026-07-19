@@ -402,14 +402,41 @@
     // 主价位带 (Phoenix 最多 SKU 的价位)
     const phxBands = PRICE_BANDS.map(b => ({ name: b.name, count: phxItems.filter(it => it.price >= b.lo && it.price < b.hi).length }));
     const phxTopBand = phxBands.sort((a,b) => b.count - a.count)[0];
-    // 排名
-    const rankings = (allData.brand_metrics && allData.brand_metrics.rankings) || [];
-    const phxIdx = rankings.findIndex(r => r.brand.toLowerCase() === 'phoenix');
+    // V2.9.42 排名: 实时从 price_pool 算 (跟 bd/index.html V2.9.41 + daily-report.html 统一)
+    // 之前用 brand_metrics 7/10 旧快照 (9 天前 1 SKU 6K 失真)
+    // 公式: SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10%
+    // BD 高端门槛 = 15K BDT, ASP 满分 30K, 顶价满分 50K
+    const adultItems = midHigh.filter(it => {
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      return !['kid','baby','child','folding','bmx','stunt','16"','20"','boys','girls'].some(kw => m.includes(kw));
+    });
+    const adultByBrand = {};
+    adultItems.forEach(it => { const k = brandKey(it.brand); (adultByBrand[k] = adultByBrand[k] || []).push(it); });
+    const brandMetrics = [];
+    for (const [b, items] of Object.entries(adultByBrand)) {
+      const ps = items.map(it => it.price || 0).filter(p => p > 0);
+      if (!ps.length) continue;
+      const sku_count = ps.length;
+      const asp = Math.round(ps.reduce((a, b) => a + b, 0) / sku_count);
+      const max_price = Math.max(...ps);
+      const high_tier_pct = Math.round(ps.filter(p => p >= 15000).length / sku_count * 100);
+      const in_stock = items.filter(it => it.in_stock).length;
+      const in_stock_rate = Math.round(in_stock / sku_count * 100);
+      const sku_score = Math.min(sku_count / 20, 1) * 100 * 0.20;
+      const asp_score = Math.min(asp / 30000, 1) * 100 * 0.30;
+      const high_score = high_tier_pct * 0.20;
+      const max_score = Math.min(max_price / 50000, 1) * 100 * 0.20;
+      const in_stock_score = in_stock_rate * 0.10;
+      const score = Math.round((sku_score + asp_score + high_score + max_score + in_stock_score) * 10) / 10;
+      brandMetrics.push({ brand: b, sku_count, asp, max_price, high_tier_pct, in_stock_rate, score });
+    }
+    brandMetrics.sort((a, b) => b.score - a.score);
+    const phxIdx = brandMetrics.findIndex(m => m.brand.toLowerCase() === 'phoenix');
     const phxRank = phxIdx >= 0 ? phxIdx + 1 : '?';
-    const phxScore = rankings[phxIdx] ? rankings[phxIdx].score : '?';
+    const phxScore = phxIdx >= 0 ? brandMetrics[phxIdx].score : '?';
 
     document.getElementById('kpi-phx-rank').textContent = '#' + phxRank;
-    document.getElementById('kpi-phx-detail').innerHTML = `${phxItems.length} SKU · 顶价 ${phxMax.toLocaleString()} BDT · 评分 ${phxScore} 分`;
+    document.getElementById('kpi-phx-detail').innerHTML = `${phxItems.length} SKU (${adultByBrand['Phoenix'] ? adultByBrand['Phoenix'].length : 0} 成人) · 顶价 ${phxMax.toLocaleString()} BDT · 评分 ${phxScore} 分`;
 
     // === KPI 2: 25-40K 红海 ===
     const red25 = bandDist.find(b => b.name === '25K-40K');

@@ -1160,11 +1160,18 @@ function renderMarketCapacity(elId, DATA, region) {
     || [...new Set(pool.map(p => (p.brand || '').trim()).filter(b => b && b.toLowerCase() !== 'generic'))].length;
   const totalSku = dmBD.total_sku || dmID.total_sku || pool.length;
 
-  // 实时计算 Phoenix 占比 (BD)
+  // V2.9.42 实时计算 Phoenix 占比 (BD) — 过滤童车，跟 bd/index.html V2.9.40 / bd/competitive.html V2.9.42 一致
+  // 之前用 phxItems 不过滤童车 → Phoenix 17 SKU 含 9 个童车 (Kid/Baby/16"/20"/Boys/Girls) = 均价 12,193 失真
+  // 现在用 phxAdult 过滤童车 → Phoenix 8 成人 SKU = 均价 13,737 (含 PHOENIX 26" 6K + Duster/Harod 13-18K)
+  const ADULT_KW = ['kid','baby','child','folding','bmx','stunt','16"','20"','boys','girls'];
   const phxItems = pool.filter(p => (p.brand || '').toLowerCase() === 'phoenix');
-  const phxSku = phxItems.length;
-  const phxAsp = phxItems.length ? Math.round(phxItems.reduce((s, p) => s + (p.price || 0), 0) / phxItems.length) : 0;
-  const phxMaxPrice = phxItems.length ? Math.max(...phxItems.map(p => p.price || 0)) : 0;
+  const phxAdult = phxItems.filter(p => {
+    const m = ((p.model || '') + ' ' + (p.brand || '')).toLowerCase();
+    return !ADULT_KW.some(kw => m.includes(kw));
+  });
+  const phxSku = phxAdult.length;  // V2.9.42: 只算成人 SKU (跟其他 Tab 一致)
+  const phxAsp = phxAdult.length ? Math.round(phxAdult.reduce((s, p) => s + (p.price || 0), 0) / phxAdult.length) : 0;
+  const phxMaxPrice = phxAdult.length ? Math.max(...phxAdult.map(p => p.price || 0)) : 0;
 
   // 实时计算 bands (BD 价位带)
   const bdBands = isBD ? {

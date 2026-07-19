@@ -388,27 +388,68 @@
     ].join('');
     setHTML('bd-strategy-list', strategyHtml);
 
-    // 品牌监控：走 brand_metrics.rankings 前 10（与 Tab #5 product-matrix 共享）
-    // V2.6.1 修复 (2026-07-10): 加 try/catch 兜底, 防止前面 throw 阻止到这里
+    // V2.9.42 品牌监控: 实时从 data.bd.price_pool 算 (跟 daily-report.html / bd/competitive.html 跨 Tab 统一)
+    // V2.9.41 之前用 data.brand_metrics.rankings 7/10 旧快照 (9 天前) -> Phoenix 1 SKU 6K 失真
+    // V2.9.42 bd/competitive.html + daily-report.html 同步改实时算, 3 Tab 数据交叉验证一致
+    // 公式: SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10%
+    // 验证: Phoenix 8 成人 SKU · ASP 13,738 · 顶价 18,000 · 评分 45.2 (排名 #17 / 27 真品牌)
     const brandGrid = document.getElementById('brand-monitor-grid');
     try {
-      const rankings = (data.brand_metrics && data.brand_metrics.rankings) || [];
+      // 复用 legacyDm 块的 bdPoolAll + isGeneric
+      const bdMetricsByBrand = {};
+      bdPoolAll.forEach(it => {
+        const b = (it.brand || '').trim();
+        if (!b || isGeneric(b)) return;
+        (bdMetricsByBrand[b] = bdMetricsByBrand[b] || []).push(it);
+      });
+      const bdMetrics = [];
+      for (const [brand, items] of Object.entries(bdMetricsByBrand)) {
+        const skus = items.map(it => it.price || 0).filter(p => p > 0);
+        if (!skus.length) continue;
+        const sku_count = skus.length;
+        const asp = Math.round(skus.reduce((a, b) => a + b, 0) / sku_count);
+        const max_price = Math.max(...skus);
+        // BD 高端门槛 = 15K BDT
+        const high_tier_count = skus.filter(p => p >= 15000).length;
+        const high_tier_pct = Math.round(high_tier_count / sku_count * 100);
+        const in_stock = items.filter(it => it.in_stock).length;
+        const in_stock_rate = Math.round(in_stock / sku_count * 100);
+        // 评分: SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10% (跟 strategy 6/7 节加权)
+        const sku_score = Math.min(sku_count / 20, 1) * 100 * 0.20;
+        const asp_score = Math.min(asp / 30000, 1) * 100 * 0.30;
+        const high_score = high_tier_pct * 0.20;
+        const max_score = Math.min(max_price / 50000, 1) * 100 * 0.20;
+        const in_stock_score = in_stock_rate * 0.10;
+        const score = Math.round((sku_score + asp_score + high_score + max_score + in_stock_score) * 10) / 10;
+        bdMetrics.push({ brand, sku_count, asp, max_price, high_tier_count, high_tier_pct, in_stock_rate, score });
+      }
+      bdMetrics.sort((a, b) => b.score - a.score);
+      const rankings = bdMetrics.slice(0, 10);
+      const phxAllIdx = bdMetrics.findIndex(m => m.brand.toLowerCase() === 'phoenix');
+      const phxAll = phxAllIdx >= 0 ? { ...bdMetrics[phxAllIdx], rank: phxAllIdx + 1 } : null;
       if (rankings.length > 0) {
         let html = '';
-        rankings.slice(0, 10).forEach((m, i) => {
+        rankings.forEach((m, i) => {
           const isPhx = m.brand.toLowerCase() === 'phoenix';
           const kpiClass = isPhx ? 'kpi accent' : 'kpi';
           const rank = i + 1;
           const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '·';
-          const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix #13→V2.3.1 目标 #6 (44.7→72 分 = 完成 5 SKU @ 25-40K)</small>' : '';
+          const tag = isPhx ? `<br><small style="color:#c8102e">★ Phoenix BD #${phxAll.rank} · V2.3.1 目标 #6 (推 5 SKU @ 25-40K 跳 18K → 25-40K 价位带)</small>` : '';
           html += `<div class="${kpiClass}">
             <div class="kpi-label">${rankEmoji} ${esc(m.brand)} (${m.score} 分)</div>
-            <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K) · ${m.in_stock_rate}% 有货</small>${tag}</div>
+            <div class="kpi-value">${m.sku_count} SKU · 均价 ${m.asp.toLocaleString()} · 顶价 ${m.max_price.toLocaleString()}<br><small>${m.high_tier_pct}% 高端 (≥15K BDT) · ${m.in_stock_rate}% 有货</small>${tag}</div>
           </div>`;
         });
+        // V2.9.42 Phoenix 不在 Top 10 时, 单独加一张 Phoenix 专卡 (跟 V2.9.33 竞品监控结构一致)
+        if (phxAll && phxAll.rank > 10) {
+          html += `<div class="kpi accent" style="grid-column: span 2; background: linear-gradient(135deg, rgba(200,16,46,.12), rgba(200,16,46,.04)); border-left: 4px solid #c8102e">
+            <div class="kpi-label">★ Phoenix BD (#${phxAll.rank} / ${bdMetrics.length} 真品牌, V2.9.42 跨 Tab 实时算)</div>
+            <div class="kpi-value">${phxAll.sku_count} 成人 SKU · 均价 ${phxAll.asp.toLocaleString()} · 顶价 ${phxAll.max_price.toLocaleString()} BDT · 评分 ${phxAll.score} 分<br><small style="color:#c8102e">${phxAll.high_tier_pct}% 高端 (≥15K) · ${phxAll.in_stock_rate}% 有货 · V2.3.1 目标 #6 (推 5 SKU @ 25-40K)</small></div>
+          </div>`;
+        }
         brandGrid.innerHTML = html;
       } else {
-        brandGrid.innerHTML = '<div class="kpi"><div class="kpi-label">⚠️ 暂无品牌数据</div><div class="kpi-value">brand_metrics.rankings 为空，请检查 latest.json</div></div>';
+        brandGrid.innerHTML = '<div class="kpi"><div class="kpi-label">⚠️ 暂无 BD 品牌数据</div><div class="kpi-value">实时从 price_pool 算, 但 BD 中高端无数据</div></div>';
       }
     } catch (e) {
       brandGrid.innerHTML = `<div class="kpi" style="color:#c8102e"><div class="kpi-label">⚠️ 渲染失败</div><div class="kpi-value">${e.message}<br>查看 console</div></div>`;
