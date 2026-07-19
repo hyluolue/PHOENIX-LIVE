@@ -368,9 +368,10 @@
         const sku_count = skus.length;
         const asp = Math.round(skus.reduce((a, b) => a + b, 0) / sku_count);
         const max_price = Math.max(...skus);
-        // V2.9.39 IDR 高级门槛 = 8M (更符合 ID 中端市场实际: POLYGON 顶价 6.5M / Element 26M / Twitter 17M)
-        // 之前 15M 过高 → POLYGON/Evergreen/United 等真实中高端品牌被判成 0% 高端 = 不准确
-        const high_tier_count = skus.filter(p => p >= 8e6).length;
+        // V2.9.39 IDR 高级门槛 = 5M (更符合 ID 真实中端市场: POLYGON 顶价 6.5M / Pacific 9.5M / United 9M)
+        // 之前 15M/8M 过高 → POLYGON/Evergreen/United 等真实中高端品牌被判成 0% 高端
+        // 注: POLYGON 在 ID 行业实际有 Strattos S/Xtrada 9 等 25M+ 旗舰, 但未在 Shopee/Tokopedia/serbasepeda 主流平台抓到 = 数据源限制
+        const high_tier_count = skus.filter(p => p >= 5e6).length;
         const high_tier_pct = Math.round(high_tier_count / sku_count * 100);
         const in_stock = items.filter(it => it.in_stock).length;
         const in_stock_rate = Math.round(in_stock / sku_count * 100);
@@ -398,7 +399,7 @@
           const tag = isPhx ? '<br><small style="color:#c8102e">★ Phoenix ID #0 SKU = 蓝海真空待入场</small>' : '';
           html += `<div class="${kpiClass}">
             <div class="kpi-label">${rankEmoji} ${esc(m.brand)} (${m.score} 分)</div>
-            <div class="kpi-value">${m.sku_count} SKU · 均价 Rp ${(m.asp/1e6).toFixed(1)}M · 顶价 Rp ${(m.max_price/1e6).toFixed(1)}M<br><small>${m.high_tier_pct}% 高端 (≥8M IDR) · ${m.in_stock_rate}% 有货</small>${tag}</div>
+            <div class="kpi-value">${m.sku_count} SKU · 均价 Rp ${(m.asp/1e6).toFixed(1)}M · 顶价 Rp ${(m.max_price/1e6).toFixed(1)}M<br><small>${m.high_tier_pct}% 高端 (≥5M IDR, 注: POLYGON 等品牌有 25M+ 旗舰未在主流平台抓到) · ${m.in_stock_rate}% 有货</small>${tag}</div>
           </div>`;
         });
         brandGrid.innerHTML = html;
