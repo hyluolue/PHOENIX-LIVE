@@ -327,7 +327,7 @@
     const phxBdPrices = phxBdLegacy.map(it => it.price);
     const phxMax = phxBdPrices.length ? Math.max(...phxBdPrices) : 0;
     const phxMin = phxBdPrices.length ? Math.min(...phxBdPrices) : 0;
-    const nonPhx = bdPoolAll.filter(it => (it.brand || '').toLowerCase() !== 'phoenix');
+    const nonPhx = bdPoolAll.filter(it => { const b = (it.brand || '').toLowerCase().trim(); return b && b !== 'phoenix' && !isGeneric(b); });
     const industryMax = nonPhx.length ? Math.max(...nonPhx.map(it => it.price)) : 0;
     const industryMaxBrand = nonPhx.length ? ((nonPhx.find(it => it.price === industryMax) || {}).brand || '?') : '?';
     const id715Items = idPoolAll.filter(it => it.price >= 7e6 && it.price < 15e6);
