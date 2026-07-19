@@ -395,9 +395,16 @@
     // 验证: Phoenix 8 成人 SKU · ASP 13,738 · 顶价 18,000 · 评分 45.2 (排名 #17 / 27 真品牌)
     const brandGrid = document.getElementById('brand-monitor-grid');
     try {
-      // 复用 legacyDm 块的 bdPoolAll + isGeneric
+      // V2.9.42 跟 bd/competitive.html + daily-report.html 统一: 过滤童车 (kid/baby/bm x/16"/20"/boys/girls)
+      // 之前不过滤童车 -> Phoenix 17 SKU 含 9 个童车 = 均价 11,617 失真
+      // 现在过滤童车 -> Phoenix 8 成人 SKU = 均价 13,738 跟其他 Tab 一致
+      const ADULT_KW = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', '16"', '20"', 'boys', 'girls'];
+      const bdAdult = bdPoolAll.filter(it => {
+        const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+        return !ADULT_KW.some(kw => m.includes(kw));
+      });
       const bdMetricsByBrand = {};
-      bdPoolAll.forEach(it => {
+      bdAdult.forEach(it => {
         const b = (it.brand || '').trim();
         if (!b || isGeneric(b)) return;
         (bdMetricsByBrand[b] = bdMetricsByBrand[b] || []).push(it);
