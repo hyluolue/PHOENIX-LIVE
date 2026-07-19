@@ -922,21 +922,22 @@ function renderBuckets(elId, prices, cur, regionName) {
 
   }
 
-  const html = buckets.map(b => {
+  // V2.9.34 (2026-07-19): 柱长改成 SKU 数 (更直观, 跟右边数字一致)
+  // 之前是 avg/maxP*100 (均价/顶价) - 跟 SKU 数没关系, 用户误解
+  const skuCounts = buckets.map(b => prices.filter(p => p.price >= b.lo && p.price < b.hi).length);
+  const maxSku = Math.max(...skuCounts, 1);
+
+  const html = buckets.map((b, i) => {
 
     const inB = prices.filter(p => p.price >= b.lo && p.price < b.hi);
 
     const brands = [...new Set(inB.map(p => p.brand))];
 
-    if (!inB.length) return `<div class="trend-row"><div class="label">${b.name}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
+    const n = inB.length;
 
-    const ps = inB.map(p => p.price);
+    if (!n) return `<div class="trend-row"><div class="label">${b.name}</div><div class="bar"></div><div class="count">0</div><div class="pct">-</div></div>`;
 
-    const avg = ps.reduce((a,b)=>a+b,0)/ps.length;
-
-    const maxP = Math.max(...ps);
-
-    const pct = (avg / maxP * 100).toFixed(0);
+    const pct = (n / maxSku * 100).toFixed(0);
 
     return `<div class="trend-row">
 
@@ -944,7 +945,7 @@ function renderBuckets(elId, prices, cur, regionName) {
 
       <div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div>
 
-      <div class="count">${inB.length} SKU</div>
+      <div class="count">${n} SKU</div>
 
       <div class="pct">${brands.length} 品牌</div>
 
