@@ -199,15 +199,15 @@
       <div class="kpi-grid">
         <div class="kpi gap">
           <div class="kpi-label">凤凰真实价位</div>
-          <div class="kpi-value">BDT 7,999 - 14,999<br><span style="font-size:10px;color:#cbd5e1;font-weight:400">14 SKU 全在中端以下</span></div>
+          <div class="kpi-value" id="phx-real-price">⏳ 加载中…</div>
         </div>
         <div class="kpi gap">
           <div class="kpi-label">中高端价位竞品</div>
-          <div class="kpi-value">Marine Gold 19,000<br>Veloce Raptor 15,999<br>Duranta Steel 15,465</div>
+          <div class="kpi-value" id="bd-midhigh-rivals">⏳ 加载中…</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">最大差异化机会</div>
-          <div class="kpi-value">Veloce / Core / Marine 均无 SGS 认证<br>→ 凤凰 SGS + 三标 = 唯一卖点</div>
+          <div class="kpi-value" id="bd-diff-opp">⏳ 加载中…</div>
         </div>
         <div class="kpi gap">
           <div class="kpi-label">价格锚点机会</div>
@@ -435,6 +435,64 @@
         bdAnchor.innerHTML = `${phxGap.industry_max_brand} <b>${phxGap.industry_max_price.toLocaleString()} BDT</b><br><small>Phoenix 顶价仅 ${phxMax.toLocaleString()} (差距 ${ratio.toFixed(1)}x)<br>= 价值锚点机会：<b>UCI/SGS 高端品牌空位</b></small>`;
       } else {
         bdAnchor.innerHTML = '<small>— 数据待补</small>';
+      }
+    }
+
+    // V2.9.40 实时算 3 个硬编码 KPI (凤凰真实价位 / 中高端价位竞品 / 最大差异化机会)
+    // 之前硬编码 'BDT 7,999 - 14,999' + '14 SKU' 是 7/10 老数据, 实际 Phoenix 8 SKU / 18K 顶价
+    const phxRealPriceEl = document.getElementById('phx-real-price');
+    if (phxRealPriceEl) {
+      // 真实 Phoenix 数据 (8 个成人 SKU, 过滤童车后)
+      const phxItems8 = bdPoolAll.filter(it => (it.brand || '').toLowerCase() === 'phoenix' && (it.price || 0) > 0);
+      const phxPrices8 = phxItems8.map(it => it.price).sort((a, b) => a - b);
+      const phxMin = phxPrices8[0] || 0;
+      const phxMax = phxPrices8[phxPrices8.length - 1] || 0;
+      const phxMed = phxPrices8.length ? phxPrices8[Math.floor(phxPrices8.length / 2)] : 0;
+      // 段位: <10K 入门 / 10-15K 中端 / 15-25K 中高端 / 25K+ 高端
+      const lt10 = phxItems8.filter(it => it.price < 10000).length;
+      const t10_15 = phxItems8.filter(it => it.price >= 10000 && it.price < 15000).length;
+      const t15_25 = phxItems8.filter(it => it.price >= 15000 && it.price < 25000).length;
+      const gt25 = phxItems8.filter(it => it.price >= 25000).length;
+      phxRealPriceEl.innerHTML = `<b style="font-size:18px">BDT ${phxMin.toLocaleString()} - ${phxMax.toLocaleString()}</b><br>` +
+        `<span style="font-size:10px;color:#cbd5e1;font-weight:400">${phxItems8.length} 成人 SKU · 中位 ${phxMed.toLocaleString()}<br>入门${lt10}/中端${t10_15}/中高端${t15_25}/高端${gt25}</span>`;
+    }
+    // 中高端价位竞品: 15-25K 价位段非 Phoenix 品牌, 按 SKU 数取 Top 3
+    const midhighRivalsEl = document.getElementById('bd-midhigh-rivals');
+    if (midhighRivalsEl) {
+      const midhigh15_25 = bdPoolAll.filter(it => {
+        const b = (it.brand || '').toLowerCase();
+        return b !== 'phoenix' && !isGeneric(b) && it.price >= 15000 && it.price < 25000;
+      });
+      // 聚合 by brand, 找 top 3 (按 SKU 数 + 均价)
+      const byBrandMid = {};
+      midhigh15_25.forEach(it => {
+        const k = it.brand;
+        if (!byBrandMid[k]) byBrandMid[k] = { items: [], avg: 0 };
+        byBrandMid[k].items.push(it);
+      });
+      Object.values(byBrandMid).forEach(v => {
+        v.avg = Math.round(v.items.reduce((s, it) => s + it.price, 0) / v.items.length);
+      });
+      const sorted = Object.entries(byBrandMid).sort((a, b) => b[1].items.length - a[1].items.length).slice(0, 3);
+      const rivalHtml = sorted.map(([b, v]) => `${b} ${v.avg.toLocaleString()}`).join('<br>');
+      midhighRivalsEl.innerHTML = sorted.length > 0 ?
+        (rivalHtml + `<br><span style="font-size:10px;color:#cbd5e1;font-weight:400">15-25K 价位段 Top 3 (共 ${midhigh15_25.length} SKU / ${Object.keys(byBrandMid).length} 品牌)</span>`) :
+        '<small>— 数据待补</small>';
+    }
+    // 最大差异化机会: 25-40K 红海价位 vs Phoenix 现状
+    const diffOppEl = document.getElementById('bd-diff-opp');
+    if (diffOppEl) {
+      const red25_40 = bdPoolAll.filter(it => {
+        const b = (it.brand || '').toLowerCase();
+        return b !== 'phoenix' && !isGeneric(b) && it.price >= 25000 && it.price < 40000;
+      });
+      const redBrands = [...new Set(red25_40.map(it => it.brand))].sort();
+      const phx25_40 = bdPoolAll.filter(it => (it.brand || '').toLowerCase() === 'phoenix' && it.price >= 25000 && it.price < 40000);
+      if (redBrands.length > 0) {
+        diffOppEl.innerHTML = `<b>${redBrands.slice(0,3).join(' / ')}</b> ${red25_40.length} SKU 价位 25-40K 红海<br>` +
+          `<span style="font-size:10px;color:#cbd5e1;font-weight:400">Phoenix 现 ${phx25_40.length} SKU (差距 ${red25_40.length - phx25_40.length} SKU)<br>= 推 1-2 款 SGS + UCI 认证 SKUW 跳出价格战</span>`;
+      } else {
+        diffOppEl.innerHTML = '<small>— 25-40K 数据待补</small>';
       }
     }
 
