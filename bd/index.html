@@ -132,7 +132,7 @@
         </div>
         <div class="kpi dynamic">
           <div class="kpi-label">🎯 BD 价段空白</div>
-          <div class="kpi-value"><span id="bd-gap-1">—</span> 中高端 15K-25K · <span id="bd-gap-2">—</span> 高端 25K+<br><small>BD Phoenix 全部 &lt; 15K · 中高端真空</small></div>
+          <div class="kpi-value"><span id="bd-gap-1">—</span> 中高端 15K-25K · <span id="bd-gap-2">—</span> 高端 25K+<br><small>BD Phoenix 3 SKU 15-18K + 0 SKU 25K+ = 25K+ 真空</small></div>
         </div>
         <div class="kpi accent">
           <div class="kpi-label">🏪 本土独立站</div>
@@ -303,12 +303,20 @@
     document.getElementById('bd-count').textContent = bdAll.length;
     document.getElementById('bd-priced').textContent = bdPriced.length;
     document.getElementById('bd-brands').textContent = bdBrands.size;
-    const phxBd = bdPriced.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    // V2.9.42 顶部 KPI 跟其他 Tab 统一: 过滤童车 (kid/baby/child/folding/bmx/stunt/16"/20"/boys/girls)
+    // 之前 17 SKU 含 9 个童车 -> 失真; 现在 8 成人 SKU 跟 V2.9.40 凤凰真实价位 + V2.9.42 专卡一致
+    const ADULT_KW_TOP = ['kid', 'baby', 'child', 'folding', 'bmx', 'stunt', '16"', '20"', 'boys', 'girls'];
+    const phxBdAll = bdPriced.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+    const phxBd = phxBdAll.filter(it => {
+      const m = ((it.model || '') + ' ' + (it.brand || '')).toLowerCase();
+      return !ADULT_KW_TOP.some(kw => m.includes(kw));
+    });
     if (phxBd.length > 0) {
       const phxPrices = phxBd.map(it => it.price);
       document.getElementById('bd-phx-count').textContent = phxBd.length;
       document.getElementById('bd-phx-range').textContent = Math.min(...phxPrices).toLocaleString() + ' - ' + Math.max(...phxPrices).toLocaleString();
-      document.getElementById('bd-phx-detail').textContent = 'Donald 12,300 / Miracle 13,000 / Donald v2 13,500 / Tornado 13,700';
+      // V2.9.42 改 4 个真实 SKU (按价位升序): miracle/Donald/Tornado/Duster-A (Harod01 顶价 18K / Duster-C 17K)
+      document.getElementById('bd-phx-detail').textContent = '8 成人 SKU: miracle 13,000 / Donald 13-13,500 / Tornado 13,700 / Duster 15,700 / Duster-C 17,000 / Harod01 18,000';
     }
 
     // V2.9.36 (2026-07-19): dashboard_metrics V2.7.2 重构后, 老字段 (totals/bands/phx_gap/id_7_15m) 全部 undefined 引起 .join() 抛错 -> render() 中断. 解决: 从 price_pool 实时算
