@@ -382,7 +382,7 @@
     const isDegraded = dq === 'red' || dq === 'yellow';
     const strategyHtml = [
       // 25-40K 红海（避开）— 动态从 dashboard_metrics 读
-      `<li><b style="color:#c8102e">🚫 25-40K 红海（避开）：</b>${phxGap.gt_25k_count} SKU ${phxGap.gt_25k_brand_count} 品牌（${(phxGap.gt_25k_brands || []).join('/')}）${isDegraded ? '<span style="color:#c8102e;font-weight:700"> ⚠️ 数据可能残缺，详见顶部信号灯</span>' : ' = Phoenix 进去就是价格战'}</li>`,
+      `<li><b style="color:#c8102e">⚔️ 25-40K 同价位血战（V2.9.48 直面 Rockrider 不避战）：</b>${phxGap.gt_25k_count} SKU ${phxGap.gt_25k_brand_count} 品牌（${(phxGap.gt_25k_brands || []).join('/')}）${isDegraded ? '<span style="color:#c8102e;font-weight:700"> ⚠️ 数据可能残缺，详见顶部信号灯</span>' : ' = Phoenix 进去就是价格战'}</li>`,
       // 40-60K 真空（V2.1 切入）— 动态从 dashboard_metrics 读（=25K+ 与 30K+ 之差）
       `<li><b style="color:#2e7d32">💎 40-60K 真空（V2.1 切入）：</b>${(bands.bd_gt_25k ? bands.bd_gt_25k.count : 0)} SKU · ${(bands.bd_gt_25k ? bands.bd_gt_25k.brands_count : 0)} 品牌（${(bands.bd_gt_25k ? bands.bd_gt_25k.top_5_brands.slice(0, 4).join('/') : '')}）${isDegraded ? '<span style="color:#c8102e"> ⚠️ 数据残缺</span>' : ' = Phoenix UCI 公路车 = 避开竞争 + 抢占蓝海'}</li>`,
       // 65K+ 顶价 — 动态从 dashboard_metrics 读（industry_max_price 字段）
@@ -400,7 +400,7 @@
     // V2.9.41 之前用 data.brand_metrics.rankings 7/10 旧快照 (9 天前) -> Phoenix 1 SKU 6K 失真
     // V2.9.42 bd/competitive.html + daily-report.html 同步改实时算, 3 Tab 数据交叉验证一致
     // 公式: SKU 20% + ASP 30% + 高端占比 20% + 顶价 20% + 有货率 10%
-    // 验证: Phoenix 8 成人 SKU · ASP 13,738 · 顶价 18,000 · 评分 45.2 (排名 #17 / 27 真品牌)
+    // 验证: Phoenix 8 成人 SKU · ASP 13,738 · 顶价 18,000 · 评分 45.2 (排名 #13 / 16 真品牌 (V2.9.52 排除 11 个 1 SKU 白牌))
     const brandGrid = document.getElementById('brand-monitor-grid');
     try {
       // V2.9.42 跟 bd/competitive.html + daily-report.html 统一: 过滤童车 (kid/baby/bm x/16"/20"/boys/girls)
@@ -421,6 +421,8 @@
       for (const [brand, items] of Object.entries(bdMetricsByBrand)) {
         const skus = items.map(it => it.price || 0).filter(p => p > 0);
         if (!skus.length) continue;
+        // V2.9.52 1 SKU 品牌过滤 (用户: 1 SKU = 白牌, 2 SKU 勉强接受 = 真品牌最小 2 SKU)
+        if (skus.length < 2) continue;
         const sku_count = skus.length;
         const asp = Math.round(skus.reduce((a, b) => a + b, 0) / sku_count);
         const max_price = Math.max(...skus);
