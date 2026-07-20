@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-20T10:04:17+08:00",
+  "generated_at": "2026-07-20T13:31:18+08:00",
   "fetch_status": {
     "daraz_bd": "warn (BD 190 kept, baseline protected, threshold 133)",
     "shopee_id": "ok (baseline 141 kept)",
@@ -5993,9 +5993,9 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-20T10:04:17+08:00",
+  "gen_at": "2026-07-20T13:31:18+08:00",
   "brand_metrics": {
-    "computed_at": "2026-07-20T08:40:22+08:00",
+    "computed_at": "2026-07-20T13:31:18+08:00",
     "method": "V2.9.47 (跟 V2.9.42 前端 5 Tab 跨 Tab 统一): score = (min(sku/20,1)*100*0.20) + (min(asp/30K,1)*100*0.30) + (high_tier_pct*100*0.20) + (min(max/50K,1)*100*0.20) + (in_stock_rate*100*0.10)",
     "excluded_keywords": [
       "kid",
@@ -6062,7 +6062,7 @@
       "hybrid"
     ],
     "price_range": "不限价（含 30K+ 高端 = Rockrider 65K / Magpy 38K / Ceres 37K 真实顶价 = 评分用）",
-    "total_brands": 27,
+    "total_brands": 16,
     "rankings": [
       {
         "brand": "Rockrider",
@@ -6140,36 +6140,6 @@
         "score": 76.8
       },
       {
-        "brand": "Kiesel",
-        "sku_count": 1,
-        "asp": 27000,
-        "max_price": 27000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 27.0,
-        "high_score": 20.0,
-        "max_score": 10.8,
-        "in_stock_score": 10.0,
-        "score": 68.8
-      },
-      {
-        "brand": "Mustang",
-        "sku_count": 1,
-        "asp": 24000,
-        "max_price": 24000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 24.0,
-        "high_score": 20.0,
-        "max_score": 9.6,
-        "in_stock_score": 10.0,
-        "score": 64.6
-      },
-      {
         "brand": "Marine",
         "sku_count": 14,
         "asp": 18201,
@@ -6185,21 +6155,6 @@
         "score": 64.5
       },
       {
-        "brand": "Mezarott",
-        "sku_count": 1,
-        "asp": 22000,
-        "max_price": 22000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 22.0,
-        "high_score": 20.0,
-        "max_score": 8.8,
-        "in_stock_score": 10.0,
-        "score": 61.8
-      },
-      {
         "brand": "Falcon",
         "sku_count": 2,
         "asp": 20500,
@@ -6213,21 +6168,6 @@
         "max_score": 8.4,
         "in_stock_score": 10.0,
         "score": 60.9
-      },
-      {
-        "brand": "Forever",
-        "sku_count": 1,
-        "asp": 20000,
-        "max_price": 20000,
-        "high_tier_count": 1,
-        "high_tier_pct": 100,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 20.0,
-        "high_score": 20.0,
-        "max_score": 8.0,
-        "in_stock_score": 10.0,
-        "score": 59.0
       },
       {
         "brand": "Uplayed",
@@ -6350,66 +6290,6 @@
         "score": 38.5
       },
       {
-        "brand": "Adder",
-        "sku_count": 1,
-        "asp": 14500,
-        "max_price": 14500,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 14.5,
-        "high_score": 0.0,
-        "max_score": 5.8,
-        "in_stock_score": 10.0,
-        "score": 31.3
-      },
-      {
-        "brand": "Pollux",
-        "sku_count": 1,
-        "asp": 14500,
-        "max_price": 14500,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 14.5,
-        "high_score": 0.0,
-        "max_score": 5.8,
-        "in_stock_score": 10.0,
-        "score": 31.3
-      },
-      {
-        "brand": "Duronto",
-        "sku_count": 1,
-        "asp": 14000,
-        "max_price": 14000,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 14.0,
-        "high_score": 0.0,
-        "max_score": 5.6,
-        "in_stock_score": 10.0,
-        "score": 30.6
-      },
-      {
-        "brand": "Python",
-        "sku_count": 1,
-        "asp": 13500,
-        "max_price": 13500,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 13.5,
-        "high_score": 0.0,
-        "max_score": 5.4,
-        "in_stock_score": 10.0,
-        "score": 29.9
-      },
-      {
         "brand": "Duranta",
         "sku_count": 9,
         "asp": 10016,
@@ -6423,51 +6303,6 @@
         "max_score": 6.2,
         "in_stock_score": 1.1,
         "score": 28.5
-      },
-      {
-        "brand": "Uctocifu",
-        "sku_count": 1,
-        "asp": 12000,
-        "max_price": 12000,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 12.0,
-        "high_score": 0.0,
-        "max_score": 4.8,
-        "in_stock_score": 10.0,
-        "score": 27.8
-      },
-      {
-        "brand": "Polloux",
-        "sku_count": 1,
-        "asp": 9800,
-        "max_price": 9800,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 100,
-        "sku_score": 1.0,
-        "asp_score": 9.8,
-        "high_score": 0.0,
-        "max_score": 3.9,
-        "in_stock_score": 10.0,
-        "score": 24.7
-      },
-      {
-        "brand": "Pacific",
-        "sku_count": 1,
-        "asp": 1209,
-        "max_price": 1209,
-        "high_tier_count": 0,
-        "high_tier_pct": 0,
-        "in_stock_rate": 0,
-        "sku_score": 1.0,
-        "asp_score": 1.2,
-        "high_score": 0.0,
-        "max_score": 0.5,
-        "in_stock_score": 0.0,
-        "score": 2.7
       }
     ]
   },
