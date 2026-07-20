@@ -416,6 +416,8 @@
     for (const [b, items] of Object.entries(adultByBrand)) {
       const ps = items.map(it => it.price || 0).filter(p => p > 0);
       if (!ps.length) continue;
+      // V2.9.52 1 SKU 品牌过滤 (用户: 1 SKU = 白牌, 2 SKU 勉强接受)
+      if (ps.length < 2) continue;
       const sku_count = ps.length;
       const asp = Math.round(ps.reduce((a, b) => a + b, 0) / sku_count);
       const max_price = Math.max(...ps);
