@@ -82,7 +82,7 @@ h1{font-size:22px;font-weight:800}
 
 
 
-.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 20px}
+.card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:18px 20px}
 
 .card h2{font-size:16px;font-weight:700;color:#c8102e;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 
@@ -96,7 +96,7 @@ h1{font-size:22px;font-weight:800}
 
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
 
-.kpi{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;text-align:center}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:12px 14px;text-align:center}
 
 .kpi .label{font-size:10px;color:#cbd5e1;text-transform:uppercase;letter-spacing:.05em}
 
@@ -1035,7 +1035,7 @@ function renderOpportunities(bd, id, reviews, social) {
 
       }).join('；');
 
-      html.push(`<div class="opp" style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 BD 蓝海价位：</strong>${boHtml} = <b>凤凰可抢占 = 价值锚点 + 迈巴赫式品牌叙事</b></div>`);
+      html.push(`<div class="opp" style="background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 BD 蓝海价位：</strong>${boHtml} = <b>凤凰可抢占 = 价值锚点 + 迈巴赫式品牌叙事</b></div>`);
 
     }
 
@@ -1105,7 +1105,7 @@ function renderOpportunities(bd, id, reviews, social) {
     if (id15MPlus.length > 0 && id15MPlus.length < densestID[1] / 4) {
       const id15Brands = [...new Set(id15MPlus.map(p => p.brand))];
       const id15MaxP = Math.max(...id15MPlus.map(p => p.price || 0));
-      html.push(`<div class="opp" style="background:rgba(46,125,50,.1);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 ID 蓝海价位：</strong>15M+ 有 ${id15MPlus.length} SKU · ${id15Brands.length} 品牌 · 顶价 ${id15MaxP.toLocaleString()} IDR = <b>FNIX 18M IDR 主战场</b></div>`);
+      html.push(`<div class="opp" style="background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 ID 蓝海价位：</strong>15M+ 有 ${id15MPlus.length} SKU · ${id15Brands.length} 品牌 · 顶价 ${id15MaxP.toLocaleString()} IDR = <b>FNIX 18M IDR 主战场</b></div>`);
     }
     // ID 缺品牌
     const idKnownBrands = ['Trek', 'Giant', 'Polygon', 'Pacific', 'United', 'Element', 'Polygon'];
@@ -1276,7 +1276,7 @@ function renderMarketCapacity(elId, DATA, region) {
     const phxV25 = bdBands.bd_15_25k ? bdBands.bd_15_25k.count : 0;
     const gt25 = bdBands.bd_gt_25k ? bdBands.bd_gt_25k.count : 0;
     const ratio = totalSkuDisplay > 0 ? (phxV25 / totalSkuDisplay * 100).toFixed(0) : 0;
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#1b5e20">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(94,234,212,.12);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
       <b>💎 BD 市场容量关键洞察:</b><br>
       · 15-25K 中高端 ${phxV25} SKU (占总数 ${ratio}%) = 红海集中<br>
       · 25K+ 高端 ${gt25} SKU = <b>真蓝海</b> (行业顶价 ${phxGap.industry_max_price.toLocaleString()} BDT / ${phxGap.industry_max_brand})<br>
@@ -1286,12 +1286,12 @@ function renderMarketCapacity(elId, DATA, region) {
     const idId25mPlus = pool.filter(x => x.price >= 25e6).length;
     const id7to15 = idInfo.count;
     const id7to15Brands = (idInfo.brands || []).join(' / ') || '本土品牌';
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(46,125,50,.08);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#1b5e20">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(94,234,212,.12);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
       <b>💎 ID 市场容量关键洞察 (V2.6.1 真实数据):</b><br>
       · <b>${totalSkuDisplay} SKU / ${realBrandsDisplay} 真品牌</b> (Shopee + Tokopedia + roadbike + gravel + hybrid 合并)<br>
       · <b>7-15M 中端 ${id7to15} SKU / ${id7to15Brands}</b> = <b style="color:#2e7d32">V2.6.1 公路+平把+砾石三蓝海切入点 (Phoenix 12-15M 主推)</b><br>
-      · 25M+ 高端 <b>${idId25mPlus} SKU</b> = <b style="color:#c8102e">V2.6.1 客户判断 = MTB/折叠/童车 4% 毛利红海 = 永不参与</b> (即使真空也不进)<br>
-      · 客户双重身份防火墙: Pacific (客户自有) + Phoenix + FNIX (SNI) 永不直接同品
+      · 25M+ 高端 <b>${idId25mPlus} SKU</b> = <b style="color:#c8102e">V2.6.1 凤凰战略取舍 = MTB/折叠/童车/健身 = 凤凰非优势领域 + 行业垄断 = 当前不参与</b> (即使真空也不进)<br>
+      · Pacific (客户自有品牌) 价位错位提醒: Pacific 5.1-9.5M 低端 = 凤凰双品牌都避开 (避免客户内部矛盾)
     </div>`;
   }
 
