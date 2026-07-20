@@ -54,7 +54,7 @@ h1{font-size:22px;font-weight:800}
 
 .pill.partial{background:rgba(245,158,11,.2);color:#fcd34d}
 
-.pill.info{background:rgba(94,234,212,.2);color:#5eead4}
+.pill.info{background:rgba(220,252,231,.95);color:#5eead4}
 
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px}
 
@@ -132,7 +132,7 @@ h1{font-size:22px;font-weight:800}
 
 .trend-row .label{width:100px;color:#cbd5e1}
 
-.trend-row .bar{flex:1;height:20px;background:rgba(94,234,212,.1);border-radius:4px;position:relative;overflow:hidden}
+.trend-row .bar{flex:1;height:20px;background:rgba(220,252,231,.95);border-radius:4px;position:relative;overflow:hidden}
 
 .trend-row .bar-fill{height:100%;background:linear-gradient(90deg,#5eead4,#0d9488);transition:width .5s}
 
@@ -168,7 +168,7 @@ h1{font-size:22px;font-weight:800}
 
 /* Opportunity */
 
-.opp{padding:10px 12px;background:rgba(94,234,212,.05);border-left:3px solid #5eead4;border-radius:6px;margin-bottom:8px;font-size:12px}
+.opp{padding:10px 12px;background:rgba(220,252,231,.95);border-left:3px solid #5eead4;border-radius:6px;margin-bottom:8px;font-size:12px}
 
 .opp.warn{border-left-color:#fcd34d;background:rgba(245,158,11,.05)}
 
@@ -1276,7 +1276,7 @@ function renderMarketCapacity(elId, DATA, region) {
     const phxV25 = bdBands.bd_15_25k ? bdBands.bd_15_25k.count : 0;
     const gt25 = bdBands.bd_gt_25k ? bdBands.bd_gt_25k.count : 0;
     const ratio = totalSkuDisplay > 0 ? (phxV25 / totalSkuDisplay * 100).toFixed(0) : 0;
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(94,234,212,.12);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
       <b>💎 BD 市场容量关键洞察:</b><br>
       · 15-25K 中高端 ${phxV25} SKU (占总数 ${ratio}%) = 红海集中<br>
       · 25K+ 高端 ${gt25} SKU = <b>真蓝海</b> (行业顶价 ${phxGap.industry_max_price.toLocaleString()} BDT / ${phxGap.industry_max_brand})<br>
@@ -1286,7 +1286,7 @@ function renderMarketCapacity(elId, DATA, region) {
     const idId25mPlus = pool.filter(x => x.price >= 25e6).length;
     const id7to15 = idInfo.count;
     const id7to15Brands = (idInfo.brands || []).join(' / ') || '本土品牌';
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(94,234,212,.12);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
       <b>💎 ID 市场容量关键洞察 (V2.6.1 真实数据):</b><br>
       · <b>${totalSkuDisplay} SKU / ${realBrandsDisplay} 真品牌</b> (Shopee + Tokopedia + roadbike + gravel + hybrid 合并)<br>
       · <b>7-15M 中端 ${id7to15} SKU / ${id7to15Brands}</b> = <b style="color:#2e7d32">V2.6.1 公路+平把+砾石三蓝海切入点 (Phoenix 12-15M 主推)</b><br>
