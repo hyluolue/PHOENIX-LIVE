@@ -102,12 +102,15 @@ def compute(latest_path: str | Path) -> dict:
             brands[b]['oos'] += 1
 
     # 计算指标 (V2.9.47 跟前端 V2.9.42 公式一致)
+    # V2.9.52 1 SKU 品牌过滤: 用户 7/20 拍板 (1 SKU = 白牌, 2 SKU 勉强接受 = 真品牌最小 2 SKU)
     metrics = []
     for b, dd in brands.items():
         skus = dd['skus']
         sku_count = len(skus)
         if sku_count == 0:
             continue
+        if sku_count < 2:
+            continue  # V2.9.52 1 SKU = 白牌, 不算真品牌
         asp = sum(skus) / sku_count
         max_price = max(skus)
         high_tier_count = sum(1 for p in skus if p >= 15000)
