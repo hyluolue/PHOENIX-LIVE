@@ -227,7 +227,7 @@
           <div class="metric" id="a1-metric">—</div>
         </div>
         <div class="action-card">
-          <div class="step">STEP 2 · 避开红海</div>
+          <div class="step">STEP 2 · 直面红海</div>
           <h3 id="a2-title">加载中...</h3>
           <div class="why" id="a2-why">—</div>
           <div class="metric" id="a2-metric">—</div>
@@ -540,11 +540,11 @@
       document.getElementById('a1-metric').innerHTML = '现均价 <b>' + phxAvg.toLocaleString() + ' BDT</b> → 目标 <b>20,000+ BDT</b> = 客单价 +60%';
     }
 
-    // 行动 2: 避开红海 (Top 1 竞品主导价位)
+    // 行动 2: 直面红海 (V2.9.48 战略：BD = 第一，直面 Rockrider 竞争)
     const top1TopBand = PRICE_BANDS.map(b => ({ name: b.name, n: (byBrand[top1.b] || []).filter(it => it.price >= b.lo && it.price < b.hi).length })).sort((a,b) => b.n - a.n)[0];
-    document.getElementById('a2-title').innerHTML = '🚫 避开 ' + top1.b + ' 统治价位';
-    document.getElementById('a2-why').textContent = top1.b + ' 在 ' + top1TopBand.name + ' 有 ' + top1TopBand.n + ' SKU = 统治 = Phoenix 进入必败';
-    document.getElementById('a2-metric').innerHTML = '<b>' + top1.b + '</b> 主价位 <b>' + top1TopBand.name + '</b> · 顶价 <b>' + top1Max.toLocaleString() + ' BDT</b> = 蓝海 = 反向定位';
+    document.getElementById('a2-title').innerHTML = '⚔️ 直面 ' + top1.b + ' 同价位血战';
+    document.getElementById('a2-why').textContent = top1.b + ' 在 ' + top1TopBand.name + ' 有 ' + top1TopBand.n + ' SKU = 统治 = Phoenix 直面同价位血战 (V2.9.48 战略：不避战) + 夜间安全产品功能差异化';
+    document.getElementById('a2-metric').innerHTML = '<b>' + top1.b + '</b> 主价位 <b>' + top1TopBand.name + '</b> · 顶价 <b>' + top1Max.toLocaleString() + ' BDT</b> = 血战目标 = 客单价 +60% + 品牌 #1 锁定';
 
     // 行动 3: 渠道/品类 (基于品类空缺)
     const catCount = { road: 0, hybrid: 0, gravel: 0, mtb: 0 };
