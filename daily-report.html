@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="zh-CN">
 
@@ -168,13 +168,13 @@ h1{font-size:22px;font-weight:800}
 
 /* Opportunity */
 
-.opp{padding:10px 12px;background:rgba(220,252,231,.95);border-left:3px solid #5eead4;border-radius:6px;margin-bottom:8px;font-size:12px}
+.opp{padding:10px 12px;background:rgba(6,78,59,.95);border-left:3px solid #34d399;border-radius:6px;margin-bottom:8px;font-size:12px}
 
-.opp.warn{border-left-color:#fcd34d;background:rgba(254,243,199,.95)}
+.opp.warn{border-left-color:#fcd34d;background:rgba(120,53,15,.95)}
 
-.opp strong{color:#0d3a1f;font-weight:700}
+.opp strong{color:#6ee7b7;font-weight:700}
 
-.opp.warn strong{color:#92400e;font-weight:700}
+.opp.warn strong{color:#fcd34d;font-weight:700}
 
 
 
@@ -1035,7 +1035,7 @@ function renderOpportunities(bd, id, reviews, social) {
 
       }).join('；');
 
-      html.push(`<div class="opp" style="background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 BD 蓝海价位：</strong>${boHtml} = <b>凤凰可抢占 = 价值锚点 + 迈巴赫式品牌叙事</b></div>`);
+      html.push(`<div class="opp" style="background:rgba(6,78,59,.95);border-left:3px solid #34d399;color:#a7f3d0"><strong>💎 BD 蓝海价位：</strong>${boHtml} = <b>凤凰可抢占 = 价值锚点 + 迈巴赫式品牌叙事</b></div>`);
 
     }
 
@@ -1105,7 +1105,7 @@ function renderOpportunities(bd, id, reviews, social) {
     if (id15MPlus.length > 0 && id15MPlus.length < densestID[1] / 4) {
       const id15Brands = [...new Set(id15MPlus.map(p => p.brand))];
       const id15MaxP = Math.max(...id15MPlus.map(p => p.price || 0));
-      html.push(`<div class="opp" style="background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;color:#1b5e20"><strong>💎 ID 蓝海价位：</strong>15M+ 有 ${id15MPlus.length} SKU · ${id15Brands.length} 品牌 · 顶价 ${id15MaxP.toLocaleString()} IDR = <b>FNIX 18M IDR 主战场</b></div>`);
+      html.push(`<div class="opp" style="background:rgba(6,78,59,.95);border-left:3px solid #34d399;color:#a7f3d0"><strong>💎 ID 蓝海价位：</strong>15M+ 有 ${id15MPlus.length} SKU · ${id15Brands.length} 品牌 · 顶价 ${id15MaxP.toLocaleString()} IDR = <b>FNIX 18M IDR 主战场</b></div>`);
     }
     // ID 缺品牌
     const idKnownBrands = ['Trek', 'Giant', 'Polygon', 'Pacific', 'United', 'Element', 'Polygon'];
@@ -1276,7 +1276,7 @@ function renderMarketCapacity(elId, DATA, region) {
     const phxV25 = bdBands.bd_15_25k ? bdBands.bd_15_25k.count : 0;
     const gt25 = bdBands.bd_gt_25k ? bdBands.bd_gt_25k.count : 0;
     const ratio = totalSkuDisplay > 0 ? (phxV25 / totalSkuDisplay * 100).toFixed(0) : 0;
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(8,47,73,.95);border-left:3px solid #5eead4;font-size:11px;line-height:1.6;color:#bae6fd">
       <b>💎 BD 市场容量关键洞察:</b><br>
       · 15-25K 中高端 ${phxV25} SKU (占总数 ${ratio}%) = 红海集中<br>
       · 25K+ 高端 ${gt25} SKU = <b>真蓝海</b> (行业顶价 ${phxGap.industry_max_price.toLocaleString()} BDT / ${phxGap.industry_max_brand})<br>
@@ -1286,7 +1286,7 @@ function renderMarketCapacity(elId, DATA, region) {
     const idId25mPlus = pool.filter(x => x.price >= 25e6).length;
     const id7to15 = idInfo.count;
     const id7to15Brands = (idInfo.brands || []).join(' / ') || '本土品牌';
-    insight = `<div style="margin-top:10px;padding:10px;background:rgba(220,252,231,.95);border-left:3px solid #2e7d32;font-size:11px;line-height:1.6;color:#0d3a1f">
+    insight = `<div style="margin-top:10px;padding:10px;background:rgba(8,47,73,.95);border-left:3px solid #5eead4;font-size:11px;line-height:1.6;color:#bae6fd">
       <b>💎 ID 市场容量关键洞察 (V2.6.1 真实数据):</b><br>
       · <b>${totalSkuDisplay} SKU / ${realBrandsDisplay} 真品牌</b> (Shopee + Tokopedia + roadbike + gravel + hybrid 合并)<br>
       · <b>7-15M 中端 ${id7to15} SKU / ${id7to15Brands}</b> = <b style="color:#2e7d32">V2.6.1 公路+平把+砾石三蓝海切入点 (Phoenix 12-15M 主推)</b><br>
