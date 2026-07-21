@@ -358,22 +358,7 @@ function renderRDDirection() {
   const totalGood = allReviews.length - bad.length;
   const badRate = totalReviews ? ((totalBad/totalReviews)*100).toFixed(1) : 0;
   const elTop = hits[0];
-  // 4 个 KPI 分类汇总
-  const qualityKws = ['品质差', '品牌造假', '配件缺失'];
-  const shipKws = ['物流慢', '运输损坏'];
-  const priceSpecKws = ['颜色错发', '尺寸不符', '商品错发'];
-  const qualityHits = hits.filter(h => qualityKws.includes(h.tag));
-  const shipHits = hits.filter(h => shipKws.includes(h.tag));
-  const priceSpecHits = hits.filter(h => priceSpecKws.includes(h.tag));
-  const sumCount = arr => arr.reduce((s, h) => s + h.count, 0);
-  const elKq = document.getElementById('kp-quality');
-  if (elKq) elKq.innerHTML = `<b style="color:#ffcdd2">${sumCount(qualityHits)} 次</b><br><small>${qualityHits.map(h => h.tag).join(' / ') || '无'}</small>`;
-  const elKs = document.getElementById('kp-shipping');
-  if (elKs) elKs.innerHTML = `<b style="color:#ffcc80">${sumCount(shipHits)} 次</b><br><small>${shipHits.map(h => h.tag).join(' / ') || '无'}</small>`;
-  const elKp = document.getElementById('kp-price-spec');
-  if (elKp) elKp.innerHTML = `<b>${sumCount(priceSpecHits)} 次</b><br><small>${priceSpecHits.map(h => h.tag).join(' / ') || '无'}</small>`;
-  const elKnc = document.getElementById('kp-newcat');
-  if (elKnc) elKnc.innerHTML = `<b style="color:#c8e6c9">40-60K 公路车</b><br><small>V2.1 真空蓝海 · 品质差异化</small>`;
+  // V2.9.56: 4 个 KPI 卡已在 hits 计算后早 return 之前更新 (line ~343-350), 这里是冗余 (不重复声明变量)
   const html = `
     <div style="margin-bottom:10px"><b>📊 差评总览：</b>${allReviews.length} 条评论中 <b style="color:#c8102e">${totalBad} 条差评（${badRate}%）</b>，${totalGood} 条好评</div>
     <div style="margin-bottom:10px"><b>🔍 差评关键词 TOP ${hits.length}：</b></div>
