@@ -176,8 +176,8 @@ footer {
       <a href="../daily-report.html">📅 市场日报</a>
       <a href="./competitive.html">🏆 竞品监控</a>
       <a href="./matrix.html">💎 产品矩阵</a>
-      <a href="./index.html">🇧🇩 孟加拉</a>
-      <a href="../id/index.html">🇮🇩 印尼</a>
+      <a href="./dtc.html" class="active" style="background:#1565c0;color:#fff">🇧🇩 BD DTC</a>
+      <a href="../id/dtc.html" style="background:rgba(46,125,50,.15);color:#2e7d32">🇮🇩 ID DTC</a>
       <a href="./tasks.html">🎯 任务 OKR</a>
       <a href="./dtc.html" class="active">💬 DTC 差评</a>
       <a href="./strategy.html">🧠 策略迭代</a>
@@ -345,6 +345,22 @@ function renderRDDirection() {
     {kw: ['wrong item','different','মিলে না'], tag: '商品错发', color: '#d84315'},
   ];
   const hits = KW.map(k => ({tag: k.tag, color: k.color, count: k.kw.reduce((sum, w) => sum + (text.split(w).length - 1), 0)})).filter(h => h.count > 0).sort((a, b) => b.count - a.count);
+  // V2.9.56 (2026-07-21): 4 个 KPI 卡在早 return 之前也更新 (修复 0 命中时永远'加载中'的 bug)
+  const qualityKws = ['品质差', '品牌造假', '配件缺失'];
+  const shipKws = ['物流慢', '运输损坏'];
+  const priceSpecKws = ['颜色错发', '尺寸不符', '商品错发'];
+  const sumCount = arr => arr.reduce((s, h) => s + h.count, 0);
+  const qualityHits = hits.filter(h => qualityKws.includes(h.tag));
+  const shipHits = hits.filter(h => shipKws.includes(h.tag));
+  const priceSpecHits = hits.filter(h => priceSpecKws.includes(h.tag));
+  const elKq0 = document.getElementById('kp-quality');
+  if (elKq0) elKq0.innerHTML = `<b style="color:#ffcdd2">${sumCount(qualityHits)} 次</b><br><small>${qualityHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKs0 = document.getElementById('kp-shipping');
+  if (elKs0) elKs0.innerHTML = `<b style="color:#ffcc80">${sumCount(shipHits)} 次</b><br><small>${shipHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKp0 = document.getElementById('kp-price-spec');
+  if (elKp0) elKp0.innerHTML = `<b>${sumCount(priceSpecHits)} 次</b><br><small>${priceSpecHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKnc0 = document.getElementById('kp-newcat');
+  if (elKnc0) elKnc0.innerHTML = `<b style="color:#c8e6c9">40-60K 公路车</b><br><small>V2.1 真空蓝海 · 品质差异化</small>`;
   if (hits.length === 0) {
     el.innerHTML = `<div style="color:#cbd5e1">差评 ${bad.length} 条但未匹配关键词（可能评论文本非英语/孟语）</div>`;
     return;
