@@ -1,11 +1,70 @@
-<!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=./bd/dtc.html">
-<title>Phoenix Dashboard · 重定向</title>
-<style>body{font-family:sans-serif;padding:40px;background:#0f172a;color:#fff;text-align:center}</style>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Phoenix-Live · DTC 差评市场选择</title>
+  <style>
+    body{font-family:'PingFang SC',-apple-system,sans-serif;background:#0f172a;color:#e2e8f0;padding:60px 20px;margin:0;min-height:100vh}
+    .container{max-width:680px;margin:0 auto;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border:1px solid rgba(94,234,212,.3);border-radius:14px;padding:40px 32px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+    h1{font-size:22px;color:#5eead4;margin:0 0 8px;font-weight:800;letter-spacing:1px}
+    .sub{font-size:13px;color:#94a3b8;margin-bottom:32px;line-height:1.7}
+    .market-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+    a.market-card{display:block;padding:24px 20px;background:rgba(15,23,42,.6);border:1px solid rgba(148,163,184,.2);border-radius:10px;text-decoration:none;color:#e2e8f0;transition:all .2s;cursor:pointer}
+    a.market-card:hover{border-color:#5eead4;background:rgba(94,234,212,.08);transform:translateY(-2px);box-shadow:0 4px 16px rgba(94,234,212,.15)}
+    a.market-card .flag{font-size:32px;margin-bottom:8px;display:block}
+    a.market-card .name{font-size:18px;font-weight:800;color:#fff;margin-bottom:4px}
+    a.market-card .name .active-pill{display:inline-block;background:#1565c0;color:#fff;padding:1px 8px;border-radius:4px;font-size:11px;margin-left:6px;vertical-align:middle}
+    a.market-card .desc{font-size:12px;color:#94a3b8;line-height:1.6}
+    a.market-card .go{margin-top:12px;font-size:11px;color:#5eead4;font-weight:700}
+    .footer{font-size:11px;color:#64748b;text-align:center;margin-top:20px;line-height:1.6}
+    .footer a{color:#5eead4;text-decoration:none}
+  </style>
 </head>
 <body>
-<p>🔄 跳转到新地址...</p>
-<p><a href="./bd/dtc.html" style="color:#5eead4">点这里跳转</a></p>
-</body></html>
+  <div class="container">
+    <h1>📦 DTC 差评 · 市场选择</h1>
+    <div class="sub">
+      实时差评数据按市场分平台抓取：<br>
+      <b style="color:#5eead4">BD</b> = Daraz BD 平台 + Dream Cycle 独立站 · 15-65K BDT MTB 评论<br>
+      <b style="color:#fbbf24">ID</b> = Shopee ID + Tokopedia · 7-25M IDR 公路/平把/砾石评论
+    </div>
+    <div class="market-grid">
+      <a class="market-card" href="./bd/dtc.html">
+        <span class="flag">🇧🇩</span>
+        <div class="name">BD 孟加拉 <span class="active-pill" id="active-bd">PENDING</span></div>
+        <div class="desc">Daraz BD 平台评论 + Dream Cycle 独立站<br>15-65K BDT · 中高端 MTB 主战场</div>
+        <div class="go">→ 进入 BD DTC 差评</div>
+      </a>
+      <a class="market-card" href="./id/dtc.html">
+        <span class="flag">🇮🇩</span>
+        <div class="name">ID 印尼 <span class="active-pill" id="active-id">PENDING</span></div>
+        <div class="desc">Shopee ID + Tokopedia 评论<br>7-25M IDR · 公路+平把+砾石三蓝海</div>
+        <div class="go">→ 进入 ID DTC 差评</div>
+      </a>
+    </div>
+    <div class="footer">
+      V2.9.56 (2026-07-21): DTC 差评市场选择器<br>
+      数据源：<code style="background:#0f172a;padding:2px 6px;border-radius:3px">data/latest.json#bd.dtc_reviews / id.dtc_reviews</code> · 每日 9:00 / 16:00 自动更新<br>
+      <a href="./index.html">← 返回双市场总览</a>
+    </div>
+  </div>
+  <script>
+    // V2.9.56: 异步检测最新 latest.json fetch_status 标记 BD/ID 是否有数据
+    (async () => {
+      try {
+        const r = await fetch('../data/latest.json', {cache: 'no-store'});
+        if (!r.ok) return;
+        const data = await r.json();
+        const fs = data.fetch_status || {};
+        const bd = (fs.daraz_bd_reviews || 'pending').toString();
+        const id = (fs.serbasepeda || 'pending').toString();
+        const isActive = v => v.startsWith('ok') || v === 'partial';
+        const elBd = document.getElementById('active-bd');
+        const elId = document.getElementById('active-id');
+        if (elBd) { elBd.textContent = isActive(bd) ? 'ACTIVE' : (bd === 'pending' ? 'PENDING' : 'INACTIVE'); elBd.style.background = isActive(bd) ? '#2e7d32' : (bd === 'pending' ? '#455a64' : '#c8102e'); }
+        if (elId) { elId.textContent = isActive(id) ? 'ACTIVE' : (id === 'pending' ? 'PENDING' : 'INACTIVE'); elId.style.background = isActive(id) ? '#2e7d32' : (id === 'pending' ? '#455a64' : '#c8102e'); }
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
