@@ -176,8 +176,8 @@ footer {
       <a href="../daily-report.html">📅 市场日报</a>
       <a href="./competitive.html">🏆 竞品监控</a>
       <a href="./matrix.html">💎 产品矩阵</a>
-      <a href="../bd/index.html">🇧🇩 孟加拉</a>
-      <a href="./index.html">🇮🇩 印尼</a>
+      <a href="../bd/dtc.html" style="background:rgba(46,125,50,.15);color:#2e7d32">🇧🇩 BD DTC</a>
+      <a href="./dtc.html" class="active" style="background:#2e7d32;color:#fff">🇮🇩 ID DTC</a>
       <a href="./tasks.html">🎯 任务 OKR</a>
       <a href="./dtc.html" class="active">💬 DTC 差评</a>
       <a href="./strategy.html">🧠 策略迭代</a>
@@ -218,14 +218,14 @@ footer {
 </div>
 
 <div style="background:linear-gradient(135deg,rgba(94,234,212,.12),rgba(94,234,212,.04));border:1px solid rgba(94,234,212,.3);border-left:4px solid #5eead4;border-radius:10px;padding:14px 18px;margin-bottom:20px">
-  <div style="font-size:12px;color:#5eead4;font-weight:700;margin-bottom:6px">🏪 BD 渠道图谱（2026-06-11 验证）</div>
+  <div style="font-size:12px;color:#5eead4;font-weight:700;margin-bottom:6px">🏪 ID 渠道图谱（2026-06-11 验证）</div>
   <div style="font-size:13px;color:#e2e8f0;line-height:1.7">
-    BD 中高端 MTB 玩家盘点：
+    ID 中高端玩家盘点：
     <ul style="margin:6px 0 0 16px;padding:0;line-height:1.8">
-      <li><strong style="color:#5eead4">Dream Cycle (dreamcycle.store)</strong> = 真 BD 多品牌零售平台（WordPress），卖 Duranta / Veloce / <strong>Phoenix</strong> / Foxter 等 19 品牌，价格 9,800-14,000 BDT。Phoenix 4 SKU 已入驻（Donald/Miracle/Donald v2/Tornado），<strong style="color:#5eead4">重要渠道</strong>。</li>
-      <li>Daraz 仍是 BD MTB 主导平台（74 条商品 / 9 品牌）</li>
-      <li><strong style="color:#ffc107">凤凰 DTC 机会</strong>：Dream Cycle 卖所有品牌无法独占品类 → 凤凰独立站=独家品牌叙事 + 复购闭环</li>
-      <li>Daraz 差评主因：商品错发 / 颜色不符 / 品牌混淆（见下方）→ 独立站可彻底规避</li>
+      <li><strong style="color:#5eead4">serbasepeda (serbasepeda.com)</strong> = ID 真实自行车独立站，卖 Pacific / Polygon / Element / United 等 13 品类 4 大品牌，价格 6.4-7.3M IDR。<strong style="color:#5eead4">Phoenix 0 SKU</strong>，唯一未被本土品牌锁定的真空渠道。</li>
+      <li>Shopee + Tokopedia 仍是 ID 自行车主导平台（39+39 产品）</li>
+      <li><strong style="color:#ffc107">凤凰 DTC 机会</strong>：serbasepeda 卖本土 + 国际品牌无法独占 → 凤凰 12-15M 公路+平把+砾石切入 = 真空品类第一</li>
+      <li>Shopee/Tokopedia 差评主因：商品错发 / 颜色不符 / 品牌混淆（见下方）→ 独立站可彻底规避</li>
     </ul>
   </div>
 </div>
@@ -332,6 +332,22 @@ function renderRDDirection() {
     {kw: ['wrong item','different','মিলে না'], tag: '商品错发', color: '#d84315'},
   ];
   const hits = KW.map(k => ({tag: k.tag, color: k.color, count: k.kw.reduce((sum, w) => sum + (text.split(w).length - 1), 0)})).filter(h => h.count > 0).sort((a, b) => b.count - a.count);
+  // V2.9.56 (2026-07-21): 4 个 KPI 卡在早 return 之前也更新 (修复 0 命中时永远'加载中'的 bug)
+  const qualityKws = ['品质差', '品牌造假', '配件缺失'];
+  const shipKws = ['物流慢', '运输损坏'];
+  const priceSpecKws = ['颜色错发', '尺寸不符', '商品错发'];
+  const qualityHits = hits.filter(h => qualityKws.includes(h.tag));
+  const shipHits = hits.filter(h => shipKws.includes(h.tag));
+  const priceSpecHits = hits.filter(h => priceSpecKws.includes(h.tag));
+  const sumCount = arr => arr.reduce((s, h) => s + h.count, 0);
+  const elKq0 = document.getElementById('kp-quality');
+  if (elKq0) elKq0.innerHTML = `<b style="color:#ffcdd2">${sumCount(qualityHits)} 次</b><br><small>${qualityHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKs0 = document.getElementById('kp-shipping');
+  if (elKs0) elKs0.innerHTML = `<b style="color:#ffcc80">${sumCount(shipHits)} 次</b><br><small>${shipHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKp0 = document.getElementById('kp-price-spec');
+  if (elKp0) elKp0.innerHTML = `<b>${sumCount(priceSpecHits)} 次</b><br><small>${priceSpecHits.map(h => h.tag).join(' / ') || '无匹配'}</small>`;
+  const elKnc0 = document.getElementById('kp-newcat');
+  if (elKnc0) elKnc0.innerHTML = `<b style="color:#c8e6c9">40-60K 公路车</b><br><small>V2.1 真空蓝海 · 品质差异化</small>`;
   if (hits.length === 0) {
     el.innerHTML = `<div style="color:#cbd5e1">差评 ${bad.length} 条但未匹配关键词（可能评论文本非英语/孟语）</div>`;
     return;
