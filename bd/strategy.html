@@ -1363,7 +1363,7 @@ function renderV2Frames() {
     }
     html += `<div class="frame-card"><h3>${k.toUpperCase()}</h3>${fields}</div>`;
   }
-  document.getElementById('v2-frames').innerHTML = html;
+  const _v2f = document.getElementById('v2-frames'); if (_v2f) _v2f.innerHTML = html;
 }
 
 function renderFrameworks() {
@@ -1378,7 +1378,7 @@ function renderFrameworks() {
       <div class="gap-line">⚠️ Gap: ${esc(frame.gap)}</div>
     </div>`;
   }
-  document.getElementById('frameworks').innerHTML = html;
+  const _fw = document.getElementById('frameworks'); if (_fw) _fw.innerHTML = html;
 }
 
 function renderV1() {
