@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-22T16:01:55+08:00",
+  "generated_at": "2026-07-22T16:27:36+08:00",
   "fetch_status": {
     "daraz_bd": "warn (BD 190 kept, baseline protected, threshold 133)",
     "shopee_id": "ok (baseline 141 kept)",
@@ -3789,7 +3789,7 @@
         "note": "IDR 7,800,000 - serbasepeda.com hardcoded backup"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "ATLANTIS",
         "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
         "price": 700000,
         "currency": "IDR",
@@ -3801,7 +3801,7 @@
         "note": "Rp 700,000"
       },
       {
-        "brand": "RB",
+        "brand": "Element",
         "model": "RB road bike sepeda balap Element Police Toronto EFG Hybrid 7sp Gravel XTRM",
         "price": 2225000,
         "currency": "IDR",
@@ -3813,7 +3813,7 @@
         "note": "Rp 2,225,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Wilier",
         "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
         "price": 120000,
         "currency": "IDR",
@@ -3849,7 +3849,7 @@
         "note": "Rp 1,330,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Salvo",
         "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
         "price": 950000,
         "currency": "IDR",
@@ -3861,7 +3861,7 @@
         "note": "Rp 950,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "PANDORA",
         "model": "SEPEDA FIXIE PANDORA CST 700C",
         "price": 1890000,
         "currency": "IDR",
@@ -3873,7 +3873,7 @@
         "note": "Rp 1,890,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
         "price": 1075000,
         "currency": "IDR",
@@ -3885,7 +3885,7 @@
         "note": "Rp 1,075,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Foster",
         "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3X8 Speed Terbaru",
         "price": 1225000,
         "currency": "IDR",
@@ -3897,7 +3897,7 @@
         "note": "Rp 1,225,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Foster",
         "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
         "price": 900000,
         "currency": "IDR",
@@ -3909,7 +3909,7 @@
         "note": "Rp 900,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda MTB Odessy Fuse Ukuran 24 - 21 Speed Frame Steel",
         "price": 1250000,
         "currency": "IDR",
@@ -3921,7 +3921,7 @@
         "note": "Rp 1,250,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Foster",
         "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3x8 Speed Terbaru",
         "price": 1199000,
         "currency": "IDR",
@@ -3933,7 +3933,7 @@
         "note": "Rp 1,199,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Pacific",
         "model": "SEPEDA GUNUNG MTB MAZARA NEW SERIES (SIZE 24 &amp; 26 INCH) - By : Pacific Group-Outdoor",
         "price": 1292000,
         "currency": "IDR",
@@ -3945,7 +3945,7 @@
         "note": "Rp 1,292,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda Fixie Odessy RM 1050 Rem Torpedo Doltrap 700C Sepeda Odessy Fixie Rem Torpedo",
         "price": 1150000,
         "currency": "IDR",
@@ -3957,7 +3957,7 @@
         "note": "Rp 1,150,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Velion",
         "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
         "price": 559000,
         "currency": "IDR",
@@ -3969,7 +3969,7 @@
         "note": "Rp 559,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "United",
         "model": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
         "price": 5334000,
         "currency": "IDR",
@@ -3979,18 +3979,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 5,334,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda balap / Road bike bisa request warna ,ukuran",
-        "price": 3600000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/zentbike313/sepeda-balap-road-bike-bisa-request-warna-ukuran-1735471637645395081?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "zentbike313",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 3,600,000"
       },
       {
         "brand": "Pacific",
@@ -4005,7 +3993,7 @@
         "note": "Rp 2,265,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "LIMITLESS",
         "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
         "price": 730000,
         "currency": "IDR",
@@ -4017,7 +4005,7 @@
         "note": "Rp 730,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Velion",
         "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
         "price": 600000,
         "currency": "IDR",
@@ -4029,31 +4017,7 @@
         "note": "Rp 600,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda fixie BxT  putih bisa request",
-        "price": 3000000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-bxt-putih-bisa-request-1733260536115790985?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "zentbike313",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 3,000,000"
-      },
-      {
-        "brand": "Fixie",
-        "model": "Fixie Klasik Fullbike by Fixfix",
-        "price": 2900000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/fixfix-store/fixie-klasik-fullbike-by-fixfix-1732836119338256104?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "fixfix-store",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 2,900,000"
-      },
-      {
-        "brand": "SEPEDA",
+        "brand": "Odessy",
         "model": "SEPEDA FIXIE ODESSY RM 1050 SEPEDA BALAP MODEL TERBARUU",
         "price": 1148000,
         "currency": "IDR",
@@ -4065,7 +4029,7 @@
         "note": "Rp 1,148,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Look",
         "model": "Sepeda fixi LOOK HITAM PUTIH murah",
         "price": 3200000,
         "currency": "IDR",
@@ -4077,7 +4041,7 @@
         "note": "Rp 3,200,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "MINI",
         "model": "Sepeda Mini Keranjang Dewasa New PHOENIX NP-8825AT Uk 20 24 &amp; 26Inch",
         "price": 1050000,
         "currency": "IDR",
@@ -4089,7 +4053,7 @@
         "note": "Rp 1,050,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Polygon",
         "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
         "price": 2200000,
         "currency": "IDR",
@@ -4101,19 +4065,7 @@
         "note": "Rp 2,200,000"
       },
       {
-        "brand": "[[",
-        "model": "[[ UKURAN 20 inch ]] sepeda bmx 20 usia 8-15 tahun dewasa lalix ban 2.4 vbrake, onthel, balap",
-        "price": 626000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/ari-terang-709/ukuran-20-inch-sepeda-bmx-20-usia-8-15-tahun-dewasa-lalix-ban-2-4-vbrake-onthel-balap-1734082262600615126?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "ari-terang-709",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 626,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda MTB Odessy Tank / Sepeda Gunung",
         "price": 1290000,
         "currency": "IDR",
@@ -4137,42 +4089,6 @@
         "note": "Rp 1,930,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda London Taxi CRB700M Clasic (Siap Kirim)",
-        "price": 5780000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/autosyakiragroup/sepeda-london-taxi-crb700m-clasic-siap-kirim-blue-ray?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "autosyakiragroup",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 5,780,000"
-      },
-      {
-        "brand": "fixie",
-        "model": "fixie tsunami hitam keren,doltrap/torpedo bisa,mau request tambah berbagai ukuran bisa",
-        "price": 2900000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/rafa-bike-shop/fixie-tsunami-hitam-keren-doltrap-torpedo-bisa-mau-request-tambah-berbagai-ukuran-bisa-1731698361217419228?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "rafa-bike-shop",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 2,900,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda Fixie Alton FX Mistique Bullhorn 24Inch",
-        "price": 950000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/elementindonesia/sepeda-fixie-alton-fx-mistique-bullhorn-24inch-1732156122289636607?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "elementindonesia",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 950,000"
-      },
-      {
         "brand": "【Anchi】",
         "model": "【Anchi】 Sepeda gunung  26 inci untuk pengendara dengan tinggi 160-185 cm, kompetisi dewasa, sepeda gunung, garansi 5 tah",
         "price": 1200000,
@@ -4185,7 +4101,7 @@
         "note": "Rp 1,200,000"
       },
       {
-        "brand": "commuter",
+        "brand": "Federal",
         "model": "commuter bike federal frame size 19 Sepeda",
         "price": 1900000,
         "currency": "IDR",
@@ -4197,7 +4113,7 @@
         "note": "Rp 1,900,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Polygon",
         "model": "Sepeda gunung MTB polygon Xtrada 5 27.5",
         "price": 6400000,
         "currency": "IDR",
@@ -4209,31 +4125,7 @@
         "note": "Rp 6,400,000"
       },
       {
-        "brand": "sepeda",
-        "model": "sepeda balap gravel bike evergreen 21sp 700x38C  steel",
-        "price": 2150000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/retailersepedaol/sepeda-balap-gravel-bike-evergreen-21sp-700x38c-steel-1733020467130894172?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "retailersepedaol",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 2,150,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda Fixie pink muda ,bisa request warna ,ukuran",
-        "price": 2700000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/zentbike313/sepeda-fixie-pink-muda-bisa-request-warna-ukuran-1733260439622091913?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "zentbike313",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 2,700,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Gunung MTB 27.5 Pacific Aviator 2689 XT Rem Discbrake Operangigi Terbaru",
         "price": 1549000,
         "currency": "IDR",
@@ -4245,19 +4137,7 @@
         "note": "Rp 1,549,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Gunung MTB Coyote Fifa World Cup 2026 Ukuran 20, 24 ,26 dan 27,5 Inch SPECIAL EDITION",
-        "price": 1449000,
-        "currency": "IDR",
-        "platform": "Tokopedia",
-        "url": "https://www.tokopedia.com/anugrah23sepeda/sepeda-gunung-mtb-coyote-fifa-world-cup-2026-ukuran-20-24-26-dan-27-5-inch-special-edition-1736029303672767681-1736029864284685505?extParam=ivf%3Dfalse%26keyword%3Dsepeda%26search_id%3D2026070703513558238E9AE2DD3002EIV8%26src%3Dsearch",
-        "shop": "anugrah23sepeda",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 1,449,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "ATLANTIS",
         "model": "Sepeda Gunung 26 27.5 MTB Atlantis 730 Rem Cakram New",
         "price": 1425000,
         "currency": "IDR",
@@ -4269,19 +4149,7 @@
         "note": "Rp 1,425,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Anak Laki BMX CENTRUM 20 inc 6670 3 BAN 3.0 6670 1 BAN 2.4 BAN WARNA V BRAKE Original",
-        "price": 664000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Anak-Laki-BMX-CENTRUM-20-inc-6670-3-BAN-3.0-6670-1-BAN-2.4-BAN-WARNA-V-BRAKE-Original-i.1813683454.49562783363?extraParams=%7B%22display_model_id%22%3A381108321202%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=96af6acd-9462-4c20-b1d1-0cec24cca943&amp;xptdk=96af6acd-9462-4c20-b1d1-0cec24cca943",
-        "shop": "1813683454",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 664,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
         "price": 1535000,
         "currency": "IDR",
@@ -4291,18 +4159,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 1,535,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda Keseimbangan Balance Bike IORA Push Bike BK01 BK04 BK06 EXOTIC ET2017 ET2157 AT7901 AVIATOR",
-        "price": 155000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Keseimbangan-Balance-Bike-IORA-Push-Bike-BK01-BK04-BK06-EXOTIC-ET2017-ET2157-AT7901-AVIATOR-i.40989696.1943379121?extraParams=%7B%22display_model_id%22%3A261055648812%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=54173bfa-e087-4130-ade7-44d7a22aa2d3&amp;xptdk=54173bfa-e087-4130-ade7-44d7a22aa2d3",
-        "shop": "40989696",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 155,000"
       },
       {
         "brand": "Odessy",
@@ -4329,7 +4185,7 @@
         "note": "Rp 624,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "ATLANTIS",
         "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
         "price": 1199000,
         "currency": "IDR",
@@ -4341,7 +4197,7 @@
         "note": "Rp 1,199,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Velion",
         "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
         "price": 749000,
         "currency": "IDR",
@@ -4377,7 +4233,7 @@
         "note": "Rp 2,700,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "JAGUAR",
         "model": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
         "price": 2574000,
         "currency": "IDR",
@@ -4387,18 +4243,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T13:20:00+08:00",
         "note": "Rp 2,574,000"
-      },
-      {
-        "brand": "MTB",
-        "model": "MTB 24 26 27 5 Evergreen ranger 50 ranger 55 ranger 545 new phoenix 2709 2705 sepeda gunung 27 5 sepeda dewasa mountain ",
-        "price": 1165000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/MTB-24-26-27-5-Evergreen-ranger-50-ranger-55-ranger-545-new-phoenix-2709-2705-sepeda-gunung-27-5-sepeda-dewasa-mountain-bike-i.344785187.9703671025?extraParams=%7B%22display_model_id%22%3A178083554174%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=9c8b86fb-657e-4013-b394-ea3748a30a96&amp;xptdk=9c8b86fb-657e-4013-b394-ea3748a30a96",
-        "shop": "344785187",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 1,165,000"
       },
       {
         "brand": "Push",
@@ -4413,7 +4257,7 @@
         "note": "Rp 135,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Velion",
         "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
         "price": 524000,
         "currency": "IDR",
@@ -4473,19 +4317,7 @@
         "note": "Rp 439,910"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Balance Bike Exotic 2017 Sepeda Push Bike Balance Bike Exotic ET2017",
-        "price": 160000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Balance-Bike-Exotic-2017-Sepeda-Push-Bike-Balance-Bike-Exotic-ET2017-i.552002197.24704446081?extraParams=%7B%22display_model_id%22%3A276556693836%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69&amp;xptdk=8d36a20b-6cdf-42fc-b5f6-53cd3fbaef69",
-        "shop": "552002197",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 160,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "NANO",
         "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
         "price": 212000,
         "currency": "IDR",
@@ -4521,7 +4353,7 @@
         "note": "Rp 120,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "ATLANTIS",
         "model": "Sepeda Gunung 27.5 MTB ATLANTIS 730 REM CAKRAM NEW",
         "price": 1169000,
         "currency": "IDR",
@@ -4545,7 +4377,7 @@
         "note": "Rp 1,935,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
         "price": 1427000,
         "currency": "IDR",
@@ -4557,19 +4389,7 @@
         "note": "Rp 1,427,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Anak BMX Axwil 20 Rem V Dan Cakram",
-        "price": 750000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-Anak-BMX-Axwil-20-Rem-V-Dan-Cakram-i.47761539.29476883288?extraParams=%7B%22display_model_id%22%3A420962125970%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=73e60493-6444-43e9-9c7d-0851caaf0068&amp;xptdk=73e60493-6444-43e9-9c7d-0851caaf0068",
-        "shop": "47761539",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 750,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
         "price": 1148000,
         "currency": "IDR",
@@ -4581,7 +4401,7 @@
         "note": "Rp 1,148,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "ATLANTIS",
         "model": "Sepeda gunung MTB 26 27 5 ATLANTIS Odessy 730 21Speed NEW",
         "price": 1300000,
         "currency": "IDR",
@@ -4629,7 +4449,7 @@
         "note": "Rp 2,650,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
         "price": 2195000,
         "currency": "IDR",
@@ -4641,7 +4461,7 @@
         "note": "Rp 2,195,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "ATLANTIS",
         "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
         "price": 750360,
         "currency": "IDR",
@@ -4653,19 +4473,7 @@
         "note": "Rp 750,360"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda BMX anak CENTRUM 6671 double disc brake cakram 20 inch ban pompa 2 40",
-        "price": 760000,
-        "currency": "IDR",
-        "platform": "Shopee ID",
-        "url": "https://shopee.co.id/Sepeda-BMX-anak-CENTRUM-6671-double-disc-brake-cakram-20-inch-ban-pompa-2-40-i.927153578.29642609203?extraParams=%7B%22display_model_id%22%3A291871802679%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=46cb6143-465a-473c-bb8d-ce5a169c91a7&amp;xptdk=46cb6143-465a-473c-bb8d-ce5a169c91a7",
-        "shop": "927153578",
-        "is_new": true,
-        "scraped_at": "2026-07-07T13:20:00+08:00",
-        "note": "Rp 760,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Balap Roadbike Element FRC 50 2026 EVO Alloy 2x9sp 700C",
         "price": 4099000,
         "currency": "IDR",
@@ -4689,19 +4497,7 @@
         "note": "Rp 139,000,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Balap Roadbike Custom Model Pinarelo Dogma ~ Warna Bisa Request",
-        "price": 4850000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Sepeda-Balap-Roadbike-Custom-Model-Pinarelo-Dogma-~-Warna-Bisa-Request-i.242300410.41581003297?extraParams=%7B%22display_model_id%22%3A410940983742%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=117e813f-6b58-4119-a987-3ec90193e614&amp;xptdk=117e813f-6b58-4119-a987-3ec90193e614",
-        "shop": "242300410",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 4,850,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "CAMP",
         "model": "Sepeda Balap Roadbike CAMP SR5 Sport Tiagra PRO 105 UCI Invisible Welding",
         "price": 13990000,
         "currency": "IDR",
@@ -4723,18 +4519,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T14:20:00+08:00",
         "note": "Rp 100,000,000"
-      },
-      {
-        "brand": "Road",
-        "model": "Road bike BXT Merah",
-        "price": 4300000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Road-bike-BXT-Merah-i.1361653308.52662496369?extraParams=%7B%22display_model_id%22%3A287712638723%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fddc67d6-17b4-4052-8f9c-22268c904209&amp;xptdk=fddc67d6-17b4-4052-8f9c-22268c904209",
-        "shop": "1361653308",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 4,300,000"
       },
       {
         "brand": "PINARELLO",
@@ -4773,19 +4557,7 @@
         "note": "Rp 17,500,000"
       },
       {
-        "brand": "sepeda",
-        "model": "sepeda roadbike Java siluro 2",
-        "price": 4950000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/sepeda-roadbike-Java-siluro-2-i.1690474252.44028717817?extraParams=%7B%22display_model_id%22%3A350554962838%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=061dfedb-749e-41b9-a426-5afcb291c39b&amp;xptdk=061dfedb-749e-41b9-a426-5afcb291c39b",
-        "shop": "1690474252",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 4,950,000"
-      },
-      {
-        "brand": "Roadbike",
+        "brand": "Aero",
         "model": "Roadbike S Works SL7 Spesial Edision Aero Carbon",
         "price": 37600000,
         "currency": "IDR",
@@ -4809,7 +4581,7 @@
         "note": "Rp 16,500,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Roadbike Balap Element Police Toronto 7speed BAN 700c",
         "price": 2070000,
         "currency": "IDR",
@@ -4821,7 +4593,7 @@
         "note": "Rp 2,070,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Polygon",
         "model": "Sepeda Balap Polygon Helios A9 Carbon Duraace DI2 With Power Meter",
         "price": 93300000,
         "currency": "IDR",
@@ -4833,7 +4605,7 @@
         "note": "Rp 93,300,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Look",
         "model": "Sepeda Balap Roadbike Camp SR3 Si Clean Look 2x9sp Shimano Sora Hydraulic!",
         "price": 9600000,
         "currency": "IDR",
@@ -4857,7 +4629,7 @@
         "note": "Rp 64,440,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Roadbike 700C ELEMENT POLICE TORONTO 7 Speed NEW",
         "price": 2250000,
         "currency": "IDR",
@@ -4869,7 +4641,7 @@
         "note": "Rp 2,250,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Balap Element roadbike frc 50 SB 2x8 SP Sepeda Roadbike Element Frc 50 SB",
         "price": 4093000,
         "currency": "IDR",
@@ -4881,19 +4653,7 @@
         "note": "Rp 4,093,000"
       },
       {
-        "brand": "Police",
-        "model": "Police Toronto EFG 700C Shimano 2x7 Speed Steel",
-        "price": 2145000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Police-Toronto-EFG-700C-Shimano-2x7-Speed-Steel-i.340563993.40825822098?extraParams=%7B%22display_model_id%22%3A345017801024%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=f0abf394-d30c-4781-86fe-afc90ef13d5c&amp;xptdk=f0abf394-d30c-4781-86fe-afc90ef13d5c",
-        "shop": "340563993",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 2,145,000"
-      },
-      {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
         "price": 1427000,
         "currency": "IDR",
@@ -4905,19 +4665,7 @@
         "note": "Rp 1,427,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
-        "price": 1930000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a1f937da-fa08-42c1-8043-229450412238&amp;xptdk=a1f937da-fa08-42c1-8043-229450412238",
-        "shop": "552002197",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 1,930,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda Balap RoadBike ODESSY 700C 1010S 1011 EVERGREEN GRAVEL JAZZ EVERGREEN GRAVEL BOSTON Rem Cakram Shimano Roadbike G",
         "price": 1895900,
         "currency": "IDR",
@@ -4941,7 +4689,7 @@
         "note": "Rp 1,935,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Balap Element Roadbike Fixie Police Toronto FX AR CST Pandora AR 700C FIXIE ALTON MISTIQUE 24 FIXIE TORY FX",
         "price": 1810000,
         "currency": "IDR",
@@ -4965,7 +4713,7 @@
         "note": "Rp 3,670,100"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Roadbike Element FRC 50 Alloy 16 Speed",
         "price": 3950000,
         "currency": "IDR",
@@ -4977,31 +4725,7 @@
         "note": "Rp 3,950,000"
       },
       {
-        "brand": "Police",
-        "model": "Police Roadbike Toronto EFG 700c 7x2 Sp",
-        "price": 2225000,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Police-Roadbike-Toronto-EFG-700c-7x2-Sp-i.26865232.57202518824?extraParams=%7B%22display_model_id%22%3A262224316183%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de&amp;xptdk=fe3dd019-0c4d-4fc9-9587-ca5478d3d5de",
-        "shop": "26865232",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 2,225,000"
-      },
-      {
-        "brand": "Sale",
-        "model": "Sale 2024 SLR 9 Gen7 Red Carbon Complete Bike Road Full Bicycle 50 52 54 56 58cm",
-        "price": 142778108,
-        "currency": "IDR",
-        "platform": "Shopee ID (roadbike)",
-        "url": "https://shopee.co.id/Sale-2024-SLR-9-Gen7-Red-Carbon-Complete-Bike-Road-Full-Bicycle-50-52-54-56-58cm-i.1641428207.40876334787?extraParams=%7B%22display_model_id%22%3A445112198945%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=52378386-956a-40e9-954f-7a88c31cc58d&amp;xptdk=52378386-956a-40e9-954f-7a88c31cc58d",
-        "shop": "1641428207",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:20:00+08:00",
-        "note": "Rp 142,778,108"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Look",
         "model": "Sepeda Balap 700c Roadbike Model Look Warna Hijau Tosca Murah Meriah Siap Pakai",
         "price": 3900000,
         "currency": "IDR",
@@ -5013,7 +4737,7 @@
         "note": "Rp 3,900,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Odessy",
         "model": "Sepeda Balap 700C ODESSY 1011 Roadbike RB Murah",
         "price": 2000000,
         "currency": "IDR",
@@ -5025,7 +4749,7 @@
         "note": "Rp 2,000,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Hybrid Element JASPER 700c 24SP",
         "price": 1899000,
         "currency": "IDR",
@@ -5037,7 +4761,7 @@
         "note": "Rp 1,899,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
         "price": 2300000,
         "currency": "IDR",
@@ -5049,19 +4773,7 @@
         "note": "Rp 2,300,000"
       },
       {
-        "brand": "SEPEDA",
-        "model": "SEPEDA GUNUNG HYBRID EXOTIC 2708 HR 700c x35",
-        "price": 1929000,
-        "currency": "IDR",
-        "platform": "Shopee ID (gravel)",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-EXOTIC-2708-HR-700c-x35-i.437557453.48362174627?extraParams=%7B%22display_model_id%22%3A411055742126%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=0cb42150-18c5-4d58-b435-7a912cfeb70e&amp;xptdk=0cb42150-18c5-4d58-b435-7a912cfeb70e",
-        "shop": "437557453",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:30:00+08:00",
-        "note": "Rp 1,929,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
         "price": 2168000,
         "currency": "IDR",
@@ -5073,19 +4785,7 @@
         "note": "Rp 2,168,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
-        "price": 1930000,
-        "currency": "IDR",
-        "platform": "Shopee ID (gravel)",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=e6d8884c-91f5-4a9e-a70a-cebd218b8b1c&amp;xptdk=e6d8884c-91f5-4a9e-a70a-cebd218b8b1c",
-        "shop": "552002197",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:30:00+08:00",
-        "note": "Rp 1,930,000"
-      },
-      {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
         "price": 1899000,
         "currency": "IDR",
@@ -5095,18 +4795,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T14:30:00+08:00",
         "note": "Rp 1,899,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda Hybrid 700c EXOTIC 2708 HR DISC BRAKE",
-        "price": 1930000,
-        "currency": "IDR",
-        "platform": "Shopee ID (gravel)",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-700c-EXOTIC-2708-HR-DISC-BRAKE-i.19737296.47912209585?extraParams=%7B%22display_model_id%22%3A326058984907%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=5c79ba7c-84e3-4010-b519-7c3f763544b7&amp;xptdk=5c79ba7c-84e3-4010-b519-7c3f763544b7",
-        "shop": "19737296",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:30:00+08:00",
-        "note": "Rp 1,930,000"
       },
       {
         "brand": "Pacific",
@@ -5121,7 +4809,7 @@
         "note": "Rp 1,990,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
         "price": 2300000,
         "currency": "IDR",
@@ -5133,7 +4821,7 @@
         "note": "Rp 2,300,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Pacific",
         "model": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
         "price": 1899000,
         "currency": "IDR",
@@ -5145,7 +4833,7 @@
         "note": "Rp 1,899,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
         "price": 2102000,
         "currency": "IDR",
@@ -5157,7 +4845,7 @@
         "note": "Rp 2,102,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "NEW",
         "model": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
         "price": 2269722,
         "currency": "IDR",
@@ -5181,7 +4869,7 @@
         "note": "Rp 6,249,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
         "price": 2519000,
         "currency": "IDR",
@@ -5205,7 +4893,7 @@
         "note": "Rp 5,099,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Hybrid Element JASPER 700c 24SP",
         "price": 1899000,
         "currency": "IDR",
@@ -5217,7 +4905,7 @@
         "note": "Rp 1,899,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
         "price": 2300000,
         "currency": "IDR",
@@ -5229,19 +4917,7 @@
         "note": "Rp 2,300,000"
       },
       {
-        "brand": "SEPEDA",
-        "model": "SEPEDA GUNUNG HYBRID EXOTIC 2708 HR 700c x35",
-        "price": 1929000,
-        "currency": "IDR",
-        "platform": "Shopee ID (hybrid)",
-        "url": "https://shopee.co.id/SEPEDA-GUNUNG-HYBRID-EXOTIC-2708-HR-700c-x35-i.437557453.48362174627?extraParams=%7B%22display_model_id%22%3A411055742126%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=350126df-a96f-45ed-9173-905ad02d12e6&amp;xptdk=350126df-a96f-45ed-9173-905ad02d12e6",
-        "shop": "437557453",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:35:00+08:00",
-        "note": "Rp 1,929,000"
-      },
-      {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
         "price": 2168000,
         "currency": "IDR",
@@ -5253,19 +4929,7 @@
         "note": "Rp 2,168,000"
       },
       {
-        "brand": "Sepeda",
-        "model": "Sepeda Hybrid RoadBike Exotic ET 2708 HR Sepeda 700C Hybrid Exotic 2708 HR 3x8 Speed",
-        "price": 1930000,
-        "currency": "IDR",
-        "platform": "Shopee ID (hybrid)",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-RoadBike-Exotic-ET-2708-HR-Sepeda-700C-Hybrid-Exotic-2708-HR-3x8-Speed-i.552002197.54112421351?extraParams=%7B%22display_model_id%22%3A371076682698%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e&amp;xptdk=a4ebbf64-436c-4cc1-8e7d-926ec46dfe2e",
-        "shop": "552002197",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:35:00+08:00",
-        "note": "Rp 1,930,000"
-      },
-      {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
         "price": 1899000,
         "currency": "IDR",
@@ -5275,18 +4939,6 @@
         "is_new": true,
         "scraped_at": "2026-07-07T14:35:00+08:00",
         "note": "Rp 1,899,000"
-      },
-      {
-        "brand": "Sepeda",
-        "model": "Sepeda Hybrid 700c EXOTIC 2708 HR DISC BRAKE",
-        "price": 1930000,
-        "currency": "IDR",
-        "platform": "Shopee ID (hybrid)",
-        "url": "https://shopee.co.id/Sepeda-Hybrid-700c-EXOTIC-2708-HR-DISC-BRAKE-i.19737296.47912209585?extraParams=%7B%22display_model_id%22%3A326058984907%2C%22model_selection_logic%22%3A3%7D&amp;sp_atk=1583b885-b228-4859-8e7f-0d2e0541caae&amp;xptdk=1583b885-b228-4859-8e7f-0d2e0541caae",
-        "shop": "19737296",
-        "is_new": true,
-        "scraped_at": "2026-07-07T14:35:00+08:00",
-        "note": "Rp 1,930,000"
       },
       {
         "brand": "Pacific",
@@ -5301,7 +4953,7 @@
         "note": "Rp 1,990,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Pacific",
         "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
         "price": 2300000,
         "currency": "IDR",
@@ -5313,7 +4965,7 @@
         "note": "Rp 2,300,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Pacific",
         "model": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
         "price": 1899000,
         "currency": "IDR",
@@ -5325,7 +4977,7 @@
         "note": "Rp 1,899,000"
       },
       {
-        "brand": "SEPEDA",
+        "brand": "Element",
         "model": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
         "price": 2102000,
         "currency": "IDR",
@@ -5337,7 +4989,7 @@
         "note": "Rp 2,102,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "NEW",
         "model": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
         "price": 2269722,
         "currency": "IDR",
@@ -5361,7 +5013,7 @@
         "note": "Rp 6,249,000"
       },
       {
-        "brand": "Sepeda",
+        "brand": "Element",
         "model": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
         "price": 2519000,
         "currency": "IDR",
@@ -5993,7 +5645,7 @@
   "global": {
     "dtc_social": []
   },
-  "gen_at": "2026-07-22T16:01:55+08:00",
+  "gen_at": "2026-07-22T16:27:36+08:00",
   "brand_metrics": {
     "computed_at": "2026-07-20T13:31:18+08:00",
     "method": "V2.9.47 (跟 V2.9.42 前端 5 Tab 跨 Tab 统一): score = (min(sku/20,1)*100*0.20) + (min(asp/30K,1)*100*0.30) + (high_tier_pct*100*0.20) + (min(max/50K,1)*100*0.20) + (in_stock_rate*100*0.10)",
@@ -6307,17 +5959,576 @@
     ]
   },
   "dashboard_metrics": {
-    "bd": {
-      "total_sku": 190,
-      "real_brands": 27
+    "computed_at": "2026-07-22T16:27:36+08:00",
+    "totals": {
+      "bd_pool_total": 190,
+      "bd_pool_priced": 190,
+      "bd_pool_mid_high": 127,
+      "bd_pool_brands": 27,
+      "id_pool_total": 112,
+      "id_pool_brands": 36,
+      "phx_bd_total": 17,
+      "phx_bd_mid_high": 8,
+      "phx_bd_asp": 13738,
+      "phx_bd_max": 18000,
+      "phx_bd_min": 6000
     },
-    "id": {
-      "total_sku": 141,
-      "real_brands": 35
+    "bands": {
+      "bd_lt_10k": {
+        "count": 8,
+        "brands_count": 3,
+        "brands": {
+          "Duranta": 6,
+          "Phoenix": 1,
+          "Polloux": 1
+        },
+        "top_5_brands": [
+          "Duranta",
+          "Phoenix",
+          "Polloux"
+        ]
+      },
+      "bd_10_15k": {
+        "count": 32,
+        "brands_count": 17,
+        "brands": {
+          "Veloce": 5,
+          "Phoenix": 4,
+          "Hero": 3,
+          "Foxter": 3,
+          "Duranta": 2,
+          "Marine": 2,
+          "Core": 2,
+          "Seventy": 2,
+          "Warrior": 1,
+          "Uctocifu": 1,
+          "Uplayed": 1,
+          "Avon": 1,
+          "Python": 1,
+          "Duronto": 1,
+          "Adder": 1,
+          "Pollux": 1,
+          "Ghost": 1
+        },
+        "top_5_brands": [
+          "Veloce",
+          "Phoenix",
+          "Hero",
+          "Foxter",
+          "Duranta"
+        ]
+      },
+      "bd_15_25k": {
+        "count": 57,
+        "brands_count": 17,
+        "brands": {
+          "Marine": 12,
+          "Veloce": 10,
+          "Core": 9,
+          "Foxter": 4,
+          "Warrior": 3,
+          "Uplayed": 3,
+          "Phoenix": 3,
+          "Avon": 2,
+          "Rockrider": 2,
+          "Falcon": 2,
+          "Duranta": 1,
+          "Seventy": 1,
+          "Ghost": 1,
+          "Forever": 1,
+          "Mezarott": 1,
+          "Mustang": 1,
+          "Hero": 1
+        },
+        "top_5_brands": [
+          "Marine",
+          "Veloce",
+          "Core",
+          "Foxter",
+          "Warrior"
+        ]
+      },
+      "bd_gt_25k": {
+        "count": 30,
+        "brands_count": 6,
+        "brands": {
+          "Rockrider": 14,
+          "Veloce": 6,
+          "Core": 5,
+          "Ceres": 2,
+          "Magpy": 2,
+          "Kiesel": 1
+        },
+        "top_5_brands": [
+          "Rockrider",
+          "Veloce",
+          "Core",
+          "Ceres",
+          "Magpy"
+        ]
+      }
     },
-    "global": {
-      "total_sku": 331,
-      "real_brands": 61
+    "gt_25k_brands": {
+      "Rockrider": 14,
+      "Veloce": 6,
+      "Core": 5,
+      "Ceres": 2,
+      "Magpy": 2,
+      "Kiesel": 1
+    },
+    "gt_25k_top5": [
+      {
+        "brand": "Rockrider",
+        "model": "Rockrider XC 404",
+        "price": 65000
+      },
+      {
+        "brand": "Rockrider",
+        "model": "Rockrider Pro Gen 4 (2026)",
+        "price": 45000
+      },
+      {
+        "brand": "Rockrider",
+        "model": "Rockrider Xc501",
+        "price": 42000
+      },
+      {
+        "brand": "Rockrider",
+        "model": "ROCKRIDER XC 403",
+        "price": 40000
+      },
+      {
+        "brand": "Rockrider",
+        "model": "ROCKRIDER XC 403 (2023)",
+        "price": 40000
+      }
+    ],
+    "phx_gap": {
+      "phx_max_price": 18000,
+      "phx_min_price": 6000,
+      "phx_asp": 13738,
+      "phx_count": 8,
+      "phx_in_15_25": 3,
+      "phx_in_gt_25": 0,
+      "industry_max_price": 65000,
+      "industry_max_brand": "Rockrider",
+      "industry_max_model": "Rockrider XC 404",
+      "phx_vs_industry_ratio": 3.6,
+      "gt_25k_count": 30,
+      "gt_25k_brand_count": 6,
+      "gt_25k_brands": [
+        "Rockrider",
+        "Ceres",
+        "Core",
+        "Veloce",
+        "Magpy",
+        "Kiesel"
+      ],
+      "gt_25k_phx_present": false,
+      "gt_15_25k_count": 57,
+      "gt_15_25k_phx_present": true
+    },
+    "id_7_15m": {
+      "count": 6,
+      "brands": [
+        "Pacific",
+        "Element",
+        "CAMP",
+        "Look",
+        "United"
+      ]
+    },
+    "id_bands_full": {
+      "id_lt_1m": {
+        "count": 19,
+        "brands": [
+          "Push",
+          "BALANCE",
+          "Wilier",
+          "Balance",
+          "SCOORA",
+          "ATLANTIS",
+          "LIMITLESS",
+          "Foster",
+          "NANO",
+          "Velion",
+          "Mmflight",
+          "Exotic",
+          "Cuddlee",
+          "Salvo"
+        ]
+      },
+      "id_1_7m": {
+        "count": 77,
+        "brands": [
+          "Pacific",
+          "Element",
+          "Odessy",
+          "Maximo",
+          "JAGUAR",
+          "PANDORA",
+          "ATLANTIS",
+          "Foster",
+          "Exotic",
+          "MINI",
+          "NEW",
+          "Atlantis",
+          "Look",
+          "Federal",
+          "Evergreen",
+          "JNE,Sicepat",
+          "Polygon",
+          "United",
+          "【Anchi】"
+        ]
+      },
+      "id_7_15m": {
+        "count": 6,
+        "brands": [
+          "Pacific",
+          "Element",
+          "CAMP",
+          "Look",
+          "United"
+        ]
+      },
+      "id_15_20m": {
+        "count": 2,
+        "brands": [
+          "Twitter"
+        ]
+      },
+      "id_gt_20m": {
+        "count": 8,
+        "brands": [
+          "Pinarello",
+          "PINARELLO",
+          "Aero",
+          "Element",
+          "CAMP",
+          "Polygon",
+          "Trek"
+        ]
+      }
+    },
+    "id_cat_x_band": {
+      "road": {
+        "count": 22,
+        "1_7m_count": 9,
+        "7_15m_count": 3,
+        "gt_20m_count": 7,
+        "7_15m_brands": [
+          "CAMP",
+          "Look",
+          "Pacific"
+        ],
+        "gt_20m_brands": [
+          "Pinarello",
+          "PINARELLO",
+          "CAMP",
+          "Trek",
+          "Polygon",
+          "Aero"
+        ],
+        "12_15m_count": 1
+      },
+      "gravel": {
+        "count": 10,
+        "1_7m_count": 8,
+        "7_15m_count": 1,
+        "gt_20m_count": 1,
+        "7_15m_brands": [
+          "Element"
+        ],
+        "gt_20m_brands": [
+          "Element"
+        ]
+      },
+      "hybrid": {
+        "count": 28,
+        "1_7m_count": 28,
+        "7_15m_count": 0,
+        "gt_20m_count": 0,
+        "7_15m_brands": [],
+        "gt_20m_brands": []
+      },
+      "mtb": {
+        "count": 52,
+        "1_7m_count": 32,
+        "7_15m_count": 2,
+        "gt_20m_count": 0,
+        "7_15m_brands": [
+          "United"
+        ],
+        "gt_20m_brands": []
+      }
+    },
+    "id_road_bike_12_15m": {
+      "count": 1,
+      "brands": [
+        "CAMP"
+      ]
+    },
+    "id_gravel_7_15m": {
+      "count": 1,
+      "brands": [
+        "Element"
+      ]
+    },
+    "id_hybrid_7_15m": {
+      "count": 0,
+      "brands": []
+    },
+    "id_road_bike_gt_20m": {
+      "count": 7,
+      "brands": [
+        "Pinarello",
+        "PINARELLO",
+        "CAMP",
+        "Trek",
+        "Polygon",
+        "Aero"
+      ]
+    },
+    "id_top10_brands": [
+      {
+        "brand": "Polygon",
+        "rank": 1,
+        "advantage": "印尼最具国际知名度本土品牌 · 东爪哇总部 · 远销欧美 · 赞助多支国际山地车职业车队",
+        "price_range": "Rp 5M-30M+",
+        "categories": "MTB / 公路 / 电助力",
+        "phx_strategy": "国际化对标 · 避开中端 (Rp 5-10M) 红海",
+        "roda_link": true
+      },
+      {
+        "brand": "United Bike",
+        "rank": 2,
+        "advantage": "印尼最大自行车制造企业 · 注重创新与高科技 · 全车型覆盖",
+        "price_range": "Rp 5M-15M",
+        "categories": "城市通勤 / MTB / 公路",
+        "phx_strategy": "印尼市占率第一 = 凤凰避其锋芒",
+        "roda_link": true
+      },
+      {
+        "brand": "Pacific",
+        "rank": 3,
+        "advantage": "高性价比 · 印尼本土极高市占率 · 极佳口碑 · 通勤/入门首选",
+        "price_range": "Rp 2M-10M",
+        "categories": "通勤 / 入门级",
+        "phx_strategy": "低端不竞争 · Phoenix 跳过入门价位",
+        "roda_link": true
+      },
+      {
+        "brand": "Wimcycle",
+        "rank": 4,
+        "advantage": "印尼家喻户晓传奇老牌 · 产品耐用设计经典",
+        "price_range": "Rp 3M-12M",
+        "categories": "MTB / 儿童车",
+        "phx_strategy": "老品牌忠诚度高 · Phoenix 难切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Element",
+        "rank": 5,
+        "advantage": "印尼年轻群体火爆 · 时尚折叠车和城市休闲车代表",
+        "price_range": "Rp 5M-26M",
+        "categories": "折叠 / 城市休闲 / 砾石",
+        "phx_strategy": "折叠车子品类 Phoenix 可切入",
+        "roda_link": true
+      },
+      {
+        "brand": "Thrill Bicycle",
+        "rank": 6,
+        "advantage": "专注 MTB / 越野赛车 · 车架坚固 · 极限运动/山地爱好者喜爱",
+        "price_range": "Rp 5M-15M",
+        "categories": "MTB / 越野",
+        "phx_strategy": "V2 MTB 大单品直接对标",
+        "roda_link": true
+      },
+      {
+        "brand": "Genio Bike",
+        "rank": 7,
+        "advantage": "价格亲民设计现代 · 儿童与成人自行车 · 推广全民骑行",
+        "price_range": "Rp 2M-8M",
+        "categories": "儿童 / 成人入门",
+        "phx_strategy": "低价位不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Patrol",
+        "rank": 8,
+        "advantage": "高端 MTB · 优越几何设计与避震系统 · 专业越野/速降声誉",
+        "price_range": "Rp 8M-30M+",
+        "categories": "高端 MTB / 速降",
+        "phx_strategy": "V2 高端 MTB 战略对标 (=25K+ 蓝海真竞品)",
+        "roda_link": false
+      },
+      {
+        "brand": "Atlantis",
+        "rank": 9,
+        "advantage": "入门级市场强势 · 短途通勤/校园学生青睐",
+        "price_range": "Rp 1.5M-4M",
+        "categories": "入门 / 通勤",
+        "phx_strategy": "极低价不竞争",
+        "roda_link": true
+      },
+      {
+        "brand": "Tabibitho",
+        "rank": 10,
+        "advantage": "轻量化与骑行体验 · 城市休闲/轻量 MTB · 年轻化现代设计",
+        "price_range": "Rp 4M-12M",
+        "categories": "城市休闲 / 轻量 MTB",
+        "phx_strategy": "城市休闲子品类可考虑",
+        "roda_link": true
+      }
+    ],
+    "id_channels": [
+      {
+        "name": "Rodalink",
+        "type": "官方经销商",
+        "coverage": "印尼全国",
+        "note": "Polygon / United / Pacific / Element / Wimcycle / Thrill / Genio / Atlantis / Tabibitho 9 品牌官方 dealer",
+        "url": "https://www.rodalink.com/"
+      },
+      {
+        "name": "serbasepeda.com",
+        "type": "专门零售",
+        "coverage": "印尼 (13 类目)",
+        "note": "首页 bestseller 8 整车 SKU (CF 拦截详情页)",
+        "url": "https://serbasepeda.com/"
+      },
+      {
+        "name": "Shopee ID",
+        "type": "电商",
+        "coverage": "印尼 1.5 亿月活",
+        "note": "反爬挡 (PerimeterX) = 仅 bestseller 可见",
+        "url": "https://shopee.co.id/"
+      },
+      {
+        "name": "Tokopedia",
+        "type": "电商",
+        "coverage": "印尼第二大电商",
+        "note": "反爬挡 (DataDome) = 仅 bestseller 可见",
+        "url": "https://www.tokopedia.com/"
+      }
+    ],
+    "id_high_end_competitors": [
+      {
+        "brand": "Patrol",
+        "note": "高端 MTB · 8M-30M+ · V2 25K+ 真竞品",
+        "roda_link": false
+      },
+      {
+        "brand": "Polygon",
+        "note": "国际品牌 · 5M-30M+ · MTB/公路/电助力全覆盖",
+        "roda_link": true
+      },
+      {
+        "brand": "Element",
+        "note": "折叠/城市休闲/砾石 · 5M-26M · 折叠子品类可切入",
+        "roda_link": true
+      }
+    ],
+    "strategy_v2": {
+      "bd_22k_uci_mtb": {
+        "rationale": "BD 15-25K 57 SKU 17 品牌，Phoenix 缺席；> 25K 30 SKU 6 品牌 = Rockrider/Veloce/Core 主导",
+        "target_price": "22K-25K BDT",
+        "top_competitors_gt_25k": [
+          {
+            "brand": "Rockrider",
+            "model": "Rockrider XC 404",
+            "price": 65000
+          },
+          {
+            "brand": "Rockrider",
+            "model": "Rockrider Pro Gen 4 (2026)",
+            "price": 45000
+          },
+          {
+            "brand": "Rockrider",
+            "model": "Rockrider Xc501",
+            "price": 42000
+          },
+          {
+            "brand": "Rockrider",
+            "model": "ROCKRIDER XC 403",
+            "price": 40000
+          },
+          {
+            "brand": "Rockrider",
+            "model": "ROCKRIDER XC 403 (2023)",
+            "price": 40000
+          }
+        ]
+      },
+      "id_thunder_id_mtb": {
+        "rationale": "ID 7-15M 6 SKU 品牌 ['Element', 'United', 'Pacific', 'United', 'CAMP', 'Look']，无 SGS 中国品牌",
+        "target_price": "Rp 9.5M",
+        "id_competitors": [
+          "Pacific",
+          "Element",
+          "CAMP",
+          "Look",
+          "United"
+        ]
+      },
+      "bd_road_bike": {
+        "rationale": "BD 17 品牌 公路车品类仅 Hero 1 SKU = 真空",
+        "target_price": "13K-15K BDT"
+      }
+    },
+    "data_consistency": {
+      "source": "data/latest.json#bd.price_pool + id.price_pool + brand_metrics",
+      "excluded_keywords": [
+        "kid",
+        "baby",
+        "child",
+        "folding",
+        "bmx",
+        "stunt",
+        "helmet",
+        "lamp",
+        "light",
+        "bracket",
+        "fender",
+        "bell",
+        "lock",
+        "bottle",
+        "bag",
+        "carrier",
+        "pump",
+        "sticker",
+        "seat post",
+        "chain",
+        "pedal",
+        "grip",
+        "saddle",
+        "tire",
+        "tyre",
+        "tube",
+        "spoke",
+        "handle",
+        "bar end",
+        "glove",
+        "wear",
+        "jacket",
+        "mirror",
+        "pannier",
+        "rack",
+        "spinning",
+        "statif",
+        "treadmill",
+        "kardio",
+        "elliptical",
+        "recumbent",
+        "latis",
+        "fitnes",
+        "sepeda statis",
+        "orbitrack",
+        "treadmil"
+      ],
+      "mid_high_filter": "BD 5K-30K BDT + 排除童车/折叠/电动/配件",
+      "gt_25k_definition": "price >= 25000 BDT (含中高端池外)"
     }
   },
   "data_quality": {
