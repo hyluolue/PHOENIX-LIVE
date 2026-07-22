@@ -1399,7 +1399,7 @@ function renderV1() {
       <div class="kpi"><strong>KPI:</strong> ${esc(it.kpi)}</div>
     </div>
   `).join('');
-  document.getElementById('v1-grid').innerHTML = html || '<div class="empty">无匹配</div>';
+  const _g = document.getElementById('v1-grid'); if (_g) _g.innerHTML = html || '<div class="empty">无匹配</div>';
 }
 
 function renderNotes() {
