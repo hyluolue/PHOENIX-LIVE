@@ -1354,7 +1354,7 @@ async function loadNotes() {
 }
 
 function renderV2Frames() {
-  const html = [];
+  let html = [];
   const frames = V2_DRAFT.four_frames;
   for (const [k, v] of Object.entries(frames)) {
     let fields = '';
@@ -1367,7 +1367,7 @@ function renderV2Frames() {
 }
 
 function renderFrameworks() {
-  const html = [];
+  let html = [];
   for (const [k, frame] of Object.entries(V1_FRAMEWORK_MAP)) {
     const items = frame.items.map(it =>
       `<div class="item-row"><span class="id-num">#${it.id}</span><span class="role">${esc(it.role)}</span><span class="note">${esc(it.note)}</span></div>`
