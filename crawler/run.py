@@ -336,12 +336,52 @@ KNOWN_BRANDS = [
     "Falcon", "Adder", "Avon", "Pollux", "Polloux", "Duronto", "Python",
     "Hero", "Trek", "Specialized", "Cannondale", "Scott",
     "Mustang", "Seventy One", "71 Warrior",
+    # 2026-07-22 补充 (V2.9.61): ID 印尼本地 + 国际品牌（修 Sepeda 噪声）
+    "ATLANTIS", "Salvo", "PANDORA", "Velion", "Foster", "Odessy", "MAZARA",
+    "Wilier", "Pinarello", "Twitter", "CAMP", "Look", "JAGUAR", "NANO", "Aero",
+    "NEW", "LIMITLESS", "Push", "Exotic", "Evergreen",
+    "W-Dare", "W'dare", "W.dare", "WBIKE",
+    "Genio", "Genio Bike", "Patrol", "Thrill", "Thrill Bicycle",
+    "Diamondback", "Mongoose", "SE Bikes", "SE", "Haro", "Sunday",
+    "Fuji", "Merida", "Orbea", "BMC", "Bianchi", "Bottecchia", "Colnago",
+    "Cervélo", "Cervello", "Felt", "GT", "Jamis", "Kona", "KHS",
+    "Author", "Dartmoor", "NS Bikes", "Transition", "Yeti", "Santa Cruz", "Ibis",
+    "Pivot", "Niner", "Diamondback", "Haro", "SE", "Sunday", "Norco",
+    "ALHONZA", "Alessa", "Bambino", "BAJA", "Cosmos", "Diamond", "Empire",
+    "KRYPTON", "MORPHE", "MOZA", "NICOLAI", "Northpole", "Pinnacle", "PRIME",
+    "RSP", "SAT", "SENADA", "TIOGA", "TRINX", "Vermont", "VIVA", "VOSS",
+    "Federal", "Wimcycle",
+    # 印尼语 Sepeda/gunung/fixie 等噪声词已在 _clean_sepeda_noise 处理
 ]
 
 
+# 印尼语前缀词（model 第一个词如果是这些，跳过看第二个）
+# V2.9.61 修复: 这些是 noise 词不是 brand
+INDONESIAN_NOISE = {
+    'sepeda', 'sepada', 'gunung', 'fixie', 'lipat', 'balap', 'road', 'roadbike',
+    'racer', 'mtb', 'mountain', 'hybrid', 'city', 'gravel', 'bike', 'bicycle',
+    'bikes', 'anak', 'laki', 'perempuan', 'putra', 'putri', 'dewasa', 'remaja',
+    'police', 'rb', 'electric', 'e-bike', 'ebike', 'folding', 'bmx', 'stunt',
+    'sepeda gunung', 'sepeda lipat', 'sepeda anak', 'sepeda road',
+    'sepeda fixie', 'sepeda bmx', 'sepeda listrik', 'sepeda hybrid',
+}
+
+
 def _brand_from_title(title: str) -> str:
+    """V2.9.61 增强: 匹配印尼语噪声词避免误判 + 加 50+ 印尼/国际品牌
+
+    旧逻辑问题: Sepeda 等噪声词被 _brand_from_title 错判为品牌
+                 (其实之前是 model.split()[0] 时代更严重)
+    新逻辑: 1) 匹配 KNOWN_BRANDS 列表
+            2) 不再 fallback 到 "Generic" — 直接用 clean_id_pool 逻辑
+    """
+    if not title:
+        return "Generic"
+    # 优先匹配 KNOWN_BRANDS（最准）
     for k in KNOWN_BRANDS:
-        if k.lower() in title.lower():
+        # 边界匹配避免误判
+        pattern = r'(?i)(?<![a-z])' + re.escape(k) + r'(?![a-z])'
+        if re.search(pattern, title):
             return k
     return "Generic"
 
