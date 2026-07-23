@@ -97,6 +97,16 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-23",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
   "id": [
@@ -197,7 +207,17 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-23",
+      "sku_count": 112,
+      "brand_count": 36,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-07-22T16:01:55+08:00"
+  "last_updated": "2026-07-23T09:01:52+08:00"
 }
