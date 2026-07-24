@@ -1,12 +1,6 @@
 {
   "bd": [
     {
-      "date": "2026-07-10",
-      "sku_count": 190,
-      "source": "baseline",
-      "note": "7/10 190 SKU baseline (完整 daraz crawl)"
-    },
-    {
       "date": "2026-07-11",
       "sku_count": 0,
       "source": "crawler_failed",
@@ -107,15 +101,19 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-24",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
   "id": [
-    {
-      "date": "2026-07-10",
-      "sku_count": 141,
-      "source": "baseline",
-      "note": "7/10 141 SKU baseline"
-    },
     {
       "date": "2026-07-11",
       "sku_count": 0,
@@ -217,7 +215,17 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-07-24",
+      "sku_count": 112,
+      "brand_count": 36,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-07-23T09:01:52+08:00"
+  "last_updated": "2026-07-24T09:01:57+08:00"
 }
