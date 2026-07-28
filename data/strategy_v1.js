@@ -167,57 +167,20 @@ const V1_STRATEGIES = [
     kpi: '印尼华人圈认知' },
 ];
 
-// V1 框架归类（4 大框架：STP / 4P / 品牌资产 / 飞轮）
+// V2.9.63 (2026-07-28): V1_FRAMEWORK_MAP 删除
+// 4 框架交叉验证 = V2 草稿最新实战 (data/strategy_v1.js 内的 V2_DRAFT.four_frames)
+// V1 阶段 28 items 实战锚定 (含 Tornado Elite 24.5K+/Thunder 16.8-22K/Commuter Pro 12.8-16.5K/ID Polygon Fighter Rp 15M) 已老化
+// V1_STRATEGIES 32 条原文保留作历史归档 (dashboard 不渲染, 注释 '已归档到 history')
 const V1_FRAMEWORK_MAP = {
-  stp: { name: 'STP (Segmentation-Targeting-Positioning)', count: 7,
-    items: [
-      { id: 1, role: '定位', note: 'BD=中高端MTB安全认证第一品牌' },
-      { id: 6, role: '定位链', note: 'BD 第一性原理链 → 定位' },
-      { id: 7, role: '细分+目标', note: 'BD 聚焦 26-29 寸 BDT 14-32K' },
-      { id: 11, role: '细分空白', note: 'BD 竞品不打认证 MTB' },
-      { id: 15, role: '细分+目标', note: 'ID 聚焦 27.5-29 寸 Rp 8-18M' },
-      { id: 17, role: '细分', note: 'BD 14 品牌竞品地图' },
-      { id: 28, role: '定位链', note: 'ID 第一性原理链 → 定位' },
-    ],
-    gap: 'V1 缺少"基础代步→中端"过渡人群 STP 切片' },
-
-  '4p': { name: '4P (Product/Price/Place/Promotion)', count: 9,
-    items: [
-      { id: 3, role: '价格/产品', note: 'BD Tornado Elite BDT 28K 凡勃伦' },
-      { id: 4, role: '促销/内容', note: 'BD 董氏文案 4 式' },
-      { id: 10, role: '产品分层', note: 'BD KANO 必备/渴望' },
-      { id: 18, role: '产品 SKU', note: 'Tornado Elite 24.5K+' },
-      { id: 19, role: '产品 SKU', note: 'Thunder 16.8-22K' },
-      { id: 20, role: '产品 SKU', note: 'Commuter Pro 12.8-16.5K' },
-      { id: 21, role: '产品分层', note: 'BD KANO 必/渴望' },
-      { id: 25, role: '价格/产品', note: 'ID Polygon Fighter Rp 15M' },
-      { id: 26, role: '促销/内容', note: 'ID 董氏文案 4 式' },
-      { id: 29, role: '产品分层', note: 'ID KANO 必/渴望' },
-    ],
-    gap: '4P 没有显式映射到 STP 细分上。Commuter Pro 是入门通勤但 STP 没识别基础用户' },
-
-  brand_assets: { name: '品牌资产 (Identity/Awareness/Loyalty/Association/Perceived Quality)', count: 8,
-    items: [
-      { id: 5, role: '感知质量', note: 'BD 护城河 SGS+BSTI' },
-      { id: 13, role: '品牌资产/认知', note: 'ID 核心战略：认证+文化+UCI' },
-      { id: 14, role: '品牌资产/UCI', note: 'ID UCI 车架研发' },
-      { id: 23, role: '品牌哲学', note: '诚实定位 = 品牌哲学' },
-      { id: 24, role: '认知', note: 'BD 耐久认知占有率 >40%' },
-      { id: 27, role: '感知质量', note: 'ID 护城河 SGS+SNI' },
-      { id: 31, role: '认知', note: 'ID 安全认证联想度' },
-      { id: 32, role: '联想/认同', note: 'ID 民族文化+华人情感' },
-    ],
-    gap: '"耐久"在 KPI 里闪现 1 次，没沉淀为系统性品牌资产' },
-
-  flywheel: { name: '飞轮 (Growth Flywheel)', count: 4,
-    items: [
-      { id: 2, role: 'BD 飞轮', note: 'KOL→社群→Daraz→口碑→俱乐部' },
-      { id: 8, role: 'BD 圈层', note: '达卡吉大港俱乐部→会员→配件' },
-      { id: 16, role: 'ID 圈层', note: 'Strava→KOL→会员→配件' },
-    ],
-    gap: 'V1 飞轮假设新用户来自"被内容吸引"，没考虑"老用户升维"路径' },
+  stp: { name: 'STP (Segmentation-Targeting-Positioning)', count: 0,
+    items: [], gap: 'V1 32 条已归档 · V2 草稿最新实战见 data/strategy_v1.js V2_DRAFT.four_frames' },
+  '4p': { name: '4P (Product/Price/Place/Promotion)', count: 0,
+    items: [], gap: 'V1 32 条已归档 · V2 草稿最新实战见 data/strategy_v1.js V2_DRAFT.four_frames' },
+  brand_assets: { name: '品牌资产 (Identity/Awareness/Loyalty/Association/Perceived Quality)', count: 0,
+    items: [], gap: 'V1 32 条已归档 · V2 草稿最新实战见 data/strategy_v1.js V2_DRAFT.four_frames' },
+  flywheel: { name: '飞轮 (Growth Flywheel)', count: 0,
+    items: [], gap: 'V1 32 条已归档 · V2 草稿最新实战见 data/strategy_v1.js V2_DRAFT.four_frames' },
 };
-
 // V2 草稿（基于 4 框架 + Q1-Q4 答案）
 const V2_DRAFT = {
   core_narrative: '凤凰让每一程代步，都走得更久更远。',
