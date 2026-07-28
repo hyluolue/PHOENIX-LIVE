@@ -190,30 +190,8 @@ footer { text-align: center; padding: 30px 0 10px; color:#cbd5e1; font-size: 11p
       <a href="./strategy.html" class="active">🧠 策略迭代</a>
     </div>
     <a href="https://phoenix-live.pages.dev/" class="btn-back">← 返回总览</a>
-</header><!-- V2 战略完成度跟踪（自动从 dashboard_metrics 计算） -->
-<div class="section dark" style="border-left:4px solid #c8102e">
-  <h2>📊 V2 战略完成度跟踪 <span class="badge">实时 · dashboard_metrics 驱动</span></h2>
-  <div class="kpi-grid" style="margin-bottom:14px">
-    <div class="kpi dynamic">
-      <div class="kpi-label">🎯 V2 战略大单品</div>
-      <div class="kpi-value" id="kp-v2-product">⏳ 加载中…</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">📈 BD 评分排名</div>
-      <div class="kpi-value" id="kp-v2-rank">⏳ 加载中…</div>
-    </div>
-    <div class="kpi accent">
-      <div class="kpi-label">🚫 红海/💎 蓝海</div>
-      <div class="kpi-value" id="kp-v2-redblue">⏳ 加载中…</div>
-    </div>
-    <div class="kpi gap">
-      <div class="kpi-label">⚠️ 顶价差距</div>
-      <div class="kpi-value" id="kp-v2-gap">⏳ 加载中…</div>
-    </div>
-  </div>
-  <div id="v2-progress" style="font-size:12px;color:#e2e8f0;line-height:1.8">⏳ 加载中…</div>
-  <div style="margin-top:10px;font-size:10px;color:#cbd5e1">勾连：Tab #3 产品矩阵 + Tab #6 任务 OKR + dashboard_metrics 真实数据 = 战略可追溯</div>
-</div>
+</header>
+<!-- V2.9.62 (2026-07-28): V2 战略完成度段删除 (策略迭代是营销理论支撑, 不需要 OKR 内容, OKR 全部在 tasks.html) -->
 
 <!-- V2.6.1 ID Day 7 客户交付里程碑（V2.6 → V2.6.1 客户判断修订） -->
 <div class="section" style="border-left:4px solid #c8102e;background:linear-gradient(135deg,rgba(200,16,46,.06),#fff)">
@@ -449,67 +427,7 @@ const LATEST_URL = '../data/latest.json';
 let currentQuad = 'all';
 let allNotes = [];
 
-// V2 战略完成度跟踪（自动从 dashboard_metrics 计算）
-async function loadV2Progress() {
-  const el = document.getElementById('v2-progress');
-  try {
-    const r = await fetch(LATEST_URL + '?t=' + Date.now(), { cache: 'no-store' });
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const data = await r.json();
-    const dm = data.dashboard_metrics || {};
-    const totals = dm.totals || {};
-    const phxGap = dm.phx_gap || {};
-    const id715 = dm.id_7_15m || {};
-    // V2 KR 进度计算
-    const phxSku = totals.phx_bd_mid_high || 0;
-    const skuPct = Math.min((phxSku / 20) * 100, 100);
-    const phxMax = phxGap.phx_max_price || 0;
-    const maxPct = Math.min((phxMax / 40000) * 100, 100);
-    const phxAsp = totals.phx_bd_asp || 0;
-    const aspPct = Math.min((phxAsp / 22000) * 100, 100);
-    const idSku = id715.count || 0;
-    const idPct = Math.min((idSku / 5) * 100, 100);
-    const overall = (skuPct + maxPct + aspPct + idPct) / 4;
-    // 4 个 KPI 卡片（V2 战略大单品 + 排名 + 红蓝海 + 顶价差距）
-    const elKpProduct = document.getElementById('kp-v2-product');
-    if (elKpProduct) elKpProduct.innerHTML = `<b style="color:#c8e6c9">${phxSku}/20 SKU</b><br><small>公路车 5 SKU + ID 折叠 3 SKU</small>`;
-    const elKpRank = document.getElementById('kp-v2-rank');
-    if (elKpRank) elKpRank.innerHTML = `<b>#14 / 27 品牌</b><br><small>当前 44.5 分 · 目标 Top 3 (75+)</small>`;
-    const elKpRedBlue = document.getElementById('kp-v2-redblue');
-    if (elKpRedBlue) elKpRedBlue.innerHTML = `<b>🚫 25-40K 红海 25 SKU</b><br><b style="color:#c8e6c9">💎 40-60K 真空 5 SKU</b>`;
-    const elKpGap = document.getElementById('kp-v2-gap');
-    if (elKpGap) elKpGap.innerHTML = `<b>${phxMax.toLocaleString()} / 65,000 BDT</b><br><small>行业顶价 ${(phxGap.industry_max_brand||'')} ${(phxGap.industry_max_price||0).toLocaleString()}</small>`;
-    el.innerHTML = `
-      <div style="margin-bottom:10px">
-        <b style="color:#ff9cae">🎯 V2 整体完成度：${overall.toFixed(0)}%</b>
-        <div style="background:rgba(255,255,255,.1);border-radius:6px;height:8px;margin-top:4px;overflow:hidden">
-          <div style="background:linear-gradient(90deg,#c8102e,#ff9cae);height:8px;width:${overall.toFixed(0)}%;transition:width .5s"></div>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
-        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
-          <div style="font-size:11px;color:#cbd5e1">KR1.2 SKU 数量 <span style="color:#5eead4">${phxSku}/20</span></div>
-          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${skuPct.toFixed(0)}%"></div></div>
-        </div>
-        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
-          <div style="font-size:11px;color:#cbd5e1">KR1.3 顶价 <span style="color:#5eead4">${phxMax.toLocaleString()}/40K</span></div>
-          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${maxPct.toFixed(0)}%"></div></div>
-        </div>
-        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
-          <div style="font-size:11px;color:#cbd5e1">KR1.4 ASP <span style="color:#5eead4">${phxAsp.toLocaleString()}/22K</span></div>
-          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${aspPct.toFixed(0)}%"></div></div>
-        </div>
-        <div style="background:rgba(255,255,255,.05);padding:10px;border-radius:6px">
-          <div style="font-size:11px;color:#cbd5e1">KR2.4 ID SKU <span style="color:#5eead4">${idSku}/5</span></div>
-          <div style="background:rgba(255,255,255,.1);border-radius:4px;height:6px;margin-top:4px"><div style="background:#5eead4;height:6px;width:${idPct.toFixed(0)}%"></div></div>
-        </div>
-      </div>
-      <div style="margin-top:10px;font-size:11px;color:#cbd5e1">勾连：每条 KR → Tab #3 product-matrix 蓝海 + Tab #6 task OKR 行动 + Tab #7 dtc 差评</div>
-    `;
-  } catch (e) {
-    el.innerHTML = '<div style="color:#cbd5e1">⚠ 加载 latest.json 失败：' + e.message + '</div>';
-  }
-}
+// V2.9.62 (2026-07-28): loadV2Progress 函数删除 (策略迭代是营销理论支撑, OKR 全部在 tasks.html)
 
 async function loadNotes() {
   try {
@@ -524,7 +442,7 @@ async function loadNotes() {
 }
 
 function renderV2Frames() {
-  const html = [];
+  let html = [];
   const frames = V2_DRAFT.four_frames;
   for (const [k, v] of Object.entries(frames)) {
     let fields = '';
@@ -537,7 +455,7 @@ function renderV2Frames() {
 }
 
 function renderFrameworks() {
-  const html = [];
+  let html = [];
   for (const [k, frame] of Object.entries(V1_FRAMEWORK_MAP)) {
     const items = frame.items.map(it =>
       `<div class="item-row"><span class="id-num">#${it.id}</span><span class="role">${esc(it.role)}</span><span class="note">${esc(it.note)}</span></div>`
@@ -660,10 +578,9 @@ renderV2Frames();
 renderFrameworks();
 renderV1();
 loadNotes();
-loadV2Progress();
 
 // V2.7 数据质量门 — VPN 信号灯
-Promise.all([loadNotes(), loadV2Progress()]).then(async () => {
+Promise.all([loadNotes()]).then(async () => {
   try {
     const r = await fetch('../data/latest.json', {cache:'no-store'});
     const data = await r.json();
