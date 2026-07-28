@@ -1199,8 +1199,13 @@ function renderV2Frames() {
   const frames = V2_DRAFT.four_frames;
   for (const [k, v] of Object.entries(frames)) {
     let fields = '';
-    for (const [fk, fv] of Object.entries(v)) {
-      fields += `<div class="field"><strong>${fk}:</strong> ${esc(fv)}</div>`;
+    if (typeof v === 'string') {
+      // V2.9.63: flywheel 是 narrative 字符串, 单独渲染
+      fields = `<div class="field">${esc(v)}</div>`;
+    } else {
+      for (const [fk, fv] of Object.entries(v)) {
+        fields += `<div class="field"><strong>${fk}:</strong> ${esc(fv)}</div>`;
+      }
     }
     html += `<div class="frame-card"><h3>${k.toUpperCase()}</h3>${fields}</div>`;
   }
