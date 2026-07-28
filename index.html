@@ -36,41 +36,41 @@
     .global-kpi .kpi.phoenix .value{color:#c8102e}
     .global-kpi .kpi.gap .value{color:#a5d6a7}
     .market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-bottom:20px}
-    .market-card{background:#fff;color:#1a1a1a;border-radius:16px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-left:6px solid #1565c0;transition:transform .15s;position:relative}
-    .market-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
-    .market-card.bd{border-left-color:#1565c0}
-    .market-card.id{border-left-color:#2e7d32}
-    .market-card.priority{border-left-color:#ff9800;background:linear-gradient(135deg,#fff8e1 0%,#fff 100%)}
-    .market-card.skipped{border-left-color:#9e9e9e;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 10px,#f0f0f0 10px,#f0f0f0 20px);opacity:0.7}
-    .market-card.planned{border-left-color:#9e9e9e;background:repeating-linear-gradient(45deg,#fafafa,#fafafa 10px,#f5f5f5 10px,#f5f5f5 20px)}
-    .market-card.priority .opportunity{color:#e65100}
-    .market-card.planned .opportunity{color:#cbd5e1;font-style:italic}
+    .market-card{background:rgba(15,23,42,.95);color:#cbd5e1;border-radius:16px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.4);border-left:6px solid #5eead4;transition:transform .15s;position:relative}
+    .market-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.6)}
+    .market-card.bd{border-left-color:#5eead4}
+    .market-card.id{border-left-color:#a7f3d0}
+    .market-card.priority{border-left-color:#fcd34d;background:linear-gradient(135deg,rgba(120,53,15,.4) 0%,rgba(15,23,42,.95) 100%)}
+    .market-card.skipped{border-left-color:#64748b;background:rgba(30,41,59,.6);opacity:0.7}
+    .market-card.planned{border-left-color:#64748b;background:rgba(30,41,59,.95)}
+    .market-card.priority .opportunity{color:#fcd34d}
+    .market-card.planned .opportunity{color:#94a3b8;font-style:italic}
     .market-card .head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
     .market-card .flag{font-size:32px}
-    .market-card .title{font-size:18px;font-weight:800;color:#0d47a1;flex:1}
-    .market-card.planned .title{color:#cbd5e1}
-    .market-card .status-tag{font-size:10px;padding:2px 8px;border-radius:3px;font-weight:700;background:#1b5e20;color:#a5d6a7}
-    .market-card.priority .status-tag{background:#ff9800;color:#fff}
-    .market-card.planned .status-tag{background:#9e9e9e;color:#fff}
-    .market-card.skipped .status-tag{background:#9e9e9e;color:#fff;text-decoration:line-through}
-    .market-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:12px}
+    .market-card .title{font-size:18px;font-weight:800;color:#93c5fd;flex:1}
+    .market-card.planned .title{color:#94a3b8}
+    .market-card .status-tag{font-size:10px;padding:2px 8px;border-radius:3px;font-weight:700;background:rgba(6,78,59,.95);color:#a7f3d0;border:1px solid #34d399}
+    .market-card.priority .status-tag{background:rgba(120,53,15,.95);color:#fcd34d;border-color:#fcd34d}
+    .market-card.planned .status-tag{background:rgba(30,41,59,.95);color:#94a3b8;border-color:#64748b}
+    .market-card.skipped .status-tag{background:rgba(30,41,59,.95);color:#94a3b8;border-color:#64748b;text-decoration:line-through}
+    .market-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:12px}
     .market-card .row:last-of-type{border-bottom:none}
-    .market-card .row .key{color:#cbd5e1;font-weight:600}
-    .market-card .row .val{color:#0d47a1;font-weight:800}
-    .market-card .row .val.phoenix{color:#c8102e}
-    .market-card .row .val.gap{color:#2e7d32}
+    .market-card .row .key{color:#94a3b8;font-weight:600}
+    .market-card .row .val{color:#5eead4;font-weight:800}
+    .market-card .row .val.phoenix{color:#fca5a5}
+    .market-card .row .val.gap{color:#a7f3d0}
     .market-card .opportunity{background:rgba(6,78,59,.95);border-left:3px solid #34d399;padding:10px 12px;border-radius:6px;margin-top:12px;font-size:12px;line-height:1.5;color:#a7f3d0}
     .market-card .opportunity b{color:#c8102e}
-    .market-card.planned .opportunity{background:rgba(0,0,0,.04);border-left-color:#9e9e9e;color:#cbd5e1}
+    .market-card.planned .opportunity{background:rgba(30,41,59,.95);border-left-color:#64748b;color:#94a3b8}
     .market-card .link-row{display:flex;gap:8px;margin-top:12px}
-    .market-card .link-row a{flex:1;padding:6px 10px;background:#1565c0;color:#fff;border-radius:6px;font-size:11px;font-weight:700;text-align:center;text-decoration:none}
-    .market-card .link-row a:hover{background:#1976d2}
-    .market-card .link-row a.green{background:#2e7d32}
-    .market-card .link-row a.green:hover{background:#1b5e20}
-    .market-card.priority .link-row a{background:#ff9800}
-    .market-card.priority .link-row a:hover{background:#e65100}
-    .market-card.planned .link-row a{background:#9e9e9e;pointer-events:none}
-    .market-card.skipped .link-row a{background:#9e9e9e;pointer-events:none;text-decoration:line-through}
+    .market-card .link-row a{flex:1;padding:6px 10px;background:rgba(30,58,138,.95);color:#93c5fd;border:1px solid #5eead4;border-radius:6px;font-size:11px;font-weight:700;text-align:center;text-decoration:none}
+    .market-card .link-row a:hover{background:rgba(30,58,138,1)}
+    .market-card .link-row a.green{background:rgba(6,78,59,.95);color:#a7f3d0;border-color:#34d399}
+    .market-card .link-row a.green:hover{background:rgba(6,78,59,1)}
+    .market-card.priority .link-row a{background:rgba(120,53,15,.95);color:#fcd34d;border-color:#fbbf24}
+    .market-card.priority .link-row a:hover{background:rgba(120,53,15,1)}
+    .market-card.planned .link-row a{background:rgba(30,41,59,.95);color:#94a3b8;border-color:#64748b;pointer-events:none}
+    .market-card.skipped .link-row a{background:rgba(30,41,59,.95);color:#94a3b8;border-color:#64748b;pointer-events:none;text-decoration:line-through}
   </style>
 </head>
 <body>
