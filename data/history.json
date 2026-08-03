@@ -1,6 +1,36 @@
 {
   "bd": [
     {
+      "date": "2026-07-10",
+      "sku_count": 190,
+      "source": "baseline",
+      "note": "7/10 190 SKU baseline (完整 daraz crawl)"
+    },
+    {
+      "date": "2026-07-11",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "daraz SSL EOF"
+    },
+    {
+      "date": "2026-07-12",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "daraz SSL EOF"
+    },
+    {
+      "date": "2026-07-13",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "daraz SSL EOF"
+    },
+    {
+      "date": "2026-07-14",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "daraz SSL EOF"
+    },
+    {
       "date": "2026-07-15",
       "sku_count": 0,
       "source": "crawler_failed",
@@ -69,57 +99,7 @@
       "note": "safe_crawl playwright"
     },
     {
-      "date": "2026-07-23",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-24",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-28",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-29",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-30",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-31",
+      "date": "2026-08-03",
       "sku_count": 190,
       "brand_count": 27,
       "phx_count": 17,
@@ -130,6 +110,36 @@
     }
   ],
   "id": [
+    {
+      "date": "2026-07-10",
+      "sku_count": 141,
+      "source": "baseline",
+      "note": "7/10 141 SKU baseline"
+    },
+    {
+      "date": "2026-07-11",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "tokopedia/shopee failed"
+    },
+    {
+      "date": "2026-07-12",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "tokopedia/shopee failed"
+    },
+    {
+      "date": "2026-07-13",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "tokopedia/shopee failed"
+    },
+    {
+      "date": "2026-07-14",
+      "sku_count": 0,
+      "source": "crawler_failed",
+      "note": "tokopedia/shopee failed"
+    },
     {
       "date": "2026-07-15",
       "sku_count": 0,
@@ -199,57 +209,7 @@
       "note": "safe_crawl playwright"
     },
     {
-      "date": "2026-07-23",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-24",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-28",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-29",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-30",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-07-31",
+      "date": "2026-08-03",
       "sku_count": 112,
       "brand_count": 36,
       "phx_count": 0,
@@ -259,5 +219,5 @@
       "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-07-31T09:01:40+08:00"
+  "last_updated": "2026-08-03T08:35:51+08:00"
 }
