@@ -235,6 +235,125 @@ footer {
       <div class="loading">等待 Shopee ID 评论数据 (PENDING user-saved HTML) ...</div>
       <div id="reviews-grid" class="review-grid"></div>
       <h2>📱 社媒提及 <span class="badge muted" id="badge-social">PENDING APIFY</span></h2>
+<!-- V2.9.81 (2026-08-06): 🧠 AI 评论洞察提示词 (火乐方法论) - DTC 评论分析的"AI 助产士" -->
+<div class="section" style="background:linear-gradient(135deg,rgba(15,23,42,.95) 0%,rgba(120,53,15,.95) 50%,rgba(76,29,149,.95) 100%);border:1px solid #fcd34d;border-left:4px solid #fcd34d;padding:18px 22px;margin:18px 0;border-radius:6px">
+  <h2><span class="flag">🧠</span>AI 评论洞察提示词 (火乐方法论) <span class="badge warn">DTC 评论分析</span> <span class="small" style="color:#fcd34d">商品卖点藏在用户评论里 → 3 购买理由 + 3 风险 + 5 文案 + 1 短视频 hook</span></h2>
+
+  <div style="font-size:11px;color:#cbd5e1;margin-bottom:14px;line-height:1.7">
+    <b style="color:#fcd34d">🎯 核心命题:</b>用户掏钱 > 分析推论.<span style="color:#a7f3d0"> 商品卖点不是想出来的,而是藏在用户评论里</span>. 抓评论只是原材料, <b style="color:#fcd34d">用 AI 把评论提炼成可落地输出</b> (购买理由/风险/文案/短视频) = 4 国市场战略落地的"助产士".
+  </div>
+
+  <!-- 1. 火乐原版 prompt -->
+  <h3 style="color:#fcd34d;font-size:14px;margin:16px 0 8px">📜 火乐原版 prompt (完整可复用)</h3>
+  <div style="background:rgba(15,23,42,.6);border-left:3px solid #fcd34d;padding:14px 18px;margin:8px 0;font-size:11px;line-height:1.8;color:#cbd5e1;border-radius:4px">
+    <b style="color:#fcd34d">角色:</b>请全面化身为<b>顶级消费者洞察专家、电商转化策略师与用户语言研究员</b>.<br><br>
+    <b style="color:#fcd34d">输入:</b>把商品的 <b>好评、差评、追评、客服问答和竞品评论</b> 发给 AI, 加上这句话:<br>
+    <span style="color:#a7f3d0;display:block;margin:8px 0;padding:8px 12px;background:rgba(94,234,212,.1);border-left:2px solid #5eead4">"不要简单统计高频词, 也不要直接套用商家宣传语. 请从评论中分别提取用户购买前最担心的问题、最终促成下单的真实原因、收货后最满意的意外价值、最容易导致退货和差评的落差、用户反复使用的真实场景, 以及用户自己说出的高信任表达."</span>
+    <b style="color:#fcd34d">输出 4 个:</b><br>
+    <b style="color:#5eead4">① 3 个最值得强调的购买理由</b> (用户最关心的卖点)<br>
+    <b style="color:#5eead4">② 3 个必须提前解释的风险</b> (买前最担心的, 提前化解)<br>
+    <b style="color:#5eead4">③ 5 句来自用户语言但需要重新原创表达的卖点文案</b> (用户真实语言+原创改写)<br>
+    <b style="color:#5eead4">④ 1 个最适合短视频开头的核心冲突</b> (hook = 抓住注意力的 3 秒)<br><br>
+    <b style="color:#ff6b6b">红线 (必须遵守):</b><br>
+    ❌ <b>禁止编造评论</b><br>
+    ❌ <b>禁止虚构功效</b><br>
+    ❌ <b>禁止隐瞒高频缺点</b><br>
+    ❌ <b>禁止把少数极端反馈当成普遍事实</b><br>
+    ✅ <b>必须区分</b>:<span style="color:#5eead4">产品真实优势 (硬指标) / 用户主观偏好 (软感受) / 无法验证的功效评价 (营销话术)</span>
+  </div>
+
+  <!-- 2. 4 国具体应用 -->
+  <h3 style="color:#fcd34d;font-size:14px;margin:16px 0 8px">🌍 4 国具体应用 (从抓评论到 AI 提炼)</h3>
+  <div style="background:rgba(120,53,15,.4);border-left:3px solid #fcd34d;padding:10px 14px;margin:8px 0;font-size:11px;line-height:1.7">
+    <b style="color:#fcd34d">4 国统一流程:</b>Apify 抓评论 → 火乐 prompt 分析 → 4 个输出 → 跟 V2.9.66 情绪传播 + V2.9.67 王老吉金句联动落地.
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:10px 0">
+    <div style="background:rgba(6,78,59,.6);border:2px solid #5eead4;padding:12px 14px;border-radius:4px">
+      <div style="color:#5eead4;font-weight:bold;font-size:13px;margin-bottom:6px">🇧🇩 BD 4 国应用</div>
+      <div style="color:#a7f3d0;font-size:10.5px;line-height:1.6">
+        <b>抓:</b>Daraz BD 评论 500-1000 条 (MTB 25-40K BDT 段位)<br>
+        <b>3 购买理由 (候):</b>夜路安全 / 达克锈 500-1000h / 雨季远征<br>
+        <b>3 风险 (候):</b>链条掉链 / 刹车异响 / 售后保修慢<br>
+        <b>5 文案:</b>王老吉范本 4 国通用 5 句 (怕 X, 买凤凰)<br>
+        <b>1 hook:</b>暴雨夜路骑手被车撞 (冲突: 看不见 vs 看得见)
+      </div>
+    </div>
+    <div style="background:rgba(76,29,149,.4);border:1px solid #c4b5fd;padding:12px 14px;border-radius:4px">
+      <div style="color:#c4b5fd;font-weight:bold;font-size:13px;margin-bottom:6px">🇮🇩 ID 4 国应用</div>
+      <div style="color:#a7f3d0;font-size:10.5px;line-height:1.6">
+        <b>抓:</b>Shopee ID + Tokopedia 评论 500-1000 条 (MTB 3-7M IDR 段)<br>
+        <b>3 购买理由 (候):</b>UCI 等级 / 中国风设计 / 华人圈认同<br>
+        <b>3 风险 (候):</b>进口税 / 配件通用性 / 维修点少<br>
+        <b>5 文案:</b>王老吉范本 ID 1 句主推 (怕褪色, 买凤凰)<br>
+        <b>1 hook:</b>异国华人 30 年没回中国, 看到凤凰想家了
+      </div>
+    </div>
+    <div style="background:rgba(120,53,15,.4);border:1px solid #fcd34d;padding:12px 14px;border-radius:4px">
+      <div style="color:#fcd34d;font-weight:bold;font-size:13px;margin-bottom:6px">🇪🇬 EG 4 国应用</div>
+      <div style="color:#a7f3d0;font-size:10.5px;line-height:1.6">
+        <b>抓:</b>Souq / Amazon EG 评论 500-1000 条 (MTB 5-15K EGP 段)<br>
+        <b>3 购买理由 (候):</b>沙漠耐久 / 达克锈氟碳漆 / 古文明设计<br>
+        <b>3 风险 (候):</b>配件通用性 / 维修 / 进口清关<br>
+        <b>5 文案:</b>王老吉范本 EG 1 句主推 (怕断链, 买凤凰)<br>
+        <b>1 hook:</b>沙漠骑手穿越撒哈拉, 自行车中途断链
+      </div>
+    </div>
+    <div style="background:rgba(30,58,138,.4);border:1px solid #93c5fd;padding:12px 14px;border-radius:4px">
+      <div style="color:#93c5fd;font-weight:bold;font-size:13px;margin-bottom:6px">🇮🇳 IN 4 国应用</div>
+      <div style="color:#a7f3d0;font-size:10.5px;line-height:1.6">
+        <b>抓:</b>Flipkart / Amazon IN 评论 500-1000 条 (MTB 15-30K INR 段)<br>
+        <b>3 购买理由 (候):</b>降温涂装 / 极温通勤 / 凉意冰裂纹设计<br>
+        <b>3 风险 (候):</b>链条热胀 / 炎热脱漆 / 售后网点<br>
+        <b>5 文案:</b>王老吉范本 IN 1 句主推 (怕烫手, 买凤凰)<br>
+        <b>1 hook:</b>班加罗尔 50°C 通勤, 普通自行车掉链, 凤凰凉意冰裂纹 0 故障
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 抓→分析→落地 闭环 -->
+  <h3 style="color:#fcd34d;font-size:14px;margin:16px 0 8px">⚙️ 抓→分析→落地 闭环 (DTC 评论运营全流程)</h3>
+  <div style="background:linear-gradient(90deg,rgba(120,53,15,.6) 0%,rgba(6,78,59,.6) 100%);border:2px solid #fcd34d;border-left:4px solid #fcd34d;padding:14px 18px;margin:12px 0;border-radius:6px">
+    <div style="color:#fcd34d;font-weight:bold;font-size:13px;margin-bottom:8px">🔄 DTC 评论运营 4 步闭环</div>
+    <div style="color:#a7f3d0;font-size:11px;line-height:1.7">
+      <b style="color:#5eead4">① 抓 (Apify)</b>: Daraz BD / Shopee ID / Tokopedia / Souq EG / Amazon IN/EG / Flipkart IN 各 500-1000 条 MTB 评论<br>
+      &nbsp;&nbsp;&nbsp;→ Apify Actor 配置中 (PENDING APIFY, 8/6 用户授权中)<br>
+      <b style="color:#5eead4">② 清洗 (Python)</b>: 去重 / 去水军 / 区分好评差评追评 / 时间窗口 (近 6 个月)<br>
+      <b style="color:#5eead4">③ 分析 (火乐 prompt)</b>: 把清洗后的评论喂给 LLM → 输出 4 个 (3 购买理由 + 3 风险 + 5 文案 + 1 hook)<br>
+      <b style="color:#5eead4">④ 落地 (跟战略锚联动)</b>:
+      <ul style="margin:6px 0;padding-left:24px;color:#a7f3d0">
+        <li><b>3 购买理由 → V3/V4 卖点</b> (V2.9.50 5 价值主张) — 哪些最该打</li>
+        <li><b>3 风险 → 客服话术 + 产品研发</b> (V2.9.68 KANO 基本型) — 哪些必须做透</li>
+        <li><b>5 文案 → 王老吉金句库</b> (V2.9.67 6.7 段) — 哪些用户真实语言可改写</li>
+        <li><b>1 hook → 短视频开头 3 秒</b> (V2.9.66 6.6 段高唤醒情绪) — 哪些冲突能抓住注意力</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. 跟 V2.9.66 + V2.9.67 联动 -->
+  <h3 style="color:#fcd34d;font-size:14px;margin:16px 0 8px">🧭 跟理论锚联动 (DTC 评论 → 战略方法论闭环)</h3>
+  <div style="background:rgba(15,23,42,.95);border:1px solid #c4b5fd;border-left:3px solid #c4b5fd;padding:12px 14px;margin:8px 0;font-size:11px;line-height:1.7">
+    <b style="color:#c4b5fd">🔗 火乐 prompt = 跨理论锚的"操作层"桥梁</b><br><br>
+    <b>🔥 火乐 prompt 跟 V2.9.66 情绪传播联动:</b><br>
+    抓评论 → 火乐 prompt 提取 <b style="color:#5eead4">"高唤醒情绪"原话</b> (5 种: 愤怒/敬畏/兴奋/焦虑/幽默) → V2.9.66 6.6 段情绪分类<br><br>
+    <b>🔥 火乐 prompt 跟 V2.9.67 王老吉金句联动:</b><br>
+    抓评论 → 火乐 prompt 提取 <b style="color:#5eead4">"5 句用户语言"</b> → V2.9.67 6.7 段"用户真实语言+原创改写" 王老吉范本<br><br>
+    <b>🔥 火乐 prompt 跟 V2.9.68 KANO 联动:</b><br>
+    抓评论 → 火乐 prompt 提取 <b style="color:#5eead4">"3 风险"</b> (差评) → V2.9.68 KANO "基本型" 必做透 → 客服话术 + 产品研发优先级<br><br>
+    <b style="color:#fcd34d">→ 最终逻辑:</b><b style="color:#a7f3d0">DTC 评论 (原材料) → 火乐 prompt (AI 提炼) → 战略锚联动 (方法论落地) = 客户掏钱 > 分析推论</b>
+  </div>
+
+  <!-- 5. 待拍板 (下一步) -->
+  <h3 style="color:#fcd34d;font-size:14px;margin:16px 0 8px">⏭ 5.1 待拍板 (下一步)</h3>
+  <div style="background:rgba(120,53,15,.95);border-left:3px solid #fcd34d;padding:10px 14px;margin:8px 0;font-size:11px;line-height:1.7;color:#fcd34d">
+    <b>⏳ 3 条线 (跟 V2.9.66/67/68 联动):</b><br>
+    1. <b>Apify 抓评论授权</b>: PENDING APIFY (8/6 用户授权中), 一授权就启动 4 国评论抓取<br>
+    2. <b>火乐 prompt 实测</b>: 抓 100 条 BD 评论试跑 → 看 4 个输出质量 → 调 prompt 模板<br>
+    3. <b>DTC 跟 V2.9.66/67 联动实战</b>: 提取的高唤醒情绪原话 + 用户语言 5 句 → 落 V2.9.66 6.6 段 + V2.9.67 6.7 段
+  </div>
+</div>
+
+
+
   <div id="social-grid" class="social-grid">
     <div class="empty-state">
       <div class="icon">🔒</div>
