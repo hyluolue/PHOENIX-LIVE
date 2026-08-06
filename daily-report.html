@@ -810,10 +810,32 @@ function renderTrend(elId, prices, cur, region) {
     return;
   }
 
-  // 取最近 7 天
-  const recent = allDays.slice(-7);
+  // V2.9.82 (2026-08-06): 改 "最近 7 个日历日" 替代 "最近 7 条 entry"
+  // 原因: history.json 缺日期时, slice(-7) 会跳过缺数据的日期, 视觉不连续
+  // 缺数据的日期显示 "缺数据" 占位 (灰色半透明)
+  const targetDates = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today + 'T00:00:00Z');
+    d.setUTCDate(d.getUTCDate() - i);
+    targetDates.push(d.toISOString().substring(0, 10));
+  }
+  const recent = targetDates.map(date => {
+    const found = allDays.find(dd => dd.date === date);
+    if (found) return found;
+    return {date, sku_count: 0, source: 'missing', note: '缺数据'};
+  });
 
   const html = recent.map(d => {
+    const labelDate = d.date === today ? `${d.date} (实时)` : d.date;
+    // V2.9.82: 缺数据占位 (灰色半透明, 不显示虚假价格)
+    if (d.source === 'missing') {
+      return `<div class="trend-row" style="opacity:0.4">
+        <div class="label">${labelDate}</div>
+        <div class="bar"></div>
+        <div class="count" style="color:#94a3b8">—</div>
+        <div class="pct" style="color:#94a3b8">缺数据</div>
+      </div>`;
+    }
     // 优先用 d.prices, 没有就用 d.sku_count + d.note 推断
     let ps = d.prices || [];
     if (!ps.length && d.sku_count) {
@@ -821,7 +843,6 @@ function renderTrend(elId, prices, cur, region) {
       // 如果 source=baseline/baseline_restored, 价格范围用 baseline 已知值
       // 否则显示 SKU count 数字
       const isBaseline = d.source && d.source.startsWith('baseline');
-      const labelDate = d.date === today ? `${d.date} (实时)` : d.date;
       if (isBaseline) {
         // baseline 190 SKU = BD 均价 ~14K BDT; 141 SKU = ID 均价 ~5M IDR (中等)
         const estAvg = cur === 'IDR' ? 5e6 : 14000;
@@ -875,9 +896,10 @@ function renderTrend(elId, prices, cur, region) {
     const delta = ((avgs[avgs.length-1] - avgs[0]) / avgs[0] * 100);
     const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '→';
     const color = delta > 0 ? '#fca5a5' : delta < 0 ? '#6ee7b7' : '#94a3b8';
-    trend = `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">${recent.length} 日均价变化: <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
+    // V2.9.82: 用 avgs.length (实际有数据的日数) 而非 recent.length (永远是 7)
+    trend = `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">${avgs.length} 日均价变化 (近 7 日): <span style="color:${color};font-weight:700;font-size:13px">${arrow} ${delta > 0 ? '+' : ''}${delta.toFixed(1)}%</span></div>`;
   } else {
-    trend = `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">当前 ${recent.length} 日数据 (实时 + 历史 baseline)</div>`;
+    trend = `<div style="margin-top:8px;font-size:11px;color:#cbd5e1">当前 ${avgs.length} 日数据 (近 7 日内, 其余缺数据)</div>`;
   }
 
   el.innerHTML = html + trend;
