@@ -1,12 +1,6 @@
 {
   "bd": [
     {
-      "date": "2026-07-16",
-      "sku_count": 0,
-      "source": "crawler_failed",
-      "note": "daraz SSL EOF"
-    },
-    {
       "date": "2026-07-17",
       "sku_count": 190,
       "source": "baseline_restored",
@@ -131,15 +125,19 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-08-14",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
   "id": [
-    {
-      "date": "2026-07-16",
-      "sku_count": 0,
-      "source": "crawler_failed",
-      "note": "tokopedia/shopee failed"
-    },
     {
       "date": "2026-07-17",
       "sku_count": 141,
@@ -265,7 +263,17 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-08-14",
+      "sku_count": 112,
+      "brand_count": 36,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-08-13T16:01:55+08:00"
+  "last_updated": "2026-08-14T09:01:41+08:00"
 }
