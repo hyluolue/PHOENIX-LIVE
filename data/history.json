@@ -1,16 +1,6 @@
 {
   "bd": [
     {
-      "date": "2026-07-21",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
       "date": "2026-07-22",
       "sku_count": 190,
       "brand_count": 27,
@@ -132,6 +122,16 @@
     },
     {
       "date": "2026-08-20",
+      "sku_count": 190,
+      "brand_count": 27,
+      "phx_count": 17,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-08-21",
       "sku_count": 190,
       "brand_count": 27,
       "phx_count": 17,
@@ -143,16 +143,6 @@
   ],
   "id": [
     {
-      "date": "2026-07-21",
-      "sku_count": 141,
-      "brand_count": 35,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
       "date": "2026-07-22",
       "sku_count": 141,
       "brand_count": 35,
@@ -281,7 +271,17 @@
         "safe_crawl"
       ],
       "note": "safe_crawl playwright"
+    },
+    {
+      "date": "2026-08-21",
+      "sku_count": 112,
+      "brand_count": 36,
+      "phx_count": 0,
+      "sources": [
+        "safe_crawl"
+      ],
+      "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-08-20T16:03:23+08:00"
+  "last_updated": "2026-08-21T09:01:59+08:00"
 }
