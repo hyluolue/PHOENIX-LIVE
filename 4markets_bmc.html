@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix 4 国商业画布 · Business Model Canvas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Phoenix dashboard base */
+  --bg-body: #0a0e1a;
+  --bg-surface: rgba(15, 23, 42, 0.95);
+  --bg-card: rgba(20, 30, 50, 0.6);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* 4 国配色 (BD/ID/EG/IN) */
+  --bd-bg: rgba(30, 58, 138, 0.95);
+  --bd-border: #5eead4;
+  --bd-text: #93c5fd;
+  --bd-accent: #5eead4;
+
+  --id-bg: rgba(6, 78, 59, 0.95);
+  --id-border: #34d399;
+  --id-text: #a7f3d0;
+  --id-accent: #a7f3d0;
+
+  --eg-bg: rgba(120, 53, 15, 0.95);
+  --eg-border: #fcd34d;
+  --eg-text: #fde68a;
+  --eg-accent: #fcd34d;
+
+  --in-bg: rgba(76, 29, 149, 0.95);
+  --in-border: #c4b5fd;
+  --in-text: #c4b5fd;
+  --in-accent: #c4b5fd;
+
+  /* Accent */
+  --primary: #5eead4;
+  --danger: #fca5a5;
+  --warning: #fcd34d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Outfit', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.55;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ================== HERO ================== */
+.hero {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-body) 100%);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 48px 24px 36px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--primary);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--primary);
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.hero-key {
+  display: inline-block;
+  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid var(--primary);
+  color: var(--text-primary);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hero-key strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ================== MARKET SWITCHER ================== */
+.switcher {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 14, 26, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.switcher-btn {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.switcher-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.switcher-btn.active-bd {
+  background: var(--bd-bg);
+  color: var(--bd-text);
+  border-color: var(--bd-border);
+}
+.switcher-btn.active-id {
+  background: var(--id-bg);
+  color: var(--id-text);
+  border-color: var(--id-border);
+}
+.switcher-btn.active-eg {
+  background: var(--eg-bg);
+  color: var(--eg-text);
+  border-color: var(--eg-border);
+}
+.switcher-btn.active-in {
+  background: var(--in-bg);
+  color: var(--in-text);
+  border-color: var(--in-border);
+}
+
+/* ================== CONTAINER ================== */
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+
+.section-sub {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================== 4 CANVASES ================== */
+.canvases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 64px;
+}
+
+.canvas {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--border-soft);
+  transition: all 0.3s ease;
+}
+
+.canvas.bd::before { background: var(--bd-border); }
+.canvas.id::before { background: var(--id-border); }
+.canvas.eg::before { background: var(--eg-border); }
+.canvas.in::before { background: var(--in-border); }
+
+.canvas:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+}
+
+.canvas-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--border-soft);
+}
+
+.canvas-flag {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.canvas-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.canvas.bd .canvas-title { color: var(--bd-text); }
+.canvas.id .canvas-title { color: var(--id-text); }
+.canvas.eg .canvas-title { color: var(--eg-text); }
+.canvas.in .canvas-title { color: var(--in-text); }
+
+.canvas-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+.canvas-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.canvas.bd .canvas-tag { background: var(--bd-bg); color: var(--bd-text); border: 1px solid var(--bd-border); }
+.canvas.id .canvas-tag { background: var(--id-bg); color: var(--id-text); border: 1px solid var(--id-border); }
+.canvas.eg .canvas-tag { background: var(--eg-bg); color: var(--eg-text); border: 1px solid var(--eg-border); }
+.canvas.in .canvas-tag { background: var(--in-bg); color: var(--in-text); border: 1px solid var(--in-border); }
+
+.canvas-spine {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1;
+}
+
+.bmc-block {
+  border-left: 2px solid var(--border-soft);
+  padding: 4px 0 4px 12px;
+  transition: border-color 0.2s;
+}
+
+.canvas.bd .bmc-block { border-left-color: var(--bd-border); }
+.canvas.id .bmc-block { border-left-color: var(--id-border); }
+.canvas.eg .bmc-block { border-left-color: var(--eg-border); }
+.canvas.in .bmc-block { border-left-color: var(--in-border); }
+
+.bmc-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.bmc-content {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.bmc-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.bmc-content .accent-bd { color: var(--bd-text); font-weight: 600; }
+.bmc-content .accent-id { color: var(--id-text); font-weight: 600; }
+.bmc-content .accent-eg { color: var(--eg-text); font-weight: 600; }
+.bmc-content .accent-in { color: var(--in-text); font-weight: 600; }
+
+/* ================== COMPARISON MATRIX ================== */
+.matrix {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 32px 28px;
+  margin-bottom: 48px;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 24px;
+}
+
+.matrix-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.matrix-table th .th-flag {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+
+.matrix-table th .th-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.matrix-table th.bd-head { color: var(--bd-text); }
+.matrix-table th.id-head { color: var(--id-text); }
+.matrix-table th.eg-head { color: var(--eg-text); }
+.matrix-table th.in-head { color: var(--in-text); }
+
+.matrix-table td {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  padding: 16px 14px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+
+.matrix-table td:first-child {
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  width: 160px;
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.matrix-table tr:hover td {
+  background: rgba(94, 234, 212, 0.03);
+}
+
+.accent-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.dot-bd { background: var(--bd-border); }
+.dot-id { background: var(--id-border); }
+.dot-eg { background: var(--eg-border); }
+.dot-in { background: var(--in-border); }
+
+/* ================== ANCHORS FOOTER ================== */
+.anchors {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 32px;
+}
+
+.anchors-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.anchors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 18px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.anchors-grid strong {
+  color: var(--primary);
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+}
+
+/* ================== FOOTER ================== */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 32px 24px;
+  border-top: 1px solid var(--border-soft);
+  margin-top: 32px;
+}
+
+.footer strong { color: var(--text-secondary); font-weight: 600; }
+
+/* ================== MOBILE ================== */
+@media (max-width: 1100px) {
+  .canvases { grid-template-columns: repeat(2, 1fr); }
+  .matrix-table { font-size: 12.5px; }
+  .matrix-table th .th-flag { font-size: 18px; }
+  .anchors-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .hero { padding: 36px 18px 28px; }
+  .hero-title { font-size: 28px; }
+  .container { padding: 36px 16px 48px; }
+  .canvases { grid-template-columns: 1fr; }
+  .matrix { padding: 22px 16px; }
+  .matrix-table th, .matrix-table td { padding: 10px 8px; font-size: 12px; }
+  .matrix-table td:first-child { width: 100px; }
+  .anchors-grid { grid-template-columns: 1fr; }
+  .switcher { padding: 10px 12px; }
+  .switcher-btn { padding: 6px 12px; font-size: 13px; }
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-body); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<!-- ================== HERO ================== -->
+<header class="hero">
+  <div class="hero-eyebrow">Phoenix · Business Model Canvas</div>
+  <h1 class="hero-title">四市场 <em>全球作战</em> 商业画布</h1>
+  <p class="hero-subtitle">
+    中高端 MTB 跨市场战略全景 · BD 雨季+夜间 / ID 华人寻根 / EG 沙漠探索 / IN 凉意+双百年
+  </p>
+  <div class="hero-key">
+    物×法×情 × 4 国 = <strong>打不垮</strong> 的精神符号
+  </div>
+</header>
+
+<!-- ================== SWITCHER ================== -->
+<nav class="switcher" id="switcher">
+  <button class="switcher-btn active-bd" data-market="bd">🇧🇩 BD · 雨季+夜间</button>
+  <button class="switcher-btn" data-market="id">🇮🇩 ID · 华人寻根</button>
+  <button class="switcher-btn" data-market="eg">🇪🇬 EG · 沙漠探索</button>
+  <button class="switcher-btn" data-market="in">🇮🇳 IN · 凉意+双百年</button>
+  <button class="switcher-btn" data-market="all">🌐 全部 4 国</button>
+</nav>
+
+<!-- ================== 4 CANVASES ================== -->
+<main class="container">
+
+  <div class="section-label">Section 01</div>
+  <h2 class="section-title">四张商业画布</h2>
+  <p class="section-sub">Business Model Canvas · 9 模块 · 跨市场差异化战略</p>
+
+  <div class="canvases" id="canvases">
+
+    <!-- ========== 🇧🇩 BD ========== -->
+    <article class="canvas bd" data-market="bd">
+      <header class="canvas-header">
+        <span class="canvas-flag">🇧🇩</span>
+        <div>
+          <div class="canvas-title">孟加拉 BD</div>
+          <div class="canvas-code">BD</div>
+        </div>
+      </header>
+      <span class="canvas-tag">雨季+夜间 MTB</span>
+      <div class="canvas-spine">
+        <div class="bmc-block">
+          <div class="bmc-label">客户细分 CS</div>
+          <div class="bmc-content">
+            1.7 亿人口 · <strong>雨季 6-10 月 80% 降雨</strong> · 8 点通勤高峰无红绿灯 · 中产工人 + 大学生
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">价值主张 VP</div>
+          <div class="bmc-content">
+            V1 <strong>质价比</strong> + V3 <span class="accent-bd">雨季耐候</span>(达克锈+氟碳漆+10万次) + V4 <span class="accent-bd">夜间安全</span>(3M 反光)
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">渠道 CH</div>
+          <div class="bmc-content">
+            <strong>DreamCycle</strong> 本土独立站 + <strong>Daraz BD</strong> 25-40K MTB 主入口
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">客户关系 CR</div>
+          <div class="bmc-content">
+            经销商老板亲自拜访 · <em>(V2.9.80 隐形冠军原则 ③)</em>
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">收入来源 RS</div>
+          <div class="bmc-content">
+            25-40K BDT 中高端 · <span class="accent-bd">跟 Rockrider 65K 同价位血战</span> · 8 成人 SKU / ASP 13.7K
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键资源 KR</div>
+          <div class="bmc-content">
+            凤凰集团全产业链: <strong>华久辐条 (100%) + 美乐链条 + 凤曜车业 + 凤驰金属</strong> · 集团 CNAS 国家级实验室
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键活动 KA</div>
+          <div class="bmc-content">
+            V1 0-6 月 18-22K 达克锈 → V2 6-12 月 22-28K 氟碳漆 → V3 12-18 月 28-35K 集团专利
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">合作伙伴 KP</div>
+          <div class="bmc-content">
+            江苏华久辐条 + 美乐链条 (集团内部采购) + DreamCycle + Daraz 经销
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">成本结构 C$</div>
+          <div class="bmc-content">
+            集团内部采购 <strong>-15-25%</strong> + Daraz 推广 + 经销商返点 + 夜光漆 / 3M 反光 研发
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== 🇮🇩 ID ========== -->
+    <article class="canvas id" data-market="id">
+      <header class="canvas-header">
+        <span class="canvas-flag">🇮🇩</span>
+        <div>
+          <div class="canvas-title">印尼 ID</div>
+          <div class="canvas-code">ID</div>
+        </div>
+      </header>
+      <span class="canvas-tag">华人寻根</span>
+      <div class="canvas-spine">
+        <div class="bmc-block">
+          <div class="bmc-label">客户细分 CS</div>
+          <div class="bmc-content">
+            <span class="accent-id">1000+ 万华人</span> (40% 海外华人) + 2.7 亿穆斯林 · 30+ 年海外谋生 · 文化身份空白
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">价值主张 VP</div>
+          <div class="bmc-content">
+            V5 <span class="accent-id">文化美学</span> + <strong>华人圈民族品牌</strong> (凤凰 = 中华百年民族品牌) · 民族品牌 + 本地融合
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">渠道 CH</div>
+          <div class="bmc-content">
+            <strong>Shopee + Tokopedia</strong> 双平台官方店 + Rodalink dealer (9 品牌 dealer 现有)
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">客户关系 CR</div>
+          <div class="bmc-content">
+            华人圈俱乐部赞助 + 印尼本地穆斯林经销网络 + UGC 异国华人 30 年没回家 故事
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">收入来源 RS</div>
+          <div class="bmc-content">
+            <strong>Phoenix 8-15M IDR</strong> 主流 + FNIX 12-18M IDR 中高端 · 三蓝海品类 (公路/平把/砾石) · 0 SKU 真空切入
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键资源 KR</div>
+          <div class="bmc-content">
+            凤凰百年品牌 (<strong>1897-2026 = 129 年</strong>) + 1000+ 万华人圈口碑 · V5 五维合一
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键活动 KA</div>
+          <div class="bmc-content">
+            <strong>UCI 国际化</strong> + SNI 本土化 + 华人俱乐部赞助 + FNIX 双品牌
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">合作伙伴 KP</div>
+          <div class="bmc-content">
+            Tokopedia + Shopee + <strong>Rodalink dealer</strong> + 华人圈 KOL
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">成本结构 C$</div>
+          <div class="bmc-content">
+            UCI 认证 + SNI 认证 + 双平台推广 + 华人圈俱乐部赞助
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== 🇪🇬 EG ========== -->
+    <article class="canvas eg" data-market="eg">
+      <header class="canvas-header">
+        <span class="canvas-flag">🇪🇬</span>
+        <div>
+          <div class="canvas-title">埃及 EG</div>
+          <div class="canvas-code">EG</div>
+        </div>
+      </header>
+      <span class="canvas-tag">沙漠探索</span>
+      <div class="canvas-spine">
+        <div class="bmc-block">
+          <div class="bmc-label">客户细分 CS</div>
+          <div class="bmc-content">
+            <span class="accent-eg">沙漠探索者</span> (西奈沙漠) + 开罗 2500 万辐射 · 1.05 亿人口
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">价值主张 VP</div>
+          <div class="bmc-content">
+            V5 <span class="accent-eg">文化美学</span> + 沙漠骑手 + <strong>古文明对话</strong> (金字塔 + 阿拉伯几何 + 法老符号 + 尼罗河蓝)
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">渠道 CH</div>
+          <div class="bmc-content">
+            <strong>开罗经销商网络</strong> (复用 BD/ID 模式) + 中高端 MTB 经销
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">客户关系 CR</div>
+          <div class="bmc-content">
+            经销商网络 + <span class="accent-eg">沙漠骑行俱乐部赞助</span> + 金字塔脚下试骑活动
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">收入来源 RS</div>
+          <div class="bmc-content">
+            5K-50K EGP (100-1000 USD) · 中高端 MTB · 沙漠专属 SKU
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键资源 KR</div>
+          <div class="bmc-content">
+            凤凰集团全产业链 + 阿拉伯书法设计语言 + 5000 年法老文明对话资本
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键活动 KA</div>
+          <div class="bmc-content">
+            开罗样板店 + 沙漠试骑活动 + 阿拉伯书法涂装研发
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">合作伙伴 KP</div>
+          <div class="bmc-content">
+            本地经销商 (待开发) + 沙漠骑行协会 + 阿拉伯设计工作室
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">成本结构 C$</div>
+          <div class="bmc-content">
+            经销商铺货 + 沙漠骑行俱乐部赞助 + 阿拉伯书法设计
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ========== 🇮🇳 IN ========== -->
+    <article class="canvas in" data-market="in">
+      <header class="canvas-header">
+        <span class="canvas-flag">🇮🇳</span>
+        <div>
+          <div class="canvas-title">印度 IN</div>
+          <div class="canvas-code">IN</div>
+        </div>
+      </header>
+      <span class="canvas-tag">凉意+双百年</span>
+      <div class="canvas-spine">
+        <div class="bmc-block">
+          <div class="bmc-label">客户细分 CS</div>
+          <div class="bmc-content">
+            14 亿人口 · <span class="accent-in">50°C 极温通勤骑手</span> (雨季 80% + 干热 50°C) · 塔塔/Infosys 中产
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">价值主张 VP</div>
+          <div class="bmc-content">
+            V5 <span class="accent-in">文化美学</span> + 凉意产品 (降温涂装 + 冰裂纹设计) + <strong>中英双百年对话</strong> (凤凰 1897 + Raleigh 1885)
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">渠道 CH</div>
+          <div class="bmc-content">
+            <strong>suncross 印度独家代理</strong> (1-2 线城市经销网络) · 跳过 12-18 月建渠道时间
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">客户关系 CR</div>
+          <div class="bmc-content">
+            suncross 高端品牌营销理念 + 班加罗尔 IT 996 中产
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">收入来源 RS</div>
+          <div class="bmc-content">
+            <strong>5K-15K INR 通勤 + 10K-50K INR MTB 中高端</strong> · 凉意产品 + Raleigh 品牌组合
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键资源 KR</div>
+          <div class="bmc-content">
+            <strong>suncross 渠道</strong> + <strong>Raleigh 1885 品牌势能</strong> + 凉意产品设计 + 凤凰集团全产业链
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">关键活动 KA</div>
+          <div class="bmc-content">
+            Raleigh 品牌运营 + suncross 渠道铺货 + 凉意产品上市 (降温涂装 + 冰裂纹)
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">合作伙伴 KP</div>
+          <div class="bmc-content">
+            <strong>suncross (印度独家代理)</strong> + <strong>Raleigh 1885 (品牌授权)</strong> + 集团全产业链
+          </div>
+        </div>
+        <div class="bmc-block">
+          <div class="bmc-label">成本结构 C$</div>
+          <div class="bmc-content">
+            <strong>suncross 独家代理费</strong> + <strong>Raleigh 品牌授权</strong> + 凉意产品研发
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ================== COMPARISON MATRIX ================== -->
+  <div class="section-label">Section 02</div>
+  <h2 class="section-title">四市场战略对比矩阵</h2>
+  <p class="section-sub">跨市场 8 大维度差异化 · 一表看清 4 国战略全景</p>
+
+  <div class="matrix">
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>维度</th>
+          <th class="bd-head"><span class="th-flag">🇧🇩</span><span class="th-code">BD</span></th>
+          <th class="id-head"><span class="th-flag">🇮🇩</span><span class="th-code">ID</span></th>
+          <th class="eg-head"><span class="th-flag">🇪🇬</span><span class="th-code">EG</span></th>
+          <th class="in-head"><span class="th-flag">🇮🇳</span><span class="th-code">IN</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>战略定位</td>
+          <td><span class="accent-dot dot-bd"></span>BD #1 直面 Rockrider 65K 同价位血战</td>
+          <td><span class="accent-dot dot-id"></span>三蓝海品类第一 (0 SKU 真空切入)</td>
+          <td><span class="accent-dot dot-eg"></span>沙漠 MTB 探索者 + 古文明对话</td>
+          <td><span class="accent-dot dot-in"></span>极温通勤第一 + 中英双百年</td>
+        </tr>
+        <tr>
+          <td>客户核心痛点</td>
+          <td>雨季 80% + 夜间通勤无红绿灯</td>
+          <td>华人 30+ 年海外谋生 + 文化身份空白</td>
+          <td>西奈沙漠耐久 + 5000 年法老文明</td>
+          <td>50°C 干热 + 雨季 80% + 99% 黑色 roadster</td>
+        </tr>
+        <tr>
+          <td>价值主张</td>
+          <td>V1 质价比 + V3 雨季耐候 + V4 夜间安全</td>
+          <td>V5 文化美学 + 华人圈民族品牌</td>
+          <td>V5 文化美学 + 沙漠骑手 + 古文明对话</td>
+          <td>V5 文化美学 + 凉意产品 + 中英双百年</td>
+        </tr>
+        <tr>
+          <td>关键差异化</td>
+          <td>达克锈 + 氟碳漆 + 10万次 + 集团全产业链</td>
+          <td>凤凰 = 1000+ 万华人寻根情感品牌</td>
+          <td>金字塔 + 阿拉伯几何 + 法老符号</td>
+          <td>凤凰 1897 + Raleigh 1885 双百年组合</td>
+        </tr>
+        <tr>
+          <td>主渠道</td>
+          <td>Daraz BD + DreamCycle</td>
+          <td>Shopee + Tokopedia + Rodalink dealer</td>
+          <td>开罗经销商网络 (复用 BD/ID)</td>
+          <td>suncross 印度独家代理 + 1-2 线城市</td>
+        </tr>
+        <tr>
+          <td>关键合作伙伴</td>
+          <td>华久辐条 + 美乐链条 (集团)</td>
+          <td>Rodalink 9 品牌 dealer + 双平台</td>
+          <td>本地经销商 + 沙漠骑行协会</td>
+          <td><strong>suncross + Raleigh 1885</strong> (双百年)</td>
+        </tr>
+        <tr>
+          <td>精神金句 (V6)</td>
+          <td><span class="accent-bd">愿你在黑夜中被看见</span> (字面+隐喻双关)</td>
+          <td>待定 (异国华人 30 年没回家的"我们")</td>
+          <td>待定 (沙漠探索者+古文明对话的"我们")</td>
+          <td>候选: 中英双百年 (凤凰+Raleigh 1885)</td>
+        </tr>
+        <tr>
+          <td>1.0/2.0/3.0 覆盖</td>
+          <td><strong>1.0 + 2.0 + 3.0 完整</strong></td>
+          <td>1.0 + 2.0 完整, 3.0 待定</td>
+          <td>1.0 + 2.0 完整, 3.0 待定</td>
+          <td>1.0 + 2.0 完整, 3.0 候选方向锁定</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ================== ANCHORS FOOTER ================== -->
+  <aside class="anchors">
+    <div class="anchors-title">12 锚支撑 · Theory Anchors</div>
+    <div class="anchors-grid">
+      <div><strong>V2.9.50</strong> · 5 价值主张 (战略原点)</div>
+      <div><strong>V2.9.66</strong> · 6.6 情绪传播 (传播理论)</div>
+      <div><strong>V2.9.67</strong> · 6.7 王老吉金句 (金句落地)</div>
+      <div><strong>V2.9.68</strong> · 6.6 KANO (产品矩阵)</div>
+      <div><strong>V2.9.69</strong> · 6.7.8 物×法×情 (战略飞轮)</div>
+      <div><strong>V2.9.70</strong> · 4 国兴奋型 (产品方案)</div>
+      <div><strong>V2.9.80</strong> · 6.8 隐形冠军 (规模/速度)</div>
+      <div><strong>V2.9.82</strong> · 7 日价格趋势语义修复</div>
+      <div><strong>V2.9.83</strong> · 6.9 重新定义 (内部资料)</div>
+      <div><strong>V2.9.84</strong> · IN suncross + Raleigh 1885</div>
+      <div><strong>V2.9.85</strong> · 营销金句锚 (内部资料)</div>
+      <div><strong>V2.9.86</strong> · 品牌 1.0/2.0/3.0 (内部资料)</div>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  <strong>Phoenix · 4 Markets Business Model Canvas</strong> · 基于 V2.9.50-V2.9.86 12 锚 · 2026-09-01
+</footer>
+
+<!-- ================== JS: 切换 ================== -->
+<script>
+(function() {
+  const switcher = document.getElementById('switcher');
+  const canvases = document.querySelectorAll('.canvas');
+  if (!switcher || canvases.length === 0) return;
+
+  // 保存所有按钮的原始颜色类
+  const buttons = switcher.querySelectorAll('.switcher-btn');
+
+  function setActive(targetMarket) {
+    // 更新按钮状态
+    buttons.forEach(b => {
+      b.className = 'switcher-btn';
+      const m = b.dataset.market;
+      if (m === targetMarket) b.classList.add('active-' + m);
+    });
+
+    // 更新画布显隐
+    canvases.forEach(c => {
+      if (targetMarket === 'all' || c.dataset.market === targetMarket) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+  }
+
+  switcher.addEventListener('click', function(e) {
+    const btn = e.target.closest('.switcher-btn');
+    if (!btn) return;
+    setActive(btn.dataset.market);
+  });
+})();
+</script>
+
+</body>
+</html>
