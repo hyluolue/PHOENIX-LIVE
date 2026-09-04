@@ -36,119 +36,71 @@ body {
   padding: 0;
 }
 
-/* ============ HERO ============ */
 .hero {
   background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-body) 100%);
   border-bottom: 1px solid var(--border-soft);
-  padding: 36px 24px 24px;
+  padding: 32px 24px 20px;
   text-align: center;
 }
-
 .hero-eyebrow {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--primary);
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border: 1px solid var(--primary);
-  border-radius: 999px;
-  margin-bottom: 12px;
+  display: inline-block; font-size: 11px; font-weight: 600;
+  letter-spacing: 0.18em; color: var(--primary); text-transform: uppercase;
+  padding: 3px 10px; border: 1px solid var(--primary);
+  border-radius: 999px; margin-bottom: 10px;
 }
-
 .hero-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  margin-bottom: 8px;
-  color: var(--text-primary);
+  font-family: 'DM Serif Display', serif; font-size: 30px; font-weight: 400;
+  letter-spacing: -0.01em; line-height: 1.15; margin-bottom: 6px; color: var(--text-primary);
 }
-
 .hero-title em { font-style: italic; color: var(--primary); }
-
 .hero-subtitle {
-  font-size: 13px;
-  color: var(--text-muted);
-  max-width: 720px;
-  margin: 0 auto 16px;
-  line-height: 1.5;
+  font-size: 12.5px; color: var(--text-muted);
+  max-width: 720px; margin: 0 auto 12px; line-height: 1.5;
 }
-
 .hero-key {
-  display: inline-block;
-  background: rgba(94, 234, 212, 0.08);
-  border: 1px solid var(--primary);
-  color: var(--text-primary);
-  padding: 7px 18px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 500;
+  display: inline-block; background: rgba(94, 234, 212, 0.08);
+  border: 1px solid var(--primary); color: var(--text-primary);
+  padding: 6px 16px; border-radius: 6px; font-size: 13px; font-weight: 500;
 }
-
 .hero-key strong { color: var(--primary); font-weight: 700; }
 
-/* ============ SWITCHER ============ */
 .switcher {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: sticky; top: 0; z-index: 50;
   background: rgba(10, 14, 26, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-soft);
   padding: 10px 24px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
+  display: flex; justify-content: center; gap: 6px; flex-wrap: wrap;
 }
-
 .switcher-btn {
-  background: transparent;
-  border: 1px solid var(--border-soft);
-  color: var(--text-muted);
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  background: transparent; border: 1px solid var(--border-soft);
+  color: var(--text-muted); font-family: inherit; font-size: 13px;
+  font-weight: 500; padding: 6px 14px; border-radius: 6px;
+  cursor: pointer; transition: all 0.2s ease;
 }
-
 .switcher-btn:hover { color: var(--text-primary); border-color: var(--border-strong); }
-
 .switcher-btn.active-bd { background: var(--bd-bg); color: var(--bd-color); border-color: var(--bd-border); }
 .switcher-btn.active-id { background: var(--id-bg); color: var(--id-color); border-color: var(--id-border); }
 .switcher-btn.active-eg { background: var(--eg-bg); color: var(--eg-color); border-color: var(--eg-border); }
 .switcher-btn.active-in { background: var(--in-bg); color: var(--in-color); border-color: var(--in-border); }
 
-/* ============ CONTAINER ============ */
-.container { max-width: 1640px; margin: 0 auto; padding: 36px 24px 60px; }
+.container { max-width: 1640px; margin: 0 auto; padding: 30px 24px 50px; }
 
 .section-label {
   font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--text-muted); margin-bottom: 8px; text-align: center;
+  color: var(--text-muted); margin-bottom: 6px; text-align: center;
 }
-
 .section-title {
-  font-family: 'DM Serif Display', serif; font-size: 24px; font-weight: 400;
-  color: var(--text-primary); text-align: center; margin-bottom: 6px;
+  font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400;
+  color: var(--text-primary); text-align: center; margin-bottom: 4px;
 }
-
 .section-sub {
-  text-align: center; font-size: 13px; color: var(--text-muted);
-  margin-bottom: 28px;
+  text-align: center; font-size: 12.5px; color: var(--text-muted); margin-bottom: 22px;
 }
 
-/* ============ 4 BMC GRID (classic 2D) ============ */
 .bmcs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 48px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-bottom: 40px;
 }
 
 .bmc {
@@ -156,17 +108,13 @@ body {
   border: 1px solid var(--border-soft);
   border-radius: 12px;
   padding: 14px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: 6px;
 }
 
 .bmc::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
 }
-
 .bmc.bd::before { background: var(--bd-border); }
 .bmc.id::before { background: var(--id-border); }
 .bmc.eg::before { background: var(--eg-border); }
@@ -177,7 +125,6 @@ body {
   padding-bottom: 8px; border-bottom: 1px dashed var(--border-soft);
   margin-bottom: 4px;
 }
-
 .bmc-flag { font-size: 18px; line-height: 1; }
 .bmc-name { font-size: 14px; font-weight: 700; }
 
@@ -190,199 +137,166 @@ body {
   margin-left: auto;
   font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
   padding: 2px 6px; border-radius: 3px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05); color: var(--text-muted);
 }
 
-/* ============ CLASSIC BMC 2D GRID ============ */
+/* 2D BMC grid */
 .bmc-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  gap: 4px;
-  flex: 1;
+  gap: 5px; flex: 1;
 }
 
-.bmc-cell {
+/* Each module: icon + number + brief */
+.mod {
   background: var(--bg-card);
   border: 1px solid var(--border-soft);
   border-left: 2px solid var(--border-strong);
   border-radius: 4px;
-  padding: 6px 8px;
-  display: flex;
-  flex-direction: column;
+  padding: 8px 8px;
+  display: flex; flex-direction: column;
   min-height: 0;
-  transition: border-color 0.2s, background 0.2s;
+  transition: all 0.2s;
 }
+.mod:hover { background: rgba(255, 255, 255, 0.04); }
 
-.bmc.bd .bmc-cell { border-left-color: var(--bd-border); }
-.bmc.id .bmc-cell { border-left-color: var(--id-border); }
-.bmc.eg .bmc-cell { border-left-color: var(--eg-border); }
-.bmc.in .bmc-cell { border-left-color: var(--in-border); }
+.bmc.bd .mod { border-left-color: var(--bd-border); }
+.bmc.id .mod { border-left-color: var(--id-border); }
+.bmc.eg .mod { border-left-color: var(--eg-border); }
+.bmc.in .mod { border-left-color: var(--in-border); }
 
-.bmc-cell:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
+.mod-vp { grid-column: 1 / -1; }
+.mod-cs { grid-column: 1 / 2; grid-row: 2; }
+.mod-ch { grid-column: 2 / 3; grid-row: 2; }
+.mod-cr { grid-column: 3 / 4; grid-row: 2; }
+.mod-rs { grid-column: 4 / 5; grid-row: 2; }
+.mod-ka { grid-column: 1 / 2; grid-row: 3; }
+.mod-kp { grid-column: 2 / 3; grid-row: 3; }
+.mod-kr { grid-column: 3 / 4; grid-row: 3; }
+.mod-cs-cost { grid-column: 4 / 5; grid-row: 3; }
 
-/* Layout positions (classic 2D BMC) */
-.bmc-vp { grid-column: 1 / -1; }            /* Top full width */
-.bmc-cs { grid-column: 1 / 2; grid-row: 2; }
-.bmc-ch { grid-column: 2 / 3; grid-row: 2; }
-.bmc-cr { grid-column: 3 / 4; grid-row: 2; }
-.bmc-rs { grid-column: 4 / 5; grid-row: 2; }
-.bmc-ka { grid-column: 1 / 2; grid-row: 3; }
-.bmc-kp { grid-column: 2 / 3; grid-row: 3; }
-.bmc-kr { grid-column: 3 / 4; grid-row: 3; }
-.bmc-cs-cost { grid-column: 4 / 5; grid-row: 3; }
-
-.bmc-cell-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 16px; height: 16px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 9px; font-weight: 700;
-  background: rgba(94, 234, 212, 0.15);
-  color: var(--primary);
-  border-radius: 3px;
-  margin-right: 5px;
-  flex-shrink: 0;
-}
-
-.bmc.bd .bmc-cell-num { background: rgba(94, 234, 212, 0.2); color: var(--bd-color); }
-.bmc.id .bmc-cell-num { background: rgba(167, 243, 208, 0.15); color: var(--id-color); }
-.bmc.eg .bmc-cell-num { background: rgba(252, 211, 77, 0.15); color: var(--eg-color); }
-.bmc.in .bmc-cell-num { background: rgba(196, 181, 253, 0.15); color: var(--in-color); }
-
-.bmc-cell-label {
-  display: flex; align-items: center;
-  font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--text-muted);
+.mod-head {
+  display: flex; align-items: center; gap: 5px;
   margin-bottom: 4px;
 }
 
-.bmc-cell-label .full {
-  color: var(--text-secondary); font-weight: 600;
-  margin-left: 4px; letter-spacing: 0.02em; text-transform: none; font-size: 10px;
+.mod-icon {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
 }
 
-.bmc-cell-content {
-  font-size: 10.5px;
-  color: var(--text-secondary);
-  line-height: 1.4;
-  flex: 1;
+.bmc.bd .mod-icon { color: var(--bd-color); }
+.bmc.id .mod-icon { color: var(--id-color); }
+.bmc.eg .mod-icon { color: var(--eg-color); }
+.bmc.in .mod-icon { color: var(--in-color); }
+
+.mod-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700;
+  background: rgba(94, 234, 212, 0.15); color: var(--primary);
+  border-radius: 3px; flex-shrink: 0;
+}
+.bmc.bd .mod-num { background: rgba(94, 234, 212, 0.2); color: var(--bd-color); }
+.bmc.id .mod-num { background: rgba(167, 243, 208, 0.15); color: var(--id-color); }
+.bmc.eg .mod-num { background: rgba(252, 211, 77, 0.15); color: var(--eg-color); }
+.bmc.in .mod-num { background: rgba(196, 181, 253, 0.15); color: var(--in-color); }
+
+.mod-abbr {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-secondary);
 }
 
-.bmc-cell-content strong { color: var(--text-primary); font-weight: 600; }
-.bmc-cell-content .hl { color: var(--text-primary); font-weight: 600; }
-
-.bmc-vp .bmc-cell-content {
-  font-size: 11.5px;
-  line-height: 1.45;
-  font-weight: 500;
+.mod-body {
+  font-size: 11px; color: var(--text-secondary);
+  line-height: 1.4; flex: 1;
 }
 
-/* ============ MATRIX ============ */
+.mod-body strong { color: var(--text-primary); font-weight: 600; }
+.mod-body .hl { color: var(--text-primary); font-weight: 600; }
+
+.mod-vp .mod-body { font-size: 12px; line-height: 1.4; font-weight: 500; }
+
+/* Matrix */
 .matrix {
   background: var(--bg-surface);
   border: 1px solid var(--border-soft);
-  border-radius: 14px;
-  padding: 24px 20px;
-  margin-bottom: 32px;
+  border-radius: 14px; padding: 22px 18px; margin-bottom: 28px;
 }
-
-.matrix-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 18px; }
-
+.matrix-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 16px; }
 .matrix-table th {
   text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text-muted);
   padding: 10px 12px; border-bottom: 1px solid var(--border-strong);
 }
-
 .matrix-table th .th-flag { display: block; font-size: 18px; margin-bottom: 2px; }
 .matrix-table th .th-code { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); }
-
 .matrix-table th.bd-head { color: var(--bd-color); }
 .matrix-table th.id-head { color: var(--id-color); }
 .matrix-table th.eg-head { color: var(--eg-color); }
 .matrix-table th.in-head { color: var(--in-color); }
-
 .matrix-table td {
-  font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);
-  padding: 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top;
+  font-size: 12px; line-height: 1.5; color: var(--text-secondary);
+  padding: 11px 12px; border-bottom: 1px solid var(--border-soft); vertical-align: top;
 }
-
 .matrix-table td:first-child {
-  font-weight: 600; color: var(--text-primary); background: var(--bg-card); width: 150px;
+  font-weight: 600; color: var(--text-primary); background: var(--bg-card); width: 140px;
 }
-
 .matrix-table tr:last-child td { border-bottom: none; }
 .matrix-table tr:hover td { background: rgba(94, 234, 212, 0.03); }
-
 .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
 .dot-bd { background: var(--bd-border); }
 .dot-id { background: var(--id-border); }
 .dot-eg { background: var(--eg-border); }
 .dot-in { background: var(--in-border); }
 
-/* ============ ANCHORS ============ */
 .anchors {
   background: var(--bg-card); border: 1px solid var(--border-soft);
-  border-radius: 12px; padding: 18px 22px;
+  border-radius: 12px; padding: 16px 20px;
 }
-
 .anchors-title {
   font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
 }
-
 .anchors-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 16px;
-  font-size: 11px; color: var(--text-secondary); line-height: 1.5;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px 14px;
+  font-size: 10.5px; color: var(--text-secondary); line-height: 1.5;
 }
-
 .anchors-grid strong {
-  color: var(--primary); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  color: var(--primary); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 10px;
 }
 
-/* ============ FOOTER ============ */
 .footer {
   text-align: center; font-size: 11px; color: var(--text-muted);
-  padding: 24px 24px; border-top: 1px solid var(--border-soft); margin-top: 24px;
+  padding: 22px 24px; border-top: 1px solid var(--border-soft); margin-top: 22px;
 }
-
 .footer strong { color: var(--text-secondary); }
 
-/* ============ RESPONSIVE ============ */
 @media (max-width: 1300px) {
   .bmcs { grid-template-columns: repeat(2, 1fr); }
   .anchors-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
-  .hero { padding: 24px 16px 18px; }
-  .hero-title { font-size: 24px; }
-  .container { padding: 24px 12px 40px; }
+  .hero { padding: 22px 16px 16px; }
+  .hero-title { font-size: 22px; }
+  .container { padding: 22px 12px 36px; }
   .bmcs { grid-template-columns: 1fr; }
-  .matrix { padding: 16px 12px; }
+  .matrix { padding: 14px 12px; }
   .matrix-table th, .matrix-table td { padding: 8px 6px; font-size: 11px; }
   .matrix-table td:first-child { width: 90px; }
   .anchors-grid { grid-template-columns: 1fr; }
-  .bmc-grid { grid-template-columns: 1fr 1fr; }
-  .bmc-vp { grid-column: 1 / -1; }
-  .bmc-cs, .bmc-ka { grid-column: 1; }
-  .bmc-ch, .bmc-kp { grid-column: 2; }
-  .bmc-cr, .bmc-kr { grid-column: 1; }
-  .bmc-rs, .bmc-cs-cost { grid-column: 2; }
 }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-body); }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <header class="hero">
   <div class="hero-eyebrow">Phoenix · Business Model Canvas</div>
   <h1 class="hero-title">四市场 <em>商业画布</em> 全球作战</h1>
@@ -390,7 +304,6 @@ body {
   <div class="hero-key">物×法×情 × 4 国 = <strong>打不垮</strong> 的精神符号</div>
 </header>
 
-<!-- SWITCHER -->
 <nav class="switcher" id="switcher">
   <button class="switcher-btn active-bd" data-market="bd">🇧🇩 BD · 雨季+夜间</button>
   <button class="switcher-btn" data-market="id">🇮🇩 ID · 华人寻根</button>
@@ -402,8 +315,8 @@ body {
 <main class="container">
 
   <div class="section-label">Section 01</div>
-  <h2 class="section-title">四张商业画布 · Classic 2D BMC</h2>
-  <p class="section-sub">Osterwalder 9 模块经典 2D 网格布局 · 4 国 4 色编码 · 跨市场差异化</p>
+  <h2 class="section-title">四张商业画布 · Iconic BMC</h2>
+  <p class="section-sub">Osterwalder 9 模块 · Lucide 图标 + 关键 takeaway · 4 国 4 色</p>
 
   <div class="bmcs" id="bmcs">
 
@@ -415,43 +328,86 @@ body {
         <span class="bmc-tag">#1 直面 Rockrider</span>
       </header>
       <div class="bmc-grid">
-        <div class="bmc-cell bmc-vp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">8</span><span>VP</span><span class="full">价值主张</span></div>
-          <div class="bmc-cell-content">
-            <span class="hl">V1 质价比</span> + <span class="hl">V3 雨季耐候</span>(达克锈+氟碳漆+10万次) + <span class="hl">V4 夜间安全</span>(3M 反光) → BD #1 直面 Rockrider 65K 同价位血战
+        <!-- VP: 8 整行 -->
+        <div class="mod mod-vp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="mod-num">8</span>
+            <span class="mod-abbr">VP 价值主张</span>
           </div>
+          <div class="mod-body"><span class="hl">V1 质价比 + V3 雨季耐候 + V4 夜间安全</span> → BD #1 直面 Rockrider 65K 同价位血战</div>
         </div>
-        <div class="bmc-cell bmc-cs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">1</span><span>CS</span></div>
-          <div class="bmc-cell-content"><strong>1.7 亿人</strong> · 雨季 6-10 月 80% 降雨 · 8 点通勤无红绿灯</div>
+        <!-- CS: 1 -->
+        <div class="mod mod-cs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="mod-num">1</span>
+            <span class="mod-abbr">CS 客户</span>
+          </div>
+          <div class="mod-body"><strong>1.7 亿人</strong> · 雨季 6-10 月 80% 降雨 · 8 点通勤无红绿灯</div>
         </div>
-        <div class="bmc-cell bmc-ch">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">2</span><span>CH</span></div>
-          <div class="bmc-cell-content"><strong>DreamCycle</strong> 本土独立站 + <strong>Daraz BD</strong> 25-40K MTB 主入口</div>
+        <!-- CH: 2 -->
+        <div class="mod mod-ch">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span class="mod-num">2</span>
+            <span class="mod-abbr">CH 渠道</span>
+          </div>
+          <div class="mod-body"><strong>Daraz BD</strong> + <strong>DreamCycle</strong> 本土独立站</div>
         </div>
-        <div class="bmc-cell bmc-cr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">3</span><span>CR</span></div>
-          <div class="bmc-cell-content">经销商老板亲自拜访 (V2.9.80 隐形冠军原则)</div>
+        <!-- CR: 3 -->
+        <div class="mod mod-cr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><path d="m12 8 3 3"/><path d="m17 12-3 3"/></svg>
+            <span class="mod-num">3</span>
+            <span class="mod-abbr">CR 客户关系</span>
+          </div>
+          <div class="mod-body">经销商老板<strong>亲自拜访</strong> (隐形冠军原则)</div>
         </div>
-        <div class="bmc-cell bmc-rs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">7</span><span>RS</span></div>
-          <div class="bmc-cell-content"><strong>25-40K BDT</strong> 中高端 · 8 成人 SKU / ASP 13.7K</div>
+        <!-- RS: 7 -->
+        <div class="mod mod-rs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span class="mod-num">7</span>
+            <span class="mod-abbr">RS 收入</span>
+          </div>
+          <div class="mod-body"><strong>25-40K BDT</strong> 中高端 · 8 SKU / ASP 13.7K</div>
         </div>
-        <div class="bmc-cell bmc-ka">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">4</span><span>KA</span></div>
-          <div class="bmc-cell-content">V1 0-6 月 18-22K 达克锈 → V2 6-12 月 22-28K 氟碳漆 → V3 12-18 月 28-35K 集团专利</div>
+        <!-- KA: 4 -->
+        <div class="mod mod-ka">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="mod-num">4</span>
+            <span class="mod-abbr">KA 活动</span>
+          </div>
+          <div class="mod-body">V1 达克锈 → V2 氟碳漆 → V3 集团专利 (3 阶段)</div>
         </div>
-        <div class="bmc-cell bmc-kp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">5</span><span>KP</span></div>
-          <div class="bmc-cell-content">江苏华久辐条 (100%) + 美乐链条 (集团) + 经销商 + DreamCycle</div>
+        <!-- KP: 5 -->
+        <div class="mod mod-kp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.15 5.15 0 0 1 7.07 0l1.76 1.76a3 3 0 0 1 0 4.24l-.88.88a1 1 0 1 1-3-3"/><path d="m5 11 4-4 4 4-4 4z"/></svg>
+            <span class="mod-num">5</span>
+            <span class="mod-abbr">KP 伙伴</span>
+          </div>
+          <div class="mod-body"><strong>华久辐条 + 美乐链条</strong> (集团内部采购)</div>
         </div>
-        <div class="bmc-cell bmc-kr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">6</span><span>KR</span></div>
-          <div class="bmc-cell-content">集团全产业链: 华久辐条+美乐链条+凤曜+凤驰 + <strong>CNAS 实验室</strong></div>
+        <!-- KR: 6 -->
+        <div class="mod mod-kr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17.5 5.5 2 2"/></svg>
+            <span class="mod-num">6</span>
+            <span class="mod-abbr">KR 资源</span>
+          </div>
+          <div class="mod-body">集团<strong>全产业链</strong> (华久+美乐+凤曜+凤驰) + CNAS</div>
         </div>
-        <div class="bmc-cell bmc-cs-cost">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">9</span><span>C$</span></div>
-          <div class="bmc-cell-content">集团内部采购 <strong>-15-25%</strong> + Daraz 推广 + 经销商返点 + 3M 反光研发</div>
+        <!-- C$: 9 -->
+        <div class="mod mod-cs-cost">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+            <span class="mod-num">9</span>
+            <span class="mod-abbr">C$ 成本</span>
+          </div>
+          <div class="mod-body">集团采购 <strong>-15-25%</strong> + Daraz 推广 + 3M 反光</div>
         </div>
       </div>
     </article>
@@ -464,43 +420,77 @@ body {
         <span class="bmc-tag">#1 三蓝海品类</span>
       </header>
       <div class="bmc-grid">
-        <div class="bmc-cell bmc-vp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">8</span><span>VP</span><span class="full">价值主张</span></div>
-          <div class="bmc-cell-content">
-            <span class="hl">V5 文化美学</span> + <span class="hl">华人圈民族品牌</span>(凤凰 = 中华百年民族品牌) · 民族品牌 + 本地融合 → ID 三蓝海品类第一 (0 SKU 真空切入)
+        <div class="mod mod-vp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="mod-num">8</span>
+            <span class="mod-abbr">VP 价值主张</span>
           </div>
+          <div class="mod-body"><span class="hl">V5 文化美学 + 华人圈民族品牌</span> → ID 三蓝海品类第一 (0 SKU 真空切入)</div>
         </div>
-        <div class="bmc-cell bmc-cs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">1</span><span>CS</span></div>
-          <div class="bmc-cell-content"><strong>1000+ 万华人</strong> (40% 海外华人) + 2.7 亿穆斯林 · 30+ 年海外谋生</div>
+        <div class="mod mod-cs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="mod-num">1</span>
+            <span class="mod-abbr">CS 客户</span>
+          </div>
+          <div class="mod-body"><strong>1000+ 万华人</strong> (40% 海外华人) + 2.7 亿穆斯林</div>
         </div>
-        <div class="bmc-cell bmc-ch">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">2</span><span>CH</span></div>
-          <div class="bmc-cell-content"><strong>Shopee + Tokopedia</strong> 双平台官方店 + <strong>Rodalink dealer</strong></div>
+        <div class="mod mod-ch">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span class="mod-num">2</span>
+            <span class="mod-abbr">CH 渠道</span>
+          </div>
+          <div class="mod-body"><strong>Shopee + Tokopedia</strong> 双平台 + Rodalink dealer</div>
         </div>
-        <div class="bmc-cell bmc-cr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">3</span><span>CR</span></div>
-          <div class="bmc-cell-content">华人圈俱乐部赞助 + 本地经销 + UGC 异国华人 30 年没回家</div>
+        <div class="mod mod-cr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><path d="m12 8 3 3"/><path d="m17 12-3 3"/></svg>
+            <span class="mod-num">3</span>
+            <span class="mod-abbr">CR 客户关系</span>
+          </div>
+          <div class="mod-body">华人圈<strong>俱乐部赞助</strong> + 异国华人 30 年没回家</div>
         </div>
-        <div class="bmc-cell bmc-rs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">7</span><span>RS</span></div>
-          <div class="bmc-cell-content"><strong>8-15M IDR</strong> Phoenix + <strong>12-18M IDR</strong> FNIX · 三蓝海品类</div>
+        <div class="mod mod-rs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span class="mod-num">7</span>
+            <span class="mod-abbr">RS 收入</span>
+          </div>
+          <div class="mod-body"><strong>8-15M IDR</strong> Phoenix + <strong>12-18M IDR</strong> FNIX</div>
         </div>
-        <div class="bmc-cell bmc-ka">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">4</span><span>KA</span></div>
-          <div class="bmc-cell-content"><strong>UCI 国际化</strong> + SNI 本土化 + 华人俱乐部赞助 + FNIX 双品牌</div>
+        <div class="mod mod-ka">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="mod-num">4</span>
+            <span class="mod-abbr">KA 活动</span>
+          </div>
+          <div class="mod-body"><strong>UCI 国际化</strong> + SNI 本土化 + FNIX 双品牌</div>
         </div>
-        <div class="bmc-cell bmc-kp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">5</span><span>KP</span></div>
-          <div class="bmc-cell-content">Tokopedia + Shopee + <strong>Rodalink 9 品牌 dealer</strong> + 华人圈 KOL</div>
+        <div class="mod mod-kp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.15 5.15 0 0 1 7.07 0l1.76 1.76a3 3 0 0 1 0 4.24l-.88.88a1 1 0 1 1-3-3"/><path d="m5 11 4-4 4 4-4 4z"/></svg>
+            <span class="mod-num">5</span>
+            <span class="mod-abbr">KP 伙伴</span>
+          </div>
+          <div class="mod-body"><strong>Rodalink 9 品牌 dealer</strong> + 双平台 + 华人 KOL</div>
         </div>
-        <div class="bmc-cell bmc-kr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">6</span><span>KR</span></div>
-          <div class="bmc-cell-content">凤凰百年品牌 (<strong>1897-2026 = 129 年</strong>) + 1000+ 万华人圈口碑</div>
+        <div class="mod mod-kr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17.5 5.5 2 2"/></svg>
+            <span class="mod-num">6</span>
+            <span class="mod-abbr">KR 资源</span>
+          </div>
+          <div class="mod-body">凤凰百年品牌 <strong>(1897-2026 = 129 年)</strong> + 1000+ 万华人圈口碑</div>
         </div>
-        <div class="bmc-cell bmc-cs-cost">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">9</span><span>C$</span></div>
-          <div class="bmc-cell-content">UCI/SNI 认证 + 双平台推广 + 华人圈俱乐部赞助</div>
+        <div class="mod mod-cs-cost">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+            <span class="mod-num">9</span>
+            <span class="mod-abbr">C$ 成本</span>
+          </div>
+          <div class="mod-body">UCI/SNI 认证 + 双平台推广 + 华人俱乐部</div>
         </div>
       </div>
     </article>
@@ -513,43 +503,77 @@ body {
         <span class="bmc-tag">#1 沙漠 MTB</span>
       </header>
       <div class="bmc-grid">
-        <div class="bmc-cell bmc-vp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">8</span><span>VP</span><span class="full">价值主张</span></div>
-          <div class="bmc-cell-content">
-            <span class="hl">V5 文化美学</span> + 沙漠骑手 + <span class="hl">古文明对话</span>(金字塔+阿拉伯几何+法老符号+尼罗河蓝) → 沙漠 MTB 全国第一
+        <div class="mod mod-vp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="mod-num">8</span>
+            <span class="mod-abbr">VP 价值主张</span>
           </div>
+          <div class="mod-body"><span class="hl">V5 文化美学 + 沙漠骑手 + 古文明对话</span> → 沙漠 MTB 全国第一</div>
         </div>
-        <div class="bmc-cell bmc-cs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">1</span><span>CS</span></div>
-          <div class="bmc-cell-content"><strong>沙漠探索者</strong> (西奈沙漠) + 开罗 2500 万辐射 · 1.05 亿人</div>
+        <div class="mod mod-cs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="mod-num">1</span>
+            <span class="mod-abbr">CS 客户</span>
+          </div>
+          <div class="mod-body"><strong>沙漠探索者</strong> (西奈) + 开罗 2500 万辐射</div>
         </div>
-        <div class="bmc-cell bmc-ch">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">2</span><span>CH</span></div>
-          <div class="bmc-cell-content"><strong>开罗经销商网络</strong> (复用 BD/ID 模式) + 中高端 MTB 经销</div>
+        <div class="mod mod-ch">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.1 2a2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span class="mod-num">2</span>
+            <span class="mod-abbr">CH 渠道</span>
+          </div>
+            <div class="mod-body"><strong>开罗经销商网络</strong> (复用 BD/ID 模式)</div>
         </div>
-        <div class="bmc-cell bmc-cr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">3</span><span>CR</span></div>
-          <div class="bmc-cell-content">经销商网络 + <strong>沙漠骑行俱乐部赞助</strong> + 金字塔脚下试骑</div>
+        <div class="mod mod-cr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><path d="m12 8 3 3"/><path d="m17 12-3 3"/></svg>
+            <span class="mod-num">3</span>
+            <span class="mod-abbr">CR 客户关系</span>
+          </div>
+          <div class="mod-body">经销商网络 + <strong>沙漠骑行俱乐部赞助</strong></div>
         </div>
-        <div class="bmc-cell bmc-rs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">7</span><span>RS</span></div>
-          <div class="bmc-cell-content"><strong>5K-50K EGP</strong> (100-1000 USD) · 中高端 MTB · 沙漠专属 SKU</div>
+        <div class="mod mod-rs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span class="mod-num">7</span>
+            <span class="mod-abbr">RS 收入</span>
+          </div>
+          <div class="mod-body"><strong>5K-50K EGP</strong> (100-1000 USD) · 沙漠专属 SKU</div>
         </div>
-        <div class="bmc-cell bmc-ka">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">4</span><span>KA</span></div>
-          <div class="bmc-cell-content">开罗样板店 + 沙漠试骑活动 + 阿拉伯书法涂装研发</div>
+        <div class="mod mod-ka">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="mod-num">4</span>
+            <span class="mod-abbr">KA 活动</span>
+          </div>
+          <div class="mod-body">开罗样板店 + 沙漠试骑 + 阿拉伯书法涂装</div>
         </div>
-        <div class="bmc-cell bmc-kp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">5</span><span>KP</span></div>
-          <div class="bmc-cell-content">本地经销商 (待开发) + 沙漠骑行协会 + 阿拉伯设计工作室</div>
+        <div class="mod mod-kp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.15 5.15 0 0 1 7.07 0l1.76 1.76a3 3 0 0 1 0 4.24l-.88.88a1 1 0 1 1-3-3"/><path d="m5 11 4-4 4 4-4 4z"/></svg>
+            <span class="mod-num">5</span>
+            <span class="mod-abbr">KP 伙伴</span>
+          </div>
+          <div class="mod-body">本地经销 (待开发) + 沙漠骑行协会</div>
         </div>
-        <div class="bmc-cell bmc-kr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">6</span><span>KR</span></div>
-          <div class="bmc-cell-content">凤凰集团全产业链 + 阿拉伯书法设计语言 + 5000 年法老文明对话资本</div>
+        <div class="mod mod-kr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17.5 5.5 2 2"/></svg>
+            <span class="mod-num">6</span>
+            <span class="mod-abbr">KR 资源</span>
+          </div>
+          <div class="mod-body">集团全产业链 + 阿拉伯书法 + 5000 年法老文明</div>
         </div>
-        <div class="bmc-cell bmc-cs-cost">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">9</span><span>C$</span></div>
-          <div class="bmc-cell-content">经销商铺货 + 沙漠骑行俱乐部赞助 + 阿拉伯书法设计</div>
+        <div class="mod mod-cs-cost">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+            <span class="mod-num">9</span>
+            <span class="mod-abbr">C$ 成本</span>
+          </div>
+          <div class="mod-body">经销铺货 + 俱乐部赞助 + 阿拉伯书法设计</div>
         </div>
       </div>
     </article>
@@ -562,43 +586,77 @@ body {
         <span class="bmc-tag">#1 极温 + 双百年</span>
       </header>
       <div class="bmc-grid">
-        <div class="bmc-cell bmc-vp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">8</span><span>VP</span><span class="full">价值主张</span></div>
-          <div class="bmc-cell-content">
-            <span class="hl">V5 文化美学</span> + 凉意产品 (降温涂装+冰裂纹) + <span class="hl">中英双百年对话</span>(凤凰 1897 + Raleigh 1885) → 极温通勤第一
+        <div class="mod mod-vp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="mod-num">8</span>
+            <span class="mod-abbr">VP 价值主张</span>
           </div>
+          <div class="mod-body"><span class="hl">V5 文化美学 + 凉意产品 + 中英双百年</span> → 极温通勤第一</div>
         </div>
-        <div class="bmc-cell bmc-cs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">1</span><span>CS</span></div>
-          <div class="bmc-cell-content"><strong>50°C 极温通勤骑手</strong> (雨季 80% + 干热 50°C) · 塔塔/Infosys 中产</div>
+        <div class="mod mod-cs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="mod-num">1</span>
+            <span class="mod-abbr">CS 客户</span>
+          </div>
+          <div class="mod-body"><strong>50°C 极温通勤骑手</strong> · 塔塔/Infosys 中产</div>
         </div>
-        <div class="bmc-cell bmc-ch">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">2</span><span>CH</span></div>
-          <div class="bmc-cell-content"><strong>suncross 印度独家代理</strong> (1-2 线城市经销网络)</div>
+        <div class="mod mod-ch">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span class="mod-num">2</span>
+            <span class="mod-abbr">CH 渠道</span>
+          </div>
+          <div class="mod-body"><strong>suncross 印度独家代理</strong> (1-2 线城市)</div>
         </div>
-        <div class="bmc-cell bmc-cr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">3</span><span>CR</span></div>
-          <div class="bmc-cell-content">suncross 高端品牌营销理念 + 班加罗尔 IT 996 中产</div>
+        <div class="mod mod-cr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/><path d="m12 8 3 3"/><path d="m17 12-3 3"/></svg>
+            <span class="mod-num">3</span>
+            <span class="mod-abbr">CR 客户关系</span>
+          </div>
+          <div class="mod-body">suncross <strong>高端品牌营销</strong> + 班加罗尔 IT 996</div>
         </div>
-        <div class="bmc-cell bmc-rs">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">7</span><span>RS</span></div>
-          <div class="bmc-cell-content"><strong>5K-15K INR 通勤</strong> + <strong>10K-50K INR MTB</strong> · 凉意 + Raleigh 组合</div>
+        <div class="mod mod-rs">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span class="mod-num">7</span>
+            <span class="mod-abbr">RS 收入</span>
+          </div>
+          <div class="mod-body"><strong>5K-15K INR 通勤</strong> + <strong>10K-50K INR MTB</strong></div>
         </div>
-        <div class="bmc-cell bmc-ka">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">4</span><span>KA</span></div>
-          <div class="bmc-cell-content">Raleigh 品牌运营 + suncross 渠道铺货 + 凉意产品上市</div>
+        <div class="mod mod-ka">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="mod-num">4</span>
+            <span class="mod-abbr">KA 活动</span>
+          </div>
+          <div class="mod-body">Raleigh 品牌运营 + suncross 铺货 + 凉意上市</div>
         </div>
-        <div class="bmc-cell bmc-kp">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">5</span><span>KP</span></div>
-          <div class="bmc-cell-content"><strong>suncross (独家代理)</strong> + <strong>Raleigh 1885 (品牌授权)</strong> + 集团全产业链</div>
+        <div class="mod mod-kp">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.15 5.15 0 0 1 7.07 0l1.76 1.76a3 3 0 0 1 0 4.24l-.88.88a1 1 0 1 1-3-3"/><path d="m5 11 4-4 4 4-4 4z"/></svg>
+            <span class="mod-num">5</span>
+            <span class="mod-abbr">KP 伙伴</span>
+          </div>
+          <div class="mod-body"><strong>suncross + Raleigh 1885</strong> + 集团全产业链</div>
         </div>
-        <div class="bmc-cell bmc-kr">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">6</span><span>KR</span></div>
-          <div class="bmc-cell-content">suncross 渠道 + <strong>Raleigh 1885 品牌势能</strong> + 凉意产品设计 + 集团全产业链</div>
+        <div class="mod mod-kr">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17.5 5.5 2 2"/></svg>
+            <span class="mod-num">6</span>
+            <span class="mod-abbr">KR 资源</span>
+          </div>
+          <div class="mod-body"><strong>suncross 渠道</strong> + <strong>Raleigh 1885 品牌势能</strong> + 凉意产品</div>
         </div>
-        <div class="bmc-cell bmc-cs-cost">
-          <div class="bmc-cell-label"><span class="bmc-cell-num">9</span><span>C$</span></div>
-          <div class="bmc-cell-content"><strong>suncross 独家代理费</strong> + <strong>Raleigh 品牌授权</strong> + 凉意产品研发</div>
+        <div class="mod mod-cs-cost">
+          <div class="mod-head">
+            <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+            <span class="mod-num">9</span>
+            <span class="mod-abbr">C$ 成本</span>
+          </div>
+          <div class="mod-body"><strong>suncross 代理费 + Raleigh 授权</strong> + 凉意研发</div>
         </div>
       </div>
     </article>
@@ -686,25 +744,25 @@ body {
   <aside class="anchors">
     <div class="anchors-title">12 锚支撑 · Theory Anchors</div>
     <div class="anchors-grid">
-      <div><strong>V2.9.50</strong> · 5 价值主张 (战略原点)</div>
-      <div><strong>V2.9.66</strong> · 6.6 情绪传播 (传播理论)</div>
-      <div><strong>V2.9.67</strong> · 6.7 王老吉金句 (金句落地)</div>
-      <div><strong>V2.9.68</strong> · 6.6 KANO (产品矩阵)</div>
-      <div><strong>V2.9.69</strong> · 6.7.8 物×法×情 (战略飞轮)</div>
-      <div><strong>V2.9.70</strong> · 4 国兴奋型 (产品方案)</div>
-      <div><strong>V2.9.80</strong> · 6.8 隐形冠军 (规模/速度)</div>
-      <div><strong>V2.9.82</strong> · 7 日价格趋势语义修复</div>
-      <div><strong>V2.9.83</strong> · 6.9 重新定义 (内部资料)</div>
-      <div><strong>V2.9.84</strong> · IN suncross + Raleigh 1885</div>
-      <div><strong>V2.9.85</strong> · 营销金句锚 (内部资料)</div>
-      <div><strong>V2.9.86</strong> · 品牌 1.0/2.0/3.0 (内部资料)</div>
+      <div><strong>V2.9.50</strong> · 5 价值主张</div>
+      <div><strong>V2.9.66</strong> · 6.6 情绪传播</div>
+      <div><strong>V2.9.67</strong> · 6.7 王老吉金句</div>
+      <div><strong>V2.9.68</strong> · 6.6 KANO</div>
+      <div><strong>V2.9.69</strong> · 6.7.8 物×法×情</div>
+      <div><strong>V2.9.70</strong> · 4 国兴奋型</div>
+      <div><strong>V2.9.80</strong> · 6.8 隐形冠军</div>
+      <div><strong>V2.9.82</strong> · 7 日价格趋势</div>
+      <div><strong>V2.9.83</strong> · 6.9 重新定义 (内部)</div>
+      <div><strong>V2.9.84</strong> · IN suncross</div>
+      <div><strong>V2.9.85</strong> · 营销金句 (内部)</div>
+      <div><strong>V2.9.86</strong> · 品牌 1.0/2.0/3.0 (内部)</div>
     </div>
   </aside>
 
 </main>
 
 <footer class="footer">
-  <strong>Phoenix · 4 Markets Business Model Canvas</strong> · 经典 2D 网格 · 基于 V2.9.50-V2.9.86 12 锚 · 2026-09-04
+  <strong>Phoenix · 4 Markets Business Model Canvas v3</strong> · Iconic BMC (Lucide icons) · 2026-09-04
 </footer>
 
 <script>
