@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix · 6 重承诺 × 4 国 = 24 单元格落地细节 (V2.9.95)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  background: #0a0e1a;
+  color: #e2e8f0;
+  line-height: 1.5;
+  padding: 24px 16px 80px;
+}
+.container { max-width: 1500px; margin: 0 auto; }
+
+/* === Header === */
+.hdr {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  border-left: 5px solid #22c55e;
+}
+.hdr-eyebrow { font-size: 11px; color: #94a3b8; letter-spacing: 2px; font-weight: 700; }
+.hdr-title { font-size: 28px; font-weight: 900; color: #fef2f2; margin: 6px 0 8px; letter-spacing: 0.5px; }
+.hdr-title em { color: #86efac; font-style: normal; }
+.hdr-sub { font-size: 13px; color: #cbd5e1; margin-bottom: 8px; }
+.hdr-link { display: inline-block; margin-top: 6px; margin-right: 6px; padding: 6px 14px; background: #1e40af; color: #fff; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 700; transition: background .2s; }
+.hdr-link:hover { background: #1d4ed8; }
+.hdr-link.green { background: #15803d; }
+.hdr-link.green:hover { background: #166534; }
+
+/* === 24 单元格 主表格 === */
+.grid-section {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+.grid-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 16px; text-align: center; }
+.grid-sub { font-size: 12px; color: #94a3b8; text-align: center; margin-bottom: 20px; }
+
+.grid-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 6px;
+  font-size: 12px;
+  min-width: 1200px;
+}
+.grid-table th {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+  background: #1e293b;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+}
+.grid-table th.row-label {
+  background: linear-gradient(90deg, #1e293b, #334155);
+  text-align: left;
+  min-width: 140px;
+}
+.grid-table th.col-header { background: linear-gradient(135deg, #1e40af, #1e3a8a); }
+.grid-table th.col-id { background: linear-gradient(135deg, #0e7490, #0c4a6e); }
+.grid-table th.col-eg { background: linear-gradient(135deg, #b45309, #92400e); }
+.grid-table th.col-in { background: linear-gradient(135deg, #991b1b, #7f1d1d); }
+
+.cell {
+  padding: 12px;
+  border-radius: 10px;
+  vertical-align: top;
+  min-width: 240px;
+  border: 1px solid;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.cell .scene { font-size: 13px; font-weight: 900; margin-bottom: 6px; }
+.cell .action { color: #cbd5e1; margin-bottom: 4px; }
+.cell .diff { font-size: 10px; opacity: 0.85; margin-bottom: 4px; font-style: italic; }
+.cell .verify { font-size: 10px; color: #94a3b8; margin-bottom: 4px; }
+.cell .time { font-size: 10px; font-weight: 900; padding: 2px 6px; border-radius: 4px; display: inline-block; background: rgba(255,255,255,.1); }
+
+/* 6 重承诺 × 4 国 配色 (24 种组合) */
+/* 行 1: 耐久耐造 */
+.row-durable .cell.bd { background: linear-gradient(135deg, rgba(30,58,138,.4), rgba(30,64,175,.3)); border-color: #3b82f6; }
+.row-durable .cell.id { background: linear-gradient(135deg, rgba(14,116,144,.4), rgba(8,145,178,.3)); border-color: #06b6d4; }
+.row-durable .cell.eg { background: linear-gradient(135deg, rgba(180,83,9,.4), rgba(146,64,14,.3)); border-color: #f59e0b; }
+.row-durable .cell.in { background: linear-gradient(135deg, rgba(153,27,27,.4), rgba(127,29,29,.3)); border-color: #ef4444; }
+
+/* 行 2: 跨代际传承 */
+.row-heritage .cell.bd { background: linear-gradient(135deg, rgba(30,58,138,.5), rgba(30,64,175,.4)); border-color: #60a5fa; }
+.row-heritage .cell.id { background: linear-gradient(135deg, rgba(14,116,144,.5), rgba(8,145,178,.4)); border-color: #22d3ee; }
+.row-heritage .cell.eg { background: linear-gradient(135deg, rgba(180,83,9,.5), rgba(146,64,14,.4)); border-color: #fbbf24; }
+.row-heritage .cell.in { background: linear-gradient(135deg, rgba(153,27,27,.5), rgba(127,29,29,.4)); border-color: #f87171; }
+
+/* 行 3: 人民的品牌 */
+.row-people .cell.bd { background: linear-gradient(135deg, rgba(22,101,52,.4), rgba(21,128,61,.3)); border-color: #22c55e; }
+.row-people .cell.id { background: linear-gradient(135deg, rgba(22,101,52,.5), rgba(21,128,61,.4)); border-color: #4ade80; }
+.row-people .cell.eg { background: linear-gradient(135deg, rgba(22,101,52,.6), rgba(21,128,61,.5)); border-color: #86efac; }
+.row-people .cell.in { background: linear-gradient(135deg, rgba(22,101,52,.7), rgba(21,128,61,.6)); border-color: #bbf7d0; }
+
+/* 行 4: 主动安全 */
+.row-safety .cell.bd { background: linear-gradient(135deg, rgba(202,138,4,.4), rgba(234,179,8,.3)); border-color: #facc15; }
+.row-safety .cell.id { background: linear-gradient(135deg, rgba(202,138,4,.5), rgba(234,179,8,.4)); border-color: #fde047; }
+.row-safety .cell.eg { background: linear-gradient(135deg, rgba(202,138,4,.6), rgba(234,179,8,.5)); border-color: #fef08a; }
+.row-safety .cell.in { background: linear-gradient(135deg, rgba(202,138,4,.7), rgba(234,179,8,.6)); border-color: #fef9c3; }
+
+/* 行 5: 财报透明 */
+.row-finance .cell.bd { background: linear-gradient(135deg, rgba(124,58,237,.4), rgba(109,40,217,.3)); border-color: #a78bfa; }
+.row-finance .cell.id { background: linear-gradient(135deg, rgba(124,58,237,.5), rgba(109,40,217,.4)); border-color: #c4b5fd; }
+.row-finance .cell.eg { background: linear-gradient(135deg, rgba(124,58,237,.6), rgba(109,40,217,.5)); border-color: #ddd6fe; }
+.row-finance .cell.in { background: linear-gradient(135deg, rgba(124,58,237,.7), rgba(109,40,217,.6)); border-color: #ede9fe; }
+
+/* 行 6: 净利率 ≤ 5% (重点高亮) */
+.row-margin .cell.bd { background: linear-gradient(135deg, rgba(153,27,27,.5), rgba(220,38,38,.4)); border-color: #fca5a5; box-shadow: 0 0 12px rgba(220,38,38,.3); }
+.row-margin .cell.id { background: linear-gradient(135deg, rgba(153,27,27,.6), rgba(220,38,38,.5)); border-color: #fca5a5; box-shadow: 0 0 12px rgba(220,38,38,.3); }
+.row-margin .cell.eg { background: linear-gradient(135deg, rgba(153,27,27,.7), rgba(220,38,38,.6)); border-color: #fca5a5; box-shadow: 0 0 12px rgba(220,38,38,.3); }
+.row-margin .cell.in { background: linear-gradient(135deg, rgba(153,27,27,.8), rgba(220,38,38,.7)); border-color: #fca5a5; box-shadow: 0 0 12px rgba(220,38,38,.4); }
+.row-margin .cell .scene { color: #fef2f2; font-size: 14px; }
+
+/* === 时间表 === */
+.timeline-section {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.timeline-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 16px; text-align: center; }
+.timeline-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+.timeline-q { padding: 14px; border-radius: 10px; background: rgba(255,255,255,.04); border-left: 4px solid; }
+.timeline-q h4 { font-size: 14px; font-weight: 900; margin-bottom: 8px; }
+.timeline-q .market { font-size: 11px; color: #94a3b8; margin-bottom: 6px; }
+.timeline-q ul { font-size: 11px; color: #cbd5e1; list-style: none; padding-left: 0; }
+.timeline-q ul li { margin-bottom: 4px; }
+.timeline-q.q1 { border-color: #22c55e; }
+.timeline-q.q2 { border-color: #facc15; }
+.timeline-q.q3 { border-color: #fb923c; }
+.timeline-q.q4 { border-color: #94a3b8; }
+
+/* === 资源估算 === */
+.resource-section {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.resource-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 16px; text-align: center; }
+.resource-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.resource-table th, .resource-table td { padding: 8px 12px; border: 1px solid #334155; text-align: left; }
+.resource-table thead th { background: #1e293b; font-weight: 900; }
+.resource-table .total { background: rgba(34,197,94,.15); font-weight: 900; }
+
+/* === 12 字金句 === */
+.golden-quote {
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+  border: 2px solid #fca5a5;
+  border-radius: 16px;
+  padding: 24px 28px;
+  text-align: center;
+  margin: 24px 0;
+  box-shadow: 0 0 32px rgba(220,38,38,.3);
+}
+.golden-quote .label { font-size: 11px; color: #fecaca; letter-spacing: 3px; font-weight: 700; margin-bottom: 6px; }
+.golden-quote .quote { font-size: 24px; font-weight: 900; color: #fef2f2; letter-spacing: 3px; }
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 24px;
+  padding: 16px;
+  border-top: 1px solid #334155;
+}
+.footer strong { color: #fef2f2; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="hdr">
+  <div class="hdr-eyebrow">PHOENIX · 24 PROMISES × 4 MARKETS</div>
+  <h1 class="hdr-title">凤凰<em>6 重承诺 × 4 国 = 24 单元格</em> 落地细节</h1>
+  <div class="hdr-sub">V2.9.95 · V2.9.94 架构图延伸 · 把"清晰"翻译为"执行" · 2026 Q1-Q3 4 国 Gravel 14 款 SKU 上市节奏</div>
+  <a href="./5layer_pyramid.html" class="hdr-link green">🎖️ 6 层金字塔 (V2.9.94)</a>
+  <a href="./4markets_bmc.html" class="hdr-link">🌐 4 国画布</a>
+  <a href="./index.html" class="hdr-link">↩ 看板</a>
+</header>
+
+<!-- 12 字金句 -->
+<div class="golden-quote">
+  <div class="label">12 字金句 · V2.9.93.2 拍板 · V2.9.95 4 国通用</div>
+  <div class="quote">净利率永不超 5%,看齐小米</div>
+</div>
+
+<!-- 24 单元格 主表格 -->
+<section class="grid-section">
+  <h2 class="grid-title">🎯 24 单元格落地细节 (6 重承诺 × 4 国)</h2>
+  <div class="grid-sub">每单元格: 落地方式 + 4 国差异 + 验证方法 + 落地时间</div>
+
+  <table class="grid-table">
+    <thead>
+      <tr>
+        <th class="row-label">6 重承诺</th>
+        <th class="col-header">🇧🇩 BD (达卡)</th>
+        <th class="col-id">🇮🇩 ID (雅加达)</th>
+        <th class="col-eg">🇪🇬 EG (开罗)</th>
+        <th class="col-in">🇮🇳 IN (班加罗尔)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 行 1: 耐久耐造 -->
+      <tr class="row-durable">
+        <th class="row-label">🛡️ 1 耐久耐造<br><span style="font-size:9px;opacity:.7">(V2.9.70)</span></th>
+        <td class="cell bd">
+          <div class="scene">雨季远征</div>
+          <div class="action">达克锈 + 氟碳漆 + 10万次检测 · 雨季 6-10 月 80% 降雨耐候</div>
+          <div class="diff">BD 雨季远征场景 · 错开 Rockrider 海外售后弱</div>
+          <div class="verify">经销商实地 + BD 雨季 2 年不掉色深访</div>
+          <div class="time">2026 Q2 Gravel 上市</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">热带雨林 5 年</div>
+          <div class="action">达克锈 + 氟碳漆 + UCI/SNI 标准 · 印尼热带雨林 5 年不锈</div>
+          <div class="diff">华人圈"耐用品"心智 · 印尼摩托换购周期 2-3 年,凤凰 5+ 年</div>
+          <div class="verify">印尼华人批发商 14+ 年合作 (华久/美乐) 验证</div>
+          <div class="time">2026 Q1 Gravel 上市</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">沙漠干热 10 年</div>
+          <div class="action">达克锈 + 氟碳漆 + 沙漠涂装 · 沙漠干热 10 年不锈</div>
+          <div class="diff">千年古文明耐用品 · 金字塔耐久 + 凤凰耐久 = 同精神</div>
+          <div class="verify">沙漠试骑 1000km + 干热测试报告</div>
+          <div class="time">2026 Q3 Gravel 上市</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">50°C 极温</div>
+          <div class="action">达克锈 + 氟碳漆 + 凉意产品 · 50°C 极温 + Raleigh 1885 工艺</div>
+          <div class="diff">50°C 极温通勤 · Phoenix ID = 0 SKU 蓝海切入</div>
+          <div class="verify">suncross 渠道实地 + IT 中产深访</div>
+          <div class="time">2026 Q3 Gravel 上市</div>
+        </td>
+      </tr>
+
+      <!-- 行 2: 跨代际传承 -->
+      <tr class="row-heritage">
+        <th class="row-label">👴 2 跨代际传承<br><span style="font-size:9px;opacity:.7">(V2.9.88)</span></th>
+        <td class="cell bd">
+          <div class="scene">父亲 15 年二八大杠</div>
+          <div class="action">父亲 15 年二八大杠 → 儿子买凤凰 Gravel 减肥 (代际资产延续)</div>
+          <div class="diff">摩托车事故恐惧 (B2 RMG 女工 + 父亲自行车记忆)</div>
+          <div class="verify">经销商讲"父亲的车"故事 + 二手凤凰保值率</div>
+          <div class="time">2026 Q2-Q4 持续</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">华人圈 129 年</div>
+          <div class="action">华人圈 129 年品牌 → 异国认同 (身在南洋·心归华夏)</div>
+          <div class="diff">华人圈民族身份 · 跨国跨代品牌认同</div>
+          <div class="verify">印尼华人批发商 14+ 年 + 二代接班访谈</div>
+          <div class="time">2026 Q1 启动</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">千年古文明对话</div>
+          <div class="action">千年古文明 + 凤凰 130 年对话 (沙漠骑手)</div>
+          <div class="diff">金字塔/古埃及 + 凤凰 1897 = 跨古文明对话</div>
+          <div class="verify">文化展览 + 沙漠骑行 1000 年古道</div>
+          <div class="time">2026 Q3-Q4 启动</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">中英双百年</div>
+          <div class="action">中英双百年对话 (凤凰 1897 + Raleigh 1885)</div>
+          <div class="diff">印度 + 英国双百年 · Raleigh 收藏家 N5 人群</div>
+          <div class="verify">Raleigh 1885 品牌联名 + 收藏家访谈</div>
+          <div class="time">2026 Q3 启动 (suncross 协议)</div>
+        </td>
+      </tr>
+
+      <!-- 行 3: 人民的品牌 -->
+      <tr class="row-people">
+        <th class="row-label">💰 3 人民的品牌<br><span style="font-size:9px;opacity:.7">(V2.9.88)</span></th>
+        <td class="cell bd">
+          <div class="scene">25-40K BDT</div>
+          <div class="action">达卡中产月入 1/3 买凤凰 (60-360 USD) · 错开 Rockrider 65K</div>
+          <div class="diff">5 款 SKU: PHOENIX 25-35K + FNIX 35-40K · 不参与价格战</div>
+          <div class="verify">Daraz 标价 + 经销商实地 + 用户购买力调研</div>
+          <div class="time">2026 Q2 上市 5 款</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">8-18M IDR</div>
+          <div class="action">雅加达中产 1/3 月薪买凤凰 · 华人圈+本土双梯度</div>
+          <div class="diff">5 款 SKU: PHOENIX 8-12M + FNIX 12-18M · 错开 Polygon 25M</div>
+          <div class="verify">Shopee/Tokopedia 标价 + 印尼 96 华人批发商</div>
+          <div class="time">2026 Q1 上市 5 款</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">8-25K EGP</div>
+          <div class="action">开罗中产买得起 · 政府招标 620 元/台透明公开</div>
+          <div class="diff">3 款 SKU: PHOENIX 8-15K + FNIX 18-25K · 政府背书</div>
+          <div class="verify">政府采购公示 + 400 门店标价</div>
+          <div class="time">2026 Q3 上市 3 款</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">12-30K INR</div>
+          <div class="action">IT 中产月薪 1/3 买凤凰 · suncross 品牌费 5/2.5 USD 透明</div>
+          <div class="diff">3 款 SKU: PHOENIX 12-20K + FNIX 22-30K · 双品牌梯度</div>
+          <div class="verify">suncross 渠道报表 + IT 中产购买力</div>
+          <div class="time">2026 Q3 上市 3 款</div>
+        </td>
+      </tr>
+
+      <!-- 行 4: 主动安全 -->
+      <tr class="row-safety">
+        <th class="row-label">🛡️ 4 主动安全<br><span style="font-size:9px;opacity:.7">(V2.9.93)</span></th>
+        <td class="cell bd">
+          <div class="scene">雨季夜骑 6 装备</div>
+          <div class="action">Gravel 标配 6 装备 (心率/夜光/碟刹/防滑/直立/APP) · 雨季夜骑</div>
+          <div class="diff">BD 夜骑 30% 占比 (雨季天黑早) · 4 大极致 + 主动安全</div>
+          <div class="verify">经销商培训 + 用户深访 (40 岁中产 5 人)</div>
+          <div class="time">2026 Q2 标配</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">华人健康 6 装备</div>
+          <div class="action">Gravel 标配 6 装备 · 华人圈健康焦虑 (40 岁中产怕猝死)</div>
+          <div class="diff">华人圈健身房/瑜伽馆客户重叠 · 跨代际+健康</div>
+          <div class="verify">Shopee/Tokopedia 详情页 + 华人圈深访</div>
+          <div class="time">2026 Q1 标配</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">沙漠健身 6 装备</div>
+          <div class="action">Gravel 标配 6 装备 · 沙漠健身潮流 (30-45 岁)</div>
+          <div class="diff">沙漠骑手装备差异化 (耐高温涂层) · 政府运动队合作</div>
+          <div class="verify">沙漠试骑 + 政府运动队合作</div>
+          <div class="time">2026 Q3 标配</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">IT 焦虑 6 装备</div>
+          <div class="action">Gravel 标配 6 装备 · IT 中产健康焦虑 (35-45 岁)</div>
+          <div class="diff">IT 中产智能手环普及 (Apple Watch/Garmin) · 智能安全 APP</div>
+          <div class="verify">suncross 渠道 + IT 中产深访</div>
+          <div class="time">2026 Q3 标配</div>
+        </td>
+      </tr>
+
+      <!-- 行 5: 财报透明 -->
+      <tr class="row-finance">
+        <th class="row-label">📊 5 财报透明<br><span style="font-size:9px;opacity:.7">(V2.9.93.2)</span></th>
+        <td class="cell bd">
+          <div class="scene">600679 + 经销商</div>
+          <div class="action">上海凤凰 600679 财报链接 + BD 经销商门店展示 + Daraz 详情页</div>
+          <div class="diff">BD 经销商"中国上市企业"故事 · 经销商实地 + 财报二维码</div>
+          <div class="verify">经销商实地 + 财报二维码扫描数据</div>
+          <div class="time">2026 Q2 持续</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">600679 + 96 华人</div>
+          <div class="action">600679 财报 + 96 华人批发商 + 400 门店 + IG 直营</div>
+          <div class="diff">印尼华人"上市公司"心智 (新加坡/香港上市逻辑)</div>
+          <div class="verify">印尼华人深访 + 财报链接点击数据</div>
+          <div class="time">2026 Q1 持续</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">600679 + 400 门店</div>
+          <div class="action">600679 财报 + 400 门店 + 政府背书</div>
+          <div class="diff">政府招标"上市公司"加分项 · 复旦 EMBA 渠道</div>
+          <div class="verify">政府采购资料 + 复旦 EMBA 渠道</div>
+          <div class="time">2026 Q3 持续</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">600679 + suncross</div>
+          <div class="action">600679 财报 + suncross 渠道 + IT 中产官网</div>
+          <div class="diff">IT 中产"上市公司"调研习惯 (财报 + 工商查询)</div>
+          <div class="verify">suncross 渠道 + IT 中产官网流量</div>
+          <div class="time">2026 Q3 持续</div>
+        </td>
+      </tr>
+
+      <!-- 行 6: 净利率 ≤ 5% (高亮) -->
+      <tr class="row-margin">
+        <th class="row-label">🎖️ 6 净利率 ≤ 5%<br><span style="font-size:9px;opacity:.7">(V2.9.93.2 · 终极层)</span></th>
+        <td class="cell bd">
+          <div class="scene">💰 经销商"小米看齐"</div>
+          <div class="action">经销商讲"净利率 ≤ 5% 跟小米看齐"故事 · 标价透明 · 财报二维码</div>
+          <div class="diff">BD 中产"不烧心"心智 (怕被坑) · 12 字金句 BD Bangla 翻译</div>
+          <div class="verify">经销商培训 + 用户深访 (BD 中产 5 人)</div>
+          <div class="time">2026 Q2 持续</div>
+        </td>
+        <td class="cell id">
+          <div class="scene">💰 96 华人讲"小米"</div>
+          <div class="action">96 华人讲"净利率 ≤ 5% 跟小米看齐" · Shopee/Tokopedia 价格统一</div>
+          <div class="diff">ID 华人圈"民族品牌定价透明"心智 · 12 字金句 ID Indonesian 翻译</div>
+          <div class="verify">印尼华人深访 + 价格比对数据</div>
+          <div class="time">2026 Q1 持续</div>
+        </td>
+        <td class="cell eg">
+          <div class="scene">💰 政府招标"小米"</div>
+          <div class="action">政府招标讲"净利率 ≤ 5% 跟小米看齐" · 400 门店 620 元/台透明</div>
+          <div class="diff">政府招标"上市公司 + 净利率透明"加分 · 12 字金句 EG Arabic 翻译</div>
+          <div class="verify">政府采购公示 + 复旦 EMBA 渠道</div>
+          <div class="time">2026 Q3 持续</div>
+        </td>
+        <td class="cell in">
+          <div class="scene">💰 suncross"小米"</div>
+          <div class="action">suncross 渠道讲"净利率 ≤ 5% 跟小米看齐" · 品牌费 5/2.5 USD 透明</div>
+          <div class="diff">IT 中产"上市公司财报可查"调研 · 12 字金句 IN Hindi 翻译</div>
+          <div class="verify">suncross 渠道 + IT 中产调研</div>
+          <div class="time">2026 Q3 持续</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 时间表 -->
+<section class="timeline-section">
+  <h2 class="timeline-title">📅 2026 上市节奏 (4 国 Gravel 14 款 SKU)</h2>
+  <div class="timeline-grid">
+    <div class="timeline-q q1">
+      <h4>Q1 2026</h4>
+      <div class="market">🇮🇩 ID (P0 已验证)</div>
+      <ul>
+        <li>✅ 5 款 Gravel 上市 (2 PHOENIX + 3 FNIX)</li>
+        <li>✅ 承诺 1-6 全部启动</li>
+        <li>✅ 96 华人批发商 + 400 门店</li>
+        <li>✅ 经销商培训 100 人 + 用户深访 5 人</li>
+      </ul>
+    </div>
+    <div class="timeline-q q2">
+      <h4>Q2 2026</h4>
+      <div class="market">🇧🇩 BD (P1 主推)</div>
+      <ul>
+        <li>✅ 5 款 Gravel 上市 (3 PHOENIX + 2 FNIX)</li>
+        <li>✅ 承诺 1 耐久 + 4 主动安全 + 5 财报 + 6 净利率</li>
+        <li>✅ 健力 OEM + 批发商网络</li>
+        <li>✅ 经销商培训 200 人 + 用户深访 5 人</li>
+      </ul>
+    </div>
+    <div class="timeline-q q3">
+      <h4>Q3 2026</h4>
+      <div class="market">🇪🇬 EG + 🇮🇳 IN (P2 复制)</div>
+      <ul>
+        <li>✅ EG 3 款 Gravel 上市</li>
+        <li>✅ IN 3 款 Gravel 上市 (suncross 协议)</li>
+        <li>✅ 千年古文明 + 中英双百年对话</li>
+        <li>✅ 经销商培训 150 人 + 用户深访 10 人</li>
+      </ul>
+    </div>
+    <div class="timeline-q q4">
+      <h4>Q4 2026+</h4>
+      <div class="market">验证 + 迭代</div>
+      <ul>
+        <li>🔲 24 单元格 实际效果数据</li>
+        <li>🔲 4 国用户深访 汇总</li>
+        <li>🔲 Gravel 14 款 SKU 销量排名</li>
+        <li>🔲 V2.9.96+ 验证 + 优化</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 资源估算 -->
+<section class="resource-section">
+  <h2 class="resource-title">💼 4 国资源总投入估算 (V2.9.95)</h2>
+  <table class="resource-table">
+    <thead>
+      <tr>
+        <th>4 国</th>
+        <th>Gravel 研发</th>
+        <th>渠道建设</th>
+        <th>营销物料</th>
+        <th>5 用户深访</th>
+        <th>经销商培训</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>🇮🇩 ID</td>
+        <td>已有 (复制印尼成功案例)</td>
+        <td>96 华人 + 400 门店 已建</td>
+        <td>Q1 印刷 1 万份</td>
+        <td>Q1 5 人</td>
+        <td>Q1 100 人</td>
+      </tr>
+      <tr>
+        <td>🇧🇩 BD</td>
+        <td>Q1-Q2 立项 (5 款)</td>
+        <td>健力 OEM + 批发商网络</td>
+        <td>Q2 印刷 2 万份</td>
+        <td>Q2 5 人</td>
+        <td>Q2 200 人</td>
+      </tr>
+      <tr>
+        <td>🇪🇬 EG</td>
+        <td>Q2-Q3 立项 (3 款)</td>
+        <td>400 门店 + 政府运动部</td>
+        <td>Q3 印刷 1 万份</td>
+        <td>Q3 5 人</td>
+        <td>Q3 100 人</td>
+      </tr>
+      <tr>
+        <td>🇮🇳 IN</td>
+        <td>Q2-Q3 立项 (3 款)</td>
+        <td>suncross 独家 (PHOENIX 中低端)</td>
+        <td>Q3 印刷 1 万份</td>
+        <td>Q3 5 人</td>
+        <td>Q3 50 人</td>
+      </tr>
+      <tr class="total">
+        <td>4 国合计</td>
+        <td>14 款 SKU</td>
+        <td>4 国渠道 + 政府 + suncross</td>
+        <td>5 万份物料</td>
+        <td>20 用户深访</td>
+        <td>450 经销商</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <strong>Phoenix · 6 重承诺 × 4 国 = 24 单元格落地细节 (V2.9.95)</strong> · V2.9.94 架构图延伸 · 把"清晰"翻译为"执行" · 2026 Q1-Q3 4 国 Gravel 14 款 SKU 上市节奏 · 6 重承诺 + 4 国差异 + 验证方法 + 落地时间
+  <br><br>
+  <span style="opacity:0.6">📎 内部资料: <code>strategy/_v2_9_95_24_promises_grid.md</code> (24753 bytes, 10 段) · 8/8 战略原则第 16 次落地</span>
+</footer>
+
+</div>
+</body>
+</html>
