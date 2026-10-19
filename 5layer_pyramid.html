@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix · 6 层战略金字塔 + 4 国扩展 (V2.9.94 终极架构图)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  background: #0a0e1a;
+  color: #e2e8f0;
+  line-height: 1.6;
+  padding: 24px 16px 80px;
+}
+.container { max-width: 1400px; margin: 0 auto; }
+
+/* === Header === */
+.hdr {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  border-left: 5px solid #991b1b;
+}
+.hdr-eyebrow { font-size: 11px; color: #94a3b8; letter-spacing: 2px; font-weight: 700; }
+.hdr-title { font-size: 28px; font-weight: 900; color: #fef2f2; margin: 6px 0 8px; letter-spacing: 0.5px; }
+.hdr-title em { color: #fca5a5; font-style: normal; }
+.hdr-sub { font-size: 13px; color: #cbd5e1; margin-bottom: 8px; }
+.hdr-link { display: inline-block; margin-top: 6px; padding: 6px 14px; background: #1e40af; color: #fff; border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 700; transition: background .2s; }
+.hdr-link:hover { background: #1d4ed8; }
+
+/* === Layer Pyramid === */
+.pyramid-wrap {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+.pyramid-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 20px; text-align: center; }
+.pyramid { display: flex; flex-direction: column; gap: 6px; max-width: 1000px; margin: 0 auto; }
+
+.layer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+  cursor: default;
+}
+.layer:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.layer-num { font-size: 32px; font-weight: 900; opacity: 0.3; min-width: 50px; }
+.layer-content { flex: 1; }
+.layer-name { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
+.layer-name-en { font-size: 11px; opacity: 0.7; letter-spacing: 1px; margin-bottom: 6px; }
+.layer-q { font-size: 11px; opacity: 0.85; font-style: italic; margin-bottom: 6px; }
+.layer-detail { font-size: 13px; line-height: 1.5; }
+.layer-anchor { display: inline-block; padding: 2px 8px; background: rgba(255,255,255,.15); border-radius: 6px; font-size: 11px; font-weight: 700; margin-right: 6px; }
+
+/* 6 层 配色 (从下到上: 蓝→青→绿→黄→橙→红, 战略升级) */
+.layer-1 { background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%); border-color: #3b82f6; }
+.layer-2 { background: linear-gradient(90deg, #0e7490 0%, #0891b2 100%); border-color: #06b6d4; }
+.layer-3 { background: linear-gradient(90deg, #166534 0%, #15803d 100%); border-color: #22c55e; }
+.layer-4 { background: linear-gradient(90deg, #ca8a04 0%, #eab308 100%); border-color: #facc15; }
+.layer-5 { background: linear-gradient(90deg, #c2410c 0%, #ea580c 100%); border-color: #fb923c; }
+.layer-6 {
+  background: linear-gradient(90deg, #991b1b 0%, #dc2626 100%);
+  border-color: #fca5a5;
+  box-shadow: 0 0 24px rgba(220,38,38,.3);
+}
+.layer-6 .layer-num { color: #fca5a5; opacity: 0.7; }
+
+/* === Matrix: 4 国横向扩展 === */
+.matrix-section {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+.matrix-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 20px; text-align: center; }
+.matrix-sub { font-size: 12px; color: #94a3b8; text-align: center; margin-bottom: 24px; }
+
+.matrix-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+}
+.matrix-table th, .matrix-table td {
+  padding: 10px 12px;
+  border: 1px solid #334155;
+  vertical-align: top;
+  text-align: left;
+}
+.matrix-table thead th {
+  background: #1e293b;
+  font-weight: 900;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+}
+.matrix-table .flag { text-align: center; font-size: 20px; }
+.matrix-table .code { font-size: 11px; opacity: 0.7; }
+.matrix-table .row-label { background: rgba(255,255,255,.04); font-weight: 700; color: #fef2f2; }
+.matrix-table .row-layer { color: #cbd5e1; }
+.matrix-table td.l6 { background: rgba(153,27,27,.15); color: #fca5a5; font-weight: 700; }
+
+/* === 6 Promises Mapping === */
+.promises-section {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+.promises-title { font-size: 18px; font-weight: 900; color: #fef2f2; margin-bottom: 20px; text-align: center; }
+.promises-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px; }
+.promise-card {
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.04);
+  border-left: 4px solid;
+  font-size: 12px;
+}
+.promise-card .num { font-size: 20px; font-weight: 900; opacity: 0.5; }
+.promise-card .name { font-size: 14px; font-weight: 900; margin: 4px 0; }
+.promise-card .evidence { font-size: 11px; color: #94a3b8; }
+.promise-card.p1 { border-color: #fca5a5; } /* 耐久 */
+.promise-card.p2 { border-color: #fbbf24; } /* 跨代际 */
+.promise-card.p3 { border-color: #86efac; } /* 人民 */
+.promise-card.p4 { border-color: #67e8f9; } /* 主动安全 */
+.promise-card.p5 { border-color: #c4b5fd; } /* 财报 */
+.promise-card.p6 { border-color: #fca5a5; background: rgba(153,27,27,.15); } /* 净利率 */
+
+/* === 12 字金句 === */
+.golden-quote {
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+  border: 2px solid #fca5a5;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  margin: 24px 0;
+  box-shadow: 0 0 32px rgba(220,38,38,.3);
+}
+.golden-quote .label { font-size: 12px; color: #fecaca; letter-spacing: 3px; font-weight: 700; margin-bottom: 10px; }
+.golden-quote .quote { font-size: 32px; font-weight: 900; color: #fef2f2; letter-spacing: 4px; margin-bottom: 12px; }
+.golden-quote .anchor { font-size: 12px; color: #fecaca; opacity: 0.9; }
+
+/* === 16 战略锚 === */
+.anchors-section {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.anchors-title { font-size: 16px; font-weight: 900; color: #fef2f2; margin-bottom: 16px; }
+.anchors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.anchor-item {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.04);
+  font-size: 12px;
+  border-left: 3px solid #475569;
+}
+.anchor-item.main { border-color: #fca5a5; background: rgba(220,38,38,.1); }
+.anchor-item.asset { border-color: #86efac; background: rgba(22,101,52,.15); }
+.anchor-item .num { font-weight: 900; color: #fef2f2; }
+.anchor-item .name { color: #cbd5e1; }
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 24px;
+  padding: 16px;
+  border-top: 1px solid #334155;
+}
+.footer strong { color: #fef2f2; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="hdr">
+  <div class="hdr-eyebrow">PHOENIX · 6-LAYER STRATEGY PYRAMID</div>
+  <h1 class="hdr-title">凤凰<em>6 层战略金字塔</em> + 4 国扩展</h1>
+  <div class="hdr-sub">V2.9.94 终极架构图 · 整合 V2.9.91+92+93+93.2 四个战略锚 · 16 战略锚完整闭环</div>
+  <a href="./index.html" class="hdr-link">↩ 看板</a>
+  <a href="./4markets_bmc.html" class="hdr-link">🌐 4 国画布</a>
+</header>
+
+<!-- 12 字金句 高亮 -->
+<div class="golden-quote">
+  <div class="label">12 字金句 · V2.9.93.2 拍板</div>
+  <div class="quote">净利率永不超 5%,看齐小米</div>
+  <div class="anchor">🚴 凤凰自行车业务净利率承诺 · 上海凤凰 600679 上市公司财报披露 · 跟 2018 雷军小米硬件承诺永久看齐</div>
+</div>
+
+<!-- 6 层金字塔 -->
+<section class="pyramid-wrap">
+  <h2 class="pyramid-title">📐 6 层战略金字塔 (从下到上 · V2.9.94 终极架构)</h2>
+  <div class="pyramid">
+
+    <!-- Layer 1 哲学 -->
+    <div class="layer layer-1">
+      <span class="layer-num">1</span>
+      <div class="layer-content">
+        <div class="layer-name">📐 哲学层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Philosophy</span></div>
+        <div class="layer-name-en">WHY · 为什么</div>
+        <div class="layer-q">"为什么做凤凰?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.92</span>
+          <strong>品牌 = 承诺 = 功能价值 + 情感价值</strong> · 凤凰 6 重品牌承诺 (所有层)
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 2 战略 -->
+    <div class="layer layer-2">
+      <span class="layer-num">2</span>
+      <div class="layer-content">
+        <div class="layer-name">🎯 战略层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Strategy</span></div>
+        <div class="layer-name-en">WHAT · 做什么</div>
+        <div class="layer-q">"做什么赛道?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.91</span>
+          <strong>赛道 = Gravel + 减肥骑行</strong> · 回归 130 年二八大杠耐久耐造基因 · 4 国 14 款 SKU 集中火力
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3 消费 -->
+    <div class="layer layer-3">
+      <span class="layer-num">3</span>
+      <div class="layer-content">
+        <div class="layer-name">👥 消费层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Consumer</span></div>
+        <div class="layer-name-en">WHO · 给谁用</div>
+        <div class="layer-q">"卖给谁?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.93</span>
+          <strong>40 岁中产核心人群</strong> · 5 大痛点 (怕猝死/怕伤/没时间/家庭责任/怕被坑) + 主动安全 6 装备
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 4 定价 -->
+    <div class="layer layer-4">
+      <span class="layer-num">4</span>
+      <div class="layer-content">
+        <div class="layer-name">💰 定价层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Pricing</span></div>
+        <div class="layer-name-en">PRICE · 怎么定价</div>
+        <div class="layer-q">"卖多少钱?赚多少?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.93.2</span>
+          <strong>净利率 ≤ 5% 一步到位 (跟小米看齐)</strong> · 2025 实际 4.91% 已符合 · 17 年历史常态 14 年符合 (2009-2025)
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 5 战术 -->
+    <div class="layer layer-5">
+      <span class="layer-num">5</span>
+      <div class="layer-content">
+        <div class="layer-name">🛠️ 战术层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Tactics</span></div>
+        <div class="layer-name-en">HOW · 怎么执行</div>
+        <div class="layer-q">"怎么做?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.70</span>
+          <strong>4 大极致 + 主动安全 6 装备</strong> · 物理证据 (达克锈/氟碳漆/10万次) + 财报证据 (上市公司)
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 6 终极 -->
+    <div class="layer layer-6">
+      <span class="layer-num">6</span>
+      <div class="layer-content">
+        <div class="layer-name">🎖️ 终极层 <span style="font-size:11px;font-weight:600;opacity:.7;margin-left:4px">Ultimate</span></div>
+        <div class="layer-name-en">FAITH · 信仰</div>
+        <div class="layer-q">"凤凰是什么?"</div>
+        <div class="layer-detail">
+          <span class="layer-anchor">V2.9.93.2</span>
+          <strong style="color:#fef2f2">12 字金句 + 上市公司财报披露</strong> · "净利率永不超 5%,看齐小米" · 凤凰独有品牌资产护城河
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6 层 × 4 国 = 24 单元格 战略架构 -->
+<section class="matrix-section">
+  <h2 class="matrix-title">🌐 6 层 × 4 国 = 24 单元格 战略架构 (V2.9.94 整合)</h2>
+  <div class="matrix-sub">横向 4 国 (BD/ID/EG/IN) × 纵向 6 层 (哲学→战略→消费→定价→战术→终极)</div>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>层</th>
+        <th class="flag">🇧🇩</th>
+        <th class="flag">🇮🇩</th>
+        <th class="flag">🇪🇬</th>
+        <th class="flag">🇮🇳</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th class="code">BD</th>
+        <th class="code">ID</th>
+        <th class="code">EG</th>
+        <th class="code">IN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">1 📐 哲学</td>
+        <td>品牌 = 承诺</td>
+        <td>品牌 = 承诺</td>
+        <td>品牌 = 承诺</td>
+        <td>品牌 = 承诺</td>
+      </tr>
+      <tr>
+        <td class="row-label">2 🎯 战略</td>
+        <td>Gravel 5 款 + 减肥骑行<br><span style="font-size:10px;opacity:.7">致敬打不垮</span></td>
+        <td>Gravel 5 款 + 减肥骑行<br><span style="font-size:10px;opacity:.7">已验证成功案例</span></td>
+        <td>Gravel 3 款 + 减肥骑行<br><span style="font-size:10px;opacity:.7">沙漠骑手</span></td>
+        <td>Gravel 3 款 + 减肥骑行<br><span style="font-size:10px;opacity:.7">IT 中产</span></td>
+      </tr>
+      <tr>
+        <td class="row-label">3 👥 消费</td>
+        <td>40 岁中产<br>25-40K BDT</td>
+        <td>40 岁中产<br>8-18M IDR (华人圈)</td>
+        <td>40 岁中产<br>8-25K EGP</td>
+        <td>40 岁中产<br>12-30K INR (IT/金融)</td>
+      </tr>
+      <tr>
+        <td class="row-label">4 💰 定价</td>
+        <td>净利率 ≤ 5%<br>+ 标价透明</td>
+        <td>净利率 ≤ 5%<br>+ Shopee/Tokopedia 同价</td>
+        <td>净利率 ≤ 5%<br>+ 政府招标 620 元透明</td>
+        <td>净利率 ≤ 5%<br>+ suncross 品牌费透明</td>
+      </tr>
+      <tr>
+        <td class="row-label">5 🛠️ 战术</td>
+        <td>主动安全 6 装备<br>+ 达克锈 + 10 万次</td>
+        <td>主动安全 6 装备<br>+ UCI + 华人圈认同</td>
+        <td>主动安全 6 装备<br>+ 沙漠涂装</td>
+        <td>主动安全 6 装备<br>+ 凉意 + Raleigh 1885</td>
+      </tr>
+      <tr>
+        <td class="row-label l6">6 🎖️ 终极</td>
+        <td class="l6">财报可查<br>净利率永不超 5%,看齐小米</td>
+        <td class="l6">财报可查<br>净利率永不超 5%,看齐小米</td>
+        <td class="l6">财报可查<br>净利率永不超 5%,看齐小米</td>
+        <td class="l6">财报可查<br>净利率永不超 5%,看齐小米</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 6 重品牌承诺 -->
+<section class="promises-section">
+  <h2 class="promises-title">🛡️ 凤凰 6 重品牌承诺 (V2.9.93.2 整合 · 护城河)</h2>
+  <div class="promises-grid">
+    <div class="promise-card p1">
+      <div class="num">1</div>
+      <div class="name">耐久耐造</div>
+      <div class="evidence">物理证据 · 达克锈/氟碳漆/10万次 (V2.9.70)</div>
+    </div>
+    <div class="promise-card p2">
+      <div class="num">2</div>
+      <div class="name">跨代际传承</div>
+      <div class="evidence">时间证据 · 130 年二八大杠基因 (V2.9.88)</div>
+    </div>
+    <div class="promise-card p3">
+      <div class="num">3</div>
+      <div class="name">人民的品牌</div>
+      <div class="evidence">价位证据 · 5K-40K 4 国通用 (V2.9.88)</div>
+    </div>
+    <div class="promise-card p4">
+      <div class="num">4</div>
+      <div class="name">主动安全</div>
+      <div class="evidence">装备证据 · 6 装备体系 (V2.9.93)</div>
+    </div>
+    <div class="promise-card p5">
+      <div class="num">5</div>
+      <div class="name">财报透明</div>
+      <div class="evidence">财务证据 · 上海凤凰 600679 上市公司</div>
+    </div>
+    <div class="promise-card p6">
+      <div class="num">6</div>
+      <div class="name">净利率 ≤ 5%</div>
+      <div class="evidence">财务证据 · 12 字金句 (V2.9.93.2)</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 战略锚 -->
+<section class="anchors-section">
+  <h2 class="anchors-title">⚓ 16 战略锚完整清单 (V2.9.94 整合)</h2>
+  <div class="anchors-grid">
+    <div class="anchor-item main"><span class="num">V2.9.50</span> · <span class="name">客户掏钱 > 分析推论 (决策金句)</span></div>
+    <div class="anchor-item main"><span class="num">V2.9.70</span> · <span class="name">4 大极致 (战术层)</span></div>
+    <div class="anchor-item main"><span class="num">V2.9.91</span> · <span class="name">Gravel + 减肥骑行 (战略层)</span></div>
+    <div class="anchor-item main"><span class="num">V2.9.92</span> · <span class="name">品牌 = 承诺 (哲学层)</span></div>
+    <div class="anchor-item main"><span class="num">V2.9.93</span> · <span class="name">40 岁中产 (消费层)</span></div>
+    <div class="anchor-item main"><span class="num">V2.9.93.2</span> · <span class="name">净利率 ≤ 5% (定价+终极层)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.83</span> · <span class="name">重新定义 (认知层)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.85</span> · <span class="name">营销金句 (理论层)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.86</span> · <span class="name">品牌 1.0/2.0/3.0 (框架)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.87</span> · <span class="name">4markets_bmc (横向 4 国)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.88</span> · <span class="name">人民的品牌 (5 维理论)</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.89</span> · <span class="name">IN suncross 协议</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.90</span> · <span class="name">matrix 同步 + DREAMCYCLE 修正</span></div>
+    <div class="anchor-item asset"><span class="num">V2.9.94</span> · <span class="name">5 层金字塔 (纵向 6 层架构)</span></div>
+    <div class="anchor-item" style="border-color:#475569"><span class="num">+1</span> · <span class="name">V2.9.50 决策金句</span></div>
+    <div class="anchor-item" style="border-color:#475569"><span class="num">+1</span> · <span class="name">凤凰 130 年二八大杠基因 (历史锚)</span></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <strong>Phoenix · 6 层战略金字塔 + 4 国扩展 (V2.9.94)</strong> · 整合 V2.9.91 (战略) + V2.9.92 (哲学) + V2.9.93 (消费) + V2.9.93.2 (定价+终极) · 16 战略锚完整闭环 · "净利率永不超 5%,看齐小米" · 2026-10-19
+  <br><br>
+  <span style="opacity:0.6">📎 内部资料: <code>strategy/_v2_9_94_5_layer_pyramid_ultimate.md</code> (25742 bytes, 11 段) · 8/8 战略原则第 15 次落地</span>
+</footer>
+
+</div>
+</body>
+</html>
