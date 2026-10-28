@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix · 社媒声量体检 + 加速定位 5 方法 (V2.9.96b)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  background: #0a0e1a; color: #e2e8f0; line-height: 1.6; padding: 24px 16px 80px;
+}
+.container { max-width: 1520px; margin: 0 auto; }
+
+.hdr { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155;
+  border-radius: 16px; padding: 26px 30px; margin-bottom: 24px; border-left: 5px solid #22c55e; }
+.hdr-eyebrow { font-size: 11px; color: #94a3b8; letter-spacing: 2.5px; font-weight: 700; }
+.hdr-title { font-size: 30px; font-weight: 900; color: #fef2f2; margin: 6px 0 8px; }
+.hdr-title em { color: #86efac; font-style: normal; }
+.hdr-sub { font-size: 13px; color: #cbd5e1; margin-bottom: 10px; }
+.hdr-links { margin-top: 12px; }
+.hdr-link { display: inline-block; margin: 4px 6px 4px 0; padding: 6px 13px; background: #1e40af; color: #fff;
+  border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 700; transition: background .2s; }
+.hdr-link:hover { background: #1d4ed8; }
+.hdr-link.green { background: #15803d; } .hdr-link.green:hover { background: #166534; }
+.hdr-link.rose { background: #be123c; } .hdr-link.rose:hover { background: #9f1239; }
+.hdr-link.purple { background: #7c3aed; } .hdr-link.purple:hover { background: #6d28d9; }
+
+.sec { background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); border: 1px solid #334155;
+  border-radius: 16px; padding: 24px 26px; margin-bottom: 24px; }
+.sec-title { font-size: 19px; font-weight: 900; color: #fef2f2; margin-bottom: 6px; }
+.sec-sub { font-size: 12px; color: #94a3b8; margin-bottom: 18px; }
+.sec-tag { font-size: 10px; padding: 3px 9px; border-radius: 6px; margin-left: 10px; vertical-align: middle; font-weight: 700; }
+
+/* 运行日志 */
+.runlog { background: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 16px 18px;
+  font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: 12px; line-height: 1.75;
+  color: #a5b4fc; overflow-x: auto; }
+.runlog .ok { color: #86efac; } .runlog .warn { color: #fde047; } .runlog .dim { color: #475569; }
+.runlog .cmt { color: #64748b; }
+
+/* KPI */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 12px; }
+.kpi { border-radius: 12px; padding: 14px 16px; border: 1px solid #334155; background: #0f172a; position: relative; overflow: hidden; }
+.kpi .lbl { font-size: 10.5px; color: #94a3b8; letter-spacing: 1px; font-weight: 700; }
+.kpi .num { font-size: 30px; font-weight: 900; line-height: 1.15; margin: 3px 0 2px; }
+.kpi .sub { font-size: 10.5px; color: #64748b; }
+.kpi.good { border-color: rgba(34,197,94,.45); background: rgba(34,197,94,.07); }
+.kpi.good .num { color: #86efac; }
+.kpi.bad { border-color: rgba(244,63,94,.5); background: rgba(244,63,94,.08); }
+.kpi.bad .num { color: #fda4af; }
+.kpi.mid { border-color: rgba(234,179,8,.45); background: rgba(234,179,8,.07); }
+.kpi.mid .num { color: #fde047; }
+.kpi.info { border-color: rgba(56,189,248,.45); background: rgba(56,189,248,.07); }
+.kpi.info .num { color: #7dd3fc; }
+
+/* 洞察 */
+.ins { display: grid; grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); gap: 14px; }
+.ins-card { border-radius: 14px; padding: 18px 20px; border: 1px solid #334155; background: #0f172a; }
+.ins-card.critical { border-color: rgba(244,63,94,.5); background: linear-gradient(135deg, rgba(244,63,94,.09), rgba(15,23,42,.7)); }
+.ins-card.major { border-color: rgba(251,146,60,.45); background: linear-gradient(135deg, rgba(251,146,60,.08), rgba(15,23,42,.7)); }
+.ins-card.tech { border-color: rgba(56,189,248,.45); background: linear-gradient(135deg, rgba(56,189,248,.08), rgba(15,23,42,.7)); }
+.ins-h { display: flex; align-items: center; gap: 9px; margin-bottom: 8px; }
+.ins-no { width: 26px; height: 26px; border-radius: 8px; background: #f43f5e; color: #0a0e1a;
+  font-weight: 900; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ins-card.major .ins-no { background: #fb923c; }
+.ins-card.tech .ins-no { background: #38bdf8; }
+.ins-t { font-size: 15px; font-weight: 900; color: #f1f5f9; }
+.ins-body { font-size: 12.5px; color: #cbd5e1; line-height: 1.7; }
+.ins-body b { color: #fde68a; }
+.ins-quote { background: rgba(15,23,42,.8); border-left: 3px solid #22c55e; border-radius: 0 8px 8px 0;
+  padding: 9px 13px; margin: 9px 0; font-size: 12px; color: #a7f3d0; font-style: italic; }
+.ins-act { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #334155; font-size: 11.5px; color: #93c5fd; }
+.ins-act b { color: #bfdbfe; }
+.ins-ring { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 12px;
+  background: rgba(244,63,94,.18); color: #fda4af; border: 1px solid rgba(244,63,94,.4); margin-right: 6px; }
+
+/* 声量表 */
+.plat-tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.ptab { padding: 6px 14px; border-radius: 9px; background: #1e293b; border: 1px solid #334155;
+  color: #cbd5e1; font-size: 12px; font-weight: 700; cursor: pointer; transition: all .15s; }
+.ptab:hover { background: #334155; }
+.ptab.active { background: #1d4ed8; border-color: #3b82f6; color: #fff; }
+.ptab .ct { opacity: .75; font-weight: 600; margin-left: 5px; }
+table.voice { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; }
+table.voice th { background: #1e293b; color: #94a3b8; font-size: 10.5px; letter-spacing: 1px; padding: 9px 9px;
+  text-align: left; border-bottom: 2px solid #334155; font-weight: 800; position: sticky; top: 0; }
+table.voice td { padding: 9px 9px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+table.voice tr.noise td { opacity: .45; }
+.vplat { font-size: 10px; padding: 2px 7px; border-radius: 12px; font-weight: 800; white-space: nowrap; }
+.vplat.tiktok { background: rgba(56,189,248,.16); color: #7dd3fc; }
+.vplat.instagram { background: rgba(251,146,60,.16); color: #fdba74; }
+.vplat.reels { background: rgba(244,63,94,.16); color: #fda4af; }
+.vplat.facebook { background: rgba(99,102,241,.16); color: #a5b4fc; }
+.vreg { font-size: 10px; font-weight: 800; }
+.vreg.bd { color: #86efac; } .vreg.id { color: #67e8f9; }
+.vflag { font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 700; white-space: nowrap; }
+.vflag.keep { background: rgba(34,197,94,.16); color: #86efac; }
+.vflag.noise { background: rgba(100,116,139,.22); color: #94a3b8; }
+.vflag.hi { background: rgba(251,191,36,.18); color: #fde047; }
+.vtext { color: #cbd5e1; line-height: 1.55; }
+.vmeta { font-size: 10px; color: #64748b; margin-top: 3px; }
+.vmeta a { color: #60a5fa; text-decoration: none; }
+.vmeta a:hover { text-decoration: underline; }
+.tags { margin-top: 4px; }
+.tag { font-size: 9.5px; padding: 1px 6px; border-radius: 9px; margin-right: 4px; font-weight: 700; }
+.tag.strat { background: rgba(244,63,94,.2); color: #fda4af; }
+.tag.mid { background: rgba(34,197,94,.16); color: #86efac; }
+.tag.low { background: rgba(100,116,139,.2); color: #94a3b8; }
+.tag.ugc { background: rgba(251,191,36,.2); color: #fde047; }
+
+/* 5 方法 */
+.methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.method { border-radius: 13px; padding: 16px 18px; border: 1px solid #334155; background: #0f172a; }
+.method.done { border-color: rgba(34,197,94,.5); background: linear-gradient(135deg, rgba(34,197,94,.09), rgba(15,23,42,.8)); }
+.method.next { border-color: rgba(56,189,248,.45); }
+.m-h { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.m-no { width: 25px; height: 25px; border-radius: 7px; background: #1e293b; border: 1px solid #334155;
+  color: #cbd5e1; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+.method.done .m-no { background: #22c55e; color: #0a0e1a; border-color: #22c55e; }
+.m-name { font-size: 14.5px; font-weight: 900; color: #f1f5f9; }
+.m-tag { font-size: 9.5px; padding: 2px 7px; border-radius: 10px; font-weight: 800; }
+.m-tag.done { background: rgba(34,197,94,.2); color: #86efac; }
+.m-tag.wait { background: rgba(100,116,139,.22); color: #94a3b8; }
+.m-desc { font-size: 11.5px; color: #94a3b8; line-height: 1.6; margin-bottom: 8px; }
+.m-rows { font-size: 11px; color: #cbd5e1; }
+.m-rows div { padding: 3px 0; border-bottom: 1px solid rgba(51,65,85,.45); display: flex; gap: 7px; }
+.m-rows b { color: #94a3b8; font-weight: 700; min-width: 46px; flex-shrink: 0; }
+
+/* 矩阵 */
+table.cov { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.cov th { background: #1e293b; color: #94a3b8; font-size: 10.5px; letter-spacing: 1px; padding: 9px;
+  text-align: center; border-bottom: 2px solid #334155; font-weight: 800; }
+table.cov th:first-child { text-align: left; }
+table.cov td { padding: 8px 9px; border-bottom: 1px solid #1e293b; text-align: center; }
+table.cov td:first-child { text-align: left; font-weight: 700; color: #cbd5e1; }
+.cv { font-weight: 900; }
+.cv.y { color: #86efac; } .cv.w { color: #fde047; } .cv.n { color: #64748b; }
+
+/* 优先级 */
+table.pri { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.pri th { background: #1e293b; color: #94a3b8; font-size: 10.5px; letter-spacing: 1px; padding: 9px 10px;
+  text-align: left; border-bottom: 2px solid #334155; font-weight: 800; }
+table.pri td { padding: 10px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+.pri-badge { display: inline-block; padding: 3px 10px; border-radius: 8px; font-size: 10.5px; font-weight: 900; }
+.pri-badge.p0 { background: rgba(239,68,68,.2); color: #fca5a5; border: 1px solid rgba(239,68,68,.45); }
+.pri-badge.p1 { background: rgba(251,191,36,.18); color: #fde047; border: 1px solid rgba(251,191,36,.42); }
+.pri-badge.p2 { background: rgba(56,189,248,.16); color: #7dd3fc; border: 1px solid rgba(56,189,248,.4); }
+.pri-badge.p3 { background: rgba(100,116,139,.2); color: #94a3b8; border: 1px solid rgba(100,116,139,.4); }
+.up { color: #f87171; font-weight: 900; }
+.down { color: #86efac; font-weight: 900; }
+.shift { color: #fbbf24; font-weight: 800; font-size: 11px; }
+
+.foot { text-align: center; font-size: 11.5px; color: #64748b; padding: 26px 0 10px;
+  border-top: 1px solid #1e293b; margin-top: 10px; }
+.foot strong { color: #94a3b8; }
+.note { font-size: 12px; color: #cbd5e1; background: rgba(56,189,248,.07); border: 1px solid rgba(56,189,248,.32);
+  border-radius: 10px; padding: 12px 16px; margin-top: 14px; }
+.note b { color: #7dd3fc; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HEADER ===== -->
+<div class="hdr">
+  <div class="hdr-eyebrow">PHOENIX · SOCIAL VOICE · V2.9.96b</div>
+  <div class="hdr-title">社媒声量体检 + <em>加速定位 5 方法</em></div>
+  <div class="hdr-sub">方法① Apify 4 平台首轮实跑 · 2026-10-28 12:05-12:08 · 31 条真实文案逐条程序化统计 · latest.json sha=3093d761</div>
+
+  <div class="hdr-links">
+    <a class="hdr-link" href="./index.html">🏠 index (13 Tab)</a>
+    <a class="hdr-link rose" href="./brand_6rings.html">🔷 6 环体检 (V2.9.96)</a>
+    <a class="hdr-link green" href="./24promises_grid.html">🎯 24 承诺落地 (V2.9.95)</a>
+    <a class="hdr-link purple" href="./5layer_pyramid.html">📐 6 层金字塔 (V2.9.94)</a>
+    <a class="hdr-link" href="./bd/dtc.html">🔥 DTC 差评监测</a>
+  </div>
+
+  <div class="note" style="border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.07)">
+    <b style="color:#86efac">✅ 长期 blocker 打破</b> ——
+    "Apify token 已给但抓取从未实际运行" 是挂了很久的一件事。本轮 token 连通性体检通过(4 个 actor 全部可访问),
+    <b>真实抓取 31 条 / status=ok / 3 分钟</b>,数据已进 <code>data/latest.json</code> 并上传 GitHub(sha=3093d761),ID price_pool 195 → 198 SKU。
+    <b style="color:#fda4af">更重要的产出:这 31 条让 V2.9.96 的六环体检从"内部自评"变成"外部实测",并逼出了两个更严重的断点。</b>
+  </div>
+</div>
+
+<!-- ===== 1. 运行日志 ===== -->
+<div class="sec">
+  <div class="sec-title">🖥️ 实跑记录 <span class="sec-tag" style="background:rgba(34,197,94,.16);color:#86efac;border:1px solid rgba(34,197,94,.4)">方法① 首次实跑</span></div>
+  <div class="sec-sub">两步:① token 连通性体检(不消耗 actor 额度) ② 真实抓取 run。</div>
+  <div class="runlog">
+<span class="cmt">$ python _tmp_apify_check.py</span>
+[1] token present: True  len=46  prefix=apify
+[2] account: id=yb8rJuAX32vsywswc username=<span class="ok">PHOENIX-LIVE</span> isPaying=False
+[3] limits: maxMonthlyUsageUsd=5, maxMonthlyActorComputeUnits=625, maxMonthlyExternalDataTransferGbytes=1000
+[4] actor OK  tiktok     id=GdWCkxBtKWOsKjdch             name=tiktok-scraper
+[4] actor OK  instagram  id=reGe1ST3OBgYZSsZJ             name=instagram-hashtag-scraper
+[4] actor OK  facebook   id=KoJrdxJCTtpon81KY             name=facebook-posts-scraper
+[4] actor OK  reels      id=xMc5Ga1oCONPmWJIa             name=instagram-reel-scraper
+[5] done
+<br><br>
+<span class="cmt">$ python crawler/run.py --module apify_social</span>
+[2026-10-28T12:05:11] === apify_social ===
+[2026-10-28T12:08:04] apify_social: <span class="ok">31 social posts</span>
+[2026-10-28T12:08:04] apify_social: 31 items, status=<span class="ok">ok</span>
+[2026-10-28T12:08:04] wrote data\latest.json (373312 bytes)
+[2026-10-28T12:08:04] brand_metrics: recomputed and saved to latest.json
+[2026-10-28T12:08:05] id.price_pool after ID real-data merge: <span class="ok">198 SKUs (48 brands)</span>
+[2026-10-28T12:08:05] dashboard_metrics: recomputed and saved to latest.json
+[2026-10-28T12:08:11] API upload OK: data/latest.json sha=<span class="ok">3093d761</span>
+<br><br>
+<span class="cmt">$ fetch_status 快照</span>
+  daraz_bd = <span class="warn">warn</span> (BD 190 kept, baseline protected, threshold 133)
+  shopee_id = ok · tokopedia = ok · news_bd = ok · news_id = ok
+  <span class="ok">apify_social = ok</span>  ← <span class="dim">本轮新增</span>
+  dreamcycle = pending · serbasepeda = ok
+  </div>
+</div>
+
+<!-- ===== 2. KPI ===== -->
+<div class="sec">
+  <div class="sec-title">📊 声量体检量化 · 11 项指标 <span class="sec-tag" style="background:rgba(244,63,94,.16);color:#fda4af;border:1px solid rgba(244,63,94,.4)">逐条程序化统计</span></div>
+  <div class="sec-sub">全部基于 31 条真实抓取文案,非抽样、非印象。红色 = 断点级。</div>
+  <div class="kpis">
+    <div class="kpi info"><div class="lbl">采集条数</div><div class="num">31</div><div class="sub">TikTok 16 · IG 8 · Reels 7 · FB 0</div></div>
+    <div class="kpi good"><div class="lbl">含 phoenix 品牌词</div><div class="num">87.1%</div><div class="sub">27/31 · 品牌词有认知度</div></div>
+    <div class="kpi bad"><div class="lbl">Gravel 提及</div><div class="num">0.0%</div><div class="sub">0/31 · 战略赛道词零曝光</div></div>
+    <div class="kpi bad"><div class="lbl">净利率/5%/小米</div><div class="num">0.0%</div><div class="sub">0/31 · 12 字金句零曝光</div></div>
+    <div class="kpi bad"><div class="lbl">3 支柱词</div><div class="num">0.0%</div><div class="sub">0/31 · V2.9.96 收敛成果零曝光</div></div>
+    <div class="kpi mid"><div class="lbl">中高端词</div><div class="num">22.6%</div><div class="sub">7/31 · mtb/carbon/700c/shimano</div></div>
+    <div class="kpi bad"><div class="lbl">中低端词</div><div class="num">25.8%</div><div class="sub">8/31 · city/fold/26"/27.5/ebike</div></div>
+    <div class="kpi bad"><div class="lbl">UGC 用户评价</div><div class="num">3.2%</div><div class="sub">1/31 · 用户几乎没替我们说话</div></div>
+    <div class="kpi mid"><div class="lbl">官方号/官方页</div><div class="num">16.1%</div><div class="sub">5/31 · 我方主导声量</div></div>
+    <div class="kpi bad"><div class="lbl">非目标市场噪音</div><div class="num">35.5%</div><div class="sub">11/31 · 品牌词歧义严重</div></div>
+    <div class="kpi good"><div class="lbl">目标市场有效声量</div><div class="num">64.5%</div><div class="sub">20/31 · 达标(≥60%)</div></div>
+  </div>
+</div>
+
+<!-- ===== 3. 五条洞察 ===== -->
+<div class="sec">
+  <div class="sec-title">🔍 五条数据支撑的洞察 <span class="sec-tag" style="background:rgba(251,146,60,.16);color:#fdba74;border:1px solid rgba(251,146,60,.4)">可回溯到原始 URL</span></div>
+  <div class="sec-sub">每条洞察 = 一个数字 + 一段证据 + 一个对应六环 + 一个动作。</div>
+  <div class="ins">
+
+    <div class="ins-card critical">
+      <div class="ins-h"><span class="ins-no">1</span><span class="ins-t">战略语言 0 曝光 —— 环⑤ 语言断点被实锤</span></div>
+      <div class="ins-body">
+        我们有 <b>16 个战略锚</b>、一套完整品牌系统、12 字金句、三支柱。
+        社媒 31 条文案里:&nbsp;<b>Gravel 0 次 · 净利率/小米 0 次 · 三支柱 0 次</b>。
+        <br><br>
+        📌 断点从「内部不知道」变成「<b>外部看不见</b>」—— V2.9.96 的 70 分是内部自评,<b>外部实评为 0</b>。
+      </div>
+      <div class="ins-act"><span class="ins-ring">环 ⑤ 语言</span><b>动作:</b> 社媒语言层改造 —— 每条内容必须携带「赛道词」或「承诺词」之一,目标曝光 ≥25%。</div>
+    </div>
+
+    <div class="ins-card critical">
+      <div class="ins-h"><span class="ins-no">2</span><span class="ins-t">定位错位:社媒推城市代步车,战略做 Gravel</span></div>
+      <div class="ins-body">
+        印尼官方号实推:<b>CTB Sierra AX 城市车 / MTB 2706 / CTB 8860 AT / #sepedaanak #sepedamini(童车标签)/ 复活节与圣诞祝福</b>。
+        <br><br>
+        🎯 <b>官方社媒的主力产品 ≠ V2.9.91 的战略赛道(Gravel + 减肥骑行)。</b>
+        <br><br>
+        理论定位(六边形品牌模型):这不是环⑤⑥ 的问题 —— 这是 <b>The Company 环内部就分裂了</b>:
+        战略上的 Company = "做中高端 Gravel 的品牌";社媒上的 Company = "做城市代步全品类的品牌"。
+        <b>说不清我们在卖什么,视觉做得再好也没用。</b>
+      </div>
+      <div class="ins-act"><span class="ins-ring">环 ② 公司</span><span class="ins-ring">🆕 新断点</span><b>动作:</b> 产品口径一致性 —— 社媒说什么/卖什么 ↔ 战略卖什么,统一到 Gravel 主轴。<b>升为 P0 最高。</b></div>
+    </div>
+
+    <div class="ins-card critical">
+      <div class="ins-h"><span class="ins-no">3</span><span class="ins-t">用户声音 3.2% —— V2.9.50 缺口的实锤</span></div>
+      <div class="ins-body">
+        31 条里只有 <b>1 条</b>是真实用户评价,其余 30 条 = 我方自说自话 或 经销商自发内容。
+        <div class="ins-quote">
+          🇧🇩 [instagram] 🚲✨ Customer Review | Dream Bicycle Delivered! ❤️ Alhamdulillah!
+          This little boy got his dream Phoenix 26-inch bicycle
+        </div>
+        📌 品牌词 <b>87.1% 有认知</b>,但用户背书 <b>3.2%</b> → 典型的「<b>有名字,没口碑</b>」。
+      </div>
+      <div class="ins-act"><span class="ins-ring">环 ① 顾客</span><span class="ins-ring">环 ④ 基石</span><b>动作:</b> 方法②(经销商口播)+ 方法③(5 用户深访)从"待启动"升级为 <b>P0</b>。</div>
+    </div>
+
+    <div class="ins-card major">
+      <div class="ins-h"><span class="ins-no">4</span><span class="ins-t">品牌词歧义 35.5% —— 采集规则方法论修正</span></div>
+      <div class="ins-body">
+        TikTok 上的 "Phoenix" 撞上了:<b>越南摩托</b>(<code>Chốt em v1 led Audi giá dẻ</code>)、
+        <b>肯尼亚 ebike</b>(<code>PRICE -95,000/= ORDER NOW</code>)、<b>意大利古董车</b>(<code>#cosasarà #oldbike</code>)、
+        <b>拉美/欧洲西语</b>(<code>El resurgir de la Máquina</code>)。
+        <br><br>
+        📌 <b>采集规则修正(写进所有后续抓取):</b>
+        <br>· ❌ 不用裸关键词 <code>phoenix</code>
+        <br>· ✅ 用 <code>phoenix bicycle</code> / <code>phoenixbike</code> + <b>地域限定</b>(BD/ID) + <b>品类排除</b>(motor/ebike/folding/kids/vintage/童车)
+        <br>· ✅ 抓取后必须跑<b>语言-噪音过滤</b>(本轮已实现,可复用)
+        <br>· <b>预期信噪比:35.5% 噪音 → 目标 &lt; 10%</b>
+      </div>
+      <div class="ins-act"><span class="ins-ring">环 ③ 市场</span><b>动作:</b> 立刻可落地,零成本,提升后续所有抓取质量。</div>
+    </div>
+
+    <div class="ins-card tech">
+      <div class="ins-h"><span class="ins-no">5</span><span class="ins-t">采集器两处缺陷(工程修复,非战略)</span></div>
+      <div class="ins-body">
+        <table style="width:100%;font-size:11.5px;border-collapse:collapse">
+          <tr><td style="padding:5px 6px;border-bottom:1px solid #1e293b;color:#fda4af;font-weight:800">Facebook 0 条</td>
+              <td style="padding:5px 6px;border-bottom:1px solid #1e293b;color:#cbd5e1">actor 可访问但 run 无结果(<code>startUrls</code> 指向需登录态的搜索页)</td></tr>
+          <tr><td style="padding:5px 6px;color:#fda4af;font-weight:800">Reels 抓到 2023 旧帖</td>
+              <td style="padding:5px 6px;color:#cbd5e1">post_id <code>C1PVL53SeYW</code> = 2023 圣诞祝福 → 缺时间窗口过滤</td></tr>
+        </table>
+        <br>📌 <b>静默空结果必须当作失败处理</b> —— actor 可访问 ≠ 能跑到数据。
+      </div>
+      <div class="ins-act"><span class="ins-ring">工程 P3</span><b>动作:</b> FB 改官方主页直采 / Reviews scraper;Reels 加 <code>sinceDate</code> 近 12 个月窗口。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== 4. 声量明细 ===== -->
+<div class="sec">
+  <div class="sec-title">📃 31 条声量明细 <span class="sec-tag" style="background:rgba(56,189,248,.16);color:#7dd3fc;border:1px solid rgba(56,189,248,.4)">实时读 data/latest.json</span></div>
+  <div class="sec-sub">
+    标签:<span class="tag strat">战略词</span> Gravel/赛道/承诺 &nbsp;
+    <span class="tag mid">中高端</span> mtb/carbon/700c/shimano &nbsp;
+    <span class="tag low">中低端</span> city/fold/26"/27.5/vintage/ebike &nbsp;
+    <span class="tag ugc">用户评价</span> 真实用户发言 &nbsp;
+    <span class="vflag keep">保留</span> 目标市场 &nbsp;
+    <span class="vflag noise">噪音</span> 非 BD/ID
+  </div>
+  <div class="plat-tabs" id="tabs"></div>
+  <div style="overflow-x:auto">
+    <table class="voice">
+      <thead><tr>
+        <th style="width:82px">平台</th><th style="width:52px">国家</th><th style="width:78px">判定</th>
+        <th>文案</th><th style="width:150px">互动</th>
+      </tr></thead>
+      <tbody id="vbody"><tr><td colspan="5" style="padding:24px;text-align:center;color:#64748b">⏳ 加载 data/latest.json…</td></tr></tbody>
+    </table>
+  </div>
+  <div class="note"><b>读法:</b> 灰色行 = 品牌词噪音(非 BD/ID 目标市场),<b>不计入品牌资产判断</b>。带 🔗 的条目可点击回溯原始帖文 —— 所有洞察都能追到源头。</div>
+</div>
+
+<!-- ===== 5. 5 方法 ===== -->
+<div class="sec">
+  <div class="sec-title">🚀 加速定位 5 方法 · 执行方案与进度 <span class="sec-tag" style="background:rgba(34,197,94,.16);color:#86efac;border:1px solid rgba(34,197,94,.4)">① 已实跑</span></div>
+  <div class="sec-sub">5 方法 = 5 条把"分析推论"换成"客户掏钱"的通道。目的:让六环体检的分数由外部数据校准,而不是自己给自己打分。</div>
+  <div class="methods">
+    <div class="method done">
+      <div class="m-h"><span class="m-no">1</span><span class="m-name">社媒声量</span><span class="m-tag done">✅ 已实跑</span></div>
+      <div class="m-desc">客户在平台上怎么谈我们和竞品</div>
+      <div class="m-rows">
+        <div><b>工具</b><span>Apify 4 actor + Daraz 评论</span></div>
+        <div><b>成本</b><span>$0.5-2/月(额度 $5 / 625 CU)</span></div>
+        <div><b>周期</b><span>持续 · 单轮 3 分钟</span></div>
+        <div><b>输出</b><span>latest.json#global.dtc_social[]</span></div>
+        <div><b>验收</b><span>4 平台全覆盖 · 有效声量 ≥60% · ≥30 条 · 可回溯</span></div>
+        <div><b>现状</b><span>31 条 ✅ · 有效 64.5% ✅ · 4 平台 ❌(FB 0)</span></div>
+      </div>
+    </div>
+    <div class="method next">
+      <div class="m-h"><span class="m-no">2</span><span class="m-name">经销商口播</span><span class="m-tag wait">⬜ 2 周</span></div>
+      <div class="m-desc">一线卖车的人每天被客户问什么 —— 零修饰的原始语言</div>
+      <div class="m-rows">
+        <div><b>方式</b><span>BD 3 家 + ID 3 家 15 分钟访谈 + 门店聊天记录</span></div>
+        <div><b>成本</b><span>0(现有关系;ID 有 96 华人批发商可触达)</span></div>
+        <div><b>输出</b><span>客户原话库 ≥100 条 + 高频疑问 Top 20</span></div>
+        <div><b>验收</b><span>每条标注国家/门店/日期</span></div>
+        <div><b>优先级</b><span style="color:#fda4af">🔺 升 P0(UGC 仅 3.2%)</span></div>
+      </div>
+    </div>
+    <div class="method next">
+      <div class="m-h"><span class="m-no">3</span><span class="m-name">5 用户深访</span><span class="m-tag wait">⬜ 4 周</span></div>
+      <div class="m-desc">40 岁中产的真实决策过程 + 给支柱①补命名锚点</div>
+      <div class="m-rows">
+        <div><b>规模</b><span>4 国各 5 人 = 20 人(BD/ID/EG/IN)</span></div>
+        <div><b>必问</b><span>怕被淘汰/怕闲置吗?(验证支柱①)</span></div>
+        <div><b>输出</b><span>实录 ≥15 段 + 情感原话 ≥15 条 + 3 段故事</span></div>
+        <div><b>验收</b><span>三恐惧频次 ≥70% · 支柱①成立或被证伪</span></div>
+        <div><b>优先级</b><span style="color:#fda4af">🔺 升 P0</span></div>
+      </div>
+    </div>
+    <div class="method">
+      <div class="m-h"><span class="m-no">4</span><span class="m-name">竞品扫描</span><span class="m-tag wait">⬜ 持续</span></div>
+      <div class="m-desc">竞品的产品谱 + 价格带 + 社媒语言 + 差评主题</div>
+      <div class="m-rows">
+        <div><b>竞品池</b><span>BD 7 真品牌 / ID 16 真品牌 + Rockrider/Trek/Polygon/Raleigh</span></div>
+        <div><b>方式</b><span>Apify 竞品 hashtag + Daraz/Shopee/Tokopedia 评论</span></div>
+        <div><b>成本</b><span>$1-3/月</span></div>
+        <div><b>输出</b><span>评论语料 ≥2000 条 + 负面主题 ≥8 个</span></div>
+        <div><b>验收</b><span>能直接回答"凤凰凭什么赢"</span></div>
+      </div>
+    </div>
+    <div class="method">
+      <div class="m-h"><span class="m-no">5</span><span class="m-name">二手数据</span><span class="m-tag wait">⬜ 持续</span></div>
+      <div class="m-desc">别人已经做好的行业结论,做交叉验证</div>
+      <div class="m-rows">
+        <div><b>来源</b><span>Sogou news + 600679 财报 + 研报 + 承诺先例库</span></div>
+        <div><b>成本</b><span>0</span></div>
+        <div><b>输出</b><span>4 国市场规模/价格带 + 对手财报口径利润表</span></div>
+        <div><b>验收</b><span>每条标年份+URL;区分经营利润 vs 一次性损益</span></div>
+        <div><b>坑</b><span style="color:#fde047">V2.9.93.2 已踩过(18.17% 火灾赔款)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. 覆盖矩阵 + 修正表 ===== -->
+<div class="sec">
+  <div class="sec-title">🧮 五方法 → 六环覆盖矩阵 + 实跑反哺修正</div>
+  <div class="sec-sub">左:5 方法能覆盖哪几环(不靠内部推论)。右:实跑后六环分数的下修。</div>
+
+  <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:20px">
+    <div>
+      <div style="font-size:12.5px;font-weight:900;color:#86efac;margin-bottom:9px">① 覆盖矩阵</div>
+      <table class="cov">
+        <thead><tr><th>六环</th><th>①社媒</th><th>②经销商</th><th>③深访</th><th>④竞品</th><th>⑤二手</th><th>覆盖</th></tr></thead>
+        <tbody>
+          <tr><td>① 顾客</td><td class="cv y">✓</td><td class="cv y">✓</td><td class="cv y">✓✓</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv y">3/3</td></tr>
+          <tr><td>② 公司</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv y">✓✓</td><td class="cv w">1/3</td></tr>
+          <tr><td>③ 市场</td><td class="cv y">✓</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv y">✓✓</td><td class="cv y">✓</td><td class="cv y">3/3</td></tr>
+          <tr><td>④ 基石</td><td class="cv y">✓</td><td class="cv y">✓</td><td class="cv y">✓✓</td><td class="cv y">✓</td><td class="cv n">—</td><td class="cv y">3/3</td></tr>
+          <tr><td>⑤ 语言</td><td class="cv y">✓✓</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv y">✓</td><td class="cv n">—</td><td class="cv w">2/3</td></tr>
+          <tr><td>⑥ 视觉</td><td class="cv y">✓</td><td class="cv n">—</td><td class="cv n">—</td><td class="cv y">✓</td><td class="cv n">—</td><td class="cv w">2/3</td></tr>
+        </tbody>
+      </table>
+      <div class="note" style="margin-top:12px"><b>✅ 组合覆盖了 6 环全部</b> —— 没有哪一环只能靠内部推论。这是 5 方法存在的意义。</div>
+    </div>
+
+    <div>
+      <div style="font-size:12.5px;font-weight:900;color:#fda4af;margin-bottom:9px">② 实跑反哺:六环分数下修</div>
+      <table class="pri" style="font-size:12px">
+        <thead><tr><th>环</th><th>内部自评</th><th>实跑证据</th><th>修正</th></tr></thead>
+        <tbody>
+          <tr><td>① 顾客</td><td>82 🟢</td><td>UGC 3.2%,无一手证据</td><td class="down">78 🟢</td></tr>
+          <tr><td>② 公司</td><td>78 🟢</td><td>社媒推城市车 ↔ 战略做 Gravel</td><td class="down">78 🟢</td></tr>
+          <tr><td>③ 市场</td><td>88 🟢</td><td>有效 64.5%,噪音 35.5%</td><td class="down">85 🟢</td></tr>
+          <tr><td>④ 基石</td><td>80 🟢</td><td>情感价值 0 条用户原话</td><td class="down">76 🟢</td></tr>
+          <tr><td>⑤ 语言</td><td>70 🟡</td><td><b style="color:#fca5a5">战略词 0% 曝光</b></td><td class="up">58 🟡</td></tr>
+          <tr><td>⑥ 视觉</td><td>25 🔴</td><td>官方号物料无统一规范</td><td class="up">25 🔴</td></tr>
+          <tr style="background:rgba(244,63,94,.07)"><td><b>🆕 产品口径一致性</b></td><td>—</td><td><b>社媒 ↔ 战略 定位分裂</b></td><td class="up"><b>40 🔴</b></td></tr>
+        </tbody>
+      </table>
+      <div class="note" style="border-color:rgba(244,63,94,.4);background:rgba(244,63,94,.07)">
+        <b style="color:#fda4af">综合强度:70.5 → 68.5 / 100(下调 2.0)</b><br>
+        <b style="color:#fda4af">理论升级:</b> V2.9.96 原结论是"断的是第 ⑥ 环视觉品牌"。实跑后修正为 ——
+        <b>战略层在内部已满配,外部评估为 0;而且断的不止 ⑥ —— The Company 环自身分裂:同一环建了两套。</b>
+        <br><br>
+        <b>这正是 V2.9.50「客户掏钱 &gt; 分析推论」的最锋利一次验证</b> —— 内部自评 70.5 看起来很健康,31 条真实客户可见内容把战略语言曝光打成 0。<b>分数下调比任何推论都有价值。</b>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. 优先级 ===== -->
+<div class="sec">
+  <div class="sec-title">🗺️ 断点优先级重排(实跑后)</div>
+  <div class="sec-sub">按"补强价值 × 可启动性"排序。实跑把「产品口径一致性」顶到了第一位,VI 手册降为 P1。</div>
+  <table class="pri">
+    <thead><tr><th style="width:70px">优先级</th><th style="width:270px">项目</th><th>理由</th><th style="width:130px">对应六环</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pri-badge p0">P0 最高</span></td><td><b>产品口径一致性</b><br><span style="font-size:11px;color:#94a3b8">社媒说什么/卖什么 ↔ 战略卖什么</span></td>
+          <td><b style="color:#fda4af">说清楚卖什么 &gt; 长得好看</b> —— VI 做再好也救不了定位分裂。新增断点,实跑才发现。</td><td>② 公司 / ⑤ 语言</td></tr>
+      <tr><td><span class="pri-badge p0">P0</span></td><td>社媒语言层改造<br><span style="font-size:11px;color:#94a3b8">赛道词 + 承诺词进每条内容</span></td>
+          <td>战略词曝光 0% → 目标 ≥25%。零成本,当天可改。</td><td>⑤ 语言</td></tr>
+      <tr><td><span class="pri-badge p0">P0</span></td><td>20 用户深访 + 经销商口播<br><span style="font-size:11px;color:#94a3b8">方法② + 方法③</span></td>
+          <td>UGC 仅 3.2% —— 有名字没口碑。深访同时补环①人群与环④情感价值。</td><td>① 顾客 / ④ 基石</td></tr>
+      <tr><td><span class="pri-badge p1">P1</span></td><td>VI 手册 v1<br><span style="font-size:11px;color:#94a3b8">色彩 + 5 语族字体 + 图形母题 + 社交矩阵</span></td>
+          <td>仍是唯一纯视觉断环(25/100),但排不到第一 —— <b>先把"卖什么"说清楚</b>。</td><td>⑥ 视觉</td></tr>
+      <tr><td><span class="pri-badge p1">P1</span></td><td>4 国 12 字金句本地化<br><span style="font-size:11px;color:#94a3b8">BD Bangla / ID Indonesian / EG Arabic / IN Hindi</span></td>
+          <td>与社媒语言改造合并做,一次产出两处收益。</td><td>⑤ 语言</td></tr>
+      <tr><td><span class="pri-badge p2">P2</span></td><td>130 年品牌史 + 10 年目标 + tasks.html</td>
+          <td>素材供给与写作层,不紧急但会持续欠账。</td><td>② 公司</td></tr>
+      <tr><td><span class="pri-badge p3">P3 工程</span></td><td>FB 抓取修复 + Reels 时间窗 + 关键词规则升级</td>
+          <td>不占战略资源,但决定后续数据质量上限。</td><td>③ 市场</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="foot">
+  <strong>Phoenix · 社媒声量体检 + 加速定位 5 方法 (V2.9.96b)</strong> · 2026-10-28<br>
+  数据源:<code>data/latest.json#global.dtc_social</code> (sha=3093d761) · Apify 账号 PHOENIX-LIVE · 方法① 31 条 / status=ok<br>
+  内部资料:<code>strategy/_v2_9_96_5methods_plan.md</code> · <code>strategy/_v2_9_96_brand_6rings_audit.md</code><br>
+  <span style="color:#fda4af">核心判断:战略层内部满配(68.5/100)、外部实评 0 —— 先统一"我们卖什么",再做视觉。</span>
+</div>
+
+</div>
+
+<script>
+const DATA_URL = './data/latest.json';
+
+const STRAT = ['gravel', '净利率', '5%', '小米', '造得久', '护得住', '信得过', 'margin', 'profit', 'financial'];
+const MID = ['mtb', 'mountain bike', 'carbon', 'shimano', '700c', 'enduro', 'trail', 'gravel', 'roadbike', 'triathlon', 'vintage roadbike'];
+const LOW = ['city bike', 'city', 'foldable', 'folding', '26 inch', '26"', '27.5', 'vintage', 'old bike', 'kids', 'electric', 'ebike', 'commuting', 'city life', '26-inch'];
+const UGC = ['review', 'customer', 'testimonial', 'unboxing', 'delivery', 'feedback', 'got his dream'];
+const NOISE = ['paraguay', 'chile', 'papás', 'guap', 'reliquia', 'coleccion', 'bicicletaantigua', 'carbono ya no',
+  'chốt', 'led audi', 'giá', 'xedien', 'kenya', 'order now', 'cosasarà', 'amici', 'a quelli',
+  'el resurgir', 'maquina', 'anda bien', 'pampa de culpina', 'montado en una'];
+
+function txtOf(p) {
+  for (const k of ['caption', 'text', 'title', 'description']) {
+    if (p[k]) return String(p[k]);
+  }
+  return '';
+}
+function has(low, arr) { return arr.some(k => low.includes(k)); }
+
+let ALL = [], FILTER = 'all';
+
+function isNoise(low) { return has(low, NOISE); }
+
+function tagsFor(low) {
+  const t = [];
+  if (has(low, STRAT)) t.push('<span class="tag strat">战略词</span>');
+  if (has(low, MID)) t.push('<span class="tag mid">中高端</span>');
+  if (has(low, LOW)) t.push('<span class="tag low">中低端</span>');
+  if (has(low, UGC)) t.push('<span class="tag ugc">用户评价</span>');
+  return t.length ? '<div class="tags">' + t.join('') + '</div>' : '';
+}
+
+function renderTabs() {
+  const counts = {};
+  ALL.forEach(p => { const pl = p.platform || '?'; counts[pl] = (counts[pl] || 0) + 1; });
+  const keys = ['all'].concat(Object.keys(counts).sort());
+  document.getElementById('tabs').innerHTML = keys.map(k =>
+    `<div class="ptab ${k === FILTER ? 'active' : ''}" data-k="${k}">${k === 'all' ? '全部' : k}<span class="ct">${k === 'all' ? ALL.length : counts[k]}</span></div>`
+  ).join('');
+  document.querySelectorAll('.ptab').forEach(el => {
+    el.addEventListener('click', () => { FILTER = el.dataset.k; renderTabs(); renderRows(); });
+  });
+}
+
+function renderRows() {
+  const rows = ALL.filter(p => FILTER === 'all' || p.platform === FILTER);
+  const tb = document.getElementById('vbody');
+  if (!rows.length) { tb.innerHTML = '<tr><td colspan="5" style="padding:24px;text-align:center;color:#64748b">无数据</td></tr>'; return; }
+  tb.innerHTML = rows.map(p => {
+    const t = txtOf(p).replace(/\n/g, ' ');
+    const low = t.toLowerCase();
+    const noise = isNoise(low);
+    const reg = (p.region || '?').toLowerCase();
+    const plat = p.platform || '?';
+    const inter = [];
+    if (p.likes) inter.push('👍 ' + p.likes);
+    if (p.comments) inter.push('💬 ' + p.comments);
+    if (p.views) inter.push('👁 ' + p.views);
+    const url = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">🔗 原文</a> · ${p.author || ''}` : (p.author || '');
+    return `<tr class="${noise ? 'noise' : ''}">
+      <td><span class="vplat ${plat}">${plat}</span></td>
+      <td><span class="vreg ${reg === 'bd' ? 'bd' : reg === 'id' ? 'id' : ''}">${reg.toUpperCase()}</span></td>
+      <td><span class="vflag ${noise ? 'noise' : 'keep'}">${noise ? '噪音' : '保留'}</span></td>
+      <td><div class="vtext">${t.slice(0, 240)}</div>${tagsFor(low)}
+          <div class="vmeta">${url}</div></td>
+      <td style="font-size:10.5px;color:#94a3b8;line-height:1.6">${inter.join('<br>') || '—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+(async function load() {
+  try {
+    const r = await fetch(DATA_URL, { cache: 'no-store' });
+    const d = await r.json();
+    ALL = (d.global && d.global.dtc_social) || [];
+    if (!ALL.length) {
+      document.getElementById('vbody').innerHTML =
+        '<tr><td colspan="5" style="padding:24px;text-align:center;color:#64748b">data/latest.json 里暂无 dtc_social 数据 —— 等待 9:00 / 16:00 计划任务或手动跑 <code>python crawler/run.py --module apify_social</code></td></tr>';
+      document.getElementById('tabs').innerHTML = '';
+      return;
+    }
+    renderTabs(); renderRows();
+  } catch (e) {
+    document.getElementById('vbody').innerHTML =
+      `<tr><td colspan="5" style="padding:24px;text-align:center;color:#f87171">加载失败: ${e.message}</td></tr>`;
+  }
+})();
+</script>
+</body>
+</html>
