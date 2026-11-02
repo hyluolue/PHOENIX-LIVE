@@ -1,76 +1,6 @@
 {
   "bd": [
     {
-      "date": "2026-09-03",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-04",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-18",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-19",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-20",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-22",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-24",
-      "sku_count": 190,
-      "brand_count": 27,
-      "phx_count": 17,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
       "date": "2026-09-26",
       "sku_count": 190,
       "brand_count": 27,
@@ -132,6 +62,961 @@
     },
     {
       "date": "2026-10-28",
+      "prices": [
+        {
+          "brand": "Generic",
+          "model": "Mountain Bike Bicycle Side Kickstand Kick Stand Aluminium Alloy Adjustable Universal - Black",
+          "price": 290
+        },
+        {
+          "brand": "Generic",
+          "model": "Mountain Bike Bicycle Side Kickstand Kick Stand Aluminium Alloy Adjustable Universal - Black",
+          "price": 311
+        },
+        {
+          "brand": "Generic",
+          "model": "2 BMX Mountain Bike Bicycle Axle Pedal Alloy Foot Stunt Pegs Anti-Slip Front Rear Axle-15mm",
+          "price": 270
+        },
+        {
+          "brand": "Generic",
+          "model": "Bicycle Kick 2 Nath Stand For Mountain Bike 24\" 26\" - Black",
+          "price": 145
+        },
+        {
+          "brand": "Generic",
+          "model": "Aluminum Alloy Mountain Bike Seatpost Clamp, Quick Release Cycling Seat Tube Clip",
+          "price": 89
+        },
+        {
+          "brand": "Generic",
+          "model": "160mm 6\" Disc Brake Rotor Mountain Bike Cycle 1pc",
+          "price": 177
+        },
+        {
+          "brand": "Generic",
+          "model": "Aluminum Alloy Mountain Bike Seatpost Clamp, Quick Release Cycling Seat Tube Clip - Red",
+          "price": 90
+        },
+        {
+          "brand": "Generic",
+          "model": "2 Pcs Bicycle Disc Brake Pad/hydraulic Break Pad Mountain Bike and Bicycle Accessories",
+          "price": 117
+        },
+        {
+          "brand": "Phoenix",
+          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Bicycle For Girls Kids Bicycle Phoenix 16\" Baby Bycycle For Ladies - Gift A Stylish And Fun ",
+          "price": 7999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+          "price": 10000
+        },
+        {
+          "brand": "Phoenix",
+          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9799
+        },
+        {
+          "brand": "Phoenix",
+          "model": "20\" Phoenix Bicycle for ,kids bicycle Phoenix, 20\" Baby By cycle for kids, BMX cycle , kids bike , C",
+          "price": 9999
+        },
+        {
+          "brand": "Phoenix",
+          "model": "16\" Phoenix Bicycle for ,kids bicycle Phoenix, 16\" Baby By cycle for kids, BMX cycle ,",
+          "price": 9799
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine 26\" Gold 600 Bicycle",
+          "price": 17000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Stryker 200 Stund Cycle 26 inchi High Rim full Alloy Body With Shimano Parts  Cash On Deliver",
+          "price": 21111
+        },
+        {
+          "brand": "Generic",
+          "model": "RFL Playtime Royal Bike 947409",
+          "price": 1320
+        },
+        {
+          "brand": "Generic",
+          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
+          "price": 1698
+        },
+        {
+          "brand": "Generic",
+          "model": "RFL Jim & Jolly Road Master Tricycle - White & Cyan Blue - Fun Ride for Kids - Model 891390 Easy to ",
+          "price": 1544
+        },
+        {
+          "brand": "Generic",
+          "model": "Tricycle for kids, new baby bicycle, moto bike baby bicycle toy bicycle kids tricycle kids bike",
+          "price": 496
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix 20\" Bicycle For Boys 7-12 years With Direct Wielding Back Sits and Lighting Support Wheels  ",
+          "price": 10000
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 19999
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 22222
+        },
+        {
+          "brand": "Generic",
+          "model": "20'' JUMBO Honda Rim Disc Brake With Suspension Jumping Cycle - Enjoy Smooth And Reliable Braking Pe",
+          "price": 11499
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Foldable Bicycle New Edition Lightweight E Bike With Battery Urban Commuter Vehicle",
+          "price": 65000
+        },
+        {
+          "brand": "Generic",
+          "model": "Captain Gypsy Bike with Remote",
+          "price": 7200
+        },
+        {
+          "brand": "Generic",
+          "model": "electric bicycle with RGB wheel 26size",
+          "price": 44000
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle Foldable Lightweight E Bike With Battery Urban Commuter Portable Cycling Vehicle",
+          "price": 48000
+        },
+        {
+          "brand": "Generic",
+          "model": "1 Pcs Mini Model Bicycle Toys + Free Wheels and tools  Cycling 1:10 Alloy Miniature MTB Bike Model D",
+          "price": 305
+        },
+        {
+          "brand": "Generic",
+          "model": "Bicycle/Cycle 160mm Disk plate Without Churi For Disk Brake",
+          "price": 199
+        },
+        {
+          "brand": "Generic",
+          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+          "price": 14444
+        },
+        {
+          "brand": "Phoenix",
+          "model": "PHOENIX 26\" BICYCLE",
+          "price": 6000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine 26\" Gold 600 Bicycle",
+          "price": 17000
+        },
+        {
+          "brand": "Generic",
+          "model": "Simulation Toy Bicycle Model Children's Mini Metal Car Single-Pole Finger Bicycle Ferry Black Color",
+          "price": 1650
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 19999
+        },
+        {
+          "brand": "Generic",
+          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
+          "price": 150
+        },
+        {
+          "brand": "Generic",
+          "model": "Electric Bicycle with Hub Motor | Rechargeable Battery | Strong Frame | Eco-Friendly E-Bike",
+          "price": 22222
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
+        },
+        {
+          "brand": "Veloce",
+          "model": "26'' Veloce Slayer 1.0 ,6061 Light weight alloy",
+          "price": 18314
+        },
+        {
+          "brand": "Warrior",
+          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
+          "price": 18999
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Bicycle Password 5 Digit combination. Lock Model Name: VT-L200",
+          "price": 950
+        },
+        {
+          "brand": "Veloce",
+          "model": "20'' Aluminum Veloce Junior Disc Brake Cycle - High-Quality Junior Cycle For Young Riders",
+          "price": 11000
+        },
+        {
+          "brand": "Generic",
+          "model": "CYCLACE Super strong Spinner Exercise Bike 150kg weight capacity Exercise bike",
+          "price": 25900
+        },
+        {
+          "brand": "Generic",
+          "model": "26-Inch 3×8 Gear 24-Speed Bicycle - Smooth Riding Experience For Cyclists Of All Levels",
+          "price": 14444
+        },
+        {
+          "brand": "Generic",
+          "model": "26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Shimano P",
+          "price": 14023
+        },
+        {
+          "brand": "Pacific",
+          "model": "Hub freehub Bicycle aloy Threaded 36 hole  pacific disc brake Limited Stock mtb Hub fron&back 1pair",
+          "price": 1209
+        },
+        {
+          "brand": "Generic",
+          "model": "Helmet and Bicycle Lock Fixed Password Steel Cable Anti Theft Security Lock",
+          "price": 230
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Blue 847749",
+          "price": 8500
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Spd Avenger Premier 20 Blue 847515",
+          "price": 7820
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Spd Potter Plus M/W 20 Red  847793",
+          "price": 9860
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Spd Bixo MKB-R01 12-PC-Red 847544",
+          "price": 6235
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 21-Spd Predator 26 Red 847248",
+          "price": 13035
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
+          "price": 8748
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Supreme 26\" Blue Gents Cycle",
+          "price": 15500
+        },
+        {
+          "brand": "Generic",
+          "model": "high quality  fat bike E cycle 26×4",
+          "price": 70000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Buzz Model 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Sp",
+          "price": 15276
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+          "price": 16830
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Bicycle Sticker-10PSc",
+          "price": 100
+        },
+        {
+          "brand": "Generic",
+          "model": "RFL Playtime Royal Bike 947409",
+          "price": 1320
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Gear Hanger Bike Derailleurs Hanger Bicycle Derailleurs Hanger Transmission Tail Hook",
+          "price": 107
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Bike Rear Derailleur Hanger Transmission Tail Hook For Cycle Bicycle Mtb Road Bike - সাইকেল",
+          "price": 115
+        },
+        {
+          "brand": "Generic",
+          "model": "Baby Electric Bike R3",
+          "price": 25000
+        },
+        {
+          "brand": "Generic",
+          "model": "RFL Road Master Tricycle White & Cyan Blue 891390",
+          "price": 1698
+        },
+        {
+          "brand": "Warrior",
+          "model": "71 Warrior 2.0 Bicycle - Aluminum Boy'S Bike With 21-Speed Gears And 26-Inch Frame For Exciting Ridi",
+          "price": 14999
+        },
+        {
+          "brand": "Warrior",
+          "model": "Warrior 2.0 26 Inch 6061 Aluminum Body Cycle - Velos Product - Enjoy Comfortable And Stylish Cycling",
+          "price": 18999
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine MTB Bicycle 26 Inch | Alloy Frame | Front Suspension | Disc Brake Mountain Bike",
+          "price": 19000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter 26 inchi 21 Speed Gear Cycle With Suspension Lockout fork High Rim Coloring Fat Spoke With Sh",
+          "price": 16830
+        },
+        {
+          "brand": "Generic",
+          "model": "Smart Electric fat bike  bicycle teexla  anaconda v1",
+          "price": 100000
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Steel 1-Speed Muscular Premier 24 Red Bicycle",
+          "price": 8748
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER XC 401 Full Alloy Cycle With Full Internal Cable Routing. Cash On Delivery Available",
+          "price": 26999
+        },
+        {
+          "brand": "Generic",
+          "model": "Bicycle/Cycle 160mm Disk Plate With Churi",
+          "price": 150
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Oscar-2",
+          "price": 16000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 500",
+          "price": 16500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Slayer 1.0",
+          "price": 16700
+        },
+        {
+          "brand": "Uplayed",
+          "model": "Uplayed Race 3.0",
+          "price": 16700
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 300(2025)",
+          "price": 17000
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Duster-C",
+          "price": 17000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 2602L",
+          "price": 17300
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio-300(2026)",
+          "price": 17700
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Gold-100",
+          "price": 17700
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio-200 Plus",
+          "price": 17700
+        },
+        {
+          "brand": "Warrior",
+          "model": "Warrior 2.0",
+          "price": 17700
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Legion 10",
+          "price": 18000
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Harod01",
+          "price": 18000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 6502",
+          "price": 18000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 2602",
+          "price": 18000
+        },
+        {
+          "brand": "Seventy",
+          "model": "Seventy One Warrior 3.0",
+          "price": 18500
+        },
+        {
+          "brand": "Uplayed",
+          "model": "Uplayed Jordan",
+          "price": 19000
+        },
+        {
+          "brand": "Avon",
+          "model": "Avon XT 26",
+          "price": 19000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Gold 400",
+          "price": 19000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Stunt Master",
+          "price": 19500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Stunt Master",
+          "price": 19500
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Gold-600",
+          "price": 19500
+        },
+        {
+          "brand": "Ghost",
+          "model": "Ghost ASX-5900",
+          "price": 19700
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Oscar-3",
+          "price": 19700
+        },
+        {
+          "brand": "Forever",
+          "model": "Forever Pearl",
+          "price": 20000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER THRUSTER V1",
+          "price": 20000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER STUNT SEEKER (2023)",
+          "price": 20000
+        },
+        {
+          "brand": "Falcon",
+          "model": "FALCON THUNDERBIRD (2025)",
+          "price": 20000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 600 A",
+          "price": 20000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Nuclear-400",
+          "price": 20000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Oscar-4",
+          "price": 20000
+        },
+        {
+          "brand": "Avon",
+          "model": "Avon XT 27.5",
+          "price": 20000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Legion 20",
+          "price": 20500
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 600-B",
+          "price": 21000
+        },
+        {
+          "brand": "Falcon",
+          "model": "Falcon Thunderbird(2026)",
+          "price": 21000
+        },
+        {
+          "brand": "Mezarott",
+          "model": "MEZAROTTI 29 inch Cycle",
+          "price": 22000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Ride Seeker H3",
+          "price": 23000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Stunt Seeker",
+          "price": 23000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Legion 30",
+          "price": 23000
+        },
+        {
+          "brand": "Uplayed",
+          "model": "Uplayed Pro",
+          "price": 23000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Stunt Ultimate",
+          "price": 30500
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Xc402",
+          "price": 32000
+        },
+        {
+          "brand": "Ceres",
+          "model": "CERES SUV-2",
+          "price": 32000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 800",
+          "price": 32000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Legacy",
+          "price": 32500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Shadow Pro 2602",
+          "price": 35000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Shadow Pro 6502",
+          "price": 36000
+        },
+        {
+          "brand": "Ceres",
+          "model": "CERES HT2 (Hybrid)",
+          "price": 37000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER PRO GEN3",
+          "price": 38000
+        },
+        {
+          "brand": "Magpy",
+          "model": "MAGPY DTR",
+          "price": 38000
+        },
+        {
+          "brand": "Magpy",
+          "model": "MAGPY&nbsp;DTR",
+          "price": 38000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER XC 403",
+          "price": 40000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER XC 403 (2023)",
+          "price": 40000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Xc501",
+          "price": 42000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Pro Gen 4 (2026)",
+          "price": 45000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider XC 404",
+          "price": 65000
+        },
+        {
+          "brand": "Polloux",
+          "model": "polloux 20 inch cycle",
+          "price": 9800
+        },
+        {
+          "brand": "Duranta",
+          "model": "Duranta Knight",
+          "price": 11700
+        },
+        {
+          "brand": "Hero",
+          "model": "Hero Road bike(Non gear)",
+          "price": 12000
+        },
+        {
+          "brand": "Uctocifu",
+          "model": "Uctocifu(Non gear)",
+          "price": 12000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Junior (Non gear)",
+          "price": 12000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Junior 16″",
+          "price": 12000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Junior 20 inch",
+          "price": 12300
+        },
+        {
+          "brand": "Uplayed",
+          "model": "Uplayed 20 inch",
+          "price": 12500
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine PAGE 20 inch",
+          "price": 12500
+        },
+        {
+          "brand": "Hero",
+          "model": "Hero MTB 20 inch",
+          "price": 12500
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix miracle",
+          "price": 13000
+        },
+        {
+          "brand": "Avon",
+          "model": "Avon (Non gear)",
+          "price": 13000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Gio-100",
+          "price": 13000
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Donald (Non gear)",
+          "price": 13000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Buzz-1 (Non Gear)",
+          "price": 13300
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Donald (Non Gear)",
+          "price": 13500
+        },
+        {
+          "brand": "Python",
+          "model": "PYTHON",
+          "price": 13500
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Buzz-1(Non gear)2026",
+          "price": 13500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Junior 24 inch",
+          "price": 13500
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Tornado 24 inch",
+          "price": 13700
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Stunt machine",
+          "price": 23000
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Oscar-5",
+          "price": 23000
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Platinum 200",
+          "price": 23700
+        },
+        {
+          "brand": "Mustang",
+          "model": "Mustang 1700",
+          "price": 24000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 2603",
+          "price": 24000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Stunt Elite",
+          "price": 24500
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER XC 401",
+          "price": 25000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER DUKE (2024)",
+          "price": 25000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 6503",
+          "price": 25500
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER DUKE (2025)",
+          "price": 26000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "Rockrider Duke-2026",
+          "price": 26000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 700",
+          "price": 27000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER DUKE PRO",
+          "price": 27000
+        },
+        {
+          "brand": "Kiesel",
+          "model": "Kiesel Naxos 10",
+          "price": 27000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Lanster",
+          "price": 27700
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER PRO Gen2",
+          "price": 28000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Project 3.0",
+          "price": 28500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Shadow Pro 2601",
+          "price": 28500
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Shadow Pro 6501",
+          "price": 30000
+        },
+        {
+          "brand": "Core",
+          "model": "Core Mention 4x",
+          "price": 30000
+        },
+        {
+          "brand": "Seventy",
+          "model": "Seventy one Warrior 1.0",
+          "price": 14000
+        },
+        {
+          "brand": "Rockrider",
+          "model": "ROCKRIDER M8 (Folding)",
+          "price": 14000
+        },
+        {
+          "brand": "Duronto",
+          "model": "Duronto Sturn",
+          "price": 14000
+        },
+        {
+          "brand": "Seventy",
+          "model": "Seventy one Warrior 2.0",
+          "price": 14500
+        },
+        {
+          "brand": "Adder",
+          "model": "Adder Perfect",
+          "price": 14500
+        },
+        {
+          "brand": "Hero",
+          "model": "Hero Tokyo",
+          "price": 14500
+        },
+        {
+          "brand": "Core",
+          "model": "Core Gio 300",
+          "price": 14500
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Fire eagle",
+          "price": 14500
+        },
+        {
+          "brand": "Pollux",
+          "model": "Pollux 24 inch",
+          "price": 14500
+        },
+        {
+          "brand": "Ghost",
+          "model": "Ghost Pro",
+          "price": 14500
+        },
+        {
+          "brand": "Foxter",
+          "model": "Foxter Buzz-3",
+          "price": 14700
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 100",
+          "price": 15000
+        },
+        {
+          "brand": "Hero",
+          "model": "Hero Hunk 999",
+          "price": 15000
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 2601L",
+          "price": 15100
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Raptor Sport 6501",
+          "price": 15300
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio 400",
+          "price": 15500
+        },
+        {
+          "brand": "Core",
+          "model": "Core Nio-200",
+          "price": 15500
+        },
+        {
+          "brand": "Phoenix",
+          "model": "Phoenix Duster-A",
+          "price": 15700
+        },
+        {
+          "brand": "Marine",
+          "model": "Marine Gold",
+          "price": 15800
+        },
+        {
+          "brand": "Veloce",
+          "model": "Veloce Stunt Prodigy",
+          "price": 16000
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
       "sku_count": 190,
       "brand_count": 27,
       "phx_count": 17,
@@ -143,76 +1028,6 @@
   ],
   "id": [
     {
-      "date": "2026-09-03",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-04",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-18",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-19",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-20",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-22",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
-      "date": "2026-09-24",
-      "sku_count": 112,
-      "brand_count": 36,
-      "phx_count": 0,
-      "sources": [
-        "safe_crawl"
-      ],
-      "note": "safe_crawl playwright"
-    },
-    {
       "date": "2026-09-26",
       "sku_count": 112,
       "brand_count": 36,
@@ -274,8 +1089,573 @@
     },
     {
       "date": "2026-10-28",
-      "sku_count": 112,
-      "brand_count": 36,
+      "prices": [
+        {
+          "brand": "Pacific",
+          "model": "Mountain Bike Entry 26",
+          "price": 5120000
+        },
+        {
+          "brand": "Element",
+          "model": "FRC 38 Gravel 700C",
+          "price": 7290000
+        },
+        {
+          "brand": "United",
+          "model": "Sterling R1 700C",
+          "price": 8990000
+        },
+        {
+          "brand": "Pacific",
+          "model": "700C Road Bike",
+          "price": 9500000
+        },
+        {
+          "brand": "Element",
+          "model": "Hybrid City 700C",
+          "price": 6400000
+        },
+        {
+          "brand": "Element",
+          "model": "Gravel Top Spec 700C",
+          "price": 26200000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Xtrada 5 700C",
+          "price": 6500000
+        },
+        {
+          "brand": "United",
+          "model": "Mountain 27.5",
+          "price": 7800000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "SEPEDA GUNUNG MTB 26 ATLANTIS DISCBRAKE",
+          "price": 700000
+        },
+        {
+          "brand": "Element",
+          "model": "RB road bike sepeda balap Element Police Toronto EFG Hybrid 7sp Gravel XTRM",
+          "price": 2225000
+        },
+        {
+          "brand": "Wilier",
+          "model": "Sepeda Wilier Cento 10 Road Bike Merah Menyala",
+          "price": 120000
+        },
+        {
+          "brand": "【Anchi】",
+          "model": "【Anchi】 Sepeda Gunung 24-26-27.5 inci Cocok untuk Pengendara Tinggi 155-190 cm Balap Dewasa Garansi 5 Tahun COD Home Del",
+          "price": 1200000
+        },
+        {
+          "brand": "JNE,Sicepat",
+          "model": "JNE,Sicepat - Sepeda Gunung Atlantis MTB AT MT 27.5\" 69G 21S",
+          "price": 1330000
+        },
+        {
+          "brand": "Salvo",
+          "model": "Sepeda gunung salvo ukuran 24 dan 26 /gigi cakram depan belakang",
+          "price": 950000
+        },
+        {
+          "brand": "PANDORA",
+          "model": "SEPEDA FIXIE PANDORA CST 700C",
+          "price": 1890000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Gunung MTB 26 Merk Velion By Pacific 7Sp Murah BDG",
+          "price": 1075000
+        },
+        {
+          "brand": "Foster",
+          "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3X8 Speed Terbaru",
+          "price": 1225000
+        },
+        {
+          "brand": "Foster",
+          "model": "SEPEDA GUNUNG MTB FOSTER 5522 UKURAN 20 / 26 INCH REM CAKRAM BARU",
+          "price": 900000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda MTB Odessy Fuse Ukuran 24 - 21 Speed Frame Steel",
+          "price": 1250000
+        },
+        {
+          "brand": "Foster",
+          "model": "Sepeda Gunung 24 26 27,5 MTB Foster 6657 Rem Discbrake Operangigi 3x8 Speed Terbaru",
+          "price": 1199000
+        },
+        {
+          "brand": "Pacific",
+          "model": "SEPEDA GUNUNG MTB MAZARA NEW SERIES (SIZE 24 &amp; 26 INCH) - By : Pacific Group-Outdoor",
+          "price": 1292000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda Fixie Odessy RM 1050 Rem Torpedo Doltrap 700C Sepeda Odessy Fixie Rem Torpedo",
+          "price": 1150000
+        },
+        {
+          "brand": "Velion",
+          "model": "SEPEDA ANAK LAKI BMX VELION D1 UKURAN 20 INCH BAN 2.40 REM CAKRAM USIA 8-11 TAHUN BARU",
+          "price": 559000
+        },
+        {
+          "brand": "United",
+          "model": "Sepeda Mtb United Brownhills T1 27,5 Inc 29 Inc Sepeda Gunung [Bestseller]",
+          "price": 5334000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Pacific Sepeda Gunung Remaja dan Dewasa MTB Cameron 3.0 Ukuran Ban 26 dan 27,5",
+          "price": 2265000
+        },
+        {
+          "brand": "LIMITLESS",
+          "model": "Sepeda 20 bmx 8850 /20 BMX 8890 / 20 BMX ZEFIRO BAN 3.0 Limitless Sepeda Anak Murah Sepeda Bmx Murah",
+          "price": 730000
+        },
+        {
+          "brand": "Velion",
+          "model": "SEPEDA BMX 20\" VELION MODEL TERBARU",
+          "price": 600000
+        },
+        {
+          "brand": "Odessy",
+          "model": "SEPEDA FIXIE ODESSY RM 1050 SEPEDA BALAP MODEL TERBARUU",
+          "price": 1148000
+        },
+        {
+          "brand": "Look",
+          "model": "Sepeda fixi LOOK HITAM PUTIH murah",
+          "price": 3200000
+        },
+        {
+          "brand": "MINI",
+          "model": "Sepeda Mini Keranjang Dewasa New PHOENIX NP-8825AT Uk 20 24 &amp; 26Inch",
+          "price": 1050000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Sepeda POLYGON BMX ROGUE 20inch alloy",
+          "price": 2200000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda MTB Odessy Tank / Sepeda Gunung",
+          "price": 1290000
+        },
+        {
+          "brand": "Exotic",
+          "model": "Exotic 2708 HR Sepeda Hybrid 700C Steel Internal Cable Routing",
+          "price": 1930000
+        },
+        {
+          "brand": "【Anchi】",
+          "model": "【Anchi】 Sepeda gunung  26 inci untuk pengendara dengan tinggi 160-185 cm, kompetisi dewasa, sepeda gunung, garansi 5 tah",
+          "price": 1200000
+        },
+        {
+          "brand": "Federal",
+          "model": "commuter bike federal frame size 19 Sepeda",
+          "price": 1900000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Sepeda gunung MTB polygon Xtrada 5 27.5",
+          "price": 6400000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Gunung MTB 27.5 Pacific Aviator 2689 XT Rem Discbrake Operangigi Terbaru",
+          "price": 1549000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "Sepeda Gunung 26 27.5 MTB Atlantis 730 Rem Cakram New",
+          "price": 1425000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda Gunung MTB Tank Odessy Frame Steel Ukuran 27 21 Speed",
+          "price": 1535000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Odessy Ritz Sepeda Lipat 16 20 Inch Rem Disc",
+          "price": 1395000
+        },
+        {
+          "brand": "SCOORA",
+          "model": "SCOORA Zenoz Balance Bike Toddler Sepeda Keseimbangan Anak",
+          "price": 624000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "SEPEDA GUNUNG MTB ANAK 20 INCH ATLANTIS 690 PMB MORTEIN MN 181 3X7 SPEED REM CAKRAM",
+          "price": 1199000
+        },
+        {
+          "brand": "Velion",
+          "model": "SEPEDA BMX 20 INCH SEPEDA ANAK LAKI LAKI MORISON 8125 AX BAN 2.4 dan 3.0 MAZARA 2277 VELION 314 MORTEIN 511 CENTRUM 6670",
+          "price": 749000
+        },
+        {
+          "brand": "Atlantis",
+          "model": "Atlantis MTB 24 26 27.5 Inch 21 Speed Diskbrake",
+          "price": 1200000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Monarch Sepeda MTB Monarch 27 5 by Polygon",
+          "price": 2700000
+        },
+        {
+          "brand": "JAGUAR",
+          "model": "SEPEDA GUNUNG MTB 26 Inch XAVIOR JAGUAR 21 Speed",
+          "price": 2574000
+        },
+        {
+          "brand": "Push",
+          "model": "Push Bike Aviator BK01 ET2011 AT 7901 AT7902 ET2004 Iora BK 01 Balance Bike AT7901 by Pacific Sepeda Keseimbangan AT 790",
+          "price": 135000
+        },
+        {
+          "brand": "Velion",
+          "model": "Sepeda Anak Laki BMX VELION V61 Ukuran 12 16 18 inch dengan keranjang depan NEW",
+          "price": 524000
+        },
+        {
+          "brand": "Exotic",
+          "model": "Exotic Sepeda Anak Roda Tiga Balance Bike 6IN1 ET 709 7 ET 5511 ET 2004 ET 2011 ET 2017 BK 01 T20 7",
+          "price": 223400
+        },
+        {
+          "brand": "Pacific",
+          "model": "Pacific Ofo City Bike 26 Shimano 7 Speed Alloy",
+          "price": 2399000
+        },
+        {
+          "brand": "Cuddlee",
+          "model": "Cuddlee Sepeda Keseimbangan Anak P0610 Sepeda Keseimbangan Tanpa Pedal Balance Bike Ringan",
+          "price": 159900
+        },
+        {
+          "brand": "Mmflight",
+          "model": "Mmflight Sepeda Anak Laki Laki Sepeda Anak Perempuan Murah Dengan Roda 12 16&#39;%E2%80%98",
+          "price": 439910
+        },
+        {
+          "brand": "NANO",
+          "model": "Sepeda Keseimbangan Balance Bike 3 in 1. New Exotic ET5512 ET5511 AT7905 T20 5 F 701 T20 7 AT7906 T20 7 nano family",
+          "price": 212000
+        },
+        {
+          "brand": "Maximo",
+          "model": "Maximo Piegare 16 Folding Bike 9 Speed Chromoly",
+          "price": 1740000
+        },
+        {
+          "brand": "Balance",
+          "model": "Balance Bike Sepeda Anak Murah Aviator 7901",
+          "price": 120000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "Sepeda Gunung 27.5 MTB ATLANTIS 730 REM CAKRAM NEW",
+          "price": 1169000
+        },
+        {
+          "brand": "Evergreen",
+          "model": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+          "price": 1935000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+          "price": 1427000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda Fixie Odessy RM 1050 Rem Doltrap 700C Sepeda Odessy Fixie Rem Dolltrap",
+          "price": 1148000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "Sepeda gunung MTB 26 27 5 ATLANTIS Odessy 730 21Speed NEW",
+          "price": 1300000
+        },
+        {
+          "brand": "BALANCE",
+          "model": "BALANCE BIKE PUSH BIKE AT7901 ET2011 BK01 BK04 BK06 ET2137 ET2004 ET2017 ET2157 ET2017 AT7902 ET 2176 ET 2177",
+          "price": 154899
+        },
+        {
+          "brand": "Push",
+          "model": "Push Bike EXOTIC ET 2011 ST BAN EVA Balance Bike Sepeda Keseimbangan Anak",
+          "price": 136300
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Sepeda MTB Monarch 27.5 3x7 Speed",
+          "price": 2650000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+          "price": 2195000
+        },
+        {
+          "brand": "ATLANTIS",
+          "model": "Sepeda BMX 20 Atlantis 650 I Rem Disc V Jumbo",
+          "price": 750360
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Balap Roadbike Element FRC 50 2026 EVO Alloy 2x9sp 700C",
+          "price": 4099000
+        },
+        {
+          "brand": "Pinarello",
+          "model": "Pinarello Dogma F DISC E128 Sonic Green Shimano DURA ACE DI2 Road Bike 2024",
+          "price": 139000000
+        },
+        {
+          "brand": "CAMP",
+          "model": "Sepeda Balap Roadbike CAMP SR5 Sport Tiagra PRO 105 UCI Invisible Welding",
+          "price": 13990000
+        },
+        {
+          "brand": "Trek",
+          "model": "Trek Madone SLR 7 Gen 7 Matte Black Road Bike",
+          "price": 100000000
+        },
+        {
+          "brand": "PINARELLO",
+          "model": "PINARELLO X1 105 D162 DISC PEARL WHITE Road Bike",
+          "price": 44330000
+        },
+        {
+          "brand": "CAMP",
+          "model": "CAMP ROADBIKE ACE 2 105 CARBON DISC BRAKE (WHITE) SIZE 52",
+          "price": 40458000
+        },
+        {
+          "brand": "Twitter",
+          "model": "Twitter Cyclone Pro WHEELTOP WIRELESS 24 Speed FULL HYDRAULIC Roadbike",
+          "price": 17500000
+        },
+        {
+          "brand": "Aero",
+          "model": "Roadbike S Works SL7 Spesial Edision Aero Carbon",
+          "price": 37600000
+        },
+        {
+          "brand": "Twitter",
+          "model": "Twitter R10 ET Wheeltop Wireless 24 Speed Roadbike",
+          "price": 16500000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Roadbike Balap Element Police Toronto 7speed BAN 700c",
+          "price": 2070000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Sepeda Balap Polygon Helios A9 Carbon Duraace DI2 With Power Meter",
+          "price": 93300000
+        },
+        {
+          "brand": "Look",
+          "model": "Sepeda Balap Roadbike Camp SR3 Si Clean Look 2x9sp Shimano Sora Hydraulic!",
+          "price": 9600000
+        },
+        {
+          "brand": "PINARELLO",
+          "model": "PINARELLO F1 105 H240 DISC CARBON RED MATT Road Bike Full Bike",
+          "price": 64440000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Roadbike 700C ELEMENT POLICE TORONTO 7 Speed NEW",
+          "price": 2250000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Balap Element roadbike frc 50 SB 2x8 SP Sepeda Roadbike Element Frc 50 SB",
+          "price": 4093000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA BALAP ROADBIKE PARAGON R600 BRIFTER ELEMENT POLICE TORONTO EFG SHIMANO EXOTIC 2708 GR BY PACIFIC 700c ET 2708 FS ",
+          "price": 1427000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda Balap RoadBike ODESSY 700C 1010S 1011 EVERGREEN GRAVEL JAZZ EVERGREEN GRAVEL BOSTON Rem Cakram Shimano Roadbike G",
+          "price": 1895900
+        },
+        {
+          "brand": "Evergreen",
+          "model": "Evergreen Jazz Gravel 700C 3x7 Speed Disk Brake",
+          "price": 1935000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Balap Element Roadbike Fixie Police Toronto FX AR CST Pandora AR 700C FIXIE ALTON MISTIQUE 24 FIXIE TORY FX",
+          "price": 1810000
+        },
+        {
+          "brand": "Element",
+          "model": "Element Roadbike 700C FRC50 480 500 520 Disc Brake",
+          "price": 3670100
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Roadbike Element FRC 50 Alloy 16 Speed",
+          "price": 3950000
+        },
+        {
+          "brand": "Look",
+          "model": "Sepeda Balap 700c Roadbike Model Look Warna Hijau Tosca Murah Meriah Siap Pakai",
+          "price": 3900000
+        },
+        {
+          "brand": "Odessy",
+          "model": "Sepeda Balap 700C ODESSY 1011 Roadbike RB Murah",
+          "price": 2000000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Hybrid Element JASPER 700c 24SP",
+          "price": 1899000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
+          "price": 2300000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+          "price": 2168000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
+          "price": 1899000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
+          "price": 1990000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
+          "price": 2300000
+        },
+        {
+          "brand": "Pacific",
+          "model": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
+          "price": 1899000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
+          "price": 2102000
+        },
+        {
+          "brand": "NEW",
+          "model": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
+          "price": 2269722
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Strattos F3 Sepeda Hybrid Road Bike Flatbar",
+          "price": 6249000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
+          "price": 2519000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Strattos F2 Sepeda Hybrid Road Bike Flatbar",
+          "price": 5099000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Hybrid Element JASPER 700c 24SP",
+          "price": 1899000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Hybrid Pacific Sprinter HX 2.0 3 x 9 Speed",
+          "price": 2300000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Hybrid Element Jasper Terbaru Rem Discbrake Operangigi",
+          "price": 2168000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA GUNUNG HYBRID DEWASA ELEMENT JASPER 700c SHIMANO TOURNEY 300 ELEMENT HYBRID JASPER HYDRAULIC 8 700C HYBRID PACIFI",
+          "price": 1899000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Pacific Sepeda Hybrid Remaja dan Dewasa Exotic ET 2708 HR Hi Ten Steel Hybrid",
+          "price": 1990000
+        },
+        {
+          "brand": "Pacific",
+          "model": "Sepeda Urban Hybrid PACIFIC SPRINTER HX 2.0",
+          "price": 2300000
+        },
+        {
+          "brand": "Pacific",
+          "model": "SEPEDA GUNUNG HYBRID PACIFIC SPRINTER HX 2.0 700c 3x9 SPEED EXOTIC 2708 HR 3X8 SPEED",
+          "price": 1899000
+        },
+        {
+          "brand": "Element",
+          "model": "SEPEDA GUNUNG HYBRID ELEMENT JASPER 700C SHIMANO TOURNEY TY 300 TORONTO 700C SHIMANO TOURNEY JASPER24Sp HYDRAULIC 8 700C",
+          "price": 2102000
+        },
+        {
+          "brand": "NEW",
+          "model": "Sepeda Hybrid Exotic 2708 HR 700C 3 x 8 Speed New 2026",
+          "price": 2269722
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Strattos F3 Sepeda Hybrid Road Bike Flatbar",
+          "price": 6249000
+        },
+        {
+          "brand": "Element",
+          "model": "Sepeda Element 700c Hybrid Jasper Rem Hydraulic 24 Speed Terbaru",
+          "price": 2519000
+        },
+        {
+          "brand": "Polygon",
+          "model": "Polygon Strattos F2 Sepeda Hybrid Road Bike Flatbar",
+          "price": 5099000
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "sku_count": 198,
+      "brand_count": 48,
       "phx_count": 0,
       "sources": [
         "safe_crawl"
@@ -283,5 +1663,5 @@
       "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-10-28T09:49:57+08:00"
+  "last_updated": "2026-11-02T08:53:59+08:00"
 }
