@@ -94,7 +94,7 @@
 
     <!-- 真实数据基线（dashboard_metrics 动态读 · V2.7.1） -->
     <div class="section dark" style="border-left-color:#5eead4">
-      <h2 style="color:#5eead4"><span class="flag">📊</span>🇧🇩 BD 真实基线 <span class="small" style="color:#aaa">190 SKU · 27 品牌 · latest.json 动态读</span></h2>
+      <h2 style="color:#5eead4"><span class="flag">📊</span>🇧🇩 BD 真实基线 <span class="small" style="color:#aaa"><span id="task-bd-sku">—</span> SKU · <span id="task-bd-brands">—</span> 品牌 · latest.json 动态读</span></h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
         <div style="background:rgba(6,78,59,.95);border-left:3px solid #5eead4;padding:10px 12px;border-radius:6px">
           <div style="font-size:10px;color:#5eead4;font-weight:700;text-transform:uppercase">Phoenix BD</div>
@@ -391,6 +391,16 @@ async function load() {
     return;
   }
   const dm = data.dashboard_metrics || {};
+  // V2.9.98-P1 (2026-11-11): 基线标签原本写死 "190 SKU · 27 品牌", 数据管道去重修复后条目数会变,
+  // 写死值会伪装成实时数据 -> 改为从 price_pool 现算 (与 index / bd/index 同一口径)
+  try {
+    const bdp = (data.bd && data.bd.price_pool) || [];
+    const bdn = bdp.filter(it => (it.brand || '').toLowerCase() !== 'generic');
+    const e1 = document.getElementById('task-bd-sku');
+    const e2 = document.getElementById('task-bd-brands');
+    if (e1) e1.textContent = bdp.length;
+    if (e2) e2.textContent = new Set(bdn.map(it => (it.brand || '').trim().toLowerCase()).filter(Boolean)).size;
+  } catch (e) { /* 保持默认 — */ }
   // V2.9.43 dashboard_metrics V2.7.2 兼容: 实时从 price_pool 算 legacyDm (totals/bands/phx_gap/id_7_15m)
   // V2.7.2 重构后 dashboard_metrics 只有 bd.total_sku + bd.real_brands 3 key, 老字段 undefined -> '—' 全空白
   // 跟 bd/index.html V2.9.36 + bd/competitive.html V2.9.42 跨 Tab 统一: 同一份 price_pool 算
