@@ -301,7 +301,10 @@
     const gPhx = bdPool.filter(it => (it.brand||'').toLowerCase() === 'phoenix').length;
     // 真空品类段 = 4 品类 × 4 价格段 中 0 竞品的 cell (BD + ID 各算一次)
     const CATS = ['road','mtb','hybrid','gravel'];
-    const BD_BANDS = [[0,1e6],[1e6,1.5e4],[1.5e4,2.5e4],[2.5e4,1e9]];
+    // V2.9.98-P1 修正: 原 [[0,1e6],[1e6,1.5e4],[1.5e4,2.5e4],[2.5e4,1e9]] 的第一段上限 1e6(=100 万 BDT) 会吞掉全部 SKU,
+    // 第二段 [1e6,1.5e4) 下限大于上限是死区间 —— 3 个价位带恒空, 真空段数虚高。
+    // 正确口径 = <15K / 15-25K / 25K+, 与卡片原文字 "15-25K 72 SKU" 完全对得上。
+    const BD_BANDS = [[0,1.5e4],[1.5e4,2.5e4],[2.5e4,1e9]];
     const ID_BANDS = [[0,7e6],[7e6,1.5e7],[1.5e7,2.5e7],[2.5e7,1e10]];
     function catOfId(it) {
       const m = ((it.model||'') + ' ' + (it.brand||'')).toLowerCase();
@@ -317,6 +320,29 @@
     CATS.forEach(cat => ID_BANDS.forEach(([lo,hi]) => {
       if (!idPool.some(it => catOfId(it) === cat && (it.price||0) >= lo && (it.price||0) < hi)) gGap++;
     }));
+    // V2.9.98-P1 (2026-11-11): 市场漏斗改为实时计算
+    // 旧版 funnel 是写死的 {sku:190, brands:27, phx:17} —— 数据管道去重修复后 BD 池实际条目会变,
+    // 写死值会变成"看起来正常的假数据"。此处一律从 price_pool 现算, 与顶部 KPI 同一口径。
+    const BAND_LBL = [[0,'<15K'],[1e6,'1-15K'],[1.5e4,'15-25K'],[2.5e4,'25K+']];
+    function liveFunnel(poolAll, BANDS, cur) {
+      const pool = poolAll.filter(it => (it.brand || '').toLowerCase() !== 'generic');
+      const brands = new Set(pool.map(it => (it.brand || '').toLowerCase()).filter(b => b)).size;
+      const phx = pool.filter(it => (it.brand || '').toLowerCase() === 'phoenix');
+      const phxP = phx.map(it => it.price).filter(x => x > 0);
+      const asp = phxP.length ? Math.round(phxP.reduce((a,b) => a+b, 0) / phxP.length) : 0;
+      let gap = 0;
+      CATS.forEach(cat => BANDS.forEach(([lo,hi]) => {
+        if (!pool.some(it => catOfId(it) === cat && (it.price||0) >= lo && (it.price||0) < hi)) gap++;
+      }));
+      // topBand 是战略叙述字段(凤凰切入哪个价位带), 不是派生指标 -> 不自动改写, 保留原静态文案
+      return {
+        sku: poolAll.length, brands: brands, phx: phx.length,
+        phxAsp: asp ? fmt(asp) + ' ' + (cur === 'id' ? 'IDR' : 'BDT') : '未入场',
+        gapCount: gap
+      };
+    }
+    const LIVE_BD = liveFunnel((data.bd && data.bd.price_pool) || [], BD_BANDS, 'bd');
+    const LIVE_ID = liveFunnel((data.id && data.id.price_pool) || [], ID_BANDS, 'id');
     document.getElementById('g-sku').textContent = fmt(gSku);
     document.getElementById('g-brands').textContent = gBrands.size;
     document.getElementById('g-phx').textContent = fmt(gPhx);
@@ -340,6 +366,8 @@
       const st = statusMap[m.status] || statusMap.planned;
       const isActive = m.status === 'active';
       const isPriority = m.status === 'priority';
+      // V2.9.98-P1: BD / ID 漏斗实时算, 不再用写死值
+      const F = m.id === 'bd' ? LIVE_BD : (m.id === 'id' ? LIVE_ID : m.funnel);
       html += `<div class="market-card ${m.id} ${m.status}">
         <div class="head">
           <span class="flag">${m.flag}</span>
@@ -347,11 +375,11 @@
           <span class="status-tag">${st.tag}</span>
         </div>
         <div style="font-size:9px;color:#cbd5e1;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px;margin-bottom:8px;display:inline-block;font-weight:600">📍 ${m.layer}</div>
-        <div class="row"><span class="key">SKU 总数</span><span class="val">${fmt(m.funnel.sku)}</span></div>
-        <div class="row"><span class="key">真品牌数</span><span class="val">${fmt(m.funnel.brands)}</span></div>
-        <div class="row"><span class="key">Phoenix SKU</span><span class="val ${m.funnel.phx > 0 ? 'phoenix' : ''}">${fmt(m.funnel.phx)}</span></div>
-        <div class="row"><span class="key">Phoenix ASP</span><span class="val ${m.funnel.phx > 0 ? 'phoenix' : ''}">${m.funnel.phxAsp}</span></div>
-        <div class="row"><span class="key">真空品类段</span><span class="val gap">${fmt(m.funnel.gapCount)} 段</span></div>
+        <div class="row"><span class="key">SKU 总数</span><span class="val">${fmt(F.sku)}</span></div>
+        <div class="row"><span class="key">真品牌数</span><span class="val">${fmt(F.brands)}</span></div>
+        <div class="row"><span class="key">Phoenix SKU</span><span class="val ${F.phx > 0 ? 'phoenix' : ''}">${fmt(F.phx)}</span></div>
+        <div class="row"><span class="key">Phoenix ASP</span><span class="val ${F.phx > 0 ? 'phoenix' : ''}">${F.phxAsp}</span></div>
+        <div class="row"><span class="key">真空品类段</span><span class="val gap">${fmt(F.gapCount)} 段</span></div>
         <div class="row"><span class="key">最大价位带</span><span class="val">${m.funnel.topBand}</span></div>
         <div class="opportunity">${m.opportunity}</div>
         <div class="link-row">
