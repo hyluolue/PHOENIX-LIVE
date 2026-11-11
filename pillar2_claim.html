@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix · 支柱②「护得住」主张线 (V2.9.98)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  background: #0a0e1a; color: #e2e8f0; line-height: 1.6; padding: 24px 16px 80px;
+}
+.container { max-width: 1480px; margin: 0 auto; }
+
+.hdr { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155;
+  border-radius: 16px; padding: 26px 30px; margin-bottom: 24px; border-left: 5px solid #fb923c; }
+.hdr-eyebrow { font-size: 11px; color: #94a3b8; letter-spacing: 2.5px; font-weight: 700; }
+.hdr-title { font-size: 29px; font-weight: 900; color: #fef2f2; margin: 6px 0 8px; }
+.hdr-title em { color: #fdba74; font-style: normal; }
+.hdr-sub { font-size: 13px; color: #cbd5e1; margin-bottom: 10px; }
+.hdr-links { margin-top: 12px; }
+.hdr-link { display: inline-block; margin: 4px 6px 4px 0; padding: 6px 13px; background: #1e40af; color: #fff;
+  border-radius: 8px; text-decoration: none; font-size: 12px; font-weight: 700; transition: background .2s; }
+.hdr-link:hover { background: #1d4ed8; }
+.hdr-link.green { background: #15803d; } .hdr-link.green:hover { background: #166534; }
+.hdr-link.rose { background: #be123c; } .hdr-link.rose:hover { background: #9f1239; }
+.hdr-link.purple { background: #7c3aed; } .hdr-link.purple:hover { background: #6d28d9; }
+.hdr-link.cyan { background: #0e7490; } .hdr-link.cyan:hover { background: #155e75; }
+
+.sec { background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%); border: 1px solid #334155;
+  border-radius: 16px; padding: 24px 26px; margin-bottom: 24px; }
+.sec-title { font-size: 19px; font-weight: 900; color: #fef2f2; margin-bottom: 6px; }
+.sec-sub { font-size: 12px; color: #94a3b8; margin-bottom: 18px; }
+.sec-tag { font-size: 10px; padding: 3px 9px; border-radius: 6px; margin-left: 10px; vertical-align: middle; font-weight: 700; }
+
+/* 主推卡 */
+.hero {
+  background: linear-gradient(135deg, rgba(251,146,60,.13), rgba(15,23,42,.75));
+  border: 1px solid rgba(251,146,60,.5); border-radius: 18px; padding: 30px 32px; margin-bottom: 20px;
+  position: relative; overflow: hidden;
+}
+.hero::after { content: ''; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(56,189,248,.16), transparent 70%); }
+.hero-lbl { font-size: 11px; color: #fdba74; letter-spacing: 2px; font-weight: 800; }
+.hero-line { font-size: 40px; font-weight: 900; color: #fef2f2; letter-spacing: 3px; margin: 10px 0 6px; line-height: 1.25; }
+.hero-line .w { position: relative; }
+.hero-line .w::after { content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #fbbf24); border-radius: 2px; }
+.hero-meta { font-size: 12px; color: #94a3b8; margin-top: 10px; }
+.hero-meta b { color: #fcd34d; }
+
+/* 逐字拆解 */
+.breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); gap: 12px; margin-top: 20px; }
+.bd-cell { background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 14px 16px; position: relative; }
+.bd-cell.key { border-color: rgba(251,191,36,.55); background: rgba(251,191,36,.08); }
+.bd-cell .ch { font-size: 24px; font-weight: 900; color: #fcd34d; letter-spacing: 2px; }
+.bd-cell .role { font-size: 10.5px; color: #fdba74; font-weight: 800; margin-top: 3px; letter-spacing: 1px; }
+.bd-cell .why { font-size: 11.5px; color: #cbd5e1; margin-top: 7px; line-height: 1.55; }
+.bd-cell .why b { color: #fde68a; }
+.bd-cell .swap { font-size: 10.5px; color: #64748b; margin-top: 6px; border-top: 1px dashed #334155; padding-top: 6px; }
+
+/* 表 */
+table.t { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12.5px; }
+table.t th { background: #1e293b; color: #94a3b8; font-size: 10.5px; letter-spacing: 1px; padding: 10px 9px;
+  text-align: left; border-bottom: 2px solid #334155; font-weight: 800; }
+table.t td { padding: 9px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+table.t tr.win td { background: rgba(251,146,60,.08); }
+table.t tr.lose td { background: rgba(244,63,94,.05); }
+table.t tr.veto td { background: rgba(244,63,94,.07); }
+.cand { font-weight: 800; color: #f1f5f9; font-size: 13px; }
+.cand .n { display: inline-block; width: 19px; height: 19px; border-radius: 5px; background: #334155;
+  color: #cbd5e1; font-size: 10.5px; text-align: center; line-height: 19px; margin-right: 7px; }
+tr.win .cand .n { background: #fb923c; color: #0a0e1a; }
+tr.veto .cand .n { background: #f43f5e; color: #fff; }
+.sc { font-weight: 900; text-align: center; }
+.sc.hi { color: #86efac; } .sc.md { color: #fde047; } .sc.lo { color: #f87171; }
+.tot { font-weight: 900; text-align: center; font-size: 14px; color: #fdba74; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 800; white-space: nowrap; }
+.pill.ok { background: rgba(34,197,94,.16); color: #86efac; }
+.pill.mid { background: rgba(234,179,8,.16); color: #fde047; }
+.pill.no { background: rgba(244,63,94,.18); color: #fda4af; }
+.pill.new { background: rgba(251,146,60,.2); color: #fdba74; }
+
+/* 判据 / 风险 */
+.risk { background: linear-gradient(135deg, rgba(244,63,94,.09), rgba(15,23,42,.7));
+  border: 1px solid rgba(244,63,94,.42); border-radius: 14px; padding: 20px 22px; margin-bottom: 16px; }
+.risk-h { font-size: 16px; font-weight: 900; color: #fda4af; margin-bottom: 10px; }
+.risk p { font-size: 12.5px; color: #cbd5e1; margin-bottom: 7px; }
+.risk p b { color: #fde68a; }
+.rule { background: linear-gradient(135deg, rgba(56,189,248,.1), rgba(15,23,42,.7));
+  border: 1px solid rgba(56,189,248,.45); border-radius: 14px; padding: 20px 22px; margin-bottom: 16px; }
+.rule-h { font-size: 16px; font-weight: 900; color: #7dd3fc; margin-bottom: 10px; }
+.rule .formula { font-size: 14px; font-weight: 800; color: #fcd34d; background: #020617;
+  border-radius: 10px; padding: 12px 16px; margin: 10px 0; letter-spacing: .5px; }
+.quote-words { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.qw { font-size: 12px; padding: 5px 12px; border-radius: 9px; background: rgba(15,23,42,.75);
+  border: 1px solid #334155; color: #cbd5e1; }
+.qw b { color: #fca5a5; }
+
+/* 证据池 */
+.pool { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.pool-card { border-radius: 14px; padding: 16px 18px; border: 1px solid; }
+.pool-card.p1 { background: rgba(56,189,248,.07); border-color: rgba(56,189,248,.42); }
+.pool-card.p2 { background: rgba(251,146,60,.08); border-color: rgba(251,146,60,.45); }
+.pool-card.p3 { background: rgba(244,63,94,.07); border-color: rgba(244,63,94,.4); }
+.pool-card .pk { font-size: 10px; letter-spacing: 1.5px; font-weight: 800; color: #94a3b8; }
+.pool-card .pn { font-size: 18px; font-weight: 900; margin: 3px 0 8px; }
+.pool-card.p1 .pn { color: #7dd3fc; } .pool-card.p2 .pn { color: #fdba74; } .pool-card.p3 .pn { color: #fda4af; }
+.pool-card .fear { font-size: 12.5px; color: #fcd34d; font-weight: 800; margin-bottom: 7px; }
+.pool-card .ev { font-size: 11.5px; color: #cbd5e1; line-height: 1.75; }
+.pool-card .ev b { color: #fde68a; }
+
+/* 三支柱 */
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.pil { border-radius: 14px; padding: 18px 20px; border: 1px solid; position: relative; overflow: hidden; }
+.pil::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+.pil.p1 { background: rgba(56,189,248,.08); border-color: rgba(56,189,248,.45); } .pil.p1::before { background: #38bdf8; }
+.pil.p2 { background: rgba(251,146,60,.09); border-color: rgba(251,146,60,.5); } .pil.p2::before { background: #fb923c; }
+.pil.p3 { background: rgba(244,63,94,.07); border-color: rgba(244,63,94,.4); } .pil.p3::before { background: #f43f5e; }
+.pil-tag { font-size: 10px; letter-spacing: 1.5px; font-weight: 800; color: #94a3b8; }
+.pil-name { font-size: 20px; font-weight: 900; margin: 3px 0 8px; }
+.pil.p1 .pil-name { color: #7dd3fc; } .pil.p2 .pil-name { color: #fdba74; } .pil.p3 .pil-name { color: #fda4af; }
+.pil-line { font-size: 15px; font-weight: 800; color: #fef2f2; line-height: 1.5; padding: 9px 12px;
+  background: rgba(15,23,42,.65); border-radius: 9px; margin-bottom: 8px; }
+.pil-why { font-size: 11.5px; color: #94a3b8; line-height: 1.6; }
+.pil-state { font-size: 10px; margin-top: 8px; display: inline-block; padding: 2px 8px; border-radius: 12px; font-weight: 800; }
+
+.elevator { background: #020617; border: 1px solid #334155; border-radius: 14px; padding: 20px 22px; margin-top: 16px; }
+.elevator .lbl { font-size: 11px; color: #fdba74; letter-spacing: 1.5px; font-weight: 800; margin-bottom: 10px; }
+.elevator .txt { font-size: 14.5px; line-height: 2; color: #e2e8f0; }
+.elevator .txt b { color: #fcd34d; }
+.elevator .txt .g { color: #7dd3fc; }
+.elevator .txt .r { color: #fda4af; }
+.mnemonic { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+.mn { flex: 1; min-width: 190px; background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 13px 16px; }
+.mn .a { font-size: 15px; font-weight: 900; color: #fef2f2; }
+.mn .b { font-size: 11.5px; color: #94a3b8; margin-top: 4px; }
+
+/* 4 国 */
+.ctr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.ctr { border-radius: 14px; padding: 16px 18px; border: 1px solid; }
+.ctr.bd { background: rgba(34,197,94,.07); border-color: rgba(34,197,94,.4); }
+.ctr.id { background: rgba(6,182,212,.07); border-color: rgba(6,182,212,.4); }
+.ctr.eg { background: rgba(217,119,6,.07); border-color: rgba(217,119,6,.4); }
+.ctr.in { background: rgba(168,85,247,.07); border-color: rgba(168,85,247,.4); }
+.ctr .cname { font-size: 15px; font-weight: 900; margin-bottom: 9px; }
+.ctr.bd .cname { color: #86efac; } .ctr.id .cname { color: #67e8f9; }
+.ctr.eg .cname { color: #fbbf24; } .ctr.in .cname { color: #d8b4fe; }
+.ctr .tr { font-size: 13px; color: #e2e8f0; margin-bottom: 5px; line-height: 1.6; }
+.ctr .tr .k { font-size: 10px; color: #64748b; font-weight: 800; letter-spacing: 1px; display: block; }
+.ctr .note { font-size: 11px; color: #94a3b8; margin-top: 9px; padding-top: 9px; border-top: 1px dashed rgba(51,65,85,.8); line-height: 1.6; }
+.ctr .note b { color: #fde68a; }
+
+/* 深访 */
+.q-list { display: flex; flex-direction: column; gap: 12px; }
+.q-item { background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 15px 18px; }
+.q-h { font-size: 13.5px; font-weight: 800; color: #f1f5f9; margin-bottom: 7px; display: flex; gap: 9px; }
+.q-no { width: 22px; height: 22px; border-radius: 6px; background: #fb923c; color: #0a0e1a;
+  font-weight: 900; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.q-judge { font-size: 11.5px; color: #94a3b8; }
+.q-judge b { color: #86efac; }
+.q-kill { font-size: 11.5px; color: #fda4af; margin-top: 5px; }
+
+/* 物料 */
+.mat { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mat-col { border-radius: 14px; padding: 16px 18px; border: 1px solid #334155; background: #0f172a; }
+.mat-col h4 { font-size: 12px; letter-spacing: 1.5px; margin-bottom: 10px; font-weight: 800; }
+.mat-col.yes h4 { color: #86efac; } .mat-col.no h4 { color: #fda4af; }
+.mat-col ul { list-style: none; }
+.mat-col li { font-size: 12px; padding: 5px 0 5px 20px; position: relative; color: #cbd5e1; }
+.mat-col.yes li::before { content: '→'; position: absolute; left: 2px; color: #86efac; font-weight: 900; }
+.mat-col.no li::before { content: '✕'; position: absolute; left: 2px; color: #f43f5e; font-weight: 900; }
+.mat-col li b { color: #fde68a; }
+
+.foot { text-align: center; font-size: 11.5px; color: #64748b; padding: 26px 0 10px;
+  border-top: 1px solid #1e293b; margin-top: 10px; }
+.foot strong { color: #94a3b8; }
+.note-box { font-size: 12.5px; color: #cbd5e1; background: rgba(251,146,60,.07);
+  border: 1px solid rgba(251,146,60,.32); border-radius: 11px; padding: 13px 17px; margin-top: 14px; }
+.note-box b { color: #fdba74; }
+.note-box.warn { background: rgba(251,191,36,.07); border-color: rgba(251,191,36,.35); }
+.note-box.warn b { color: #fde68a; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HEADER ===== -->
+<div class="hdr">
+  <div class="hdr-eyebrow">PHOENIX · PILLAR ② CLAIM · V2.9.98</div>
+  <div class="hdr-title">支柱②「护得住」<em>主张线</em></div>
+  <div class="hdr-sub">补上三支柱最后一根主张句 · 2026-11-11 · 内部资料 19/19 · 新增「证据池归属判据」</div>
+
+  <div class="hdr-links">
+    <a class="hdr-link" href="./index.html">🏠 index (15 Tab)</a>
+    <a class="hdr-link" href="./pillar1_claim.html" style="background:#c2410c">🔥 支柱①主张线 (V2.9.97)</a>
+    <a class="hdr-link rose" href="./brand_6rings.html">🔷 6 环体检 (V2.9.96)</a>
+    <a class="hdr-link green" href="./social_voice.html">📊 社媒声量 (V2.9.96b)</a>
+    <a class="hdr-link purple" href="./5layer_pyramid.html">📐 6 层金字塔</a>
+    <a class="hdr-link cyan" href="./24promises_grid.html">🎯 24 承诺</a>
+  </div>
+
+  <div class="note-box warn" style="margin-top:14px">
+    <b>⚠️ 未验证,不可对外使用。</b>本句属 V2.9.96 定位的"支柱②命名锚点"候选,必须先过 §6 深访验证清单(7 题),
+    再进任何对外物料。理由(V2.9.96b 实测):31 条真实社媒文案里战略词曝光 <b>0%</b> —— <b>美 ≠ 被记住,内部认可 ≠ 客户买单</b>。
+    另:<b>最高分的备选 B 因串味支柱③已被否决</b>,详见 §3。
+  </div>
+</div>
+
+<!-- ===== 1. 主推版 ===== -->
+<div class="sec">
+  <div class="sec-title">1 · 主推版逐字拆解 <span class="sec-tag" style="background:rgba(251,146,60,.2);color:#fdba74">支柱②</span></div>
+  <div class="sec-sub">顾客恐惧 = "它会不会伤到我" · 专属证据池 = 6 装备(心率/夜光/碟刹/宽胎/直立几何/APP)· 全部指向"人",与支柱①的"车体耐久"零重叠</div>
+
+  <div class="hero">
+    <div class="hero-lbl">⭐ 主推版 · 13 字 · 与支柱①③ 同量级</div>
+    <div class="hero-line"><span class="w">凤凰护着你</span>,<span class="w">危险不会找上你</span></div>
+    <div class="hero-meta">支柱②「护得住」主张线 · <b>证据承载 5/5</b>(6 装备逐条对治"怕猝死/怕夜骑摔/怕摔/怕湿地摔/怕伤膝/怕迷路")· 失败叙事风险 <b>4/5</b> · 五维合计 <b>22</b></div>
+  </div>
+
+  <div class="breakdown">
+    <div class="bd-cell key">
+      <div class="ch">护着</div>
+      <div class="role">品牌 · 保护动作</div>
+      <div class="why">把承诺定在<b>主动预防</b>,不是"出事了我兜着" —— 与 V2.9.92「主动风险控制 = 智慧选择」同源</div>
+      <div class="swap">换成"保护/保障"→ 变保险话术,丢掉主动安全</div>
+    </div>
+    <div class="bd-cell key">
+      <div class="ch">你</div>
+      <div class="role">顾客 · 宾语</div>
+      <div class="why"><b>前置到前半句</b>,彻底避开支柱①留下的"你的"指代歧义 —— 顾客不会读成"车"</div>
+      <div class="swap">换成"每一程/每一次"→ 人称被稀释</div>
+    </div>
+    <div class="bd-cell">
+      <div class="ch">危险</div>
+      <div class="role">风险源 · 名词</div>
+      <div class="why">抽象但精准。不是"伤"(负面过重),不是"摔"(绑极限场景,排除 40 岁城郊用户)</div>
+      <div class="swap">换成"意外"→ 像不速之客;"事故"→ 交通语境</div>
+    </div>
+    <div class="bd-cell key">
+      <div class="ch">不会找上你</div>
+      <div class="role">空间性否定</div>
+      <div class="why"><b>危险不来找你</b> ⇒ 预防语义。比"不会伤你"少恐吓,比"你很安全"多具体感</div>
+      <div class="swap">换成"不会伤你"→ 变被动补救</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <b>三支柱句式家族(本次闭环)——</b>
+    ①「凤凰一直重燃,你的不会熄」= 品牌持续动作 + 顾客确定性 ·
+    ②「凤凰护着你,危险不会找上你」= 品牌保护动作 + 顾客确定性 ·
+    ③「净利率永不超 5%,看齐小米」= 品牌财务承诺 + 行业标杆。
+    <b>①② 均为"确定性"型,可左右对仗;③ 独立成块。</b>
+    <br>⚠️ 支柱②<b>绝不能落情绪</b> —— ①已占了"勇气/重燃"的情感位,②若再落"底气/胆量",两句同质,三支柱反而糊。
+  </div>
+</div>
+
+<!-- ===== 2. 候选矩阵 ===== -->
+<div class="sec">
+  <div class="sec-title">2 · 候选矩阵 + 竞争对标</div>
+  <div class="sec-sub">7 候选 + 1 对照组 · 五维评分(5 分制)沿用 V2.9.97 框架 · <b>先跑证据池归属判据,再跑评分</b></div>
+
+  <table class="t">
+    <tr>
+      <th style="width:26%">候选</th><th style="width:9%">顾客<br>视角</th><th style="width:9%">证据<br>承载</th><th style="width:9%">失败<br>叙事</th>
+      <th style="width:9%">意象<br>独占</th><th style="width:9%">4 国<br>可译</th><th style="width:7%">合计</th><th>判读</th>
+    </tr>
+    <tr class="win">
+      <td><span class="cand"><span class="n">A</span>凤凰护着你,危险不会找上你</span><br><span style="color:#64748b;font-size:11px">13 字 · 主推</span></td>
+      <td class="sc hi">5</td><td class="sc hi">5</td><td class="sc md">4</td><td class="sc md">4</td><td class="sc md">4</td><td class="tot">22</td>
+      <td>⭕ <b>主推</b> · 语感顺 / 语义精确 / 人称无歧义 / 证据逐条对得上</td>
+    </tr>
+    <tr class="veto">
+      <td><span class="cand"><span class="n">B</span>凤凰护着你,你不会有后怕</span><br><span style="color:#64748b;font-size:11px">13 字 · 最高分但被否决</span></td>
+      <td class="sc hi">5</td><td class="sc hi">5</td><td class="sc hi">5</td><td class="sc hi">5</td><td class="sc lo">3</td><td class="tot">23</td>
+      <td>❌ <b>串味支柱③</b>:"后悔"在消费语境第一联想 = 后悔买贵了(决策后悔),不是骑行安全 · 详见 §3</td>
+    </tr>
+    <tr>
+      <td><span class="cand"><span class="n">C</span>凤凰护得住,你就敢骑</span></td>
+      <td class="sc hi">5</td><td class="sc md">4</td><td class="sc lo">3</td><td class="sc lo">3</td><td class="sc hi">5</td><td class="tot">20</td>
+      <td>暗示"你本来怕" + 落情绪,与①同质</td>
+    </tr>
+    <tr>
+      <td><span class="cand"><span class="n">D</span>凤凰替你挡住每一次失控</span></td>
+      <td class="sc md">4</td><td class="sc hi">5</td><td class="sc lo">2</td><td class="sc md">4</td><td class="sc md">4</td><td class="tot">19</td>
+      <td>证据最硬(碟刹/轮胎/直立几何),但"失控"是事故词,引入恐惧框架</td>
+    </tr>
+    <tr>
+      <td><span class="cand"><span class="n">E</span>你的每一次落地,凤凰都接着</span></td>
+      <td class="sc lo">2</td><td class="sc md">4</td><td class="sc md">4</td><td class="sc hi">5</td><td class="sc md">4</td><td class="tot">19</td>
+      <td>意象独占最高,但"落地"是跳台动作 ≠ 40 岁城郊中产</td>
+    </tr>
+    <tr>
+      <td><span class="cand"><span class="n">F</span>你不用是高手,凤凰护得住你</span></td>
+      <td class="sc hi">5</td><td class="sc lo">3</td><td class="sc md">4</td><td class="sc hi">5</td><td class="sc lo">3</td><td class="tot">20</td>
+      <td>战略锋利(普通人独占),但证据承载弱 + 否定式难译</td>
+    </tr>
+    <tr>
+      <td><span class="cand"><span class="n">G</span>凤凰护得住你的每一程</span></td>
+      <td class="sc md">4</td><td class="sc lo">3</td><td class="sc hi">5</td><td class="sc lo">2</td><td class="sc hi">5</td><td class="tot">19</td>
+      <td>平淡,无独占意象</td>
+    </tr>
+    <tr class="lose">
+      <td><span class="cand"><span class="n">—</span>凤凰给你不摔的底气 <span class="pill no">对照组</span></span></td>
+      <td class="sc hi">5</td><td class="sc lo">2</td><td class="sc lo">2</td><td class="sc lo">2</td><td class="sc md">4</td><td class="tot">15</td>
+      <td>用户原句迁移版。15 分 vs 支柱①原句 17 分 —— <b>"情绪 + 安全"注定拿不到高证据分</b></td>
+    </tr>
+  </table>
+
+  <div class="note-box" style="margin-top:16px">
+    <b>竞争对标 —— 为什么这个位置值得占:</b>
+    Rockrider 拼参数(<i>"XC 401 Full Alloy Cycle With Full Internal Cable Routing"</i>)、Core 拼车型命名、Polygon 拼城市平价、Foxter/Duranta/Warrior 拼价格带 ——
+    <b>整个 BD 定价池里没有第二家品牌对"普通骑行者"讲保护</b>。
+    ⇒ <b>「主动预防」是 Phoenix 在中高端 MTB 里真实存在的语义空位</b>,而且是用真金白银的配置占住的(心率带 + 智能尾灯 + 液压碟刹 + 宽胎),不是形容词。
+  </div>
+</div>
+
+<!-- ===== 3. 判据 + 否决留痕 ===== -->
+<div class="sec">
+  <div class="sec-title">3 · 证据池归属判据(本次新增理论工具)+ 否决留痕</div>
+  <div class="sec-sub">评分解决不了串味 —— 所以先跑判据,再跑评分</div>
+
+  <div class="rule">
+    <div class="rule-h">① 证据池归属判据 · 一票否决</div>
+    <p style="font-size:12.5px;color:#cbd5e1">一个候选主张句,必须能被<b>唯一一个</b>支柱的证据池接住。若能同时被两个证据池接住 ⇒ <b>串味 ⇒ 直接淘汰,不进入评分</b>。</p>
+    <div class="formula">① 造得久 → 证据池 = 达克锈 / 氟碳漆 / 10 万次 / 130 年 → 宾语必须被「车」接住<br>
+    ② 护得住 → 证据池 = 6 装备(心率/夜光/碟刹/宽胎/直立/APP) → 宾语必须被「人」接住<br>
+    ③ 信得过 → 证据池 = 财报 / 净利率 5% / 4 国价位 → 宾语必须被「价格与厂家」接住</div>
+  </div>
+
+  <div class="pool">
+    <div class="pool-card p1">
+      <div class="pk">PILLAR ①</div><div class="pn">造得久</div>
+      <div class="fear">顾客恐惧:"它会不会坏"</div>
+      <div class="ev">达克锈 · 氟碳漆 · 10 万次检测 · 130 年二八大杠基因<br>→ 全部指向 <b>车</b></div>
+    </div>
+    <div class="pool-card p2">
+      <div class="pk">PILLAR ②</div><div class="pn">护得住</div>
+      <div class="fear">顾客恐惧:"它会不会伤到我"</div>
+      <div class="ev">心率监测 · 夜光反光 · 液压碟刹 · 防滑宽胎 · 直立车架 · 智能 APP<br>→ 全部指向 <b>人</b></div>
+    </div>
+    <div class="pool-card p3">
+      <div class="pk">PILLAR ③</div><div class="pn">信得过</div>
+      <div class="fear">顾客恐惧:"它是不是骗我"</div>
+      <div class="ev">财报披露 · 净利率 ≤ 5% · 4 国价位带 · 上市公司 600679<br>→ 指向 <b>价格与厂家</b></div>
+    </div>
+  </div>
+
+  <div class="risk">
+    <div class="risk-h">② 实战:淘汰一个"看起来很好"的高分候选</div>
+    <p>候选 <b>「凤凰一直护着,你的不会伤」</b> —— 与支柱①完全同构,只看评分是 21 分(候选池第 2)。</p>
+    <p>但判据一票否决:<b>"你的"既可解作车(车不伤 = 耐久 = ①),又可解作人(人不伤 = 安全 = ②)</b> ⇒ 两个证据池都能接住 ⇒ 串味 ⇒ 淘汰。</p>
+    <p>后果是实打实的:顾客刚在支柱①的同一套物料里读过"你的不会熄",默认宾语是<b>车</b> —— 整句白说。</p>
+    <p><b>⇒ 判据比评分更早生效,这是本次最重要的方法论收获。</b></p>
+  </div>
+
+  <div class="risk" style="border-color:rgba(251,146,60,.42);background:linear-gradient(135deg,rgba(251,146,60,.09),rgba(15,23,42,.7))">
+    <div class="risk-h" style="color:#fdba74">③ 最高分候选 B 的否决留痕 + 复活条件</div>
+    <p><b>B「凤凰护着你,你不会有后怕」= 23 分(全池最高)</b>,证据承载与失败叙事风险都是满分。</p>
+    <p><b>否决理由:串味到支柱③。</b>"后悔 / 后怕"在中文消费语境第一联想是<b>购物后悔</b>(后悔买贵了、买错型号)⇒ 直接落进支柱③「信得过 / 价格与厂家」的领地。四国对应词(অনুতপ্ত / menyesal / ندم / पछतावा)同样是"消费后悔",母语者改写也难逃离该语义。</p>
+    <p><b>复活条件:</b>深访 Q7「读『你不会有后怕』,你想到的是<b>骑车</b>的事还是<b>买东西</b>的事?」</p>
+    <p>· <b>"骑车" &gt; 60%</b> ⇒ B 的串味风险不成立,可提为主推 —— <b>这条会改本文件结论</b><br>
+       · <b>"买东西"占比高</b> ⇒ B 永久出局</p>
+    <p>⇒ <b>B 不进任何物料</b>,只在深访问卷里出现。</p>
+  </div>
+</div>
+
+<!-- ===== 4. 三支柱全景 ===== -->
+<div class="sec">
+  <div class="sec-title">4 · 三支柱主张线全景 —— 齐了</div>
+  <div class="sec-sub">三支柱主张线语言层闭环 · ①讲车 · ②讲人 · ③讲钱</div>
+
+  <div class="pillars">
+    <div class="pil p1">
+      <div class="pil-tag">PILLAR ①</div>
+      <div class="pil-name">造得久</div>
+      <div class="pil-line">「凤凰一直重燃,你的不会熄」</div>
+      <div class="pil-why">讲<b>车</b> —— 130 年没熄过,达克锈 + 氟碳漆 + 10 万次检测<br>状态:✅ 待深访验证 · V2.9.97</div>
+    </div>
+    <div class="pil p2">
+      <div class="pil-tag">PILLAR ②</div>
+      <div class="pil-name">护得住</div>
+      <div class="pil-line">「凤凰护着你,危险不会找上你」</div>
+      <div class="pil-why">讲<b>人</b> —— 6 装备主动安全,危险不会找上你<br>状态:🆕 本次新增 · 待深访验证 · V2.9.98</div>
+    </div>
+    <div class="pil p3">
+      <div class="pil-tag">PILLAR ③</div>
+      <div class="pil-name">信得过</div>
+      <div class="pil-line">「净利率永不超 5%,看齐小米」</div>
+      <div class="pil-why">讲<b>钱</b> —— 上市公司 600679,净利率永不超 5%<br>状态:✅ 已定稿 · V2.9.93.2</div>
+    </div>
+  </div>
+
+  <div class="mnemonic">
+    <div class="mn"><div class="a">① 讲车</div><div class="b">它不会坏 → 车体耐久 + 130 年</div></div>
+    <div class="mn"><div class="a">② 讲人</div><div class="b">他不会伤 → 6 装备主动安全</div></div>
+    <div class="mn"><div class="a">③ 讲钱</div><div class="b">他不骗你 → 财报 + 净利率 ≤ 5%</div></div>
+  </div>
+
+  <div class="elevator">
+    <div class="lbl">电梯陈述整合版(30 秒 · 三支柱完整版)</div>
+    <div class="txt">
+      <b>"Phoenix 是做中高端 Gravel 的。</b><br>
+      <span class="g"><b>造得久</b></span> —— 130 年没熄过,达克锈 + 氟碳漆 + 10 万次检测。<br>
+      <span style="color:#fdba74"><b>护得住</b></span> —— 6 装备主动安全,危险不会找上你。<br>
+      <span class="r"><b>信得过</b></span> —— 上市公司 600679,净利率永不超 5%,看齐小米。"**
+    </div>
+  </div>
+
+  <div class="note-box" style="margin-top:14px">
+    <b>一句话版本(不变):</b>"Phoenix —— 一直重燃,造得久、护得住、信得过的中高端 Gravel。"
+    <br><b>三段对仗场景:</b>展会主视觉 = 左① / 中② / 右③;经销店招三句并列;社媒固定 tag 分别配达克锈内容 / 6 装备标配内容 / 财报与价格内容。
+  </div>
+</div>
+
+<!-- ===== 5. 4 国本地化 ===== -->
+<div class="sec">
+  <div class="sec-title">5 · 4 国本地化方向</div>
+  <div class="sec-sub">⚠️ 全部为参考译法,必须经 4 国母语者终审 · 承 V2.9.97 的安全原则</div>
+
+  <div class="ctr-grid">
+    <div class="ctr bd">
+      <div class="cname">🇧🇩 BD · 孟加拉</div>
+      <div class="tr"><span class="k">直译</span>ফিনিক্স তোমাকে রক্ষা করে — বিপদ তোমার কাছে আসবে না।<br><span style="color:#64748b;font-size:11px">Phoenix protects you — danger will not come to you.</span></div>
+      <div class="tr"><span class="k">情感版</span>ফিনিক্স আছে, তাই বিপদ তোমাকে ছুঁতে পারবে না।</div>
+      <div class="note"><b>বিপদ</b> = 危险,标准书面词 ✅;<b>沿用 V2.9.97 安全原则</b> —— 不用带政治/宗教联想的词;"রক্ষা করে"在商业语境自然,但 <b>রক্ষা 在宗教文本里偏神圣</b>,需母语者判断是否过重</div>
+    </div>
+    <div class="ctr id">
+      <div class="cname">🇮🇩 ID · 印尼</div>
+      <div class="tr"><span class="k">直译</span>Phoenix menjagamu — bahaya tidak akan mendekatimu.<br><span style="color:#64748b;font-size:11px">Phoenix keeps you safe — danger will not approach you.</span></div>
+      <div class="tr"><span class="k">情感版</span>Dengan Phoenix, bahaya tak akan bisa menyentuhmu.</div>
+      <div class="note"><b>bahaya</b> = 危险 ✅;消费端建议 <b>menjaga</b> 而非 <b>melindungi</b>(更日常);<b>"tak akan bisa"(不能够)比"tidak akan"(不会)更强调"做不到"</b>,与中文"不会找上你"更贴近</div>
+    </div>
+    <div class="ctr eg">
+      <div class="cname">🇪🇬 EG · 埃及</div>
+      <div class="tr"><span class="k">直译</span>«Phoenix يحميك — لن يقترب الخطر منك.»<br><span style="color:#64748b;font-size:11px">Phoenix protects you — danger will not approach you.</span></div>
+      <div class="tr"><span class="k">情感版</span>«مع Phoenix، لا يستطيع الخطر أن يلمسك.»</div>
+      <div class="note"><b>الخطر</b> = 危险 ✅;<b>يقترب</b>(接近)是空间性动词,与中文"找上你"同构 ✅;⚠️ <b>يحمي(保护)在阿语语境带一定宗教护佑感</b>,商业物料建议改口语版 "مع Phoenix، الخطر ما بيوصل"</div>
+    </div>
+    <div class="ctr in">
+      <div class="cname">🇮🇳 IN · 印度</div>
+      <div class="tr"><span class="k">直译</span>«Phoenix आपकी रक्षा करता है — खतरा आपके पास नहीं आएगा।»<br><span style="color:#64748b;font-size:11px">Phoenix protects you — danger will not come to you.</span></div>
+      <div class="tr"><span class="k">情感版</span>«Phoenix के साथ, खतरा आपको छू नहीं सकेगा।»</div>
+      <div class="note"><b>खतरा</b> = 危险 ✅;<b>消费端建议 "आपकी"(您的)而非 "तुम्हारी"(你的)</b> —— 与 V2.9.97 同一条约束;<b>छू नहीं सकेगा</b>(碰不到)是很好的空间否定</div>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-top:16px">
+    <div class="rule-h">四国共同规律 —— 对 V2.9.97 规律的复用与升级</div>
+    <p style="font-size:12.5px;color:#cbd5e1">
+      V2.9.97 发现:<b>"熄"的对应词在四国全部带"希望/势头消退"的负面义 ⇒ 否定式天然是强修辞。</b><br>
+      支柱② 复用的对应规律(反向验证通过):<b>"危险"的对应词在四国全部是具体风险源名词</b> —— BD <code>বিপদ</code> / ID <code>bahaya</code> / EG <code>الخطر</code> / IN <code>खतरा</code>,
+      且四国都存在<b>空间性动词</b>(来 / 接近 / 碰到)⇒ <b>"危险不会来到你身边"这个句式在四国的修辞强度天然一致</b>,不需要逐国重写逻辑,只需母语者调措辞。
+    </p>
+    <div class="formula">⇒ Phoenix 四国主张线的通用修辞家族(三支柱都能用否定式承载承诺):<br>
+    ① 否定一个「趋势」—— 熄 / 灭 → "不会熄"<br>
+    ② 否定一个「空间接近」—— 找上 / 靠近 / 碰到 → "不会找上你"<br>
+    ③ 否定一个「财务上限」—— 超 → "永不超 5%"</div>
+  </div>
+
+  <div class="note-box warn" style="margin-top:14px">
+    <b>本地化必做的一件事(沿用 V2.9.97):</b>让 ID / BD 官方号的本地员工<b>各写 3 版</b>,与参考译法一起送母语者盲评。
+    理由不变:参考译法只能保证语义正确,<b>不能保证语感</b> —— 而主张线的价值恰恰在语感。
+  </div>
+</div>
+
+<!-- ===== 6. 深访验证清单 ===== -->
+<div class="sec">
+  <div class="sec-title">6 · 深访验证清单(20 人 · 支柱②模块 7 题)</div>
+  <div class="sec-sub">直接进深访提纲 · 每题都带"什么结果会推翻主张句"</div>
+
+  <div class="q-list">
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">1</span>读「凤凰护着你,危险不会找上你」,你的第一反应是? ①放心 ②被暗示我有危险 ③无所谓 ④想了解更多</div>
+      <div class="q-judge">判读:<b>①②③④ 分布</b></div>
+      <div class="q-kill">推翻条件:<b>② &gt; 30%</b> → 整句有恐吓感,直接切备选 C</div>
+    </div>
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">2</span>对比 A「危险不会找上你」和 C「你就敢骑」,哪句你更想点开?</div>
+      <div class="q-judge">判读:二选一 + 理由</div>
+      <div class="q-kill">推翻条件:C 胜出 → 顾客要的是状态不是确定性,需重新定落点</div>
+    </div>
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">3</span>"危险不会找上你"对你意味着什么? ①骑行中不摔 ②不会受伤 ③夜骑/雨骑更安心 ④防盗</div>
+      <div class="q-judge">判读:<b>①②③④ 分布</b></div>
+      <div class="q-kill">推翻条件:<b>④ 占比高</b> → 6 装备答不了防盗,需配套主张,不能混进 ②</div>
+    </div>
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">4</span>买 MTB 时,更大的担忧是"车会坏"还是"我会摔 / 会受伤"?</div>
+      <div class="q-judge">判读:二选一 —— <b>这是支柱②命名锚点的总闸门</b></div>
+      <div class="q-kill">推翻条件:<b>选"车会坏" &gt; 60%</b> → 支柱②排序需重审(②可能不是这个人群的首要恐惧)</div>
+    </div>
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">5</span>如果 Phoenix 标配 6 装备(心率 / 夜光 / 碟刹 / 宽胎 / 直立几何 / APP),你愿意多付多少?</div>
+      <div class="q-judge">判读:金额 —— <b>把"安全"翻译成 ¥,这是本句唯一有商业含义的验证</b></div>
+    </div>
+    <div class="q-item">
+      <div class="q-h"><span class="q-no">6</span>你会把这句话讲给朋友听吗?会用哪一句?</div>
+      <div class="q-judge">判读:原话 —— 看顾客会不会<b>主动复述</b>(品牌资产的真实检验)</div>
+    </div>
+    <div class="q-item" style="border-color:rgba(244,63,94,.45)">
+      <div class="q-h"><span class="q-no" style="background:#f43f5e;color:#fff">7</span>读备选 B「凤凰护着你,你不会有后怕」,你想到的是<b>骑车</b>的事还是<b>买东西</b>的事?</div>
+      <div class="q-judge">判读:二选一 —— <b>这一题决定 B 的生死</b></div>
+      <div class="q-kill">"买东西"占比高 → B 永久出局(串味③)· <b>"骑车" &gt; 60% → B 可提为主推,结论需改</b></div>
+    </div>
+  </div>
+
+  <div class="note-box warn" style="margin-top:16px">
+    <b>验证前不要做的事:</b>
+    ❌ 不要在深访前把主张句写进任何对外物料 ·
+    ❌ 不要因为"读起来很美"就定稿(V2.9.96b 实测:31 条社媒文案战略词曝光 0%,美 ≠ 被记住)·
+    ❌ 不要同时测超过 2 个版本(Q1/Q2/Q7 已构成对照,再加会糊)·
+    ❌ <b>不要把 B 版放进任何物料</b> —— 它只在深访问卷里出现
+  </div>
+</div>
+
+<!-- ===== 7. 落地物料 ===== -->
+<div class="sec">
+  <div class="sec-title">7 · 落地物料清单</div>
+  <div class="sec-sub">验证通过后 · 禁止项与 V2.9.97 同一套边界</div>
+
+  <div class="mat">
+    <div class="mat-col yes">
+      <h4>✅ 适合放(验证通过后)</h4>
+      <ul>
+        <li><b>ID 官方号社媒</b> — 固定 tag;与 6 装备标配内容并置(ID = 0 SKU 蓝海,最需要声量) <span class="pill ok">P0</span></li>
+        <li><b>BD 官方号社媒</b> — 配雨季 / 夜骑场景(夜光反光 + 防滑轮胎 + 液压碟刹) <span class="pill ok">P0</span></li>
+        <li><b>展会主视觉 / 经销店招</b> — 三支柱左右三段(①左 ②中 ③右) <span class="pill mid">P1</span></li>
+        <li><b>产品包装 / 吊牌</b> — 配 6 装备图示(V2.9.81 130 年品牌史时间轴一并做) <span class="pill mid">P1</span></li>
+        <li><b>电梯陈述 / 经销商口播卡</b> — 支柱②段首句 <span class="pill mid">P1</span></li>
+        <li><b>产品矩阵页(bd/id matrix)</b> — 新增"支柱②主张线"区块 <span class="pill new">P2</span></li>
+      </ul>
+    </div>
+    <div class="mat-col no">
+      <h4>❌ 不适合放</h4>
+      <ul>
+        <li><b>财务承诺文案 / 财报相关物料</b> — 支柱③的领地,混了②会失去专属性</li>
+        <li><b>价格促销页</b> — 物理安全线 + 价格线互相抵消</li>
+        <li><b>童车 / 折叠 / 配件</b> — 用户已明确暂不关注这些品类</li>
+        <li><b>未经母语者终审的 4 国译本</b> — EG 宗教语气 / BD 用词必须本地人把关</li>
+        <li><b>B 版「你不会有后怕」</b> — 串味风险未定(§3),深访 Q7 出结果前不得进物料</li>
+        <li><b>防盗相关表述</b> — 6 装备答不了防盗,别硬塞</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. 下一步 ===== -->
+<div class="sec">
+  <div class="sec-title">8 · 下一步与待拍板</div>
+  <div class="sec-sub">需要你拍板的 4 件事 + 需要的外部输入</div>
+
+  <table class="t">
+    <tr><th style="width:38%">事项</th><th>说明</th></tr>
+    <tr>
+      <td><b>① 是否接受主推版 A</b></td>
+      <td>「凤凰护着你,危险不会找上你」— 还是先按 §3 的备选位让 B 进深访对照(Q7 会给出答案)</td>
+    </tr>
+    <tr>
+      <td><b>② 深访 Q4 若显示"车会坏"占优</b></td>
+      <td>是否重排三支柱优先级 —— 支柱②可能不是这个人群的首要恐惧</td>
+    </tr>
+    <tr>
+      <td><b>③ 4 国本地化流程</b></td>
+      <td>是否走"官方号本地员工各写 3 版 + 母语者盲评"(需要你安排人)</td>
+    </tr>
+    <tr>
+      <td><b>④ 20 用户深访排期</b></td>
+      <td>4 国各 5 人;§6 七题可直接进提纲</td>
+    </tr>
+    <tr>
+      <td><b>待外部输入</b></td>
+      <td>4 国母语者终审 · 抖音字幕/截图(拿到后 15 分钟内重校 6 环定义) · VI 设计资源确认(V2.9.97 VI 手册 v1 阻塞项)</td>
+    </tr>
+  </table>
+
+  <div class="note-box" style="margin-top:14px">
+    <b>内部资料:</b><a href="./strategy/_v2_9_98_pillar2_claim.md" style="color:#7dd3fc;font-weight:800">_v2_9_98_pillar2_claim.md</a>(11 段, ~23.5KB)· 8/8 战略原则第 20 次落地<br>
+    <b>上游:</b><a href="./pillar1_claim.html" style="color:#fdba74;font-weight:800">支柱①主张线 (V2.9.97)</a> ·
+    <a href="./brand_6rings.html" style="color:#fda4af;font-weight:800">6 环体检 + 3 支柱收敛 (V2.9.96)</a> ·
+    <a href="./social_voice.html" style="color:#86efac;font-weight:800">社媒声量体检 (V2.9.96b)</a>
+  </div>
+</div>
+
+<div class="foot">
+  <strong>Phoenix-Live · 支柱②「护得住」主张线 · V2.9.98</strong> · 2026-11-11 · 内部资料 19/19<br>
+  8/8 战略原则第 20 次落地 · 三支柱主张线语言层闭环
+</div>
+
+</div>
+</body>
+</html>
