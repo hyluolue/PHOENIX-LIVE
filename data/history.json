@@ -1079,10 +1079,10 @@
       "date": "2026-11-11",
       "sku_count": 190,
       "brand_count": 27,
-      "phx_count": 15,
+      "phx_count": 16,
       "daraz_sku_count": 74,
       "other_sku_count": 116,
-      "fresh_today_count": 60,
+      "fresh_today_count": 67,
       "sources": [
         "safe_crawl"
       ],
@@ -1789,5 +1789,5 @@
       "note": "safe_crawl playwright"
     }
   ],
-  "last_updated": "2026-11-11T16:22:49+08:00"
+  "last_updated": "2026-11-11T16:40:45+08:00"
 }
