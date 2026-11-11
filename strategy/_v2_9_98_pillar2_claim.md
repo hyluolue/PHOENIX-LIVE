@@ -247,8 +247,8 @@ V2.9.97 用"5 维评分"选句,但评分解决不了**串味**问题 —— 一�
 | 国 | 直译版 | 情感版 | 语言注意事项 |
 |---|---|---|---|
 | 🇧🇩 **BD** | «ফিনিক্স তোমাকে রক্ষা করে — বিপদ তোমার কাছে আসবে না।»<br>*Phoenix protects you — danger will not come to you.* | «ফিনিক্স আছে, তাই বিপদ তোমাকে ছুঁতে পারবে না।» | "বিপদ" = 危险,标准书面词 ✅;**沿用 V2.9.97 的安全原则:不用带政治/宗教联想的词**;"রক্ষা করে"(保护)在商业语境自然,但 "রক্ষা" 在宗教文本里偏神圣,母语者需判断是否过重 |
-| 🇮🇩 **ID** | «Phoenix menjagamu — bahaya tidak akan mendekatimu.»<br>*Phoenix keeps you safe — danger will not approach you.* | «Dengan Phoenix, bahaya tak akan bisa menyentuhmu.» | "bahaya" = 危险 ✅;**"melindungi"/"menjaga" 比 "melindungi" 更日常**,消费端建议 "menjaga";**"tak akan bisa" (不能够) 比 "tidak akan" (不会) 更强调"做不到"**,与中文"不会找上你"更贴近 |
-| 🇪🇬 **EG** | «Phoenix يحميك — لن يقترب الخطر منك.»<br>*Phoenix protects you — danger will not approach you.* | «مع Phoenix، لا يستطيع الخطر أن يلمسك.» | "الخطر" = 危险 ✅;"يقترب"(接近)是空间性动词,与中文"找上你"同构 ✅;⚠️ **"يحمي"(保护)在阿语语境带一定宗教护佑感**,商业物料建议改 "ي ensuring…"? → 母语者确认是否改用 "مع Phoenix، الخطر ما بيوصل" (口语版) |
+| 🇮🇩 **ID** | «Phoenix menjagamu — bahaya tidak akan mendekatimu.»<br>*Phoenix keeps you safe — danger will not approach you.* | «Dengan Phoenix, bahaya tak akan bisa menyentuhmu.» | "bahaya" = 危险 ✅;**"menjaga"(守护)比 "melindungi"(保护)更日常**,消费端建议用 "menjaga";**"tak akan bisa"(不能够)比 "tidak akan"(不会)更强调"做不到"**,与中文"不会找上你"更贴近 |
+| 🇪🇬 **EG** | «Phoenix يحميك — لن يقترب الخطر منك.»<br>*Phoenix protects you — danger will not approach you.* | «مع Phoenix، لا يستطيع الخطر أن يلمسك.» | "الخطر" = 危险 ✅;"يقترب"(接近)是空间性动词,与中文"找上你"同构 ✅;⚠️ **"يحمي"(保护)在阿语语境带一定宗教护佑感**,商业物料建议改口语版 «مع Phoenix، الخطر ما بيوصل» → 母语者确认 |
 | 🇮🇳 **IN** | «Phoenix आपकी रक्षा करता है — खतरा आपके पास नहीं आएगा।»<br>*Phoenix protects you — danger will not come to you.* | «Phoenix के साथ, खतरा आपको छू नहीं सकेगा।» | "खतरा" = 危险 ✅;**消费端建议 "आपकी"(您的)而非 "तुम्हारी"(你的)**,与 V2.9.97 同一条约束;"छू नहीं सकेगा"(碰不到)是很好的空间否定 |
 
 ### 7.2 四国共同规律(对 V2.9.97 规律的复用与升级)
