@@ -216,6 +216,9 @@ table.pri td { padding: 10px; border-bottom: 1px solid #1e293b; vertical-align: 
   shopee_id = ok · tokopedia = ok · news_bd = ok · news_id = ok
   <span class="ok">apify_social = ok</span>  ← <span class="dim">本轮新增</span>
   dreamcycle = pending · serbasepeda = ok
+  <br><span style="color:#fbbf24;font-size:11.5px;line-height:1.7">⚠️ <b>2026-11-11 更新(V2.9.98-P1)—— 上面这行「threshold 133 / BD 190 kept」既是 10/28 的真实输出,也暴露了一个 4 个月的冻结:
+  阈值基数把 116 条 cron 路径根本不采的 dreamcycle 算进去了,而 daraz 可采上限只有 74,阈值 133 永远达不到 ⇒ 每轮实抓都被整体丢弃 ⇒ BD 池冻结在 2026-07-10。
+  现已改为<b>按来源口径计算阈值</b>(daraz-only,threshold 51)+ <b>合并写盘</b>(实抓优先 + 历史滚动补缺口,按 URL 去重),BD 池恢复每日实抓。</span>
   </div>
 </div>
 
