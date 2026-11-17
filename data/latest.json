@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-12T09:43:41+08:00",
+  "generated_at": "2026-11-17T15:30:23+08:00",
   "fetch_status": {
-    "daraz_bd": "ok (daraz 70 fresh, merged 74 daraz, pool 190, fresh_today 72)",
+    "daraz_bd": "warn (daraz 0/51 fresh, merged 74 daraz, pool 190, fresh_today 0)",
     "shopee_id": "ok (baseline 141 kept)",
     "tokopedia": "ok (baseline kept)",
     "news_bd": "ok",
@@ -7112,7 +7112,7 @@
       }
     ]
   },
-  "gen_at": "2026-11-12T09:43:41+08:00",
+  "gen_at": "2026-11-17T15:30:23+08:00",
   "brand_metrics": {
     "computed_at": "2026-10-28T12:08:04+08:00",
     "method": "V2.9.47 (跟 V2.9.42 前端 5 Tab 跨 Tab 统一): score = (min(sku/20,1)*100*0.20) + (min(asp/30K,1)*100*0.30) + (high_tier_pct*100*0.20) + (min(max/50K,1)*100*0.20) + (in_stock_rate*100*0.10)",
@@ -8944,10 +8944,10 @@
   },
   "source_query": "V2.9.98-P1 safe_crawl playwright: 13 BD queries, source-scoped threshold + merge write",
   "data_freshness": {
-    "computed_at": "2026-11-12T09:43:41+08:00",
+    "computed_at": "2026-11-17T15:30:23+08:00",
     "bd": {
       "daraz_total": 74,
-      "daraz_fresh_today": 72,
+      "daraz_fresh_today": 0,
       "daraz_latest_scraped_at": "2026-11-12T09:43:40+08:00",
       "other_total": 116,
       "crawl_source": "playwright daraz bd, 13 queries"
